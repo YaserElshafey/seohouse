@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المدونة | سيو هاوس</title>
+<meta name="description" content="مدونة سيو هاوس — مقالات متخصصة في تحسين محركات البحث، التجارة الإلكترونية، وتحليل الأداء الرقمي.">
+<script src="nav.js"></script>
+<style>
+.page-hero{padding-block:clamp(110px,13vh,148px) clamp(52px,6vh,68px);background:var(--navy);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,#000 10%,transparent 75%);pointer-events:none}
+.hg{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none}
+.page-h1{font-size:clamp(30px,4.5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px;animation:fu .75s .08s var(--ease) both}
+.page-h1 em{font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite}
+@keyframes sh{to{background-position:-200% center}}
+.hero-p{font-size:clamp(14px,1.5vw,17px);line-height:1.9;color:rgba(255,255,255,.48);max-width:560px;margin-bottom:28px;animation:fu .75s .16s var(--ease) both}
+@keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.blog-layout{display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:start}
+.art-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.art-feat{grid-column:span 2}
+.art-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);overflow:hidden;display:flex;flex-direction:column;transition:all .26s var(--fast)}
+.art-card:hover{box-shadow:var(--sh-md);border-color:transparent;transform:translateY(-4px)}
+.art-thumb{background:linear-gradient(140deg,var(--navy),rgba(30,46,245,.5));position:relative;overflow:hidden}
+.art-thumb.feat-h{height:280px}
+.art-thumb.reg-h{height:160px}
+.art-thumb::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);background-size:26px 26px}
+.art-cat{position:absolute;top:12px;inset-inline-start:12px;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.13);padding:4px 9px;border-radius:5px;backdrop-filter:blur(8px)}
+.art-body{padding:20px 18px;flex:1;display:flex;flex-direction:column}
+.art-meta{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--muted);margin-bottom:10px}
+.art-meta .d{width:3px;height:3px;border-radius:50%;background:var(--muted)}
+.art-card h2,.art-card h3{font-weight:800;color:var(--ink);line-height:1.35;margin-bottom:8px;flex:1;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+.art-card h2{font-size:18px;-webkit-line-clamp:2}
+.art-card h3{font-size:15.5px;-webkit-line-clamp:2}
+.art-card p{font-size:12.5px;color:var(--muted);line-height:1.7;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.art-read{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;color:var(--blue);transition:gap .16s}
+.art-card:hover .art-read{gap:10px}
+/* Sidebar */
+.sidebar{display:flex;flex-direction:column;gap:20px}
+.sb-box{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:20px}
+.sb-title{font-size:13px;font-weight:800;color:var(--ink);margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.cat-list{display:flex;flex-direction:column;gap:6px}
+.cat-item{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-radius:var(--r1);transition:background .16s;text-decoration:none;font-size:13px;font-weight:600;color:var(--ink-2)}
+.cat-item:hover{background:var(--blue-50);color:var(--blue)}
+.cat-count{font-size:11px;font-weight:700;color:var(--muted);background:var(--surface);padding:2px 7px;border-radius:4px}
+.pop-list{display:flex;flex-direction:column;gap:8px}
+.pop-item{display:flex;gap:10px;text-decoration:none}
+.pop-thumb{width:56px;height:56px;border-radius:var(--r1);background:var(--navy-2);flex-shrink:0}
+.pop-t{font-size:12.5px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;transition:color .16s}
+.pop-item:hover .pop-t{color:var(--blue)}
+.pop-d{font-size:11px;color:var(--muted)}
+.pager{display:flex;align-items:center;gap:6px;margin-top:28px;justify-content:center}
+.pg{width:36px;height:36px;border-radius:var(--r1);border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--ink-2);cursor:pointer;transition:all .18s;background:#fff}
+.pg:hover,.pg.act{background:var(--blue);border-color:var(--blue);color:#fff}
+@media(max-width:1000px){.blog-layout{grid-template-columns:1fr}.sidebar{display:none}}
+@media(max-width:700px){.art-grid{grid-template-columns:1fr}.art-feat{grid-column:span 1}.art-thumb.feat-h{height:200px}}
+</style>
+</head>
+<body>
+<section class="page-hero">
+  <div class="hg" style="inset-inline-start:-150px;bottom:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(30,46,245,.2),transparent 65%)"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div style="max-width:700px">
+      <div class="breadcrumb"><a href="seohouse-v8.html">الرئيسية</a><svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg><span style="color:rgba(255,255,255,.6)">المدونة</span></div>
+      <span class="tag d" style="margin-bottom:18px">المدونة</span>
+      <h1 class="page-h1">رؤى وأدوات <em>تبني موقعك</em></h1>
+      <p class="hero-p">مقالات متخصصة في السيو والتجارة الإلكترونية من فريق سيو هاوس — مكتوبة للتطبيق، لا للقراءة فقط.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-surface">
+  <div class="wrap">
+    <div class="blog-layout">
+      <div>
+        <div class="art-grid">
+          <!-- Featured -->
+          <div class="art-card art-feat sr">
+            <div class="art-thumb feat-h"><span class="art-cat">تحسين محركات البحث</span></div>
+            <div class="art-body">
+              <div class="art-meta"><span>أبريل 2025</span><span class="d"></span><span>6 دق قراءة</span><span class="d"></span><span>سيو هاوس</span></div>
+              <h2>كيف تختار شركة سيو تناسب نشاطك التجاري — 7 معايير لا تتنازل عنها</h2>
+              <p>اختيار شركة السيو الخطأ يُضيّع وقتك ومالك. هذه المعايير السبعة تُمكّنك من تقييم أي وكالة قبل التعاقد معها بثقة.</p>
+              <a href="blog-post.html" class="art-read">اقرأ المقال كاملاً <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            </div>
+          </div>
+          <!-- Grid articles -->
+          <div class="art-card sr d1"><div class="art-thumb reg-h"><span class="art-cat">تجارة إلكترونية</span></div><div class="art-body"><div class="art-meta"><span>مارس 2025</span><span class="d"></span><span>8 دق</span></div><h3>سيو متاجر سلة: دليل شامل لتحسين ظهور منتجاتك في 2025</h3><p>الخطوات التقنية والمحتوى اللازم لرفع ترتيب منتجاتك في جوجل.</p><a href="blog-post.html" class="art-read">اقرأ المقال <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div>
+          <div class="art-card sr d2"><div class="art-thumb reg-h"><span class="art-cat">تحليل الأداء</span></div><div class="art-body"><div class="art-meta"><span>فبراير 2025</span><span class="d"></span><span>5 دق</span></div><h3>7 مؤشرات يجب متابعتها في Search Console كل شهر</h3><p>المؤشرات الأساسية التي تكشف صحة موقعك في جوجل.</p><a href="blog-post.html" class="art-read">اقرأ المقال <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div>
+          <div class="art-card sr d1"><div class="art-thumb reg-h"><span class="art-cat">باك لينك</span></div><div class="art-body"><div class="art-meta"><span>يناير 2025</span><span class="d"></span><span>7 دق</span></div><h3>ما هو الباك لينك ولماذا يغيّر ترتيب موقعك في جوجل؟</h3><p>شرح مبسّط وعملي لمفهوم الروابط الخارجية وأثرها على السيو.</p><a href="blog-post.html" class="art-read">اقرأ المقال <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div>
+          <div class="art-card sr d2"><div class="art-thumb reg-h"><span class="art-cat">المحتوى</span></div><div class="art-body"><div class="art-meta"><span>ديسمبر 2024</span><span class="d"></span><span>6 دق</span></div><h3>كيف تكتب محتوى يرضي القارئ وجوجل في نفس الوقت</h3><p>توازن دقيق بين تحسين الكلمات المفتاحية وتجربة القراءة.</p><a href="blog-post.html" class="art-read">اقرأ المقال <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></div>
+        </div>
+        <div class="pager sr"><div class="pg act">1</div><div class="pg">2</div><div class="pg">3</div><div class="pg" style="width:auto;padding-inline:14px">التالي →</div></div>
+      </div>
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="sb-box sr">
+          <div class="sb-title">التصنيفات</div>
+          <div class="cat-list">
+            <a href="#" class="cat-item">تحسين محركات البحث<span class="cat-count">12</span></a>
+            <a href="#" class="cat-item">التجارة الإلكترونية<span class="cat-count">8</span></a>
+            <a href="#" class="cat-item">تحليل الأداء<span class="cat-count">6</span></a>
+            <a href="#" class="cat-item">بناء الباك لينك<span class="cat-count">5</span></a>
+            <a href="#" class="cat-item">كتابة المحتوى<span class="cat-count">4</span></a>
+          </div>
+        </div>
+        <div class="sb-box sr d1">
+          <div class="sb-title">المقالات الأكثر قراءة</div>
+          <div class="pop-list">
+            <a href="blog-post.html" class="pop-item"><div class="pop-thumb"></div><div><div class="pop-t">كيف تختار شركة سيو تناسب نشاطك</div><div class="pop-d">أبريل 2025</div></div></a>
+            <a href="blog-post.html" class="pop-item"><div class="pop-thumb"></div><div><div class="pop-t">سيو متاجر سلة: الدليل الشامل</div><div class="pop-d">مارس 2025</div></div></a>
+            <a href="blog-post.html" class="pop-item"><div class="pop-thumb"></div><div><div class="pop-t">7 مؤشرات Search Console</div><div class="pop-d">فبراير 2025</div></div></a>
+          </div>
+        </div>
+        <div class="sb-box sr d2" style="background:var(--blue);border-color:var(--blue)">
+          <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:10px">استشارة مجانية</div>
+          <p style="font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.72;margin-bottom:16px">هل تريد تحسين ترتيب موقعك؟ احجز 30 دقيقة معنا مجاناً.</p>
+          <a href="contact.html" class="btn btn-w sm" style="width:100%;justify-content:center">احجز الآن</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

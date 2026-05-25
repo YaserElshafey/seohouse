@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>استشارات سيو لأصحاب الأعمال | استشارات استراتيجية | سيو هاوس</title>
+<meta name="description" content="استشارات سيو متخصصة لأصحاب الأعمال — تدقيق، خطة، خارطة طريق، ومراجعة شركة السيو الحالية. قرارات مدروسة بدلاً من تخمينات. سيو هاوس.">
+<script src="nav.js"></script>
+<style>
+.p-hero{padding-block:clamp(110px,13vh,150px) clamp(52px,6vh,72px);background:var(--navy);position:relative;overflow:hidden;text-align:center}
+.p-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,#000 10%,transparent 75%);pointer-events:none}
+.hg{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none}
+.hi{position:relative;z-index:2;max-width:840px;margin-inline:auto}
+.ph1{font-size:clamp(32px,5vw,60px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px;animation:fu .75s .08s var(--ease) both}
+.ph1 em{font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite}
+@keyframes sh{to{background-position:-200% center}}
+.psub{font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.55);max-width:680px;margin-inline:auto;margin-bottom:30px;animation:fu .75s .16s var(--ease) both}
+.pbtns{display:flex;gap:11px;justify-content:center;flex-wrap:wrap;animation:fu .75s .24s var(--ease) both}
+@keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+
+/* Who needs this */
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.who-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:32px 28px;transition:all .26s var(--fast);position:relative;overflow:hidden}
+.who-card::before{content:'';position:absolute;top:0;inset-inline-end:0;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.06),transparent 70%);transform:translate(40%,-40%);transition:transform .35s}
+.who-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:rgba(30,46,245,.18)}
+.who-card:hover::before{transform:translate(20%,-20%) scale(1.4)}
+.who-q{font-size:11px;font-weight:800;color:var(--blue);letter-spacing:.05em;margin-bottom:14px;display:flex;align-items:center;gap:8px;position:relative}
+.who-q::before{content:'';width:24px;height:1px;background:var(--blue);display:block}
+.who-card h3{font-size:18px;font-weight:900;color:var(--ink);margin-bottom:12px;letter-spacing:-.02em;line-height:1.3;position:relative}
+.who-card p{font-size:13.5px;color:var(--muted);line-height:1.85;position:relative}
+
+/* Consultation types */
+.cons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cons-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--r3);overflow:hidden;transition:all .26s var(--fast);display:flex;flex-direction:column}
+.cons-card:hover{transform:translateY(-3px);box-shadow:var(--sh-md);border-color:rgba(30,46,245,.18)}
+.cons-card.featured{border-color:var(--blue);position:relative}
+.cons-card.featured::before{content:'الأكثر طلباً';position:absolute;top:14px;inset-inline-end:14px;background:var(--blue);color:#fff;font-size:10.5px;font-weight:800;padding:4px 10px;border-radius:50px;letter-spacing:.04em;z-index:1}
+.cons-head{padding:28px 26px 22px;background:#fafbfc;border-bottom:1px solid var(--line)}
+.cons-card.featured .cons-head{background:var(--blue-50);border-color:rgba(30,46,245,.18)}
+.cons-tag{font-size:11px;font-weight:800;color:var(--blue);letter-spacing:.04em;margin-bottom:10px}
+.cons-name{font-size:21px;font-weight:900;color:var(--ink);margin-bottom:6px;letter-spacing:-.02em}
+.cons-dur{font-size:13px;color:var(--muted);font-weight:600}
+.cons-body{padding:24px 26px;flex:1;display:flex;flex-direction:column}
+.cons-desc{font-size:13.5px;color:var(--ink-2);line-height:1.85;margin-bottom:18px}
+.cons-feats{display:flex;flex-direction:column;gap:9px;margin-bottom:22px;flex:1}
+.cons-feat{display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--ink-2);line-height:1.7}
+.cons-feat svg{stroke:var(--blue);flex-shrink:0;margin-top:3px}
+.cons-cta{padding:14px 18px;border:1.5px solid var(--ink);color:var(--ink);border-radius:var(--r2);text-align:center;font-weight:700;font-size:13.5px;text-decoration:none;transition:all .22s}
+.cons-cta:hover{background:var(--ink);color:#fff}
+.cons-card.featured .cons-cta{background:var(--blue);border-color:var(--blue);color:#fff}
+.cons-card.featured .cons-cta:hover{background:var(--blue-d);border-color:var(--blue-d)}
+
+/* What you get */
+.del-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
+.del-item{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r3);padding:22px 24px;display:flex;gap:16px;transition:all .22s}
+.del-item:hover{background:rgba(255,255,255,.06);border-color:rgba(30,46,245,.3)}
+.del-num{width:32px;height:32px;border-radius:50%;background:rgba(30,46,245,.18);color:#7b90ff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;flex-shrink:0}
+.del-body h3{font-size:14.5px;font-weight:800;color:rgba(255,255,255,.92);margin-bottom:6px}
+.del-body p{font-size:12.5px;color:rgba(255,255,255,.5);line-height:1.78}
+
+.faq-cta-layout{display:grid;grid-template-columns:5fr 4fr;gap:48px;align-items:start}
+.cta-sticky{position:sticky;top:86px}
+.cta-side-card{background:var(--navy-2);border-radius:var(--r4);padding:28px;position:relative;overflow:hidden}
+.cta-side-card::before{content:'';position:absolute;inset-inline-end:-30px;top:-30px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.25),transparent 70%)}
+
+@media(max-width:1100px){.why-grid,.faq-cta-layout{grid-template-columns:1fr}.cta-sticky{position:static}.who-grid,.cons-grid{grid-template-columns:1fr}.del-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.pbtns{flex-direction:column;align-items:stretch}.pbtns .btn{justify-content:center}}
+</style>
+</head>
+<body>
+
+<section class="p-hero">
+  <div class="hg" style="inset-inline-start:-200px;bottom:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(30,46,245,.22),transparent 65%)"></div>
+  <div class="hg" style="inset-inline-end:-100px;top:0;width:480px;height:480px;background:radial-gradient(circle,rgba(30,46,245,.12),transparent 65%)"></div>
+  <div class="wrap"><div class="hi">
+    <div class="breadcrumb" style="justify-content:center"><a href="seohouse-v8.html">الرئيسية</a><svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg><span style="color:rgba(255,255,255,.55)">استشارات السيو</span></div>
+    <span class="tag d" style="justify-content:center;margin-bottom:20px">للمدراء وأصحاب الأعمال</span>
+    <h1 class="ph1">استشارة سيو<br><em>قبل أن تستثمر فيها</em></h1>
+    <p class="psub">قبل أن تتعاقد مع شركة سيو، أو توظّف فريقاً، أو تستمر مع شركتك الحالية — احصل على رأي محايد من خبير لا يبيعك خدمات تنفيذ. تعرف بالضبط أين تقف، وأين يجب أن تستثمر.</p>
+    <div class="pbtns">
+      <a href="contact.html" class="btn btn-p lg"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>احجز استشارة الآن</a>
+      <a href="#types" class="btn btn-g lg">أنواع الاستشارات</a>
+    </div>
+  </div></div>
+</section>
+
+<!-- WHY -->
+<section class="sec sec-white">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="sr">
+        <span class="tag" style="margin-bottom:12px">لماذا تحتاج استشارة</span>
+        <h2 class="h2" style="margin-bottom:16px">قرار سيو خاطئ<br>يكلّفك سنة كاملة</h2>
+        <p class="bod" style="margin-bottom:18px">السيو ليس "إعلان تجرّبه شهراً وتُلغيه". قرار التعاقد مع الشركة الخطأ، أو الاستثمار في الاستراتيجية الخطأ، يكلّفك 6-12 شهراً قبل أن تكتشف أنك في الطريق الخطأ — مع خسارة الميزانية والفرصة معاً.</p>
+        <div class="chklist sr d1" style="margin-bottom:24px">
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>رأي محايد</strong> — لا نبيعك خدمات تنفيذ في الاستشارة</div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>توفير الوقت والميزانية</strong> — استثمر في الصحيح من البداية</div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>تقييم شركتك الحالية بموضوعية</strong> — هل تستحق الاستمرار؟</div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>تفهم بنفسك</strong> — لا تعتمد كلياً على ما يقوله المنفّذ</div>
+        </div>
+        <a href="contact.html" class="btn btn-p sr d2">احجز استشارة الآن</a>
+      </div>
+      <div class="sr d1">
+        <div style="background:var(--navy-2);border-radius:var(--r4);padding:30px;position:relative;overflow:hidden">
+          <div style="position:absolute;inset-inline-end:-50px;top:-50px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.28),transparent 70%)"></div>
+          <div style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:18px;position:relative;z-index:1">3 أرقام تُلخّص لماذا</div>
+          <div style="display:flex;flex-direction:column;gap:12px;position:relative;z-index:1">
+            <div style="padding:16px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
+              <div style="font-size:24px;font-weight:900;color:#7b90ff;letter-spacing:-.02em;margin-bottom:4px">68%</div>
+              <div style="font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.6">من المعلنين على شركات سيو يصرّحون بعدم تحقيق نتائج مرضية</div>
+            </div>
+            <div style="padding:16px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
+              <div style="font-size:24px;font-weight:900;color:#7b90ff;letter-spacing:-.02em;margin-bottom:4px">12 شهر</div>
+              <div style="font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.6">متوسط الوقت الضائع قبل اكتشاف أن الاستراتيجية خاطئة</div>
+            </div>
+            <div style="padding:16px 18px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);border-radius:var(--r2)">
+              <div style="font-size:24px;font-weight:900;color:var(--green);letter-spacing:-.02em;margin-bottom:4px">3-5×</div>
+              <div style="font-size:12.5px;color:rgba(255,255,255,.85);line-height:1.6">عائد الاستثمار من قرار سيو صحيح مقارنة بقرار خاطئ</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO NEEDS THIS -->
+<section class="sec sec-surface">
+  <div class="wrap">
+    <div class="sh c sr"><span class="tag">من يحتاج استشارة سيو</span><h2 class="h2">هل تجد نفسك في إحدى هذه الحالات؟</h2><p class="bod">3 سيناريوهات شائعة لأصحاب الأعمال — في كل واحدة منها، ساعة استشارة توفّر عليك ميزانية أشهر.</p></div>
+    <div class="who-grid">
+      <div class="who-card sr">
+        <div class="who-q">السيناريو الأول</div>
+        <h3>"أفكّر في التعاقد مع شركة سيو ولا أعرف كيف أختار"</h3>
+        <p>تتلقّى عروضاً من 3-4 شركات بأرقام مختلفة ووعود متشابهة. كيف تعرف أيّها يستحق فعلاً؟ نُساعدك على فهم الفروقات الحقيقية، الأسئلة التي يجب أن تطرحها، والأرقام التي يجب أن تطلبها.</p>
+      </div>
+      <div class="who-card sr d1">
+        <div class="who-q">السيناريو الثاني</div>
+        <h3>"أعمل مع شركة سيو منذ أشهر ولا أرى نتائج واضحة"</h3>
+        <p>تدفع شهرياً، وتستلم تقارير، لكن الزيارات والمبيعات لا ترتفع كما تتوقع. هل المشكلة من الشركة، أم من توقّعاتك، أم من قطاعك؟ نُقدّم لك تقييماً محايداً للوضع.</p>
+      </div>
+      <div class="who-card sr d2">
+        <div class="who-q">السيناريو الثالث</div>
+        <h3>"أملك موقعاً وأريد فهم وضعه قبل أي قرار"</h3>
+        <p>قبل أن تستثمر في السيو، تريد أن تعرف بالضبط أين تقف، ما المشاكل، ما الفرص، وأين يجب أن تبدأ. تدقيق احترافي + خارطة طريق = قرارات مدروسة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTATION TYPES -->
+<section id="types" class="sec sec-white">
+  <div class="wrap">
+    <div class="sh c sr"><span class="tag">أنواع الاستشارات</span><h2 class="h2">3 أنواع من الاستشارات</h2><p class="bod">لكل سيناريو نوع استشارة مناسب — اختر ما يخدم وضعك.</p></div>
+    <div class="cons-grid">
+      <div class="cons-card sr">
+        <div class="cons-head">
+          <div class="cons-tag">تدقيق وتشخيص</div>
+          <div class="cons-name">تدقيق سيو شامل</div>
+          <div class="cons-dur">جلسة + تقرير مفصّل</div>
+        </div>
+        <div class="cons-body">
+          <p class="cons-desc">تدقيق كامل لموقعك يكشف المشاكل التقنية، فجوات المحتوى، ضعف الروابط، وفرص التحسين الأكثر تأثيراً.</p>
+          <div class="cons-feats">
+            <div class="cons-feat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>تقرير مكتوب بكل المشاكل والأولويات</div>
+            <div class="cons-feat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>تحليل المنافسين والفجوات</div>
+            <div class="cons-feat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>قائمة بأهم 10 مهام بترتيب الأولوية</div>
+            <div class="cons-feat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>جلسة شرح ومناقشة عبر زووم</div>
+          </div>
+          <a href="contact.html" class="cons-cta">اطلب استشارة تدقيق</a>
+        </div>
+      </div>
+      <div class="cons-card featured sr d1">
+        <div class="cons-head">
+          <div class="cons-tag">استشارة استراتيجية</div>
+          <div class="cons-name">خارطة طريق سيو</div>
+          <div class="cons-dur">3-4 جلسات + خطة سنوية</div>
+        </div>
+        <div class="cons-body">
+          <p class="cons-desc">تدقيق شامل + خطة عمل تفصيلية لـ 12 شهراً قادمة تحدّد بالضبط ما تحتاجه شهراً بشهر — سواء نفّذنا نحن أو شركة أخرى.</p>
+          <div class="cons-feats">
+            <div class="cons-feat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>كل ما في باقة التدقيق الشامل</div>
+            <div class="cons-feat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>خطة محتوى وكلمات لـ 12 شهر</div>
+            <div class="cons-feat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>استراتيجية روابط وتوزيع الميزانية</div>
+            <div class="cons-feat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>توصية بفريق التنفيذ المناسب</div>
+          </div>
+          <a href="contact.html" class="cons-cta">اطلب خارطة طريق</a>
+        </div>
+      </div>
+      <div class="cons-card sr d2">
+        <div class="cons-head">
+          <div class="cons-tag">رأي ثانٍ محايد</div>
+          <div class="cons-name">تقييم شركتك الحالية</div>
+          <div class="cons-dur">جلسة + تقرير محايد</div>
+        </div>
+        <div class="cons-body">
+          <p class="cons-desc">إذا كنت تعمل مع شركة سيو ولست متأكداً من جودة عملها — نُحلّل تقاريرها، نتائجها، ومستوى تنفيذها بشكل محايد.</p>
+          <div class="cons-feats">
+            <div class="cons-feat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>مراجعة تقارير شركتك ال 6 أشهر الماضية</div>
+            <div class="cons-feat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>تقييم جودة الروابط والمحتوى</div>
+            <div class="cons-feat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>توصية واضحة: استمر / غيّر / فاوض</div>
+            <div class="cons-feat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>أسئلة لطرحها على شركتك في الاجتماع القادم</div>
+          </div>
+          <a href="contact.html" class="cons-cta">اطلب رأي ثانٍ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="sec sec-navy">
+  <div class="wrap">
+    <div class="sh c sr"><span class="tag d">المخرجات</span><h2 class="h2 wh">ماذا تستلم بعد الاستشارة؟</h2><p class="bod d">الاستشارة ليست محادثة شفهية تنتهي بانتهاء الجلسة — بل مخرجات موثّقة تستخدمها في كل قرار سيو قادم.</p></div>
+    <div class="del-grid sr d1">
+      <div class="del-item"><div class="del-num">1</div><div class="del-body"><h3>تقرير تدقيق مكتوب</h3><p>وثيقة بكل المشاكل، الفجوات، والفرص — مرتّبة حسب التأثير على عملك. تستخدمه لاحقاً مع أي فريق تنفيذ.</p></div></div>
+      <div class="del-item"><div class="del-num">2</div><div class="del-body"><h3>خطة أولويات تنفيذية</h3><p>قائمة محدّدة بأهم المهام التي يجب البدء بها، مرتّبة حسب الأهمية وعائد الاستثمار المتوقّع لكل مهمة.</p></div></div>
+      <div class="del-item"><div class="del-num">3</div><div class="del-body"><h3>تحليل المنافسين</h3><p>كيف يتفوّق عليك منافسوك بالضبط؟ ما الكلمات التي يحتلون بها المراتب وأنت لا؟ ما حجم استثمارهم في السيو تقريباً؟</p></div></div>
+      <div class="del-item"><div class="del-num">4</div><div class="del-body"><h3>توصية بالميزانية المناسبة</h3><p>كم تحتاج فعلياً للوصول للنتيجة المرجوة؟ هل ميزانيتك الحالية مبالغ بها أم ناقصة؟ توصية محايدة بدون تحيّز.</p></div></div>
+      <div class="del-item"><div class="del-num">5</div><div class="del-body"><h3>قائمة أسئلة لشركتك / فريقك</h3><p>الأسئلة التي يجب طرحها على شركة السيو في الاجتماع القادم — تكشف بسهولة جودة فهمها لقطاعك واحترافيتها.</p></div></div>
+      <div class="del-item"><div class="del-num">6</div><div class="del-body"><h3>جلسة عملية مباشرة</h3><p>جلسة عبر زووم لمناقشة التقرير، الإجابة على كل أسئلتك، ومساعدتك على اتّخاذ قرار واثق وواضح.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-white">
+  <div class="wrap">
+    <div class="faq-cta-layout">
+      <div>
+        <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2">أسئلة عن الاستشارات</h2></div>
+        <div class="faq-list sr d1">
+          <div class="faq-item"><div class="faq-q"><span>هل الاستشارة محايدة فعلاً أم محاولة بيع؟</span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-a"><div class="faq-a-inner">محايدة 100%. الاستشارة خدمة مدفوعة منفصلة عن خدمات التنفيذ. توصياتنا قد تشمل عدم العمل معنا في التنفيذ إذا رأينا أن شركة أخرى أنسب لقطاعك أو أن فريقك الداخلي يستطيع التنفيذ.</div></div></div>
+          <div class="faq-item"><div class="faq-q"><span>هل يمكن أن أستخدم خارطة الطريق مع شركة أخرى؟</span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-a"><div class="faq-a-inner">طبعاً. الخطة ملكك بالكامل ولك حرية التنفيذ مع أي شركة أو فريق داخلي. الكثير من عملاء الاستشارة يستخدمون الخطة لاحقاً لاختيار شركة التنفيذ الأنسب.</div></div></div>
+          <div class="faq-item"><div class="faq-q"><span>كم تستغرق الاستشارة؟</span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-a"><div class="faq-a-inner">تدقيق شامل: 5-7 أيام عمل. خارطة طريق 12 شهر: 10-14 يوم عمل. الرأي الثاني: 3-5 أيام عمل. تشمل التحليل + الجلسات + التقرير النهائي.</div></div></div>
+          <div class="faq-item"><div class="faq-q"><span>ماذا تحتاجون مني للبدء؟</span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-a"><div class="faq-a-inner">صلاحية قراءة على Google Analytics وSearch Console، عرض من شركتك السيو الحالية إن وُجد، وجلسة استكشافية لفهم نشاطك وأهدافك. نتولّى الباقي.</div></div></div>
+          <div class="faq-item"><div class="faq-q"><span>هل تُقدّمون جلسات شهرية مستمرة؟</span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-a"><div class="faq-a-inner">نعم — للشركات التي تُنفّذ السيو داخلياً، نُقدّم باقة استشارة شهرية لمراجعة الأداء، حلّ المشاكل، وتحديث الاستراتيجية باستمرار.</div></div></div>
+          <div class="faq-item"><div class="faq-q"><span>هل أحتاج خبرة في السيو لأستفيد من الاستشارة؟</span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div><div class="faq-a"><div class="faq-a-inner">إطلاقاً. نُقدّم الاستشارة بلغة تجارية يفهمها صاحب العمل — لا مصطلحات تقنية معقّدة. هدفنا أن تخرج بقرارات واضحة، لا بمحاضرة تقنية.</div></div></div>
+        </div>
+      </div>
+      <div class="cta-sticky">
+        <div class="cta-side-card sr d1">
+          <span class="tag d" style="position:relative;z-index:1;margin-bottom:10px">ابدأ الآن</span>
+          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1">احصل على رأي محايد<br>قبل أن تقرّر</h3>
+          <p style="font-size:13.5px;color:rgba(255,255,255,.44);line-height:1.8;margin-bottom:22px;position:relative;z-index:1">احجز جلسة استكشافية مجانية لنتعرّف على وضعك ونوصي بنوع الاستشارة الأنسب.</p>
+          <div class="chklist" style="margin-bottom:22px">
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>جلسة استكشافية 30 دقيقة</div>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>توصية بنوع الاستشارة المناسب</div>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>بدون أي التزام</div>
+          </div>
+          <a href="contact.html" class="btn btn-p" style="width:100%;justify-content:center;position:relative;z-index:1">احجز جلسة مجانية</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--blue);position:relative;overflow:hidden;text-align:center">
+  <div style="position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.07);top:50%;left:50%;transform:translate(-50%,-50%);width:580px;height:580px;pointer-events:none"></div>
+  <div class="wrap"><div style="position:relative;z-index:1;max-width:540px;margin-inline:auto" class="sr">
+    <h2 class="h2 wh" style="margin-bottom:11px">قرار سيو واحد قد يُغيّر مسار عملك</h2>
+    <p style="font-size:clamp(14px,1.4vw,16.5px);color:rgba(255,255,255,.55);line-height:1.88;margin-bottom:28px">احصل على رأي محايد قبل أن تستثمر — أو تستمر في الاستثمار الخطأ.</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <a href="contact.html" class="btn btn-w lg">احجز جلسة استكشافية</a>
+      <a href="seo-service.html" class="btn btn-g lg">جميع خدمات السيو</a>
+    </div>
+  </div></div>
+</section>
+</body>
+</html>

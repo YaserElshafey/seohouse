@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نتائج الأعمال | سيو هاوس</title>
+<meta name="description" content="نتائج فعلية من مشاريع تحسين محركات البحث نفّذتها سيو هاوس — متاجر إلكترونية، مواقع شركات، وعيادات طبية.">
+<script src="nav.js"></script>
+<style>
+.page-hero{padding-block:clamp(110px,13vh,148px) clamp(52px,6vh,68px);background:var(--navy);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,#000 10%,transparent 75%);pointer-events:none}
+.hg{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none}
+.page-h1{font-size:clamp(30px,4.5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px;animation:fu .75s .08s var(--ease) both}
+.page-h1 em{font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite}
+@keyframes sh{to{background-position:-200% center}}
+.hero-p{font-size:clamp(14px,1.5vw,17px);line-height:1.9;color:rgba(255,255,255,.48);max-width:600px;margin-bottom:28px;animation:fu .75s .16s var(--ease) both}
+@keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.r-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);overflow:hidden;transition:all .26s var(--fast)}
+.r-card:hover{box-shadow:var(--sh-md);border-color:transparent;transform:translateY(-4px)}
+.r-screen{height:0;padding-block-end:56%;background:var(--navy);position:relative;overflow:hidden}
+.r-chrome{position:absolute;top:0;inset-inline:0;height:24px;background:rgba(255,255,255,.04);display:flex;align-items:center;padding-inline:9px;gap:5px;border-block-end:1px solid rgba(255,255,255,.05)}
+.r-dots{display:flex;gap:3px}
+.r-dots span{width:5px;height:5px;border-radius:50%}
+.r-dots span:nth-child(1){background:rgba(255,80,80,.3)}
+.r-dots span:nth-child(2){background:rgba(255,190,50,.3)}
+.r-dots span:nth-child(3){background:rgba(60,200,80,.3)}
+.r-cbar{flex:1;margin-inline:6px;height:10px;background:rgba(255,255,255,.04);border-radius:3px}
+.r-img{position:absolute;top:24px;inset-inline:0;bottom:0;display:flex;align-items:flex-end;padding:10px 12px 0;background:linear-gradient(140deg,rgba(7,13,50,.96),rgba(30,46,245,.12))}
+.r-chart{display:flex;align-items:flex-end;gap:3px;height:55px;width:100%}
+.r-b{flex:1;border-radius:2px 2px 0 0;background:rgba(30,46,245,.2)}
+.r-b.hi{background:rgba(123,144,255,.6)}
+.r-body{padding:16px 18px}
+.r-sector{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.r-sector::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--muted)}
+.r-card h3{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:6px;line-height:1.3}
+.r-card p{font-size:12.5px;color:var(--muted);line-height:1.65;margin-bottom:12px}
+.r-meta{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.r-ml{font-size:9.5px;color:var(--muted);font-weight:600;margin-bottom:3px}
+.r-mv{font-size:11.5px;font-weight:700;color:var(--muted);border:1px dashed rgba(30,46,245,.15);border-radius:4px;padding:4px 7px;font-style:italic;display:block}
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
+.filter-btn{padding:8px 18px;border-radius:50px;font-size:13px;font-weight:700;border:1.5px solid var(--line);background:#fff;color:var(--ink-2);cursor:pointer;transition:all .18s;font-family:'Cairo',sans-serif}
+.filter-btn:hover,.filter-btn.act{background:var(--blue);color:#fff;border-color:var(--blue)}
+@media(max-width:860px){.results-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.results-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<section class="page-hero">
+  <div class="hg" style="inset-inline-start:-150px;bottom:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(30,46,245,.2),transparent 65%)"></div>
+  <div class="hg" style="inset-inline-end:-80px;top:0;width:380px;height:380px;background:radial-gradient(circle,rgba(30,46,245,.1),transparent 65%)"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="breadcrumb"><a href="seohouse-v8.html">الرئيسية</a><svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg><span style="color:rgba(255,255,255,.6)">نتائج الأعمال</span></div>
+    <span class="tag d" style="margin-bottom:18px">نتائج فعلية</span>
+    <h1 class="page-h1">نتائج من <em>مشاريع حقيقية</em></h1>
+    <p class="hero-p">لا نتحدث عن نتائج افتراضية — هذه مشاريع نفّذناها لعملاء حقيقيين في قطاعات متنوعة. الأرقام الدقيقة تُضاف بعد موافقة العملاء.</p>
+  </div>
+</section>
+
+<section class="sec sec-surface">
+  <div class="wrap">
+    <div class="filter-row sr">
+      <button class="filter-btn act">الكل</button>
+      <button class="filter-btn">التجارة الإلكترونية</button>
+      <button class="filter-btn">الصحة والطب</button>
+      <button class="filter-btn">العقارات</button>
+      <button class="filter-btn">التعليم</button>
+      <button class="filter-btn">الخدمات</button>
+    </div>
+    <div class="results-grid">
+      <div class="r-card sr"><div class="r-screen"><div class="r-chrome"><div class="r-dots"><span></span><span></span><span></span></div><div class="r-cbar"></div></div><div class="r-img"><div class="r-chart"><div class="r-b" style="height:20%"></div><div class="r-b" style="height:28%"></div><div class="r-b" style="height:24%"></div><div class="r-b" style="height:42%"></div><div class="r-b" style="height:50%"></div><div class="r-b hi" style="height:62%"></div><div class="r-b hi" style="height:72%"></div><div class="r-b hi" style="height:82%"></div><div class="r-b hi" style="height:90%"></div><div class="r-b hi" style="height:98%"></div></div></div></div><div class="r-body"><div class="r-sector">التجارة الإلكترونية</div><h3>متجر سلة للأزياء — نمو الزيارات العضوية</h3><p>موقع جديد في سوق تنافسي — بناء حضور عضوي من الصفر.</p><div class="r-meta"><div><div class="r-ml">نمو الزيارات</div><div class="r-mv">سيُضاف لاحقاً</div></div><div><div class="r-ml">المدة</div><div class="r-mv">6 أشهر</div></div></div></div></div>
+      <div class="r-card sr d1"><div class="r-screen"><div class="r-chrome"><div class="r-dots"><span></span><span></span><span></span></div><div class="r-cbar"></div></div><div class="r-img"><div class="r-chart"><div class="r-b" style="height:35%"></div><div class="r-b" style="height:40%"></div><div class="r-b" style="height:36%"></div><div class="r-b" style="height:48%"></div><div class="r-b hi" style="height:60%"></div><div class="r-b hi" style="height:70%"></div><div class="r-b hi" style="height:76%"></div><div class="r-b hi" style="height:84%"></div><div class="r-b hi" style="height:94%"></div><div class="r-b hi" style="height:100%"></div></div></div></div><div class="r-body"><div class="r-sector">الصحة والطب</div><h3>عيادة تخصصية — ظهور على كلمات طبية</h3><p>منافسة عالية في قطاع الرعاية الصحية بالسوق السعودي.</p><div class="r-meta"><div><div class="r-ml">ترتيب الكلمات</div><div class="r-mv">سيُضاف لاحقاً</div></div><div><div class="r-ml">المدة</div><div class="r-mv">4 أشهر</div></div></div></div></div>
+      <div class="r-card sr d2"><div class="r-screen"><div class="r-chrome"><div class="r-dots"><span></span><span></span><span></span></div><div class="r-cbar"></div></div><div class="r-img"><div class="r-chart"><div class="r-b" style="height:16%"></div><div class="r-b" style="height:22%"></div><div class="r-b" style="height:30%"></div><div class="r-b" style="height:40%"></div><div class="r-b" style="height:50%"></div><div class="r-b hi" style="height:60%"></div><div class="r-b hi" style="height:72%"></div><div class="r-b hi" style="height:82%"></div><div class="r-b hi" style="height:92%"></div><div class="r-b hi" style="height:100%"></div></div></div></div><div class="r-body"><div class="r-sector">العقارات</div><h3>شركة عقارية — طلبات من البحث العضوي</h3><p>تقليل الاعتماد على الإعلانات المدفوعة ذات التكلفة العالية.</p><div class="r-meta"><div><div class="r-ml">طلبات عضوية</div><div class="r-mv">سيُضاف لاحقاً</div></div><div><div class="r-ml">المدة</div><div class="r-mv">8 أشهر</div></div></div></div></div>
+      <div class="r-card sr d1"><div class="r-screen"><div class="r-chrome"><div class="r-dots"><span></span><span></span><span></span></div><div class="r-cbar"></div></div><div class="r-img"><div class="r-chart"><div class="r-b" style="height:25%"></div><div class="r-b" style="height:30%"></div><div class="r-b" style="height:28%"></div><div class="r-b" style="height:45%"></div><div class="r-b" style="height:55%"></div><div class="r-b hi" style="height:65%"></div><div class="r-b hi" style="height:74%"></div><div class="r-b hi" style="height:82%"></div><div class="r-b hi" style="height:88%"></div><div class="r-b hi" style="height:96%"></div></div></div></div><div class="r-body"><div class="r-sector">التعليم والتدريب</div><h3>مركز تدريبي — تسجيلات عضوية</h3><p>استقطاب متدربين جدد من البحث العضوي دون إعلانات.</p><div class="r-meta"><div><div class="r-ml">نمو التسجيلات</div><div class="r-mv">سيُضاف لاحقاً</div></div><div><div class="r-ml">المدة</div><div class="r-mv">5 أشهر</div></div></div></div></div>
+      <div class="r-card sr d2"><div class="r-screen"><div class="r-chrome"><div class="r-dots"><span></span><span></span><span></span></div><div class="r-cbar"></div></div><div class="r-img"><div class="r-chart"><div class="r-b" style="height:18%"></div><div class="r-b" style="height:26%"></div><div class="r-b" style="height:22%"></div><div class="r-b" style="height:38%"></div><div class="r-b" style="height:48%"></div><div class="r-b hi" style="height:58%"></div><div class="r-b hi" style="height:70%"></div><div class="r-b hi" style="height:80%"></div><div class="r-b hi" style="height:86%"></div><div class="r-b hi" style="height:94%"></div></div></div></div><div class="r-body"><div class="r-sector">المطاعم والأغذية</div><h3>سلسلة مطاعم — ظهور محلي في جوجل</h3><p>تحسين الظهور المحلي لكل فرع على خرائط جوجل.</p><div class="r-meta"><div><div class="r-ml">نمو الزيارات</div><div class="r-mv">سيُضاف لاحقاً</div></div><div><div class="r-ml">المدة</div><div class="r-mv">3 أشهر</div></div></div></div></div>
+      <div class="r-card sr d3"><div class="r-screen"><div class="r-chrome"><div class="r-dots"><span></span><span></span><span></span></div><div class="r-cbar"></div></div><div class="r-img"><div class="r-chart"><div class="r-b" style="height:30%"></div><div class="r-b" style="height:35%"></div><div class="r-b" style="height:32%"></div><div class="r-b" style="height:50%"></div><div class="r-b" style="height:58%"></div><div class="r-b hi" style="height:68%"></div><div class="r-b hi" style="height:76%"></div><div class="r-b hi" style="height:84%"></div><div class="r-b hi" style="height:92%"></div><div class="r-b hi" style="height:100%"></div></div></div></div><div class="r-body"><div class="r-sector">التقنية والبرمجيات</div><h3>شركة SaaS — زيارات عضوية من قرار الشراء</h3><p>استهداف كلمات تجارية تقنية تجلب عملاء محتملين.</p><div class="r-meta"><div><div class="r-ml">نمو الزيارات</div><div class="r-mv">سيُضاف لاحقاً</div></div><div><div class="r-ml">المدة</div><div class="r-mv">7 أشهر</div></div></div></div></div>
+    </div>
+    <p style="text-align:center;font-size:11.5px;color:var(--muted);margin-top:22px;font-style:italic">الأرقام الفعلية تُضاف بعد الحصول على موافقة العملاء</p>
+  </div>
+</section>
+
+<section class="sec" style="background:var(--blue);position:relative;overflow:hidden;text-align:center">
+  <div style="position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.07);top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;pointer-events:none"></div>
+  <div class="wrap"><div style="position:relative;z-index:1;max-width:520px;margin-inline:auto" class="sr">
+    <span class="tag d" style="justify-content:center;margin-bottom:11px">هل موقعك التالي؟</span>
+    <h2 class="h2 wh" style="margin-bottom:11px">لنبني نتائجك معاً</h2>
+    <p style="font-size:clamp(14px,1.4vw,16px);color:rgba(255,255,255,.55);line-height:1.88;margin-bottom:28px">احجز استشارة مجانية ونضع الأساس لنتيجة تستحق أن تُعرض هنا.</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <a href="contact.html" class="btn btn-w lg">احجز استشارة مجانية</a>
+      <a href="seo-service.html" class="btn btn-g lg">تعرّف على السيو</a>
+    </div>
+  </div></div>
+</section>
+<script>
+document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('act'));btn.classList.add('act')})});
+</script>
+</body>
+</html>

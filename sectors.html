@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>القطاعات | سيو هاوس</title>
+<meta name="description" content="سيو هاوس تخدم قطاعات متنوعة في السعودية — تجارة إلكترونية، صحة، عقارات، تعليم، مطاعم، قانون، تقنية، وسياحة.">
+<script src="nav.js"></script>
+<style>
+.page-hero{padding-block:clamp(110px,13vh,148px) clamp(52px,6vh,68px);background:var(--navy);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,#000 10%,transparent 75%);pointer-events:none}
+.hg{position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none}
+.page-h1{font-size:clamp(30px,4.5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px;animation:fu .75s .08s var(--ease) both}
+.page-h1 em{font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite}
+@keyframes sh{to{background-position:-200% center}}
+.hero-p{font-size:clamp(14px,1.5vw,17px);line-height:1.9;color:rgba(255,255,255,.48);max-width:600px;margin-bottom:28px;animation:fu .75s .16s var(--ease) both}
+@keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.sec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.sec-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:26px 20px;text-align:center;transition:all .28s var(--fast);cursor:default;position:relative;overflow:hidden;text-decoration:none;display:block}
+.sec-card::before{content:'';position:absolute;inset:0;background:var(--blue);opacity:0;transition:opacity .28s}
+.sec-card:hover{transform:translateY(-5px);box-shadow:var(--sh-md);border-color:transparent}
+.sec-card:hover::before{opacity:1}
+.sec-ico{width:52px;height:52px;border-radius:14px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin-inline:auto;margin-bottom:14px;position:relative;z-index:1;transition:background .28s,transform .3s var(--ease)}
+.sec-ico svg{stroke:var(--blue);transition:stroke .28s;width:22px;height:22px}
+.sec-card:hover .sec-ico{background:rgba(255,255,255,.15);transform:scale(1.08)}
+.sec-card:hover .sec-ico svg{stroke:#fff}
+.sec-card h3{font-size:15px;font-weight:700;color:var(--ink);position:relative;z-index:1;transition:color .24s;margin-bottom:6px}
+.sec-card p{font-size:12px;color:var(--muted);position:relative;z-index:1;transition:color .24s;line-height:1.55}
+.sec-card:hover h3,.sec-card:hover p{color:#fff}
+.sec-card:hover p{color:rgba(255,255,255,.65)}
+.sec-arr{position:absolute;bottom:14px;inset-inline-end:14px;width:24px;height:24px;border-radius:6px;background:rgba(30,46,245,.1);display:flex;align-items:center;justify-content:center;transition:all .24s;z-index:1}
+.sec-arr svg{stroke:var(--blue);width:12px;height:12px;transition:stroke .24s}
+.sec-card:hover .sec-arr{background:rgba(255,255,255,.15)}
+.sec-card:hover .sec-arr svg{stroke:#fff}
+@media(max-width:860px){.sec-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.sec-grid{grid-template-columns:1fr 1fr;gap:10px}}
+</style>
+</head>
+<body>
+<section class="page-hero">
+  <div class="hg" style="inset-inline-start:-150px;bottom:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(30,46,245,.2),transparent 65%)"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div style="max-width:700px">
+      <div class="breadcrumb"><a href="seohouse-v8.html">الرئيسية</a><svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg><span style="color:rgba(255,255,255,.6)">القطاعات</span></div>
+      <span class="tag d" style="margin-bottom:18px">تخصص قطاعي</span>
+      <h1 class="page-h1">سيو مخصص <em>لقطاعك</em></h1>
+      <p class="hero-p">لكل قطاع كلماته المفتاحية، جمهوره، ومنافسوه — استراتيجيتنا مبنية على هذا الفهم، لا على قوالب جاهزة.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-surface">
+  <div class="wrap">
+    <div class="sh c sr"><span class="tag">القطاعات</span><h2 class="h2">اختر قطاعك لمعرفة كيف نخدمه</h2><p class="bod">نعمل مع شركات من قطاعات متنوعة — لكل واحد منها منهجية وفهم خاص.</p></div>
+    <div class="sec-grid">
+      <a href="sector-ecommerce.html" class="sec-card sr"><div class="sec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div><h3>التجارة الإلكترونية</h3><p>متاجر سلة، زد، شوبيفاي وغيرها</p><div class="sec-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></a>
+      <a href="sector-health.html" class="sec-card sr d1"><div class="sec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>الصحة والطب</h3><p>عيادات، مستشفيات، مراكز صحية</p><div class="sec-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></a>
+      <a href="sector-realestate.html" class="sec-card sr d2"><div class="sec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>العقارات والبناء</h3><p>مطورون عقاريون وشركات تطوير</p><div class="sec-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></a>
+      <a href="sector-education.html" class="sec-card sr d3"><div class="sec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div><h3>التعليم والتدريب</h3><p>مدارس، جامعات، ومراكز تدريب</p><div class="sec-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></a>
+      <a href="sector-food.html" class="sec-card sr d1"><div class="sec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg></div><h3>الأغذية والمطاعم</h3><p>مطاعم وسلاسل أغذية</p><div class="sec-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></a>
+      <a href="sector-legal.html" class="sec-card sr d2"><div class="sec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6l9 6 9-6"/><path d="M3 6v12l9 6 9-6V6"/></svg></div><h3>القانون والاستشارات</h3><p>مكاتب محاماة وشركات استشارية</p><div class="sec-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></a>
+      <a href="sector-tech.html" class="sec-card sr d3"><div class="sec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>التقنية والبرمجيات</h3><p>شركات تقنية وSaaS</p><div class="sec-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></a>
+      <a href="sector-tourism.html" class="sec-card sr d4"><div class="sec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><h3>السياحة والسفر</h3><p>وكالات سفر وشركات سياحة</p><div class="sec-arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-white">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center">
+      <div class="sr">
+        <span class="tag" style="margin-bottom:12px">لماذا التخصص مهم</span>
+        <h2 class="h2" style="margin-bottom:16px">استراتيجية قطاعية<br>لا قالب جاهز</h2>
+        <p class="bod" style="margin-bottom:18px">كل قطاع يملك كلماته المفتاحية الخاصة، نية بحث مختلفة، ومنافسين محددين. الاستراتيجية الناجحة للعيادة تختلف عن استراتيجية المتجر الإلكتروني تماماً.</p>
+        <p class="bod" style="margin-bottom:24px">نبني استراتيجية السيو لكل عميل بناءً على فهم عميق لقطاعه — وليس نسخاً من قالب جاهز.</p>
+        <a href="contact.html" class="btn btn-p">احجز استشارة مجانية</a>
+      </div>
+      <div class="sr d1">
+        <div style="background:var(--navy-2);border-radius:var(--r4);padding:28px;position:relative;overflow:hidden">
+          <div style="position:absolute;inset-inline-end:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.28),transparent 70%)"></div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:18px;position:relative;z-index:1">مثال: نية البحث تختلف حسب القطاع</div>
+          <div style="display:flex;flex-direction:column;gap:10px;position:relative;z-index:1">
+            <div style="display:flex;align-items:center;gap:10px;padding:12px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)"><div style="width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0"></div><div style="font-size:13px;color:rgba(255,255,255,.7)">متجر إلكتروني → كلمات شرائية</div></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:12px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)"><div style="width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0"></div><div style="font-size:13px;color:rgba(255,255,255,.7)">عيادة طبية → كلمات استفسارية</div></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:12px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)"><div style="width:8px;height:8px;border-radius:50%;background:#f59e0b;flex-shrink:0"></div><div style="font-size:13px;color:rgba(255,255,255,.7)">شركة عقارية → كلمات موقعية</div></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:12px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)"><div style="width:8px;height:8px;border-radius:50%;background:#8b5cf6;flex-shrink:0"></div><div style="font-size:13px;color:rgba(255,255,255,.7)">مركز تدريبي → كلمات معلوماتية</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
