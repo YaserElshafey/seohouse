@@ -41,8 +41,8 @@ $delay_class  = isset( $args['delay'] ) ? ' ' . $args['delay'] : '';
       <div class="cs-meta">
         <?php foreach ( array_slice( $metrics, 0, 2 ) as $m ) : ?>
           <div>
-            <div class="cs-ml"><?php echo esc_html( $m['metric_label'] ); ?></div>
-            <div class="cs-mv"><?php echo esc_html( $m['metric_value'] ); ?></div>
+            <div class="cs-ml"><?php echo esc_html( $m['label'] ?? '' ); ?></div>
+            <div class="cs-mv"><?php echo esc_html( $m['value'] ?? '' ); ?></div>
           </div>
         <?php endforeach; ?>
         <?php if ( ! empty( $duration ) ) : ?>

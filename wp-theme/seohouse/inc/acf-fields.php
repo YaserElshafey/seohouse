@@ -114,8 +114,8 @@ add_action( 'acf/init', function () {
                 'max'          => 4,
                 'button_label' => 'إضافة مؤشر',
                 'sub_fields'   => [
-                    [ 'key' => 'field_metric_label', 'label' => 'التسمية',  'name' => 'metric_label', 'type' => 'text' ],
-                    [ 'key' => 'field_metric_value', 'label' => 'القيمة',   'name' => 'metric_value', 'type' => 'text' ],
+                    [ 'key' => 'field_metric_label', 'label' => 'التسمية',  'name' => 'label', 'type' => 'text' ],
+                    [ 'key' => 'field_metric_value', 'label' => 'القيمة',   'name' => 'value', 'type' => 'text' ],
                 ],
             ],
             [ 'key' => 'field_cs_gallery',          'label' => 'صور المشروع (جاليري)', 'name' => 'gallery',          'type' => 'gallery', 'return_format' => 'array' ],
@@ -204,9 +204,9 @@ add_action( 'acf/init', function () {
                 'max'          => 6,
                 'button_label' => 'إضافة تحدي',
                 'sub_fields'   => [
-                    [ 'key' => 'field_ch_title', 'label' => 'عنوان التحدي', 'name' => 'challenge_title', 'type' => 'text' ],
-                    [ 'key' => 'field_ch_desc',  'label' => 'وصف التحدي',  'name' => 'challenge_desc',  'type' => 'textarea', 'rows' => 2 ],
-                    [ 'key' => 'field_ch_icon',  'label' => 'أيقونة SVG',  'name' => 'challenge_icon',  'type' => 'textarea', 'rows' => 3 ],
+                    [ 'key' => 'field_ch_title', 'label' => 'عنوان التحدي', 'name' => 'title', 'type' => 'text' ],
+                    [ 'key' => 'field_ch_desc',  'label' => 'وصف التحدي',  'name' => 'desc',  'type' => 'textarea', 'rows' => 2 ],
+                    [ 'key' => 'field_ch_icon',  'label' => 'أيقونة SVG',  'name' => 'icon',  'type' => 'textarea', 'rows' => 3 ],
                 ],
             ],
             [
@@ -218,9 +218,9 @@ add_action( 'acf/init', function () {
                 'max'          => 6,
                 'button_label' => 'إضافة حل',
                 'sub_fields'   => [
-                    [ 'key' => 'field_sol_title', 'label' => 'عنوان الحل', 'name' => 'solution_title', 'type' => 'text' ],
-                    [ 'key' => 'field_sol_desc',  'label' => 'وصف الحل',  'name' => 'solution_desc',  'type' => 'textarea', 'rows' => 2 ],
-                    [ 'key' => 'field_sol_icon',  'label' => 'أيقونة SVG', 'name' => 'solution_icon',  'type' => 'textarea', 'rows' => 3 ],
+                    [ 'key' => 'field_sol_title', 'label' => 'عنوان الحل', 'name' => 'title', 'type' => 'text' ],
+                    [ 'key' => 'field_sol_desc',  'label' => 'وصف الحل',  'name' => 'desc',  'type' => 'textarea', 'rows' => 2 ],
+                    [ 'key' => 'field_sol_icon',  'label' => 'أيقونة SVG', 'name' => 'icon',  'type' => 'textarea', 'rows' => 3 ],
                 ],
             ],
             [
@@ -241,7 +241,11 @@ add_action( 'acf/init', function () {
     acf_add_local_field_group( [
         'key'      => 'group_service_platform',
         'title'    => 'صفحة خدمة / منصّة',
-        'location' => [ [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-service-platform.php' ] ] ],
+        'location' => [
+            [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-service-platform.php' ] ],
+            [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-service-seo.php' ] ],
+            [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-service-products.php' ] ],
+        ],
         'fields'   => [
             [ 'key' => 'field_sp_hero_tag',    'label' => 'التصنيف فوق العنوان',       'name' => 'service_hero_tag',    'type' => 'text' ],
             [ 'key' => 'field_sp_hero_title',  'label' => 'عنوان الصفحة الرئيسي',      'name' => 'service_hero_title',  'type' => 'text' ],
@@ -255,9 +259,9 @@ add_action( 'acf/init', function () {
                 'type'         => 'repeater',
                 'button_label' => 'إضافة ميزة',
                 'sub_fields'   => [
-                    [ 'key' => 'field_feat_title', 'label' => 'عنوان الميزة',   'name' => 'feature_title', 'type' => 'text' ],
-                    [ 'key' => 'field_feat_desc',  'label' => 'وصف الميزة',    'name' => 'feature_desc',  'type' => 'textarea', 'rows' => 2 ],
-                    [ 'key' => 'field_feat_icon',  'label' => 'أيقونة SVG',    'name' => 'feature_icon',  'type' => 'textarea', 'rows' => 3 ],
+                    [ 'key' => 'field_feat_title', 'label' => 'عنوان الميزة',   'name' => 'title', 'type' => 'text' ],
+                    [ 'key' => 'field_feat_desc',  'label' => 'وصف الميزة',    'name' => 'desc',  'type' => 'textarea', 'rows' => 2 ],
+                    [ 'key' => 'field_feat_icon',  'label' => 'أيقونة SVG',    'name' => 'icon',  'type' => 'textarea', 'rows' => 3 ],
                 ],
             ],
             [
@@ -267,8 +271,8 @@ add_action( 'acf/init', function () {
                 'type'         => 'repeater',
                 'button_label' => 'إضافة خطوة',
                 'sub_fields'   => [
-                    [ 'key' => 'field_stp_title', 'label' => 'عنوان الخطوة', 'name' => 'step_title', 'type' => 'text' ],
-                    [ 'key' => 'field_stp_desc',  'label' => 'وصف الخطوة',  'name' => 'step_desc',  'type' => 'textarea', 'rows' => 2 ],
+                    [ 'key' => 'field_stp_title', 'label' => 'عنوان الخطوة', 'name' => 'title', 'type' => 'text' ],
+                    [ 'key' => 'field_stp_desc',  'label' => 'وصف الخطوة',  'name' => 'desc',  'type' => 'textarea', 'rows' => 2 ],
                 ],
             ],
             [
@@ -278,8 +282,8 @@ add_action( 'acf/init', function () {
                 'type'         => 'repeater',
                 'button_label' => 'إضافة سؤال',
                 'sub_fields'   => [
-                    [ 'key' => 'field_faq_q', 'label' => 'السؤال',  'name' => 'faq_question', 'type' => 'text' ],
-                    [ 'key' => 'field_faq_a', 'label' => 'الجواب',  'name' => 'faq_answer',   'type' => 'textarea', 'rows' => 3 ],
+                    [ 'key' => 'field_faq_q', 'label' => 'السؤال',  'name' => 'question', 'type' => 'text' ],
+                    [ 'key' => 'field_faq_a', 'label' => 'الجواب',  'name' => 'answer',   'type' => 'textarea', 'rows' => 3 ],
                 ],
             ],
         ],
@@ -305,9 +309,9 @@ add_action( 'acf/init', function () {
                 'type'         => 'repeater',
                 'button_label' => 'إضافة نقطة',
                 'sub_fields'   => [
-                    [ 'key' => 'field_pt_title', 'label' => 'العنوان',   'name' => 'point_title', 'type' => 'text' ],
-                    [ 'key' => 'field_pt_desc',  'label' => 'الوصف',    'name' => 'point_desc',  'type' => 'textarea', 'rows' => 2 ],
-                    [ 'key' => 'field_pt_icon',  'label' => 'SVG أيقونة', 'name' => 'point_icon',  'type' => 'textarea', 'rows' => 3 ],
+                    [ 'key' => 'field_pt_title', 'label' => 'العنوان',   'name' => 'title', 'type' => 'text' ],
+                    [ 'key' => 'field_pt_desc',  'label' => 'الوصف',    'name' => 'desc',  'type' => 'textarea', 'rows' => 2 ],
+                    [ 'key' => 'field_pt_icon',  'label' => 'SVG أيقونة', 'name' => 'icon',  'type' => 'textarea', 'rows' => 3 ],
                 ],
             ],
             [
@@ -317,8 +321,8 @@ add_action( 'acf/init', function () {
                 'type'         => 'repeater',
                 'button_label' => 'إضافة سؤال',
                 'sub_fields'   => [
-                    [ 'key' => 'field_sfaq_q', 'label' => 'السؤال', 'name' => 'faq_question', 'type' => 'text' ],
-                    [ 'key' => 'field_sfaq_a', 'label' => 'الجواب', 'name' => 'faq_answer',   'type' => 'textarea', 'rows' => 3 ],
+                    [ 'key' => 'field_sfaq_q', 'label' => 'السؤال', 'name' => 'question', 'type' => 'text' ],
+                    [ 'key' => 'field_sfaq_a', 'label' => 'الجواب', 'name' => 'answer',   'type' => 'textarea', 'rows' => 3 ],
                 ],
             ],
         ],

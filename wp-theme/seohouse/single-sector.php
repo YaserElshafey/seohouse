@@ -27,7 +27,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
 ] );
 ?>
 
-<?php if ( have_posts() && get_the_content() ) : ?>
+<?php if ( get_the_content() ) : ?>
 <section class="sec sec-white">
   <div class="wrap">
     <div style="max-width:760px">
