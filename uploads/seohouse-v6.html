@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سيو هاوس | كن آخر نقرة يبحث عنها عميلك</title>
+<meta name="description" content="سيو هاوس — وكالة متخصصة في تحسين محركات البحث وإنشاء المتاجر الإلكترونية. نعمل على تحسين ترتيب موقعك وزيادة مبيعاتك بشكل قابل للقياس.">
+
+<!--
+╔══════════════════════════════════════════════════════════════╗
+║  LOGO PATHS — للمطوّر                                        ║
+║  White version (dark backgrounds):                           ║
+║    /wp-content/themes/seohouse/assets/img/logo-white.png    ║
+║  Color version (light navbar):                               ║
+║    /wp-content/themes/seohouse/assets/img/logo-color.png    ║
+║  NOTE: Provide transparent-background PNGs for both          ║
+╚══════════════════════════════════════════════════════════════╝
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   DESIGN TOKENS
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+  --blue:          #1e2ef5;
+  --blue-dark:     #1421d6;
+  --blue-mid:      rgba(30,46,245,.18);
+  --navy:          #070d32;
+  --navy-2:        #0b1240;
+  --navy-card:     rgba(255,255,255,.05);
+  --navy-border:   rgba(255,255,255,.09);
+  --blue-50:       #eef0ff;
+  --blue-100:      #dde2ff;
+  --surface:       #f5f6fe;
+  --off:           #f8f9ff;
+  --white:         #ffffff;
+  --ink:           #09102e;
+  --ink-2:         #3d4576;
+  --muted:         #7880b0;
+  --line:          rgba(14,22,80,.1);
+  --line-d:        rgba(255,255,255,.09);
+  --green:         #10b981;
+  --r1:8px; --r2:14px; --r3:22px; --r4:32px; --r5:44px;
+  --sh-sm:  0 2px 12px rgba(9,16,46,.06);
+  --sh-md:  0 8px 32px rgba(9,16,46,.1);
+  --sh-lg:  0 20px 60px rgba(9,16,46,.14);
+  --sh-b:   0 8px 28px rgba(30,46,245,.32);
+  --max:    1220px;
+  --pad:    clamp(16px,4vw,44px);
+  --sec:    clamp(52px,7vw,88px);  /* tightened from 64–116 */
+  --ease:   cubic-bezier(.22,.68,0,1.15);
+  --fast:   cubic-bezier(.25,.46,.45,.94);
+}
+
+
+/* ── Reset ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Cairo',sans-serif;font-size:16px;color:var(--ink);background:#fff;overflow-x:hidden;direction:rtl;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{cursor:pointer;border:none;background:none;font-family:'Cairo',sans-serif}
+svg{display:block;flex-shrink:0}
+
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
+
+/* ── Typography helpers ── */
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
+.tag::before{content:'';display:block;width:18px;height:2px;background:currentColor;border-radius:2px;flex-shrink:0}
+.tag.d{color:rgba(255,255,255,.45)}
+.tag.d::before{background:rgba(255,255,255,.35)}
+.h2{font-size:clamp(26px,3.6vw,44px);font-weight:900;line-height:1.16;letter-spacing:-.025em;color:var(--ink)}
+.h2.wh{color:#fff}
+.body{font-size:clamp(14.5px,1.45vw,17px);line-height:1.82;color:var(--ink-2)}
+.body.d{color:rgba(255,255,255,.5)}
+.sh{margin-bottom:44px}
+.sh.c{text-align:center}
+.sh.c .body{margin-inline:auto;max-width:500px}
+
+/* ── Buttons ── */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;font-family:'Cairo',sans-serif;font-size:14.5px;font-weight:700;line-height:1;border-radius:var(--r1);white-space:nowrap;transition:all .26s var(--fast);cursor:pointer}
+.btn.lg{padding:16px 32px;font-size:15.5px}
+.btn-s{background:var(--blue);color:#fff;box-shadow:var(--sh-b)}
+.btn-s:hover{background:var(--blue-dark);transform:translateY(-2px);box-shadow:0 12px 36px rgba(30,46,245,.42)}
+.btn-g{background:rgba(255,255,255,.08);color:rgba(255,255,255,.88);border:1.5px solid rgba(255,255,255,.18)}
+.btn-g:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.42)}
+.btn-o{background:transparent;color:var(--blue);border:1.5px solid var(--line)}
+.btn-o:hover{background:var(--blue-50);border-color:rgba(30,46,245,.3)}
+.btn-w{background:#fff;color:var(--blue);box-shadow:var(--sh-lg)}
+.btn-w:hover{transform:translateY(-2px);box-shadow:0 24px 60px rgba(9,16,46,.22)}
+
+/* ── Scroll reveal ── */
+.sr{opacity:0;transform:translateY(22px);transition:opacity .6s var(--fast),transform .6s var(--fast)}
+.sr.d1{transition-delay:.07s}.sr.d2{transition-delay:.14s}
+.sr.d3{transition-delay:.21s}.sr.d4{transition-delay:.28s}
+.sr.in{opacity:1;transform:none}
+
+/* ═══════════════════════════════════════════════════════════════
+   NAVIGATION + MEGA MENU
+   ═══════════════════════════════════════════════════════════════ */
+#nav{position:fixed;inset-block-start:0;inset-inline:0;z-index:1000;transition:all .34s var(--fast)}
+#nav.solid{background:rgba(255,255,255,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--line),0 4px 24px rgba(9,16,46,.07)}
+
+.nav-bar{display:flex;align-items:center;justify-content:space-between;height:70px;gap:12px}
+
+/* Logo */
+.nav-logo{flex-shrink:0;line-height:0}
+.nav-logo img{height:34px;width:auto}
+.logo-w{display:block;mix-blend-mode:screen} /* mix-blend removes black jpg bg on dark bg */
+.logo-c{display:none}
+#nav.solid .logo-w{display:none}
+#nav.solid .logo-c{display:block}
+
+/* Desktop links */
+.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center}
+.ni{position:relative}
+.ni>a,.ni>button{display:flex;align-items:center;gap:5px;padding:8px 11px;font-size:13.5px;font-weight:600;color:rgba(255,255,255,.75);border-radius:7px;transition:all .2s;background:none;border:none;font-family:'Cairo',sans-serif;cursor:pointer;white-space:nowrap}
+.ni>a:hover,.ni>button:hover{color:#fff;background:rgba(255,255,255,.08)}
+#nav.solid .ni>a,#nav.solid .ni>button{color:var(--ink-2)}
+#nav.solid .ni>a:hover,#nav.solid .ni>button:hover{color:var(--blue);background:var(--blue-50)}
+.chev{width:12px;height:12px;stroke:currentColor;transition:transform .25s}
+.ni.op>.ni-btn .chev{transform:rotate(180deg)}
+
+/* Mega menu */
+.mega{position:absolute;inset-block-start:calc(100% + 8px);inset-inline-start:50%;transform:translateX(50%);width:620px;background:#fff;border:1px solid var(--line);border-radius:var(--r3);box-shadow:var(--sh-lg);padding:0;opacity:0;visibility:hidden;pointer-events:none;transition:all .28s var(--fast)}
+.ni.op .mega{opacity:1;visibility:visible;pointer-events:all;transform:translateX(50%) translateY(0)}
+.mega-body{display:grid;grid-template-columns:220px 1fr;min-height:280px}
+/* Left panel: main services */
+.mega-main{padding:16px;border-inline-end:1px solid var(--line);display:flex;flex-direction:column;gap:2px}
+.mega-main-label{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);padding:8px 10px 12px}
+.mega-item{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:var(--r1);cursor:pointer;transition:all .2s;text-decoration:none}
+.mega-item:hover,.mega-item.active{background:var(--blue-50)}
+.mega-item-l{display:flex;align-items:center;gap:10px}
+.mega-item-ico{width:32px;height:32px;border-radius:8px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+.mega-item:hover .mega-item-ico,.mega-item.active .mega-item-ico{background:var(--blue)}
+.mega-item:hover .mega-item-ico svg,.mega-item.active .mega-item-ico svg{stroke:#fff}
+.mega-item-ico svg{stroke:var(--blue);transition:stroke .2s}
+.mega-item span{font-size:13.5px;font-weight:600;color:var(--ink);transition:color .2s}
+.mega-item:hover span,.mega-item.active span{color:var(--blue)}
+.mega-item-arr{stroke:var(--muted);transition:stroke .2s}
+.mega-item:hover .mega-item-arr,.mega-item.active .mega-item-arr{stroke:var(--blue)}
+/* Right panel: sub-services */
+.mega-sub{padding:20px;display:none}
+.mega-sub.show{display:block}
+.mega-sub-label{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.mega-sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.sub-link{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:var(--r1);transition:background .2s;text-decoration:none}
+.sub-link:hover{background:var(--blue-50)}
+.sub-dot{width:6px;height:6px;border-radius:50%;background:rgba(30,46,245,.3);flex-shrink:0;margin-top:6px;transition:background .2s}
+.sub-link:hover .sub-dot{background:var(--blue)}
+.sub-link strong{display:block;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:2px;transition:color .2s}
+.sub-link:hover strong{color:var(--blue)}
+.sub-link p{font-size:11.5px;color:var(--muted);line-height:1.4}
+/* Bottom of mega */
+.mega-foot{padding:12px 16px;border-block-start:1px solid var(--line);display:flex;justify-content:flex-end}
+.mega-all{font-size:13px;font-weight:700;color:var(--blue);display:flex;align-items:center;gap:5px}
+
+/* Nav end */
+.nav-end{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-cta{font-size:13.5px;padding:10px 20px}
+
+/* Burger */
+.burger{display:none;flex-direction:column;gap:5px;width:34px;height:34px;align-items:center;justify-content:center}
+.burger span{display:block;width:22px;height:1.5px;background:rgba(255,255,255,.8);border-radius:2px;transition:all .28s}
+.burger span:nth-child(2){width:16px}
+#nav.solid .burger span{background:var(--ink)}
+.burger.on span:nth-child(1){transform:rotate(45deg) translate(4px,4px);width:22px}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){transform:rotate(-45deg) translate(4px,-4px);width:22px}
+
+/* Mobile drawer */
+.mob{display:none;flex-direction:column;background:#fff;border-top:1px solid var(--line);padding:12px 0 28px;max-height:0;overflow:hidden;transition:max-height .42s var(--fast)}
+.mob.on{max-height:700px}
+.mob a{display:block;padding:10px var(--pad);font-size:14.5px;font-weight:600;color:var(--ink);transition:background .2s,color .2s}
+.mob a:hover{background:var(--blue-50);color:var(--blue)}
+.mob .mob-sub{padding-inline-start:calc(var(--pad) + 16px);font-size:13px;color:var(--muted)}
+.mob .mcta{margin:12px var(--pad) 0;text-align:center;background:var(--blue);color:#fff;border-radius:var(--r1);padding:13px;display:block;font-weight:700}
+.mob .mcta:hover{background:var(--blue-dark)}
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO — full-width two-column
+   ═══════════════════════════════════════════════════════════════ */
+#hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--navy);overflow:hidden}
+
+/* Background: dot grid masked */
+.h-grid{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(ellipse 100% 100% at 50% 50%,#000 20%,transparent 80%);pointer-events:none}
+
+/* Large arc rings */
+.h-arc{position:absolute;inset-inline-start:-300px;inset-block-start:-200px;width:800px;height:800px;border-radius:50%;border:1px solid rgba(30,46,245,.14);pointer-events:none}
+.h-arc::before{content:'';position:absolute;inset:80px;border-radius:50%;border:1px solid rgba(30,46,245,.09)}
+.h-arc::after{content:'';position:absolute;inset:170px;border-radius:50%;border:1px solid rgba(30,46,245,.06)}
+
+/* Glow splashes */
+.h-glow-a{position:absolute;inset-inline-start:-120px;inset-block-end:-60px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.22) 0%,transparent 68%);filter:blur(50px);pointer-events:none}
+.h-glow-b{position:absolute;inset-inline-end:-80px;inset-block-start:50px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.14) 0%,transparent 65%);filter:blur(60px);pointer-events:none}
+
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;position:relative;z-index:2;padding-block:clamp(120px,15vh,160px) clamp(64px,9vh,96px)}
+
+/* ── Left (copy) ── */
+.h-copy{}
+.h-live{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:28px;animation:fu .7s var(--ease) both}
+.h-live-d{width:8px;height:8px;border-radius:50%;background:var(--green);animation:lp 2s ease-in-out infinite}
+@keyframes lp{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.5)}50%{box-shadow:0 0 0 5px rgba(16,185,129,0)}}
+.h1{font-size:clamp(40px,5.8vw,72px);font-weight:900;line-height:1.09;letter-spacing:-.03em;color:#fff;margin-bottom:22px;animation:fu .75s .1s var(--ease) both}
+.h1 .acc{background:linear-gradient(115deg,#7b90ff 0%,#aab8ff 60%,#7b90ff 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 5s linear infinite}
+@keyframes shimmer{to{background-position:-200% center}}
+.h-p{font-size:clamp(14.5px,1.6vw,17.5px);line-height:1.86;color:rgba(255,255,255,.5);max-width:520px;margin-bottom:36px;animation:fu .75s .2s var(--ease) both}
+.h-btns{display:flex;gap:12px;flex-wrap:wrap;animation:fu .75s .3s var(--ease) both}
+.h-kicker{margin-top:40px;padding-top:28px;border-top:1px solid rgba(255,255,255,.08);display:flex;align-items:center;gap:18px;flex-wrap:nowrap;animation:fu .75s .42s var(--ease) both}
+.k-item{display:flex;align-items:center;gap:8px;font-size:12.5px;color:rgba(255,255,255,.42);white-space:nowrap;flex-shrink:0}
+.k-icon{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.k-icon svg{stroke:rgba(255,255,255,.45);width:13px;height:13px}
+.k-div{width:1px;height:20px;background:rgba(255,255,255,.1);flex-shrink:0}
+
+@keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── Right (visual composition) ── */
+.h-vis{animation:fl .85s .15s var(--ease) both;display:flex;flex-direction:column;gap:14px}
+@keyframes fl{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+
+/* Main SERP mockup card */
+.serp-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r3);overflow:hidden;backdrop-filter:blur(12px)}
+/* Browser chrome */
+.serp-chrome{background:rgba(255,255,255,.06);padding:10px 14px;display:flex;align-items:center;gap:8px;border-block-end:1px solid rgba(255,255,255,.07)}
+.chrome-dots{display:flex;gap:5px}
+.chrome-dots span{display:block;width:8px;height:8px;border-radius:50%}
+.chrome-dots span:nth-child(1){background:rgba(255,80,80,.5)}
+.chrome-dots span:nth-child(2){background:rgba(255,190,50,.5)}
+.chrome-dots span:nth-child(3){background:rgba(60,200,80,.5)}
+.serp-bar{flex:1;margin-inline:12px;height:22px;background:rgba(255,255,255,.06);border-radius:6px;display:flex;align-items:center;padding-inline:10px;gap:6px}
+.serp-bar svg{stroke:rgba(255,255,255,.3);flex-shrink:0}
+.serp-bar-txt{font-size:11px;color:rgba(255,255,255,.3);letter-spacing:.02em}
+/* SERP results list */
+.serp-body{padding:18px 20px;display:flex;flex-direction:column;gap:12px}
+.serp-result{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border-radius:var(--r1);border:1px solid transparent;transition:all .3s}
+.serp-result.pos1{background:rgba(30,46,245,.15);border-color:rgba(30,46,245,.3)}
+.serp-result.pos2,.serp-result.pos3{background:rgba(255,255,255,.03)}
+.pos-badge{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;flex-shrink:0;margin-top:2px}
+.serp-result.pos1 .pos-badge{background:var(--blue);color:#fff}
+.serp-result.pos2 .pos-badge,.serp-result.pos3 .pos-badge{background:rgba(255,255,255,.07);color:rgba(255,255,255,.35)}
+.res-content{}
+.res-url{font-size:11px;color:rgba(255,255,255,.3);margin-bottom:4px}
+.res-title{font-size:13px;font-weight:700;color:rgba(255,255,255,.85);margin-bottom:4px;line-height:1.3}
+.serp-result.pos2 .res-title,.serp-result.pos3 .res-title{color:rgba(255,255,255,.4)}
+.res-desc{font-size:11.5px;color:rgba(255,255,255,.35);line-height:1.5}
+.serp-result.pos2 .res-desc,.serp-result.pos3 .res-desc{color:rgba(255,255,255,.2)}
+
+/* Bottom row: two small cards */
+.vis-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.vis-mini{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:var(--r2);padding:16px 18px}
+.vis-mini-label{font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:10px}
+/* Abstract sparkline */
+.sparkline{display:flex;align-items:flex-end;gap:3px;height:32px}
+.spark-bar{flex:1;border-radius:2px 2px 0 0;background:rgba(30,46,245,.35);transition:height .6s var(--ease)}
+.spark-bar.hi{background:rgba(122,144,255,.8)}
+/* Keywords */
+.kw-list{display:flex;flex-direction:column;gap:6px}
+.kw-row{display:flex;align-items:center;gap:8px}
+.kw-rank{width:18px;height:18px;border-radius:5px;background:rgba(30,46,245,.3);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:rgba(255,255,255,.6);flex-shrink:0}
+.kw-rank.r1{background:var(--blue);color:#fff}
+.kw-bar{flex:1;height:4px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden}
+.kw-fill{height:100%;border-radius:2px;background:rgba(122,144,255,.5)}
+.kw-row:first-child .kw-fill{background:#7b90ff;width:95%}
+.kw-row:nth-child(2) .kw-fill{width:70%}
+.kw-row:nth-child(3) .kw-fill{width:52%}
+
+/* ═══════════════════════════════════════════════════════════════
+   CLIENTS STRIP
+   ═══════════════════════════════════════════════════════════════ */
+#clients{padding-block:24px;background:var(--surface);border-block:1px solid var(--line)}
+.cl-label{text-align:center;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.cl-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px}
+.cl-ph{height:46px;min-width:110px;padding-inline:22px;border-radius:var(--r1);background:#fff;border:1.5px dashed var(--line);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;letter-spacing:.03em;color:var(--muted);transition:border-color .25s,background .25s}
+.cl-ph:hover{border-color:rgba(30,46,245,.3);background:var(--blue-50);color:var(--blue)}
+.cl-note{text-align:center;font-size:11px;color:var(--muted);margin-top:12px;font-style:italic;opacity:.7}
+
+/* ═══════════════════════════════════════════════════════════════
+   WHY — لماذا سيو هاوس (keep close to V3)
+   ═══════════════════════════════════════════════════════════════ */
+#why{padding-block:var(--sec);background:#fff}
+.why-grid{display:grid;grid-template-columns:5fr 6fr;gap:60px;align-items:center}
+
+.why-pts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.wpt{display:flex;align-items:flex-start;gap:11px;padding:16px;border:1px solid var(--line);border-radius:var(--r2);background:var(--off);transition:all .28s var(--fast);cursor:default}
+.wpt:hover{background:#fff;border-color:rgba(30,46,245,.2);box-shadow:var(--sh-sm);transform:translateY(-2px)}
+.wpt-ico{width:36px;height:36px;border-radius:9px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .25s}
+.wpt:hover .wpt-ico{background:var(--blue)}
+.wpt:hover .wpt-ico svg{stroke:#fff}
+.wpt-ico svg{stroke:var(--blue);transition:stroke .25s}
+.wpt-b strong{display:block;font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;line-height:1.3}
+.wpt-b p{font-size:12.5px;color:var(--muted);line-height:1.6}
+
+/* Visual side */
+.why-vis{position:relative}
+.why-card{background:var(--navy-2);border-radius:var(--r4);padding:36px;overflow:hidden;position:relative}
+.why-card::before{content:'';position:absolute;inset-inline-end:-60px;inset-block-start:-60px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.3),transparent 70%);pointer-events:none}
+.why-lbl{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:24px;position:relative;z-index:1}
+.why-phases{display:flex;flex-direction:column;gap:0;position:relative;z-index:1}
+.w-ph{display:flex;align-items:center;gap:14px;padding-block:13px;border-block-end:1px solid rgba(255,255,255,.07)}
+.w-ph:last-child{border-block-end:none}
+.ph-n{font-size:10.5px;font-weight:800;color:rgba(255,255,255,.18);width:18px;flex-shrink:0}
+.ph-bw{flex:1;height:5px;background:rgba(255,255,255,.07);border-radius:3px;overflow:hidden}
+.ph-b{height:100%;border-radius:3px;background:rgba(30,46,245,.5)}
+.w-ph.act .ph-b{background:linear-gradient(90deg,rgba(30,46,245,.5),#7b90ff)}
+.ph-nm{font-size:12.5px;font-weight:600;color:rgba(255,255,255,.38);width:80px;text-align:right;flex-shrink:0}
+.w-ph.act .ph-nm{color:rgba(255,255,255,.9)}
+.ph-st{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.15);flex-shrink:0}
+.w-ph.act .ph-st{background:var(--green);box-shadow:0 0 7px rgba(16,185,129,.5)}
+.why-badge{position:absolute;inset-block-end:-16px;inset-inline-end:-16px;background:#fff;border-radius:var(--r2);padding:15px 18px;box-shadow:var(--sh-lg);display:flex;align-items:center;gap:11px}
+.wb-ico{width:38px;height:38px;border-radius:9px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wb-ico svg{stroke:var(--blue)}
+.wb-t strong{display:block;font-size:13.5px;font-weight:800;color:var(--ink)}
+.wb-t span{font-size:12px;color:var(--muted)}
+
+/* ═══════════════════════════════════════════════════════════════
+   SERVICES — 5 items with hierarchy
+   ═══════════════════════════════════════════════════════════════ */
+#services{
+  padding-block:var(--sec);
+  background:var(--surface);
+  position:relative;
+  overflow:hidden;
+}
+/* Subtle decorative arc in background */
+#services::before{
+  content:'';
+  position:absolute;
+  inset-inline-end:-240px;
+  inset-block-start:-240px;
+  width:600px;height:600px;
+  border-radius:50%;
+  border:1px solid rgba(30,46,245,.06);
+  pointer-events:none;
+}
+#services::after{
+  content:'';
+  position:absolute;
+  inset-inline-end:-140px;
+  inset-block-start:-140px;
+  width:380px;height:380px;
+  border-radius:50%;
+  border:1px solid rgba(30,46,245,.04);
+  pointer-events:none;
+}
+.svc-layout{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;position:relative;z-index:1}
+/* First item is featured (spans 2 cols) */
+.svc-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--r3);
+  padding:28px 24px;
+  display:flex;flex-direction:column;
+  position:relative;overflow:hidden;
+  transition:all .3s var(--fast);
+}
+/* Top accent bar */
+.svc-card::after{
+  content:'';position:absolute;
+  inset-block-start:0;inset-inline:0;
+  height:3px;background:linear-gradient(90deg,var(--blue-dark),var(--blue));
+  transform:scaleX(0);transform-origin:right;
+  transition:transform .38s var(--fast);
+}
+.svc-card:hover{box-shadow:var(--sh-md);border-color:transparent;transform:translateY(-5px)}
+.svc-card:hover::after{transform:scaleX(1)}
+.svc-card.feat{grid-column:span 2}
+.svc-card.feat .svc-body{max-width:440px}
+/* Featured card gets a very subtle blue tint gradient */
+.svc-card.feat{background:linear-gradient(140deg,#fff 55%,var(--blue-50) 100%)}
+
+/* Card number indicator — top-right corner */
+.svc-n{
+  position:absolute;
+  inset-block-start:20px;
+  inset-inline-end:20px;
+  font-size:11px;font-weight:800;
+  color:rgba(30,46,245,.15);
+  letter-spacing:.04em;
+  font-feature-settings:'tnum';
+}
+
+.svc-ico{
+  width:48px;height:48px;border-radius:12px;
+  background:var(--blue-50);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;transition:background .28s;
+  flex-shrink:0;
+}
+.svc-card:hover .svc-ico{background:var(--blue)}
+.svc-card:hover .svc-ico svg{stroke:#fff}
+.svc-ico svg{stroke:var(--blue);transition:stroke .28s}
+.svc-card h3{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.svc-card p{font-size:13.5px;color:var(--muted);line-height:1.75;flex:1;margin-bottom:18px}
+.svc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:18px}
+.svc-tag{
+  font-size:11px;font-weight:600;
+  color:var(--blue);
+  background:var(--blue-50);border:1px solid var(--blue-100);
+  border-radius:5px;padding:3px 8px;
+}
+/* Subtle divider before the link */
+.svc-link-row{
+  border-top:1px solid var(--line);
+  padding-top:16px;
+  margin-top:auto;
+}
+.svc-more{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue);transition:gap .22s}
+.svc-card:hover .svc-more{gap:10px}
+.svc-cta{text-align:center;margin-top:36px;position:relative;z-index:1}
+
+/* ═══════════════════════════════════════════════════════════════
+   PROCESS
+   ═══════════════════════════════════════════════════════════════ */
+#process{padding-block:var(--sec);background:var(--surface)}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:52px;position:relative}
+.proc-grid::before{content:'';position:absolute;inset-block-start:24px;inset-inline-start:12%;width:76%;height:1px;background:var(--line)}
+.proc-step{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1}
+.proc-num{width:48px;height:48px;border-radius:50%;background:#fff;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:var(--blue);margin-bottom:18px;transition:all .28s}
+.proc-step:hover .proc-num{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:var(--sh-b)}
+.proc-step h3{font-size:15px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.proc-step p{font-size:13px;color:var(--muted);line-height:1.7;max-width:180px}
+
+/* ═══════════════════════════════════════════════════════════════
+   CASE STUDIES — screenshot-first
+   ═══════════════════════════════════════════════════════════════ */
+#cases{padding-block:var(--sec);background:var(--navy);position:relative;overflow:hidden}
+#cases::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px);background-size:40px 40px;pointer-events:none}
+
+.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px;position:relative;z-index:1}
+.cs-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r3);overflow:hidden;display:flex;flex-direction:column;transition:all .3s var(--fast)}
+.cs-card:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16);transform:translateY(-5px)}
+
+/* Screenshot frame */
+.cs-screen{position:relative;background:rgba(255,255,255,.06);height:0;padding-block-end:62%;overflow:hidden}
+/* Browser bar */
+.cs-chrome{position:absolute;inset-block-start:0;inset-inline:0;height:28px;background:rgba(255,255,255,.06);display:flex;align-items:center;padding-inline:10px;gap:6px;border-block-end:1px solid rgba(255,255,255,.07)}
+.cs-dots{display:flex;gap:4px}
+.cs-dots span{width:7px;height:7px;border-radius:50%}
+.cs-dots span:nth-child(1){background:rgba(255,80,80,.4)}
+.cs-dots span:nth-child(2){background:rgba(255,190,50,.4)}
+.cs-dots span:nth-child(3){background:rgba(60,200,80,.4)}
+.cs-chrome-bar{flex:1;margin-inline:8px;height:14px;background:rgba(255,255,255,.06);border-radius:4px}
+/* The actual image area */
+.cs-img-area{position:absolute;inset-block-start:28px;inset-inline:0;inset-block-end:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}
+/* للمطوّر: استبدل هذا المحتوى بـ <img src="...screenshot..." loading="lazy"> */
+.cs-ph-icon{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center}
+.cs-ph-icon svg{stroke:rgba(255,255,255,.3)}
+.cs-ph-txt{font-size:11px;color:rgba(255,255,255,.25);text-align:center;line-height:1.5;padding-inline:20px}
+
+/* Card body */
+.cs-body{padding:20px 22px;flex:1;display:flex;flex-direction:column}
+.cs-sec{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:12px}
+.cs-sec-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.2)}
+.cs-card h3{font-size:17px;font-weight:800;color:rgba(255,255,255,.88);line-height:1.3;margin-bottom:10px}
+.cs-challenge{font-size:13px;color:rgba(255,255,255,.38);line-height:1.7;margin-bottom:16px;flex:1}
+/* Result row */
+.cs-result{display:grid;grid-template-columns:1fr 1fr;gap:10px;border-top:1px solid rgba(255,255,255,.07);padding-top:14px;margin-top:auto}
+.cs-r-item{}
+.cs-r-label{font-size:10.5px;color:rgba(255,255,255,.25);margin-bottom:4px;font-weight:600;letter-spacing:.04em}
+.cs-r-val{font-size:12px;font-weight:700;color:rgba(255,255,255,.22);border:1px dashed rgba(255,255,255,.12);border-radius:5px;padding:5px 8px;font-style:italic;display:block}
+
+.cases-note{text-align:center;font-size:11.5px;color:rgba(255,255,255,.18);margin-top:28px;font-style:italic;position:relative;z-index:1}
+
+/* ═══════════════════════════════════════════════════════════════
+   CONSULTATION — calendar/booking UI
+   ═══════════════════════════════════════════════════════════════ */
+#consult{padding-block:var(--sec);background:#fff}
+.consult-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+
+.con-copy .tag{margin-bottom:14px}
+.con-copy .h2{margin-bottom:16px}
+.con-copy .body{margin-bottom:28px}
+.con-list{display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+.con-item{display:flex;align-items:flex-start;gap:12px;font-size:14.5px;color:var(--ink-2);line-height:1.65}
+.con-chk{width:22px;height:22px;border-radius:6px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.con-chk svg{stroke:var(--blue)}
+
+/* Booking UI card */
+.booking-card{background:var(--navy);border-radius:var(--r4);overflow:hidden}
+/* Header */
+.bc-head{padding:24px 28px;border-block-end:1px solid var(--line-d);display:flex;align-items:center;gap:14px}
+.bc-head-ico{width:44px;height:44px;border-radius:11px;background:rgba(30,46,245,.35);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.bc-head-ico svg{stroke:#7b90ff}
+.bc-head-txt strong{display:block;font-size:16px;font-weight:800;color:#fff}
+.bc-head-txt span{font-size:13px;color:rgba(255,255,255,.45)}
+.bc-head-dur{margin-inline-start:auto;text-align:center}
+.bc-head-dur strong{display:block;font-size:26px;font-weight:900;color:#fff;line-height:1}
+.bc-head-dur span{font-size:11px;color:rgba(255,255,255,.35)}
+
+/* Calendar section */
+.bc-body{padding:24px 28px}
+.bc-section-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:14px}
+/* Mini calendar */
+.mini-cal{margin-bottom:22px}
+.cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.cal-month{font-size:14px;font-weight:700;color:rgba(255,255,255,.75)}
+.cal-arrow{width:26px;height:26px;border-radius:7px;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s}
+.cal-arrow:hover{background:rgba(255,255,255,.14)}
+.cal-arrow svg{stroke:rgba(255,255,255,.5)}
+.cal-days-head{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:4px}
+.cal-dh{text-align:center;font-size:10.5px;font-weight:700;color:rgba(255,255,255,.25);padding:4px}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.cal-day{text-align:center;padding:7px 4px;border-radius:6px;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.4);cursor:pointer;transition:all .2s}
+.cal-day:hover{background:rgba(255,255,255,.08);color:rgba(255,255,255,.8)}
+.cal-day.empty{pointer-events:none;color:rgba(255,255,255,.1)}
+.cal-day.today{border:1px solid rgba(30,46,245,.4);color:rgba(255,255,255,.7)}
+.cal-day.sel{background:var(--blue);color:#fff;box-shadow:0 4px 12px rgba(30,46,245,.4)}
+.cal-day.past{opacity:.3;pointer-events:none}
+/* Time slots */
+.time-slots{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:20px}
+.ts{text-align:center;padding:8px 4px;border:1px solid rgba(255,255,255,.1);border-radius:7px;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.45);cursor:pointer;transition:all .2s}
+.ts:hover{border-color:rgba(30,46,245,.4);color:rgba(255,255,255,.8);background:rgba(30,46,245,.12)}
+.ts.sel{background:var(--blue);border-color:var(--blue);color:#fff}
+.ts.taken{opacity:.3;pointer-events:none;text-decoration:line-through}
+/* Book button */
+.bc-book{width:100%;background:var(--blue);color:#fff;border-radius:var(--r1);padding:14px;font-size:15px;font-weight:700;font-family:'Cairo',sans-serif;cursor:pointer;border:none;transition:all .26s;display:flex;align-items:center;justify-content:center;gap:8px}
+.bc-book:hover{background:var(--blue-dark);transform:translateY(-1px);box-shadow:var(--sh-b)}
+/* Note */
+.bc-note{text-align:center;font-size:12px;color:rgba(255,255,255,.25);margin-top:12px;line-height:1.6}
+
+/* ═══════════════════════════════════════════════════════════════
+   REVIEWS — Google Reviews placeholder
+   ═══════════════════════════════════════════════════════════════ */
+#reviews{padding-block:var(--sec);background:var(--off)}
+.rev-hrow{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:48px;flex-wrap:wrap}
+.rev-agg{background:#fff;border:1px solid var(--line);border-radius:var(--r2);padding:14px 20px;display:flex;align-items:center;gap:14px}
+.rev-score{font-size:38px;font-weight:900;color:var(--ink);line-height:1}
+.rev-stars{display:flex;gap:3px;margin-bottom:4px}
+.star-ph{width:15px;height:15px;border-radius:3px;background:var(--blue-50);border:1.5px dashed var(--blue-100)}
+.rev-ct{font-size:12px;color:var(--muted)}
+.g-badge{display:flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--muted);padding:5px 10px;background:var(--surface);border-radius:6px;border:1px solid var(--line);margin-top:6px}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:26px;display:flex;flex-direction:column;min-height:200px;transition:all .28s var(--fast);border-style:dashed;border-color:rgba(30,46,245,.15)}
+.rev-card:hover{box-shadow:var(--sh-md);border-color:rgba(30,46,245,.2);transform:translateY(-3px)}
+.ph-st-row{display:flex;gap:4px;margin-bottom:16px}
+.ph-st{width:14px;height:14px;border-radius:3px;background:var(--blue-50)}
+.ph-body{flex:1;display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
+.ph-ln{height:9px;border-radius:5px;background:var(--surface);border:1px dashed var(--line)}
+.ph-au{display:flex;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:14px}
+.ph-av{width:38px;height:38px;border-radius:50%;background:var(--surface);border:1.5px dashed var(--line);flex-shrink:0}
+.ph-nms{display:flex;flex-direction:column;gap:5px}
+.rev-note{text-align:center;font-size:11px;color:var(--muted);margin-top:20px;font-style:italic}
+
+/* ═══════════════════════════════════════════════════════════════
+   PLATFORMS — animated marquee strip
+   ═══════════════════════════════════════════════════════════════ */
+#platforms{padding-block:var(--sec);background:var(--surface);border-block:1px solid var(--line)}
+
+/* Fade edges mask */
+.marquee-outer{
+  overflow:hidden;
+  -webkit-mask-image:linear-gradient(to left,transparent 0%,#000 12%,#000 88%,transparent 100%);
+  mask-image:linear-gradient(to left,transparent 0%,#000 12%,#000 88%,transparent 100%);
+}
+.marquee-track{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  width:max-content;
+  animation:marqueeRoll 22s linear infinite;
+}
+/* Pause on hover for accessibility / inspection */
+.marquee-outer:hover .marquee-track{animation-play-state:paused}
+@keyframes marqueeRoll{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+/* ── Individual platform card in the strip ── */
+.plat-card{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  padding:22px 28px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--r3);
+  min-width:130px;
+  transition:all .32s var(--fast);
+  cursor:default;
+  flex-shrink:0;
+}
+.plat-card:hover{
+  background:var(--blue-50);
+  border-color:rgba(30,46,245,.25);
+  box-shadow:var(--sh-md);
+  transform:translateY(-5px);
+}
+/* Logo area — للمطوّر: استبدل .plat-ph بـ <img src="logo.svg"> */
+.plat-ph{
+  width:56px;
+  height:56px;
+  border-radius:16px;
+  background:var(--blue-50);
+  border:1.5px solid var(--blue-100);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  font-weight:900;
+  color:var(--blue);
+  letter-spacing:-.02em;
+  transition:background .28s,border-color .28s,transform .28s;
+}
+.plat-card:hover .plat-ph{
+  background:var(--blue);
+  border-color:var(--blue);
+  color:#fff;
+  transform:scale(1.08);
+}
+.plat-card .plat-nm{
+  font-size:13.5px;
+  font-weight:700;
+  color:var(--ink-2);
+  white-space:nowrap;
+  transition:color .28s;
+}
+.plat-card:hover .plat-nm{color:var(--blue)}
+
+/* ═══════════════════════════════════════════════════════════════
+   INDUSTRIES — نخدم قطاعات متنوعة
+   ═══════════════════════════════════════════════════════════════ */
+#industries{padding-block:var(--sec);background:#fff;border-block-start:1px solid var(--line)}
+.ind-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin-top:48px;
+}
+.ind-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--r3);
+  padding:28px 20px;
+  text-align:center;
+  transition:all .3s var(--fast);
+  cursor:default;
+  position:relative;
+  overflow:hidden;
+}
+.ind-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:var(--blue);
+  opacity:0;
+  transition:opacity .32s;
+}
+.ind-card:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--sh-md);
+  border-color:transparent;
+}
+.ind-card:hover::before{opacity:1}
+.ind-emoji{
+  font-size:34px;
+  margin-bottom:14px;
+  display:block;
+  position:relative;
+  z-index:1;
+  transition:transform .32s var(--ease);
+}
+.ind-card:hover .ind-emoji{transform:scale(1.12)}
+.ind-card h3{
+  font-size:15px;
+  font-weight:700;
+  color:var(--ink);
+  margin-bottom:6px;
+  position:relative;
+  z-index:1;
+  transition:color .28s;
+}
+.ind-card p{
+  font-size:12.5px;
+  color:var(--muted);
+  line-height:1.55;
+  position:relative;
+  z-index:1;
+  transition:color .28s;
+}
+.ind-card:hover h3,.ind-card:hover p{color:rgba(255,255,255,.9)}
+@media(max-width:860px){.ind-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.ind-grid{grid-template-columns:repeat(2,1fr);gap:12px}}
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOG — من مكتب سيو هاوس
+   ═══════════════════════════════════════════════════════════════ */
+#blog{padding-block:var(--sec);background:var(--off);border-block-start:1px solid var(--line)}
+.blog-hrow{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:44px;flex-wrap:wrap}
+.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.art-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);overflow:hidden;display:flex;flex-direction:column;transition:all .3s var(--fast)}
+.art-card:hover{box-shadow:var(--sh-md);border-color:transparent;transform:translateY(-5px)}
+.art-thumb{height:188px;background:linear-gradient(140deg,var(--navy) 0%,rgba(30,46,245,.6) 100%);position:relative;overflow:hidden}
+.art-thumb::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:28px 28px}
+/* للمطوّر: the_post_thumbnail() here */
+.art-cat{position:absolute;inset-block-start:14px;inset-inline-start:14px;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.75);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:5px 10px;border-radius:5px;backdrop-filter:blur(8px)}
+.art-body{padding:24px 22px;flex:1;display:flex;flex-direction:column}
+.art-meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);margin-bottom:12px}
+.art-meta .d{width:3px;height:3px;border-radius:50%;background:var(--muted)}
+.art-card h3{font-size:17px;font-weight:800;color:var(--ink);line-height:1.35;margin-bottom:10px;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.art-card p{font-size:13.5px;color:var(--muted);line-height:1.7;margin-bottom:18px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.art-read{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue);transition:gap .2s}
+.art-card:hover .art-read{gap:10px}
+
+/* ═══════════════════════════════════════════════════════════════
+   FINAL CTA
+   ═══════════════════════════════════════════════════════════════ */
+#cta-sec{padding-block:var(--sec);background:var(--blue);position:relative;overflow:hidden;text-align:center}
+.cta-r{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.07);pointer-events:none;top:50%;left:50%;transform:translate(-50%,-50%)}
+.cta-r1{width:480px;height:480px}
+.cta-r2{width:720px;height:720px;border-color:rgba(255,255,255,.04)}
+.cta-r3{width:960px;height:960px;border-color:rgba(255,255,255,.025)}
+.cta-body{position:relative;z-index:1;max-width:600px;margin-inline:auto}
+.cta-body .tag.d{justify-content:center;margin-bottom:16px}
+.cta-body h2{font-size:clamp(28px,4.5vw,52px);font-weight:900;color:#fff;line-height:1.12;letter-spacing:-.03em;margin-bottom:16px}
+.cta-body p{font-size:clamp(14.5px,1.5vw,17px);color:rgba(255,255,255,.6);line-height:1.85;margin-bottom:36px}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.cta-pills{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.cta-pill{display:flex;align-items:center;gap:6px;font-size:13px;color:rgba(255,255,255,.55)}
+.cta-pill svg{stroke:rgba(255,255,255,.5)}
+
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════════════════ */
+#footer{background:var(--navy);padding-block-start:64px}
+.foot-top{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:44px;padding-block-end:48px;border-block-end:1px solid var(--line-d)}
+.foot-brand img{height:32px;width:auto;mix-blend-mode:screen}/* black bg transparent trick */
+.foot-brand p{font-size:13px;color:rgba(255,255,255,.38);line-height:1.9;max-width:270px;margin-block:16px 22px}
+.socials{display:flex;gap:8px}
+.soc{width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.05);border:1px solid var(--line-d);display:flex;align-items:center;justify-content:center;transition:all .25s;text-decoration:none}
+.soc:hover{background:var(--blue);border-color:var(--blue);transform:translateY(-2px)}
+.soc svg{stroke:rgba(255,255,255,.45);transition:stroke .25s}
+.soc:hover svg{stroke:#fff}
+.foot-col h4{font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:18px}
+.foot-links{display:flex;flex-direction:column;gap:10px}
+.foot-links a{font-size:13.5px;color:rgba(255,255,255,.45);transition:color .2s}
+.foot-links a:hover{color:rgba(255,255,255,.9)}
+.foot-bot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-block:20px}
+.foot-bot p{font-size:12.5px;color:rgba(255,255,255,.22)}
+.foot-leg{display:flex;gap:18px}
+.foot-leg a{font-size:12.5px;color:rgba(255,255,255,.22);transition:color .2s}
+.foot-leg a:hover{color:rgba(255,255,255,.55)}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Tablet: 1100px ── */
+@media(max-width:1100px){
+  /* Hero: hide full SERP but keep the 2 mini stat cards */
+  .serp-card{display:none}
+  .h-vis{display:block} /* keep visible, shows vis-row only */
+  .h-vis .vis-row{grid-template-columns:1fr 1fr;gap:12px;margin-top:0}
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+
+  /* Why: hide the phase tracker card on tablet */
+  .why-grid{grid-template-columns:1fr;gap:44px}
+  .why-vis{display:none}
+
+  /* Consultation: show compact booking card — just head + agenda + button */
+  .consult-grid{grid-template-columns:1fr;gap:44px}
+  .bc-section-label{display:none}
+  .mini-cal{display:none}
+  .time-slots{display:none}
+  .booking-card{display:block} /* show it, simplified */
+  .bc-book{margin-top:0}
+  .bc-note{display:none}
+
+  .cases-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-top{grid-template-columns:1fr 1fr}
+  .rev-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+/* ── Mobile: 860px ── */
+@media(max-width:860px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:flex}
+  .mob{display:flex}
+
+  /* Hero: show a single wide mini card instead of 2 side-by-side */
+  .h-vis .vis-row{grid-template-columns:1fr}
+  /* Hide keywords card, keep only sparkline */
+  .vis-mini:last-child{display:none}
+  .h-kicker{flex-wrap:wrap;gap:14px} /* allow wrap on mobile */
+  .k-div{display:none}
+
+  .svc-layout{grid-template-columns:1fr}
+  .svc-card.feat{grid-column:span 1}
+  .proc-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .proc-grid::before{display:none}
+  .cases-grid{grid-template-columns:1fr}
+  .rev-grid{grid-template-columns:1fr}
+  .art-grid{grid-template-columns:1fr}
+  .foot-top{grid-template-columns:1fr}
+  .foot-bot{flex-direction:column;text-align:center}
+  .mega{width:94vw;inset-inline-start:auto;inset-inline-end:0;transform:none}
+  .ni.op .mega{transform:translateY(0)}
+  .booking-card{display:none} /* too complex on small mobile — show only copy */
+
+  /* Why: show compact phase card on mobile */
+  .why-vis{display:block}
+  .why-card{padding:24px}
+  .why-badge{display:none}
+}
+
+/* ── Small mobile: 600px ── */
+@media(max-width:600px){
+  .h-btns{flex-direction:column}
+  .h-btns .btn{justify-content:center;width:100%}
+  .h-vis{display:none} /* hide mini cards on very small screens */
+  .why-pts{grid-template-columns:1fr}
+  .why-vis{display:none}
+  .proc-grid{grid-template-columns:1fr}
+  .cta-btns{flex-direction:column;align-items:center}
+  .cta-pills{flex-direction:column;gap:12px}
+  .rev-hrow{flex-direction:column;align-items:flex-start}
+  .blog-hrow{flex-direction:column;align-items:flex-start}
+  .hero-grid{padding-block:clamp(100px,13vh,130px) clamp(48px,6vh,64px)}
+  /* Hero kicker in 2-column pill grid on very small screens */
+  .h-kicker{display:grid;grid-template-columns:1fr 1fr;gap:10px;border-top:1px solid rgba(255,255,255,.08);padding-top:24px;margin-top:32px}
+  .k-div{display:none}
+  .k-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:10px 12px;font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVIGATION
+     ═══════════════════════════════════════════════════════════ -->
+<header id="nav">
+  <div class="wrap">
+    <nav class="nav-bar">
+
+      <!--
+        LOGO — للمطوّر:
+        logo-w: النسخة البيضاء (على الهيرو الداكن)
+          → mix-blend-mode:screen يجعل الخلفية السوداء شفافة على الخلفيات الداكنة
+          → استبدل بملف PNG بخلفية شفافة للحصول على أفضل نتيجة
+        logo-c: النسخة الملوّنة (على الناف الأبيض عند التمرير)
+          → المسار: /wp-content/themes/seohouse/assets/img/logo-color.png
+      -->
+      <a href="/" class="nav-logo" aria-label="سيو هاوس">
+        <img src="/mnt/user-data/uploads/White.png" alt="سيو هاوس" class="logo-w" width="156" height="36">
+        <img src="assets/img/logo-color.png"        alt="سيو هاوس" class="logo-c" width="156" height="36">
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links">
+        <li class="ni"><a href="/">الرئيسية</a></li>
+
+        <!-- Services mega menu -->
+        <li class="ni" id="svcNi">
+          <button class="ni-btn" id="svcBtn">
+            الخدمات
+            <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+
+          <div class="mega" id="megaMenu">
+            <div class="mega-body">
+              <!-- Left: main services -->
+              <nav class="mega-main">
+                <p class="mega-main-label">الخدمات الرئيسية</p>
+
+                <!-- SEO — has sub-panel -->
+                <a href="/services/seo" class="mega-item active" id="seoItem">
+                  <div class="mega-item-l">
+                    <div class="mega-item-ico">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                    </div>
+                    <span>تحسين محركات البحث</span>
+                  </div>
+                  <svg class="mega-item-arr" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </a>
+
+                <a href="/services/web-design" class="mega-item" id="webItem">
+                  <div class="mega-item-l">
+                    <div class="mega-item-ico">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+                    </div>
+                    <span>إنشاء وتصميم مواقع</span>
+                  </div>
+                </a>
+
+                <a href="/services/salla-stores" class="mega-item" id="sallaItem">
+                  <div class="mega-item-l">
+                    <div class="mega-item-ico">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                    </div>
+                    <span>إنشاء متاجر سلة</span>
+                  </div>
+                </a>
+
+                <a href="/services/zid-stores" class="mega-item" id="zidItem">
+                  <div class="mega-item-l">
+                    <div class="mega-item-ico">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <span>إنشاء متاجر زد</span>
+                  </div>
+                </a>
+
+                <a href="/services/product-upload" class="mega-item" id="prodItem">
+                  <div class="mega-item-l">
+                    <div class="mega-item-ico">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+                    </div>
+                    <span>رفع منتجات متاجر</span>
+                  </div>
+                </a>
+              </nav>
+
+              <!-- Right: SEO sub-services -->
+              <div class="mega-sub show" id="seoSub">
+                <p class="mega-sub-label">خدمات تحسين محركات البحث</p>
+                <div class="mega-sub-grid">
+                  <a href="/services/seo/shopify" class="sub-link">
+                    <span class="sub-dot"></span>
+                    <div>
+                      <strong>سيو متاجر شوبيفاي</strong>
+                      <p>تحسين ترتيب متجرك في جوجل</p>
+                    </div>
+                  </a>
+                  <a href="/services/seo/zid" class="sub-link">
+                    <span class="sub-dot"></span>
+                    <div>
+                      <strong>سيو متاجر زد</strong>
+                      <p>تحسين ظهور المتجر في البحث</p>
+                    </div>
+                  </a>
+                  <a href="/services/seo/salla" class="sub-link">
+                    <span class="sub-dot"></span>
+                    <div>
+                      <strong>سيو متاجر سلة</strong>
+                      <p>تحسين ترتيب منتجاتك وفئاتك</p>
+                    </div>
+                  </a>
+                  <a href="/services/seo/link-building" class="sub-link">
+                    <span class="sub-dot"></span>
+                    <div>
+                      <strong>بناء الباك لينك</strong>
+                      <p>روابط موثوقة تقوّي سلطة موقعك</p>
+                    </div>
+                  </a>
+                  <a href="/services/seo/content" class="sub-link">
+                    <span class="sub-dot"></span>
+                    <div>
+                      <strong>كتابة المحتوى</strong>
+                      <p>محتوى يُرضي القارئ ومحرك البحث</p>
+                    </div>
+                  </a>
+                  <a href="/services/seo/consulting" class="sub-link">
+                    <span class="sub-dot"></span>
+                    <div>
+                      <strong>استشارات تحليل الأداء</strong>
+                      <p>تقارير وخطط تحسين مدروسة</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Right panels for other services (no sub-items) -->
+              <div class="mega-sub" id="webSub">
+                <p class="mega-sub-label">إنشاء وتصميم المواقع</p>
+                <p style="font-size:14px;color:var(--muted);line-height:1.75;padding-top:8px">نصمم ونطوّر مواقع احترافية تعكس هويتك التجارية — سريعة، متوافقة مع محركات البحث، ومبنية للتحويل.</p>
+              </div>
+              <div class="mega-sub" id="sallaSub">
+                <p class="mega-sub-label">إنشاء متاجر سلة</p>
+                <p style="font-size:14px;color:var(--muted);line-height:1.75;padding-top:8px">إطلاق متجرك على منصة سلة من الصفر — إعداد، تصميم، وربط بوابات الدفع.</p>
+              </div>
+              <div class="mega-sub" id="zidSub">
+                <p class="mega-sub-label">إنشاء متاجر زد</p>
+                <p style="font-size:14px;color:var(--muted);line-height:1.75;padding-top:8px">متجر زد جاهز للبيع — هيكل احترافي، صفحات محسّنة، وتجربة مستخدم سلسة.</p>
+              </div>
+              <div class="mega-sub" id="prodSub">
+                <p class="mega-sub-label">رفع منتجات المتاجر</p>
+                <p style="font-size:14px;color:var(--muted);line-height:1.75;padding-top:8px">رفع وتحرير المنتجات بدقة واحترافية — أوصاف، صور، أسعار، وتصنيفات.</p>
+              </div>
+
+            </div>
+            <div class="mega-foot">
+              <a href="/services" class="mega-all">
+                عرض جميع الخدمات
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li class="ni"><a href="#cases">نتائج الأعمال</a></li>
+        <li class="ni"><a href="/about">عن الشركة</a></li>
+        <li class="ni"><a href="#blog">رؤى ومقالات</a></li>
+        <li class="ni"><a href="/contact">تواصل معنا</a></li>
+      </ul>
+
+      <div class="nav-end">
+        <a href="#consult" class="btn btn-s nav-cta">احجز استشارة مجانية</a>
+        <button class="burger" id="burger" aria-label="فتح القائمة" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile nav -->
+  <nav class="mob" id="mobNav">
+    <a href="/">الرئيسية</a>
+    <a href="/services">الخدمات</a>
+    <a href="/services/seo" class="mob-sub">تحسين محركات البحث</a>
+    <a href="/services/web-design" class="mob-sub">إنشاء وتصميم مواقع</a>
+    <a href="/services/salla-stores" class="mob-sub">إنشاء متاجر سلة</a>
+    <a href="/services/zid-stores" class="mob-sub">إنشاء متاجر زد</a>
+    <a href="/services/product-upload" class="mob-sub">رفع منتجات متاجر</a>
+    <a href="#cases">نتائج الأعمال</a>
+    <a href="/about">عن الشركة</a>
+    <a href="#blog">رؤى ومقالات</a>
+    <a href="/contact">تواصل معنا</a>
+    <a href="#consult" class="mcta">احجز استشارة مجانية لمدة 30 دقيقة</a>
+  </nav>
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO — two-column, rich visual composition
+     ═══════════════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="h-grid" aria-hidden="true"></div>
+  <div class="h-arc"  aria-hidden="true"></div>
+  <div class="h-glow-a" aria-hidden="true"></div>
+  <div class="h-glow-b" aria-hidden="true"></div>
+
+  <div class="wrap" style="width:100%">
+    <div class="hero-grid">
+
+      <!-- Copy -->
+      <div class="h-copy">
+        <p class="h-live">
+          <span class="h-live-d" aria-hidden="true"></span>
+          وكالة متخصصة في SEO وإنشاء المتاجر
+        </p>
+
+        <h1 class="h1">
+          كن <span class="acc">آخر نقرة</span><br>يبحث عنها عميلك
+        </h1>
+
+        <p class="h-p">
+          نحسّن ترتيب موقعك في جوجل ونبني متاجرك الإلكترونية
+          بأسلوب مدروس يُحوّل الزيارات إلى مبيعات فعلية.
+        </p>
+
+        <div class="h-btns">
+          <a href="#consult" class="btn btn-s lg">
+            احجز استشارة مجانية لمدة 30 دقيقة
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#services" class="btn btn-g lg">تعرّف على خدماتنا</a>
+        </div>
+
+        <div class="h-kicker">
+          <div class="k-item">
+            <div class="k-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+            قرارات مبنية على البيانات
+          </div>
+          <div class="k-div" aria-hidden="true"></div>
+          <div class="k-item">
+            <div class="k-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            تقارير شهرية شفافة
+          </div>
+          <div class="k-div" aria-hidden="true"></div>
+          <div class="k-item">
+            <div class="k-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            بدون عقود مفتوحة
+          </div>
+        </div>
+      </div>
+
+      <!-- Visual: SERP mockup + mini cards -->
+      <div class="h-vis" aria-hidden="true">
+        <!-- Main SERP card -->
+        <div class="serp-card">
+          <div class="serp-chrome">
+            <div class="chrome-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="serp-bar">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              <span class="serp-bar-txt">اسم نشاطك التجاري</span>
+            </div>
+          </div>
+          <div class="serp-body">
+            <!-- Result #1 — highlighted -->
+            <div class="serp-result pos1">
+              <div class="pos-badge">١</div>
+              <div class="res-content">
+                <p class="res-url">seohouse.sa › موقعك</p>
+                <p class="res-title">[ اسم موقعك أو نشاطك — تُضاف لاحقاً ]</p>
+                <p class="res-desc">وصف صفحتك كما يظهر في نتائج البحث — هذا ما يراه عميلك قبل أن يضغط...</p>
+              </div>
+            </div>
+            <!-- Competitor 2 -->
+            <div class="serp-result pos2">
+              <div class="pos-badge">٢</div>
+              <div class="res-content">
+                <p class="res-url">competitor.com › page</p>
+                <p class="res-title">منافس ١ — الصفحة الثانية في النتائج</p>
+                <p class="res-desc">هذا ما يراه العميل من المنافسين دونك في نتائج البحث...</p>
+              </div>
+            </div>
+            <!-- Competitor 3 -->
+            <div class="serp-result pos3">
+              <div class="pos-badge">٣</div>
+              <div class="res-content">
+                <p class="res-url">another-competitor.com › …</p>
+                <p class="res-title">منافس ٢ — المرتبة الثالثة</p>
+                <p class="res-desc">بينما موقعك يتصدّر لأن سيو هاوس يعمل بشكل صحيح...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom row: 2 mini cards -->
+        <div class="vis-row">
+          <!-- Traffic sparkline (abstract) -->
+          <div class="vis-mini">
+            <p class="vis-mini-label">مسار الزيارات العضوية</p>
+            <div class="sparkline" id="spark">
+              <div class="spark-bar" style="height:25%"></div>
+              <div class="spark-bar" style="height:32%"></div>
+              <div class="spark-bar" style="height:28%"></div>
+              <div class="spark-bar" style="height:44%"></div>
+              <div class="spark-bar" style="height:52%"></div>
+              <div class="spark-bar" style="height:60%"></div>
+              <div class="spark-bar" style="height:70%"></div>
+              <div class="spark-bar hi" style="height:90%"></div>
+            </div>
+          </div>
+          <!-- Keyword ranks (abstract) -->
+          <div class="vis-mini">
+            <p class="vis-mini-label">ترتيب الكلمات المفتاحية</p>
+            <div class="kw-list">
+              <div class="kw-row"><div class="kw-rank r1">١</div><div class="kw-bar"><div class="kw-fill"></div></div></div>
+              <div class="kw-row"><div class="kw-rank">٢</div><div class="kw-bar"><div class="kw-fill"></div></div></div>
+              <div class="kw-row"><div class="kw-rank">٣</div><div class="kw-bar"><div class="kw-fill"></div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CLIENTS — للمطوّر: استبدل بشعارات فعلية عبر ACF Repeater
+     ═══════════════════════════════════════════════════════════ -->
+<section id="clients">
+  <div class="wrap">
+    <p class="cl-label">يثقون في سيو هاوس</p>
+    <div class="cl-row">
+      <div class="cl-ph">شعار العميل</div>
+      <div class="cl-ph">شعار العميل</div>
+      <div class="cl-ph">شعار العميل</div>
+      <div class="cl-ph">شعار العميل</div>
+      <div class="cl-ph">شعار العميل</div>
+      <div class="cl-ph">شعار العميل</div>
+    </div>
+    <p class="cl-note">[ تُضاف شعارات العملاء — للمطوّر: Options Page في ACF + Repeater field ]</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     WHY — لماذا سيو هاوس (kept close to V3)
+     ═══════════════════════════════════════════════════════════ -->
+<section id="why">
+  <div class="wrap">
+    <div class="why-grid">
+
+      <!-- Copy (right side in RTL) -->
+      <div class="sr">
+        <p class="tag">لماذا سيو هاوس</p>
+        <h2 class="h2">نفهم عملك قبل أن<br>نلمس موقعك</h2>
+        <p class="body" style="margin-top:14px;margin-bottom:32px">
+          لا نبدأ بالتنفيذ قبل أن نفهم هدفك التجاري فعلاً.
+          من يبحث عنك، بأي كلمات، ولماذا يختار منافسك؟
+          من هذا الفهم نبني كل شيء.
+        </p>
+        <div class="why-pts">
+          <div class="wpt sr d1">
+            <div class="wpt-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm9 0V5a2 2 0 00-2-2h-2a2 2 0 00-2 2v14a2 2 0 002 2h2a2 2 0 002-2z"/></svg></div>
+            <div class="wpt-b"><strong>تحليل قبل التنفيذ</strong><p>لا خطة قبل أن نقرأ وضعك الفعلي.</p></div>
+          </div>
+          <div class="wpt sr d2">
+            <div class="wpt-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="wpt-b"><strong>شفافية كاملة</strong><p>تعرف ما تغيّر وما لم يتغيّر كل شهر.</p></div>
+          </div>
+          <div class="wpt sr d3">
+            <div class="wpt-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="wpt-b"><strong>تنفيذ منضبط</strong><p>كل ما ننفذه موثّق ومبرر.</p></div>
+          </div>
+          <div class="wpt sr d4">
+            <div class="wpt-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div class="wpt-b"><strong>تواصل مباشر</strong><p>متخصص واحد يتابع مشروعك فعلاً.</p></div>
+          </div>
+        </div>
+        <div style="margin-top:30px" class="sr">
+          <a href="#consult" class="btn btn-s">احجز استشارة مجانية لمدة 30 دقيقة<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="why-vis sr">
+        <div class="why-card">
+          <p class="why-lbl">مراحل المشروع النموذجي</p>
+          <div class="why-phases">
+            <div class="w-ph act"><span class="ph-n">01</span><div class="ph-bw"><div class="ph-b" style="width:100%"></div></div><span class="ph-nm">التحليل</span><span class="ph-st"></span></div>
+            <div class="w-ph act"><span class="ph-n">02</span><div class="ph-bw"><div class="ph-b" style="width:85%"></div></div><span class="ph-nm">الاستراتيجية</span><span class="ph-st"></span></div>
+            <div class="w-ph"><span class="ph-n">03</span><div class="ph-bw"><div class="ph-b" style="width:55%"></div></div><span class="ph-nm">التنفيذ</span><span class="ph-st"></span></div>
+            <div class="w-ph"><span class="ph-n">04</span><div class="ph-bw"><div class="ph-b" style="width:30%"></div></div><span class="ph-nm">القياس</span><span class="ph-st"></span></div>
+            <div class="w-ph"><span class="ph-n">05</span><div class="ph-bw"><div class="ph-b" style="width:10%"></div></div><span class="ph-nm">التطوير</span><span class="ph-st"></span></div>
+          </div>
+        </div>
+        <div class="why-badge">
+          <div class="wb-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div>
+          <div class="wb-t"><strong>تحليل مجاني لموقعك</strong><span>دون التزام — نقيّم ثم تقرر</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICES — 5 items (featured SEO + 4 others)
+     ═══════════════════════════════════════════════════════════ -->
+<section id="services">
+  <div class="wrap">
+    <div class="sh c sr">
+      <p class="tag">خدماتنا</p>
+      <h2 class="h2">ما نقدمه لعملائنا</h2>
+      <p class="body" style="margin-top:12px">خدمات مختارة بعناية لتخدم نمو عملك الرقمي — من الظهور في جوجل إلى بناء المتجر وإدارة المنتجات.</p>
+    </div>
+
+    <div class="svc-layout">
+
+      <!-- Featured: SEO (spans 2 cols) -->
+      <article class="svc-card feat sr d1">
+        <span class="svc-n">01</span>
+        <div class="svc-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+        <div class="svc-body">
+          <h3>تحسين محركات البحث</h3>
+          <p>نعمل على تحسين ترتيب موقعك في نتائج جوجل بشكل منهجي — تقني، محتوى، وروابط. هدفنا أن يجدك عميلك قبل أن يجد منافسك.</p>
+        </div>
+        <div class="svc-tags">
+          <span class="svc-tag">سيو المتاجر</span>
+          <span class="svc-tag">سيو المواقع</span>
+          <span class="svc-tag">باك لينك</span>
+          <span class="svc-tag">كتابة محتوى</span>
+          <span class="svc-tag">استشارات</span>
+        </div>
+        <div class="svc-link-row">
+          <a href="/services/seo" class="svc-more">عرض خدمات SEO<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transform:scaleX(-1)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+
+      <!-- إنشاء مواقع -->
+      <article class="svc-card sr d2">
+        <span class="svc-n">02</span>
+        <div class="svc-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>
+        <h3>إنشاء وتصميم مواقع</h3>
+        <p>مواقع احترافية سريعة ومتوافقة مع محركات البحث من اليوم الأول.</p>
+        <div class="svc-link-row" style="margin-top:auto">
+          <a href="/services/web-design" class="svc-more">اعرف أكثر<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transform:scaleX(-1)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+
+      <!-- متاجر سلة -->
+      <article class="svc-card sr d1">
+        <span class="svc-n">03</span>
+        <div class="svc-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+        <h3>إنشاء متاجر سلة</h3>
+        <p>إطلاق متجرك على منصة سلة بإعداد احترافي وتصميم يناسب هويتك.</p>
+        <div class="svc-link-row" style="margin-top:auto">
+          <a href="/services/salla-stores" class="svc-more">اعرف أكثر<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transform:scaleX(-1)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+
+      <!-- متاجر زد -->
+      <article class="svc-card sr d2">
+        <span class="svc-n">04</span>
+        <div class="svc-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>إنشاء متاجر زد</h3>
+        <p>متجر زد مُعدّ للبيع فوراً — هيكل محسّن وتجربة مستخدم سلسة.</p>
+        <div class="svc-link-row" style="margin-top:auto">
+          <a href="/services/zid-stores" class="svc-more">اعرف أكثر<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transform:scaleX(-1)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+
+      <!-- رفع منتجات -->
+      <article class="svc-card sr d3">
+        <span class="svc-n">05</span>
+        <div class="svc-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/></svg></div>
+        <h3>رفع منتجات متاجر</h3>
+        <p>إدارة ورفع منتجاتك باحتراف — أوصاف محسّنة، صور، وتصنيفات دقيقة.</p>
+        <div class="svc-link-row" style="margin-top:auto">
+          <a href="/services/product-upload" class="svc-more">اعرف أكثر<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transform:scaleX(-1)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="svc-cta sr"><a href="/services" class="btn btn-o lg">عرض جميع الخدمات</a></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     INDUSTRIES — نخدم قطاعات متنوعة
+     ═══════════════════════════════════════════════════════════ -->
+<section id="industries">
+  <div class="wrap">
+    <div class="sh c sr">
+      <p class="tag">القطاعات</p>
+      <h2 class="h2">نخدم قطاعات متنوعة</h2>
+      <p class="body" style="margin-top:12px">
+        خبرة عملية في تحسين محركات البحث لأكثر من 8 قطاعات مختلفة —
+        نفهم طبيعة كل قطاع قبل أن نبدأ.
+      </p>
+    </div>
+
+    <div class="ind-grid">
+      <div class="ind-card sr d1">
+        <span class="ind-emoji">🛒</span>
+        <h3>التجارة الإلكترونية</h3>
+        <p>متاجر ومنصات بيع إلكتروني</p>
+      </div>
+      <div class="ind-card sr d2">
+        <span class="ind-emoji">🏥</span>
+        <h3>الصحة والطب</h3>
+        <p>عيادات، مستشفيات، رعاية صحية</p>
+      </div>
+      <div class="ind-card sr d3">
+        <span class="ind-emoji">🏗️</span>
+        <h3>العقارات والبناء</h3>
+        <p>مطورون، مكاتب عقارية، مقاولون</p>
+      </div>
+      <div class="ind-card sr d4">
+        <span class="ind-emoji">📚</span>
+        <h3>التعليم والتدريب</h3>
+        <p>مدارس، معاهد، منصات تعليمية</p>
+      </div>
+      <div class="ind-card sr d1">
+        <span class="ind-emoji">🍽️</span>
+        <h3>الأغذية والمطاعم</h3>
+        <p>مطاعم، سلاسل غذائية، كيترينج</p>
+      </div>
+      <div class="ind-card sr d2">
+        <span class="ind-emoji">⚖️</span>
+        <h3>القانون والاستشارات</h3>
+        <p>مكاتب محاماة، استشارات أعمال</p>
+      </div>
+      <div class="ind-card sr d3">
+        <span class="ind-emoji">💻</span>
+        <h3>التقنية والبرمجيات</h3>
+        <p>شركات SaaS، تطبيقات، تقنية</p>
+      </div>
+      <div class="ind-card sr d4">
+        <span class="ind-emoji">✈️</span>
+        <h3>السياحة والسفر</h3>
+        <p>فنادق، منتجعات، وكالات سفر</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PROCESS
+     ═══════════════════════════════════════════════════════════ -->
+<section id="process">
+  <div class="wrap">
+    <div class="sh c sr">
+      <p class="tag">كيف نعمل</p>
+      <h2 class="h2">من التشخيص إلى النتائج</h2>
+      <p class="body" style="margin-top:12px">أربع مراحل واضحة — تعرف في كل خطوة أين وصلنا وما التالي.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-step sr d1"><div class="proc-num">01</div><h3>التشخيص الكامل</h3><p>ندرس موقعك ومنافسيك وسوقك لنبني صورة حقيقية لا تخمينية.</p></div>
+      <div class="proc-step sr d2"><div class="proc-num">02</div><h3>الخطة والأولويات</h3><p>خارطة طريق بأهداف واضحة وجدول زمني واقعي.</p></div>
+      <div class="proc-step sr d3"><div class="proc-num">03</div><h3>التنفيذ والمتابعة</h3><p>تقني ومحتوى وروابط — كل شيء مقاس بانتظام.</p></div>
+      <div class="proc-step sr d4"><div class="proc-num">04</div><h3>التقرير والتطوير</h3><p>تقرير شهري يُظهر ما تحقق مع مراجعة دورية للاستراتيجية.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CASE STUDIES — screenshot-first design
+     للمطوّر: استبدل .cs-img-area بـ <img src="screenshot.jpg">
+     ═══════════════════════════════════════════════════════════ -->
+<section id="cases">
+  <div class="wrap">
+    <div class="sh c sr" style="position:relative;z-index:1">
+      <p class="tag d">نتائج الأعمال</p>
+      <h2 class="h2 wh">نتائج من مشاريع فعلية</h2>
+      <p class="body d" style="margin-top:12px">لكل مشروع قصة — نوثّقها بلقطات شاشة حقيقية من Google Analytics وSearch Console.</p>
+    </div>
+
+    <div class="cases-grid">
+
+      <!-- Case 1 -->
+      <article class="cs-card sr d1">
+        <div class="cs-screen">
+          <div class="cs-chrome"><div class="cs-dots"><span></span><span></span><span></span></div><div class="cs-chrome-bar"></div></div>
+          <div class="cs-img-area">
+            <!--
+              للمطوّر: استبدل هذا المحتوى بـ:
+              <img src="<?= get_field('screenshot') ?>" alt="لقطة شاشة النتائج" loading="lazy" style="width:100%;height:100%;object-fit:cover">
+            -->
+            <div class="cs-ph-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>
+            <p class="cs-ph-txt">لقطة شاشة من Google Analytics أو Search Console<br>تُضاف هنا</p>
+          </div>
+        </div>
+        <div class="cs-body">
+          <p class="cs-sec"><span class="cs-sec-dot"></span>[ القطاع — يُضاف لاحقاً ]</p>
+          <h3>[ عنوان المشروع — يُضاف لاحقاً ]</h3>
+          <p class="cs-challenge">[ التحدي: ما المشكلة التي كان يعانيها الموقع وما الذي طلبه العميل؟ ]</p>
+          <div class="cs-result">
+            <div class="cs-r-item"><p class="cs-r-label">الزيارات العضوية</p><span class="cs-r-val">تُضاف النتيجة</span></div>
+            <div class="cs-r-item"><p class="cs-r-label">الأثر التجاري</p><span class="cs-r-val">تُضاف النتيجة</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 2 -->
+      <article class="cs-card sr d2">
+        <div class="cs-screen">
+          <div class="cs-chrome"><div class="cs-dots"><span></span><span></span><span></span></div><div class="cs-chrome-bar"></div></div>
+          <div class="cs-img-area">
+            <div class="cs-ph-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm6 0V9a2 2 0 00-2-2h-2a2 2 0 00-2 2v10m6 0a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2h-2a2 2 0 00-2 2v14"/></svg></div>
+            <p class="cs-ph-txt">لقطة شاشة من نتائج Search Console<br>تُضاف هنا</p>
+          </div>
+        </div>
+        <div class="cs-body">
+          <p class="cs-sec"><span class="cs-sec-dot"></span>[ القطاع — يُضاف لاحقاً ]</p>
+          <h3>[ عنوان المشروع — يُضاف لاحقاً ]</h3>
+          <p class="cs-challenge">[ التحدي: ما المشكلة التي كان يعانيها الموقع وما الذي طلبه العميل؟ ]</p>
+          <div class="cs-result">
+            <div class="cs-r-item"><p class="cs-r-label">الكلمات في الصفحة الأولى</p><span class="cs-r-val">تُضاف النتيجة</span></div>
+            <div class="cs-r-item"><p class="cs-r-label">الأثر التجاري</p><span class="cs-r-val">تُضاف النتيجة</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case 3 -->
+      <article class="cs-card sr d3">
+        <div class="cs-screen">
+          <div class="cs-chrome"><div class="cs-dots"><span></span><span></span><span></span></div><div class="cs-chrome-bar"></div></div>
+          <div class="cs-img-area">
+            <div class="cs-ph-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+            <p class="cs-ph-txt">لقطة شاشة من نتائج المبيعات<br>تُضاف هنا</p>
+          </div>
+        </div>
+        <div class="cs-body">
+          <p class="cs-sec"><span class="cs-sec-dot"></span>[ القطاع — يُضاف لاحقاً ]</p>
+          <h3>[ عنوان المشروع — يُضاف لاحقاً ]</h3>
+          <p class="cs-challenge">[ التحدي: ما المشكلة التي كان يعانيها الموقع وما الذي طلبه العميل؟ ]</p>
+          <div class="cs-result">
+            <div class="cs-r-item"><p class="cs-r-label">الزيارات العضوية</p><span class="cs-r-val">تُضاف النتيجة</span></div>
+            <div class="cs-r-item"><p class="cs-r-label">المبيعات العضوية</p><span class="cs-r-val">تُضاف النتيجة</span></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+    <p class="cases-note">[ للمطوّر: CPT "case_study" + ACF fields: sector، title، challenge، screenshot (image)، result_1، result_2 ]</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONSULTATION — calendar booking UI
+     للمطوّر: اربط .bc-book بـ Calendly أو Cal.com أو Google Calendar booking
+     ═══════════════════════════════════════════════════════════ -->
+<section id="consult">
+  <div class="wrap">
+    <div class="consult-grid">
+
+      <!-- Copy -->
+      <div class="con-copy sr">
+        <p class="tag">الاستشارة المجانية</p>
+        <h2 class="h2">30 دقيقة تكشف حقيقة<br>وضع موقعك</h2>
+        <p class="body" style="margin-top:14px">
+          ليست محاضرة مبيعات — جلسة فعلية مع متخصص يقرأ وضعك ويخبرك بصراحة
+          ما الذي يمنعك من الصفحة الأولى وما الخطوة الصحيحة التالية.
+        </p>
+        <ul class="con-list">
+          <li class="con-item"><span class="con-chk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>مراجعة حالة موقعك الحالية في محركات البحث</li>
+          <li class="con-item"><span class="con-chk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>تحديد أبرز نقاط الضعف والفرص في قطاعك</li>
+          <li class="con-item"><span class="con-chk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>إجابة صريحة: هل SEO هو الأنسب لك الآن؟</li>
+          <li class="con-item"><span class="con-chk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>خطوات عملية تستطيع تطبيقها فوراً</li>
+        </ul>
+        <a href="/contact" class="btn btn-s lg">
+          احجز موعدك الآن
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Booking card -->
+      <div class="sr d2">
+        <div class="booking-card">
+          <!-- Header -->
+          <div class="bc-head">
+            <div class="bc-head-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div class="bc-head-txt">
+              <strong>استشارة مجانية — سيو هاوس</strong>
+              <span>عبر Google Meet أو الهاتف</span>
+            </div>
+            <div class="bc-head-dur"><strong>30</strong><span>دقيقة</span></div>
+          </div>
+
+          <!-- Body: calendar + slots -->
+          <div class="bc-body">
+            <p class="bc-section-label">اختر التاريخ المناسب</p>
+
+            <!-- Mini calendar (CSS only, illustrative) -->
+            <div class="mini-cal">
+              <div class="cal-nav">
+                <button class="cal-arrow" id="calPrev" aria-label="الشهر السابق"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></button>
+                <span class="cal-month" id="calTitle">--</span>
+                <button class="cal-arrow" id="calNext" aria-label="الشهر التالي"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></button>
+              </div>
+              <div class="cal-days-head">
+                <div class="cal-dh">أح</div><div class="cal-dh">إث</div><div class="cal-dh">ثل</div>
+                <div class="cal-dh">أر</div><div class="cal-dh">خم</div><div class="cal-dh">جم</div><div class="cal-dh">سب</div>
+              </div>
+              <div class="cal-days" id="calDays"></div>
+            </div>
+
+            <p class="bc-section-label">اختر الوقت</p>
+            <div class="time-slots" id="timeSlots">
+              <div class="ts" data-time="9:00">9:00 ص</div>
+              <div class="ts" data-time="9:30">9:30 ص</div>
+              <div class="ts taken" data-time="10:00">10:00 ص</div>
+              <div class="ts" data-time="10:30">10:30 ص</div>
+              <div class="ts" data-time="11:00">11:00 ص</div>
+              <div class="ts taken" data-time="11:30">11:30 ص</div>
+              <div class="ts" data-time="1:00">1:00 م</div>
+              <div class="ts" data-time="2:00">2:00 م</div>
+              <div class="ts" data-time="3:00">3:00 م</div>
+            </div>
+
+            <button class="bc-book" id="bookBtn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              تأكيد الحجز
+            </button>
+            <!--
+              للمطوّر: اربط هذا الزر بـ Calendly embed أو Cal.com أو
+              Google Calendar appointment scheduling.
+              كود الدمج: <div class="calendly-inline-widget" data-url="https://calendly.com/seohouse/30min"></div>
+            -->
+            <p class="bc-note">لن يُطلب منك أي معلومات بطاقة ائتمانية<br>الاستشارة مجانية تماماً وبدون التزام</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     REVIEWS — Google Reviews placeholder
+     للمطوّر: اربط بـ Google Places API أو EmbedSocial
+     ═══════════════════════════════════════════════════════════ -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="rev-hrow">
+      <div>
+        <p class="tag">آراء العملاء</p>
+        <h2 class="h2" style="margin-bottom:0">ما يقوله من عمل معنا</h2>
+      </div>
+      <div class="rev-agg">
+        <div class="rev-score">—</div>
+        <div>
+          <div class="rev-stars"><div class="star-ph"></div><div class="star-ph"></div><div class="star-ph"></div><div class="star-ph"></div><div class="star-ph"></div></div>
+          <p class="rev-ct">[ يُضاف عدد التقييمات من Google ]</p>
+          <div class="g-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Google Business Profile</div>
+        </div>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card sr d1"><div class="ph-st-row"><div class="ph-st"></div><div class="ph-st"></div><div class="ph-st"></div><div class="ph-st"></div><div class="ph-st"></div></div><div class="ph-body"><div class="ph-ln" style="width:88%"></div><div class="ph-ln" style="width:72%"></div><div class="ph-ln" style="width:60%"></div></div><div class="ph-au"><div class="ph-av"></div><div class="ph-nms"><div class="ph-ln" style="width:100px"></div><div class="ph-ln" style="width:70px"></div></div></div></div>
+      <div class="rev-card sr d2"><div class="ph-st-row"><div class="ph-st"></div><div class="ph-st"></div><div class="ph-st"></div><div class="ph-st"></div><div class="ph-st"></div></div><div class="ph-body"><div class="ph-ln" style="width:88%"></div><div class="ph-ln" style="width:80%"></div><div class="ph-ln" style="width:65%"></div><div class="ph-ln" style="width:55%"></div></div><div class="ph-au"><div class="ph-av"></div><div class="ph-nms"><div class="ph-ln" style="width:100px"></div><div class="ph-ln" style="width:70px"></div></div></div></div>
+      <div class="rev-card sr d3"><div class="ph-st-row"><div class="ph-st"></div><div class="ph-st"></div><div class="ph-st"></div><div class="ph-st"></div><div class="ph-st"></div></div><div class="ph-body"><div class="ph-ln" style="width:72%"></div><div class="ph-ln" style="width:88%"></div><div class="ph-ln" style="width:60%"></div></div><div class="ph-au"><div class="ph-av"></div><div class="ph-nms"><div class="ph-ln" style="width:100px"></div><div class="ph-ln" style="width:70px"></div></div></div></div>
+    </div>
+    <p class="rev-note">[ للمطوّر: استخدم Google Places API أو Plugin مثل EmbedSocial لعرض التقييمات الفعلية — template-parts/reviews/google-reviews.php ]</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     PLATFORMS — animated marquee strip
+     للمطوّر: استبدل .plat-ph بـ <img src="logo.svg" alt="..." width="56" height="56">
+     الأيقونات مكررة مرتين لضمان حلقة لا نهاية لها بدون فراغ
+     ═══════════════════════════════════════════════════════════ -->
+<section id="platforms">
+  <div class="wrap">
+    <div class="sh c sr">
+      <p class="tag">منصات التنفيذ</p>
+      <h2 class="h2">نعمل على المنصات التي<br>يعتمد عليها نموّك</h2>
+      <p class="body" style="margin-top:12px">خبرة تقنية موثّقة على أبرز منصات التجارة الإلكترونية وإنشاء المواقع.</p>
+    </div>
+  </div>
+
+  <!-- Marquee strip — full bleed, outside .wrap intentionally -->
+  <div class="marquee-outer" aria-hidden="true">
+    <div class="marquee-track">
+
+      <!-- Set A -->
+      <div class="plat-card">
+        <!-- للمطوّر: <img src="/assets/logos/shopify.svg" alt="Shopify" width="56" height="56"> -->
+        <div class="plat-ph">Sh</div>
+        <span class="plat-nm">Shopify</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph">Wp</div>
+        <span class="plat-nm">WordPress</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph">Mg</div>
+        <span class="plat-nm">Magento</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph" style="font-size:20px">زد</div>
+        <span class="plat-nm">زد</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph" style="font-size:20px">سل</div>
+        <span class="plat-nm">سلة</span>
+      </div>
+
+      <!-- Spacer divider between sets -->
+      <div style="width:2px;height:60px;background:var(--line);border-radius:2px;flex-shrink:0;align-self:center"></div>
+
+      <!-- Set B (duplicate for seamless loop) -->
+      <div class="plat-card">
+        <div class="plat-ph">Sh</div>
+        <span class="plat-nm">Shopify</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph">Wp</div>
+        <span class="plat-nm">WordPress</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph">Mg</div>
+        <span class="plat-nm">Magento</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph" style="font-size:20px">زد</div>
+        <span class="plat-nm">زد</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph" style="font-size:20px">سل</div>
+        <span class="plat-nm">سلة</span>
+      </div>
+
+      <div style="width:2px;height:60px;background:var(--line);border-radius:2px;flex-shrink:0;align-self:center"></div>
+
+      <!-- Set C (third copy ensures no gap on wide screens) -->
+      <div class="plat-card">
+        <div class="plat-ph">Sh</div>
+        <span class="plat-nm">Shopify</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph">Wp</div>
+        <span class="plat-nm">WordPress</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph">Mg</div>
+        <span class="plat-nm">Magento</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph" style="font-size:20px">زد</div>
+        <span class="plat-nm">زد</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph" style="font-size:20px">سل</div>
+        <span class="plat-nm">سلة</span>
+      </div>
+
+      <div style="width:2px;height:60px;background:var(--line);border-radius:2px;flex-shrink:0;align-self:center"></div>
+
+      <!-- Set D -->
+      <div class="plat-card">
+        <div class="plat-ph">Sh</div>
+        <span class="plat-nm">Shopify</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph">Wp</div>
+        <span class="plat-nm">WordPress</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph">Mg</div>
+        <span class="plat-nm">Magento</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph" style="font-size:20px">زد</div>
+        <span class="plat-nm">زد</span>
+      </div>
+      <div class="plat-card">
+        <div class="plat-ph" style="font-size:20px">سل</div>
+        <span class="plat-nm">سلة</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     BLOG — من مكتب سيو هاوس
+     للمطوّر: اربط بـ WP_Query آخر 3 مقالات
+     ═══════════════════════════════════════════════════════════ -->
+<section id="blog">
+  <div class="wrap">
+    <div class="blog-hrow">
+      <div>
+        <p class="tag">رؤى ومقالات</p>
+        <h2 class="h2" style="margin-bottom:0">من مكتب سيو هاوس</h2>
+      </div>
+      <a href="/blog" class="btn btn-o">عرض جميع المقالات</a>
+    </div>
+    <div class="art-grid">
+      <!-- للمطوّر: get_template_part('template-parts/cards/article') × 3 -->
+      <article class="art-card sr d1">
+        <div class="art-thumb">
+          <!-- للمطوّر: the_post_thumbnail('medium_large') -->
+          <span class="art-cat">[ التصنيف ]</span>
+        </div>
+        <div class="art-body">
+          <div class="art-meta"><span>[ التاريخ ]</span><span class="d"></span><span>[ وقت القراءة ]</span></div>
+          <h3>[ عنوان المقال الأول — يُجلب من WordPress ]</h3>
+          <p>[ مقتطف المقال — get_the_excerpt() ]</p>
+          <a href="#" class="art-read">اقرأ المقال<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transform:scaleX(-1)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+      <article class="art-card sr d2">
+        <div class="art-thumb"><span class="art-cat">[ التصنيف ]</span></div>
+        <div class="art-body">
+          <div class="art-meta"><span>[ التاريخ ]</span><span class="d"></span><span>[ وقت القراءة ]</span></div>
+          <h3>[ عنوان المقال الثاني — يُجلب من WordPress ]</h3>
+          <p>[ مقتطف المقال — get_the_excerpt() ]</p>
+          <a href="#" class="art-read">اقرأ المقال<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transform:scaleX(-1)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+      <article class="art-card sr d3">
+        <div class="art-thumb"><span class="art-cat">[ التصنيف ]</span></div>
+        <div class="art-body">
+          <div class="art-meta"><span>[ التاريخ ]</span><span class="d"></span><span>[ وقت القراءة ]</span></div>
+          <h3>[ عنوان المقال الثالث — يُجلب من WordPress ]</h3>
+          <p>[ مقتطف المقال — get_the_excerpt() ]</p>
+          <a href="#" class="art-read">اقرأ المقال<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="transform:scaleX(-1)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FINAL CTA
+     ═══════════════════════════════════════════════════════════ -->
+<section id="cta-sec">
+  <div class="cta-r cta-r1" aria-hidden="true"></div>
+  <div class="cta-r cta-r2" aria-hidden="true"></div>
+  <div class="cta-r cta-r3" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="cta-body sr">
+      <p class="tag d">الخطوة التالية</p>
+      <h2>30 دقيقة قد تغيّر<br>مسار موقعك تماماً</h2>
+      <p>استشارة مجانية مع أحد متخصصينا — نشخّص وضعك الفعلي ونخبرك بصراحة ما الخطوة الصحيحة.</p>
+      <div class="cta-btns">
+        <a href="/contact" class="btn btn-w lg">احجز استشارتك المجانية<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="tel:XXXXXXXXX" class="btn btn-g lg"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 12 19.79 19.79 0 01.91 3.18 2 2 0 012.9 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>اتصل بنا مباشرةً</a>
+      </div>
+      <div class="cta-pills">
+        <span class="cta-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>بدون أي التزام</span>
+        <span class="cta-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>نرد في يوم عمل</span>
+        <span class="cta-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>إجابتنا صريحة دائماً</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════════ -->
+<footer id="footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <!--
+          للمطوّر: mix-blend-mode:screen على هذا الإصدار يجعل الخلفية السوداء
+          شبه شفافة على الخلفية الداكنة للفوتر. للحصول على نتيجة مثالية،
+          وفّر ملف PNG بخلفية شفافة: /wp-content/themes/seohouse/assets/img/logo-white.png
+        -->
+        <img src="/mnt/user-data/uploads/White.png" alt="سيو هاوس" width="148" height="34">
+        <p>وكالة متخصصة في تحسين محركات البحث وإنشاء المتاجر الإلكترونية. نعمل على بناء حضورك الرقمي بشكل قابل للقياس.</p>
+        <div class="socials">
+          <a href="#" class="soc" aria-label="X"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" class="soc" aria-label="LinkedIn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" class="soc" aria-label="Instagram"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="soc" aria-label="Snapchat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>الخدمات</h4>
+        <ul class="foot-links">
+          <li><a href="/services/seo">تحسين محركات البحث</a></li>
+          <li><a href="/services/web-design">إنشاء وتصميم مواقع</a></li>
+          <li><a href="/services/salla-stores">إنشاء متاجر سلة</a></li>
+          <li><a href="/services/zid-stores">إنشاء متاجر زد</a></li>
+          <li><a href="/services/product-upload">رفع منتجات متاجر</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>خدمات SEO</h4>
+        <ul class="foot-links">
+          <li><a href="/services/seo/shopify">سيو متاجر شوبيفاي</a></li>
+          <li><a href="/services/seo/zid">سيو متاجر زد</a></li>
+          <li><a href="/services/seo/salla">سيو متاجر سلة</a></li>
+          <li><a href="/services/seo/link-building">بناء الباك لينك</a></li>
+          <li><a href="/services/seo/content">كتابة المحتوى</a></li>
+          <li><a href="/services/seo/consulting">استشارات الأداء</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>الشركة</h4>
+        <ul class="foot-links">
+          <li><a href="/about">عن سيو هاوس</a></li>
+          <li><a href="#cases">نتائج الأعمال</a></li>
+          <li><a href="/blog">رؤى ومقالات</a></li>
+          <li><a href="/contact">تواصل معنا</a></li>
+          <li><a href="/faq">الأسئلة الشائعة</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <p>© <span id="yr"></span> سيو هاوس. جميع الحقوق محفوظة.</p>
+      <div class="foot-leg">
+        <a href="/privacy">سياسة الخصوصية</a>
+        <a href="/terms">الشروط والأحكام</a>
+        <a href="/sitemap.xml">خريطة الموقع</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════════════
+     JAVASCRIPT
+     ═══════════════════════════════════════════════════════════ -->
+<script>
+"use strict";
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ── Navbar fill ── */
+(function(){
+  var nav = document.getElementById('nav');
+  function tick(){ nav.classList.toggle('solid', window.scrollY > 44); }
+  window.addEventListener('scroll', tick, {passive:true});
+  tick();
+}());
+
+/* ── Mega menu dropdown ── */
+(function(){
+  var ni  = document.getElementById('svcNi');
+  var btn = document.getElementById('svcBtn');
+  if(!ni||!btn) return;
+  function open(){ ni.classList.add('op'); btn.setAttribute('aria-expanded','true'); }
+  function close(){ ni.classList.remove('op'); btn.setAttribute('aria-expanded','false'); }
+  btn.addEventListener('click', function(e){ e.stopPropagation(); ni.classList.contains('op') ? close() : open(); });
+  document.addEventListener('click', function(e){ if(!ni.contains(e.target)) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+
+  /* Sub-panel switching */
+  var panels = {
+    seoItem:  document.getElementById('seoSub'),
+    webItem:  document.getElementById('webSub'),
+    sallaItem:document.getElementById('sallaSub'),
+    zidItem:  document.getElementById('zidSub'),
+    prodItem: document.getElementById('prodSub')
+  };
+  Object.keys(panels).forEach(function(id){
+    var el = document.getElementById(id);
+    if(!el) return;
+    el.addEventListener('mouseenter', function(){
+      Object.values(panels).forEach(function(p){ p.classList.remove('show'); });
+      document.querySelectorAll('.mega-item').forEach(function(m){ m.classList.remove('active'); });
+      panels[id].classList.add('show');
+      el.classList.add('active');
+    });
+  });
+}());
+
+/* ── Mobile burger ── */
+(function(){
+  var burger = document.getElementById('burger');
+  var mob    = document.getElementById('mobNav');
+  if(!burger||!mob) return;
+  var open = false;
+  burger.addEventListener('click', function(){
+    open = !open;
+    burger.classList.toggle('on', open);
+    burger.setAttribute('aria-expanded', open);
+    mob.setAttribute('aria-hidden', !open);
+    mob.classList.toggle('on', open);
+  });
+  mob.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      open=false; burger.classList.remove('on');
+      burger.setAttribute('aria-expanded','false');
+      mob.setAttribute('aria-hidden','true');
+      mob.classList.remove('on');
+    });
+  });
+}());
+
+/* ── Scroll reveal ── */
+(function(){
+  var els = document.querySelectorAll('.sr');
+  if(!els.length) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.1,rootMargin:'0px 0px -24px 0px'});
+  els.forEach(function(el){ io.observe(el); });
+}());
+
+/* ── Smooth anchor scroll ── */
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('href').slice(1);
+    var t=document.getElementById(id);
+    if(t){ e.preventDefault(); window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-76,behavior:'smooth'}); }
+  });
+});
+
+/* ── Mini calendar ── */
+(function(){
+  var titleEl = document.getElementById('calTitle');
+  var daysEl  = document.getElementById('calDays');
+  var prevBtn = document.getElementById('calPrev');
+  var nextBtn = document.getElementById('calNext');
+  if(!titleEl||!daysEl) return;
+
+  var now     = new Date();
+  var curYear = now.getFullYear();
+  var curMon  = now.getMonth();
+  var today   = now.getDate();
+  var selDay  = null;
+
+  var monthNames = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+
+  function render(){
+    titleEl.textContent = monthNames[curMon] + ' ' + curYear;
+    var first = new Date(curYear, curMon, 1).getDay(); // 0=Sun
+    var days  = new Date(curYear, curMon+1, 0).getDate();
+    daysEl.innerHTML = '';
+    for(var i=0;i<first;i++){
+      var e=document.createElement('div'); e.className='cal-day empty'; e.textContent=''; daysEl.appendChild(e);
+    }
+    for(var d=1;d<=days;d++){
+      var el=document.createElement('div');
+      var cls='cal-day';
+      if(curMon===now.getMonth()&&curYear===now.getFullYear()){
+        if(d<today) cls+=' past';
+        if(d===today) cls+=' today';
+      }
+      if(selDay===d&&curMon===now.getMonth()&&curYear===now.getFullYear()) cls+=' sel';
+      el.className=cls; el.textContent=d;
+      (function(day){
+        el.addEventListener('click',function(){
+          if(el.classList.contains('past')) return;
+          selDay=day;
+          document.querySelectorAll('.cal-day.sel').forEach(function(x){x.classList.remove('sel')});
+          el.classList.add('sel');
+        });
+      })(d);
+      daysEl.appendChild(el);
+    }
+  }
+
+  prevBtn.addEventListener('click',function(){ curMon--; if(curMon<0){curMon=11;curYear--;} render(); });
+  nextBtn.addEventListener('click',function(){ curMon++; if(curMon>11){curMon=0;curYear++;} render(); });
+  render();
+}());
+
+/* ── Time slot selection ── */
+document.querySelectorAll('.ts:not(.taken)').forEach(function(ts){
+  ts.addEventListener('click',function(){
+    document.querySelectorAll('.ts.sel').forEach(function(x){x.classList.remove('sel')});
+    ts.classList.add('sel');
+  });
+});
+
+/* ── Book button ── */
+(function(){
+  var btn = document.getElementById('bookBtn');
+  if(!btn) return;
+  btn.addEventListener('click',function(){
+    var sel  = document.querySelector('.cal-day.sel');
+    var tsel = document.querySelector('.ts.sel');
+    if(!sel||!tsel){
+      btn.textContent = 'اختر التاريخ والوقت أولاً';
+      btn.style.background='rgba(255,255,255,.15)';
+      setTimeout(function(){
+        btn.innerHTML='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> تأكيد الحجز';
+        btn.style.background='';
+      },2000);
+      return;
+    }
+    /*
+      للمطوّر: هنا يتم إرسال الطلب إلى:
+      1) Calendly API: window.open('https://calendly.com/seohouse/30min','_blank')
+      2) أو Google Calendar appointment: window.open('YOUR_BOOKING_URL','_blank')
+      3) أو إرسال form بيانات إلى booking endpoint
+    */
+    btn.textContent = '✓ تم تأكيد طلب الحجز — سنتواصل معك قريباً';
+    btn.style.background='#10b981';
+  });
+}());
+
+/* ── Subtle hero parallax ── */
+(function(){
+  var ga = document.querySelector('.h-glow-a');
+  var gb = document.querySelector('.h-glow-b');
+  if(!ga||!gb) return;
+  var raf;
+  document.addEventListener('mousemove',function(e){
+    if(raf) cancelAnimationFrame(raf);
+    raf=requestAnimationFrame(function(){
+      var x=(e.clientX/window.innerWidth-.5)*18;
+      var y=(e.clientY/window.innerHeight-.5)*18;
+      ga.style.transform='translate('+(x*.45)+'px,'+(y*.45)+'px)';
+      gb.style.transform='translate('+(-x*.35)+'px,'+(-y*.28)+'px)';
+    });
+  },{passive:true});
+}());
+</script>
+
+</body>
+</html>
