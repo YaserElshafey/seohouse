@@ -97,7 +97,8 @@
 .tm-role-badge{position:absolute;bottom:14px;inset-inline-start:14px;background:var(--blue);color:#fff;font-size:10px;font-weight:700;padding:5px 10px;border-radius:5px;letter-spacing:.04em;text-transform:uppercase;z-index:2}
 .tm-body{padding:20px 18px}
 .tm-name{font-size:17px;font-weight:800;color:var(--ink);margin-bottom:4px}
-.tm-role{font-size:12.5px;font-weight:600;color:var(--blue);margin-bottom:10px}
+.tm-role{font-size:12.5px;font-weight:600;color:var(--blue);margin-bottom:4px}
+.tm-expertise{font-size:12px;color:var(--muted);font-weight:500;margin-bottom:10px}
 .tm-bio{font-size:13px;color:var(--muted);line-height:1.72;margin-bottom:14px}
 .tm-tags{display:flex;flex-wrap:wrap;gap:5px}
 .tm-socials{display:flex;gap:7px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
@@ -223,7 +224,7 @@
 
 /* ─ Service page ─ */
 .svc-hero{padding-block:clamp(110px,13vh,150px) clamp(52px,6vh,72px);background:var(--navy);position:relative;overflow:hidden;text-align:center}
-.svc-hero-inner{position:relative;z-index:2;max-width:780px;margin-inline:auto}
+.svc-hero-inner{position:relative;z-index:2;max-width:880px;margin-inline:auto}
 .h-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,.07)}
 .h-stat{text-align:center;padding-inline:14px;border-inline-end:1px solid rgba(255,255,255,.06)}
 .h-stat:last-child{border:none}
@@ -256,6 +257,9 @@
 .lost-ico svg{stroke:#ef4444;width:19px;height:19px}
 .lost-card h3{font-size:16.5px;font-weight:800;color:var(--ink);margin-bottom:8px;position:relative;z-index:1}
 .lost-card p{font-size:13px;color:var(--muted);line-height:1.8;position:relative;z-index:1}
+
+/* ─ SEO service — why commercially ─ */
+.why-com-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 
 /* ─ SEO service — what we do ─ */
 .wwd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
@@ -505,6 +509,7 @@
   .faq-cta-layout{grid-template-columns:1fr}
   .cta-sticky{position:static}
   .rep-layout{grid-template-columns:1fr}
+  .why-com-grid{grid-template-columns:1fr}
   .lost-grid{grid-template-columns:1fr}
   .ss-grid{grid-template-columns:1fr}
   .wwd-grid,.method-grid,.proof-grid{grid-template-columns:repeat(2,1fr)}

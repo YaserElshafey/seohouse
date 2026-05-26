@@ -76,7 +76,7 @@ $faqs       = sh_field( 'service_faqs' );
 <!-- Why SEO Matters Commercially -->
 <section class="sec sec-surface">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center">
+    <div class="why-com-grid">
       <div>
         <div class="sh sr"><span class="tag">لماذا السيو يهم تجارياً</span><h2 class="h2">السيو ليس بنداً في الميزانية —<br>هو خفض في تكلفة العميل</h2><p class="bod" style="margin-top:12px">كل عميل يأتي عبر البحث العضوي يكلّفك أقل من نظيره عبر الإعلان. والأهم — يبقى يأتي حتى بعد توقفك عن الإنفاق.</p></div>
         <div class="chklist sr d1" style="margin-bottom:24px">
@@ -155,19 +155,19 @@ $faqs       = sh_field( 'service_faqs' );
       foreach ( [
           [ 'icon' => '<path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>',
             'title' => 'بناء الباك لينك', 'desc' => 'روابط موثوقة من مواقع ذات سلطة — استراتيجية، ليست شراء روابط عشوائي.',
-            'url' => sh_page_url( 'services/backlinks' ),
+            'url' => sh_page_url( 'services/seo/backlinks' ),
             'items' => [ 'تحليل بروفايل الروابط الحالي والمنافسين', 'روابط تحريرية من مواقع عربية موثوقة', 'Guest Posting باستراتيجية واضحة', 'تقرير شهري بكل رابط ومصدره' ] ],
           [ 'icon' => '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>',
             'title' => 'كتابة المحتوى', 'desc' => 'محتوى عربي مدروس استراتيجياً — يستهدف نية البحث ويُحوّل القارئ.',
-            'url' => sh_page_url( 'services/content' ),
+            'url' => sh_page_url( 'services/seo/content' ),
             'items' => [ 'استراتيجية محتوى مبنية على البيانات', 'مقالات مدونة، صفحات خدمات، أوصاف منتجات', 'محتوى متخصص لكل قطاع', 'كتّاب بشريون — لا اعتماد على AI وحده' ] ],
           [ 'icon' => '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
             'title' => 'استشارات تحليل الأداء', 'desc' => 'نُفسّر أرقام موقعك بلغة تجارية — لتعرف هل وكالتك الحالية تعمل.',
-            'url' => sh_page_url( 'services/consulting' ),
+            'url' => sh_page_url( 'services/seo/consulting' ),
             'items' => [ 'تدقيق سيو شامل وتشخيص الوضع الحالي', 'قراءة Search Console وAnalytics', 'تحليل أداء وكالتك السيو الحالية', 'خطة تحسين قابلة للتنفيذ' ] ],
           [ 'icon' => '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>',
             'title' => 'سيو المتاجر الإلكترونية', 'desc' => 'سيو متخصص للمتاجر — سلة، زد، شوبيفاي، ووكومرس.',
-            'url' => sh_page_url( 'services/seo-stores' ),
+            'url' => sh_page_url( 'services/seo/seo-stores' ),
             'items' => [ 'تحسين صفحات المنتجات والفئات', 'كلمات شرائية بنية شراء عالية', 'معالجة المحتوى المتكرر في المتاجر', 'تقارير ربط الترافيك بالمبيعات' ] ],
       ] as $ss ) :
       ?>

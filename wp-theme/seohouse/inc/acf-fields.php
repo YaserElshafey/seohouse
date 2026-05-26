@@ -152,8 +152,11 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_tm_linkedin',      'label' => 'رابط لينكد إن',      'name' => 'linkedin_url',  'type' => 'url' ],
             [ 'key' => 'field_tm_email',         'label' => 'البريد الإلكتروني',   'name' => 'member_email',  'type' => 'email' ],
             [ 'key' => 'field_tm_skills',        'label' => 'المهارات / التخصصات (تظهر كـ chips)', 'name' => 'skills', 'type' => 'textarea', 'instructions' => 'كل مهارة في سطر منفصل', 'rows' => 4 ],
-            [ 'key' => 'field_tm_avatar_color',  'label' => 'لون خلفية الصورة الرمزية (CSS gradient)', 'name' => 'avatar_color', 'type' => 'text', 'default_value' => 'linear-gradient(140deg,#0b1240,rgba(30,46,245,.25))' ],
-            [ 'key' => 'field_tm_is_visible',    'label' => 'ظاهر في الصفحة؟',   'name' => 'is_visible',    'type' => 'true_false', 'default_value' => 1 ],
+            [ 'key' => 'field_tm_expertise',     'label' => 'سنوات الخبرة / خبرة مختصرة',              'name' => 'expertise',     'type' => 'text', 'placeholder' => 'مثال: 7+ سنوات في سيو المتاجر' ],
+            [ 'key' => 'field_tm_twitter',      'label' => 'رابط تويتر / X',                           'name' => 'twitter_url',   'type' => 'url' ],
+            [ 'key' => 'field_tm_display_order','label' => 'ترتيب العرض (رقم أصغر = يظهر أولاً)',      'name' => 'display_order', 'type' => 'number', 'default_value' => 0, 'min' => 0 ],
+            [ 'key' => 'field_tm_avatar_color', 'label' => 'لون خلفية الصورة الرمزية (CSS gradient)', 'name' => 'avatar_color', 'type' => 'text', 'default_value' => 'linear-gradient(140deg,#0b1240,rgba(30,46,245,.25))' ],
+            [ 'key' => 'field_tm_is_visible',   'label' => 'ظاهر في الصفحة؟',   'name' => 'is_visible',    'type' => 'true_false', 'default_value' => 1 ],
         ],
     ] );
 
