@@ -25,7 +25,7 @@ $faqs       = sh_field( 'service_faqs' );
         <span style="color:rgba(255,255,255,.55)"><?php echo esc_html( $hero_tag ); ?></span>
       </div>
       <div class="h-badge"><span class="h-bdot"></span><?php echo esc_html( $hero_tag ); ?></div>
-      <h1 style="font-size:clamp(34px,5.2vw,64px);font-weight:900;line-height:1.06;letter-spacing:-.03em;color:#fff;margin-bottom:18px"><?php echo wp_kses_post( $hero_title ); ?></h1>
+      <h1 class="svc-hero-h1"><?php echo wp_kses_post( $hero_title ); ?></h1>
       <p style="font-size:clamp(15px,1.55vw,18px);line-height:1.9;color:rgba(255,255,255,.55);max-width:680px;margin-inline:auto;margin-bottom:32px"><?php echo esc_html( $hero_desc ); ?></p>
       <div style="display:flex;gap:11px;justify-content:center;flex-wrap:wrap">
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p lg">

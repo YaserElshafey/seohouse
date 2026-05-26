@@ -32,6 +32,22 @@ if ( $is_platform || $is_seo ) {
 $is_web_platform   = $is_platform && in_array( $parent_slug, [ 'web-design', 'website-design' ], true );
 $is_store_platform = $is_platform && in_array( $parent_slug, [ 'stores', 'ecommerce-stores' ], true );
 $is_seo_group      = $is_seo || $is_web || ( $is_platform && ! $is_web_platform && ! $is_store_platform );
+
+// Default active sub-panel in mega menu: SEO unless on web/stores page
+$default_sub = 1;
+if ( $is_web || ( $is_platform && $is_web_platform ) ) {
+    $default_sub = 2;
+} elseif ( $is_stores || ( $is_platform && $is_store_platform ) ) {
+    $default_sub = 3;
+}
+
+// Blog URL: page_for_posts → blog page slug → fallback path
+$blog_page_id = (int) get_option( 'page_for_posts' );
+$_blog_url = $blog_page_id ? get_permalink( $blog_page_id ) : '';
+if ( ! $_blog_url ) {
+    $_blog_candidate = get_page_by_path( 'blog' );
+    $_blog_url = $_blog_candidate ? get_permalink( $_blog_candidate->ID ) : home_url( '/blog/' );
+}
 ?>
 
 <header id="nav">
@@ -55,7 +71,7 @@ $is_seo_group      = $is_seo || $is_web || ( $is_platform && ! $is_web_platform 
             <div class="mega-body mega-body-wide">
               <nav class="mega-main">
                 <p class="mega-lbl">تحسين محركات البحث</p>
-                <a href="<?php echo esc_url( sh_page_url( 'services/seo' ) ); ?>" class="mi<?php echo $is_seo ? ' act' : ''; ?>" data-sub="sub1">
+                <a href="<?php echo esc_url( sh_page_url( 'services/seo' ) ); ?>" class="mi<?php echo $default_sub === 1 ? ' act' : ''; ?>" data-sub="sub1">
                   <div class="mi-l">
                     <div class="mi-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
                     <span>تحسين محركات البحث</span>
@@ -63,14 +79,14 @@ $is_seo_group      = $is_seo || $is_web || ( $is_platform && ! $is_web_platform 
                   <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
                 </a>
                 <p class="mega-lbl" style="margin-top:10px">إنشاء وتصميم</p>
-                <a href="<?php echo esc_url( sh_page_url( 'services/web-design' ) ); ?>" class="mi<?php echo $is_web || ( $is_platform && $is_web_platform ) ? ' act' : ''; ?>" data-sub="sub2">
+                <a href="<?php echo esc_url( sh_page_url( 'services/web-design' ) ); ?>" class="mi<?php echo $default_sub === 2 ? ' act' : ''; ?>" data-sub="sub2">
                   <div class="mi-l">
                     <div class="mi-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>
                     <span>إنشاء وتصميم مواقع</span>
                   </div>
                   <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
                 </a>
-                <a href="<?php echo esc_url( sh_page_url( 'services/stores' ) ); ?>" class="mi<?php echo $is_stores || ( $is_platform && $is_store_platform ) ? ' act' : ''; ?>" data-sub="sub3">
+                <a href="<?php echo esc_url( sh_page_url( 'services/stores' ) ); ?>" class="mi<?php echo $default_sub === 3 ? ' act' : ''; ?>" data-sub="sub3">
                   <div class="mi-l">
                     <div class="mi-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
                     <span>إنشاء وتصميم متاجر</span>
@@ -86,7 +102,7 @@ $is_seo_group      = $is_seo || $is_web || ( $is_platform && ! $is_web_platform 
               </nav>
 
               <!-- Sub: SEO -->
-              <div class="mega-sub<?php echo $is_seo ? ' show' : ''; ?>" id="sub1">
+              <div class="mega-sub<?php echo $default_sub === 1 ? ' show' : ''; ?>" id="sub1">
                 <p class="mega-sub-lbl">خدمات السيو الفرعية</p>
                 <div class="mega-sub-grid">
                   <a href="<?php echo esc_url( sh_page_url( 'services/seo/stores-seo' ) ); ?>" class="sl"><span class="sl-dot"></span><div><strong>سيو المتاجر الإلكترونية</strong><p>سلة، زد، شوبيفاي، ووكومرس</p></div></a>
@@ -97,7 +113,7 @@ $is_seo_group      = $is_seo || $is_web || ( $is_platform && ! $is_web_platform 
               </div>
 
               <!-- Sub: Web Design -->
-              <div class="mega-sub<?php echo $is_web || ( $is_platform && $is_web_platform ) ? ' show' : ''; ?>" id="sub2">
+              <div class="mega-sub<?php echo $default_sub === 2 ? ' show' : ''; ?>" id="sub2">
                 <p class="mega-sub-lbl">تخصّصات تصميم المواقع</p>
                 <div class="mega-sub-grid">
                   <a href="<?php echo esc_url( sh_page_url( 'services/web-design/wordpress' ) ); ?>" class="sl"><span class="sl-dot"></span><div><strong>تصميم مواقع ووردبريس</strong><p>إدارة محتوى مرنة لمواقع الشركات والتسويق</p></div></a>
@@ -108,7 +124,7 @@ $is_seo_group      = $is_seo || $is_web || ( $is_platform && ! $is_web_platform 
               </div>
 
               <!-- Sub: Stores -->
-              <div class="mega-sub<?php echo $is_stores || ( $is_platform && $is_store_platform ) ? ' show' : ''; ?>" id="sub3">
+              <div class="mega-sub<?php echo $default_sub === 3 ? ' show' : ''; ?>" id="sub3">
                 <p class="mega-sub-lbl">منصّات المتاجر</p>
                 <div class="mega-sub-grid">
                   <a href="<?php echo esc_url( sh_page_url( 'services/stores/shopify' ) ); ?>" class="sl"><span class="sl-dot"></span><div><strong>إنشاء متاجر شوبيفاي</strong><p>تجارة إلكترونية مرنة بمعايير دولية</p></div></a>
@@ -132,7 +148,7 @@ $is_seo_group      = $is_seo || $is_web || ( $is_platform && ! $is_web_platform 
           </div>
         </li>
 
-        <li class="ni"><a href="<?php echo esc_url( get_post_type_archive_link( 'case_study' ) ?: sh_page_url( 'results' ) ); ?>" <?php echo is_post_type_archive( 'case_study' ) || is_page( 'results' ) ? 'class="active"' : ''; ?>>نتائج الأعمال</a></li>
+        <li class="ni"><a href="<?php echo esc_url( sh_page_url( 'results' ) ); ?>" <?php echo is_post_type_archive( 'case_study' ) || is_page( 'results' ) ? 'class="active"' : ''; ?>>نتائج الأعمال</a></li>
         <li class="ni"><a href="<?php echo esc_url( sh_page_url( 'about' ) ); ?>" <?php echo is_page( 'about' ) ? 'class="active"' : ''; ?>>عن الشركة</a></li>
         <li class="ni"><a href="<?php echo esc_url( sh_page_url( 'team' ) ); ?>" <?php echo is_page( 'team' ) ? 'class="active"' : ''; ?>>فريق العمل</a></li>
 
@@ -188,7 +204,7 @@ $is_seo_group      = $is_seo || $is_web || ( $is_platform && ! $is_web_platform 
           </div>
         </li>
 
-        <li class="ni"><a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ) ); ?>" <?php echo is_home() || is_singular( 'post' ) ? 'class="active"' : ''; ?>>المدونة</a></li>
+        <li class="ni"><a href="<?php echo esc_url( $_blog_url ); ?>" <?php echo is_home() || is_singular( 'post' ) ? 'class="active"' : ''; ?>>المدونة</a></li>
         <li class="ni"><a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" <?php echo is_page( 'contact' ) ? 'class="active"' : ''; ?>>اتصل بنا</a></li>
       </ul>
 
@@ -220,11 +236,11 @@ $is_seo_group      = $is_seo || $is_web || ( $is_platform && ! $is_web_platform 
       <a href="<?php echo esc_url( sh_page_url( 'services/stores/zid' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">متاجر زد</a>
       <a href="<?php echo esc_url( sh_page_url( 'services/stores/woocommerce' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">متاجر ووكومرس</a>
       <a href="<?php echo esc_url( sh_page_url( 'services/products' ) ); ?>" class="mob-sub">رفع المنتجات</a>
-      <a href="<?php echo esc_url( get_post_type_archive_link( 'case_study' ) ?: sh_page_url( 'results' ) ); ?>">نتائج الأعمال</a>
+      <a href="<?php echo esc_url( sh_page_url( 'results' ) ); ?>">نتائج الأعمال</a>
       <a href="<?php echo esc_url( sh_page_url( 'about' ) ); ?>">عن الشركة</a>
       <a href="<?php echo esc_url( sh_page_url( 'team' ) ); ?>">فريق العمل</a>
       <a href="<?php echo esc_url( get_post_type_archive_link( 'sector' ) ); ?>">القطاعات</a>
-      <a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ) ); ?>">المدونة</a>
+      <a href="<?php echo esc_url( $_blog_url ); ?>">المدونة</a>
       <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="mob-cta">احجز استشارة مجانية</a>
     </div>
 

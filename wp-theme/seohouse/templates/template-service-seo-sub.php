@@ -31,6 +31,8 @@ switch ( $slug ) {
 				[ 'l' => 'قيمة هذه الزيارات إعلانياً', 'v' => '$1,200+/شهر' ],
 				[ 'l' => 'عمر افتراضي للمقال',          'v' => '3-5 سنوات', 'g' => true ],
 			],
+			'has_ai_vs'    => true,
+			'has_types'    => true,
 			'tactics_tag'  => 'ماذا تشمل الخدمة',
 			'tactics_h2'   => 'أكثر من مجرد كتابة',
 			'tactics_desc' => 'المحتوى الذي ينجح هو نتيجة منظومة كاملة — استراتيجية، تخطيط، بحث، كتابة، وتحسين.',
@@ -88,8 +90,10 @@ switch ( $slug ) {
 				[ 'b' => 'تفهم بنفسك',                        't' => '— لا تعتمد كلياً على ما يقوله المنفّذ' ],
 			],
 			'why_card_type' => 'consulting',
+			'has_who'       => true,
+			'has_del'       => true,
 			'tactics_tag'   => 'أنواع الاستشارات',
-			'tactics_h2'    => '3 أنواع من الاستشارات',
+			'tactics_h2'    => '6 أنواع من الاستشارات',
 			'tactics_desc'  => 'لكل سيناريو نوع استشارة مناسب — اختر ما يخدم وضعك.',
 			'tactics'       => [
 				[ 'n' => '01', 'h' => 'تدقيق سيو شامل',           'd' => 'تحليل كامل لموقعك يكشف المشاكل التقنية، فجوات المحتوى، ضعف الروابط، وفرص التحسين الأكثر تأثيراً.', 'svg' => '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>' ],
@@ -130,6 +134,7 @@ switch ( $slug ) {
 		break;
 
 	case 'seo-stores':
+	case 'stores-seo':
 		$def = [
 			'hero_tag'   => 'سيو المتاجر',
 			'hero_h1'    => 'سيو المتاجر',
@@ -208,6 +213,7 @@ switch ( $slug ) {
 				[ 'l' => 'عمر افتراضي للرابط الجيد',           'v' => 'سنوات', 'g' => true ],
 			],
 			'has_qv'       => true,
+			'has_criteria' => true,
 			'tactics_tag'  => 'منهجياتنا',
 			'tactics_h2'   => 'كيف نبني روابط بشكل طبيعي؟',
 			'tactics_desc' => 'منهجيات راسخة عالمياً، نُكيّفها للسوق العربي والسعودي.',
@@ -381,6 +387,79 @@ $seo_url     = sh_page_url( 'services/seo' );
 </section>
 
 <!-- ═══════════════════════════════════════════════════════════
+     WHO NEEDS THIS — consulting only
+     ═══════════════════════════════════════════════════════════ -->
+<?php if ( ! empty( $def['has_who'] ) ) : ?>
+<section class="sec sec-navy">
+  <div class="wrap">
+    <div class="sh c sr">
+      <span class="tag d">من يحتاج استشارة سيو</span>
+      <h2 class="h2 wh">هل تجد نفسك في إحدى هذه الحالات؟</h2>
+      <p class="bod d">3 سيناريوهات شائعة لأصحاب الأعمال — في كل واحدة منها، ساعة استشارة توفّر عليك ميزانية أشهر.</p>
+    </div>
+    <div class="who-grid sr d1">
+      <div class="who-card">
+        <div class="who-q">السيناريو الأول</div>
+        <h3>"أفكّر في التعاقد مع شركة سيو ولا أعرف كيف أختار"</h3>
+        <p>تتلقّى عروضاً من 3-4 شركات بأرقام مختلفة ووعود متشابهة. كيف تعرف أيّها يستحق فعلاً؟ نُساعدك على فهم الفروقات الحقيقية، الأسئلة التي يجب أن تطرحها، والأرقام التي يجب أن تطلبها.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-q">السيناريو الثاني</div>
+        <h3>"أعمل مع شركة سيو منذ أشهر ولا أرى نتائج واضحة"</h3>
+        <p>تدفع شهرياً، وتستلم تقارير، لكن الزيارات والمبيعات لا ترتفع كما تتوقع. هل المشكلة من الشركة، أم من توقّعاتك، أم من قطاعك؟ نُقدّم لك تقييماً محايداً للوضع.</p>
+      </div>
+      <div class="who-card">
+        <div class="who-q">السيناريو الثالث</div>
+        <h3>"أملك موقعاً وأريد فهم وضعه قبل أي قرار"</h3>
+        <p>قبل أن تستثمر في السيو، تريد أن تعرف بالضبط أين تقف، ما المشاكل، ما الفرص، وأين يجب أن تبدأ. تدقيق احترافي + خارطة طريق = قرارات مدروسة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+
+<!-- ═══════════════════════════════════════════════════════════
+     AI VS STRATEGY — content only
+     ═══════════════════════════════════════════════════════════ -->
+<?php if ( ! empty( $def['has_ai_vs'] ) ) : ?>
+<section class="sec sec-surface">
+  <div class="wrap">
+    <div class="sh c sr">
+      <span class="tag">لماذا نحن وليس الذكاء الاصطناعي</span>
+      <h2 class="h2">المحتوى الذي يحتلّ المراتب الأولى<br>لا يخرج من ChatGPT</h2>
+      <p class="bod">الذكاء الاصطناعي أداة ممتازة كمساعد. لكنه يفتقد لما يجعل المحتوى يبيع: الفهم، الخبرة، والاستراتيجية.</p>
+    </div>
+    <div class="vs-grid">
+      <div class="vs-card vs-bad sr">
+        <span class="vs-tag">المحتوى المُولَّد عشوائياً</span>
+        <h3>لماذا لا يعمل وحده؟</h3>
+        <div class="vs-list">
+          <div class="vs-item"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>لا يفهم نيّة البحث الفعلية للقارئ السعودي/العربي</div>
+          <div class="vs-item"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>محتوى متشابه يُكشف بسهولة من خوارزميات جوجل (E-E-A-T)</div>
+          <div class="vs-item"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>يُكرّر معلومات عامة بلا خبرة قطاعية حقيقية</div>
+          <div class="vs-item"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>لا يفهم سياق منتجك أو خدمتك أو فروقات منافسيك</div>
+          <div class="vs-item"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>لغته رسمية مترجمة، لا تتفاعل مع جمهورك العربي</div>
+          <div class="vs-item"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>لا يُحوّل القارئ إلى عميل — يُعطي معلومات بلا دعوة لإجراء</div>
+        </div>
+      </div>
+      <div class="vs-card vs-good sr d1">
+        <span class="vs-tag">منهجيتنا في كتابة المحتوى</span>
+        <h3>كيف نُقدّم محتوى يعمل فعلاً؟</h3>
+        <div class="vs-list">
+          <div class="vs-item"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>تحليل بحث ونيّة قبل كل مقال — لا نكتب عشوائياً</div>
+          <div class="vs-item"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>دراسة منافسيك في الصفحة الأولى ثم نكتب أفضل منهم</div>
+          <div class="vs-item"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>كتّاب متخصّصون بقطاعك — طب، قانون، تقنية، تجارة</div>
+          <div class="vs-item"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>لغة عربية أصيلة تُخاطب جمهورك السعودي بطريقته</div>
+          <div class="vs-item"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>هيكل سيو متكامل: عناوين، Schema، روابط داخلية</div>
+          <div class="vs-item"><svg viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>كل مقال له هدف تحويل واضح — قارئ يصبح عميلاً</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+
+<!-- ═══════════════════════════════════════════════════════════
      QUALITY vs QUANTITY — backlinks only
      ═══════════════════════════════════════════════════════════ -->
 <?php if ( ! empty( $def['has_qv'] ) ) : ?>
@@ -447,6 +526,75 @@ $seo_url     = sh_page_url( 'services/seo' );
     </div>
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     6 CRITERIA — backlinks only
+     ═══════════════════════════════════════════════════════════ -->
+<?php if ( ! empty( $def['has_criteria'] ) ) : ?>
+<section class="sec sec-navy">
+  <div class="wrap">
+    <div class="sh c sr">
+      <span class="tag d">معايير القبول</span>
+      <h2 class="h2 wh">قبل أن نقبل أي رابط، نتحقّق من 6 معايير</h2>
+      <p class="bod d">إذا فشل الموقع في معيار واحد، نرفضه — حتى لو كانت تكلفته منخفضة.</p>
+    </div>
+    <div class="crit-grid sr d1">
+      <div class="crit-card"><div class="crit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="crit-body"><h3>سلطة الموقع (DR/DA)</h3><p>نستهدف مواقع DR 40+ كقاعدة — ولا نعمل مع مواقع منخفضة السلطة مهما كانت رخيصة.</p></div></div>
+      <div class="crit-card"><div class="crit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg></div><div class="crit-body"><h3>ترافيك عضوي حقيقي</h3><p>الموقع يجب أن يكون له زيارات عضوية فعلية شهرية — لا فقط أرقام DR وهمية.</p></div></div>
+      <div class="crit-card"><div class="crit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4"/></svg></div><div class="crit-body"><h3>ذو صلة بقطاعك</h3><p>رابط من موقع تقني لا يفيد متجر عقارات — نختار مواقع لها علاقة فعلية بمجال نشاطك.</p></div></div>
+      <div class="crit-card"><div class="crit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="crit-body"><h3>محتوى أصيل ومحدّث</h3><p>الموقع ينشر محتوى أصيل بانتظام — لا مواقع مهملة أو محتوى مسروق ومُترجم.</p></div></div>
+      <div class="crit-card"><div class="crit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="crit-body"><h3>بروفايل روابط نظيف</h3><p>نتحقّق من أن المُحيل ليس له تاريخ في spam أو عقوبات سابقة قد تنتقل عدواها لموقعك.</p></div></div>
+      <div class="crit-card"><div class="crit-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="crit-body"><h3>وضع الرابط في المحتوى</h3><p>نُفضّل الروابط داخل المقال (Contextual) على الروابط الجانبية — أكثر طبيعية وفعالية.</p></div></div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TYPES OF CONTENT — content only
+     ═══════════════════════════════════════════════════════════ -->
+<?php if ( ! empty( $def['has_types'] ) ) : ?>
+<section class="sec sec-surface">
+  <div class="wrap">
+    <div class="sh c sr">
+      <span class="tag">أنواع المحتوى</span>
+      <h2 class="h2">نكتب لكل سياق ولكل قطاع</h2>
+      <p class="bod">لكل صفحة في موقعك دور مختلف — والمحتوى يجب أن يفهم هذا الدور.</p>
+    </div>
+    <div class="types-grid">
+      <div class="type-card sr"><div class="type-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div class="type-body"><h3>مقالات المدوّنة المعمّقة</h3><p>مقالات Pillar شاملة تُغطّي موضوعاً بالكامل وتُرتّب لكلمات تنافسية — العمود الفقري لاستراتيجية المحتوى.</p></div></div>
+      <div class="type-card sr d1"><div class="type-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div><div class="type-body"><h3>صفحات الخدمات</h3><p>صفحات تُحوّل الزائر إلى عميل — تُجيب على اعتراضاته، تُبرز فوائدك، وتدفعه للتواصل.</p></div></div>
+      <div class="type-card sr d2"><div class="type-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4"/></svg></div><div class="type-body"><h3>أوصاف منتجات</h3><p>أوصاف فريدة لكل منتج — تتجنّب المحتوى المتكرر وتُبرز قيمة المنتج للمشتري.</p></div></div>
+      <div class="type-card sr d3"><div class="type-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><div class="type-body"><h3>أدلّة ومحتوى تعليمي</h3><p>محتوى يُجيب على أسئلة جمهورك، يبني خبرتك، ويجلب زيارات طويلة الأمد لموقعك.</p></div></div>
+      <div class="type-card sr"><div class="type-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div><div class="type-body"><h3>صفحات هبوط (Landing Pages)</h3><p>محتوى مبني بمنهجية CRO — كل كلمة لها هدف تحويل واضح من زائر الإعلان إلى ليد.</p></div></div>
+      <div class="type-card sr d1"><div class="type-card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div><div class="type-body"><h3>محتوى محلي / GMB</h3><p>محتوى لصفحات Google Business، أوصاف فروع، ومحتوى محلي يستهدف "خدمة + مدينة".</p></div></div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DELIVERABLES — consulting only
+     ═══════════════════════════════════════════════════════════ -->
+<?php if ( ! empty( $def['has_del'] ) ) : ?>
+<section class="sec sec-navy">
+  <div class="wrap">
+    <div class="sh c sr">
+      <span class="tag d">المخرجات</span>
+      <h2 class="h2 wh">ماذا تستلم بعد الاستشارة؟</h2>
+      <p class="bod d">الاستشارة ليست محادثة شفهية تنتهي بانتهاء الجلسة — بل مخرجات موثّقة تستخدمها في كل قرار سيو قادم.</p>
+    </div>
+    <div class="del-grid sr d1">
+      <div class="del-item"><div class="del-num">1</div><div class="del-body"><h3>تقرير تدقيق مكتوب</h3><p>وثيقة بكل المشاكل، الفجوات، والفرص — مرتّبة حسب التأثير على عملك. تستخدمه لاحقاً مع أي فريق تنفيذ.</p></div></div>
+      <div class="del-item"><div class="del-num">2</div><div class="del-body"><h3>خطة أولويات تنفيذية</h3><p>قائمة محدّدة بأهم المهام التي يجب البدء بها، مرتّبة حسب الأهمية وعائد الاستثمار المتوقّع لكل مهمة.</p></div></div>
+      <div class="del-item"><div class="del-num">3</div><div class="del-body"><h3>تحليل المنافسين</h3><p>كيف يتفوّق عليك منافسوك بالضبط؟ ما الكلمات التي يحتلون بها المراتب وأنت لا؟ ما حجم استثمارهم في السيو تقريباً؟</p></div></div>
+      <div class="del-item"><div class="del-num">4</div><div class="del-body"><h3>توصية بالميزانية المناسبة</h3><p>كم تحتاج فعلياً للوصول للنتيجة المرجوة؟ هل ميزانيتك الحالية مبالغ بها أم ناقصة؟ توصية محايدة بدون تحيّز.</p></div></div>
+      <div class="del-item"><div class="del-num">5</div><div class="del-body"><h3>قائمة أسئلة لشركتك / فريقك</h3><p>الأسئلة التي يجب طرحها على شركة السيو في الاجتماع القادم — تكشف بسهولة جودة فهمها لقطاعك واحترافيتها.</p></div></div>
+      <div class="del-item"><div class="del-num">6</div><div class="del-body"><h3>جلسة عملية مباشرة</h3><p>جلسة عبر زووم لمناقشة التقرير، الإجابة على كل أسئلتك، ومساعدتك على اتّخاذ قرار واثق وواضح.</p></div></div>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
 
 <!-- ═══════════════════════════════════════════════════════════
      PROCESS — 5-step horizontal
