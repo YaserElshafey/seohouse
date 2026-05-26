@@ -1,35 +1,111 @@
 <?php
 /**
  * Template Name: Service — Platform Page
- * Used for: WordPress, Shopify, Salla, Zid, WooCommerce, Webflow, React/Next, Custom Dev
+ * Used for: Salla, Zid, Shopify, WooCommerce, WordPress, Webflow, React/Next, Custom Dev
  */
 get_header();
 
-$hero_tag     = sh_field( 'service_hero_tag' );
-$hero_title   = sh_field( 'service_hero_title' );
-$hero_em      = sh_field( 'service_hero_em' );
-$hero_desc    = sh_field( 'service_hero_desc' );
+$hero_tag      = sh_field( 'service_hero_tag' );
+$hero_title    = sh_field( 'service_hero_title' );
+$hero_em       = sh_field( 'service_hero_em' );
+$hero_desc     = sh_field( 'service_hero_desc' );
 $platform_logo = sh_field( 'service_platform_logo' );
-$features     = sh_field( 'service_features' );
-$steps        = sh_field( 'service_steps' );
-$faqs         = sh_field( 'service_faqs' );
+$dot_color     = sh_field( 'service_platform_color' ) ?: '#1e2ef5';
+$emoji         = sh_field( 'service_platform_emoji' )  ?: '🚀';
+$why_title     = sh_field( 'service_why_title' );
+$why_desc      = sh_field( 'service_why_desc' );
+$why_quote     = sh_field( 'service_why_quote' );
+$features      = sh_field( 'service_features' );
+$faqs          = sh_field( 'service_faqs' );
 
 $display_title = $hero_title ?: get_the_title();
-$display_tag   = $hero_tag  ?: get_the_title();
-$display_desc  = $hero_desc ?: get_the_excerpt();
+$display_tag   = $hero_tag   ?: get_the_title();
+$display_desc  = $hero_desc  ?: get_the_excerpt();
 
-// Parent breadcrumb — detect if stores or web design based on tag
-$is_stores = in_array( strtolower( $display_tag ), [ 'شوبيفاي', 'سلة', 'زد', 'ووكومرس', 'shopify', 'salla', 'zid', 'woocommerce' ], true );
+// Detect parent section for breadcrumb
+$is_stores = in_array( strtolower( $display_tag ), [
+    'شوبيفاي', 'سلة', 'زد', 'ووكومرس', 'shopify', 'salla', 'zid', 'woocommerce',
+], true );
 $parent_label = $is_stores ? 'إنشاء وتصميم متاجر' : 'إنشاء وتصميم مواقع';
 $parent_url   = $is_stores ? sh_page_url( 'services/stores' ) : sh_page_url( 'services/web-design' );
+
+// Fallback when-to-use items
+$default_when = [
+    [ 'title' => 'مشروعك يستهدف العملاء المحليين',        'desc' => 'هذه المنصة مصمّمة لخدمة السوق المحلي بكل متطلباته.' ],
+    [ 'title' => 'تريد إطلاقاً سريعاً بتكلفة محسوبة',     'desc' => 'باقات مناسبة للمشاريع الناشئة والأعمال المتوسطة على حد سواء.' ],
+    [ 'title' => 'تحتاج دعماً متخصصاً ومتجاوباً',          'desc' => 'فريق متخصص يتحدث لغتك ويفهم بيئة عملك المحلية.' ],
+    [ 'title' => 'تبحث عن تكامل مع أدوات العمل الحالية',   'desc' => 'ربط سلس مع بوابات الدفع والشحن وأنظمة المحاسبة المحلية.' ],
+];
+$when_items = ! empty( $features ) ? $features : $default_when;
+
+// Default deliverables
+$deliverables = [
+    [
+        'title' => 'إعداد المنصة الكامل',
+        'desc'  => 'تهيئة المنصة من الصفر — اشتراكات، نطاقات، SSL، والإعدادات الأساسية.',
+        'icon'  => '<path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/>',
+    ],
+    [
+        'title' => 'تصميم احترافي مخصص',
+        'desc'  => 'هوية بصرية مميزة، تخصيص كامل للقالب، وتجربة مستخدم سلسة.',
+        'icon'  => '<path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/>',
+    ],
+    [
+        'title' => 'ربط بوابات الدفع',
+        'desc'  => 'مدى، Apple Pay، Tabby، Tamara، STC Pay — كل طرق الدفع التي يستخدمها عملاؤك.',
+        'icon'  => '<path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/>',
+    ],
+    [
+        'title' => 'تحسين السرعة والأداء',
+        'desc'  => 'أوقات تحميل سريعة تُحسّن تجربة المستخدم وترفع ترتيبك في محركات البحث.',
+        'icon'  => '<path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/>',
+    ],
+    [
+        'title' => 'تهيئة السيو التقني',
+        'desc'  => 'عناوين، أوصاف، Schema، روابط داخلية — كل ما تحتاجه لبدء الظهور في جوجل.',
+        'icon'  => '<path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/>',
+    ],
+    [
+        'title' => 'تدريب وتسليم كامل',
+        'desc'  => 'تدريب فريقك على إدارة المنصة — إضافة محتوى، متابعة الطلبات، والتقارير.',
+        'icon'  => '<path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/>',
+    ],
+];
+
+// Default FAQs
+$default_faqs = [
+    [
+        'question' => 'هل هذه المنصة تناسب مشروعي؟',
+        'answer'   => 'نجري تحليلاً مجانياً لاحتياجاتك قبل أي توصية. احجز استشارة ونحدد معاً الأنسب لك.',
+    ],
+    [
+        'question' => 'كم يستغرق إعداد المشروع؟',
+        'answer'   => 'معظم المشاريع تنتهي خلال 2–4 أسابيع حسب الحجم والتعقيد. نُحدد جدولاً واضحاً منذ البداية.',
+    ],
+    [
+        'question' => 'هل يشمل التسليم التدريب على الإدارة؟',
+        'answer'   => 'نعم، نُقدّم جلسة تدريبية كاملة لفريقك حتى تتمكن من إدارة المشروع باستقلالية.',
+    ],
+    [
+        'question' => 'ماذا يحدث بعد إطلاق المشروع؟',
+        'answer'   => 'نُقدّم دعماً فنياً لمدة شهر بعد الإطلاق، ويمكنك الاشتراك في باقة الصيانة الشهرية.',
+    ],
+];
+$faq_items = ! empty( $faqs ) ? $faqs : $default_faqs;
+
+$why_h2  = $why_title ?: 'لماذا ' . $display_tag . ' هو الخيار الصحيح؟';
+$why_p   = $why_desc  ?: 'نساعدك في الاستفادة القصوى من هذه المنصة — من الإعداد الأول حتى النتائج الفعلية.';
+$why_q   = $why_quote ?: '"الأداة الصحيحة في يد فريق محترف = نتائج تستحق الاستثمار"';
 ?>
 
-<!-- Hero -->
-<section class="svc-hero">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;pointer-events:none"></div>
+<!-- Hero ─────────────────────────────────────────────── -->
+<section class="svc-hero" style="text-align:center">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,#000 10%,transparent 75%);pointer-events:none"></div>
   <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-start:-200px;bottom:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(30,46,245,.22),transparent 65%)"></div>
+  <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-end:-100px;top:0;width:480px;height:480px;background:radial-gradient(circle,<?php echo esc_attr( $dot_color ); ?>22,transparent 65%)"></div>
   <div class="wrap">
-    <div class="svc-hero-inner">
+    <div style="position:relative;z-index:2;max-width:820px;margin-inline:auto">
+
       <div class="breadcrumb" style="justify-content:center;margin-bottom:22px">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">الرئيسية</a>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
@@ -38,13 +114,14 @@ $parent_url   = $is_stores ? sh_page_url( 'services/stores' ) : sh_page_url( 'se
         <span style="color:rgba(255,255,255,.55)"><?php echo esc_html( $display_tag ); ?></span>
       </div>
 
+      <div class="acc-badge">
+        <span class="dot" style="background:<?php echo esc_attr( $dot_color ); ?>;box-shadow:0 0 8px <?php echo esc_attr( $dot_color ); ?>"></span>
+        <?php echo esc_html( $display_tag ); ?>
+      </div>
+
       <?php if ( ! empty( $platform_logo['url'] ) ) : ?>
-        <div style="margin-bottom:24px;display:flex;justify-content:center">
+        <div style="margin-bottom:22px;display:flex;justify-content:center">
           <img src="<?php echo esc_url( $platform_logo['url'] ); ?>" alt="<?php echo esc_attr( $display_tag ); ?>" style="height:52px;width:auto;object-fit:contain;filter:brightness(0) invert(1)">
-        </div>
-      <?php else : ?>
-        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(123,144,255,.14);border:1px solid rgba(123,144,255,.25);border-radius:50px;padding:7px 16px;font-size:11.5px;font-weight:700;color:rgba(255,255,255,.78);margin-bottom:22px">
-          <?php echo esc_html( $display_tag ); ?>
         </div>
       <?php endif; ?>
 
@@ -55,8 +132,10 @@ $parent_url   = $is_stores ? sh_page_url( 'services/stores' ) : sh_page_url( 'se
           <?php echo wp_kses_post( $display_title ); ?>
         <?php endif; ?>
       </h1>
+
       <p style="font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.6);max-width:680px;margin-inline:auto;margin-bottom:30px"><?php echo esc_html( $display_desc ); ?></p>
-      <div style="display:flex;gap:11px;justify-content:center;flex-wrap:wrap">
+
+      <div class="pbtns">
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p lg">احجز استشارة مجانية</a>
         <a href="<?php echo esc_url( $parent_url ); ?>" class="btn btn-g lg"><?php echo esc_html( $parent_label ); ?></a>
       </div>
@@ -64,76 +143,92 @@ $parent_url   = $is_stores ? sh_page_url( 'services/stores' ) : sh_page_url( 'se
   </div>
 </section>
 
-<!-- Why / Page content (WP editor) -->
-<?php
-while ( have_posts() ) : the_post();
-    $editor_content = get_the_content();
-    if ( trim( wp_strip_all_tags( $editor_content ) ) ) :
-?>
+<!-- Why ─────────────────────────────────────────────── -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div style="max-width:780px;margin-inline:auto">
-      <div class="post-content"><?php the_content(); ?></div>
+    <div class="why-grid">
+      <div class="why-side sr">
+        <span class="tag" style="margin-bottom:12px">لماذا <?php echo esc_html( $display_tag ); ?></span>
+        <h2 style="font-size:clamp(24px,3.2vw,38px);font-weight:900;line-height:1.18;letter-spacing:-.025em;color:var(--ink);margin-bottom:18px"><?php echo esc_html( $why_h2 ); ?></h2>
+        <p class="bod" style="margin-bottom:20px"><?php echo esc_html( $why_p ); ?></p>
+        <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p">احجز استشارة مجانية</a>
+      </div>
+      <div class="why-vis sr d1" style="--accent:<?php echo esc_attr( $dot_color ); ?>">
+        <div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,<?php echo esc_attr( $dot_color ); ?>33,transparent 60%);pointer-events:none"></div>
+        <div class="why-emoji"><?php echo esc_html( $emoji ); ?></div>
+        <div class="why-quote"><?php echo esc_html( $why_q ); ?></div>
+      </div>
     </div>
   </div>
 </section>
-<?php endif; endwhile; ?>
 
-<!-- Features grid -->
-<?php if ( ! empty( $features ) ) : ?>
+<!-- When to use ─────────────────────────────────────── -->
 <section class="sec sec-surface">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">ما نُقدّمه</span><h2 class="h2">ما الذي تحصل عليه</h2></div>
-    <div class="features-grid">
-      <?php foreach ( $features as $idx => $feat ) :
-          $dc = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ][ $idx % 6 ];
+    <div class="sh c sr">
+      <span class="tag">متى <?php echo esc_html( $display_tag ); ?> هو الخيار</span>
+      <h2 class="h2"><?php echo esc_attr( count( $when_items ) ); ?> حالات تتفوّق فيها</h2>
+      <p class="bod">لو وجدت نفسك في أيٍّ من هذه الحالات، <?php echo esc_html( $display_tag ); ?> هو الاختيار الأمثل لمشروعك.</p>
+    </div>
+    <div class="when-grid">
+      <?php foreach ( $when_items as $i => $item ) :
+          $dc = [ '', 'd1', 'd2', 'd3' ][ $i % 4 ];
       ?>
-      <div class="feat-card sr <?php echo esc_attr( $dc ); ?>">
-        <div class="ico-box" style="margin-bottom:14px">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg>
+      <div class="when-card sr <?php echo esc_attr( $dc ); ?>">
+        <div class="when-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
-        <h3><?php echo esc_html( $feat['title'] ?? '' ); ?></h3>
-        <p><?php echo esc_html( $feat['desc'] ?? '' ); ?></p>
+        <div class="when-body">
+          <h3><?php echo esc_html( $item['title'] ?? '' ); ?></h3>
+          <p><?php echo esc_html( $item['desc'] ?? '' ); ?></p>
+        </div>
       </div>
       <?php endforeach; ?>
     </div>
   </div>
 </section>
-<?php endif; ?>
 
-<!-- Process steps -->
-<?php if ( ! empty( $steps ) ) : ?>
+<!-- What we deliver ─────────────────────────────────── -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div class="sh sr"><span class="tag">خطوات العمل</span><h2 class="h2">كيف نبني مشروعك</h2></div>
-    <div class="steps-list">
-      <?php foreach ( $steps as $idx => $step ) : ?>
-      <div class="step-item sr <?php echo ( $idx % 3 === 1 ) ? 'd1' : ( ( $idx % 3 === 2 ) ? 'd2' : '' ); ?>">
-        <div class="step-num"><?php echo str_pad( $idx + 1, 2, '0', STR_PAD_LEFT ); ?></div>
-        <div class="step-body">
-          <h3><?php echo esc_html( $step['title'] ?? '' ); ?></h3>
-          <p><?php echo esc_html( $step['desc'] ?? '' ); ?></p>
+    <div class="sh c sr">
+      <span class="tag">ماذا نقدّم</span>
+      <h2 class="h2">خدمة <?php echo esc_html( $display_tag ); ?> الكاملة</h2>
+      <p class="bod">من تخطيط الهيكل حتى التسليم والدعم — كل خطوة بإتقان.</p>
+    </div>
+    <div class="serv-grid">
+      <?php foreach ( $deliverables as $i => $card ) :
+          $dc = [ '', 'd1', 'd2', 'd3', 'd1', 'd2' ][ $i % 6 ];
+      ?>
+      <div class="serv-card sr <?php echo esc_attr( $dc ); ?>">
+        <div class="serv-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $card['icon']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></svg>
         </div>
+        <h3><?php echo esc_html( $card['title'] ); ?></h3>
+        <p><?php echo esc_html( $card['desc'] ); ?></p>
       </div>
       <?php endforeach; ?>
     </div>
   </div>
 </section>
-<?php endif; ?>
 
-<!-- FAQs -->
-<?php if ( ! empty( $faqs ) ) : ?>
-<section class="sec sec-surface">
+<!-- FAQ ─────────────────────────────────────────────── -->
+<section class="sec sec-off">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:5fr 4fr;gap:48px;align-items:start">
+    <div class="faq-cta-layout">
       <div>
-        <div class="sh sr"><span class="tag">أسئلة شائعة</span><h2 class="h2">أسئلة حول <?php echo esc_html( $display_tag ); ?></h2></div>
+        <div class="sh sr">
+          <span class="tag">الأسئلة الشائعة</span>
+          <h2 class="h2">أسئلة عن <?php echo esc_html( $display_tag ); ?></h2>
+        </div>
         <div class="faq-list sr d1">
-          <?php foreach ( $faqs as $faq ) : ?>
+          <?php foreach ( $faq_items as $faq ) : ?>
           <div class="faq-item">
             <div class="faq-q">
               <span><?php echo esc_html( $faq['question'] ?? '' ); ?></span>
-              <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+              <div class="faq-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </div>
             </div>
             <div class="faq-a">
               <div class="faq-a-inner"><?php echo esc_html( $faq['answer'] ?? '' ); ?></div>
@@ -142,26 +237,28 @@ while ( have_posts() ) : the_post();
           <?php endforeach; ?>
         </div>
       </div>
-      <div class="sr d2" style="position:sticky;top:86px">
-        <div style="background:var(--navy-2);border-radius:var(--r4);padding:28px;position:relative;overflow:hidden">
-          <div style="position:absolute;inset-inline-end:-30px;top:-30px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.25),transparent 70%)"></div>
-          <div style="position:relative;z-index:1">
-            <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:8px">هل هذا هو اختيارك؟</div>
-            <p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:18px">احجز استشارة مجانية ونحدد معاً أفضل خيار لمشروعك.</p>
-            <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p" style="width:100%;justify-content:center">استشارة مجانية</a>
+
+      <div class="cta-sticky">
+        <div class="cta-side-card sr d1">
+          <span class="tag d" style="position:relative;z-index:1;margin-bottom:10px">ابدأ الآن</span>
+          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1">جاهز لإطلاق مشروعك<br>على <?php echo esc_html( $display_tag ); ?>؟</h3>
+          <p style="font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:22px;position:relative;z-index:1">احجز استشارة مجانية ولنناقش متطلباتك وعرض السعر المناسب.</p>
+          <div class="chklist" style="margin-bottom:22px">
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>تحليل احتياجاتك بدقّة</div>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>عرض سعر شفّاف</div>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>بدون أي التزام</div>
           </div>
+          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p" style="width:100%;justify-content:center;position:relative;z-index:1">احجز استشارة مجانية</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<?php endif; ?>
 
 <?php
 get_template_part( 'template-parts/layout/cta-banner', null, [
     'tag'   => 'ابدأ الآن',
-    'title' => 'جاهز لبناء مشروعك؟',
+    'title' => 'جاهز لبناء مشروعك على ' . $display_tag . '؟',
 ] );
-?>
 
-<?php get_footer(); ?>
+get_footer();
