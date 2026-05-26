@@ -4,9 +4,9 @@
  */
 get_header();
 
-$hero_tag   = sh_field( 'service_hero_tag' ) ?: 'تحسين محركات البحث';
+$hero_tag  = sh_field( 'service_hero_tag' )  ?: 'تحسين محركات البحث';
 $hero_title = sh_field( 'service_hero_title' ) ?: 'شركة <em>تحسين محركات البحث</em><br>التي تُترجم البحث إلى مبيعات';
-$hero_desc  = sh_field( 'service_hero_desc' ) ?: 'عملاؤك يبحثون عنك على جوجل اليوم — السؤال هو: هل يجدونك؟ نُحوّل الزيارات العضوية إلى ليدز ومبيعات حقيقية.';
+$hero_desc  = sh_field( 'service_hero_desc' )  ?: 'عملاؤك يبحثون عنك على جوجل اليوم — السؤال هو: هل يجدونك؟ نُحوّل الزيارات العضوية إلى ليدز ومبيعات حقيقية.';
 $features   = sh_field( 'service_features' );
 $steps      = sh_field( 'service_steps' );
 $faqs       = sh_field( 'service_faqs' );
@@ -14,7 +14,7 @@ $faqs       = sh_field( 'service_faqs' );
 
 <!-- Hero -->
 <section class="svc-hero">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;pointer-events:none"></div>
+  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,#000 10%,transparent 75%);pointer-events:none"></div>
   <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-start:-200px;bottom:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(30,46,245,.22),transparent 65%)"></div>
   <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-end:-100px;top:0;width:480px;height:480px;background:radial-gradient(circle,rgba(30,46,245,.12),transparent 65%)"></div>
   <div class="wrap">
@@ -24,14 +24,14 @@ $faqs       = sh_field( 'service_faqs' );
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
         <span style="color:rgba(255,255,255,.55)"><?php echo esc_html( $hero_tag ); ?></span>
       </div>
-      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(30,46,245,.16);border:1px solid rgba(30,46,245,.28);border-radius:50px;padding:7px 16px;font-size:11.5px;font-weight:700;color:rgba(255,255,255,.7);margin-bottom:24px">
-        <span style="width:6px;height:6px;border-radius:50%;background:var(--green);animation:lp 2s ease-in-out infinite;flex-shrink:0"></span>
-        <?php echo esc_html( $hero_tag ); ?>
-      </div>
+      <div class="h-badge"><span class="h-bdot"></span><?php echo esc_html( $hero_tag ); ?></div>
       <h1 style="font-size:clamp(34px,5.2vw,64px);font-weight:900;line-height:1.06;letter-spacing:-.03em;color:#fff;margin-bottom:18px"><?php echo wp_kses_post( $hero_title ); ?></h1>
       <p style="font-size:clamp(15px,1.55vw,18px);line-height:1.9;color:rgba(255,255,255,.55);max-width:680px;margin-inline:auto;margin-bottom:32px"><?php echo esc_html( $hero_desc ); ?></p>
       <div style="display:flex;gap:11px;justify-content:center;flex-wrap:wrap">
-        <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p lg">احجز استشارة مجانية — 30 دقيقة</a>
+        <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p lg">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          احجز استشارة مجانية — 30 دقيقة
+        </a>
         <a href="#sub-services" class="btn btn-g lg">خدماتنا</a>
       </div>
       <div class="h-stats">
@@ -44,7 +44,36 @@ $faqs       = sh_field( 'service_faqs' );
   </div>
 </section>
 
-<!-- Why SEO matters commercially -->
+<!-- Lost Opportunities -->
+<section class="sec sec-white">
+  <div class="wrap">
+    <div class="sh c sr"><span class="tag">الفرص الضائعة</span><h2 class="h2">كل يوم يبحث عملاؤك — وكل يوم تخسر أنت</h2><p class="bod">إذا كان موقعك لا يظهر في الصفحة الأولى، فأنت لا تخسر زيارة فقط — أنت تخسر طلباً وعرض سعر وعميلاً يذهب لمنافسك.</p></div>
+    <div class="lost-grid">
+      <div class="lost-card sr">
+        <div class="lost-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M8 11h6"/></svg></div>
+        <h3>طلب بحث لا يصل إليك</h3>
+        <p>كل شهر آلاف الأشخاص يبحثون عن خدمتك في جوجل. إذا لم يكن موقعك في النتائج الأولى، ذهب الطلب إلى منافس آخر.</p>
+      </div>
+      <div class="lost-card sr d1">
+        <div class="lost-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <h3>ميزانية إعلانية تتبخّر</h3>
+        <p>تنفق على Google Ads وميتا — وحين تتوقف عن الدفع، تتوقف الزيارات. السيو يبني أصلاً يستمر في جلب العملاء بدون نزيف يومي.</p>
+      </div>
+      <div class="lost-card sr d2">
+        <div class="lost-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <h3>ليدز قليلة الجودة</h3>
+        <p>الزيارات العضوية تأتي من أشخاص يبحثون فعلاً عن خدمتك — عملاء جاهزون بنية شراء حقيقية.</p>
+      </div>
+      <div class="lost-card sr d3">
+        <div class="lost-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <h3>قرارات مبنية على الحدس</h3>
+        <p>بدون تقارير ذكية تتخذ قرارات بناءً على شعور لا أرقام. تقاريرنا تربط البحث بالليدز والمبيعات — لتقرر بعقل.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why SEO Matters Commercially -->
 <section class="sec sec-surface">
   <div class="wrap">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center">
@@ -52,8 +81,8 @@ $faqs       = sh_field( 'service_faqs' );
         <div class="sh sr"><span class="tag">لماذا السيو يهم تجارياً</span><h2 class="h2">السيو ليس بنداً في الميزانية —<br>هو خفض في تكلفة العميل</h2><p class="bod" style="margin-top:12px">كل عميل يأتي عبر البحث العضوي يكلّفك أقل من نظيره عبر الإعلان. والأهم — يبقى يأتي حتى بعد توقفك عن الإنفاق.</p></div>
         <div class="chklist sr d1" style="margin-bottom:24px">
           <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>تكلفة عميل أقل</strong> — كلما نمت الزيارات العضوية، انخفض اعتمادك على الإعلانات</div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>عملاء بنية شراء أعلى</strong> — الباحث في جوجل لديه احتياج</div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>أصل تجاري متراكم</strong> — كل شهر يبني على السابق</div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>عملاء بنية شراء أعلى</strong> — الباحث في جوجل لديه احتياج حقيقي</div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>أصل تجاري متراكم</strong> — كل شهر يبني على السابق، الإعلان يعود للصفر</div>
           <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>مصداقية تلقائية</strong> — الظهور العضوي يبني ثقة لا يبنيها الإعلان</div>
         </div>
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p sr d2">احجز استشارة مجانية</a>
@@ -64,12 +93,12 @@ $faqs       = sh_field( 'service_faqs' );
           <div style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:20px;position:relative;z-index:1">تأثير السيو على مؤشرات عملك</div>
           <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:14px">
             <?php
-            $impacts = [
+            foreach ( [
                 [ 'label' => 'تكلفة العميل (CAC)', 'from' => 'ر.س عالية', 'to' => '↓ 40%' ],
-                [ 'label' => 'الليدز الشهرية', 'from' => 'قليلة', 'to' => '↑ 3x' ],
-                [ 'label' => 'الاعتماد على Ads', 'from' => '100%', 'to' => '↓ 50%' ],
-            ];
-            foreach ( $impacts as $imp ) :
+                [ 'label' => 'الليدز الشهرية',     'from' => 'قليلة',      'to' => '↑ 3x'  ],
+                [ 'label' => 'الاعتماد على Ads',   'from' => '100%',       'to' => '↓ 50%' ],
+                [ 'label' => 'قيمة العميل (LTV)',  'from' => 'عادية',      'to' => '↑ 2x'  ],
+            ] as $imp ) :
             ?>
             <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
               <strong style="font-size:13.5px;font-weight:700;color:rgba(255,255,255,.8)"><?php echo esc_html( $imp['label'] ); ?></strong>
@@ -86,44 +115,33 @@ $faqs       = sh_field( 'service_faqs' );
   </div>
 </section>
 
-<!-- What we do (features grid) -->
+<!-- What We Do -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">ماذا نفعل بالضبط</span><h2 class="h2">ستة محاور تنفيذية تشكّل خدمة السيو</h2></div>
-    <div class="features-grid">
-      <?php if ( ! empty( $features ) ) :
-          foreach ( $features as $idx => $feat ) :
-              $dc = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ][ $idx % 6 ];
+    <div class="sh c sr"><span class="tag">ماذا نفعل بالضبط</span><h2 class="h2">ستة محاور تنفيذية تشكّل خدمة السيو</h2><p class="bod">السيو ليس مهمة واحدة — هو منظومة من ستة محاور كل واحد منها يدعم الآخر.</p></div>
+    <div class="wwd-grid">
+      <?php
+      $wwd_defaults = [
+          [ 'n' => '01', 'title' => 'تحليل تقني عميق',     'desc' => 'فحص بنية الموقع، السرعة، الزحف، Core Web Vitals — نكشف ما يُعيق ترتيبك.', 'svg' => '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' ],
+          [ 'n' => '02', 'title' => 'بحث الكلمات الذكي',   'desc' => 'الكلمات التي يبحث بها عملاؤك الجادون — لا الكلمات العامة الواسعة.', 'svg' => '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>' ],
+          [ 'n' => '03', 'title' => 'تحسين الصفحات',        'desc' => 'عناوين، أوصاف، روابط داخلية، بيانات هيكلية — كل صفحة تُعامَل كصفحة هبوط.', 'svg' => '<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>' ],
+          [ 'n' => '04', 'title' => 'محتوى يستحق الترتيب', 'desc' => 'محتوى يستهدف نية البحث الصحيحة ويُقنع القارئ بالتحرك.', 'svg' => '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>' ],
+          [ 'n' => '05', 'title' => 'روابط موثوقة',          'desc' => 'روابط طبيعية من مصادر ذات سلطة حقيقية — تُعزز ترتيبك بدون مخاطر.', 'svg' => '<path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>' ],
+          [ 'n' => '06', 'title' => 'تقارير تربط بعملك',   'desc' => 'تقرير شهري يربط الزيارات بالليدز والمبيعات وقرارات النمو.', 'svg' => '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>' ],
+      ];
+      $dcs = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ];
+      $items = ! empty( $features ) ? $features : $wwd_defaults;
+      foreach ( $items as $idx => $feat ) :
+          $dc  = $dcs[ $idx % 6 ];
+          $def = $wwd_defaults[ $idx % 6 ];
       ?>
-          <div class="feat-card sr <?php echo esc_attr( $dc ); ?>">
-            <div class="ico-box lg" style="margin-bottom:16px">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <h3><?php echo esc_html( $feat['title'] ?? '' ); ?></h3>
-            <p><?php echo esc_html( $feat['desc'] ?? '' ); ?></p>
-          </div>
-      <?php endforeach;
-      else : ?>
-        <?php
-        $default_features = [
-            [ 'n' => '01', 'title' => 'تحليل تقني عميق',     'desc' => 'فحص بنية الموقع، السرعة، الزحف، Core Web Vitals.' ],
-            [ 'n' => '02', 'title' => 'بحث الكلمات الذكي',   'desc' => 'الكلمات التي يبحث بها عملاؤك الجادون.' ],
-            [ 'n' => '03', 'title' => 'تحسين الصفحات',        'desc' => 'عناوين، أوصاف، روابط داخلية، بيانات هيكلية.' ],
-            [ 'n' => '04', 'title' => 'محتوى يستحق الترتيب', 'desc' => 'محتوى يستهدف نية البحث الصحيحة.' ],
-            [ 'n' => '05', 'title' => 'روابط موثوقة',          'desc' => 'روابط طبيعية من مصادر ذات سلطة حقيقية.' ],
-            [ 'n' => '06', 'title' => 'تقارير تربط بعملك',   'desc' => 'تقرير شهري يربط الزيارات بالليدز والمبيعات.' ],
-        ];
-        $dcs = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ];
-        foreach ( $default_features as $fi => $f ) :
-        ?>
-          <div class="feat-card sr <?php echo esc_attr( $dcs[ $fi ] ); ?>">
-            <div style="font-size:11px;font-weight:800;color:rgba(30,46,245,.14);margin-bottom:14px;letter-spacing:.04em"><?php echo esc_html( $f['n'] ); ?></div>
-            <div class="ico-box" style="margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><circle cx="12" cy="12" r="10"/></svg></div>
-            <h3><?php echo esc_html( $f['title'] ); ?></h3>
-            <p><?php echo esc_html( $f['desc'] ); ?></p>
-          </div>
-        <?php endforeach;
-      endif; ?>
+      <div class="wwd-card sr <?php echo esc_attr( $dc ); ?>">
+        <div class="wwd-n"><?php echo esc_html( $def['n'] ); ?></div>
+        <div class="wwd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="21" height="21"><?php echo $def['svg']; ?></svg></div>
+        <h3><?php echo esc_html( $feat['title'] ?? $def['title'] ); ?></h3>
+        <p><?php echo esc_html( $feat['desc'] ?? $def['desc'] ); ?></p>
+      </div>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
@@ -131,38 +149,41 @@ $faqs       = sh_field( 'service_faqs' );
 <!-- Sub-services -->
 <section id="sub-services" class="sec sec-surface">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">خدمات السيو</span><h2 class="h2">اختر الخدمة التي يحتاجها عملك</h2></div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px" class="sr d1">
+    <div class="sh c sr"><span class="tag">خدمات السيو</span><h2 class="h2">اختر الخدمة التي يحتاجها عملك</h2><p class="bod">كل خدمة يمكن تنفيذها مستقلة أو ضمن باقة سيو متكاملة — حسب وضع موقعك ومرحلتك.</p></div>
+    <div class="ss-grid sr d1">
       <?php
-      $sub_services = [
-          [ 'title' => 'بناء الباك لينك',          'desc' => 'روابط موثوقة من مواقع ذات سلطة.', 'url' => sh_page_url( 'services/backlinks' ), 'items' => [ 'تحليل بروفايل الروابط', 'روابط تحريرية موثوقة', 'Guest Posting', 'تقرير شهري مفصّل' ] ],
-          [ 'title' => 'كتابة المحتوى',             'desc' => 'محتوى عربي مدروس استراتيجياً.', 'url' => sh_page_url( 'services/content' ),   'items' => [ 'استراتيجية مبنية على البيانات', 'مقالات وصفحات خدمات', 'كتّاب بشريون متخصصون', 'محتوى لكل قطاع' ] ],
-          [ 'title' => 'استشارات تحليل الأداء',    'desc' => 'نُفسّر أرقام موقعك بلغة تجارية.', 'url' => sh_page_url( 'services/consulting' ), 'items' => [ 'تدقيق سيو شامل', 'قراءة Search Console', 'تحليل الوكالة الحالية', 'خطة تحسين قابلة للتنفيذ' ] ],
-          [ 'title' => 'سيو المتاجر الإلكترونية', 'desc' => 'سيو متخصص للمتاجر — سلة، زد، شوبيفاي.', 'url' => sh_page_url( 'services/seo-stores' ), 'items' => [ 'تحسين صفحات المنتجات', 'كلمات شرائية عالية النية', 'معالجة المحتوى المتكرر', 'ربط الترافيك بالمبيعات' ] ],
-      ];
-      foreach ( $sub_services as $ss ) :
+      foreach ( [
+          [ 'icon' => '<path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>',
+            'title' => 'بناء الباك لينك', 'desc' => 'روابط موثوقة من مواقع ذات سلطة — استراتيجية، ليست شراء روابط عشوائي.',
+            'url' => sh_page_url( 'services/backlinks' ),
+            'items' => [ 'تحليل بروفايل الروابط الحالي والمنافسين', 'روابط تحريرية من مواقع عربية موثوقة', 'Guest Posting باستراتيجية واضحة', 'تقرير شهري بكل رابط ومصدره' ] ],
+          [ 'icon' => '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>',
+            'title' => 'كتابة المحتوى', 'desc' => 'محتوى عربي مدروس استراتيجياً — يستهدف نية البحث ويُحوّل القارئ.',
+            'url' => sh_page_url( 'services/content' ),
+            'items' => [ 'استراتيجية محتوى مبنية على البيانات', 'مقالات مدونة، صفحات خدمات، أوصاف منتجات', 'محتوى متخصص لكل قطاع', 'كتّاب بشريون — لا اعتماد على AI وحده' ] ],
+          [ 'icon' => '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
+            'title' => 'استشارات تحليل الأداء', 'desc' => 'نُفسّر أرقام موقعك بلغة تجارية — لتعرف هل وكالتك الحالية تعمل.',
+            'url' => sh_page_url( 'services/consulting' ),
+            'items' => [ 'تدقيق سيو شامل وتشخيص الوضع الحالي', 'قراءة Search Console وAnalytics', 'تحليل أداء وكالتك السيو الحالية', 'خطة تحسين قابلة للتنفيذ' ] ],
+          [ 'icon' => '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>',
+            'title' => 'سيو المتاجر الإلكترونية', 'desc' => 'سيو متخصص للمتاجر — سلة، زد، شوبيفاي، ووكومرس.',
+            'url' => sh_page_url( 'services/seo-stores' ),
+            'items' => [ 'تحسين صفحات المنتجات والفئات', 'كلمات شرائية بنية شراء عالية', 'معالجة المحتوى المتكرر في المتاجر', 'تقارير ربط الترافيك بالمبيعات' ] ],
+      ] as $ss ) :
       ?>
-      <div style="border:1.5px solid var(--line);border-radius:var(--r3);overflow:hidden;transition:all .26s var(--fast);background:#fff">
-        <div style="padding:22px 24px;background:var(--navy-2);position:relative;overflow:hidden">
-          <div style="position:absolute;inset-inline-end:-30px;top:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.28),transparent 70%)"></div>
-          <div style="width:42px;height:42px;border-radius:11px;background:rgba(30,46,245,.25);display:flex;align-items:center;justify-content:center;margin-bottom:13px;position:relative;z-index:1">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#7b90ff" stroke-width="1.8" width="19" height="19"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-          </div>
-          <h3 style="font-size:18px;font-weight:800;color:#fff;position:relative;z-index:1;margin-bottom:6px"><?php echo esc_html( $ss['title'] ); ?></h3>
-          <p style="font-size:13px;color:rgba(255,255,255,.45);position:relative;z-index:1;line-height:1.7"><?php echo esc_html( $ss['desc'] ); ?></p>
+      <div class="ss-card">
+        <div class="ss-head">
+          <div class="ss-hico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="19" height="19"><?php echo $ss['icon']; ?></svg></div>
+          <h3><?php echo esc_html( $ss['title'] ); ?></h3>
+          <p><?php echo esc_html( $ss['desc'] ); ?></p>
         </div>
-        <div style="padding:20px 24px">
-          <div style="display:flex;flex-direction:column;gap:0">
+        <div class="ss-body">
+          <div class="ss-items">
             <?php foreach ( $ss['items'] as $item ) : ?>
-            <div style="display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--ink-2);padding:11px 0;border-bottom:1px solid var(--line);line-height:1.65">
-              <span style="width:5px;height:5px;border-radius:50%;background:rgba(30,46,245,.3);flex-shrink:0;margin-top:7px"></span>
-              <?php echo esc_html( $item ); ?>
-            </div>
+            <div class="ss-item"><div class="ss-dot"></div><?php echo esc_html( $item ); ?></div>
             <?php endforeach; ?>
           </div>
-          <a href="<?php echo esc_url( $ss['url'] ); ?>" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13.5px;font-weight:700;color:var(--blue)">
-            تفاصيل الخدمة <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+          <a href="<?php echo esc_url( $ss['url'] ); ?>" class="ss-link">تفاصيل الخدمة <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
       <?php endforeach; ?>
@@ -170,75 +191,176 @@ $faqs       = sh_field( 'service_faqs' );
   </div>
 </section>
 
-<!-- Process steps -->
-<?php if ( ! empty( $steps ) || true ) :
-    $display_steps = ! empty( $steps ) ? $steps : [
-        [ 'title' => 'التدقيق والتشخيص',   'desc' => 'نُحلّل موقعك من الداخل — السرعة، البنية، المحتوى، الروابط — ونحدد الأولويات بدقة.' ],
-        [ 'title' => 'بناء الاستراتيجية',  'desc' => 'خطة عمل 3-6 أشهر مبنية على بيانات المنافسين وفرص الكلمات المفتاحية في قطاعك.' ],
-        [ 'title' => 'التنفيذ المتكامل',   'desc' => 'تقني، محتوى، روابط — كل محور يُنفَّذ بالتوازي من فريق متخصص.' ],
-        [ 'title' => 'القياس والتطوير',    'desc' => 'تقرير شهري يُظهر الأداء بالأرقام ويُحدّد الخطوة التالية بوضوح.' ],
-    ];
-?>
+<!-- Reporting -->
+<section class="sec sec-white">
+  <div class="wrap">
+    <div class="rep-layout">
+      <div class="sr">
+        <span class="tag" style="margin-bottom:12px">من السيو إلى نتائج العمل</span>
+        <h2 class="h2" style="margin-bottom:16px">تقارير تتكلم لغة عملك<br>— لا لغة المطورين</h2>
+        <p class="bod" style="margin-bottom:18px">في معظم الوكالات تأتيك تقارير ممتلئة بمصطلحات جوجل لا تفهم منها شيئاً. عندنا التقرير يُظهر لك بوضوح: كم ليد جاء من البحث، كم بيع، وأين تذهب ميزانيتك.</p>
+        <div class="chklist sr d1" style="margin-bottom:24px">
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>الترافيك</strong> — مصدره، جودته، وسلوكه على موقعك</div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>الليدز</strong> — كم نموذج تُعبّأ، كم مكالمة، وتكلفة كل واحد</div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>المبيعات</strong> — للمتاجر نربط البحث بالمنتج المباع وقيمته</div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>الأداء اللحظي</strong> — لوحة تحكم حية تتابعها وقتما شئت</div>
+        </div>
+      </div>
+      <div class="sr d1">
+        <div class="rep-mock">
+          <div class="rep-head">
+            <div class="rep-title">تقرير سيو شهري — أكتوبر</div>
+            <div class="rep-pill">+34% مقارنة بالشهر السابق</div>
+          </div>
+          <div class="rep-grid">
+            <div class="rep-stat"><div class="rep-stat-l">الزيارات العضوية</div><div class="rep-stat-n">42,180 <span class="up">↑ 28%</span></div></div>
+            <div class="rep-stat"><div class="rep-stat-l">ليدز عضوية</div><div class="rep-stat-n">312 <span class="up">↑ 41%</span></div></div>
+            <div class="rep-stat"><div class="rep-stat-l">كلمات صفحة 1</div><div class="rep-stat-n">186 <span class="up">↑ 22</span></div></div>
+            <div class="rep-stat"><div class="rep-stat-l">قيمة المبيعات</div><div class="rep-stat-n">142K <span class="up">↑ 38%</span></div></div>
+          </div>
+          <div class="rep-chart">
+            <div class="rep-bars">
+              <?php foreach ( [ 38, 46, 52, 58, 64, 71, 78, 84, 91, 96 ] as $rh ) : ?>
+              <div class="rep-bar" style="height:<?php echo esc_attr( $rh ); ?>%<?php echo $rh === 96 ? ';background:linear-gradient(180deg,var(--green),rgba(16,185,129,.3))' : ''; ?>"></div>
+              <?php endforeach; ?>
+            </div>
+          </div>
+          <div class="rep-foot">نمو متراكم على 10 أشهر — مثال توضيحي</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Methodology -->
 <section class="sec sec-navy">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag d">منهجيتنا</span><h2 class="h2 wh">4 خطوات نُطبّقها مع كل عميل</h2></div>
-    <div style="--cols:4" class="proc-grid sr">
-      <div style="position:absolute;top:22px;inset-inline-start:calc(100%/4/2);width:calc(100% - 100%/4);height:1px;background:linear-gradient(to left,rgba(30,46,245,.35),rgba(30,46,245,.08))"></div>
-      <?php foreach ( $display_steps as $step ) : ?>
-      <div class="proc-step">
-        <div class="proc-num"><?php static $sn = 1; echo str_pad( $sn++, 2, '0', STR_PAD_LEFT ); ?></div>
-        <h3><?php echo esc_html( $step['title'] ?? '' ); ?></h3>
-        <p><?php echo esc_html( $step['desc'] ?? '' ); ?></p>
+    <div class="sh c sr"><span class="tag d">منهجيتنا</span><h2 class="h2 wh">منهجية شفافة من اليوم الأول</h2><p class="bod d">كل مرحلة لها هدف واضح ومؤشر قياس — لا خطوات غامضة، لا وعود بدون تنفيذ.</p></div>
+    <div class="method-grid">
+      <?php
+      $method_items = ! empty( $steps ) ? array_slice( $steps, 0, 6 ) : [
+          [ 'title' => 'استكشاف وفهم العمل',      'desc' => 'نتعرف على نشاطك، جمهورك، منافسيك، وأهدافك التجارية الفعلية' ],
+          [ 'title' => 'تدقيق سيو شامل',           'desc' => 'تحليل تقني ومحتوى وروابط — نكشف فجوات الأداء والفرص الكامنة' ],
+          [ 'title' => 'الاستراتيجية والخطة',      'desc' => 'خارطة طريق مخصصة بأولويات وجداول زمنية — قابلة للتنفيذ والمتابعة' ],
+          [ 'title' => 'التنفيذ الدقيق',           'desc' => 'تطبيق التحسينات بالترتيب الصحيح — تقني ثم محتوى ثم روابط' ],
+          [ 'title' => 'القياس والربط بالأعمال',  'desc' => 'تقرير شهري يربط السيو بالليدز والمبيعات — لا أرقام مجردة' ],
+          [ 'title' => 'التحسين المستمر',          'desc' => 'كل شهر يبني على السابق — السيو لعبة طويلة المدى تتراكم بالوقت' ],
+      ];
+      $dcs = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ];
+      foreach ( $method_items as $idx => $mi ) :
+      ?>
+      <div class="method-item sr <?php echo esc_attr( $dcs[ $idx % 6 ] ); ?>">
+        <div class="m-num"><?php echo esc_html( str_pad( $idx + 1, 2, '0', STR_PAD_LEFT ) ); ?></div>
+        <h3><?php echo esc_html( $mi['title'] ?? '' ); ?></h3>
+        <p><?php echo esc_html( $mi['desc'] ?? '' ); ?></p>
       </div>
       <?php endforeach; ?>
     </div>
   </div>
 </section>
-<?php endif; ?>
 
-<!-- FAQs -->
-<?php if ( ! empty( $faqs ) ) : ?>
+<!-- Proof / Results -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:5fr 4fr;gap:48px;align-items:start">
+    <div class="sh c sr"><span class="tag">دلائل النتائج</span><h2 class="h2">نتائج حقيقية لعملاء حقيقيين</h2><p class="bod">نماذج من نتائج عملاء سابقين — أرقام موثّقة من Search Console وAnalytics، لا ادعاءات.</p></div>
+    <div class="proof-grid">
+      <?php
+      foreach ( [
+          [ 'sector' => 'قطاع الصحة والطب',        'result' => '+312%', 'desc' => 'نمو في الزيارات العضوية لعيادة طبية متخصصة خلال 8 أشهر — انتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.', 'meta' => '8 أشهر تعاون مستمر', 'dc' => '' ],
+          [ 'sector' => 'قطاع التجارة الإلكترونية', 'result' => '+184%', 'desc' => 'زيادة في المبيعات العضوية لمتجر سلة في قطاع الأزياء مع خفض اعتماده على Google Ads بنسبة 45%.', 'meta' => '10 أشهر تعاون مستمر', 'dc' => 'd1' ],
+          [ 'sector' => 'قطاع التعليم والتدريب',    'result' => '+220%', 'desc' => 'نمو في عدد الليدز الشهرية لمنصة تدريب مع وصول 14 كلمة مفتاحية تنافسية إلى الصفحة الأولى.', 'meta' => '6 أشهر تعاون مستمر', 'dc' => 'd2' ],
+      ] as $pc ) :
+      ?>
+      <div class="proof-card sr <?php echo esc_attr( $pc['dc'] ); ?>">
+        <div class="proof-sector"><?php echo esc_html( $pc['sector'] ); ?></div>
+        <div class="proof-result"><em><?php echo esc_html( $pc['result'] ); ?></em></div>
+        <div class="proof-desc"><?php echo esc_html( $pc['desc'] ); ?></div>
+        <div class="proof-meta"><div class="proof-dot"></div><?php echo esc_html( $pc['meta'] ); ?></div>
+      </div>
+      <?php endforeach; ?>
+    </div>
+    <div style="text-align:center;margin-top:32px">
+      <a href="<?php echo esc_url( sh_page_url( 'results' ) ); ?>" class="btn btn-g lg">جميع نتائج الأعمال <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- Industries -->
+<section class="sec sec-surface">
+  <div class="wrap">
+    <div class="sh c sr"><span class="tag">القطاعات التي نخدمها</span><h2 class="h2">السيو يختلف من قطاع إلى آخر — ونحن نفهم ذلك</h2><p class="bod">لكل قطاع جمهوره، كلماته، وقواعد ترتيبه. نُخصّص الاستراتيجية حسب طبيعة عملك.</p></div>
+    <div class="ind-grid sr d1">
+      <?php
+      foreach ( [
+          [ 'label' => 'التجارة الإلكترونية', 'sub' => 'متاجر سلة، زد، شوبيفاي', 'url' => sh_page_url( 'services/seo-stores' ), 'svg' => '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>' ],
+          [ 'label' => 'الصحة والطب',         'sub' => 'عيادات، مستشفيات، صحة',  'url' => sh_page_url( 'sectors/health' ),       'svg' => '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>' ],
+          [ 'label' => 'التعليم والتدريب',    'sub' => 'منصات، أكاديميات',         'url' => sh_page_url( 'sectors/education' ),    'svg' => '<path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>' ],
+          [ 'label' => 'الأغذية والمطاعم',   'sub' => 'مطاعم، توصيل، أغذية',     'url' => sh_page_url( 'sectors/food' ),         'svg' => '<path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>' ],
+          [ 'label' => 'القانون والاستشارات', 'sub' => 'محاماة، استشارات، شركات', 'url' => sh_page_url( 'sectors/legal' ),        'svg' => '<path d="M3 6l9 6 9-6"/><path d="M3 6v12l9 6 9-6V6"/>' ],
+          [ 'label' => 'التقنية والبرمجيات',  'sub' => 'SaaS، شركات تقنية',       'url' => sh_page_url( 'sectors/tech' ),         'svg' => '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' ],
+      ] as $ic ) :
+      ?>
+      <a href="<?php echo esc_url( $ic['url'] ); ?>" class="ind-card">
+        <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $ic['svg']; ?></svg></div>
+        <div class="ind-card-body"><h4><?php echo esc_html( $ic['label'] ); ?></h4><p><?php echo esc_html( $ic['sub'] ); ?></p></div>
+      </a>
+      <?php endforeach; ?>
+    </div>
+    <div style="text-align:center;margin-top:28px">
+      <a href="<?php echo esc_url( sh_page_url( 'sectors' ) ); ?>" class="btn btn-g">جميع القطاعات</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec-off">
+  <div class="wrap">
+    <div class="faq-cta-layout">
       <div>
-        <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2">أسئلة يسألها عملاؤنا دائماً</h2></div>
+        <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2">أسئلة يسألها كل صاحب عمل</h2></div>
         <div class="faq-list sr d1">
-          <?php foreach ( $faqs as $faq ) : ?>
+          <?php
+          $faq_data = ! empty( $faqs ) ? $faqs : [
+              [ 'question' => 'كم يستغرق السيو حتى أرى نتائج في عملي؟', 'answer' => 'المؤشرات الأولى تظهر خلال 30–60 يوم. الترافيك الفعلي والليدز يبدآن في الظهور بين الشهر الثالث والسادس. أما النتائج الكبيرة فتأتي بعد 6–12 شهر — السيو لعبة تراكم.' ],
+              [ 'question' => 'كيف أفرّق بين شركة سيو حقيقية وأخرى تبيع وعوداً؟', 'answer' => 'شركة السيو الحقيقية: تطلب وصولاً لـ Search Console، تُقدّم تدقيقاً تفصيلياً قبل البيع، تربط تقاريرها بنتائج عملك، ولا تَعِد بمراتب محددة في وقت محدد.' ],
+              [ 'question' => 'هل السيو يحلّ محل إعلانات Google Ads؟', 'answer' => 'لا — يُكمّلها. الإعلانات تجلب زيارات فورية، السيو يبني أصلاً مستداماً. الاستراتيجية الذكية: الإعلانات للحاجة الفورية، والسيو للمدى البعيد.' ],
+              [ 'question' => 'هل أحتاج عقداً طويلاً؟', 'answer' => 'لا. نعمل بدون عقود ملزمة. نُثبت قيمتنا شهراً بعد شهر — وأنت من يُقرّر الاستمرار.' ],
+              [ 'question' => 'هل تعملون مع المتاجر الإلكترونية؟', 'answer' => 'نعم وبشكل متخصص. لدينا خدمة سيو المتاجر الإلكترونية لمنصات سلة، زد، شوبيفاي، وووكومرس — بمنهجية مختلفة عن السيو التقليدي.' ],
+          ];
+          foreach ( $faq_data as $faq ) :
+          ?>
           <div class="faq-item">
-            <div class="faq-q">
-              <span><?php echo esc_html( $faq['question'] ?? '' ); ?></span>
-              <div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
-            </div>
-            <div class="faq-a">
-              <div class="faq-a-inner"><?php echo esc_html( $faq['answer'] ?? '' ); ?></div>
-            </div>
+            <div class="faq-q"><span><?php echo esc_html( $faq['question'] ?? '' ); ?></span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+            <div class="faq-a"><div class="faq-a-inner"><?php echo esc_html( $faq['answer'] ?? '' ); ?></div></div>
           </div>
           <?php endforeach; ?>
         </div>
       </div>
-      <div class="sr d2" style="position:sticky;top:86px">
-        <div style="background:var(--navy-2);border-radius:var(--r4);padding:28px;position:relative;overflow:hidden">
-          <div style="position:absolute;inset-inline-end:-30px;top:-30px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.25),transparent 70%)"></div>
-          <div style="position:relative;z-index:1">
-            <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:8px">جاهز للبدء؟</div>
-            <p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:18px">احجز 30 دقيقة معنا — وسنخبرك بوضوح ما يمكن تحقيقه لموقعك.</p>
-            <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p" style="width:100%;justify-content:center">استشارة مجانية</a>
+      <div class="cta-sticky">
+        <div class="cta-side-card sr d1">
+          <span class="tag d" style="position:relative;z-index:1;margin-bottom:10px">ابدأ الآن</span>
+          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1">هل موقعك يحقق<br>أقصى ما يمكن؟</h3>
+          <p style="font-size:13.5px;color:rgba(255,255,255,.44);line-height:1.8;margin-bottom:22px;position:relative;z-index:1">استشارة 30 دقيقة مجانية — نُحلّل وضعك، نكشف الفرص الضائعة، ونضع معاً خطة الخطوات الأولى.</p>
+          <div class="chklist" style="margin-bottom:22px">
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>تحليل أولي مجاني لموقعك</div>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>كشف الفرص الضائعة في البحث</div>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>توصيات قابلة للتنفيذ فوراً</div>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>بدون أي التزام مسبق</div>
           </div>
+          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p" style="width:100%;justify-content:center;position:relative;z-index:1">احجز استشارة مجانية</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<?php endif; ?>
 
 <?php
 get_template_part( 'template-parts/layout/cta-banner', null, [
     'tag'     => 'ابدأ الآن',
-    'title'   => 'موقعك يستحق أن يُرى',
+    'title'   => 'ابدأ بكسب عملاء يبحثون عنك فعلاً',
     'buttons' => [
-        [ 'text' => 'احجز استشارة مجانية', 'url' => sh_page_url( 'contact' ),       'class' => 'btn-w lg' ],
-        [ 'text' => 'تعرّف على نتائجنا',    'url' => sh_page_url( 'results' ),       'class' => 'btn-g lg' ],
+        [ 'text' => 'احجز استشارة مجانية', 'url' => sh_page_url( 'contact' ), 'class' => 'btn-w lg' ],
+        [ 'text' => 'تعرّف على نتائجنا',    'url' => sh_page_url( 'results' ), 'class' => 'btn-g lg' ],
     ],
 ] );
 ?>

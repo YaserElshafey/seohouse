@@ -41,6 +41,9 @@ if ( ! isset( $content_width ) ) {
     $content_width = 1200;
 }
 
+// ── Permalink flush on theme switch ───────────────────────────────
+add_action( 'after_switch_theme', 'flush_rewrite_rules' );
+
 // ── Excerpt length ────────────────────────────────────────────────
 add_filter( 'excerpt_length', fn() => 28 );
 add_filter( 'excerpt_more', fn() => '...' );
