@@ -595,3 +595,19 @@
   .pbtns .btn{width:100%;justify-content:center}
   .feat-cta-block{flex-direction:column;align-items:flex-start}
 }
+
+/* ─ SEO sub-service — quality vs quantity ─ */
+.qv-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.qv-card{padding:28px;border-radius:var(--r3)}
+.qv-bad{background:rgba(220,38,38,.05);border:1px solid rgba(220,38,38,.18)}
+.qv-good{background:rgba(16,185,129,.05);border:1px solid rgba(16,185,129,.2)}
+.qv-tag{display:inline-block;font-size:11px;font-weight:800;padding:6px 12px;border-radius:50px;letter-spacing:.04em;margin-bottom:14px}
+.qv-bad .qv-tag{background:rgba(220,38,38,.12);color:#dc2626}
+.qv-good .qv-tag{background:rgba(16,185,129,.14);color:#059669}
+.qv-card h3{font-size:18px;font-weight:900;color:var(--ink);margin-bottom:12px;letter-spacing:-.02em}
+.qv-list{display:flex;flex-direction:column;gap:10px}
+.qv-item{display:flex;align-items:flex-start;gap:10px;font-size:13.5px;color:var(--ink-2);line-height:1.75}
+.qv-item svg{flex-shrink:0;margin-top:3px;width:14px;height:14px}
+.qv-bad .qv-item svg{stroke:#dc2626}
+.qv-good .qv-item svg{stroke:#059669}
+@media(max-width:860px){.qv-grid{grid-template-columns:1fr}}
