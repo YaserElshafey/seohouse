@@ -19,7 +19,7 @@ get_header();
       </div>
       <span class="tag d" style="display:inline-block;margin-bottom:20px">خدمة متخصصة</span>
       <h1 style="font-size:clamp(32px,5vw,60px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px">إنشاء وتصميم<br><em style="font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite">متجرك الإلكتروني</em></h1>
-      <p style="font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.55);max-width:680px;margin-inline:auto;margin-bottom:30px">من فكرة إلى متجر جاهز للبيع — هيكل تجاري ذكي، تجربة شراء سلسة، وقابلية للنمو على أي منصة.</p>
+      <p style="font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.55);max-width:680px;margin-inline:auto;margin-bottom:30px">من فكرة إلى متجر جاهز للبيع — هيكل تجاري ذكي، تجربة شراء سلسة، وقابلية للنمو على أي منصة (سلة، زد، شوبيفاي، أو ووكومرس).</p>
       <div style="display:flex;gap:11px;justify-content:center;flex-wrap:wrap">
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p lg">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -34,7 +34,7 @@ get_header();
 <!-- Why store setup matters -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center">
+    <div class="why-grid">
       <div class="sr">
         <span class="tag" style="margin-bottom:12px">لماذا يهم إعداد المتجر</span>
         <h2 class="h2" style="margin-bottom:16px">المتجر الإلكتروني<br>ليس مجرد منتجات على صفحة</h2>
@@ -43,31 +43,31 @@ get_header();
           <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>هيكل ذكي</strong> — فئات منظّمة تُسهّل الوصول للمنتج المناسب</div>
           <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>تجربة شراء سلسة</strong> — أقل خطوات، أقل تخلٍّ عن السلة</div>
           <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>عناصر ثقة واضحة</strong> — تقييمات، ضمان، أمان الدفع، توصيل</div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>سيو من اليوم الأول</strong> — كل صفحة منتج وفئة مُحسَّنة للبحث</div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>أساس تقني سليم</strong> — استعداد للسيو والتسويق منذ اليوم الأول</div>
         </div>
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p sr d2">احجز استشارة مجانية</a>
       </div>
       <div class="sr d1">
-        <div style="background:var(--navy-2);border-radius:var(--r4);padding:30px;position:relative;overflow:hidden">
+        <div style="background:var(--navy-2);border-radius:var(--r4);padding:28px;position:relative;overflow:hidden">
           <div style="position:absolute;inset-inline-end:-50px;top:-50px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.28),transparent 70%)"></div>
-          <div style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:20px;position:relative;z-index:1">الفرق بين متجر جيد وعادي</div>
-          <div style="display:flex;flex-direction:column;gap:12px;position:relative;z-index:1">
-            <?php
-            foreach ( [
-                [ 'label' => 'معدل التحويل — متجر محسَّن',   'val' => '3-5×', 'green' => true ],
-                [ 'label' => 'التخلي عن السلة — UX ضعيف',  'val' => '70%',  'green' => false ],
-                [ 'label' => 'نمو المبيعات بالسيو التقني',   'val' => '+84%', 'green' => true ],
-                [ 'label' => 'كلفة العميل عبر البحث العضوي', 'val' => '↓ 60%', 'green' => true ],
-            ] as $stat ) :
-                $bg  = $stat['green'] ? 'rgba(16,185,129,.1)' : 'rgba(220,38,38,.08)';
-                $brd = $stat['green'] ? 'rgba(16,185,129,.2)' : 'rgba(220,38,38,.16)';
-                $col = $stat['green'] ? 'var(--green)' : '#f87171';
-            ?>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:<?php echo $bg; ?>;border:1px solid <?php echo $brd; ?>;border-radius:var(--r2)">
-              <div style="font-size:13px;color:rgba(255,255,255,.78)"><?php echo esc_html( $stat['label'] ); ?></div>
-              <div style="font-size:17px;font-weight:900;color:<?php echo $col; ?>"><?php echo esc_html( $stat['val'] ); ?></div>
+          <div style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:18px;position:relative;z-index:1">رحلة العميل في متجرك</div>
+          <div style="display:flex;flex-direction:column;gap:9px;position:relative;z-index:1">
+            <div style="display:flex;align-items:center;gap:10px;padding:13px 14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
+              <div style="width:26px;height:26px;border-radius:7px;background:rgba(30,46,245,.2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#7b90ff;flex-shrink:0">1</div>
+              <div style="font-size:13px;color:rgba(255,255,255,.72)">يصل من البحث / الإعلان</div>
             </div>
-            <?php endforeach; ?>
+            <div style="display:flex;align-items:center;gap:10px;padding:13px 14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
+              <div style="width:26px;height:26px;border-radius:7px;background:rgba(30,46,245,.2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#7b90ff;flex-shrink:0">2</div>
+              <div style="font-size:13px;color:rgba(255,255,255,.72)">يتصفّح الفئات بسهولة</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;padding:13px 14px;background:rgba(30,46,245,.14);border:1px solid rgba(30,46,245,.28);border-radius:var(--r2)">
+              <div style="width:26px;height:26px;border-radius:7px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#fff;flex-shrink:0">3</div>
+              <div style="font-size:13px;color:rgba(255,255,255,.85)">يثق بالمتجر ويُضيف للسلة</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;padding:13px 14px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);border-radius:var(--r2)">
+              <div style="width:26px;height:26px;border-radius:7px;background:rgba(16,185,129,.3);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:var(--green);flex-shrink:0">4</div>
+              <div style="font-size:13px;color:rgba(255,255,255,.72)">يُكمل الدفع — ويعود مرة ثانية</div>
+            </div>
           </div>
         </div>
       </div>
@@ -78,37 +78,16 @@ get_header();
 <!-- What We Do -->
 <section class="sec sec-surface">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">ماذا نقدّم</span><h2 class="h2">ثمانية محاور لمتجر يبيع فعلاً</h2></div>
+    <div class="sh c sr"><span class="tag">ماذا نفعل في إعداد المتجر</span><h2 class="h2">من خطة الفئات حتى أول طلب</h2><p class="bod">إعداد المتجر ليس مجرد "تثبيت قالب" — هو سلسلة قرارات تحدّد مدى نجاحه التجاري لاحقاً.</p></div>
     <div class="wd-grid">
-      <?php
-      foreach ( [
-          [ 'title' => 'هيكل فئات محسَّن',        'desc' => 'تنظيم المنتجات بطريقة تُسهّل على العميل الوصول السريع وتُحسّن السيو.',
-            'svg' => '<path d="M3 3h18v4H3z"/><path d="M3 10h7v11H3z"/><path d="M13 10h8v5h-8z"/><path d="M13 18h8v3h-8z"/>' ],
-          [ 'title' => 'تجربة شراء سلسة',         'desc' => 'من المنتج إلى إتمام الشراء بأقل خطوات ممكنة — لتقليل التخلي عن السلة.',
-            'svg' => '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>' ],
-          [ 'title' => 'تحسين صفحات المنتجات',   'desc' => 'صور عالية الجودة، وصف مُقنع، سيو مُدمج، وعناصر ثقة في كل صفحة.',
-            'svg' => '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>' ],
-          [ 'title' => 'سيو تقني للمتجر',         'desc' => 'معالجة المحتوى المتكرر، Canonical Tags، وتحسين صفحات الفئات للبحث.',
-            'svg' => '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>' ],
-          [ 'title' => 'عناصر الثقة والأمان',     'desc' => 'شهادة SSL، بوابات دفع موثوقة، سياسة إرجاع واضحة، وتقييمات حقيقية.',
-            'svg' => '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>' ],
-          [ 'title' => 'ربط مع أدوات التسويق',   'desc' => 'تكامل مع Meta Pixel، Google Analytics، حملات إعادة الاستهداف.',
-            'svg' => '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>' ],
-          [ 'title' => 'تحسين سرعة التحميل',     'desc' => 'ضغط الصور، CDN، وتحسين الكود لتحقيق Core Web Vitals مثالية.',
-            'svg' => '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>' ],
-          [ 'title' => 'تقارير المبيعات والأداء', 'desc' => 'لوحة تحكم تربط الترافيك بالمبيعات — لتعرف ما يعمل وما يحتاج تحسيناً.',
-            'svg' => '<line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>' ],
-      ] as $idx => $wdc ) :
-          $dc = [ '', 'd1', 'd2', 'd1', 'd2', 'd1', 'd2', 'd1' ][ $idx ];
-      ?>
-      <div class="wd-card sr <?php echo esc_attr( $dc ); ?>">
-        <div class="wd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="21" height="21"><?php echo $wdc['svg']; ?></svg></div>
-        <div class="wd-body">
-          <h3><?php echo esc_html( $wdc['title'] ); ?></h3>
-          <p><?php echo esc_html( $wdc['desc'] ); ?></p>
-        </div>
-      </div>
-      <?php endforeach; ?>
+      <div class="wd-card sr"><div class="wd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h18M3 12h18M3 17h18"/></svg></div><div class="wd-body"><h3>هيكلة الفئات والأقسام</h3><p>تنظيم منطقي للفئات الرئيسية والفرعية يجعل التصفح بديهياً ويُسرّع وصول العميل للمنتج المناسب.</p></div></div>
+      <div class="wd-card sr d1"><div class="wd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div><div class="wd-body"><h3>إعداد المنصة كاملاً</h3><p>تثبيت، تخصيص، ربط الدومين، الشحن، الضرائب (الزكاة)، بوابات الدفع المحلية — جاهز للعمل.</p></div></div>
+      <div class="wd-card sr d2"><div class="wd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div><div class="wd-body"><h3>تصميم الواجهة وهوية المتجر</h3><p>تخصيص القالب ليعكس علامتك التجارية — ألوان، خطوط، عناصر بصرية، وعناصر ثقة في الأماكن الصحيحة.</p></div></div>
+      <div class="wd-card sr d3"><div class="wd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div><div class="wd-body"><h3>صفحات المنتج والسلة</h3><p>تصميم صفحات منتج تبيع — صور، أوصاف، خيارات، تقييمات — وتدفّق سلة وخروج مدروس.</p></div></div>
+      <div class="wd-card sr"><div class="wd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div><div class="wd-body"><h3>ربط الشحن والدفع</h3><p>إعداد شركات الشحن المحلية (سمسا، أرامكس، توصيل)، وبوابات الدفع (مدى، Apple Pay، التحويل البنكي).</p></div></div>
+      <div class="wd-card sr d1"><div class="wd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 17v-2m3 2v-4m3 4v-6"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div><div class="wd-body"><h3>أساس سيو سليم</h3><p>هيكل URL صحيح، روابط داخلية، صفحات فئات جاهزة للتحسين، خرائط موقع، وبيانات هيكلية للمنتجات.</p></div></div>
+      <div class="wd-card sr d2"><div class="wd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="wd-body"><h3>ربط أدوات القياس</h3><p>Google Analytics، Tag Manager، Meta Pixel، TikTok — حتى تعرف من أين تأتي مبيعاتك من اليوم الأول.</p></div></div>
+      <div class="wd-card sr d3"><div class="wd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg></div><div class="wd-body"><h3>تدريب وتسليم</h3><p>تدريب فريقك على إدارة المتجر — إضافة منتجات، إدارة الطلبات، الردود، والتقارير.</p></div></div>
     </div>
   </div>
 </section>
@@ -116,37 +95,37 @@ get_header();
 <!-- Platform Cards -->
 <section id="platforms" class="sec sec-white">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">المنصات</span><h2 class="h2">4 منصات — واحدة تناسبك بالضبط</h2><p class="bod">نتخصص في المنصات الأربع الأكثر استخداماً في السوق السعودي والخليجي.</p></div>
+    <div class="sh c sr"><span class="tag">المنصات</span><h2 class="h2">نعمل على المنصات الأربع الرائدة</h2><p class="bod">لكل منصة طبيعتها — نختار معك المنصة الأنسب لمنتجك، حجم عملك، وخطط نموّك.</p></div>
     <div class="ep-plat-grid">
       <?php
       foreach ( [
           [
-              'name' => 'سلة', 'abbr' => 'سل', 'color' => '#00b286', 'flag' => 'سعودية ✓',
-              'tag' => 'الخيار الأول في السوق السعودي',
-              'desc' => 'منصة سعودية أصيلة مُدمجة مع نظام المدفوعات المحلية والشحن — مثالية لأي متجر يستهدف السوق السعودي.',
+              'name' => 'سلة', 'abbr' => 'سل', 'color' => '#00b286', 'flag' => 'سعودية',
+              'tag' => 'الأكثر انتشاراً في السوق السعودي',
+              'desc' => 'منصة سعودية متكاملة بتركيز قوي على السوق المحلي — بوابات دفع جاهزة، شركات شحن، وتطبيقات محلية. مثالية للتجّار الذين يريدون البدء سريعاً.',
               'url' => sh_page_url( 'services/salla' ),
-              'feats' => [ 'تكامل مدفوعات سعودية فوري (مدى، Apple Pay، تقسيط)', 'لوحة تحكم عربية سهلة الاستخدام', 'تكامل مع شركات الشحن المحلية', 'ملكية كاملة للعلامة التجارية' ],
+              'feats' => [ 'إعداد كامل وتخصيص القالب', 'ربط بوابات الدفع وشركات الشحن المحلية', 'تثبيت تطبيقات سلة الإضافية حسب الحاجة' ],
           ],
           [
-              'name' => 'زد', 'abbr' => 'زد', 'color' => '#5b4fcf', 'flag' => 'سعودية ✓',
-              'tag' => 'بنية تقنية قوية للنمو',
-              'desc' => 'منصة سعودية بهوية قوية وإمكانيات تقنية متقدمة — للتجار الجادين الذين يريدون تحكماً أكبر.',
+              'name' => 'زد', 'abbr' => 'زد', 'color' => '#5b4fcf', 'flag' => 'سعودية',
+              'tag' => 'مرونة تقنية أعلى للتجّار المتقدمين',
+              'desc' => 'منصة سعودية تمنح التاجر مرونة أكبر في التخصيص والتحكم — مناسبة للمتاجر التي تنوي التوسع وبناء هوية متجر مميّزة.',
               'url' => sh_page_url( 'services/zid' ),
-              'feats' => [ 'تخصيص متقدم لتجربة المتجر', 'APIs مفتوحة للتكامل مع أنظمة ERP', 'أدوات تسويق ومرونة عالية', 'دعم فني عربي متخصص' ],
+              'feats' => [ 'إعداد المتجر بهيكل قابل للتوسع', 'تخصيص متقدم للقالب وتجربة المستخدم', 'دعم التكاملات المتقدمة مع الأنظمة المحاسبية' ],
           ],
           [
               'name' => 'شوبيفاي', 'abbr' => 'Sh', 'color' => '#95bf47', 'flag' => 'عالمية',
-              'tag' => 'المنصة العالمية الأقوى',
-              'desc' => 'الأقوى عالمياً في التجارة الإلكترونية — للمتاجر التي تستهدف الأسواق الدولية أو تحتاج قدرات متقدمة.',
+              'tag' => 'للتجار الذين يستهدفون السوق الخليجي والعالمي',
+              'desc' => 'منصة عالمية بتطبيقات لا حصر لها وأدوات تسويق متقدمة. مثالية للعلامات التجارية التي تستهدف السعودية والخليج معاً، أو تخطّط للتوسع دولياً.',
               'url' => sh_page_url( 'services/shopify' ),
-              'feats' => [ '+8000 تطبيق وإضافة جاهزة', 'نظام دفع شوبيفاي + بوابات متعددة', 'سيو قوي ومتجر متعدد العملات', 'تقارير تحليلية احترافية' ],
+              'feats' => [ 'تخصيص Liquid وتطوير القالب', 'ربط بوابات الدفع المحلية والعالمية', 'إدارة التطبيقات وتحسين الأداء' ],
           ],
           [
               'name' => 'ووكومرس', 'abbr' => 'Wc', 'color' => '#7f54b3', 'flag' => 'مفتوح المصدر',
-              'tag' => 'تحكم كامل على ووردبريس',
-              'desc' => 'لمن يريد تحكماً كاملاً في كل تفصيل المتجر — ووردبريس + ووكومرس يعطيك لا حدود.',
+              'tag' => 'حرية كاملة على ووردبريس — لمن يريد التحكم الكامل',
+              'desc' => 'للأعمال التي تريد تحكماً كاملاً في كل تفصيل — التصميم، التقنية، السيو. مناسبة للمتاجر ذات المتطلبات الخاصة أو التكاملات المعقدة.',
               'url' => sh_page_url( 'services/woocommerce' ),
-              'feats' => [ 'تحكم كامل في الكود والبيانات', 'آلاف الإضافات المجانية والمدفوعة', 'سيو استثنائي مع Yoast/Rank Math', 'تكامل مع أي نظام تقريباً' ],
+              'feats' => [ 'تطوير ووردبريس وووكومرس مخصص', 'أمان متقدم واستضافة محسّنة للأداء', 'تكاملات مخصصة مع أنظمة ERP/CRM' ],
           ],
       ] as $plat ) :
       ?>
@@ -177,25 +156,14 @@ get_header();
 <!-- Sales-ready -->
 <section class="sec sec-surface">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">جاهز للبيع</span><h2 class="h2">ستة أسباب تجعل متجرنا يبيع من اليوم الأول</h2></div>
-    <div class="sales-grid">
-      <?php
-      foreach ( [
-          [ 'n' => '01', 'title' => 'هيكل SEO محسَّن من الأساس',    'desc' => 'كل صفحة منتج وفئة مُهيَّأة للبحث — ليدز عضوية من اليوم الأول.' ],
-          [ 'n' => '02', 'title' => 'تجربة جوال مثالية',             'desc' => 'أكثر من 80% من الشراء يتم من الجوال — تجربة سلسة وجذّابة على كل الشاشات.' ],
-          [ 'n' => '03', 'title' => 'سرعة تحميل تحت ثانيتين',       'desc' => 'Core Web Vitals مثالية — كل ثانية تأخير تخسّر 7% من المبيعات.' ],
-          [ 'n' => '04', 'title' => 'صور وأوصاف مُحسَّنة',          'desc' => 'كل صورة مضغوطة بدون خسارة جودة، وكل وصف مُكتوب للبيع لا للمعلومة فقط.' ],
-          [ 'n' => '05', 'title' => 'تكامل أدوات التسويق',          'desc' => 'Google Analytics، Meta Pixel، إعادة الاستهداف — كلها جاهزة من اليوم الأول.' ],
-          [ 'n' => '06', 'title' => 'دعم مستمر بعد الإطلاق',        'desc' => 'لسنا نُسلّم ونختفي — نتابع الأداء ونحسّن مع نمو متجرك.' ],
-      ] as $idx => $sc ) :
-          $dc = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ][ $idx ];
-      ?>
-      <div class="sales-card sr <?php echo esc_attr( $dc ); ?>">
-        <div class="sales-n"><?php echo esc_html( $sc['n'] ); ?></div>
-        <h3><?php echo esc_html( $sc['title'] ); ?></h3>
-        <p><?php echo esc_html( $sc['desc'] ); ?></p>
-      </div>
-      <?php endforeach; ?>
+    <div class="sh c sr"><span class="tag">جاهز للبيع</span><h2 class="h2">ستة معايير تجعل متجرنا يبيع من اليوم الأول</h2></div>
+    <div class="sr-grid">
+      <div class="sr-card sr"><div class="sr-n">01</div><h3>سرعة تحميل عالية</h3><p>المتجر البطيء يفقد 40% من الزوار قبل أن يتصفّحوا منتجاً واحداً. نُحسّن السرعة من البداية.</p></div>
+      <div class="sr-card sr d1"><div class="sr-n">02</div><h3>تجربة جوال متكاملة</h3><p>أكثر من 70% من الطلبات في السعودية تأتي من الجوال — التصميم يبدأ من الموبايل لا ينتهي إليه.</p></div>
+      <div class="sr-card sr d2"><div class="sr-n">03</div><h3>عناصر ثقة في كل صفحة</h3><p>تقييمات، شعارات الدفع، سياسة استرجاع واضحة، ضمان — تطمئن المشتري قبل أن يدفع.</p></div>
+      <div class="sr-card sr"><div class="sr-n">04</div><h3>صفحة منتج تبيع</h3><p>صور متعددة وعالية الجودة، أوصاف واضحة، تقييمات، خيارات، وزر شراء بارز — كل ما يحتاجه قرار الشراء.</p></div>
+      <div class="sr-card sr d1"><div class="sr-n">05</div><h3>سلة وخروج بأقل احتكاك</h3><p>أقل عدد ممكن من الخطوات، طرق دفع متعددة، وعدم إجبار التسجيل — لتقليل التخلّي عن السلة.</p></div>
+      <div class="sr-card sr d2"><div class="sr-n">06</div><h3>قابلية للنمو والتسويق</h3><p>هيكل تقني يدعم السيو، الإعلانات، الإيميل ماركتنغ، والريتارجيتنغ — عملك ينمو معك.</p></div>
     </div>
   </div>
 </section>
@@ -203,33 +171,14 @@ get_header();
 <!-- UX Considerations -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">تجربة الشراء</span><h2 class="h2">اعتبارات UX تصنع الفرق في المبيعات</h2></div>
-    <div class="ux-list">
-      <?php
-      foreach ( [
-          [ 'title' => 'صفحة المنتج المقنعة',   'desc' => 'صور متعددة، وصف واضح، مراجعات، وزر CTA بارز',
-            'svg' => '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>' ],
-          [ 'title' => 'سلة التسوق المُحسَّنة',  'desc' => 'ملخص واضح، تعديل سهل، وزر إتمام الشراء بارز دائماً',
-            'svg' => '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>' ],
-          [ 'title' => 'Checkout في خطوة واحدة', 'desc' => 'أقل حقول ممكنة، حفظ العنوان، وتعدد طرق الدفع',
-            'svg' => '<polyline points="20 6 9 17 4 12"/>' ],
-          [ 'title' => 'بحث داخلي ذكي',          'desc' => 'اقتراحات فورية، تصحيح أخطاء الكتابة، وفلترة سريعة',
-            'svg' => '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>' ],
-          [ 'title' => 'عناصر ثقة في كل مكان',  'desc' => 'شارات الدفع الآمن، سياسة الإرجاع، وأيقونات الشحن',
-            'svg' => '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>' ],
-          [ 'title' => 'منتجات مقترحة ذكية',     'desc' => 'Upsell وCross-sell في الأماكن الصحيحة لزيادة متوسط الطلب',
-            'svg' => '<line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>' ],
-      ] as $idx => $ux ) :
-          $dc = [ '', 'd1', 'd2', 'd1', 'd2', 'd1' ][ $idx ];
-      ?>
-      <div class="ux-item sr <?php echo esc_attr( $dc ); ?>">
-        <div class="ux-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $ux['svg']; ?></svg></div>
-        <div class="ux-body">
-          <strong><?php echo esc_html( $ux['title'] ); ?></strong>
-          <p><?php echo esc_html( $ux['desc'] ); ?></p>
-        </div>
-      </div>
-      <?php endforeach; ?>
+    <div class="sh c sr"><span class="tag">قرارات تجربة المستخدم</span><h2 class="h2">تفاصيل صغيرة تصنع فرقاً كبيراً في المبيعات</h2><p class="bod">في كل مشروع متجر، ندرس هذه القرارات معك بعناية — لأن تأثيرها على المبيعات يفوق تأثير التصميم نفسه.</p></div>
+    <div class="ux-list sr d1">
+      <div class="ux-item"><div class="ux-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h18M3 12h18M3 17h18"/></svg></div><div class="ux-body"><strong>هيكل التنقل والفئات</strong><p>كم فئة، كم مستوى، أين تظهر القائمة، وما الفلاتر المهمة في كل فئة</p></div></div>
+      <div class="ux-item"><div class="ux-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div><div class="ux-body"><strong>البحث الذكي والفلاتر</strong><p>بحث يفهم الكلمات الشائعة، فلاتر السعر/الماركة/المقاس بشكل واضح</p></div></div>
+      <div class="ux-item"><div class="ux-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg></div><div class="ux-body"><strong>صفحة المنتج</strong><p>عدد الصور، طريقة عرض الخيارات، مكان زر الشراء، التقييمات</p></div></div>
+      <div class="ux-item"><div class="ux-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17"/></svg></div><div class="ux-body"><strong>السلة والخروج</strong><p>كم خطوة، إجبار التسجيل أم لا، طرق الدفع، حقول الشحن</p></div></div>
+      <div class="ux-item"><div class="ux-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z"/></svg></div><div class="ux-body"><strong>عناصر بناء الثقة</strong><p>أين تظهر التقييمات، شعارات الدفع، ضمانات، سياسة الاسترجاع</p></div></div>
+      <div class="ux-item"><div class="ux-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div><div class="ux-body"><strong>تجربة الجوال خصيصاً</strong><p>أزرار بحجم الإصبع، نموذج خروج مبسّط، صور سريعة التحميل</p></div></div>
     </div>
   </div>
 </section>
@@ -237,21 +186,11 @@ get_header();
 <!-- Who is this for -->
 <section class="sec sec-navy">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag d">لمن هذه الخدمة</span><h2 class="h2 wh">3 أنواع من الأعمال نخدمها بتميّز</h2></div>
+    <div class="sh c sr"><span class="tag d">لمن هذه الخدمة</span><h2 class="h2 wh">هل أنت من هؤلاء؟</h2><p class="bod d">إذا تعرّفت على نفسك في أيٍّ من هذه الحالات، نحن نُحبّ مساعدتك.</p></div>
     <div class="who-grid">
-      <?php
-      foreach ( [
-          [ 'title' => 'متاجر في طور الإنشاء',    'desc' => 'تبدأ صح من اليوم الأول — هيكل، تصميم، وسيو جاهزين للنمو.', 'svg' => '<path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>' ],
-          [ 'title' => 'متاجر تريد إعادة هيكلة',  'desc' => 'متجرك قائم لكن المبيعات لا تعكس حجم الجهد — نُعيد بناءه بشكل صحيح.', 'svg' => '<path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 01-2 2H4a2 2 0 01-2-2V10a2 2 0 012-2h3.8"/><path d="M16 4l-4-4-4 4"/><path d="M12 0v13"/>' ],
-          [ 'title' => 'متاجر تريد التوسع',        'desc' => 'أعمالك تنمو وتحتاج بنية تقنية وسيو قادرَين على استيعاب هذا النمو.', 'svg' => '<polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>' ],
-      ] as $wc ) :
-      ?>
-      <div class="who-card sr">
-        <div class="who-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"><?php echo $wc['svg']; ?></svg></div>
-        <h3><?php echo esc_html( $wc['title'] ); ?></h3>
-        <p><?php echo esc_html( $wc['desc'] ); ?></p>
-      </div>
-      <?php endforeach; ?>
+      <div class="who-card sr"><div class="who-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>تاجر يبدأ من الصفر</h3><p>عندك منتج جاهز وتريد متجراً احترافياً يبيع — لا قالباً عشوائياً تكتشف عيوبه بعد ستة أشهر.</p></div>
+      <div class="who-card sr d1"><div class="who-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M18 17V9m-4 8V5m-4 12v-2"/></svg></div><h3>متجر قائم يحتاج إعادة بناء</h3><p>متجرك يبيع لكنه يستهلك إعلانات أكثر مما يبيع، أو لا يستطيع التوسع لأن هيكله الحالي محدود.</p></div>
+      <div class="who-card sr d2"><div class="who-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div><h3>علامة تجارية تتوسّع</h3><p>عندك علامة تجارية تنمو وتحتاج متجراً يعكس قيمتها — تصميم احترافي، تجربة شراء سلسة، وقابلية للتوسع.</p></div>
     </div>
   </div>
 </section>
@@ -261,14 +200,15 @@ get_header();
   <div class="wrap">
     <div class="faq-cta-layout">
       <div>
-        <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2">أسئلة عن إنشاء المتاجر</h2></div>
+        <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2">أسئلة عن إعداد المتاجر</h2></div>
         <div class="faq-list sr d1">
           <?php
           foreach ( [
-              [ 'q' => 'كيف أختار بين سلة وزد وشوبيفاي؟', 'a' => 'إذا كنت تستهدف السوق السعودي فقط وتريد سهولة الإعداد — سلة هي الخيار. إذا كنت تريد مرونة تقنية أعلى — زد. وإذا كنت تستهدف الأسواق الخليجية والدولية — شوبيفاي. نُساعدك في القرار بناءً على وضعك.' ],
-              [ 'q' => 'هل يتضمن التسليم سيو المتجر؟', 'a' => 'نعم — كل متجر نُسلّمه يأتي مُحسَّناً للسيو التقني: روابط نظيفة، Schema للمنتجات، Sitemap، وسرعة مثالية. لكن السيو المحتوائي المستمر خدمة منفصلة.' ],
-              [ 'q' => 'كم يستغرق بناء المتجر؟', 'a' => 'متجر بسيط (أقل من 50 منتج) من 2-4 أسابيع. متجر متوسط 4-8 أسابيع. متجر كبير مع تكاملات متعددة 2-4 أشهر.' ],
-              [ 'q' => 'هل يمكنني نقل متجري من منصة إلى أخرى؟', 'a' => 'نعم — نُنفذ نقل المتاجر مع الحفاظ على المنتجات، الطلبات، وترتيب جوجل. نُعدّ Redirects صحيحة لمنع خسارة السيو.' ],
+              [ 'q' => 'ما المنصة الأنسب لمتجري؟', 'a' => 'يعتمد على نوع منتجاتك، حجم عملك، خطط التوسع، والميزانية. في الاستشارة الأولى نناقش هذا معك بصراحة — أحياناً سلة أنسب، وأحياناً Shopify، حسب وضعك.' ],
+              [ 'q' => 'كم يستغرق إطلاق المتجر؟', 'a' => 'بين أسبوعين و6 أسابيع — يعتمد على حجم المتجر، عدد المنتجات، التخصيصات المطلوبة، والمنصة المختارة.' ],
+              [ 'q' => 'هل يشمل المشروع رفع المنتجات؟', 'a' => 'إعداد المتجر يشمل هيكل المتجر وعدد محدود من المنتجات النموذجية. رفع المنتجات خدمة منفصلة يمكن إضافتها للمشروع.' ],
+              [ 'q' => 'هل تنقلون متجري من منصة لأخرى؟', 'a' => 'نعم. ننقل المنتجات، الطلبات، العملاء، وأهم الروابط (مع الحفاظ على السيو) من منصة إلى أخرى — بدون فقدان بياناتك أو ترتيبك.' ],
+              [ 'q' => 'هل يمكن البدء بالسيو من اليوم الأول؟', 'a' => 'نعم — وننصح بذلك. نبني المتجر بأساس سيو سليم منذ البداية، ثم تنطلق خدمة السيو للمتاجر لاستثمار الفترة قبل الإطلاق وبعده.' ],
           ] as $faq ) :
           ?>
           <div class="faq-item">
@@ -281,8 +221,13 @@ get_header();
       <div class="cta-sticky">
         <div class="cta-side-card sr d1">
           <span class="tag d" style="position:relative;z-index:1;margin-bottom:10px">ابدأ الآن</span>
-          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1">جاهز لبناء<br>متجرك الاحترافي؟</h3>
-          <p style="font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:22px;position:relative;z-index:1">احجز استشارة مجانية ونحدد معاً المنصة المناسبة وخطة البناء.</p>
+          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1">جاهز لتجهيز<br>متجرك للبيع؟</h3>
+          <p style="font-size:13.5px;color:rgba(255,255,255,.44);line-height:1.8;margin-bottom:22px;position:relative;z-index:1">احجز استشارة مجانية، وسنناقش معاً المنصة الأنسب وخطة الإطلاق.</p>
+          <div class="chklist" style="margin-bottom:22px">
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>توصية بالمنصة الأنسب</div>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>عرض سعر شفاف</div>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>بدون أي التزام</div>
+          </div>
           <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p" style="width:100%;justify-content:center;position:relative;z-index:1">احجز استشارة مجانية</a>
         </div>
       </div>
@@ -292,8 +237,13 @@ get_header();
 
 <?php
 get_template_part( 'template-parts/layout/cta-banner', null, [
-    'tag'   => 'ابدأ الآن',
-    'title' => 'جاهز لبناء متجرك؟',
+    'tag'         => 'ابدأ الآن',
+    'title'       => 'ابدأ متجرك الإلكتروني اليوم',
+    'description' => 'من الفكرة إلى أول طلب — نُرافقك في كل خطوة.',
+    'buttons'     => [
+        [ 'text' => 'احجز استشارة مجانية', 'url' => sh_page_url( 'contact' ), 'class' => 'btn-w lg' ],
+        [ 'text' => 'خدمة رفع المنتجات', 'url' => sh_page_url( 'services/products' ), 'class' => 'btn-g lg' ],
+    ],
 ] );
 ?>
 

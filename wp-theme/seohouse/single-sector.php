@@ -1,96 +1,360 @@
 <?php
 /**
- * Single sector page
+ * Single sector page — matches Claude Design sector-*.html reference files
  */
 get_header();
 
 while ( have_posts() ) : the_post();
-    $hero_desc    = sh_field( 'hero_description' );
-    $challenges   = sh_field( 'challenges' );
-    $solutions    = sh_field( 'solutions' );
-    $related_cs   = sh_field( 'related_case_studies' );
-    $icon_svg     = sh_field( 'sector_icon_svg' );
-?>
 
-<?php
-get_template_part( 'template-parts/layout/page-hero', null, [
+$slug = get_post_field( 'post_name', get_the_ID() );
+
+// ─── Per-slug hardcoded content ───────────────────────────────────────────
+$sector_data = [];
+
+switch ( $slug ) {
+
+    case 'health':
+    case 'sector-health':
+        $sector_data = [
+            'badge_svg'  => '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+            'h1_pre'     => 'سيو ',
+            'h1_em'      => 'القطاع الصحي والطبي',
+            'sub'        => 'كل شهر، آلاف الأشخاص يبحثون عن "أفضل طبيب أسنان في الرياض" أو "عيادة جلدية بالخبر". إذا لم تكن عيادتك في النتائج الأولى — يذهب المريض إلى منافسك.',
+            'opps'       => [
+                [ 'h' => 'مرضى يبحثون عنك الآن',         'p' => 'البحث عن العيادات بدأ ينتقل بالكامل من السؤال إلى جوجل — والمريض يثق بالنتائج العضوية أكثر من الإعلانات.' ],
+                [ 'h' => 'تقليل الاعتماد على الإعلانات', 'p' => 'تكلفة الكلمة الواحدة في إعلانات Google Ads للقطاع الطبي مرتفعة جداً. السيو يبني بديلاً مستداماً.' ],
+                [ 'h' => 'بناء سمعة العيادة رقمياً',     'p' => 'الظهور في النتائج الأولى لا يجلب مرضى فقط — بل يبني ثقة وسمعة قبل أن يدخل المريض من الباب.' ],
+                [ 'h' => 'استقطاب الحالات النوعية',      'p' => 'المرضى الذين يبحثون عن تخصصات دقيقة يأتون عبر السيو — أعلى قيمة وأقل تكلفة لكل حالة.' ],
+            ],
+            'servs'      => [
+                [ 'h' => 'تحسين صفحات التخصّصات الطبية', 'p' => 'لكل تخصّص صفحة محسّنة تستهدف الكلمات التي يبحث بها المرضى فعلاً.' ],
+                [ 'h' => 'السيو المحلي للعيادات',         'p' => 'ظهور قوي في خرائط جوجل و"عيادة قرب موقعي" — حيث يبحث 70% من المرضى.' ],
+                [ 'h' => 'محتوى طبي موثوق',              'p' => 'مقالات يكتبها متخصّصون تبني ثقة المرضى وE-E-A-T لجوجل في القطاع الصحي.' ],
+                [ 'h' => 'تحسين Google Business Profile', 'p' => 'بطاقة جوجل بمحتوى محسّن، صور، تقييمات، وأسئلة شائعة جاهزة.' ],
+                [ 'h' => 'سيو متعدد الفروع',              'p' => 'استراتيجية موحّدة لكل فروع العيادة مع تخصيص لكل موقع جغرافي.' ],
+                [ 'h' => 'تقارير تربط البحث بالحجوزات',  'p' => 'تقرير شهري يربط زيارات البحث بعدد الحجوزات الفعلية.' ],
+            ],
+            'faqs'       => [
+                [ 'q' => 'هل السيو الطبي يختلف عن غيره؟',          'a' => 'نعم بشكل كبير. المحتوى الصحي يخضع لمعايير YMYL الصارمة من جوجل، ويحتاج موثوقية طبية حقيقية. نتعامل مع هذا بكتّاب متخصّصين ومراجعين أطبّاء.' ],
+                [ 'q' => 'هل يمكنكم العمل مع عيادات متعدّدة الفروع؟', 'a' => 'بالطبع. نضع استراتيجية سيو محلية لكل فرع مع بنية موحّدة تُعزّز سلطة العلامة التجارية للعيادة ككل.' ],
+                [ 'q' => 'كم أحتاج من الوقت لرؤية نتائج؟',          'a' => 'للعيادات الجديدة 4-6 أشهر لبدء الظهور. للعيادات القائمة، تحسينات ملحوظة خلال 3 أشهر.' ],
+            ],
+        ];
+        break;
+
+    case 'legal':
+    case 'sector-legal':
+        $sector_data = [
+            'badge_svg'  => '<path d="M3 6l9 6 9-6"/><path d="M3 6v12l9 6 9-6V6"/>',
+            'h1_pre'     => 'سيو ',
+            'h1_em'      => 'قطاع القانون والاستشارات',
+            'sub'        => 'حين يحتاج شخص محامياً، أوّل ما يفعله هو البحث في جوجل. الباحثون عن الخدمات القانونية يحملون نية تعاقد فورية — والمحامي الذي يظهر في النتائج الأولى هو من يحصل على القضية.',
+            'opps'       => [
+                [ 'h' => 'عملاء بنية تعاقد فورية',         'p' => 'لا أحد يبحث عن "محامي تعويضات حوادث" بدافع الفضول — كل باحث هو عميل محتمل بقضية حقيقية.' ],
+                [ 'h' => 'قضايا بقيمة عالية',             'p' => 'القضايا التي تأتي عبر البحث العضوي عادة بقيمة أعلى من قضايا الإحالات أو الإعلانات.' ],
+                [ 'h' => 'تخصّصات قانونية لا منافسة عليها', 'p' => 'مكاتب كثيرة تتنافس على "محامي" — لكن قليلون يستهدفون "محامي قضايا تجارية + المدينة".' ],
+                [ 'h' => 'بناء مصداقية المكتب',           'p' => 'محتوى قانوني عميق يبني خبرة المكتب أمام العميل قبل أي اجتماع — نصف الإقناع تمّ قبل المكالمة.' ],
+            ],
+            'servs'      => [
+                [ 'h' => 'صفحات التخصّصات القانونية',       'p' => 'لكل تخصّص (تجاري، عمل، أحوال شخصية، عقاري) صفحة سيو مستقلّة تستهدف قضاياه.' ],
+                [ 'h' => 'سيو محلي للمكتب',                 'p' => 'ظهور قوي على "محامي + المدينة" — الكلمات الأكثر بحثاً في القطاع القانوني.' ],
+                [ 'h' => 'محتوى قانوني متخصّص',             'p' => 'مقالات يكتبها متخصّصون قانونيون تستهدف الأسئلة الشائعة لقضايا كل تخصّص.' ],
+                [ 'h' => 'تحسين السمعة والتقييمات',         'p' => 'استراتيجية تقييمات Google تبني ثقة العميل قبل التواصل الأول.' ],
+                [ 'h' => 'سيو الخدمات الاستشارية',          'p' => 'لشركات الاستشارات: استهداف كلمات تجارية لقطاعات الاستشارة المحدّدة.' ],
+                [ 'h' => 'تقارير تربط البحث بالاستفسارات', 'p' => 'تقرير شهري يربط الزيارات العضوية بعدد الاستفسارات الجادّة.' ],
+            ],
+            'faqs'       => [
+                [ 'q' => 'هل المحتوى القانوني يتطلّب معاملة خاصة؟',         'a' => 'نعم — هو ضمن فئة YMYL ويحتاج E-E-A-T قوياً. نحرص أن تعكس كل صفحة خبرة قانونية حقيقية ومراجَعة من متخصّص.' ],
+                [ 'q' => 'كم تستغرق رؤية النتائج لمكتب محاماة؟',           'a' => 'يختلف حسب التخصّص والمنطقة — عادة 3-6 أشهر لكلمات التخصّص، أطول لكلمات عامة مثل "محامي + الرياض".' ],
+                [ 'q' => 'هل تعملون مع شركات الاستشارات الإدارية والمالية؟', 'a' => 'نعم، ولدينا منهجية متخصّصة لكل نوع استشارات بحسب جمهوره وكلماته المفتاحية.' ],
+            ],
+        ];
+        break;
+
+    case 'education':
+    case 'sector-education':
+        $sector_data = [
+            'badge_svg'  => '<path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>',
+            'h1_pre'     => 'سيو ',
+            'h1_em'      => 'قطاع التعليم والتدريب',
+            'sub'        => 'الطلاب وأولياء الأمور يبدؤون البحث في جوجل قبل اتخاذ قرار التسجيل. إذا لم تظهر منصّتك في النتائج الأولى عند البحث عن دورتك، يذهب المتعلّم إلى منافسك.',
+            'opps'       => [
+                [ 'h' => 'تسجيلات بدون تكلفة إعلانية',  'p' => 'كل طالب يأتيك من البحث العضوي يوفّر عليك تكلفة الإعلان — تستثمرها في جودة التعليم.' ],
+                [ 'h' => 'استقطاب الجمهور الجاد',        'p' => 'الباحثون عن البرامج التعليمية لديهم نية تسجيل واضحة — معدّل تحويل أعلى بكثير من زيارات الإعلانات.' ],
+                [ 'h' => 'بناء مصداقية المؤسسة',         'p' => 'الظهور في النتائج الأولى مع محتوى عميق يبني الثقة قبل التواصل — لا تحتاج لإقناع، الباحث جاء مقتنعاً.' ],
+                [ 'h' => 'استقطاب المسجّلين دولياً',    'p' => 'الطلاب من خارج السعودية يصلون إلى منصّتك فقط عبر البحث — السيو يفتح أسواقاً جديدة.' ],
+            ],
+            'servs'      => [
+                [ 'h' => 'تحسين صفحات البرامج والدورات', 'p' => 'كل برنامج تدريبي صفحة سيو مستقلّة تستهدف كلمات محدّدة بنية تسجيل.' ],
+                [ 'h' => 'السيو المحلي للمدارس والمراكز', 'p' => 'ظهور قوي على بحث "مدارس + المدينة" — حيث يبدأ الآباء بحثهم.' ],
+                [ 'h' => 'محتوى تعليمي جاذب',            'p' => 'مقالات تجذب الطلاب في مرحلة البحث وتُرشدهم تدريجياً نحو التسجيل.' ],
+                [ 'h' => 'استراتيجية المسارات التعليمية', 'p' => 'محتوى يستهدف كل مرحلة من رحلة الطالب (تعريف، مقارنة، تسجيل).' ],
+                [ 'h' => 'سيو المنصّات الإلكترونية',     'p' => 'تحسين خاص لمنصّات التعلّم الإلكتروني والكورسات أونلاين.' ],
+                [ 'h' => 'تقارير تربط البحث بالتسجيل',  'p' => 'تقرير شهري يربط الزيارات العضوية بعدد التسجيلات الفعلية.' ],
+            ],
+            'faqs'       => [
+                [ 'q' => 'هل السيو مناسب للمدارس الخاصة؟',              'a' => 'نعم. الآباء يبحثون عن المدارس في جوجل قبل أي قرار، والظهور في المراتب الأولى يؤثّر مباشرة على نسبة التسجيل.' ],
+                [ 'q' => 'هل تعملون مع منصّات التعلّم الإلكتروني؟',    'a' => 'بالتأكيد، ولدينا منهجية متخصّصة لمنصّات التعلّم الإلكتروني تتعامل مع تنوّع الدورات والمسارات.' ],
+                [ 'q' => 'كم تكلفة السيو مقابل الإعلانات للقطاع التعليمي؟', 'a' => 'على المدى البعيد، تكلفة الطالب من السيو أقل بـ 60-80% من تكلفته عبر Google Ads.' ],
+            ],
+        ];
+        break;
+
+    case 'food':
+    case 'sector-food':
+    case 'restaurants':
+        $sector_data = [
+            'badge_svg'  => '<path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>',
+            'h1_pre'     => 'سيو ',
+            'h1_em'      => 'قطاع الأغذية والمطاعم',
+            'sub'        => 'كل ليلة، مئات الأشخاص يبحثون عن "أفضل مطعم برجر في الرياض" أو "مطعم عائلي قرب موقعي". إذا لم يظهر مطعمك أو فروعك في النتائج الأولى — يطلبون من غيرك.',
+            'opps'       => [
+                [ 'h' => 'طلبات بدون اشتراك بمنصّات التوصيل', 'p' => 'بدلاً من دفع 25-35% عمولة لمنصّات التوصيل، الطلب المباشر من البحث = هامش ربح أعلى لكل وجبة.' ],
+                [ 'h' => 'حجوزات للمناسبات والعائلات',        'p' => 'الباحث عن "مطعم للعائلات" أو "مكان عيد ميلاد" — هذه حجوزات بقيمة عالية لا تأتي من الإعلانات.' ],
+                [ 'h' => 'بناء العلامة عبر سلسلة فروع',      'p' => 'كل فرع يظهر منفصلاً في نتائج البحث المحلية — مع توحيد قوّة العلامة على المستوى العام.' ],
+                [ 'h' => 'تقليل الاعتماد على الإعلانات',     'p' => 'الإعلانات للمطاعم مكلفة وعابرة. السيو يبني حضوراً ثابتاً يجلب طلبات مستمرة.' ],
+            ],
+            'servs'      => [
+                [ 'h' => 'السيو المحلي لكل فرع',               'p' => 'صفحات مخصّصة لكل فرع تظهر على بحث "اسم المطعم + الحي" وتزيد الطلبات المباشرة.' ],
+                [ 'h' => 'تحسين Google Business Profile',      'p' => 'بطاقة جوجل بكل التفاصيل (قوائم، صور، تقييمات، حجز) جاهزة لتحويل الباحث لعميل.' ],
+                [ 'h' => 'محتوى يجذب الباحثين عن الطعام',    'p' => 'مقالات عن أنواع الطعام، الوصفات، والمناسبات — تجلب باحثين يصبحون عملاء.' ],
+                [ 'h' => 'تحسين قوائم الطعام للسيو',          'p' => 'كل طبق يظهر في صفحة محسّنة — بحث "بيتزا مارجريتا + المدينة" يجلب طالبين مستهدفين.' ],
+                [ 'h' => 'إدارة وتحسين التقييمات',            'p' => 'استراتيجية تقييمات تبني ثقة الباحثين في المطعم قبل دخوله أو الطلب منه.' ],
+                [ 'h' => 'سيو للمناسبات الموسمية',            'p' => 'استهداف البحث المرتبط بالمواسم (رمضان، الأعياد، العطلات) قبل وقتها بأشهر.' ],
+            ],
+            'faqs'       => [
+                [ 'q' => 'كيف يساعد السيو مطعمي المحلي؟',                     'a' => 'أكثر من 70% من البحث عن المطاعم يبدأ من جوجل. ظهورك في المراتب الأولى يعني طلبات مباشرة بدون عمولة منصّات التوصيل.' ],
+                [ 'q' => 'هل تشمل الخدمة سلاسل المطاعم متعدّدة الفروع؟',    'a' => 'نعم، نضع استراتيجية سيو محلية لكل فرع مع بنية موحّدة للعلامة التجارية.' ],
+                [ 'q' => 'ما الفرق بين السيو وإعلانات أوبر إيتس / جاهز / هنقرستيشن؟', 'a' => 'منصّات التوصيل تأخذ 25-35% عمولة على كل طلب. السيو يجلب طلبات مباشرة بدون عمولة — ربح أعلى لكل وجبة.' ],
+            ],
+        ];
+        break;
+
+    case 'tech':
+    case 'sector-tech':
+    case 'technology':
+        $sector_data = [
+            'badge_svg'  => '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
+            'h1_pre'     => 'سيو ',
+            'h1_em'      => 'قطاع التقنية والبرمجيات',
+            'sub'        => 'متّخذو القرار التقني يبحثون قبل أي قرار شراء. شركة SaaS التي تظهر في "أفضل برنامج CRM في السعودية" أو "نظام محاسبة سحابي" تحصل على ليدز عالية القيمة قبل المنافسين.',
+            'opps'       => [
+                [ 'h' => 'ليدز B2B بنية شراء عالية',   'p' => 'الباحث عن "أفضل CRM لتجار الجملة" هو مدير عمليات يبحث لقرار شراء — ليد عالي القيمة جداً.' ],
+                [ 'h' => 'تقليل CAC بشكل دراماتيكي',   'p' => 'تكلفة الليد B2B عبر LinkedIn Ads أو Google Ads مرتفعة جداً. السيو يخفّض CAC بنسبة 50-70%.' ],
+                [ 'h' => 'بناء سلطة قطاعية',           'p' => 'الشركات التقنية التي تنتج محتوى عميق تُصبح "اسم المنتج" بحدّ ذاته في القطاع.' ],
+                [ 'h' => 'دورة بيع أقصر',               'p' => 'العميل الذي يصل عبر السيو قد قرأ محتواك وفهم منتجك — يحتاج محادثات أقل قبل الشراء.' ],
+            ],
+            'servs'      => [
+                [ 'h' => 'سيو الكلمات المقارنة',          'p' => 'استهداف "بديل لـX" و"X مقابل Y" — الباحثون هنا جاهزون للشراء فوراً.' ],
+                [ 'h' => 'محتوى تقني متخصّص',            'p' => 'مقالات تقنية يكتبها متخصّصون تجذب صانعي القرار وتُحوّلهم لليدز.' ],
+                [ 'h' => 'تحسين صفحات الميزات',          'p' => 'كل ميزة في منتجك صفحة محسّنة تستهدف الكلمات الخاصة بها.' ],
+                [ 'h' => 'سيو دولي للبرمجيات',           'p' => 'لشركات SaaS التي تستهدف السعودية والخليج وأبعد — منهجية متعدّدة اللغات.' ],
+                [ 'h' => 'تكامل CRM وقياس الليدز',       'p' => 'ربط زيارات السيو بنظام CRM الخاص بك لتتبّع كل ليد من المصدر للصفقة.' ],
+                [ 'h' => 'استراتيجية محتوى بيانية',      'p' => 'مدوّنة محتوى تقني مبنية على بحث الكلمات + هرم المحتوى لتغطية القطاع كاملاً.' ],
+            ],
+            'faqs'       => [
+                [ 'q' => 'هل السيو مناسب لشركات SaaS؟',                'a' => 'بشكل خاص. سيو SaaS يركّز على كلمات نية الشراء وقياس تكلفة الليد من البحث العضوي مقابل القنوات الأخرى.' ],
+                [ 'q' => 'كيف تتعاملون مع المصطلحات التقنية في المحتوى؟', 'a' => 'لدينا كتّاب محتوى يفهمون الجانبين — التقني والتسويقي — لإنتاج محتوى يُقنع متّخذي القرار ويُرضي جوجل.' ],
+                [ 'q' => 'هل تعملون مع شركات تستهدف السوق الدولي؟',   'a' => 'نعم، نقدّم سيو ثنائي اللغة (عربي/إنجليزي) لشركات SaaS التي تستهدف السعودية والخليج والسوق الدولي.' ],
+            ],
+        ];
+        break;
+
+    default:
+        // Generic fallback using ACF fields
+        $sector_data = [];
+        break;
+}
+
+$contact_url  = sh_page_url( 'contact' );
+$sectors_url  = sh_page_url( 'sectors' );
+$seo_url      = sh_page_url( 'services/seo' );
+
+// If no hardcoded data, use ACF / generic
+if ( empty( $sector_data ) ) :
+    $hero_desc  = sh_field( 'hero_description' );
+    $challenges = sh_field( 'challenges' );
+    $solutions  = sh_field( 'solutions' );
+    $related_cs = sh_field( 'related_case_studies' );
+?>
+<?php get_template_part( 'template-parts/layout/page-hero', null, [
     'tag'         => 'القطاع',
     'title'       => get_the_title(),
     'description' => $hero_desc ?: get_the_excerpt(),
-    'breadcrumb'  => [
-        'القطاعات'      => sh_page_url( 'sectors' ),
-        get_the_title() => '',
-    ],
-    'buttons' => [
-        [ 'text' => 'احجز استشارة مجانية', 'url' => sh_page_url( 'contact' ), 'class' => 'btn-p lg' ],
-    ],
-] );
-?>
+    'breadcrumb'  => [ 'القطاعات' => $sectors_url, get_the_title() => '' ],
+    'buttons' => [ [ 'text' => 'احجز استشارة مجانية', 'url' => $contact_url, 'class' => 'btn-p lg' ] ],
+] ); ?>
 
 <?php if ( get_the_content() ) : ?>
-<section class="sec sec-white">
-  <div class="wrap">
-    <div style="max-width:760px">
-      <div class="post-content"><?php the_content(); ?></div>
-    </div>
-  </div>
-</section>
+<section class="sec sec-white"><div class="wrap"><div style="max-width:760px"><div class="post-content"><?php the_content(); ?></div></div></div></section>
 <?php endif; ?>
 
 <?php if ( ! empty( $challenges ) ) : ?>
-<section class="sec sec-surface">
-  <div class="wrap">
-    <div class="sh sr"><span class="tag">التحديات</span><h2 class="h2">تحديات هذا القطاع</h2></div>
-    <div class="sector-challenges">
-      <?php foreach ( $challenges as $idx => $ch ) : ?>
-      <div class="sc-card sr <?php echo ( $idx % 2 === 1 ) ? 'd1' : ''; ?>">
-        <?php if ( ! empty( $ch['icon'] ) ) : ?>
-          <div class="val-ico" style="margin-bottom:14px;margin-inline:0"><?php echo wp_kses( $ch['icon'], [ 'svg' => [ 'viewBox' => true, 'fill' => true, 'stroke' => true, 'stroke-width' => true, 'width' => true, 'height' => true ], 'path' => [ 'd' => true ], 'polyline' => [ 'points' => true ], 'circle' => [ 'cx' => true, 'cy' => true, 'r' => true ], 'rect' => [ 'x' => true, 'y' => true, 'width' => true, 'height' => true, 'rx' => true ] ] ); ?></div>
-        <?php endif; ?>
-        <h3><?php echo esc_html( $ch['title'] ?? '' ); ?></h3>
-        <p><?php echo esc_html( $ch['desc'] ?? '' ); ?></p>
-      </div>
-      <?php endforeach; ?>
+<section class="sec sec-surface"><div class="wrap">
+  <div class="sh sr"><span class="tag">التحديات</span><h2 class="h2">تحديات هذا القطاع</h2></div>
+  <div class="sector-challenges">
+    <?php foreach ( $challenges as $idx => $ch ) : ?>
+    <div class="sc-card sr <?php echo ( $idx % 2 === 1 ) ? 'd1' : ''; ?>">
+      <h3><?php echo esc_html( $ch['title'] ?? '' ); ?></h3>
+      <p><?php echo esc_html( $ch['desc'] ?? '' ); ?></p>
     </div>
+    <?php endforeach; ?>
   </div>
-</section>
+</div></section>
 <?php endif; ?>
 
 <?php if ( ! empty( $solutions ) ) : ?>
+<section class="sec sec-white"><div class="wrap">
+  <div class="sh sr"><span class="tag">الحلول</span><h2 class="h2">كيف نُحسّن حضورك في هذا القطاع</h2></div>
+  <div class="features-grid">
+    <?php foreach ( $solutions as $idx => $sol ) : ?>
+    <div class="feat-card sr <?php echo ( $idx % 3 === 1 ) ? 'd1' : ( ( $idx % 3 === 2 ) ? 'd2' : '' ); ?>">
+      <h3><?php echo esc_html( $sol['title'] ?? '' ); ?></h3>
+      <p><?php echo esc_html( $sol['desc'] ?? '' ); ?></p>
+    </div>
+    <?php endforeach; ?>
+  </div>
+</div></section>
+<?php endif; ?>
+
+<?php else : ?>
+
+<!-- ─── HERO ───────────────────────────────────────────────────────────── -->
+<section class="svc-hero">
+  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,#000 10%,transparent 75%);pointer-events:none"></div>
+  <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-start:-200px;bottom:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(30,46,245,.22),transparent 65%)"></div>
+  <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-end:-100px;top:0;width:480px;height:480px;background:radial-gradient(circle,rgba(30,46,245,.12),transparent 65%)"></div>
+  <div class="wrap">
+    <div class="svc-hero-inner">
+      <div class="breadcrumb" style="justify-content:center;margin-bottom:22px">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">الرئيسية</a>
+        <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        <a href="<?php echo esc_url( $sectors_url ); ?>">القطاعات</a>
+        <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        <span style="color:rgba(255,255,255,.55)"><?php echo esc_html( $sector_data['h1_em'] ?? get_the_title() ); ?></span>
+      </div>
+      <div class="sec-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $sector_data['badge_svg']; // phpcs:ignore ?></svg>
+        قطاع متخصّص
+      </div>
+      <h1 style="font-size:clamp(32px,5vw,60px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px">
+        <?php echo esc_html( $sector_data['h1_pre'] ?? '' ); ?><em style="font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite"><?php echo esc_html( $sector_data['h1_em'] ?? get_the_title() ); ?></em>
+      </h1>
+      <p style="font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.55);max-width:680px;margin-inline:auto;margin-bottom:30px"><?php echo esc_html( $sector_data['sub'] ?? '' ); ?></p>
+      <div class="pbtns">
+        <a href="<?php echo esc_url( $contact_url ); ?>" class="btn btn-p lg">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          احجز استشارة مجانية
+        </a>
+        <a href="<?php echo esc_url( $seo_url ); ?>" class="btn btn-g lg">جميع خدمات السيو</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── OPPORTUNITIES ───────────────────────────────────────────────────── -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div class="sh sr"><span class="tag">الحلول</span><h2 class="h2">كيف نُحسّن حضورك في هذا القطاع</h2></div>
-    <div class="features-grid">
-      <?php foreach ( $solutions as $idx => $sol ) : ?>
-      <div class="feat-card sr <?php echo ( $idx % 3 === 1 ) ? 'd1' : ( ( $idx % 3 === 2 ) ? 'd2' : '' ); ?>">
-        <div class="ico-box lg" style="margin-bottom:16px">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <div class="sh c sr"><span class="tag">الفرص في قطاعك</span><h2 class="h2">ماذا يحدث حين تتصدّر البحث في قطاعك؟</h2><p class="bod">الفرص الفعلية التي يكشفها السيو لمن يعمل في هذا القطاع — لا أرقام عامة، بل ما يحدث فعلاً.</p></div>
+    <div class="opp-grid">
+      <?php foreach ( $sector_data['opps'] as $i => $opp ) : ?>
+      <div class="opp-card sr <?php echo [ '', 'd1', 'd2', 'd3' ][ $i % 4 ]; ?>">
+        <div class="opp-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg>
         </div>
-        <h3><?php echo esc_html( $sol['title'] ?? '' ); ?></h3>
-        <p><?php echo esc_html( $sol['desc'] ?? '' ); ?></p>
+        <div class="opp-body">
+          <h3><?php echo esc_html( $opp['h'] ); ?></h3>
+          <p><?php echo esc_html( $opp['p'] ); ?></p>
+        </div>
       </div>
       <?php endforeach; ?>
     </div>
   </div>
 </section>
-<?php endif; ?>
 
-<?php if ( ! empty( $related_cs ) ) : ?>
+<!-- ─── SERVICES ────────────────────────────────────────────────────────── -->
 <section class="sec sec-surface">
   <div class="wrap">
-    <div class="sh sr"><span class="tag">نتائج</span><h2 class="h2">مشاريع من هذا القطاع</h2></div>
-    <div class="results-grid">
-      <?php foreach ( $related_cs as $cs_post ) : ?>
-        <?php
-        global $post;
-        $post = get_post( $cs_post );
-        setup_postdata( $post );
-        get_template_part( 'template-parts/cards/case-study-card' );
-        ?>
-      <?php endforeach; wp_reset_postdata(); ?>
+    <div class="sh c sr"><span class="tag">ماذا نفعل في هذا القطاع</span><h2 class="h2">خدمة سيو مُفصّلة على قطاعك</h2><p class="bod">لكل قطاع منهجيته. الكلمات المفتاحية، نوع المحتوى، طريقة بناء الثقة — كلها تختلف.</p></div>
+    <div class="serv-grid">
+      <?php foreach ( $sector_data['servs'] as $i => $serv ) : ?>
+      <div class="serv-card sr <?php echo [ '', 'd1', 'd2', 'd3', 'd1', 'd2' ][ $i % 6 ]; ?>">
+        <div class="serv-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3><?php echo esc_html( $serv['h'] ); ?></h3>
+        <p><?php echo esc_html( $serv['p'] ); ?></p>
+      </div>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
+
+<!-- ─── WHY DIFFERENT ────────────────────────────────────────────────────── -->
+<section class="sec sec-navy">
+  <div class="wrap">
+    <div class="snap-grid">
+      <div class="sr">
+        <span class="tag d" style="margin-bottom:12px">خبرة قطاعية حقيقية</span>
+        <h2 class="h2 wh" style="margin-bottom:16px">سيو هذا القطاع<br>يختلف عن سيو غيره</h2>
+        <p class="bod d" style="margin-bottom:24px">لكل قطاع جمهوره، كلماته، ومنهجيته. وكالة السيو العامة قد تنجح في قطاع، لكنها تفشل في آخر — لأن ما يعمل لمتجر سلة لا يعمل لمكتب محاماة.</p>
+        <div class="chklist sr d1" style="margin-bottom:26px">
+          <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>كلمات مفتاحية محسوبة بدقّة لقطاعك</div>
+          <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>محتوى يكتبه متخصّصون يفهمون مجالك</div>
+          <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>تحليل للمنافسين الحقيقيين في قطاعك</div>
+          <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>تقارير بمؤشرات تجارية تخصّ قطاعك</div>
+        </div>
+        <a href="<?php echo esc_url( $contact_url ); ?>" class="btn btn-p sr d2">احجز استشارة مجانية</a>
+      </div>
+      <div class="sr d1">
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r4);padding:32px;position:relative;overflow:hidden">
+          <div style="position:absolute;inset-inline-end:-50px;top:-50px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(16,185,129,.18),transparent 70%)"></div>
+          <div style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px;position:relative;z-index:1">نتيجة تخصّصنا</div>
+          <div style="font-size:clamp(24px,3vw,32px);font-weight:900;color:#fff;line-height:1.3;letter-spacing:-.02em;position:relative;z-index:1">نُخطّط، نُنفّذ، ونقيس بمؤشرات قطاعك — لا بمؤشرات عامة لا تخدمك.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FAQ + CTA ─────────────────────────────────────────────────────────── -->
+<section class="sec sec-white">
+  <div class="wrap">
+    <div class="faq-cta-layout">
+      <div>
+        <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2">أسئلة قطاعية</h2></div>
+        <div class="faq-list sr d1">
+          <?php foreach ( $sector_data['faqs'] as $faq ) : ?>
+          <div class="faq-item">
+            <div class="faq-q">
+              <span><?php echo esc_html( $faq['q'] ); ?></span>
+              <div class="faq-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </div>
+            </div>
+            <div class="faq-a"><div class="faq-a-inner"><?php echo esc_html( $faq['a'] ); ?></div></div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
+      <div class="cta-sticky">
+        <div class="cta-side-card sr d1">
+          <span class="tag d" style="position:relative;z-index:1;margin-bottom:10px">ابدأ الآن</span>
+          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1">جاهز لتتصدّر<br>في قطاعك؟</h3>
+          <p style="font-size:13.5px;color:rgba(255,255,255,.44);line-height:1.8;margin-bottom:22px;position:relative;z-index:1">احجز استشارة مجانية ولنُحلّل وضعك في قطاعك تحديداً.</p>
+          <div class="chklist" style="margin-bottom:22px">
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>تحليل وضعك في القطاع</div>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>اقتراح استراتيجية مناسبة</div>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>بدون أي التزام</div>
+          </div>
+          <a href="<?php echo esc_url( $contact_url ); ?>" class="btn btn-p" style="width:100%;justify-content:center;position:relative;z-index:1">احجز استشارة مجانية</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <?php endif; ?>
 
 <?php
@@ -98,8 +362,6 @@ get_template_part( 'template-parts/layout/cta-banner', null, [
     'tag'   => 'ابدأ الآن',
     'title' => 'هل نشاطك في هذا القطاع؟',
 ] );
-?>
 
-<?php endwhile; ?>
-
-<?php get_footer(); ?>
+endwhile;
+get_footer();
