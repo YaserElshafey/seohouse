@@ -1,15 +1,9 @@
 <?php
 /**
- * Case study archive — renders the full results page.
- * If a static "results" page exists (with template-results.php), redirect to it.
- * Otherwise, render the full results UI directly so /results/ always works.
+ * Case study archive — renders the full results page UI.
+ * No redirect: both this archive and template-results.php render the same content.
+ * Redirecting to get_permalink('results') would loop back to this same URL.
  */
-
-$results_page = get_page_by_path( 'results' );
-if ( $results_page && get_post_meta( $results_page->ID, '_wp_page_template', true ) !== '' ) {
-    wp_redirect( get_permalink( $results_page->ID ), 301 );
-    exit;
-}
 
 get_header();
 
