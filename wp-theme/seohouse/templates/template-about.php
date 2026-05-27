@@ -9,7 +9,7 @@ get_header();
 get_template_part( 'template-parts/layout/page-hero', null, [
     'tag'         => 'قصتنا',
     'title'       => 'نعمل بمنطق <em>الأداء</em><br>لا بمنطق الوعود',
-    'description' => 'سيو هاوس شركة سعودية متخصصة في تحسين محركات البحث. نحن لا نُقدّم وعوداً — نُقدّم خطوات واضحة ونتائج قابلة للقياس.',
+    'description' => 'سيو هاوس متخصصون في تحسين محركات البحث، يخدمون الأسواق السعودية والخليجية. لا نُقدّم وعوداً — نُقدّم خطوات واضحة ونتائج قابلة للقياس.',
     'breadcrumb'  => [ 'عن الشركة' => '' ],
 ] );
 ?>
@@ -20,7 +20,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
       <div class="sr">
         <span class="tag" style="margin-bottom:12px">من نحن</span>
         <h2 class="h2" style="margin-bottom:16px">متخصصون في السيو،<br>لا في كل شيء</h2>
-        <p class="bod" style="margin-bottom:18px">سيو هاوس شركة تأسست لخدمة الأعمال السعودية الباحثة عن حضور رقمي حقيقي في محركات البحث. لم نبنِ شركتنا على الوعود — بنيناها على نتائج يمكن قياسها في Search Console.</p>
+        <p class="bod" style="margin-bottom:18px">سيو هاوس تأسست لخدمة الأعمال السعودية والخليجية الباحثة عن حضور رقمي حقيقي في محركات البحث. لم نبنِ عملنا على الوعود — بنيناه على نتائج يمكن قياسها في Search Console.</p>
         <p class="bod" style="margin-bottom:24px">نؤمن أن أفضل طريقة لإثبات قيمتنا هي أن نعمل بشفافية كاملة — تقرير شهري، أهداف محددة، وتواصل مباشر مع الفريق المنفذ.</p>
         <a href="<?php echo esc_url( sh_page_url( 'team' ) ); ?>" class="btn btn-o">تعرّف على فريقنا</a>
       </div>

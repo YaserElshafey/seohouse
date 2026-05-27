@@ -1,7 +1,7 @@
 <?php
 $logo_white = sh_option( 'logo_white' );
 $logo_white_url = ! empty( $logo_white['url'] ) ? $logo_white['url'] : get_template_directory_uri() . '/assets/images/logo-white.png';
-$footer_desc = sh_option( 'footer_desc', 'شركة سعودية متخصصة في تحسين محركات البحث وبناء المتاجر الإلكترونية. نعمل بمنطق الأداء ونقيس كل خطوة.' );
+$footer_desc = sh_option( 'footer_desc', 'متخصصون في تحسين محركات البحث وبناء المتاجر الإلكترونية. نخدم الأسواق السعودية والخليجية ونعمل بمنطق الأداء.' );
 $copyright   = sh_option( 'footer_copyright', '© ' . date( 'Y' ) . ' سيو هاوس. جميع الحقوق محفوظة.' );
 $twitter_url = sh_option( 'social_twitter',   '#' );
 $linkedin_url = sh_option( 'social_linkedin',  '#' );
@@ -47,7 +47,6 @@ $instagram_url = sh_option( 'social_instagram', '#' );
             ?>
             <div class="foot-links">
               <a href="<?php echo esc_url( sh_page_url( 'services/seo' ) ); ?>">خدمة السيو الشاملة</a>
-              <a href="<?php echo esc_url( sh_page_url( 'services/seo/stores-seo' ) ); ?>">سيو المتاجر الإلكترونية</a>
               <a href="<?php echo esc_url( sh_page_url( 'services/seo/backlinks' ) ); ?>">بناء الباك لينك</a>
               <a href="<?php echo esc_url( sh_page_url( 'services/seo/content' ) ); ?>">كتابة المحتوى</a>
               <a href="<?php echo esc_url( sh_page_url( 'services/seo/consulting' ) ); ?>">استشارات الأداء</a>

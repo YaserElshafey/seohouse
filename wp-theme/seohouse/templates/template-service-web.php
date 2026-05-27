@@ -131,52 +131,28 @@ get_header();
 <!-- Tech Stack -->
 <section class="sec sec-navy">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag d">التقنيات</span><h2 class="h2 wh">نبني بأحدث التقنيات — ونختار الأنسب لك</h2><p class="bod d">لا نتعصب لتقنية واحدة — نختار الأداة التي تخدم مشروعك على المدى البعيد.</p></div>
-    <div class="tech-grid">
-      <?php
-      foreach ( [
-          [ 'abbr' => 'WP',  'title' => 'ووردبريس',    'desc' => 'مرن، SEO-friendly، وأشهر CMS في العالم'    ],
-          [ 'abbr' => 'WF',  'title' => 'ويب فلو',      'desc' => 'تصاميم بصرية استثنائية بدون تضحية في الأداء' ],
-          [ 'abbr' => 'Rx',  'title' => 'رياكت',         'desc' => 'واجهات ديناميكية ومنتجات رقمية متقدمة'        ],
-          [ 'abbr' => 'Nx',  'title' => 'نكست.جي إس',   'desc' => 'أداء استثنائي مع SSR وSEO تلقائي'           ],
-          [ 'abbr' => 'TS',  'title' => 'تيل ويند',      'desc' => 'تصميم سريع وقابل للتوسع بدون فوضى CSS'      ],
-          [ 'abbr' => 'PG',  'title' => 'بوستجريس',      'desc' => 'قاعدة بيانات موثوقة للتطبيقات المعقدة'       ],
-          [ 'abbr' => 'V',   'title' => 'فيرسيل',        'desc' => 'نشر فوري مع CDN عالمي وأداء مثالي'          ],
-          [ 'abbr' => 'CF',  'title' => 'كلاود فلير',    'desc' => 'حماية وأمان وسرعة تحميل من كل مكان'         ],
-      ] as $tc ) :
-      ?>
-      <div class="tech-card sr">
-        <div class="tech-logo"><?php echo esc_html( $tc['abbr'] ); ?></div>
-        <h3><?php echo esc_html( $tc['title'] ); ?></h3>
-        <p><?php echo esc_html( $tc['desc'] ); ?></p>
-      </div>
-      <?php endforeach; ?>
+    <div class="sh c sr"><span class="tag d">التقنيات</span><h2 class="h2 wh">التقنيات التي نعمل بها</h2><p class="bod d">نختار التقنية الأنسب لكل مشروع — لا نُجبر العميل على تقنية واحدة.</p></div>
+    <div class="tech-grid sr d1">
+      <div class="tech-card"><div class="tech-logo">WP</div><h3>WordPress</h3><p>الأكثر مرونة وانتشاراً — مناسب لمعظم المواقع</p></div>
+      <div class="tech-card"><div class="tech-logo" style="background:rgba(99,102,241,.18);color:#a5b4fc">WF</div><h3>Webflow</h3><p>تصاميم متقدمة بصرياً وأداء عالٍ</p></div>
+      <div class="tech-card"><div class="tech-logo" style="background:rgba(16,185,129,.18);color:#6ee7b7">N</div><h3>Next.js / React</h3><p>تطوير مخصّص للمواقع التي تتطلب أداءً وتعقيداً عالياً</p></div>
+      <div class="tech-card"><div class="tech-logo" style="background:rgba(250,204,21,.16);color:#fde68a">PHP</div><h3>تطوير برمجي مخصّص</h3><p>لاحتياجاتك الخاصة وأنظمة الإدارة المعقدة</p></div>
     </div>
+    <p style="text-align:center;font-size:13px;color:rgba(255,255,255,.45);margin-top:28px;max-width:560px;margin-inline:auto;line-height:1.85" class="sr d2">لا نتعصّب لتقنية معيّنة — في الاستشارة الأولى نناقش معك المشروع ونوصي بالتقنية الأنسب.</p>
   </div>
 </section>
 
 <!-- What Makes Effective -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">ما يصنع الفرق</span><h2 class="h2">ستة عناصر تحدد إن كان موقعك يبيع أو لا</h2><p class="bod">هذه ليست تفاصيل تقنية — هي قرارات تجارية تُحسم في مرحلة التصميم.</p></div>
+    <div class="sh c sr"><span class="tag">ما يُحدث الفرق</span><h2 class="h2">ما الذي يجعل الموقع ينجح تجارياً؟</h2><p class="bod">الموقع الجميل ليس بالضرورة موقعاً ناجحاً — هذه هي العناصر التي تُفرّق بين الاثنين.</p></div>
     <div class="eff-grid">
-      <?php
-      foreach ( [
-          [ 'title' => 'سرعة تحميل استثنائية',   'desc' => 'أقل من 2 ثانية على الجوال — لأن كل ثانية تأخير تكلفك 7% من التحويل.', 'svg' => '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>' ],
-          [ 'title' => 'تجربة جوال أولاً',         'desc' => 'أكثر من 70% من زيارات السعودية من الجوال — يجب أن يكون الموقع مثالياً عليه.', 'svg' => '<rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>' ],
-          [ 'title' => 'هيكل سيو من الأساس',      'desc' => 'روابط نظيفة، Schema صحيح، سرعة مثالية — السيو يُبنى مع الموقع لا بعده.', 'svg' => '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>' ],
-          [ 'title' => 'CTAs في الأماكن الصحيحة', 'desc' => 'أزرار الدعوة للتصرف تُحسَّن نفسياً وبصرياً لتُحوّل الزائر المهتم.', 'svg' => '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>' ],
-          [ 'title' => 'عناصر بناء الثقة',         'desc' => 'شهادات، شهادات اعتماد، عملاء، وأرقام — تُقنع الزائر قبل أن يُفكر.', 'svg' => '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>' ],
-          [ 'title' => 'محتوى يُحوّل',             'desc' => 'نصوص مُكتوبة لتُقنع، لا فقط لتُعلم — الفرق بين موقع ومتجر.', 'svg' => '<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>' ],
-      ] as $idx => $ec ) :
-          $dc = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ][ $idx ];
-      ?>
-      <div class="eff-card sr <?php echo esc_attr( $dc ); ?>">
-        <div class="eff-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="19" height="19"><?php echo $ec['svg']; ?></svg></div>
-        <h3><?php echo esc_html( $ec['title'] ); ?></h3>
-        <p><?php echo esc_html( $ec['desc'] ); ?></p>
-      </div>
-      <?php endforeach; ?>
+      <div class="eff-card sr"><div class="eff-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><h3>سرعة تحميل أقل من 2.5 ثانية</h3><p>كل ثانية تأخير تُكلّفك 7% من التحويلات. نُحسّن Core Web Vitals من البداية.</p></div>
+      <div class="eff-card sr d1"><div class="eff-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div><h3>تجربة جوال متكاملة</h3><p>أكثر من 70% من الزيارات من الجوال — التصميم يبدأ من الموبايل لا ينتهي إليه.</p></div>
+      <div class="eff-card sr d2"><div class="eff-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div><h3>أساس سيو سليم</h3><p>هيكل URL، روابط داخلية، Schema، Sitemap، عناوين — جاهز لجوجل قبل الإطلاق.</p></div>
+      <div class="eff-card sr"><div class="eff-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z"/></svg></div><h3>عناصر ثقة في الأماكن الصحيحة</h3><p>شهادات العملاء، شعارات، ضمانات، أمان — في اللحظة التي يحتاجها الزائر فيها.</p></div>
+      <div class="eff-card sr d1"><div class="eff-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.97-4.03 9-9 9-1.4 0-2.73-.32-3.92-.89L3 21l.89-5.08A8.96 8.96 0 013 12c0-4.97 4.03-9 9-9s9 4.03 9 9z"/></svg></div><h3>مسارات تحويل واضحة</h3><p>كل صفحة تعرف ما هي الخطوة التالية المطلوبة من الزائر — ولا تُربكه بخيارات كثيرة.</p></div>
+      <div class="eff-card sr d2"><div class="eff-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>قياس وتحسين مستمر</h3><p>Analytics وHotjar وأدوات قياس — حتى تعرف ما يعمل وتُحسّن باستمرار، لا تُخمّن.</p></div>
     </div>
   </div>
 </section>
@@ -184,23 +160,13 @@ get_header();
 <!-- Process -->
 <section class="sec sec-surface">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">كيف نعمل</span><h2 class="h2">5 مراحل من الفكرة إلى الإطلاق</h2><p class="bod">عملية واضحة، جداول زمنية محددة، وتواصل مستمر في كل خطوة.</p></div>
-    <div class="proc-list">
-      <?php
-      foreach ( [
-          [ 'title' => 'الاكتشاف والتخطيط', 'desc' => 'نفهم أهدافك، جمهورك، ومنافسيك لنبني على أساس صحيح' ],
-          [ 'title' => 'التصميم والبروتوتايب', 'desc' => 'تصميم بصري كامل قبل أي تطوير — ترى الموقع قبل بنائه' ],
-          [ 'title' => 'التطوير والبرمجة', 'desc' => 'بناء الموقع بكود نظيف، سريع، وقابل للتوسع' ],
-          [ 'title' => 'الاختبار والتحسين', 'desc' => 'اختبار على كل الأجهزة وتحسين الأداء قبل الإطلاق' ],
-          [ 'title' => 'الإطلاق والدعم', 'desc' => 'إطلاق مُخطَّط ودعم مستمر للتأكد من نجاح الموقع' ],
-      ] as $idx => $ps ) :
-      ?>
-      <div class="proc-step sr <?php echo esc_attr( [ '', 'd1', 'd2', 'd1', 'd2' ][ $idx ] ); ?>">
-        <div class="proc-num"><?php echo esc_html( str_pad( $idx + 1, 2, '0', STR_PAD_LEFT ) ); ?></div>
-        <h3><?php echo esc_html( $ps['title'] ); ?></h3>
-        <p><?php echo esc_html( $ps['desc'] ); ?></p>
-      </div>
-      <?php endforeach; ?>
+    <div class="sh c sr"><span class="tag">منهجية العمل</span><h2 class="h2">5 مراحل لإطلاق موقعك</h2><p class="bod">كل مرحلة لها مخرج محدّد توافق عليه قبل الانتقال للمرحلة التالية.</p></div>
+    <div class="proc-list sr d1">
+      <div class="proc-step"><div class="proc-num">1</div><h3>اكتشاف</h3><p>نفهم نشاطك، أهدافك، وجمهورك</p></div>
+      <div class="proc-step"><div class="proc-num">2</div><h3>تخطيط</h3><p>هيكل الموقع، الصفحات، والتدفق</p></div>
+      <div class="proc-step"><div class="proc-num">3</div><h3>تصميم</h3><p>هوية بصرية وموكاب لكل صفحة</p></div>
+      <div class="proc-step"><div class="proc-num">4</div><h3>تطوير</h3><p>برمجة الموقع بالتقنية المختارة</p></div>
+      <div class="proc-step"><div class="proc-num">5</div><h3>إطلاق</h3><p>اختبار، إطلاق، تدريب، ودعم ما بعد</p></div>
     </div>
   </div>
 </section>
