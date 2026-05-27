@@ -178,18 +178,20 @@ if ( ! $_blog_url ) {
               else :
                   // Fallback static links if no sectors exist yet
                   $fallback_sectors = [
-                      'التجارة الإلكترونية' => 'sectors/ecommerce',
-                      'الصحة والطب'         => 'sectors/health',
-                      'التعليم والتدريب'    => 'sectors/education',
-                      'الأغذية والمطاعم'   => 'sectors/food',
-                      'القانون والاستشارات' => 'sectors/legal',
-                      'التقنية والبرمجيات'  => 'sectors/tech',
+                      [ 'التجارة الإلكترونية', 'sectors/ecommerce', '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>' ],
+                      [ 'الصحة والطب',         'sectors/health',    '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>' ],
+                      [ 'العقارات والبناء',    'sectors/realestate','<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>' ],
+                      [ 'التعليم والتدريب',    'sectors/education', '<path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>' ],
+                      [ 'الأغذية والمطاعم',   'sectors/food',      '<path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>' ],
+                      [ 'القانون والاستشارات','sectors/legal',     '<path d="M3 6l9 6 9-6"/><path d="M3 6v12l9 6 9-6V6"/>' ],
+                      [ 'التقنية والبرمجيات', 'sectors/tech',      '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' ],
+                      [ 'السياحة والسفر',     'sectors/tourism',   '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>' ],
                   ];
-                  foreach ( $fallback_sectors as $label => $path ) :
+                  foreach ( $fallback_sectors as $s ) :
                       ?>
-                      <a href="<?php echo esc_url( sh_page_url( $path ) ); ?>" class="sd-link">
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/></svg>
-                        <?php echo esc_html( $label ); ?>
+                      <a href="<?php echo esc_url( sh_page_url( $s[1] ) ); ?>" class="sd-link">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $s[2]; // phpcs:ignore ?></svg>
+                        <?php echo esc_html( $s[0] ); ?>
                       </a>
                   <?php endforeach;
               endif;

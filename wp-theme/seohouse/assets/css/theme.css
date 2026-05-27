@@ -815,3 +815,24 @@
 .snap-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
 @media(max-width:1100px){.snap-grid{grid-template-columns:1fr}.opp-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.opp-grid{grid-template-columns:1fr}}
+
+/* ─ Sectors archive grid ─ */
+.sec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.sec-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:26px 20px;text-align:center;transition:all .28s var(--fast);position:relative;overflow:hidden;text-decoration:none;display:block}
+.sec-card::before{content:'';position:absolute;inset:0;background:var(--blue);opacity:0;transition:opacity .28s}
+.sec-card:hover{transform:translateY(-5px);box-shadow:var(--sh-md);border-color:transparent}
+.sec-card:hover::before{opacity:1}
+.sec-ico{width:52px;height:52px;border-radius:14px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin-inline:auto;margin-bottom:14px;position:relative;z-index:1;transition:background .28s,transform .3s var(--ease)}
+.sec-ico svg{stroke:var(--blue);transition:stroke .28s;width:22px;height:22px}
+.sec-card:hover .sec-ico{background:rgba(255,255,255,.15);transform:scale(1.08)}
+.sec-card:hover .sec-ico svg{stroke:#fff}
+.sec-card h3{font-size:15px;font-weight:700;color:var(--ink);position:relative;z-index:1;transition:color .24s;margin-bottom:6px}
+.sec-card p{font-size:12px;color:var(--muted);position:relative;z-index:1;transition:color .24s;line-height:1.55}
+.sec-card:hover h3,.sec-card:hover p{color:#fff}
+.sec-card:hover p{color:rgba(255,255,255,.65)}
+.sec-arr{position:absolute;bottom:14px;inset-inline-end:14px;width:24px;height:24px;border-radius:6px;background:rgba(30,46,245,.1);display:flex;align-items:center;justify-content:center;transition:all .24s;z-index:1}
+.sec-arr svg{stroke:var(--blue);width:12px;height:12px;transition:stroke .24s}
+.sec-card:hover .sec-arr{background:rgba(255,255,255,.15)}
+.sec-card:hover .sec-arr svg{stroke:#fff}
+@media(max-width:860px){.sec-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:500px){.sec-grid{grid-template-columns:1fr 1fr;gap:10px}}
