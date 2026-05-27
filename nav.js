@@ -1,13 +1,13 @@
 /**
- * سيو هاوس — Shared Navigation & Footer v3
- * with web design + stores sub-pages
+ * سيو هاوس — Shared Navigation & Footer v4
+ * Updated: removed stores-seo service, added ecommerce sector, updated footer desc
  */
 (function() {
-  const path = location.pathname.split('/').pop() || 'seohouse-v8.html';
+  const path = location.pathname.split('/').pop() || 'index.html';
 
   const isWebDesign = ['web-design.html','wordpress.html','webflow.html','react-next.html','custom-dev.html'].includes(path);
   const isStores = ['stores.html','shopify.html','salla.html','zid.html','woocommerce.html'].includes(path);
-  const isSEO = ['seo-service.html','seo-stores.html','backlinks.html','content.html','consulting.html'].includes(path);
+  const isSEO = ['seo-service.html','backlinks.html','content.html','consulting.html'].includes(path);
 
   const navHTML = `
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,12 +17,12 @@
 <header id="nav">
   <div class="wrap">
     <nav class="nav-bar">
-      <a href="seohouse-v8.html" class="nav-logo" aria-label="سيو هاوس">
+      <a href="index.html" class="nav-logo" aria-label="سيو هاوس">
         <img src="uploads/White.png" alt="سيو هاوس" class="logo-w" height="30">
         <img src="uploads/Full color - on white background.png" alt="سيو هاوس" class="logo-c" height="30">
       </a>
       <ul class="nav-links">
-        <li class="ni"><a href="seohouse-v8.html" ${path==='seohouse-v8.html'?'class="active"':''}>الرئيسية</a></li>
+        <li class="ni"><a href="index.html" ${path==='index.html'?'class="active"':''}>الرئيسية</a></li>
         <li class="ni" id="svcNi">
           <button class="ni-btn" id="svcBtn">الخدمات
             <svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
@@ -51,7 +51,6 @@
               <div class="mega-sub ${isSEO?'show':''}" id="sub1">
                 <p class="mega-sub-lbl">خدمات السيو الفرعية</p>
                 <div class="mega-sub-grid">
-                  <a href="seo-stores.html" class="sl"><span class="sl-dot"></span><div><strong>سيو المتاجر الإلكترونية</strong><p>سلة، زد، شوبيفاي، ووكومرس</p></div></a>
                   <a href="backlinks.html" class="sl"><span class="sl-dot"></span><div><strong>بناء الباك لينك</strong><p>روابط تقوّي سلطة موقعك</p></div></a>
                   <a href="content.html" class="sl"><span class="sl-dot"></span><div><strong>كتابة المحتوى</strong><p>محتوى يُرضي القارئ وجوجل</p></div></a>
                   <a href="consulting.html" class="sl"><span class="sl-dot"></span><div><strong>استشارات تحليل الأداء</strong><p>قراءة التقارير واتخاذ القرار</p></div></a>
@@ -89,7 +88,7 @@
           </button>
           <div class="sec-drop">
             <div class="sec-drop-grid">
-              <a href="seo-stores.html" class="sd-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>التجارة الإلكترونية</a>
+              <a href="sector-ecommerce.html" class="sd-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>التجارة الإلكترونية</a>
               <a href="sector-health.html" class="sd-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>الصحة والطب</a>
               <a href="sector-education.html" class="sd-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>التعليم والتدريب</a>
               <a href="sector-food.html" class="sd-link"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/></svg>الأغذية والمطاعم</a>
@@ -110,10 +109,9 @@
       </div>
     </nav>
     <div class="mob" id="mob">
-      <a href="seohouse-v8.html">الرئيسية</a>
+      <a href="index.html">الرئيسية</a>
       <div class="mob-head">تحسين محركات البحث</div>
       <a href="seo-service.html" class="mob-sub">تحسين محركات البحث</a>
-      <a href="seo-stores.html" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">سيو المتاجر</a>
       <a href="backlinks.html" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">بناء الباك لينك</a>
       <a href="content.html" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">كتابة المحتوى</a>
       <a href="consulting.html" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">استشارات الأداء</a>
@@ -146,7 +144,7 @@
     <div class="foot-top">
       <div class="foot-brand">
         <img src="uploads/White.png" alt="سيو هاوس" height="28">
-        <p>شركة سعودية متخصصة في تحسين محركات البحث وبناء المتاجر الإلكترونية. نعمل بمنطق الأداء ونقيس كل خطوة.</p>
+        <p>متخصصون في تحسين محركات البحث وبناء المتاجر الإلكترونية. نخدم الأسواق السعودية والخليجية ونعمل بمنطق الأداء.</p>
         <div class="socials">
           <a href="#" class="soc" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
           <a href="#" class="soc" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
@@ -157,7 +155,6 @@
         <h4>تحسين محركات البحث</h4>
         <div class="foot-links">
           <a href="seo-service.html">خدمة السيو الشاملة</a>
-          <a href="seo-stores.html">سيو المتاجر الإلكترونية</a>
           <a href="backlinks.html">بناء الباك لينك</a>
           <a href="content.html">كتابة المحتوى</a>
           <a href="consulting.html">استشارات الأداء</a>
