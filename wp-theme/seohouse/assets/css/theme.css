@@ -511,7 +511,6 @@
   .rep-layout{grid-template-columns:1fr}
   .why-com-grid{grid-template-columns:1fr}
   .lost-grid{grid-template-columns:1fr}
-  .ss-grid{grid-template-columns:repeat(2,1fr)}
   .wwd-grid,.method-grid,.proof-grid{grid-template-columns:repeat(2,1fr)}
   .ind-grid{grid-template-columns:repeat(2,1fr)}
   .wd-grid,.ep-plat-grid{grid-template-columns:1fr}
@@ -526,6 +525,9 @@
   .proc-grid{grid-template-columns:repeat(2,1fr)}
   .svc-hub-grid{grid-template-columns:1fr}
 }
+@media(max-width:860px){
+  .ss-grid{grid-template-columns:1fr}
+}
 @media(max-width:600px){
   .wwd-grid,.method-grid,.proof-grid,.ind-grid{grid-template-columns:1fr}
   .method-item::after{display:none}
@@ -533,7 +535,6 @@
   .sales-grid,.who-grid{grid-template-columns:1fr}
   .serv-grid{grid-template-columns:1fr}
   .proc-grid{grid-template-columns:1fr}
-  .ss-grid{grid-template-columns:1fr}
 }
 
 /* ── Platform / Services hub ─────────────────────────────── */
