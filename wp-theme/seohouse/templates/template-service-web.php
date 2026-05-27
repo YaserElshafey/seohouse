@@ -78,7 +78,7 @@ get_header();
 <!-- Types of Websites -->
 <section id="types" class="sec sec-surface">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">أنواع المواقع</span><h2 class="h2">نُصمّم 5 أنواع من المواقع</h2><p class="bod">لكل نشاط نوع موقع يخدم أهدافه بأفضل شكل ممكن — اختيار النوع الصحيح هو نصف الطريق للنجاح.</p></div>
+    <div class="sh c sr"><span class="tag">أنواع المواقع</span><h2 class="h2">نُصمّم 6 أنواع من المواقع</h2><p class="bod">لكل نشاط نوع موقع يخدم أهدافه بأفضل شكل ممكن — اختيار النوع الصحيح هو نصف الطريق للنجاح.</p></div>
     <div class="types-grid">
       <?php
       foreach ( [

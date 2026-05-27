@@ -646,18 +646,18 @@
 .vs-good .vs-item svg{stroke:#059669}
 @media(max-width:860px){.vs-grid{grid-template-columns:1fr}}
 
-/* ─ Content — types of content (types-grid) ─ */
-.types-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.type-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:22px;display:flex;gap:14px;align-items:flex-start;transition:all .22s var(--fast)}
-.type-card:hover{transform:translateY(-3px);box-shadow:var(--sh-md);border-color:rgba(30,46,245,.18)}
-.type-card-ico{width:36px;height:36px;border-radius:9px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .22s}
-.type-card:hover .type-card-ico{background:var(--blue)}
-.type-card:hover .type-card-ico svg{stroke:#fff}
-.type-card-ico svg{stroke:var(--blue);width:16px;height:16px;transition:stroke .22s}
-.type-body h3{font-size:14.5px;font-weight:800;color:var(--ink);margin-bottom:6px}
-.type-body p{font-size:12.5px;color:var(--muted);line-height:1.75}
-@media(max-width:860px){.types-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.types-grid{grid-template-columns:1fr}}
+/* ─ Content — types of content (scoped to .ctype-sec) ─ */
+.ctype-sec .types-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.ctype-sec .type-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:22px;display:flex;gap:14px;align-items:flex-start;transition:all .22s var(--fast)}
+.ctype-sec .type-card:hover{transform:translateY(-3px);box-shadow:var(--sh-md);border-color:rgba(30,46,245,.18)}
+.ctype-sec .type-card-ico{width:36px;height:36px;border-radius:9px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .22s}
+.ctype-sec .type-card:hover .type-card-ico{background:var(--blue)}
+.ctype-sec .type-card:hover .type-card-ico svg{stroke:#fff}
+.ctype-sec .type-card-ico svg{stroke:var(--blue);width:16px;height:16px;transition:stroke .22s}
+.ctype-sec .type-body h3{font-size:14.5px;font-weight:800;color:var(--ink);margin-bottom:6px}
+.ctype-sec .type-body p{font-size:12.5px;color:var(--muted);line-height:1.75}
+@media(max-width:860px){.ctype-sec .types-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.ctype-sec .types-grid{grid-template-columns:1fr}}
 
 /* ─ Consulting — who-grid (scenarios) ─ */
 .who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
