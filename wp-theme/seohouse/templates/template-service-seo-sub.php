@@ -33,6 +33,7 @@ switch ( $slug ) {
 			],
 			'has_ai_vs'    => true,
 			'has_types'    => true,
+			'use_inc_grid' => true,
 			'tactics_tag'  => 'ماذا تشمل الخدمة',
 			'tactics_h2'   => 'أكثر من مجرد كتابة',
 			'tactics_desc' => 'المحتوى الذي ينجح هو نتيجة منظومة كاملة — استراتيجية، تخطيط، بحث، كتابة، وتحسين.',
@@ -76,6 +77,7 @@ switch ( $slug ) {
 
 	case 'consulting':
 		$def = [
+			'hero_badge' => 'للمدراء وأصحاب الأعمال',
 			'hero_tag'   => 'استشارة سيو',
 			'hero_h1'    => 'استشارة سيو',
 			'hero_em'    => 'قبل أن تستثمر فيها',
@@ -89,20 +91,41 @@ switch ( $slug ) {
 				[ 'b' => 'تقييم شركتك الحالية بموضوعية',      't' => '— هل تستحق الاستمرار؟' ],
 				[ 'b' => 'تفهم بنفسك',                        't' => '— لا تعتمد كلياً على ما يقوله المنفّذ' ],
 			],
-			'why_card_type' => 'consulting',
-			'has_who'       => true,
-			'has_del'       => true,
-			'tactics_tag'   => 'أنواع الاستشارات',
-			'tactics_h2'    => '6 أنواع من الاستشارات',
-			'tactics_desc'  => 'لكل سيناريو نوع استشارة مناسب — اختر ما يخدم وضعك.',
-			'tactics'       => [
-				[ 'n' => '01', 'h' => 'تدقيق سيو شامل',           'd' => 'تحليل كامل لموقعك يكشف المشاكل التقنية، فجوات المحتوى، ضعف الروابط، وفرص التحسين الأكثر تأثيراً.', 'svg' => '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>' ],
-				[ 'n' => '02', 'h' => 'خارطة طريق سنوية',          'd' => 'خطة عمل تفصيلية لـ 12 شهراً قادمة تحدّد بالضبط ما تحتاجه شهراً بشهر — سواء نفّذنا نحن أو شركة أخرى.', 'svg' => '<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/>' ],
-				[ 'n' => '03', 'h' => 'تقييم شركتك الحالية',       'd' => 'إذا كنت مع شركة سيو ولست متأكداً من جودة عملها — نُحلّل تقاريرها ونتائجها بشكل محايد.', 'svg' => '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>' ],
-				[ 'n' => '04', 'h' => 'استشارة شهرية مستمرة',     'd' => 'للشركات التي تُنفّذ السيو داخلياً — مراجعة شهرية للأداء وتحديث الاستراتيجية باستمرار.', 'svg' => '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>' ],
-				[ 'n' => '05', 'h' => 'تدريب الفريق الداخلي',      'd' => 'بناء كفاءة فريقك الداخلي في السيو — من أساسيات البحث إلى تحليل الأداء وإعداد التقارير.', 'svg' => '<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>' ],
-				[ 'n' => '06', 'h' => 'تقييم ما قبل الاستثمار',    'd' => 'احصل على تقييم احترافي لوضعك الحالي قبل اتخاذ أي قرار استثماري في السيو.', 'svg' => '<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>' ],
+			'why_card_type'  => 'consulting',
+			'has_who'        => true,
+			'has_who_light'  => true,
+			'has_del'        => true,
+			'has_cons_types' => true,
+			'tactics_tag'    => 'أنواع الاستشارات',
+			'tactics_h2'     => '3 أنواع من الاستشارات',
+			'tactics_desc'   => 'لكل سيناريو نوع استشارة مناسب — اختر ما يخدم وضعك.',
+			'cons_types'     => [
+				[
+					'featured' => false,
+					'tag'      => 'تدقيق وتشخيص',
+					'name'     => 'تدقيق سيو شامل',
+					'dur'      => 'جلسة + تقرير مفصّل',
+					'feats'    => [ 'تقرير مكتوب بكل المشاكل والأولويات', 'تحليل المنافسين والفجوات', 'قائمة بأهم 10 مهام بترتيب الأولوية', 'جلسة شرح ومناقشة عبر زووم' ],
+					'cta'      => 'اطلب استشارة تدقيق',
+				],
+				[
+					'featured' => true,
+					'tag'      => 'استشارة استراتيجية',
+					'name'     => 'خارطة طريق سيو',
+					'dur'      => '3-4 جلسات + خطة سنوية',
+					'feats'    => [ 'كل ما في باقة التدقيق الشامل', 'خطة محتوى وكلمات لـ 12 شهر', 'استراتيجية روابط وتوزيع الميزانية', 'توصية بفريق التنفيذ المناسب' ],
+					'cta'      => 'اطلب خارطة طريق',
+				],
+				[
+					'featured' => false,
+					'tag'      => 'رأي ثانٍ محايد',
+					'name'     => 'تقييم شركتك الحالية',
+					'dur'      => 'جلسة + تقرير محايد',
+					'feats'    => [ 'مراجعة تقارير شركتك الـ 6 أشهر الماضية', 'تقييم جودة الروابط والمحتوى', 'توصية واضحة: استمر / غيّر / فاوض', 'أسئلة لطرحها على شركتك في الاجتماع القادم' ],
+					'cta'      => 'اطلب رأي ثانٍ',
+				],
 			],
+			'faq_bg'         => 'sec-white',
 			'proc_tag'  => 'منهجية العمل',
 			'proc_h2'   => 'كيف تجري الاستشارة؟',
 			'proc_desc' => 'شفافية كاملة — تعرف بالضبط ما نفعله في كل مرحلة.',
@@ -136,44 +159,49 @@ switch ( $slug ) {
 	case 'seo-stores':
 	case 'stores-seo':
 		$def = [
-			'hero_tag'   => 'سيو المتاجر',
-			'hero_h1'    => 'سيو المتاجر',
-			'hero_em'    => 'مبيعات لا تتوقف',
-			'hero_desc'  => 'متجرك الإلكتروني يحتوي عشرات أو مئات صفحات المنتجات — كل منها فرصة للترتيب على كلمة شرائية. نحوّل هذه الصفحات إلى مصدر مستدام للمبيعات العضوية.',
-			'why_tag'    => 'لماذا سيو المتاجر مختلف',
-			'why_h2'     => "موقع الخدمات يختلف\nعن المتجر الإلكتروني",
-			'why_p'      => 'المتاجر الإلكترونية تملك عشرات أو مئات الصفحات — كل منتج وكل فئة فرصة للترتيب على كلمة مفتاحية شرائية. هذا يعني أن السيو للمتاجر يحتاج منهجية مختلفة تماماً.',
-			'why_checks' => [
-				[ 'b' => 'تحسين مئات صفحات المنتجات والفئات',              't' => '' ],
-				[ 'b' => 'كلمات شرائية تجلب عملاء جاهزين للدفع',          't' => '' ],
-				[ 'b' => 'تجنّب المحتوى المتكرر الذي يُضعف المتاجر',       't' => '' ],
-				[ 'b' => 'تقارير مبيعات عضوية مرتبطة بكلمات محددة',        't' => '' ],
+			'hero_badge'    => 'قطاع التجارة الإلكترونية',
+			'hero_tag'      => 'سيو المتاجر',
+			'hero_pre_em'   => 'سيو ',
+			'hero_em_inline'=> 'المتاجر الإلكترونية',
+			'hero_line2'    => 'الذي يُترجم إلى مبيعات',
+			'hero_desc'     => 'رفع ترتيب منتجاتك وفئاتك في جوجل ليجدك العملاء قبل أن يجدوا منافسيك — بمنهجية مخصصة لكل منصة تجارة إلكترونية وكل قطاع.',
+			'has_plat_badges'=> true,
+			'why_tag'       => 'لماذا سيو المتاجر مختلف',
+			'why_h2'        => "موقع الخدمات يختلف\nعن المتجر الإلكتروني",
+			'why_p'         => 'المتاجر الإلكترونية تملك عشرات أو مئات الصفحات — كل منتج وكل فئة فرصة للترتيب على كلمة مفتاحية شرائية. هذا يعني أن السيو للمتاجر يحتاج منهجية مختلفة تماماً.',
+			'why_stores'    => true,
+			'why_checks'    => [
+				[ 'b' => 'تحسين مئات صفحات المنتجات والفئات',           't' => '' ],
+				[ 'b' => 'كلمات شرائية تجلب عملاء جاهزين للدفع',       't' => '' ],
+				[ 'b' => 'تجنّب المحتوى المتكرر الذي يُضعف المتاجر',    't' => '' ],
+				[ 'b' => 'تحسين سرعة التحميل التي تُقلل الارتداد',      't' => '' ],
+				[ 'b' => 'تقارير مبيعات عضوية مرتبطة بكلمات محددة',     't' => '' ],
 			],
 			'why_card_type' => 'seo-stores',
+			'has_pillars'   => true,
 			'tactics_tag'   => 'ماذا نفعل',
 			'tactics_h2'    => 'ستة محاور لسيو المتاجر',
 			'tactics_desc'  => 'كل محور يعالج جانباً مختلفاً من ظهور متجرك في البحث.',
 			'tactics'       => [
-				[ 'n' => '01', 'h' => 'بحث الكلمات الشرائية',   'd' => 'الكلمات التي يستخدمها المشترون الجادون — لا المتصفحون فقط. الفرق يصنع المبيعات.',                                   'svg' => '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>' ],
-				[ 'n' => '02', 'h' => 'تحسين صفحات المنتجات',   'd' => 'عناوين، أوصاف فريدة، بيانات هيكلية، وصور محسّنة — كل منتج يُعامَل كصفحة مستقلة.',                               'svg' => '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>' ],
-				[ 'n' => '03', 'h' => 'تحسين بنية الفئات',      'd' => 'هيكل تنقل منطقي يساعد جوجل على فهم كتالوجك وفهرسة كل صفحة بالشكل الصحيح.',                                      'svg' => '<path d="M3 7h18M3 12h18M3 17h18"/>' ],
-				[ 'n' => '04', 'h' => 'تحسين سرعة المتجر',      'd' => 'Core Web Vitals محسّنة — المتجر البطيء يفقد الزوار قبل أن يُكملوا الشراء.',                                       'svg' => '<path d="M13 10V3L4 14h7v7l9-11h-7z"/>' ],
-				[ 'n' => '05', 'h' => 'بناء روابط للمتجر',      'd' => 'روابط موثوقة تُعزز سلطة متجرك وتسرّع صعود صفحات منتجاتك في نتائج البحث.',                                         'svg' => '<path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>' ],
-				[ 'n' => '06', 'h' => 'تقارير المبيعات العضوية', 'd' => 'تقرير شهري يُظهر نمو الزيارات العضوية والمبيعات المنسوبة لتحسين محركات البحث.',                                   'svg' => '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>' ],
+				[ 'n' => '01', 'h' => 'بحث الكلمات الشرائية',   'd' => 'الكلمات التي يستخدمها المشترون الجادون — لا المتصفحون فقط. الفرق يصنع المبيعات.',                                                                           'svg' => '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>' ],
+				[ 'n' => '02', 'h' => 'تحسين صفحات المنتجات',   'd' => 'عناوين، أوصاف فريدة، بيانات هيكلية، وصور محسّنة — كل منتج يُعامَل كصفحة مستقلة.',                                                                         'svg' => '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>' ],
+				[ 'n' => '03', 'h' => 'تحسين بنية الفئات',      'd' => 'هيكل تنقل منطقي يساعد جوجل على فهم كتالوجك وفهرسة كل صفحة بالشكل الصحيح.',                                                                                'svg' => '<path d="M3 7h18M3 12h18M3 17h18"/>' ],
+				[ 'n' => '04', 'h' => 'تحسين سرعة المتجر',      'd' => 'Core Web Vitals محسّنة — المتجر البطيء يفقد الزوار قبل أن يُكملوا الشراء.',                                                                                  'svg' => '<path d="M13 10V3L4 14h7v7l9-11h-7z"/>' ],
+				[ 'n' => '05', 'h' => 'بناء روابط للمتجر',      'd' => 'روابط موثوقة تُعزز سلطة متجرك وتسرّع صعود صفحات منتجاتك في نتائج البحث.',                                                                                   'svg' => '<path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>' ],
+				[ 'n' => '06', 'h' => 'تقارير المبيعات العضوية', 'd' => 'تقرير شهري يُظهر نمو الزيارات العضوية والمبيعات المنسوبة لتحسين محركات البحث.',                                                                             'svg' => '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>' ],
 			],
-			'proc_tag'  => 'منهجية العمل',
-			'proc_h2'   => 'كيف نحسّن متجرك؟',
-			'proc_desc' => 'خمس مراحل منهجية لسيو يبني مبيعات عضوية مستدامة.',
-			'proc'      => [
-				[ 'n' => '1', 'h' => 'تدقيق',          'p' => 'فحص بنية المتجر الحالية' ],
-				[ 'n' => '2', 'h' => 'كلمات شرائية',   'p' => 'بحث كلمات المنتجات والفئات' ],
-				[ 'n' => '3', 'h' => 'تحسين',           'p' => 'صفحات المنتجات والفئات' ],
-				[ 'n' => '4', 'h' => 'روابط ومحتوى',   'p' => 'تعزيز السلطة والمحتوى' ],
-				[ 'n' => '5', 'h' => 'متابعة',          'p' => 'تقارير شهرية بالمبيعات' ],
+			'has_plat_cards' => true,
+			'plat_cards'     => [
+				[ 'lbl' => 'سلة',  'h' => 'سيو متاجر سلة',     'p' => 'تحسين مخصص لقيود وإمكانيات منصة سلة — الأكثر انتشاراً في السوق السعودي.' ],
+				[ 'lbl' => 'زد',   'h' => 'سيو متاجر زد',      'p' => 'استغلال كامل لإمكانيات زد التقنية في بناء هيكل سيو متين من البداية.' ],
+				[ 'lbl' => 'SF',   'h' => 'سيو متاجر شوبيفاي', 'p' => 'تحسين تقني عميق لشوبيفاي مع إدارة التطبيقات المؤثرة على الأداء.' ],
+				[ 'lbl' => 'WC',   'h' => 'سيو ووكومرس',       'p' => 'تحسين ووردبريس وووكومرس معاً — مرونة كاملة في التحسين التقني والمحتوى.' ],
 			],
-			'faq_tag' => 'الأسئلة الشائعة',
-			'faq_h2'  => 'أسئلة عن سيو المتاجر',
-			'faqs'    => [
+			'skip_proc' => true,
+			'faq_tag'   => 'الأسئلة الشائعة',
+			'faq_h2'    => 'أسئلة عن سيو المتاجر',
+			'faq_bg'    => 'sec-off',
+			'faqs'      => [
 				[ 'q' => 'هل يختلف سيو المتجر عن سيو الموقع العادي؟',  'a' => 'نعم بشكل كبير. المتاجر تحتوي عشرات أو مئات الصفحات المتكررة وتحتاج معالجة خاصة لتفادي المحتوى المتكرر، بنية الفئات، وسرعة التحميل على كميات كبيرة من المنتجات.' ],
 				[ 'q' => 'كم من الوقت حتى أرى مبيعات من السيو؟',         'a' => 'في الغالب 3–5 أشهر لبدء ظهور نتائج ملموسة في المبيعات العضوية. الكلمات الطويلة (long-tail) تظهر أسرع من الكلمات التنافسية العامة.' ],
 				[ 'q' => 'هل يمكنكم تحسين آلاف المنتجات؟',               'a' => 'نعم. نضع استراتيجية قابلة للتوسع تُعالج المنتجات في مجموعات حسب الأولوية والأثر المتوقع — بدءاً بالأكثر مبيعاً.' ],
@@ -257,9 +285,12 @@ switch ( $slug ) {
 
 // ── ACF field overrides (only when explicitly set) ─────────────
 $tag  = sh_field( 'sub_hero_tag' )   ?: $def['hero_tag'];
-$h1   = sh_field( 'sub_hero_title' ) ?: $def['hero_h1'];
-$em   = sh_field( 'sub_hero_em' )    ?: $def['hero_em'];
-$desc = sh_field( 'sub_hero_desc' )  ?: $def['hero_desc'];
+$h1       = sh_field( 'sub_hero_title' ) ?: ( $def['hero_h1'] ?? '' );
+$em       = sh_field( 'sub_hero_em' )    ?: ( $def['hero_em'] ?? '' );
+$desc     = sh_field( 'sub_hero_desc' )  ?: $def['hero_desc'];
+$pre_em   = $def['hero_pre_em']    ?? '';
+$em_inline= $def['hero_em_inline'] ?? '';
+$line2    = $def['hero_line2']     ?? '';
 
 $acf_faqs = sh_field( 'sub_faqs' );
 $faqs     = ! empty( $acf_faqs ) ? $acf_faqs : null;
@@ -284,8 +315,12 @@ $seo_url     = sh_page_url( 'services/seo' );
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
         <span style="color:rgba(255,255,255,.55)"><?php echo esc_html( $tag ); ?></span>
       </div>
-      <span class="tag d" style="justify-content:center;margin-bottom:20px">خدمة فرعية</span>
+      <span class="tag d" style="justify-content:center;margin-bottom:20px"><?php echo esc_html( $def['hero_badge'] ?? 'خدمة فرعية' ); ?></span>
+      <?php if ( $em_inline ) : ?>
+      <h1 class="page-h1"><?php echo esc_html( $pre_em ); ?><em><?php echo esc_html( $em_inline ); ?></em><br><?php echo esc_html( $line2 ); ?></h1>
+      <?php else : ?>
       <h1 class="page-h1"><?php echo esc_html( $h1 ); ?><br><em><?php echo esc_html( $em ); ?></em></h1>
+      <?php endif; ?>
       <p style="font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.55);max-width:660px;margin-inline:auto;margin-bottom:30px"><?php echo esc_html( $desc ); ?></p>
       <div class="pbtns">
         <a href="<?php echo esc_url( $contact_url ); ?>" class="btn btn-p lg">
@@ -294,6 +329,14 @@ $seo_url     = sh_page_url( 'services/seo' );
         </a>
         <a href="<?php echo esc_url( $seo_url ); ?>" class="btn btn-g lg"><?php echo esc_html( $def['btn2_txt'] ?? 'جميع خدمات السيو' ); ?></a>
       </div>
+      <?php if ( ! empty( $def['has_plat_badges'] ) ) : ?>
+      <div class="plat-badges">
+        <div class="plat-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>سلة</div>
+        <div class="plat-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>زد</div>
+        <div class="plat-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>شوبيفاي</div>
+        <div class="plat-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>ووكومرس</div>
+      </div>
+      <?php endif; ?>
     </div>
   </div>
 </section>
@@ -303,7 +346,7 @@ $seo_url     = sh_page_url( 'services/seo' );
      ═══════════════════════════════════════════════════════════ -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div class="why-grid">
+    <div class="<?php echo ! empty( $def['why_stores'] ) ? 'why-stores-grid' : 'why-grid'; ?>">
 
       <!-- Left: text + checklist -->
       <div class="sr">
@@ -389,13 +432,18 @@ $seo_url     = sh_page_url( 'services/seo' );
 <!-- ═══════════════════════════════════════════════════════════
      WHO NEEDS THIS — consulting only
      ═══════════════════════════════════════════════════════════ -->
-<?php if ( ! empty( $def['has_who'] ) ) : ?>
-<section class="sec sec-navy">
+<?php if ( ! empty( $def['has_who'] ) ) :
+  $who_sec = ! empty( $def['has_who_light'] ) ? 'sec-surface' : 'sec-navy';
+  $who_tag_cls = ! empty( $def['has_who_light'] ) ? 'tag' : 'tag d';
+  $who_h2_cls  = ! empty( $def['has_who_light'] ) ? 'h2' : 'h2 wh';
+  $who_bod_cls = ! empty( $def['has_who_light'] ) ? 'bod' : 'bod d';
+?>
+<section class="sec <?php echo $who_sec; ?>">
   <div class="wrap">
     <div class="sh c sr">
-      <span class="tag d">من يحتاج استشارة سيو</span>
-      <h2 class="h2 wh">هل تجد نفسك في إحدى هذه الحالات؟</h2>
-      <p class="bod d">3 سيناريوهات شائعة لأصحاب الأعمال — في كل واحدة منها، ساعة استشارة توفّر عليك ميزانية أشهر.</p>
+      <span class="<?php echo $who_tag_cls; ?>">من يحتاج استشارة سيو</span>
+      <h2 class="<?php echo $who_h2_cls; ?>">هل تجد نفسك في إحدى هذه الحالات؟</h2>
+      <p class="<?php echo $who_bod_cls; ?>">3 سيناريوهات شائعة لأصحاب الأعمال — في كل واحدة منها، ساعة استشارة توفّر عليك ميزانية أشهر.</p>
     </div>
     <div class="who-grid sr d1">
       <div class="who-card">
@@ -501,13 +549,78 @@ $seo_url     = sh_page_url( 'services/seo' );
 <!-- ═══════════════════════════════════════════════════════════
      TACTICS — 6-card grid
      ═══════════════════════════════════════════════════════════ -->
-<section class="sec <?php echo ! empty( $def['has_qv'] ) ? 'sec-white' : 'sec-surface'; ?>">
+<?php
+$tactics_sec = ! empty( $def['has_cons_types'] ) ? 'sec-white' : ( ! empty( $def['has_qv'] ) ? 'sec-white' : 'sec-surface' );
+?>
+<section class="sec <?php echo $tactics_sec; ?>">
   <div class="wrap">
     <div class="sh c sr">
       <span class="tag"><?php echo esc_html( $def['tactics_tag'] ); ?></span>
       <h2 class="h2"><?php echo esc_html( $def['tactics_h2'] ); ?></h2>
       <p class="bod"><?php echo esc_html( $def['tactics_desc'] ); ?></p>
     </div>
+
+    <?php if ( ! empty( $def['has_pillars'] ) ) : ?>
+    <div class="pillars-grid">
+      <?php
+      $delays = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ];
+      foreach ( $def['tactics'] as $i => $tc ) :
+          $dc = $delays[ $i % 6 ];
+      ?>
+      <div class="pillar sr<?php echo $dc ? " $dc" : ''; ?>">
+        <div class="pillar-n"><?php echo esc_html( $tc['n'] ); ?></div>
+        <div class="pillar-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $tc['svg']; ?></svg>
+        </div>
+        <h3><?php echo esc_html( $tc['h'] ); ?></h3>
+        <p><?php echo esc_html( $tc['d'] ); ?></p>
+      </div>
+      <?php endforeach; ?>
+    </div>
+
+    <?php elseif ( ! empty( $def['has_cons_types'] ) ) : ?>
+    <div class="cons-grid">
+      <?php foreach ( $def['cons_types'] as $i => $ct ) :
+        $delays2 = [ '', 'd1', 'd2' ];
+        $dc = $delays2[ $i % 3 ];
+        $featured = ! empty( $ct['featured'] );
+      ?>
+      <div class="cons-card<?php echo $featured ? ' featured' : ''; ?> sr<?php echo $dc ? " $dc" : ''; ?>">
+        <div class="cons-head">
+          <div class="cons-tag"><?php echo esc_html( $ct['tag'] ); ?></div>
+          <div class="cons-name"><?php echo esc_html( $ct['name'] ); ?></div>
+          <div class="cons-dur"><?php echo esc_html( $ct['dur'] ); ?></div>
+        </div>
+        <div class="cons-body">
+          <div class="cons-feats">
+            <?php foreach ( $ct['feats'] as $feat ) : ?>
+            <div class="cons-feat"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><?php echo esc_html( $feat ); ?></div>
+            <?php endforeach; ?>
+          </div>
+          <a href="<?php echo esc_url( $contact_url ); ?>" class="cons-cta"><?php echo esc_html( $ct['cta'] ); ?></a>
+        </div>
+      </div>
+      <?php endforeach; ?>
+    </div>
+
+    <?php elseif ( ! empty( $def['use_inc_grid'] ) ) : ?>
+    <div class="inc-grid">
+      <?php
+      $delays = [ '', 'd1', 'd2', '', 'd1', 'd2' ];
+      foreach ( $def['tactics'] as $i => $tc ) :
+          $dc = $delays[ $i % 6 ];
+      ?>
+      <div class="inc-card sr<?php echo $dc ? " $dc" : ''; ?>">
+        <div class="inc-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $tc['svg']; ?></svg>
+        </div>
+        <h3><?php echo esc_html( $tc['h'] ); ?></h3>
+        <p><?php echo esc_html( $tc['d'] ); ?></p>
+      </div>
+      <?php endforeach; ?>
+    </div>
+
+    <?php else : ?>
     <div class="wwd-grid">
       <?php
       $delays = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ];
@@ -524,8 +637,34 @@ $seo_url     = sh_page_url( 'services/seo' );
       </div>
       <?php endforeach; ?>
     </div>
+    <?php endif; ?>
+
   </div>
 </section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PLATFORM CARDS — seo-stores only
+     ═══════════════════════════════════════════════════════════ -->
+<?php if ( ! empty( $def['has_plat_cards'] ) ) : ?>
+<section class="sec sec-white">
+  <div class="wrap">
+    <div class="sh c sr">
+      <span class="tag">المنصات المدعومة</span>
+      <h2 class="h2">نعمل مع جميع منصات التجارة الإلكترونية</h2>
+      <p class="bod">لكل منصة خصائصها التقنية — ونفهمها جميعاً بعمق.</p>
+    </div>
+    <div class="plat-cards sr d1">
+      <?php foreach ( $def['plat_cards'] as $pc ) : ?>
+      <div class="plat-card-big">
+        <div class="plat-logo-box"><?php echo esc_html( $pc['lbl'] ); ?></div>
+        <h3><?php echo esc_html( $pc['h'] ); ?></h3>
+        <p><?php echo esc_html( $pc['p'] ); ?></p>
+      </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
 
 <!-- ═══════════════════════════════════════════════════════════
      6 CRITERIA — backlinks only
@@ -599,6 +738,7 @@ $seo_url     = sh_page_url( 'services/seo' );
 <!-- ═══════════════════════════════════════════════════════════
      PROCESS — 5-step horizontal
      ═══════════════════════════════════════════════════════════ -->
+<?php if ( empty( $def['skip_proc'] ) ) : ?>
 <section class="sec <?php echo ! empty( $def['has_qv'] ) ? 'sec-surface' : 'sec-white'; ?>">
   <div class="wrap">
     <div class="sh c sr">
@@ -617,11 +757,12 @@ $seo_url     = sh_page_url( 'services/seo' );
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 <!-- ═══════════════════════════════════════════════════════════
      FAQ + sticky CTA card
      ═══════════════════════════════════════════════════════════ -->
-<section class="sec sec-off">
+<section class="sec <?php echo esc_attr( $def['faq_bg'] ?? 'sec-off' ); ?>">
   <div class="wrap">
     <div class="faq-cta-layout">
 

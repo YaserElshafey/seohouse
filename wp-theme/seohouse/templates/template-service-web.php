@@ -84,14 +84,16 @@ get_header();
       foreach ( [
           [ 'tag' => 'للشركات والمؤسسات', 'title' => 'مواقع الشركات', 'desc' => 'موقع يُمثّل علامتك التجارية أمام السوق — يُبرز خبرتك، عملاءك، خدماتك، ويبني صورة احترافية للشركة.', 'dc' => '',
             'feats' => [ 'صفحات: عن الشركة، الخدمات، فريق العمل، المعرض', 'عناصر بناء الثقة: شهادات، عملاء، إنجازات', 'متعدد اللغات (عربي/إنجليزي) عند الحاجة' ] ],
-          [ 'tag' => 'للخدمات والأعمال الحرة', 'title' => 'مواقع الخدمات', 'desc' => 'موقع مُحسَّن لتوليد الليدز — كل صفحة خدمة مُصمّمة لتُقنع الزائر بالتواصل.', 'dc' => 'd1',
-            'feats' => [ 'صفحات خدمات مُحسَّنة للسيو والتحويل', 'نماذج تواصل ذكية في الأماكن الصحيحة', 'شهادات عملاء وإثبات اجتماعي' ] ],
-          [ 'tag' => 'للمنتجات الرقمية', 'title' => 'لاندنج بيج', 'desc' => 'صفحة هبوط واحدة تُركّز كل زائر على هدف واحد — سواء كان تسجيل، شراء، أو حجز.', 'dc' => 'd2',
-            'feats' => [ 'تحسين نسبة التحويل (CRO) من أول لحظة', 'تصميم نفسي يُوجّه القرار', 'A/B Testing جاهز من البداية' ] ],
-          [ 'tag' => 'للتقنية والناشئين', 'title' => 'مواقع SaaS والتطبيقات', 'desc' => 'موقع تسويقي لمنتجك الرقمي — يشرح القيمة، يُقنع بالتجربة، ويُحوّل Trials إلى Paid.', 'dc' => 'd1',
-            'feats' => [ 'Hero واضح يشرح المنتج في 5 ثوانٍ', 'Pricing page مُحسَّنة للتحويل', 'Integration مع أدوات السيلز والتسويق' ] ],
-          [ 'tag' => 'للمكاتب الإبداعية', 'title' => 'مواقع البورتفوليو', 'desc' => 'موقع معرض يُبرز أعمالك بأسلوب بصري يجعل العميل يُقرّر قبل أن ينهي التصفح.', 'dc' => 'd2',
-            'feats' => [ 'عرض مشاريع جذّاب ومنظّم', 'تجربة مستخدم سلسة على الجوال', 'سهل التحديث وإضافة مشاريع جديدة' ] ],
+          [ 'tag' => 'للخدمات الاحترافية', 'title' => 'مواقع الخدمات', 'desc' => 'صفحات خدمة مُحسّنة للسيو والتحويل — كل خدمة لها صفحة مستقلة تُجيب على أسئلة العميل وتقنعه بالتواصل.', 'dc' => 'd1',
+            'feats' => [ 'صفحة منفصلة لكل خدمة محسّنة لكلمة محددة', 'تكامل مع نظام حجز/تواصل/استشارات', 'هيكل مدوّنة جاهز للسيو والمحتوى' ] ],
+          [ 'tag' => 'للحملات الإعلانية', 'title' => 'صفحات هبوط (Landing Pages)', 'desc' => 'صفحة هدفها واحد فقط: تحويل زائر الإعلان إلى ليد أو عميل. مُصمّمة بمنهجية CRO لتحقيق أعلى نسبة تحويل ممكنة.', 'dc' => 'd2',
+            'feats' => [ 'هيكل CRO مُختبر: عرض، فوائد، إثبات، نموذج', 'سرعة تحميل أقل من ثانيتين (Core Web Vitals)', 'ربط بـ Google/Meta/TikTok Analytics وPixel' ] ],
+          [ 'tag' => 'للعلامات الشخصية', 'title' => 'مواقع الشخصيات والمستشارين', 'desc' => 'موقع يُبرز خبرتك الشخصية — لمستشار، خبير، طبيب، مدرّب، أو صاحب شركة يبني علامته الشخصية.', 'dc' => 'd3',
+            'feats' => [ 'سيرة احترافية، إنجازات، ظهور إعلامي', 'مدوّنة شخصية وموارد مجانية', 'نظام حجز للاستشارات أو الجلسات' ] ],
+          [ 'tag' => 'حسب الطلب', 'title' => 'مواقع مخصّصة (Custom)', 'desc' => 'عندك متطلبات خاصة تتجاوز القوالب الجاهزة؟ نُطوّر مواقع برمجية كاملة بحلول مخصّصة وتكاملات معقدة.', 'dc' => '',
+            'feats' => [ 'تطوير برمجي كامل (Frontend + Backend)', 'تكاملات API وأنظمة CRM/ERP', 'لوحات تحكم مخصّصة وميزات متقدمة' ] ],
+          [ 'tag' => 'للمنشئين والوكالات', 'title' => 'محافظ أعمال (Portfolio)', 'desc' => 'للمصورين، المصممين، الوكالات، والمعماريين — موقع يُعرض أعمالك بأسلوب يليق بها ويفتح أبواب التعاقد.', 'dc' => 'd1',
+            'feats' => [ 'عرض بصري متقدم للأعمال والمشاريع', 'دراسات حالة (Case Studies) كاملة', 'نموذج تواصل احترافي مع تأهيل العميل' ] ],
       ] as $tc ) :
       ?>
       <div class="type-card sr <?php echo esc_attr( $tc['dc'] ); ?>">
@@ -186,43 +188,21 @@ get_header();
   </div>
 </section>
 
-<!-- Platform Choices -->
-<section class="sec sec-white">
-  <div class="wrap">
-    <div class="sh c sr"><span class="tag">التخصصات</span><h2 class="h2">اختر المنصة المناسبة لمشروعك</h2><p class="bod">نتخصص في 4 منصات رئيسية — كل واحدة تناسب نوعاً مختلفاً من المشاريع.</p></div>
-    <div class="features-grid">
-      <?php
-      foreach ( [
-          [ 'title' => 'ووردبريس',    'desc' => 'إدارة محتوى مرنة لمواقع الشركات والتسويق — الأوسع انتشاراً والأقوى بالإضافات.', 'url' => sh_page_url( 'services/wordpress' ), 'svg' => '<path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/>', 'dc' => '' ],
-          [ 'title' => 'ويب فلو',     'desc' => 'تصاميم عالية الجودة بإطلاق سريع — للعلامات التجارية التي تريد التميّز البصري.', 'url' => sh_page_url( 'services/webflow' ),   'svg' => '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/>',  'dc' => 'd1' ],
-          [ 'title' => 'رياكت ونكست', 'desc' => 'أداء متقدّم لمنتجات رقمية وتطبيقات ويب قابلة للتوسع بلا حدود.', 'url' => sh_page_url( 'services/react-next' ), 'svg' => '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',          'dc' => 'd2' ],
-          [ 'title' => 'برمجة خاصة',  'desc' => 'متطلبات فريدة وأنظمة مخصّصة بالكامل — حين لا يكفي أي قالب أو منصة.', 'url' => sh_page_url( 'services/custom-dev' ),  'svg' => '<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>',         'dc' => 'd1' ],
-      ] as $plat ) :
-      ?>
-      <div class="feat-card sr <?php echo esc_attr( $plat['dc'] ); ?>">
-        <div class="ico-box" style="margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><?php echo $plat['svg']; ?></svg></div>
-        <h3><?php echo esc_html( $plat['title'] ); ?></h3>
-        <p><?php echo esc_html( $plat['desc'] ); ?></p>
-        <a href="<?php echo esc_url( $plat['url'] ); ?>" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:13px;font-weight:700;color:var(--blue)">تفاصيل <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
-<section class="sec sec-off">
+<section class="sec sec-white">
   <div class="wrap">
     <div class="faq-cta-layout">
       <div>
-        <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2">أسئلة عن خدمة تصميم المواقع</h2></div>
+        <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2">أسئلة عن تصميم المواقع</h2></div>
         <div class="faq-list sr d1">
           <?php
           foreach ( [
-              [ 'q' => 'كم يستغرق تصميم الموقع؟', 'a' => 'يعتمد على التعقيد: مواقع الشركات البسيطة من 3-5 أسابيع، المواقع المتوسطة 6-10 أسابيع، والمشاريع الكبيرة 3-6 أشهر. نُحدد الجدول الزمني بدقة بعد اجتماع الاستكشاف.' ],
-              [ 'q' => 'هل يمكنني إدارة الموقع بنفسي بعد التسليم؟', 'a' => 'نعم — نبني الموقع على نظام إدارة محتوى سهل الاستخدام ونُدرّبك على إضافة وتعديل المحتوى بدون الحاجة لخبرة تقنية.' ],
-              [ 'q' => 'ما الفرق بين ووردبريس وويب فلو؟', 'a' => 'ووردبريس أفضل للمواقع التي تحتاج نشر محتوى متكرر (مدونات، أخبار) أو إضافات كثيرة. ويب فلو يتفوق في التصاميم البصرية المتقدمة والأداء بدون تعقيد الإضافات.' ],
-              [ 'q' => 'هل يشمل التسليم السيو؟', 'a' => 'نعم — كل موقع نبنيه يأتي مُحسَّناً تقنياً للسيو: سرعة مثالية، Schema صحيح، روابط نظيفة، Sitemap، وحماية HTTPS. هذه أساسيات لا اختيارية.' ],
+              [ 'q' => 'كم يستغرق إطلاق الموقع؟', 'a' => 'صفحة هبوط: 1–2 أسبوع. موقع شركة عادي: 3–5 أسابيع. موقع ضخم أو تطوير مخصّص: 6–12 أسبوع. الجدول الزمني الدقيق يُحدَّد بعد فهم متطلبات مشروعك.' ],
+              [ 'q' => 'أيّهما أفضل: WordPress أم Webflow أم تطوير مخصّص؟', 'a' => 'يعتمد على المشروع. WordPress الأكثر مرونة لمعظم الحالات. Webflow ممتاز للتصاميم المتقدمة بصرياً. التطوير المخصّص لاحتياجات خاصة. في الاستشارة نناقش الأنسب لك.' ],
+              [ 'q' => 'هل الموقع متوافق مع السيو؟', 'a' => 'نعم — كل موقع نبنيه يخرج بأساس سيو سليم: هيكل URL، Schema، Sitemap، Core Web Vitals، عناوين، روابط داخلية. لكن يبقى السيو خدمة مستقلة تُكمل البناء.' ],
+              [ 'q' => 'هل تُقدّمون استضافة وصيانة؟', 'a' => 'نعم، نُقدّم باقات استضافة محسّنة للأداء وباقات صيانة شهرية تشمل التحديثات، النسخ الاحتياطية، الأمان، ومتابعة الأداء.' ],
+              [ 'q' => 'ماذا لو احتجت تعديلات بعد الإطلاق؟', 'a' => 'نُقدّم فترة دعم مجانية بعد الإطلاق لتعديل أي ملاحظات. التعديلات الكبيرة لاحقاً تكون جزءاً من باقة الصيانة الشهرية.' ],
+              [ 'q' => 'هل أملك الموقع بالكامل بعد الإطلاق؟', 'a' => 'نعم، الموقع ملكك بالكامل — الكود، التصميم، البيانات، الدومين. لا قيود ولا التزامات إجبارية معنا.' ],
           ] as $faq ) :
           ?>
           <div class="faq-item">
@@ -235,8 +215,13 @@ get_header();
       <div class="cta-sticky">
         <div class="cta-side-card sr d1">
           <span class="tag d" style="position:relative;z-index:1;margin-bottom:10px">ابدأ الآن</span>
-          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1">جاهز لبناء<br>موقعك الاحترافي؟</h3>
-          <p style="font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:22px;position:relative;z-index:1">احجز استشارة مجانية ونحدد معاً أفضل منصة وميزانية لمشروعك.</p>
+          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1">جاهز لبناء<br>موقعك الجديد؟</h3>
+          <p style="font-size:13.5px;color:rgba(255,255,255,.44);line-height:1.8;margin-bottom:22px;position:relative;z-index:1">احجز استشارة مجانية، وسنناقش متطلباتك ونوصي بالتقنية الأنسب.</p>
+          <div class="chklist" style="margin-bottom:22px">
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>توصية بنوع الموقع والتقنية</div>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>عرض سعر شفاف</div>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>بدون أي التزام</div>
+          </div>
           <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p" style="width:100%;justify-content:center;position:relative;z-index:1">احجز استشارة مجانية</a>
         </div>
       </div>
@@ -246,8 +231,13 @@ get_header();
 
 <?php
 get_template_part( 'template-parts/layout/cta-banner', null, [
-    'tag'   => 'ابدأ الآن',
-    'title' => 'جاهز لبناء موقعك؟',
+    'tag'         => 'ابدأ الآن',
+    'title'       => 'ابنِ موقعاً يستحق علامتك التجارية',
+    'description' => 'احجز استشارة مجانية ولنبدأ معاً في تصميم موقعك الجديد.',
+    'buttons'     => [
+        [ 'text' => 'احجز استشارة مجانية', 'url' => sh_page_url( 'contact' ), 'class' => 'btn-w lg' ],
+        [ 'text' => 'خدمة السيو', 'url' => sh_page_url( 'services/seo' ), 'class' => 'btn-g lg' ],
+    ],
 ] );
 ?>
 
