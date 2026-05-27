@@ -50,7 +50,19 @@ add_action( 'wp_enqueue_scripts', function () {
         wp_enqueue_script( 'comment-reply' );
     }
 
-} );
+}, 10 );
+
+// Remove WordPress block/global styles — this is a custom theme that does not use the block editor
+add_action( 'wp_enqueue_scripts', function () {
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wp-block-library-theme-deprecated' );
+    wp_dequeue_style( 'global-styles' );
+    wp_dequeue_style( 'classic-theme-styles' );
+    wp_deregister_style( 'classic-theme-styles' );
+    remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
+    remove_action( 'wp_footer', 'wp_enqueue_global_styles', 1 );
+}, 100 );
 
 // Preconnect for Google Fonts
 add_action( 'wp_head', function () {

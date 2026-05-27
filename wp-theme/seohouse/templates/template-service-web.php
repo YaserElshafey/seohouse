@@ -75,6 +75,23 @@ get_header();
   </div>
 </section>
 
+<!-- Types CSS — inline after head to guarantee override of any WP-injected styles -->
+<style>
+#types .types-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+#types .type-card{display:block!important;background:#fff;border:1px solid rgba(14,22,80,.09);border-radius:20px;padding:28px 26px;transition:all .26s cubic-bezier(.25,.46,.45,.94);position:relative;overflow:hidden}
+#types .type-card::before{content:'';position:absolute;top:0;inset-inline-end:0;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.06),transparent 70%);transform:translate(40%,-40%);transition:transform .35s;pointer-events:none}
+#types .type-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(9,16,46,.10);border-color:rgba(30,46,245,.18)}
+#types .type-card:hover::before{transform:translate(20%,-20%) scale(1.4)}
+#types .type-tag{display:inline-block!important;font-size:10.5px;font-weight:800;color:#1e2ef5;background:#eef0ff;padding:5px 11px;border-radius:50px;margin-bottom:14px;letter-spacing:.04em;position:relative;line-height:1.4}
+#types .type-card h3{font-size:19px!important;font-weight:900!important;color:#09102e;margin-bottom:10px!important;letter-spacing:-.02em;position:relative;line-height:1.2!important}
+#types .type-card p{font-size:13.5px!important;color:#7880b0;line-height:1.85!important;margin-bottom:16px!important;position:relative}
+#types .type-feats{display:flex!important;flex-direction:column;gap:8px;position:relative}
+#types .type-feat{display:flex!important;align-items:flex-start;gap:8px;font-size:12.5px;color:#3d4576;line-height:1.65}
+#types .type-feat svg{stroke:#1e2ef5;flex-shrink:0;margin-top:3px;display:block}
+@media(max-width:1100px){#types .types-grid{grid-template-columns:1fr}}
+@media(max-width:600px){#types .types-grid{gap:10px}}
+</style>
+
 <!-- Types of Websites -->
 <section id="types" class="sec sec-surface">
   <div class="wrap">
