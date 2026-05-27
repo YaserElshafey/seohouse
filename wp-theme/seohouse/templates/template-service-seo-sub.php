@@ -701,7 +701,7 @@ $tactics_sec = ! empty( $def['has_cons_types'] ) ? 'sec-white' : ( ! empty( $def
      TYPES OF CONTENT — content only
      ═══════════════════════════════════════════════════════════ -->
 <?php if ( ! empty( $def['has_types'] ) ) : ?>
-<section class="sec sec-surface">
+<section class="sec sec-surface ctype-sec">
   <div class="wrap">
     <div class="sh c sr">
       <span class="tag">أنواع المحتوى</span>
