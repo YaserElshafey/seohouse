@@ -128,7 +128,7 @@ get_header();
           <li class="svc-sub-item">خارطة طريق</li>
         </ul>
       </a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/seo/seo-stores' ) ); ?>" class="svc-hub-card sr d3" style="text-decoration:none">
+      <a href="<?php echo esc_url( sh_page_url( 'sectors/ecommerce' ) ); ?>" class="svc-hub-card sr d3" style="text-decoration:none">
         <div class="svc-hub-ico">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
         </div>

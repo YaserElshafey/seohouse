@@ -167,7 +167,7 @@ $faqs       = sh_field( 'service_faqs' );
             'items' => [ 'تدقيق سيو شامل وتشخيص الوضع الحالي', 'قراءة Search Console وAnalytics', 'تحليل أداء وكالتك السيو الحالية', 'خطة تحسين قابلة للتنفيذ' ] ],
           [ 'icon' => '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>',
             'title' => 'سيو المتاجر الإلكترونية', 'desc' => 'سيو متخصص للمتاجر — سلة، زد، شوبيفاي، ووكومرس.',
-            'url' => sh_page_url( 'services/seo/seo-stores' ),
+            'url' => sh_page_url( 'sectors/ecommerce' ),
             'items' => [ 'تحسين صفحات المنتجات والفئات', 'كلمات شرائية بنية شراء عالية', 'معالجة المحتوى المتكرر في المتاجر', 'تقارير ربط الترافيك بالمبيعات' ] ],
       ] as $ss ) :
       ?>
@@ -292,7 +292,7 @@ $faqs       = sh_field( 'service_faqs' );
     <div class="ind-grid sr d1">
       <?php
       foreach ( [
-          [ 'label' => 'التجارة الإلكترونية', 'sub' => 'متاجر سلة، زد، شوبيفاي', 'url' => sh_page_url( 'services/seo-stores' ), 'svg' => '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>' ],
+          [ 'label' => 'التجارة الإلكترونية', 'sub' => 'متاجر سلة، زد، شوبيفاي', 'url' => sh_page_url( 'sectors/ecommerce' ), 'svg' => '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>' ],
           [ 'label' => 'الصحة والطب',         'sub' => 'عيادات، مستشفيات، صحة',  'url' => sh_page_url( 'sectors/health' ),       'svg' => '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>' ],
           [ 'label' => 'التعليم والتدريب',    'sub' => 'منصات، أكاديميات',         'url' => sh_page_url( 'sectors/education' ),    'svg' => '<path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>' ],
           [ 'label' => 'الأغذية والمطاعم',   'sub' => 'مطاعم، توصيل، أغذية',     'url' => sh_page_url( 'sectors/food' ),         'svg' => '<path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>' ],

@@ -1,11 +1,19 @@
 <?php
 /**
  * Template Name: Service — SEO Sub Page
- * Used for: backlinks, content, consulting, seo-stores
+ * Used for: backlinks, content, consulting
+ * Note: seo-stores is now at /sectors/ecommerce/ — this template redirects it.
  */
-get_header();
 
 $slug = get_post_field( 'post_name', get_the_ID() );
+
+// ── Redirect seo-stores to its canonical sector URL ──────────
+if ( in_array( $slug, [ 'seo-stores', 'stores-seo' ], true ) ) {
+	wp_redirect( sh_page_url( 'sectors/ecommerce' ), 301 );
+	exit;
+}
+
+get_header();
 
 // ── Per-service hardcoded defaults ────────────────────────────
 switch ( $slug ) {
@@ -156,7 +164,7 @@ switch ( $slug ) {
 		];
 		break;
 
-	case 'seo-stores':
+	case 'seo-stores': // redirected above — this branch is never reached
 	case 'stores-seo':
 		$def = [
 			'hero_badge'    => 'قطاع التجارة الإلكترونية',
