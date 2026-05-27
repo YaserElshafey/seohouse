@@ -105,7 +105,6 @@ if ( ! $_blog_url ) {
               <div class="mega-sub<?php echo $default_sub === 1 ? ' show' : ''; ?>" id="sub1">
                 <p class="mega-sub-lbl">خدمات السيو الفرعية</p>
                 <div class="mega-sub-grid">
-                  <a href="<?php echo esc_url( sh_page_url( 'services/seo/stores-seo' ) ); ?>" class="sl"><span class="sl-dot"></span><div><strong>سيو المتاجر الإلكترونية</strong><p>سلة، زد، شوبيفاي، ووكومرس</p></div></a>
                   <a href="<?php echo esc_url( sh_page_url( 'services/seo/backlinks' ) ); ?>" class="sl"><span class="sl-dot"></span><div><strong>بناء الباك لينك</strong><p>روابط تقوّي سلطة موقعك</p></div></a>
                   <a href="<?php echo esc_url( sh_page_url( 'services/seo/content' ) ); ?>" class="sl"><span class="sl-dot"></span><div><strong>كتابة المحتوى</strong><p>محتوى يُرضي القارئ وجوجل</p></div></a>
                   <a href="<?php echo esc_url( sh_page_url( 'services/seo/consulting' ) ); ?>" class="sl"><span class="sl-dot"></span><div><strong>استشارات تحليل الأداء</strong><p>قراءة التقارير واتخاذ القرار</p></div></a>
@@ -221,7 +220,6 @@ if ( ! $_blog_url ) {
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>">الرئيسية</a>
       <div class="mob-head">تحسين محركات البحث</div>
       <a href="<?php echo esc_url( sh_page_url( 'services/seo' ) ); ?>" class="mob-sub">تحسين محركات البحث</a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/seo/stores-seo' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">سيو المتاجر</a>
       <a href="<?php echo esc_url( sh_page_url( 'services/seo/backlinks' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">بناء الباك لينك</a>
       <a href="<?php echo esc_url( sh_page_url( 'services/seo/content' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">كتابة المحتوى</a>
       <a href="<?php echo esc_url( sh_page_url( 'services/seo/consulting' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">استشارات الأداء</a>
