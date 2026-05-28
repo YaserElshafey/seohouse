@@ -128,7 +128,8 @@ if ( empty( $process_steps ) ) {
 .wpt-ico svg{stroke:var(--blue);transition:stroke .2s;width:17px;height:17px}
 .wpt-t strong{display:block;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:3px;line-height:1.25}
 .wpt-t p{font-size:12px;color:var(--muted);line-height:1.6}
-.why-vis{position:relative}
+.why-vis{position:relative;background:transparent;padding:0;min-height:auto;overflow:visible;display:block}
+.why-vis::before{display:none}
 .why-card{background:var(--navy-2);border-radius:var(--r4);padding:30px;overflow:hidden;position:relative}
 .why-card::before{content:'';position:absolute;inset-inline-end:-40px;top:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.28),transparent 70%);pointer-events:none}
 .why-head{display:flex;align-items:center;gap:10px;margin-bottom:22px;position:relative;z-index:1}
@@ -425,18 +426,33 @@ if ( empty( $process_steps ) ) {
     <div class="sh c sr"><span class="tag">القطاعات</span><h2 class="h2"><?php echo esc_html( $industries_section_title ); ?></h2><p class="bod"><?php echo esc_html( $industries_section_desc ); ?></p></div>
     <div class="ind-grid">
       <?php
+      $sector_icon_paths = [
+          'ecommerce'  => '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>',
+          'health'     => '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+          'realestate' => '<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
+          'education'  => '<path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>',
+          'food'       => '<path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>',
+          'legal'      => '<path d="M3 6l9 6 9-6"/><path d="M3 6v12l9 6 9-6V6"/>',
+          'tech'       => '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
+          'tourism'    => '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>',
+      ];
       $sectors = new WP_Query( [ 'post_type' => 'sector', 'posts_per_page' => 8, 'orderby' => 'menu_order', 'order' => 'ASC' ] );
       $delays  = [ '', ' d1', ' d2', ' d3', ' d1', ' d2', ' d3', ' d4' ];
       $i       = 0;
       if ( $sectors->have_posts() ) :
           while ( $sectors->have_posts() ) : $sectors->the_post();
-              $icon_svg = sh_field( 'sector_icon_svg' );
-              if ( empty( $icon_svg ) ) {
-                  $icon_svg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/></svg>';
-              }
+              $icon_svg  = sh_field( 'sector_icon_svg' );
+              $slug      = get_post_field( 'post_name' );
+              $ico_paths = $sector_icon_paths[ $slug ] ?? '<circle cx="12" cy="12" r="10"/>';
               ?>
               <a href="<?php the_permalink(); ?>" class="ind-card sr<?php echo esc_attr( $delays[ $i ] ?? '' ); ?>">
-                <div class="ind-ico"><?php echo sh_svg( $icon_svg ); ?></div>
+                <div class="ind-ico">
+                  <?php if ( $icon_svg ) : ?>
+                    <?php echo sh_svg( $icon_svg ); ?>
+                  <?php else : ?>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $ico_paths; // phpcs:ignore ?></svg>
+                  <?php endif; ?>
+                </div>
                 <h3><?php the_title(); ?></h3>
               </a>
               <?php
