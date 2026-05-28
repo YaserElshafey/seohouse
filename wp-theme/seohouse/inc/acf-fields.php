@@ -95,11 +95,11 @@ add_action( 'acf/init', function () {
         'title'    => 'إعدادات الصفحة الرئيسية',
         'location' => [ [ [ 'param' => 'options_page', 'operator' => '==', 'value' => 'seohouse-homepage' ] ] ],
         'fields'   => [
-            [ 'key' => 'field_hero_headline',    'label' => 'العنوان الرئيسي للهيرو',    'name' => 'hero_headline',    'type' => 'text',     'default_value' => 'كن آخر نقرة يبحث عنها عميلك' ],
+            [ 'key' => 'field_hero_headline',    'label' => 'العنوان الرئيسي للهيرو',    'name' => 'hero_headline',    'type' => 'textarea', 'rows' => 2, 'default_value' => "كن آخر نقرة\nيبحث عنها عميلك" ],
             [ 'key' => 'field_hero_emphasis',    'label' => 'الكلمة المتدرجة (باللون)',  'name' => 'hero_emphasis',    'type' => 'text',     'default_value' => 'آخر نقرة' ],
             [ 'key' => 'field_hero_subtext',     'label' => 'النص التعريفي في الهيرو',   'name' => 'hero_subtext',     'type' => 'textarea', 'rows' => 2, 'default_value' => 'نضع موقعك أمام العملاء الذين يبحثون عمّا تقدّمه — بدقة، بأدلة، وبنتائج قابلة للقياس.' ],
             [ 'key' => 'field_hero_cta_primary', 'label' => 'نص الزر الرئيسي',          'name' => 'hero_cta_primary', 'type' => 'text',     'default_value' => 'احجز استشارة مجانية 30 دقيقة' ],
-            [ 'key' => 'field_why_title',        'label' => 'عنوان قسم "لماذا نحن"',    'name' => 'why_title',        'type' => 'text',     'default_value' => 'نعمل بمنطق الأداء، لا بمنطق الوعود' ],
+            [ 'key' => 'field_why_title',        'label' => 'عنوان قسم "لماذا نحن"',    'name' => 'why_title',        'type' => 'textarea', 'rows' => 2, 'default_value' => "نعمل بمنطق الأداء،\nلا بمنطق الوعود" ],
             [ 'key' => 'field_why_text',         'label' => 'وصف قسم "لماذا نحن"',      'name' => 'why_text',         'type' => 'textarea', 'rows' => 3 ],
             [
                 'key'          => 'field_process_steps',
@@ -124,6 +124,23 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_process_section_desc',  'label' => 'قسم كيف نعمل — الوصف',    'name' => 'process_section_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'خطوات محددة لكل مشروع حتى نصل إلى نتائج مقاسة.' ],
             [ 'key' => 'field_hp_cta_title', 'label' => 'CTA النهائي — العنوان',              'name' => 'hp_cta_title', 'type' => 'text', 'default_value' => 'موقعك يستحق أن يُرى' ],
             [ 'key' => 'field_hp_cta_desc',  'label' => 'CTA النهائي — الوصف',               'name' => 'hp_cta_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'خصص 30 دقيقة معنا — وسنخبرك بصدق أين أنت وأين يمكن أن تكون.' ],
+            [ 'key' => 'field_hp_hero_live_badge',    'label' => 'الهيرو — شريط "نشط الآن"',     'name' => 'hp_hero_live_badge',    'type' => 'text',     'default_value' => 'نعمل الآن على مشاريع تحسين نشطة' ],
+            [ 'key' => 'field_hp_hero_cta_secondary', 'label' => 'الهيرو — نص زر CTA الثانوي',   'name' => 'hp_hero_cta_secondary', 'type' => 'text',     'default_value' => 'تعرّف على خدماتنا' ],
+            [ 'key' => 'field_hp_cases_title',        'label' => 'قسم النتائج — العنوان',         'name' => 'hp_cases_title',        'type' => 'text',     'default_value' => 'الأرقام تتكلم' ],
+            [ 'key' => 'field_hp_cases_desc',         'label' => 'قسم النتائج — الوصف',          'name' => 'hp_cases_desc',         'type' => 'textarea', 'rows' => 2, 'default_value' => 'نماذج من مشاريع نفّذناها — الأرقام الفعلية تُضاف بعد موافقة العملاء.' ],
+            [
+                'key'          => 'field_hp_why_points',
+                'label'        => 'نقاط "لماذا نحن" (4 نقاط)',
+                'name'         => 'hp_why_points',
+                'type'         => 'repeater',
+                'min'          => 4,
+                'max'          => 4,
+                'button_label' => 'إضافة نقطة',
+                'sub_fields'   => [
+                    [ 'key' => 'field_wp_title', 'label' => 'العنوان', 'name' => 'wp_title', 'type' => 'text' ],
+                    [ 'key' => 'field_wp_desc',  'label' => 'الوصف',  'name' => 'wp_desc',  'type' => 'textarea', 'rows' => 2 ],
+                ],
+            ],
         ],
     ] );
 
