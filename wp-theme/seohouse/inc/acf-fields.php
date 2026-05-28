@@ -37,6 +37,13 @@ add_action( 'acf/init', function () {
             'parent_slug' => 'seohouse-options',
         ] );
 
+        acf_add_options_sub_page( [
+            'page_title'  => 'إعدادات الفوتر',
+            'menu_title'  => 'الفوتر',
+            'menu_slug'   => 'seohouse-footer',
+            'parent_slug' => 'seohouse-options',
+        ] );
+
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -59,6 +66,10 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_global_cta_title', 'label' => 'عنوان CTA العام',                  'name' => 'global_cta_title', 'type' => 'text' ],
             [ 'key' => 'field_global_cta_desc',  'label' => 'وصف CTA العام',                   'name' => 'global_cta_desc',  'type' => 'textarea', 'rows' => 2 ],
             [ 'key' => 'field_consult_duration', 'label' => 'مدة الاستشارة المجانية',           'name' => 'consult_duration', 'type' => 'text', 'default_value' => '30 دقيقة' ],
+            [ 'key' => 'field_footer_col1_heading', 'label' => 'عنوان عمود الفوتر 1',  'name' => 'footer_col1_heading', 'type' => 'text', 'default_value' => 'تحسين محركات البحث' ],
+            [ 'key' => 'field_footer_col2_heading', 'label' => 'عنوان عمود الفوتر 2',  'name' => 'footer_col2_heading', 'type' => 'text', 'default_value' => 'تصميم المواقع' ],
+            [ 'key' => 'field_footer_col3_heading', 'label' => 'عنوان عمود الفوتر 3',  'name' => 'footer_col3_heading', 'type' => 'text', 'default_value' => 'إنشاء المتاجر' ],
+            [ 'key' => 'field_footer_col4_heading', 'label' => 'عنوان عمود الفوتر 4',  'name' => 'footer_col4_heading', 'type' => 'text', 'default_value' => 'الشركة' ],
         ],
     ] );
 
@@ -91,6 +102,14 @@ add_action( 'acf/init', function () {
             ],
             [ 'key' => 'field_reviews_score', 'label' => 'التقييم الإجمالي (مثال: 4.9)', 'name' => 'reviews_score', 'type' => 'text', 'default_value' => '4.9' ],
             [ 'key' => 'field_reviews_count', 'label' => 'عدد المراجعات (نص مثال: +50 تقييم)', 'name' => 'reviews_count', 'type' => 'text', 'default_value' => '+50 تقييم' ],
+            [ 'key' => 'field_services_section_title', 'label' => 'قسم الخدمات — العنوان',   'name' => 'services_section_title', 'type' => 'text', 'default_value' => 'خدمات تبني وجودك الرقمي' ],
+            [ 'key' => 'field_services_section_desc',  'label' => 'قسم الخدمات — الوصف',    'name' => 'services_section_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'من تحسين محركات البحث إلى إنشاء المتاجر — نغطي كل ما يحتاجه عملك.' ],
+            [ 'key' => 'field_industries_section_title', 'label' => 'قسم القطاعات — العنوان', 'name' => 'industries_section_title', 'type' => 'text', 'default_value' => 'خبرة عملية في قطاعك' ],
+            [ 'key' => 'field_industries_section_desc',  'label' => 'قسم القطاعات — الوصف',  'name' => 'industries_section_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'استراتيجيتنا مبنية على خصوصية نشاطك — لا على قوالب جاهزة.' ],
+            [ 'key' => 'field_process_section_title', 'label' => 'قسم كيف نعمل — العنوان',   'name' => 'process_section_title', 'type' => 'text', 'default_value' => 'منهجية واضحة من البداية للنتيجة' ],
+            [ 'key' => 'field_process_section_desc',  'label' => 'قسم كيف نعمل — الوصف',    'name' => 'process_section_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'خطوات محددة لكل مشروع حتى نصل إلى نتائج مقاسة.' ],
+            [ 'key' => 'field_hp_cta_title', 'label' => 'CTA النهائي — العنوان',              'name' => 'hp_cta_title', 'type' => 'text', 'default_value' => 'موقعك يستحق أن يُرى' ],
+            [ 'key' => 'field_hp_cta_desc',  'label' => 'CTA النهائي — الوصف',               'name' => 'hp_cta_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'خصص 30 دقيقة معنا — وسنخبرك بصدق أين أنت وأين يمكن أن تكون.' ],
         ],
     ] );
 
@@ -294,6 +313,75 @@ add_action( 'acf/init', function () {
                     [ 'key' => 'field_faq_a', 'label' => 'الجواب',  'name' => 'answer',   'type' => 'textarea', 'rows' => 3 ],
                 ],
             ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // About Page Fields
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_about_page',
+        'title'    => 'محتوى صفحة: من نحن',
+        'location' => [ [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-about.php' ] ] ],
+        'fields'   => [
+            [ 'key' => 'field_ab_hero_tag',   'label' => 'تصنيف الهيرو',                    'name' => 'about_hero_tag',   'type' => 'text',     'default_value' => 'قصتنا' ],
+            [ 'key' => 'field_ab_hero_title', 'label' => 'عنوان الهيرو (سطر في كل سطر)',    'name' => 'about_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "نعمل بمنطق الأداء\nلا بمنطق الوعود" ],
+            [ 'key' => 'field_ab_hero_em',    'label' => 'الكلمة المُبرَزة بالتدرج اللوني', 'name' => 'about_hero_em',    'type' => 'text',     'default_value' => 'الأداء' ],
+            [ 'key' => 'field_ab_hero_desc',  'label' => 'وصف الهيرو',                      'name' => 'about_hero_desc',  'type' => 'textarea', 'rows' => 3, 'default_value' => 'سيو هاوس متخصصون في تحسين محركات البحث، يخدمون الأسواق السعودية والخليجية. لا نُقدّم وعوداً — نُقدّم خطوات واضحة ونتائج قابلة للقياس.' ],
+            [ 'key' => 'field_ab_who_tag',     'label' => 'تصنيف قسم من نحن',               'name' => 'about_who_tag',     'type' => 'text',     'default_value' => 'من نحن' ],
+            [ 'key' => 'field_ab_who_heading', 'label' => 'عنوان قسم من نحن',               'name' => 'about_who_heading', 'type' => 'textarea', 'rows' => 2, 'default_value' => "متخصصون في السيو،\nلا في كل شيء" ],
+            [ 'key' => 'field_ab_who_body1',   'label' => 'الفقرة الأولى — من نحن',         'name' => 'about_who_body1',   'type' => 'textarea', 'rows' => 3, 'default_value' => 'سيو هاوس تأسست لخدمة الأعمال السعودية والخليجية الباحثة عن حضور رقمي حقيقي في محركات البحث. لم نبنِ عملنا على الوعود — بنيناه على نتائج يمكن قياسها في Search Console.' ],
+            [ 'key' => 'field_ab_who_body2',   'label' => 'الفقرة الثانية — من نحن',        'name' => 'about_who_body2',   'type' => 'textarea', 'rows' => 3, 'default_value' => 'نؤمن أن أفضل طريقة لإثبات قيمتنا هي أن نعمل بشفافية كاملة — تقرير شهري، أهداف محددة، وتواصل مباشر مع الفريق المنفذ.' ],
+            [ 'key' => 'field_ab_principles_heading', 'label' => 'عنوان بطاقة المبادئ',     'name' => 'about_principles_heading', 'type' => 'text', 'default_value' => 'مبادئنا في العمل' ],
+            [
+                'key'          => 'field_ab_principles',
+                'label'        => 'بطاقات المبادئ (3 عناصر)',
+                'name'         => 'about_principles',
+                'type'         => 'repeater',
+                'min'          => 1,
+                'max'          => 5,
+                'button_label' => 'إضافة مبدأ',
+                'sub_fields'   => [
+                    [ 'key' => 'field_pr_title', 'label' => 'العنوان', 'name' => 'title', 'type' => 'text' ],
+                    [ 'key' => 'field_pr_desc',  'label' => 'الوصف',   'name' => 'desc',  'type' => 'textarea', 'rows' => 2 ],
+                ],
+            ],
+            [ 'key' => 'field_ab_values_tag',     'label' => 'تصنيف قسم القيم',            'name' => 'about_values_tag',     'type' => 'text', 'default_value' => 'قيمنا' ],
+            [ 'key' => 'field_ab_values_heading', 'label' => 'عنوان قسم القيم',             'name' => 'about_values_heading', 'type' => 'text', 'default_value' => 'ما يحكم طريقة عملنا' ],
+            [
+                'key'          => 'field_ab_values',
+                'label'        => 'بطاقات القيم (6 عناصر)',
+                'name'         => 'about_values',
+                'type'         => 'repeater',
+                'min'          => 1,
+                'max'          => 8,
+                'button_label' => 'إضافة قيمة',
+                'sub_fields'   => [
+                    [ 'key' => 'field_vl_title', 'label' => 'العنوان', 'name' => 'title', 'type' => 'text' ],
+                    [ 'key' => 'field_vl_desc',  'label' => 'الوصف',   'name' => 'desc',  'type' => 'textarea', 'rows' => 2 ],
+                ],
+            ],
+            [ 'key' => 'field_ab_cta_tag',   'label' => 'تصنيف قسم CTA',                  'name' => 'about_cta_tag',   'type' => 'text',     'default_value' => 'تعرّف أكثر' ],
+            [ 'key' => 'field_ab_cta_title', 'label' => 'عنوان قسم CTA',                   'name' => 'about_cta_title', 'type' => 'text',     'default_value' => 'هل تريد أن تعمل معنا؟' ],
+            [ 'key' => 'field_ab_cta_desc',  'label' => 'وصف قسم CTA',                     'name' => 'about_cta_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'ابدأ باستشارة مجانية — وستعرف هل نحن الشريك المناسب لك.' ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // Team Page Fields
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_team_page',
+        'title'    => 'محتوى صفحة: فريق العمل',
+        'location' => [ [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-team.php' ] ] ],
+        'fields'   => [
+            [ 'key' => 'field_tm_page_hero_tag',   'label' => 'تصنيف الهيرو',                      'name' => 'team_hero_tag',   'type' => 'text',     'default_value' => 'الفريق' ],
+            [ 'key' => 'field_tm_page_hero_title', 'label' => 'عنوان الهيرو (سطر في كل سطر)',      'name' => 'team_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "خبراء متخصصون\nلا موظفون عموميون" ],
+            [ 'key' => 'field_tm_page_hero_em',    'label' => 'الكلمة المُبرَزة بالتدرج اللوني',   'name' => 'team_hero_em',    'type' => 'text',     'default_value' => 'متخصصون' ],
+            [ 'key' => 'field_tm_page_hero_desc',  'label' => 'وصف الهيرو',                        'name' => 'team_hero_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'كل عضو في فريقنا متخصص في مجال محدد من السيو — لأن التخصص هو الفرق بين النتائج والوعود.' ],
+            [ 'key' => 'field_tm_page_join_title', 'label' => 'عنوان بطاقة انضم إلينا',           'name' => 'team_join_title', 'type' => 'text',     'default_value' => 'نبحث عن موهبة' ],
+            [ 'key' => 'field_tm_page_join_desc',  'label' => 'وصف بطاقة انضم إلينا',             'name' => 'team_join_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'هل أنت متخصص في السيو وتريد العمل في بيئة محترفة؟' ],
+            [ 'key' => 'field_tm_page_join_btn',   'label' => 'نص زر انضم إلينا',                 'name' => 'team_join_btn',   'type' => 'text',     'default_value' => 'تواصل معنا' ],
         ],
     ] );
 
