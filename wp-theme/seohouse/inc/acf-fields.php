@@ -44,6 +44,20 @@ add_action( 'acf/init', function () {
             'parent_slug' => 'seohouse-options',
         ] );
 
+        acf_add_options_sub_page( [
+            'page_title'  => 'إعدادات صفحة النتائج',
+            'menu_title'  => 'صفحة النتائج',
+            'menu_slug'   => 'seohouse-results',
+            'parent_slug' => 'seohouse-options',
+        ] );
+
+        acf_add_options_sub_page( [
+            'page_title'  => 'إعدادات أرشيف القطاعات',
+            'menu_title'  => 'أرشيف القطاعات',
+            'menu_slug'   => 'seohouse-sectors-archive',
+            'parent_slug' => 'seohouse-options',
+        ] );
+
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -421,6 +435,145 @@ add_action( 'acf/init', function () {
                     [ 'key' => 'field_sfaq_a', 'label' => 'الجواب', 'name' => 'answer',   'type' => 'textarea', 'rows' => 3 ],
                 ],
             ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // Services Hub Page Fields
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_services_hub',
+        'title'    => 'محتوى صفحة: مركز الخدمات',
+        'location' => [ [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-services.php' ] ] ],
+        'fields'   => [
+            [ 'key' => 'field_hub_hero_badge',    'label' => 'شعار الهيرو',                'name' => 'hub_hero_badge',    'type' => 'text',     'default_value' => 'خدماتنا' ],
+            [ 'key' => 'field_hub_hero_title',    'label' => 'عنوان الهيرو (سطر في كل سطر)', 'name' => 'hub_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "خدمات تبني\nوجودك الرقمي" ],
+            [ 'key' => 'field_hub_hero_em',       'label' => 'الكلمة المُبرَزة بالتدرج',   'name' => 'hub_hero_em',       'type' => 'text',     'default_value' => 'وجودك الرقمي' ],
+            [ 'key' => 'field_hub_hero_desc',     'label' => 'وصف الهيرو',                 'name' => 'hub_hero_desc',     'type' => 'textarea', 'rows' => 2, 'default_value' => 'من تحسين محركات البحث إلى إنشاء المتاجر — نغطّي كل ما يحتاجه عملك لينمو رقمياً.' ],
+            [ 'key' => 'field_hub_services_title','label' => 'عنوان قسم الخدمات',          'name' => 'hub_services_title','type' => 'text',     'default_value' => 'اختر الخدمة التي تحتاجها' ],
+            [ 'key' => 'field_hub_services_desc', 'label' => 'وصف قسم الخدمات',           'name' => 'hub_services_desc', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'كل خدمة مصمّمة لتحقيق هدف محدد — نوصّلك للنتيجة بأقصر طريق.' ],
+            [ 'key' => 'field_hub_seo_sub_title', 'label' => 'عنوان قسم خدمات سيو التخصصية', 'name' => 'hub_seo_sub_title', 'type' => 'text', 'default_value' => 'ابنِ استراتيجيتك من هنا' ],
+            [ 'key' => 'field_hub_seo_sub_desc',  'label' => 'وصف قسم خدمات سيو التخصصية',  'name' => 'hub_seo_sub_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'كل خدمة تُكمّل الأخرى — اختر ما يناسب وضعك الآن أو ابنِ باقة متكاملة.' ],
+            [ 'key' => 'field_hub_why_title',     'label' => 'عنوان قسم لماذا سيو هاوس',  'name' => 'hub_why_title',     'type' => 'text',     'default_value' => 'ليس مجرد وكالة رقمية' ],
+            [ 'key' => 'field_hub_why_desc',      'label' => 'وصف قسم لماذا سيو هاوس',   'name' => 'hub_why_desc',      'type' => 'textarea', 'rows' => 2, 'default_value' => 'نتخصص في السوق السعودي — نفهم اللغة، نعرف المنافسين، ونعمل بشفافية كاملة.' ],
+            [ 'key' => 'field_hub_cta_tag',       'label' => 'تصنيف CTA',                  'name' => 'hub_cta_tag',       'type' => 'text',     'default_value' => 'ابدأ الآن' ],
+            [ 'key' => 'field_hub_cta_title',     'label' => 'عنوان CTA',                   'name' => 'hub_cta_title',     'type' => 'text',     'default_value' => 'لا تعرف من أين تبدأ؟' ],
+            [ 'key' => 'field_hub_cta_desc',      'label' => 'وصف CTA',                    'name' => 'hub_cta_desc',      'type' => 'textarea', 'rows' => 2, 'default_value' => 'احجز استشارة مجانية ونحدد معاً أفضل خدمة لنمو مشروعك.' ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // Service Web Overview Page Fields
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_service_web_overview',
+        'title'    => 'محتوى صفحة: تصميم المواقع',
+        'location' => [ [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-service-web.php' ] ] ],
+        'fields'   => [
+            [ 'key' => 'field_web_hero_pre',  'label' => 'السطر الأول في العنوان',  'name' => 'web_hero_pre',  'type' => 'text',     'default_value' => 'تصميم مواقع' ],
+            [ 'key' => 'field_web_hero_em',   'label' => 'الكلمة المُبرَزة (السطر الثاني)', 'name' => 'web_hero_em', 'type' => 'text', 'default_value' => 'تبني الثقة وتجلب العملاء' ],
+            [ 'key' => 'field_web_hero_desc', 'label' => 'وصف الهيرو',              'name' => 'web_hero_desc', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'الموقع الإلكتروني هو مقرّك الرقمي — نُصمّمه ليُمثّلك باحترافية، يُحمّل بسرعة، يُقنع زوّارك، ويُحوّلهم إلى عملاء فعليين.' ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // Service Stores Overview Page Fields
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_service_stores_overview',
+        'title'    => 'محتوى صفحة: إنشاء المتاجر',
+        'location' => [ [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-service-stores.php' ] ] ],
+        'fields'   => [
+            [ 'key' => 'field_stores_hero_pre',  'label' => 'السطر الأول في العنوان',  'name' => 'stores_hero_pre',  'type' => 'text',     'default_value' => 'إنشاء وتصميم' ],
+            [ 'key' => 'field_stores_hero_em',   'label' => 'الكلمة المُبرَزة (السطر الثاني)', 'name' => 'stores_hero_em', 'type' => 'text', 'default_value' => 'متجرك الإلكتروني' ],
+            [ 'key' => 'field_stores_hero_desc', 'label' => 'وصف الهيرو',              'name' => 'stores_hero_desc', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'من فكرة إلى متجر جاهز للبيع — هيكل تجاري ذكي، تجربة شراء سلسة، وقابلية للنمو على أي منصة (سلة، زد، شوبيفاي، أو ووكومرس).' ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // Service Products Page Fields
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_service_products_page',
+        'title'    => 'محتوى صفحة: رفع المنتجات',
+        'location' => [ [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-service-products.php' ] ] ],
+        'fields'   => [
+            [ 'key' => 'field_prod_hero_tag',   'label' => 'تصنيف الهيرو',                    'name' => 'prod_hero_tag',   'type' => 'text',     'default_value' => 'رفع المنتجات' ],
+            [ 'key' => 'field_prod_hero_title', 'label' => 'عنوان الهيرو (سطر في كل سطر)',    'name' => 'prod_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "رفع المنتجات للمتاجر\nباحترافية" ],
+            [ 'key' => 'field_prod_hero_em',    'label' => 'الكلمة المُبرَزة',                'name' => 'prod_hero_em',    'type' => 'text',     'default_value' => 'باحترافية' ],
+            [ 'key' => 'field_prod_hero_desc',  'label' => 'وصف الهيرو',                      'name' => 'prod_hero_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'ليس مجرّد إدخال بيانات — رفع منظّم واحترافي عبر جميع المنصات مع تحسين لكل منتج يرفع فرصته في الظهور.' ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // Results Page Fields
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_results_page',
+        'title'    => 'محتوى صفحة: النتائج',
+        'location' => [ [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-results.php' ] ] ],
+        'fields'   => [
+            [ 'key' => 'field_results_hero_tag',   'label' => 'تصنيف الهيرو',                 'name' => 'results_hero_tag',   'type' => 'text',     'default_value' => 'نتائج فعلية' ],
+            [ 'key' => 'field_results_hero_title', 'label' => 'عنوان الهيرو (سطر في كل سطر)', 'name' => 'results_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "نتائج من\nمشاريع حقيقية" ],
+            [ 'key' => 'field_results_hero_em',    'label' => 'الكلمة المُبرَزة',             'name' => 'results_hero_em',    'type' => 'text',     'default_value' => 'مشاريع حقيقية' ],
+            [ 'key' => 'field_results_hero_desc',  'label' => 'وصف الهيرو',                   'name' => 'results_hero_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'لا نتحدث عن نتائج افتراضية — هذه مشاريع نفّذناها لعملاء حقيقيين في قطاعات متنوعة. الأرقام الدقيقة تُضاف بعد موافقة العملاء.' ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // Sectors Archive Options Fields
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_sectors_archive',
+        'title'    => 'إعدادات أرشيف القطاعات',
+        'location' => [ [ [ 'param' => 'options_page', 'operator' => '==', 'value' => 'seohouse-sectors-archive' ] ] ],
+        'fields'   => [
+            [ 'key' => 'field_sectors_hero_title',  'label' => 'عنوان الهيرو (سطر في كل سطر)', 'name' => 'sectors_hero_title',  'type' => 'textarea', 'rows' => 2, 'default_value' => "سيو مخصص\nلقطاعك" ],
+            [ 'key' => 'field_sectors_hero_em',     'label' => 'الكلمة المُبرَزة',              'name' => 'sectors_hero_em',     'type' => 'text',     'default_value' => 'لقطاعك' ],
+            [ 'key' => 'field_sectors_hero_desc',   'label' => 'وصف الهيرو',                    'name' => 'sectors_hero_desc',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'لكل قطاع كلماته المفتاحية، جمهوره، ومنافسوه — استراتيجيتنا مبنية على هذا الفهم، لا على قوالب جاهزة.' ],
+            [ 'key' => 'field_sectors_grid_title',  'label' => 'عنوان شبكة القطاعات',          'name' => 'sectors_grid_title',  'type' => 'text',     'default_value' => 'اختر قطاعك لمعرفة كيف نخدمه' ],
+            [ 'key' => 'field_sectors_grid_desc',   'label' => 'وصف شبكة القطاعات',            'name' => 'sectors_grid_desc',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'نعمل مع شركات من قطاعات متنوعة — لكل واحد منها منهجية وفهم خاص.' ],
+            [ 'key' => 'field_sectors_why_title',   'label' => 'عنوان قسم لماذا التخصص',       'name' => 'sectors_why_title',   'type' => 'textarea', 'rows' => 2, 'default_value' => "استراتيجية قطاعية\nلا قالب جاهز" ],
+            [ 'key' => 'field_sectors_why_body1',   'label' => 'الفقرة الأولى — لماذا التخصص', 'name' => 'sectors_why_body1',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'كل قطاع يملك كلماته المفتاحية الخاصة، نية بحث مختلفة، ومنافسين محددين. الاستراتيجية الناجحة للعيادة تختلف عن استراتيجية المتجر الإلكتروني تماماً.' ],
+            [ 'key' => 'field_sectors_why_body2',   'label' => 'الفقرة الثانية — لماذا التخصص', 'name' => 'sectors_why_body2', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'نبني استراتيجية السيو لكل عميل بناءً على فهم عميق لقطاعه — وليس نسخاً من قالب جاهز.' ],
+            [ 'key' => 'field_sectors_cta_title',   'label' => 'عنوان CTA',                     'name' => 'sectors_cta_title',   'type' => 'text',     'default_value' => 'احجز استشارة مجانية ولنبدأ معاً' ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // Results Archive Options Fields
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_results_archive',
+        'title'    => 'إعدادات صفحة النتائج (أرشيف)',
+        'location' => [ [ [ 'param' => 'options_page', 'operator' => '==', 'value' => 'seohouse-results' ] ] ],
+        'fields'   => [
+            [ 'key' => 'field_ra_hero_tag',   'label' => 'تصنيف الهيرو',                 'name' => 'ra_hero_tag',   'type' => 'text',     'default_value' => 'نتائج فعلية' ],
+            [ 'key' => 'field_ra_hero_title', 'label' => 'عنوان الهيرو (سطر في كل سطر)', 'name' => 'ra_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "نتائج من\nمشاريع حقيقية" ],
+            [ 'key' => 'field_ra_hero_em',    'label' => 'الكلمة المُبرَزة',             'name' => 'ra_hero_em',    'type' => 'text',     'default_value' => 'مشاريع حقيقية' ],
+            [ 'key' => 'field_ra_hero_desc',  'label' => 'وصف الهيرو',                   'name' => 'ra_hero_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'لا نتحدث عن نتائج افتراضية — هذه مشاريع نفّذناها لعملاء حقيقيين في قطاعات متنوعة. الأرقام الدقيقة تُضاف بعد موافقة العملاء.' ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // SEO Service Page — Section Headings
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_service_seo_sections',
+        'title'    => 'محتوى صفحة السيو — العناوين والأقسام',
+        'location' => [ [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-service-seo.php' ] ] ],
+        'fields'   => [
+            [ 'key' => 'field_seo_lost_title',       'label' => 'عنوان قسم الفرص الضائعة',       'name' => 'seo_lost_title',       'type' => 'text',     'default_value' => 'كل يوم يبحث عملاؤك — وكل يوم تخسر أنت' ],
+            [ 'key' => 'field_seo_lost_desc',        'label' => 'وصف قسم الفرص الضائعة',        'name' => 'seo_lost_desc',        'type' => 'textarea', 'rows' => 2, 'default_value' => 'إذا كان موقعك لا يظهر في الصفحة الأولى، فأنت لا تخسر زيارة فقط — أنت تخسر طلباً وعرض سعر وعميلاً يذهب لمنافسك.' ],
+            [ 'key' => 'field_seo_why_title',        'label' => 'عنوان قسم لماذا السيو تجارياً', 'name' => 'seo_why_title',        'type' => 'textarea', 'rows' => 2, 'default_value' => "السيو ليس بنداً في الميزانية —\nهو خفض في تكلفة العميل" ],
+            [ 'key' => 'field_seo_why_desc',         'label' => 'وصف قسم لماذا السيو تجارياً',  'name' => 'seo_why_desc',         'type' => 'textarea', 'rows' => 2, 'default_value' => 'كل عميل يأتي عبر البحث العضوي يكلّفك أقل من نظيره عبر الإعلان. والأهم — يبقى يأتي حتى بعد توقفك عن الإنفاق.' ],
+            [ 'key' => 'field_seo_wwd_title',        'label' => 'عنوان قسم ماذا نفعل',          'name' => 'seo_wwd_title',        'type' => 'text',     'default_value' => 'ستة محاور تنفيذية تشكّل خدمة السيو' ],
+            [ 'key' => 'field_seo_wwd_desc',         'label' => 'وصف قسم ماذا نفعل',           'name' => 'seo_wwd_desc',         'type' => 'textarea', 'rows' => 2, 'default_value' => 'السيو ليس مهمة واحدة — هو منظومة من ستة محاور كل واحد منها يدعم الآخر.' ],
+            [ 'key' => 'field_seo_sub_title',        'label' => 'عنوان قسم الخدمات الفرعية',    'name' => 'seo_sub_title',        'type' => 'text',     'default_value' => 'اختر الخدمة التي يحتاجها عملك' ],
+            [ 'key' => 'field_seo_reporting_title',  'label' => 'عنوان قسم التقارير',           'name' => 'seo_reporting_title',  'type' => 'textarea', 'rows' => 2, 'default_value' => "تقارير تتكلم لغة عملك\n— لا لغة المطورين" ],
+            [ 'key' => 'field_seo_reporting_desc',   'label' => 'وصف قسم التقارير',             'name' => 'seo_reporting_desc',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'في معظم الوكالات تأتيك تقارير ممتلئة بمصطلحات جوجل لا تفهم منها شيئاً. عندنا التقرير يُظهر لك بوضوح: كم ليد جاء من البحث، كم بيع، وأين تذهب ميزانيتك.' ],
+            [ 'key' => 'field_seo_proof_title',      'label' => 'عنوان قسم النتائج',            'name' => 'seo_proof_title',      'type' => 'text',     'default_value' => 'نتائج حقيقية لعملاء حقيقيين' ],
+            [ 'key' => 'field_seo_cta_title',        'label' => 'عنوان CTA',                     'name' => 'seo_cta_title',        'type' => 'text',     'default_value' => 'ابدأ بكسب عملاء يبحثون عنك فعلاً' ],
         ],
     ] );
 
