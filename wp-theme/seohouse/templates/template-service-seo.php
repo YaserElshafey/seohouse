@@ -10,6 +10,20 @@ $hero_desc  = sh_field( 'service_hero_desc' )  ?: 'عملاؤك يبحثون ع�
 $features   = sh_field( 'service_features' );
 $steps      = sh_field( 'service_steps' );
 $faqs       = sh_field( 'service_faqs' );
+
+$seo_lost_title     = sh_field( 'seo_lost_title',      null, 'كل يوم يبحث عملاؤك — وكل يوم تخسر أنت' );
+$seo_lost_desc      = sh_field( 'seo_lost_desc',       null, 'إذا كان موقعك لا يظهر في الصفحة الأولى، فأنت لا تخسر زيارة فقط — أنت تخسر طلباً وعرض سعر وعميلاً يذهب لمنافسك.' );
+$seo_why_raw        = sh_field( 'seo_why_title',       null, "السيو ليس بنداً في الميزانية —\nهو خفض في تكلفة العميل" );
+$seo_why_desc       = sh_field( 'seo_why_desc',        null, 'كل عميل يأتي عبر البحث العضوي يكلّفك أقل من نظيره عبر الإعلان. والأهم — يبقى يأتي حتى بعد توقفك عن الإنفاق.' );
+$seo_why_title      = nl2br( esc_html( $seo_why_raw ) );
+$seo_wwd_title      = sh_field( 'seo_wwd_title',       null, 'ستة محاور تنفيذية تشكّل خدمة السيو' );
+$seo_wwd_desc       = sh_field( 'seo_wwd_desc',        null, 'السيو ليس مهمة واحدة — هو منظومة من ستة محاور كل واحد منها يدعم الآخر.' );
+$seo_sub_title      = sh_field( 'seo_sub_title',       null, 'اختر الخدمة التي يحتاجها عملك' );
+$seo_reporting_raw  = sh_field( 'seo_reporting_title', null, "تقارير تتكلم لغة عملك\n— لا لغة المطورين" );
+$seo_reporting_title = nl2br( esc_html( $seo_reporting_raw ) );
+$seo_reporting_desc  = sh_field( 'seo_reporting_desc', null, 'في معظم الوكالات تأتيك تقارير ممتلئة بمصطلحات جوجل لا تفهم منها شيئاً. عندنا التقرير يُظهر لك بوضوح: كم ليد جاء من البحث، كم بيع، وأين تذهب ميزانيتك.' );
+$seo_proof_title    = sh_field( 'seo_proof_title',     null, 'نتائج حقيقية لعملاء حقيقيين' );
+$seo_cta_title      = sh_field( 'seo_cta_title',       null, 'ابدأ بكسب عملاء يبحثون عنك فعلاً' );
 ?>
 
 <!-- Hero -->
@@ -47,7 +61,7 @@ $faqs       = sh_field( 'service_faqs' );
 <!-- Lost Opportunities -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">الفرص الضائعة</span><h2 class="h2">كل يوم يبحث عملاؤك — وكل يوم تخسر أنت</h2><p class="bod">إذا كان موقعك لا يظهر في الصفحة الأولى، فأنت لا تخسر زيارة فقط — أنت تخسر طلباً وعرض سعر وعميلاً يذهب لمنافسك.</p></div>
+    <div class="sh c sr"><span class="tag">الفرص الضائعة</span><h2 class="h2"><?php echo esc_html( $seo_lost_title ); ?></h2><p class="bod"><?php echo esc_html( $seo_lost_desc ); ?></p></div>
     <div class="lost-grid">
       <div class="lost-card sr">
         <div class="lost-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M8 11h6"/></svg></div>
@@ -78,7 +92,7 @@ $faqs       = sh_field( 'service_faqs' );
   <div class="wrap">
     <div class="why-com-grid">
       <div>
-        <div class="sh sr"><span class="tag">لماذا السيو يهم تجارياً</span><h2 class="h2">السيو ليس بنداً في الميزانية —<br>هو خفض في تكلفة العميل</h2><p class="bod" style="margin-top:12px">كل عميل يأتي عبر البحث العضوي يكلّفك أقل من نظيره عبر الإعلان. والأهم — يبقى يأتي حتى بعد توقفك عن الإنفاق.</p></div>
+        <div class="sh sr"><span class="tag">لماذا السيو يهم تجارياً</span><h2 class="h2"><?php echo wp_kses_post( $seo_why_title ); ?></h2><p class="bod" style="margin-top:12px"><?php echo esc_html( $seo_why_desc ); ?></p></div>
         <div class="chklist sr d1" style="margin-bottom:24px">
           <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>تكلفة عميل أقل</strong> — كلما نمت الزيارات العضوية، انخفض اعتمادك على الإعلانات</div>
           <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>عملاء بنية شراء أعلى</strong> — الباحث في جوجل لديه احتياج حقيقي</div>
@@ -118,7 +132,7 @@ $faqs       = sh_field( 'service_faqs' );
 <!-- What We Do -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">ماذا نفعل بالضبط</span><h2 class="h2">ستة محاور تنفيذية تشكّل خدمة السيو</h2><p class="bod">السيو ليس مهمة واحدة — هو منظومة من ستة محاور كل واحد منها يدعم الآخر.</p></div>
+    <div class="sh c sr"><span class="tag">ماذا نفعل بالضبط</span><h2 class="h2"><?php echo esc_html( $seo_wwd_title ); ?></h2><p class="bod"><?php echo esc_html( $seo_wwd_desc ); ?></p></div>
     <div class="wwd-grid">
       <?php
       $wwd_defaults = [
@@ -149,7 +163,7 @@ $faqs       = sh_field( 'service_faqs' );
 <!-- Sub-services -->
 <section id="sub-services" class="sec sec-surface">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">خدمات السيو</span><h2 class="h2">اختر الخدمة التي يحتاجها عملك</h2><p class="bod">كل خدمة يمكن تنفيذها مستقلة أو ضمن باقة سيو متكاملة — حسب وضع موقعك ومرحلتك.</p></div>
+    <div class="sh c sr"><span class="tag">خدمات السيو</span><h2 class="h2"><?php echo esc_html( $seo_sub_title ); ?></h2><p class="bod">كل خدمة يمكن تنفيذها مستقلة أو ضمن باقة سيو متكاملة — حسب وضع موقعك ومرحلتك.</p></div>
     <div class="ss-grid sr d1">
       <?php
       foreach ( [
@@ -193,8 +207,8 @@ $faqs       = sh_field( 'service_faqs' );
     <div class="rep-layout">
       <div class="sr">
         <span class="tag" style="margin-bottom:12px">من السيو إلى نتائج العمل</span>
-        <h2 class="h2" style="margin-bottom:16px">تقارير تتكلم لغة عملك<br>— لا لغة المطورين</h2>
-        <p class="bod" style="margin-bottom:18px">في معظم الوكالات تأتيك تقارير ممتلئة بمصطلحات جوجل لا تفهم منها شيئاً. عندنا التقرير يُظهر لك بوضوح: كم ليد جاء من البحث، كم بيع، وأين تذهب ميزانيتك.</p>
+        <h2 class="h2" style="margin-bottom:16px"><?php echo wp_kses_post( $seo_reporting_title ); ?></h2>
+        <p class="bod" style="margin-bottom:18px"><?php echo esc_html( $seo_reporting_desc ); ?></p>
         <div class="chklist sr d1" style="margin-bottom:24px">
           <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>الترافيك</strong> — مصدره، جودته، وسلوكه على موقعك</div>
           <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>الليدز</strong> — كم نموذج تُعبّأ، كم مكالمة، وتكلفة كل واحد</div>
@@ -258,7 +272,7 @@ $faqs       = sh_field( 'service_faqs' );
 <!-- Proof / Results -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">دلائل النتائج</span><h2 class="h2">نتائج حقيقية لعملاء حقيقيين</h2><p class="bod">نماذج من نتائج عملاء سابقين — أرقام موثّقة من Search Console وAnalytics، لا ادعاءات.</p></div>
+    <div class="sh c sr"><span class="tag">دلائل النتائج</span><h2 class="h2"><?php echo esc_html( $seo_proof_title ); ?></h2><p class="bod">نماذج من نتائج عملاء سابقين — أرقام موثّقة من Search Console وAnalytics، لا ادعاءات.</p></div>
     <div class="proof-grid">
       <?php
       foreach ( [
@@ -353,7 +367,7 @@ $faqs       = sh_field( 'service_faqs' );
 <?php
 get_template_part( 'template-parts/layout/cta-banner', null, [
     'tag'     => 'ابدأ الآن',
-    'title'   => 'ابدأ بكسب عملاء يبحثون عنك فعلاً',
+    'title'   => $seo_cta_title,
     'buttons' => [
         [ 'text' => 'احجز استشارة مجانية', 'url' => sh_page_url( 'contact' ), 'class' => 'btn-w lg' ],
         [ 'text' => 'تعرّف على نتائجنا',    'url' => sh_page_url( 'results' ), 'class' => 'btn-g lg' ],

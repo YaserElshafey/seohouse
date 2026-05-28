@@ -3,6 +3,10 @@
  * Template Name: Service — Stores Overview
  */
 get_header();
+
+$stores_hero_pre  = sh_field( 'stores_hero_pre',  null, 'إنشاء وتصميم' );
+$stores_hero_em   = sh_field( 'stores_hero_em',   null, 'متجرك الإلكتروني' );
+$stores_hero_desc = sh_field( 'stores_hero_desc', null, 'من فكرة إلى متجر جاهز للبيع — هيكل تجاري ذكي، تجربة شراء سلسة، وقابلية للنمو على أي منصة (سلة، زد، شوبيفاي، أو ووكومرس).' );
 ?>
 
 <!-- Hero -->
@@ -18,8 +22,8 @@ get_header();
         <span style="color:rgba(255,255,255,.55)">إنشاء وتصميم متاجر</span>
       </div>
       <span class="tag d" style="display:inline-block;margin-bottom:20px">خدمة متخصصة</span>
-      <h1 style="font-size:clamp(32px,5vw,60px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px">إنشاء وتصميم<br><em style="font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite">متجرك الإلكتروني</em></h1>
-      <p style="font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.55);max-width:680px;margin-inline:auto;margin-bottom:30px">من فكرة إلى متجر جاهز للبيع — هيكل تجاري ذكي، تجربة شراء سلسة، وقابلية للنمو على أي منصة (سلة، زد، شوبيفاي، أو ووكومرس).</p>
+      <h1 style="font-size:clamp(32px,5vw,60px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px"><?php echo esc_html( $stores_hero_pre ); ?><br><em style="font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite"><?php echo esc_html( $stores_hero_em ); ?></em></h1>
+      <p style="font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.55);max-width:680px;margin-inline:auto;margin-bottom:30px"><?php echo esc_html( $stores_hero_desc ); ?></p>
       <div style="display:flex;gap:11px;justify-content:center;flex-wrap:wrap">
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p lg">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>

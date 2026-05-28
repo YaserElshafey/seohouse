@@ -7,6 +7,23 @@ get_header();
 
 $contact_url = sh_page_url( 'contact' );
 
+$sec_em    = sh_option( 'sectors_hero_em',    'لقطاعك' );
+$sec_raw   = sh_option( 'sectors_hero_title', "سيو مخصص\nلقطاعك" );
+$sec_desc  = sh_option( 'sectors_hero_desc',  'لكل قطاع كلماته المفتاحية، جمهوره، ومنافسوه — استراتيجيتنا مبنية على هذا الفهم، لا على قوالب جاهزة.' );
+$sec_em_style = 'font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite';
+$sec_title = $sec_em
+    ? str_replace( $sec_em, '<em style="' . $sec_em_style . '">' . esc_html( $sec_em ) . '</em>', esc_html( $sec_raw ) )
+    : esc_html( $sec_raw );
+$sec_title = nl2br( $sec_title );
+
+$sectors_grid_title = sh_option( 'sectors_grid_title', 'اختر قطاعك لمعرفة كيف نخدمه' );
+$sectors_grid_desc  = sh_option( 'sectors_grid_desc',  'نعمل مع شركات من قطاعات متنوعة — لكل واحد منها منهجية وفهم خاص.' );
+$sectors_why_raw    = sh_option( 'sectors_why_title',  "استراتيجية قطاعية\nلا قالب جاهز" );
+$sectors_why_title  = nl2br( esc_html( $sectors_why_raw ) );
+$sectors_why_body1  = sh_option( 'sectors_why_body1',  'كل قطاع يملك كلماته المفتاحية الخاصة، نية بحث مختلفة، ومنافسين محددين. الاستراتيجية الناجحة للعيادة تختلف عن استراتيجية المتجر الإلكتروني تماماً.' );
+$sectors_why_body2  = sh_option( 'sectors_why_body2',  'نبني استراتيجية السيو لكل عميل بناءً على فهم عميق لقطاعه — وليس نسخاً من قالب جاهز.' );
+$sectors_cta_title  = sh_option( 'sectors_cta_title',  'احجز استشارة مجانية ولنبدأ معاً' );
+
 // 8 sectors in Claude Design order
 $all_sectors = [
     [
@@ -91,8 +108,8 @@ if ( $sectors_q->have_posts() ) {
         <span style="color:rgba(255,255,255,.6)">القطاعات</span>
       </div>
       <span class="tag d" style="margin-bottom:18px">تخصص قطاعي</span>
-      <h1 style="font-size:clamp(30px,4.5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px;animation:fu .75s .08s var(--ease) both">سيو مخصص <em style="font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite">لقطاعك</em></h1>
-      <p style="font-size:clamp(14px,1.5vw,17px);line-height:1.9;color:rgba(255,255,255,.48);max-width:600px;margin-bottom:28px;animation:fu .75s .16s var(--ease) both">لكل قطاع كلماته المفتاحية، جمهوره، ومنافسوه — استراتيجيتنا مبنية على هذا الفهم، لا على قوالب جاهزة.</p>
+      <h1 style="font-size:clamp(30px,4.5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px;animation:fu .75s .08s var(--ease) both"><?php echo wp_kses_post( $sec_title ); ?></h1>
+      <p style="font-size:clamp(14px,1.5vw,17px);line-height:1.9;color:rgba(255,255,255,.48);max-width:600px;margin-bottom:28px;animation:fu .75s .16s var(--ease) both"><?php echo esc_html( $sec_desc ); ?></p>
     </div>
   </div>
 </section>
@@ -100,7 +117,7 @@ if ( $sectors_q->have_posts() ) {
 <!-- ─── 8-CARD SECTORS GRID ───────────────────────────────────────────────── -->
 <section class="sec sec-surface">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">القطاعات</span><h2 class="h2">اختر قطاعك لمعرفة كيف نخدمه</h2><p class="bod">نعمل مع شركات من قطاعات متنوعة — لكل واحد منها منهجية وفهم خاص.</p></div>
+    <div class="sh c sr"><span class="tag">القطاعات</span><h2 class="h2"><?php echo esc_html( $sectors_grid_title ); ?></h2><p class="bod"><?php echo esc_html( $sectors_grid_desc ); ?></p></div>
     <div class="sec-grid">
       <?php foreach ( $all_sectors as $s ) :
           // Prefer CPT permalink; fall back to path-based URL
@@ -127,9 +144,9 @@ if ( $sectors_q->have_posts() ) {
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center">
       <div class="sr">
         <span class="tag" style="margin-bottom:12px">لماذا التخصص مهم</span>
-        <h2 class="h2" style="margin-bottom:16px">استراتيجية قطاعية<br>لا قالب جاهز</h2>
-        <p class="bod" style="margin-bottom:18px">كل قطاع يملك كلماته المفتاحية الخاصة، نية بحث مختلفة، ومنافسين محددين. الاستراتيجية الناجحة للعيادة تختلف عن استراتيجية المتجر الإلكتروني تماماً.</p>
-        <p class="bod" style="margin-bottom:24px">نبني استراتيجية السيو لكل عميل بناءً على فهم عميق لقطاعه — وليس نسخاً من قالب جاهز.</p>
+        <h2 class="h2" style="margin-bottom:16px"><?php echo wp_kses_post( $sectors_why_title ); ?></h2>
+        <p class="bod" style="margin-bottom:18px"><?php echo esc_html( $sectors_why_body1 ); ?></p>
+        <p class="bod" style="margin-bottom:24px"><?php echo esc_html( $sectors_why_body2 ); ?></p>
         <a href="<?php echo esc_url( $contact_url ); ?>" class="btn btn-p">احجز استشارة مجانية</a>
       </div>
       <div class="sr d1">
@@ -151,7 +168,7 @@ if ( $sectors_q->have_posts() ) {
 <?php
 get_template_part( 'template-parts/layout/cta-banner', null, [
     'tag'   => 'ابدأ الآن',
-    'title' => 'احجز استشارة مجانية ولنبدأ معاً',
+    'title' => $sectors_cta_title,
 ] );
 
 get_footer();

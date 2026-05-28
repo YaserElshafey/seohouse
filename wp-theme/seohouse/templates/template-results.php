@@ -11,10 +11,18 @@ $sectors_list = get_terms( [
 ?>
 
 <?php
+$res_em    = sh_field( 'results_hero_em',    null, 'مشاريع حقيقية' );
+$res_raw   = sh_field( 'results_hero_title', null, "نتائج من\nمشاريع حقيقية" );
+$res_desc  = sh_field( 'results_hero_desc',  null, 'لا نتحدث عن نتائج افتراضية — هذه مشاريع نفّذناها لعملاء حقيقيين في قطاعات متنوعة. الأرقام الدقيقة تُضاف بعد موافقة العملاء.' );
+$res_title = $res_em
+    ? str_replace( $res_em, '<em>' . esc_html( $res_em ) . '</em>', esc_html( $res_raw ) )
+    : esc_html( $res_raw );
+$res_title = nl2br( $res_title );
+
 get_template_part( 'template-parts/layout/page-hero', null, [
-    'tag'         => 'نتائج فعلية',
-    'title'       => 'نتائج من <em>مشاريع حقيقية</em>',
-    'description' => 'لا نتحدث عن نتائج افتراضية — هذه مشاريع نفّذناها لعملاء حقيقيين في قطاعات متنوعة. الأرقام الدقيقة تُضاف بعد موافقة العملاء.',
+    'tag'         => sh_field( 'results_hero_tag', null, 'نتائج فعلية' ),
+    'title'       => $res_title,
+    'description' => $res_desc,
     'breadcrumb'  => [ 'نتائج الأعمال' => '' ],
 ] );
 ?>

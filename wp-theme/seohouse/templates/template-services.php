@@ -4,6 +4,24 @@
  * The main /services/ page — overview of all service categories
  */
 get_header();
+
+$hub_hero_badge   = sh_field( 'hub_hero_badge',  null, 'خدماتنا' );
+$hub_hero_em      = sh_field( 'hub_hero_em',     null, 'وجودك الرقمي' );
+$hub_hero_raw     = sh_field( 'hub_hero_title',  null, "خدمات تبني\nوجودك الرقمي" );
+$hub_hero_desc    = sh_field( 'hub_hero_desc',   null, 'من تحسين محركات البحث إلى إنشاء المتاجر — نغطّي كل ما يحتاجه عملك لينمو رقمياً.' );
+$hub_hero_title = $hub_hero_em
+    ? str_replace( $hub_hero_em, '<em style="font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite">' . esc_html( $hub_hero_em ) . '</em>', esc_html( $hub_hero_raw ) )
+    : esc_html( $hub_hero_raw );
+$hub_hero_title = nl2br( $hub_hero_title );
+$hub_services_title = sh_field( 'hub_services_title', null, 'اختر الخدمة التي تحتاجها' );
+$hub_services_desc  = sh_field( 'hub_services_desc',  null, 'كل خدمة مصمّمة لتحقيق هدف محدد — نوصّلك للنتيجة بأقصر طريق.' );
+$hub_seo_sub_title  = sh_field( 'hub_seo_sub_title',  null, 'ابنِ استراتيجيتك من هنا' );
+$hub_seo_sub_desc   = sh_field( 'hub_seo_sub_desc',   null, 'كل خدمة تُكمّل الأخرى — اختر ما يناسب وضعك الآن أو ابنِ باقة متكاملة.' );
+$hub_why_title      = sh_field( 'hub_why_title',       null, 'ليس مجرد وكالة رقمية' );
+$hub_why_desc       = sh_field( 'hub_why_desc',        null, 'نتخصص في السوق السعودي — نفهم اللغة، نعرف المنافسين، ونعمل بشفافية كاملة.' );
+$hub_cta_tag        = sh_field( 'hub_cta_tag',         null, 'ابدأ الآن' );
+$hub_cta_title      = sh_field( 'hub_cta_title',       null, 'لا تعرف من أين تبدأ؟' );
+$hub_cta_desc       = sh_field( 'hub_cta_desc',        null, 'احجز استشارة مجانية ونحدد معاً أفضل خدمة لنمو مشروعك.' );
 ?>
 
 <!-- Hero ─────────────────────────────────────────────── -->
@@ -15,13 +33,12 @@ get_header();
     <div style="position:relative;z-index:2;max-width:820px;margin-inline:auto">
       <div class="h-badge">
         <span class="h-bdot"></span>
-        خدماتنا
+        <?php echo esc_html( $hub_hero_badge ); ?>
       </div>
       <h1 style="font-size:clamp(32px,5vw,62px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:18px">
-        خدمات تبني<br>
-        <em style="font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite">وجودك الرقمي</em>
+        <?php echo wp_kses_post( $hub_hero_title ); ?>
       </h1>
-      <p style="font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.6);max-width:680px;margin-inline:auto;margin-bottom:30px">من تحسين محركات البحث إلى إنشاء المتاجر — نغطّي كل ما يحتاجه عملك لينمو رقمياً.</p>
+      <p style="font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.6);max-width:680px;margin-inline:auto;margin-bottom:30px"><?php echo esc_html( $hub_hero_desc ); ?></p>
       <div style="display:flex;gap:11px;justify-content:center;flex-wrap:wrap">
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p lg">احجز استشارة مجانية</a>
         <a href="<?php echo esc_url( sh_page_url( 'results' ) ); ?>" class="btn btn-g lg">شاهد نتائجنا</a>
@@ -35,8 +52,8 @@ get_header();
   <div class="wrap">
     <div class="sh c sr">
       <span class="tag">ما نقدّمه</span>
-      <h2 class="h2">اختر الخدمة التي تحتاجها</h2>
-      <p class="bod">كل خدمة مصمّمة لتحقيق هدف محدد — نوصّلك للنتيجة بأقصر طريق.</p>
+      <h2 class="h2"><?php echo esc_html( $hub_services_title ); ?></h2>
+      <p class="bod"><?php echo esc_html( $hub_services_desc ); ?></p>
     </div>
 
     <!-- SEO (featured) + Web & Stores (stacked) -->
@@ -88,8 +105,8 @@ get_header();
     <!-- SEO sub-services hub -->
     <div class="sh c sr" style="margin-top:16px">
       <span class="tag">خدمات سيو التخصصية</span>
-      <h2 class="h2">ابنِ استراتيجيتك من هنا</h2>
-      <p class="bod">كل خدمة تُكمّل الأخرى — اختر ما يناسب وضعك الآن أو ابنِ باقة متكاملة.</p>
+      <h2 class="h2"><?php echo esc_html( $hub_seo_sub_title ); ?></h2>
+      <p class="bod"><?php echo esc_html( $hub_seo_sub_desc ); ?></p>
     </div>
     <div class="svc-hub-grid">
       <a href="<?php echo esc_url( sh_page_url( 'services/seo/backlinks' ) ); ?>" class="svc-hub-card sr" style="text-decoration:none">
@@ -149,8 +166,8 @@ get_header();
   <div class="wrap">
     <div class="sh c sr">
       <span class="tag d">لماذا سيو هاوس</span>
-      <h2 class="h2 wh">ليس مجرد وكالة رقمية</h2>
-      <p class="bod d">نتخصص في السوق السعودي — نفهم اللغة، نعرف المنافسين، ونعمل بشفافية كاملة.</p>
+      <h2 class="h2 wh"><?php echo esc_html( $hub_why_title ); ?></h2>
+      <p class="bod d"><?php echo esc_html( $hub_why_desc ); ?></p>
     </div>
     <div class="method-grid">
       <div class="method-item sr">
@@ -175,9 +192,9 @@ get_header();
 <!-- CTA ─────────────────────────────────────────────── -->
 <?php
 get_template_part( 'template-parts/layout/cta-banner', null, [
-    'tag'   => 'ابدأ الآن',
-    'title' => 'لا تعرف من أين تبدأ؟',
-    'desc'  => 'احجز استشارة مجانية ونحدد معاً أفضل خدمة لنمو مشروعك.',
+    'tag'   => $hub_cta_tag,
+    'title' => $hub_cta_title,
+    'desc'  => $hub_cta_desc,
 ] );
 
 get_footer();
