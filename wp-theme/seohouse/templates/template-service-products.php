@@ -6,13 +6,21 @@ get_header();
 
 $features = sh_field( 'service_features' );
 $faqs     = sh_field( 'service_faqs' );
+
+$prod_hero_em    = sh_field( 'prod_hero_em',    null, 'باحترافية' );
+$prod_hero_raw   = sh_field( 'prod_hero_title', null, "رفع المنتجات للمتاجر\nباحترافية" );
+$prod_hero_desc  = sh_field( 'prod_hero_desc',  null, 'ليس مجرّد إدخال بيانات — رفع منظّم واحترافي عبر جميع المنصات مع تحسين لكل منتج يرفع فرصته في الظهور.' );
+$prod_hero_title = $prod_hero_em
+    ? str_replace( $prod_hero_em, '<em>' . esc_html( $prod_hero_em ) . '</em>', esc_html( $prod_hero_raw ) )
+    : esc_html( $prod_hero_raw );
+$prod_hero_title = nl2br( $prod_hero_title );
 ?>
 
 <?php
 get_template_part( 'template-parts/layout/page-hero', null, [
-    'tag'         => 'رفع المنتجات',
-    'title'       => 'رفع المنتجات للمتاجر <em>باحترافية</em>',
-    'description' => 'ليس مجرّد إدخال بيانات — رفع منظّم واحترافي عبر جميع المنصات مع تحسين لكل منتج يرفع فرصته في الظهور.',
+    'tag'         => sh_field( 'prod_hero_tag', null, 'رفع المنتجات' ),
+    'title'       => $prod_hero_title,
+    'description' => $prod_hero_desc,
     'breadcrumb'  => [ 'رفع المنتجات' => '' ],
     'buttons' => [
         [ 'text' => 'احجز استشارة مجانية', 'url' => sh_page_url( 'contact' ), 'class' => 'btn-p lg' ],
