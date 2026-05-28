@@ -28,7 +28,7 @@ add_action( 'after_setup_theme', function () {
     ] );
 
     // Image sizes
-    add_image_size( 'seohouse-team',       400, 400, true );
+    add_image_size( 'seohouse-team',       400, 400, [ 'center', 'top' ] );
     add_image_size( 'seohouse-case-thumb', 800, 450, true );
     add_image_size( 'seohouse-blog-thumb', 800, 450, true );
     add_image_size( 'seohouse-client-logo', 300, 120, false );
