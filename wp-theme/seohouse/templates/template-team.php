@@ -4,6 +4,21 @@
  */
 get_header();
 
+// ── Hero fields ────────────────────────────────────────────
+$team_hero_tag  = sh_field( 'team_hero_tag',   null, 'الفريق' );
+$team_hero_em   = sh_field( 'team_hero_em',    null, 'متخصصون' );
+$team_hero_raw  = sh_field( 'team_hero_title', null, "خبراء متخصصون\nلا موظفون عموميون" );
+$team_hero_desc = sh_field( 'team_hero_desc',  null, 'كل عضو في فريقنا متخصص في مجال محدد من السيو — لأن التخصص هو الفرق بين النتائج والوعود.' );
+$team_hero_title = $team_hero_em
+    ? str_replace( $team_hero_em, '<em>' . esc_html( $team_hero_em ) . '</em>', esc_html( $team_hero_raw ) )
+    : esc_html( $team_hero_raw );
+$team_hero_title = nl2br( $team_hero_title );
+
+// ── Join card fields ───────────────────────────────────────
+$team_join_title = sh_field( 'team_join_title', null, 'نبحث عن موهبة' );
+$team_join_desc  = sh_field( 'team_join_desc',  null, 'هل أنت متخصص في السيو وتريد العمل في بيئة محترفة؟' );
+$team_join_btn   = sh_field( 'team_join_btn',   null, 'تواصل معنا' );
+
 $team = new WP_Query( [
     'post_type'      => 'team_member',
     'posts_per_page' => -1,
@@ -19,9 +34,9 @@ $team = new WP_Query( [
 
 <?php
 get_template_part( 'template-parts/layout/page-hero', null, [
-    'tag'         => 'الفريق',
-    'title'       => 'خبراء <em>متخصصون</em><br>لا موظفون عموميون',
-    'description' => 'كل عضو في فريقنا متخصص في مجال محدد من السيو — لأن التخصص هو الفرق بين النتائج والوعود.',
+    'tag'         => $team_hero_tag,
+    'title'       => $team_hero_title,
+    'description' => $team_hero_desc,
     'breadcrumb'  => [ 'فريق العمل' => '' ],
 ] );
 ?>
@@ -78,9 +93,9 @@ get_template_part( 'template-parts/layout/page-hero', null, [
           <div style="width:52px;height:52px;border-radius:14px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin-bottom:16px">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
           </div>
-          <h3 style="font-size:16px;font-weight:800;color:var(--ink);margin-bottom:8px">نبحث عن موهبة</h3>
-          <p style="font-size:13px;color:var(--muted);line-height:1.72;margin-bottom:18px">هل أنت متخصص في السيو وتريد العمل في بيئة محترفة؟</p>
-          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p sm">تواصل معنا</a>
+          <h3 style="font-size:16px;font-weight:800;color:var(--ink);margin-bottom:8px"><?php echo esc_html( $team_join_title ); ?></h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.72;margin-bottom:18px"><?php echo esc_html( $team_join_desc ); ?></p>
+          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p sm"><?php echo esc_html( $team_join_btn ); ?></a>
         </div>
       </div>
     </div>

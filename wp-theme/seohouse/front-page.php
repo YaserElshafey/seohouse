@@ -12,6 +12,14 @@ $hero_cta_primary = sh_option( 'hero_cta_primary', 'احجز استشارة مج
 $why_title        = sh_option( 'why_title', 'نعمل بمنطق الأداء،<br>لا بمنطق الوعود' );
 $why_text         = sh_option( 'why_text', 'لسنا وكالة تسويق عامة. نحن متخصصون في محركات البحث ونعرف ما يحتاجه موقعك للوصول إلى العملاء الصحيحين.' );
 $process_steps    = sh_option( 'process_steps', [] );
+$services_section_title   = sh_option( 'services_section_title',   'خدمات تبني وجودك الرقمي' );
+$services_section_desc    = sh_option( 'services_section_desc',    'من تحسين محركات البحث إلى إنشاء المتاجر — نغطي كل ما يحتاجه عملك.' );
+$industries_section_title = sh_option( 'industries_section_title', 'خبرة عملية في قطاعك' );
+$industries_section_desc  = sh_option( 'industries_section_desc',  'استراتيجيتنا مبنية على خصوصية نشاطك — لا على قوالب جاهزة.' );
+$process_section_title    = sh_option( 'process_section_title',    'منهجية واضحة من البداية للنتيجة' );
+$process_section_desc     = sh_option( 'process_section_desc',     'خطوات محددة لكل مشروع حتى نصل إلى نتائج مقاسة.' );
+$hp_cta_title             = sh_option( 'hp_cta_title',             'موقعك يستحق أن يُرى' );
+$hp_cta_desc              = sh_option( 'hp_cta_desc',              'خصص 30 دقيقة معنا — وسنخبرك بصدق أين أنت وأين يمكن أن تكون.' );
 $contact_url      = sh_page_url( 'contact' );
 $seo_url          = sh_page_url( 'services/seo' );
 $results_url      = get_post_type_archive_link( 'case_study' ) ?: sh_page_url( 'results' );
@@ -335,7 +343,7 @@ if ( empty( $process_steps ) ) {
 <!-- ── SERVICES ── -->
 <section id="services" class="sec sec-surface">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">ما نقدمه</span><h2 class="h2">خدمات تبني وجودك الرقمي</h2><p class="bod">من تحسين محركات البحث إلى إنشاء المتاجر — نغطي كل ما يحتاجه عملك.</p></div>
+    <div class="sh c sr"><span class="tag">ما نقدمه</span><h2 class="h2"><?php echo esc_html( $services_section_title ); ?></h2><p class="bod"><?php echo esc_html( $services_section_desc ); ?></p></div>
     <div class="svc-layout">
       <a href="<?php echo esc_url( $seo_url ); ?>" class="svc-card feat sr" style="text-decoration:none">
         <div class="feat-body">
@@ -380,7 +388,7 @@ if ( empty( $process_steps ) ) {
 <!-- ── INDUSTRIES (Sectors CPT) ── -->
 <section id="industries" class="sec sec-white">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">القطاعات</span><h2 class="h2">خبرة عملية في قطاعك</h2><p class="bod">استراتيجيتنا مبنية على خصوصية نشاطك — لا على قوالب جاهزة.</p></div>
+    <div class="sh c sr"><span class="tag">القطاعات</span><h2 class="h2"><?php echo esc_html( $industries_section_title ); ?></h2><p class="bod"><?php echo esc_html( $industries_section_desc ); ?></p></div>
     <div class="ind-grid">
       <?php
       $sectors = new WP_Query( [ 'post_type' => 'sector', 'posts_per_page' => 8, 'orderby' => 'menu_order', 'order' => 'ASC' ] );
@@ -430,7 +438,7 @@ if ( empty( $process_steps ) ) {
 <!-- ── PROCESS ── -->
 <section id="process" class="sec sec-navy">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag d">كيف نعمل</span><h2 class="h2 wh">منهجية واضحة من البداية للنتيجة</h2><p class="bod d">خطوات محددة لكل مشروع حتى نصل إلى نتائج مقاسة.</p></div>
+    <div class="sh c sr"><span class="tag d">كيف نعمل</span><h2 class="h2 wh"><?php echo esc_html( $process_section_title ); ?></h2><p class="bod d"><?php echo esc_html( $process_section_desc ); ?></p></div>
     <div class="proc-wrap" style="position:relative">
       <div class="proc-line"></div>
       <?php
@@ -576,8 +584,8 @@ if ( empty( $process_steps ) ) {
   <div class="wrap">
     <div class="cta-body sr">
       <span class="tag d" style="justify-content:center">ابدأ الآن</span>
-      <h2 class="h2" style="color:#fff;margin-bottom:12px">موقعك يستحق أن يُرى</h2>
-      <p class="p">خصص 30 دقيقة معنا — وسنخبرك بصدق أين أنت وأين يمكن أن تكون.</p>
+      <h2 class="h2" style="color:#fff;margin-bottom:12px"><?php echo esc_html( $hp_cta_title ); ?></h2>
+      <p class="p"><?php echo esc_html( $hp_cta_desc ); ?></p>
       <div class="cta-btns">
         <a href="<?php echo esc_url( $contact_url ); ?>" class="btn btn-w lg">احجز استشارة مجانية</a>
         <a href="<?php echo esc_url( $seo_url ); ?>" class="btn btn-g lg">تعرّف على السيو</a>

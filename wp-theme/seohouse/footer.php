@@ -1,5 +1,9 @@
 <?php
-$logo_white = sh_option( 'logo_white' );
+$logo_white        = sh_option( 'logo_white' );
+$footer_col1       = sh_option( 'footer_col1_heading', 'تحسين محركات البحث' );
+$footer_col2       = sh_option( 'footer_col2_heading', 'تصميم المواقع' );
+$footer_col3       = sh_option( 'footer_col3_heading', 'إنشاء المتاجر' );
+$footer_col4       = sh_option( 'footer_col4_heading', 'الشركة' );
 $logo_white_url = ! empty( $logo_white['url'] ) ? $logo_white['url'] : get_template_directory_uri() . '/assets/images/logo-white.png';
 $footer_desc = sh_option( 'footer_desc', 'متخصصون في تحسين محركات البحث وبناء المتاجر الإلكترونية. نخدم الأسواق السعودية والخليجية ونعمل بمنطق الأداء.' );
 $copyright   = sh_option( 'footer_copyright', '© ' . date( 'Y' ) . ' سيو هاوس. جميع الحقوق محفوظة.' );
@@ -39,7 +43,7 @@ $instagram_url = sh_option( 'social_instagram', '#' );
       </div>
 
       <div class="foot-col">
-        <h4>تحسين محركات البحث</h4>
+        <h4><?php echo esc_html( $footer_col1 ); ?></h4>
         <?php
         if ( has_nav_menu( 'footer-menu-seo' ) ) {
             wp_nav_menu( [ 'theme_location' => 'footer-menu-seo', 'container' => false, 'menu_class' => 'foot-links', 'depth' => 1, 'fallback_cb' => false ] );
@@ -55,7 +59,7 @@ $instagram_url = sh_option( 'social_instagram', '#' );
       </div>
 
       <div class="foot-col">
-        <h4>تصميم المواقع</h4>
+        <h4><?php echo esc_html( $footer_col2 ); ?></h4>
         <?php
         if ( has_nav_menu( 'footer-menu-web' ) ) {
             wp_nav_menu( [ 'theme_location' => 'footer-menu-web', 'container' => false, 'menu_class' => 'foot-links', 'depth' => 1, 'fallback_cb' => false ] );
@@ -71,7 +75,7 @@ $instagram_url = sh_option( 'social_instagram', '#' );
       </div>
 
       <div class="foot-col">
-        <h4>إنشاء المتاجر</h4>
+        <h4><?php echo esc_html( $footer_col3 ); ?></h4>
         <?php
         if ( has_nav_menu( 'footer-menu-stores' ) ) {
             wp_nav_menu( [ 'theme_location' => 'footer-menu-stores', 'container' => false, 'menu_class' => 'foot-links', 'depth' => 1, 'fallback_cb' => false ] );
@@ -88,7 +92,7 @@ $instagram_url = sh_option( 'social_instagram', '#' );
       </div>
 
       <div class="foot-col">
-        <h4>الشركة</h4>
+        <h4><?php echo esc_html( $footer_col4 ); ?></h4>
         <?php
         if ( has_nav_menu( 'footer-menu-company' ) ) {
             wp_nav_menu( [ 'theme_location' => 'footer-menu-company', 'container' => false, 'menu_class' => 'foot-links', 'depth' => 1, 'fallback_cb' => false ] );
