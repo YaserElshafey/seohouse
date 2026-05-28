@@ -19,7 +19,7 @@ $delay_class  = isset( $args['delay_class'] ) ? ' ' . $args['delay_class'] : '';
 <div class="tm-card sr<?php echo esc_attr( $delay_class ); ?>">
   <div class="tm-avatar" style="background:<?php echo esc_attr( $avatar_color ); ?>">
     <?php if ( has_post_thumbnail() ) : ?>
-      <?php the_post_thumbnail( 'seohouse-team', [ 'style' => 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover' ] ); ?>
+      <?php the_post_thumbnail( 'seohouse-team', [ 'style' => 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%' ] ); ?>
     <?php else : ?>
       <span class="tm-initials"><?php echo esc_html( $initials ); ?></span>
     <?php endif; ?>
