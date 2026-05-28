@@ -5,11 +5,11 @@
 get_header();
 
 // ── Options ────────────────────────────────────────────────────
-$hero_headline    = sh_option( 'hero_headline', 'كن آخر نقرة يبحث عنها عميلك' );
+$hero_headline    = sh_option( 'hero_headline', "كن آخر نقرة\nيبحث عنها عميلك" );
 $hero_emphasis    = sh_option( 'hero_emphasis', 'آخر نقرة' );
 $hero_subtext     = sh_option( 'hero_subtext', 'نضع موقعك أمام العملاء الذين يبحثون عمّا تقدّمه — بدقة، بأدلة، وبنتائج قابلة للقياس.' );
 $hero_cta_primary = sh_option( 'hero_cta_primary', 'احجز استشارة مجانية 30 دقيقة' );
-$why_title        = sh_option( 'why_title', 'نعمل بمنطق الأداء،<br>لا بمنطق الوعود' );
+$why_title        = sh_option( 'why_title', "نعمل بمنطق الأداء،\nلا بمنطق الوعود" );
 $why_text         = sh_option( 'why_text', 'لسنا وكالة تسويق عامة. نحن متخصصون في محركات البحث ونعرف ما يحتاجه موقعك للوصول إلى العملاء الصحيحين.' );
 $process_steps    = sh_option( 'process_steps', [] );
 $services_section_title   = sh_option( 'services_section_title',   'خدمات تبني وجودك الرقمي' );
@@ -20,6 +20,11 @@ $process_section_title    = sh_option( 'process_section_title',    'منهجية
 $process_section_desc     = sh_option( 'process_section_desc',     'خطوات محددة لكل مشروع حتى نصل إلى نتائج مقاسة.' );
 $hp_cta_title             = sh_option( 'hp_cta_title',             'موقعك يستحق أن يُرى' );
 $hp_cta_desc              = sh_option( 'hp_cta_desc',              'خصص 30 دقيقة معنا — وسنخبرك بصدق أين أنت وأين يمكن أن تكون.' );
+$hp_hero_live_badge    = sh_option( 'hp_hero_live_badge',    'نعمل الآن على مشاريع تحسين نشطة' );
+$hp_hero_cta_secondary = sh_option( 'hp_hero_cta_secondary', 'تعرّف على خدماتنا' );
+$hp_cases_title        = sh_option( 'hp_cases_title',        'الأرقام تتكلم' );
+$hp_cases_desc         = sh_option( 'hp_cases_desc',         'نماذج من مشاريع نفّذناها — الأرقام الفعلية تُضاف بعد موافقة العملاء.' );
+$hp_why_points         = sh_option( 'hp_why_points',         [] );
 $contact_url      = sh_page_url( 'contact' );
 $seo_url          = sh_page_url( 'services/seo' );
 $results_url      = get_post_type_archive_link( 'case_study' ) ?: sh_page_url( 'results' );
@@ -28,6 +33,17 @@ $results_url      = get_post_type_archive_link( 'case_study' ) ?: sh_page_url( '
 $display_headline = $hero_emphasis
     ? str_replace( $hero_emphasis, '<em>' . esc_html( $hero_emphasis ) . '</em>', esc_html( $hero_headline ) )
     : esc_html( $hero_headline );
+$display_headline = nl2br( $display_headline );
+
+// Default why feature points
+if ( empty( $hp_why_points ) ) {
+    $hp_why_points = [
+        [ 'wp_title' => 'تقارير واضحة',       'wp_desc' => 'تقرير شهري تفصيلي بمستوى الأداء' ],
+        [ 'wp_title' => 'نتائج قابلة للقياس',  'wp_desc' => 'كل قرار مبني على بيانات حقيقية' ],
+        [ 'wp_title' => 'فريق متخصص',          'wp_desc' => 'خبراء في السيو والمحتوى والتقنية' ],
+        [ 'wp_title' => 'بدون عقود ملزمة',     'wp_desc' => 'نثبت قيمتنا شهراً بعد شهر' ],
+    ];
+}
 
 // Default process steps
 if ( empty( $process_steps ) ) {
@@ -237,6 +253,11 @@ if ( empty( $process_steps ) ) {
 .cta-pills{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:22px}
 .cta-pill{display:flex;align-items:center;gap:5px;font-size:12.5px;color:rgba(255,255,255,.46)}
 .cta-pill svg{stroke:rgba(255,255,255,.4);width:13px;height:13px}
+/* Baseline fidelity details */
+#services::before{content:'';position:absolute;inset-inline-end:-180px;top:-180px;width:500px;height:500px;border-radius:50%;border:1px solid rgba(30,46,245,.05);pointer-events:none}
+#process{position:relative;overflow:hidden}
+#process::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.022) 1px,transparent 1px);background-size:38px 38px;pointer-events:none}
+.ind-card{text-decoration:none}
 /* Responsive */
 @media(max-width:1100px){.hero-grid{grid-template-columns:1fr;gap:28px}.serp-card{display:none}.why-grid{grid-template-columns:1fr;gap:40px}.why-vis{display:none}.cases-grid{grid-template-columns:repeat(2,1fr)}.rev-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:860px){.svc-layout{grid-template-columns:1fr}.svc-card.feat{min-height:auto;padding:28px}.svc-stack{grid-template-rows:auto}.ind-grid{grid-template-columns:repeat(2,1fr)}.proc-wrap{grid-template-columns:repeat(2,1fr)}.proc-line{display:none}.cases-grid{grid-template-columns:1fr}.rev-grid{grid-template-columns:1fr}.art-grid{grid-template-columns:1fr}}
@@ -254,7 +275,7 @@ if ( empty( $process_steps ) ) {
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <div class="h-live"><span class="h-dot"></span>نعمل الآن على مشاريع تحسين نشطة</div>
+        <div class="h-live"><span class="h-dot"></span><?php echo esc_html( $hp_hero_live_badge ); ?></div>
         <h1 class="h1"><?php echo wp_kses_post( $display_headline ); ?></h1>
         <p class="h-p"><?php echo esc_html( $hero_subtext ); ?></p>
         <div class="h-btns">
@@ -262,7 +283,7 @@ if ( empty( $process_steps ) ) {
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             <?php echo esc_html( $hero_cta_primary ); ?>
           </a>
-          <a href="<?php echo esc_url( $seo_url ); ?>" class="btn btn-g lg">تعرّف على خدماتنا</a>
+          <a href="<?php echo esc_url( $seo_url ); ?>" class="btn btn-g lg"><?php echo esc_html( $hp_hero_cta_secondary ); ?></a>
         </div>
         <div class="h-kicker">
           <div class="k-item"><div class="k-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>قرارات مبنية على البيانات</div>
@@ -309,10 +330,23 @@ if ( empty( $process_steps ) ) {
           <?php endif; ?>
         </div>
         <div class="why-pts">
-          <div class="wpt sr d1"><div class="wpt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="wpt-t"><strong>تقارير واضحة</strong><p>تقرير شهري تفصيلي بمستوى الأداء</p></div></div>
-          <div class="wpt sr d2"><div class="wpt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="wpt-t"><strong>نتائج قابلة للقياس</strong><p>كل قرار مبني على بيانات حقيقية</p></div></div>
-          <div class="wpt sr d3"><div class="wpt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div class="wpt-t"><strong>فريق متخصص</strong><p>خبراء في السيو والمحتوى والتقنية</p></div></div>
-          <div class="wpt sr d4"><div class="wpt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div><div class="wpt-t"><strong>بدون عقود ملزمة</strong><p>نثبت قيمتنا شهراً بعد شهر</p></div></div>
+          <?php
+          $wpt_icons  = [
+              '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
+              '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+              '<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>',
+              '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/>',
+          ];
+          $wpt_delays = [ 'd1', 'd2', 'd3', 'd4' ];
+          foreach ( $hp_why_points as $k => $pt ) :
+              $dc  = $wpt_delays[ $k ] ?? 'd4';
+              $ico = $wpt_icons[ $k ] ?? $wpt_icons[0];
+          ?>
+          <div class="wpt sr <?php echo esc_attr( $dc ); ?>">
+            <div class="wpt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $ico; // phpcs:ignore ?></svg></div>
+            <div class="wpt-t"><strong><?php echo esc_html( $pt['wp_title'] ?? '' ); ?></strong><p><?php echo esc_html( $pt['wp_desc'] ?? '' ); ?></p></div>
+          </div>
+          <?php endforeach; ?>
         </div>
         <div style="margin-top:26px"><a href="<?php echo esc_url( $contact_url ); ?>" class="btn btn-o">احجز استشارتك المجانية</a></div>
       </div>
@@ -350,7 +384,7 @@ if ( empty( $process_steps ) ) {
           <span class="feat-tag"><span class="feat-tag-dot"></span>الخدمة الأساسية</span>
           <h3>تحسين محركات البحث</h3>
           <p class="feat-p">نضع موقعك في الصفحة الأولى من جوجل بمنهجية شاملة — تدقيق تقني، بحث كلمات، تحسين صفحات، وبناء روابط موثوقة. خدمتنا الأساسية والأكثر طلباً.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:0"><span class="chip d">سيو المتاجر</span><span class="chip d">باك لينك</span><span class="chip d">كتابة محتوى</span><span class="chip d">استشارات الأداء</span></div>
+          <div class="svc-tags"><span class="chip">سيو المتاجر</span><span class="chip">باك لينك</span><span class="chip">كتابة محتوى</span><span class="chip">استشارات الأداء</span></div>
         </div>
         <div class="feat-cta-block">
           <div class="feat-cta-inner">
@@ -466,7 +500,7 @@ if ( empty( $process_steps ) ) {
 <!-- ── CASE STUDIES ── -->
 <section id="cases" class="sec sec-surface">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">نتائج فعلية</span><h2 class="h2">الأرقام تتكلم</h2><p class="bod">نماذج من مشاريع نفّذناها — الأرقام الفعلية تُضاف بعد موافقة العملاء.</p></div>
+    <div class="sh c sr"><span class="tag">نتائج فعلية</span><h2 class="h2"><?php echo esc_html( $hp_cases_title ); ?></h2><p class="bod"><?php echo esc_html( $hp_cases_desc ); ?></p></div>
     <div class="cases-grid">
       <?php
       $cases_query = new WP_Query( [
