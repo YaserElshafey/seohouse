@@ -303,6 +303,52 @@ $line2    = $def['hero_line2']     ?? '';
 $acf_faqs = sh_field( 'sub_faqs' );
 $faqs     = ! empty( $acf_faqs ) ? $acf_faqs : null;
 
+// ── Why section overrides ──────────────────────────────────────
+$def['why_tag'] = sh_field( 'sub_why_tag' ) ?: $def['why_tag'];
+$def['why_h2']  = sh_field( 'sub_why_h2' )  ?: $def['why_h2'];
+$def['why_p']   = sh_field( 'sub_why_p' )   ?: $def['why_p'];
+$acf_why_items  = sh_field( 'sub_why_items' );
+if ( ! empty( $acf_why_items ) ) {
+	$def['why_checks'] = array_map( static fn( $item ) => [
+		'b' => $item['wi_bold'] ?? '',
+		't' => $item['wi_tail'] ?? '',
+	], $acf_why_items );
+}
+
+// ── Tactics section overrides ─────────────────────────────────
+$def['tactics_tag']  = sh_field( 'sub_tac_tag' )  ?: $def['tactics_tag'];
+$def['tactics_h2']   = sh_field( 'sub_tac_h2' )   ?: $def['tactics_h2'];
+$def['tactics_desc'] = sh_field( 'sub_tac_desc' )  ?: $def['tactics_desc'];
+
+// ── Process section overrides ─────────────────────────────────
+$def['proc_tag']  = sh_field( 'sub_proc_tag' )  ?: $def['proc_tag'];
+$def['proc_h2']   = sh_field( 'sub_proc_h2' )   ?: $def['proc_h2'];
+$def['proc_desc'] = sh_field( 'sub_proc_desc' ) ?: $def['proc_desc'];
+$acf_proc_steps  = sh_field( 'sub_proc_steps' );
+if ( ! empty( $acf_proc_steps ) ) {
+	$def['proc'] = array_map( static fn( $step ) => [
+		'n' => $step['ps_n'] ?? '',
+		'h' => $step['ps_h'] ?? '',
+		'p' => $step['ps_p'] ?? '',
+	], $acf_proc_steps );
+}
+
+// ── FAQ / CTA overrides ───────────────────────────────────────
+$def['faq_tag']  = sh_field( 'sub_faq_tag' ) ?: $def['faq_tag'];
+$def['faq_h2']   = sh_field( 'sub_faq_h2' )  ?: $def['faq_h2'];
+$def['cta_h3']   = sh_field( 'sub_cta_h3' )   ?: $def['cta_h3'];
+$def['cta_desc'] = sh_field( 'sub_cta_desc' ) ?: $def['cta_desc'];
+$def['cta_btn']  = sh_field( 'sub_cta_btn' )  ?: $def['cta_btn'];
+$acf_cta_checks  = sh_field( 'sub_cta_checks' );
+if ( ! empty( $acf_cta_checks ) ) {
+	$def['cta_checks'] = array_map( static fn( $item ) => $item['ck_text'] ?? '', $acf_cta_checks );
+}
+
+// ── Bottom CTA overrides ──────────────────────────────────────
+$def['bottom_h2'] = sh_field( 'sub_bottom_h2' ) ?: $def['bottom_h2'];
+$def['bottom_p']  = sh_field( 'sub_bottom_p' )  ?: $def['bottom_p'];
+$def['btn2_txt']  = sh_field( 'sub_btn2_txt' )  ?: ( $def['btn2_txt'] ?? '' );
+
 $contact_url = sh_page_url( 'contact' );
 $seo_url     = sh_page_url( 'services/seo' );
 ?>
