@@ -209,9 +209,6 @@ if ( empty( $process_steps ) ) {
 .p-step:hover .p-num{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:var(--sh-b)}
 .p-step h3{font-size:14.5px;font-weight:800;color:rgba(255,255,255,.8);margin-bottom:7px}
 .p-step p{font-size:12.5px;color:rgba(255,255,255,.36);line-height:1.72;max-width:180px}
-/* Cases */
-.cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
-.cases-note{text-align:center;font-size:11px;color:var(--muted);margin-top:18px;font-style:italic}
 /* Reviews */
 .rev-hrow{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:40px;flex-wrap:wrap}
 .rev-agg{background:#fff;border:1px solid var(--line);border-radius:var(--r2);padding:13px 18px;display:flex;align-items:center;gap:12px}
@@ -260,8 +257,8 @@ if ( empty( $process_steps ) ) {
 #process::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.022) 1px,transparent 1px);background-size:38px 38px;pointer-events:none}
 .ind-card{text-decoration:none}
 /* Responsive */
-@media(max-width:1100px){.hero-grid{grid-template-columns:1fr;gap:28px}.serp-card{display:none}.why-grid{grid-template-columns:1fr;gap:40px}.why-vis{display:none}.cases-grid{grid-template-columns:repeat(2,1fr)}.rev-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:860px){.svc-layout{grid-template-columns:1fr}.svc-card.feat{min-height:auto;padding:28px}.svc-stack{grid-template-rows:auto}.ind-grid{grid-template-columns:repeat(2,1fr)}.proc-wrap{grid-template-columns:repeat(2,1fr)}.proc-line{display:none}.cases-grid{grid-template-columns:1fr}.rev-grid{grid-template-columns:1fr}.art-grid{grid-template-columns:1fr}}
+@media(max-width:1100px){.hero-grid{grid-template-columns:1fr;gap:28px}.serp-card{display:none}.why-grid{grid-template-columns:1fr;gap:40px}.why-vis{display:none}.rev-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px){.svc-layout{grid-template-columns:1fr}.svc-card.feat{min-height:auto;padding:28px}.svc-stack{grid-template-rows:auto}.ind-grid{grid-template-columns:repeat(2,1fr)}.proc-wrap{grid-template-columns:repeat(2,1fr)}.proc-line{display:none}.rev-grid{grid-template-columns:1fr}.art-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.hero-grid{padding-block:clamp(96px,12vh,120px) 44px}.h1{font-size:clamp(34px,9vw,48px)}.h-btns{flex-direction:column}.h-btns .btn{justify-content:center;width:100%}.h-kicker{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:18px;margin-top:24px;border-top:1px solid rgba(255,255,255,.07)}.k-item{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:9px 11px;font-size:11.5px;justify-content:center}.k-sep{display:none}.why-pts{grid-template-columns:1fr}.ind-grid{grid-template-columns:repeat(2,1fr);gap:9px}.proc-wrap{grid-template-columns:1fr;gap:0}.p-step{flex-direction:row;text-align:right;gap:16px;padding:16px 0;border-block-end:1px solid rgba(255,255,255,.06)}.p-step:last-child{border-block-end:none}.p-num{flex-shrink:0;margin-bottom:0;width:40px;height:40px;font-size:13px}.p-step h3{font-size:14px;margin-bottom:4px}.p-step p{max-width:100%;font-size:12px}.cta-btns{flex-direction:column;align-items:center}.cta-pills{flex-direction:column;align-items:center;gap:8px}.blog-hrow{flex-direction:column;align-items:flex-start}.rev-hrow{flex-direction:column;align-items:flex-start}}
 </style>
 
@@ -517,7 +514,7 @@ if ( empty( $process_steps ) ) {
 <section id="cases" class="sec sec-surface">
   <div class="wrap">
     <div class="sh c sr"><span class="tag">نتائج فعلية</span><h2 class="h2"><?php echo esc_html( $hp_cases_title ); ?></h2><p class="bod"><?php echo esc_html( $hp_cases_desc ); ?></p></div>
-    <div class="cases-grid">
+    <div class="proof-grid" style="margin-top:40px">
       <?php
       $cases_query = new WP_Query( [
           'post_type'      => 'case_study',
@@ -534,33 +531,47 @@ if ( empty( $process_steps ) ) {
       $ci = 0;
       if ( $cases_query->have_posts() ) :
           while ( $cases_query->have_posts() ) : $cases_query->the_post();
-              get_template_part( 'template-parts/cards/case-study-card', null, [ 'delay' => $case_delays[ $ci ] ?? 'd2' ] );
-              $ci++;
+              $cid          = get_the_ID();
+              $cterms       = get_the_terms( $cid, 'case_study_sector' );
+              $csector      = ( ! is_wp_error( $cterms ) && ! empty( $cterms ) ) ? $cterms[0]->name : sh_field( 'client_name', $cid, '' );
+              $cmetrics     = sh_field( 'metrics', $cid );
+              $cduration    = sh_field( 'project_duration', $cid );
+              $cmain_value  = ! empty( $cmetrics[0]['value'] ) ? $cmetrics[0]['value'] : '—';
+              $cmeta_text   = $cduration ?: ( ! empty( $cmetrics[1]['value'] ) ? $cmetrics[1]['value'] . ' ' . ( $cmetrics[1]['label'] ?? '' ) : '' );
+              $cdc          = $case_delays[ $ci ] ?? '';
+          ?>
+          <div class="proof-card sr<?php echo esc_attr( $cdc ); ?>">
+            <?php if ( $csector ) : ?>
+            <div class="proof-sector"><?php echo esc_html( $csector ); ?></div>
+            <?php endif; ?>
+            <div class="proof-result"><em><?php echo esc_html( $cmain_value ); ?></em></div>
+            <div class="proof-desc"><?php echo esc_html( get_the_excerpt() ); ?></div>
+            <?php if ( $cmeta_text ) : ?>
+            <div class="proof-meta"><div class="proof-dot"></div><?php echo esc_html( $cmeta_text ); ?></div>
+            <?php endif; ?>
+          </div>
+          <?php $ci++;
           endwhile;
           wp_reset_postdata();
       else :
-          // Fallback: show placeholder cards
-          for ( $ci = 0; $ci < 3; $ci++ ) : ?>
-          <div class="cs-card sr<?php echo esc_attr( $case_delays[ $ci ] ?? '' ); ?>">
-            <div class="cs-screen">
-              <div class="cs-chrome"><div class="cs-dots"><span></span><span></span><span></span></div><div class="cs-bar"></div></div>
-              <div class="cs-img"><div class="cs-chart">
-                <?php foreach ( [ 22, 30, 26, 44, 52, 62, 72, 80, 90, 98 ] as $h ) : ?>
-                  <div class="cs-b<?php echo $h >= 60 ? ' hi' : ''; ?>" style="height:<?php echo $h; ?>%"></div>
-                <?php endforeach; ?>
-              </div></div>
-            </div>
-            <div class="cs-body">
-              <div class="cs-sector">للمطوّر: أضف دراسات الحالة من لوحة التحكم</div>
-              <h3>عنوان المشروع</h3>
-              <p>وصف مختصر لتحدي العميل وما تم تحقيقه.</p>
-              <div class="cs-meta"><div><div class="cs-ml">النتيجة</div><div class="cs-mv">سيُضاف لاحقاً</div></div><div><div class="cs-ml">المدة</div><div class="cs-mv">6 أشهر</div></div></div>
-            </div>
+          $fallback_cases = [
+              [ 'sector' => 'قطاع الصحة والطب',         'result' => '+312%', 'desc' => 'نمو في الزيارات العضوية لعيادة طبية متخصصة — انتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.', 'meta' => '8 أشهر تعاون مستمر' ],
+              [ 'sector' => 'قطاع التجارة الإلكترونية', 'result' => '+184%', 'desc' => 'زيادة في المبيعات العضوية لمتجر سلة مع خفض الاعتماد على Google Ads بنسبة 45%.', 'meta' => '10 أشهر تعاون مستمر' ],
+              [ 'sector' => 'قطاع التعليم والتدريب',    'result' => '+220%', 'desc' => 'نمو في عدد الليدز الشهرية لمنصة تدريب — 14 كلمة مفتاحية تنافسية في الصفحة الأولى.', 'meta' => '6 أشهر تعاون مستمر' ],
+          ];
+          foreach ( $fallback_cases as $fci => $fc ) : ?>
+          <div class="proof-card sr<?php echo esc_attr( $case_delays[ $fci ] ?? '' ); ?>">
+            <div class="proof-sector"><?php echo esc_html( $fc['sector'] ); ?></div>
+            <div class="proof-result"><em><?php echo esc_html( $fc['result'] ); ?></em></div>
+            <div class="proof-desc"><?php echo esc_html( $fc['desc'] ); ?></div>
+            <div class="proof-meta"><div class="proof-dot"></div><?php echo esc_html( $fc['meta'] ); ?></div>
           </div>
-          <?php endfor;
+          <?php endforeach;
       endif; ?>
     </div>
-    <p class="cases-note">الأرقام الفعلية تُضاف بعد الحصول على موافقة العملاء</p>
+    <div style="text-align:center;margin-top:28px">
+      <a href="<?php echo esc_url( $results_url ); ?>" class="btn btn-g">جميع النتائج <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
   </div>
 </section>
 

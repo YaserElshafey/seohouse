@@ -59,7 +59,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
     ?>
 
     <?php if ( $cases->have_posts() ) : ?>
-    <div class="results-grid">
+    <div class="proof-grid" style="gap:18px">
       <?php
       $delays = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ];
       $ci     = 0;
@@ -68,41 +68,23 @@ get_template_part( 'template-parts/layout/page-hero', null, [
           $sector      = ( ! is_wp_error( $terms ) && ! empty( $terms ) ) ? $terms[0]->name : '';
           $sector_slug = ( ! is_wp_error( $terms ) && ! empty( $terms ) ) ? $terms[0]->slug : '';
           $metrics     = sh_field( 'metrics' );
+          $duration    = sh_field( 'project_duration' );
+          $main_value  = ! empty( $metrics[0]['value'] ) ? $metrics[0]['value'] : '—';
+          $meta_text   = $duration ?: ( ! empty( $metrics[1]['value'] ) ? $metrics[1]['value'] . ' ' . ( $metrics[1]['label'] ?? '' ) : '' );
           $dc          = $delays[ $ci % count( $delays ) ];
           $ci++;
       ?>
-      <article class="cs-arc-card r-card sr <?php echo esc_attr( $dc ); ?>" data-sector="<?php echo esc_attr( $sector_slug ); ?>">
-        <div class="cs-arc-thumb">
-          <?php if ( has_post_thumbnail() ) : ?>
-            <?php the_post_thumbnail( 'seohouse-case-thumb', [ 'alt' => esc_attr( get_the_title() ) ] ); ?>
-          <?php else : ?>
-            <div class="cs-arc-thumb-placeholder">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            </div>
-          <?php endif; ?>
-          <?php if ( $sector ) : ?>
-            <span class="cs-arc-sector"><?php echo esc_html( $sector ); ?></span>
-          <?php endif; ?>
-        </div>
-        <div class="cs-arc-body">
-          <h3><?php the_title(); ?></h3>
-          <p><?php echo esc_html( get_the_excerpt() ); ?></p>
-          <?php if ( ! empty( $metrics ) ) : ?>
-          <div class="cs-arc-metrics">
-            <?php foreach ( array_slice( $metrics, 0, 2 ) as $metric ) : ?>
-            <div>
-              <div class="cs-arc-ml"><?php echo esc_html( $metric['label'] ?? '' ); ?></div>
-              <div class="cs-arc-mv"><?php echo esc_html( $metric['value'] ?? '' ); ?></div>
-            </div>
-            <?php endforeach; ?>
-          </div>
-          <?php endif; ?>
-          <a href="<?php the_permalink(); ?>" class="cs-arc-link">
-            اقرأ القصة كاملاً
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
-      </article>
+      <div class="proof-card r-card sr <?php echo esc_attr( $dc ); ?>" data-sector="<?php echo esc_attr( $sector_slug ); ?>">
+        <?php if ( $sector ) : ?>
+        <div class="proof-sector"><?php echo esc_html( $sector ); ?></div>
+        <?php endif; ?>
+        <div class="proof-result"><em><?php echo esc_html( $main_value ); ?></em></div>
+        <div class="proof-desc"><?php echo esc_html( get_the_excerpt() ); ?></div>
+        <?php if ( $meta_text ) : ?>
+        <div class="proof-meta"><div class="proof-dot"></div><?php echo esc_html( $meta_text ); ?></div>
+        <?php endif; ?>
+        <a href="<?php the_permalink(); ?>" class="proof-cta">اقرأ القصة كاملاً <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
       <?php endwhile; wp_reset_postdata(); ?>
     </div>
     <?php else : ?>
