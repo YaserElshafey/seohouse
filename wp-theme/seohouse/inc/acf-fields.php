@@ -65,6 +65,13 @@ add_action( 'acf/init', function () {
             'parent_slug' => 'seohouse-options',
         ] );
 
+        acf_add_options_sub_page( [
+            'page_title'  => 'إعدادات المدونة',
+            'menu_title'  => 'المدونة',
+            'menu_slug'   => 'seohouse-blog',
+            'parent_slug' => 'seohouse-options',
+        ] );
+
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -913,6 +920,24 @@ add_action( 'acf/init', function () {
                     [ 'key' => 'field_con_exp_text', 'label' => 'النص', 'name' => 'exp_text', 'type' => 'text' ],
                 ],
             ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // Blog Options Fields
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_blog_options',
+        'title'    => 'إعدادات المدونة',
+        'location' => [ [ [ 'param' => 'options_page', 'operator' => '==', 'value' => 'seohouse-blog' ] ] ],
+        'fields'   => [
+            [ 'key' => 'field_blog_hero_tag',   'label' => 'تصنيف هيرو المدونة',               'name' => 'blog_hero_tag',   'type' => 'text',     'default_value' => 'المدونة' ],
+            [ 'key' => 'field_blog_hero_title', 'label' => 'عنوان هيرو المدونة (سطر في كل سطر)', 'name' => 'blog_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "رؤى وأدوات\nتبني موقعك" ],
+            [ 'key' => 'field_blog_hero_em',    'label' => 'الكلمة المُبرَزة في عنوان المدونة', 'name' => 'blog_hero_em',   'type' => 'text',     'default_value' => 'تبني موقعك' ],
+            [ 'key' => 'field_blog_hero_desc',  'label' => 'وصف هيرو المدونة',                 'name' => 'blog_hero_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'مقالات متخصصة في السيو والتجارة الإلكترونية من فريق سيو هاوس — مكتوبة للتطبيق، لا للقراءة فقط.' ],
+            [ 'key' => 'field_blog_sb_cta_title', 'label' => 'عنوان بطاقة CTA في الشريط الجانبي', 'name' => 'blog_sidebar_cta_title', 'type' => 'text',     'default_value' => 'استشارة مجانية' ],
+            [ 'key' => 'field_blog_sb_cta_desc',  'label' => 'وصف بطاقة CTA في الشريط الجانبي',  'name' => 'blog_sidebar_cta_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'هل تريد تحسين ترتيب موقعك؟ احجز 30 دقيقة معنا مجاناً.' ],
+            [ 'key' => 'field_blog_sb_cta_btn',   'label' => 'نص زر CTA في الشريط الجانبي',     'name' => 'blog_sidebar_cta_btn',   'type' => 'text',     'default_value' => 'احجز الآن' ],
         ],
     ] );
 

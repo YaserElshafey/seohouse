@@ -3,13 +3,25 @@
  * Blog archive template (used when a page is set as Posts Page)
  */
 get_header();
+
+$_blog_hero_raw   = sh_option( 'blog_hero_title', "رؤى وأدوات\nتبني موقعك" );
+$_blog_hero_em    = sh_option( 'blog_hero_em',    'تبني موقعك' );
+$_blog_em_style   = 'font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite';
+$_blog_hero_title = $_blog_hero_em
+    ? str_replace( $_blog_hero_em, '<em style="' . $_blog_em_style . '">' . esc_html( $_blog_hero_em ) . '</em>', esc_html( $_blog_hero_raw ) )
+    : esc_html( $_blog_hero_raw );
+$_blog_hero_title = nl2br( $_blog_hero_title );
+
+$_blog_sb_title = sh_option( 'blog_sidebar_cta_title', 'استشارة مجانية' );
+$_blog_sb_desc  = sh_option( 'blog_sidebar_cta_desc',  'هل تريد تحسين ترتيب موقعك؟ احجز 30 دقيقة معنا مجاناً.' );
+$_blog_sb_btn   = sh_option( 'blog_sidebar_cta_btn',   'احجز الآن' );
 ?>
 
 <?php
 get_template_part( 'template-parts/layout/page-hero', null, [
-    'tag'         => 'المدونة',
-    'title'       => 'رؤى وأدوات <em>تبني موقعك</em>',
-    'description' => 'مقالات متخصصة في السيو والتجارة الإلكترونية من فريق سيو هاوس — مكتوبة للتطبيق، لا للقراءة فقط.',
+    'tag'         => sh_option( 'blog_hero_tag', 'المدونة' ),
+    'title'       => $_blog_hero_title,
+    'description' => sh_option( 'blog_hero_desc', 'مقالات متخصصة في السيو والتجارة الإلكترونية من فريق سيو هاوس — مكتوبة للتطبيق، لا للقراءة فقط.' ),
     'breadcrumb'  => [ 'المدونة' => '' ],
 ] );
 ?>
@@ -107,9 +119,9 @@ get_template_part( 'template-parts/layout/page-hero', null, [
         <?php endif; ?>
 
         <div class="sb-box sr d2" style="background:var(--blue);border-color:var(--blue)">
-          <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:10px">استشارة مجانية</div>
-          <p style="font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.72;margin-bottom:16px">هل تريد تحسين ترتيب موقعك؟ احجز 30 دقيقة معنا مجاناً.</p>
-          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-w sm" style="width:100%;justify-content:center">احجز الآن</a>
+          <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:10px"><?php echo esc_html( $_blog_sb_title ); ?></div>
+          <p style="font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.72;margin-bottom:16px"><?php echo esc_html( $_blog_sb_desc ); ?></p>
+          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-w sm" style="width:100%;justify-content:center"><?php echo esc_html( $_blog_sb_btn ); ?></a>
         </div>
       </div>
     </div>

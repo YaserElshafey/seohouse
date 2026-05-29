@@ -105,9 +105,9 @@ while ( have_posts() ) : the_post();
         </div>
 
         <div class="sb-box" style="background:var(--blue);border-color:var(--blue)">
-          <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:10px">استشارة مجانية</div>
-          <p style="font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.72;margin-bottom:16px">هل تريد تحسين ترتيب موقعك؟ احجز 30 دقيقة معنا مجاناً.</p>
-          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-w sm" style="width:100%;justify-content:center">احجز الآن</a>
+          <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:10px"><?php echo esc_html( sh_option( 'blog_sidebar_cta_title', 'استشارة مجانية' ) ); ?></div>
+          <p style="font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.72;margin-bottom:16px"><?php echo esc_html( sh_option( 'blog_sidebar_cta_desc', 'هل تريد تحسين ترتيب موقعك؟ احجز 30 دقيقة معنا مجاناً.' ) ); ?></p>
+          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-w sm" style="width:100%;justify-content:center"><?php echo esc_html( sh_option( 'blog_sidebar_cta_btn', 'احجز الآن' ) ); ?></a>
         </div>
       </div>
     </div>
