@@ -13,13 +13,15 @@
 .plat-logo{width:56px;height:56px;display:flex;align-items:center;justify-content:center}
 .plat-nm{font-size:12px;font-weight:700;color:var(--ink-2);white-space:nowrap}
 
-/* ─ Client bar ─ */
-#clients{padding-block:28px;border-bottom:1px solid var(--line)}
-.cl-lbl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:18px}
-.cl-row{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}
-.cl-ph{font-size:13px;font-weight:700;color:var(--muted);opacity:.5;transition:opacity .2s;cursor:default}
-.cl-ph img{filter:grayscale(1);opacity:.45;transition:all .22s}
-.cl-ph:hover img,.cl-ph a:hover img{filter:grayscale(0);opacity:1}
+/* ─ Client logos bar ─ */
+#clients{padding-block:clamp(28px,3.5vw,44px);background:var(--surface);border-block:1px solid var(--line)}
+.cl-lbl{text-align:center;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:26px}
+.cl-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:6px}
+.cl-item{width:160px;height:64px;padding:12px 20px;display:flex;align-items:center;justify-content:center;border-radius:var(--r2);transition:background .22s var(--fast),box-shadow .22s var(--fast);text-decoration:none;flex-shrink:0}
+.cl-item:hover{background:#fff;box-shadow:0 2px 14px rgba(9,16,46,.08)}
+.cl-item img{width:100%;height:100%;object-fit:contain;display:block;filter:grayscale(1) opacity(.5);transition:filter .22s var(--fast)}
+.cl-item:hover img{filter:none}
+.cl-item.cl-ph-txt{font-size:11px;font-weight:600;color:var(--muted);border:1.5px dashed var(--line)}
 
 /* ─ Review stars ─ */
 .stars{display:flex;gap:3px}

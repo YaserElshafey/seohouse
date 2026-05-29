@@ -13,12 +13,13 @@ $clients = sh_get_clients();
               $logo    = sh_field( 'client_logo' );
               $url     = sh_field( 'client_url' );
               $img_url = ! empty( $logo['url'] ) ? $logo['url'] : '';
-              $tag     = $url ? 'a' : 'div';
-              $attrs   = $url ? 'href="' . esc_url( $url ) . '" target="_blank" rel="noopener"' : '';
+              $tag         = $url ? 'a' : 'div';
+              $attrs       = $url ? 'href="' . esc_url( $url ) . '" target="_blank" rel="noopener"' : '';
+              $extra_class = $img_url ? '' : ' cl-ph-txt';
               ?>
-              <<?php echo $tag; ?> <?php echo $attrs; ?> class="cl-ph" title="<?php the_title_attribute(); ?>">
+              <<?php echo $tag; ?> <?php echo $attrs; ?> class="cl-item<?php echo $extra_class; ?>" title="<?php the_title_attribute(); ?>">
                 <?php if ( $img_url ) : ?>
-                  <img src="<?php echo esc_url( $img_url ); ?>" alt="<?php the_title_attribute(); ?>" style="height:28px;width:auto;object-fit:contain">
+                  <img src="<?php echo esc_url( $img_url ); ?>" alt="<?php the_title_attribute(); ?>">
                 <?php else : ?>
                   <?php the_title(); ?>
                 <?php endif; ?>
@@ -28,7 +29,7 @@ $clients = sh_get_clients();
       else :
           // Placeholder slots when no clients are added yet
           for ( $i = 0; $i < 6; $i++ ) :
-              echo '<div class="cl-ph">شعار العميل</div>';
+              echo '<div class="cl-item cl-ph-txt">شعار العميل</div>';
           endfor;
       endif; ?>
     </div>
