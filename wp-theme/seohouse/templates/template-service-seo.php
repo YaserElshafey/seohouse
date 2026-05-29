@@ -24,6 +24,61 @@ $seo_reporting_title = nl2br( esc_html( $seo_reporting_raw ) );
 $seo_reporting_desc  = sh_field( 'seo_reporting_desc', null, 'في معظم الوكالات تأتيك تقارير ممتلئة بمصطلحات جوجل لا تفهم منها شيئاً. عندنا التقرير يُظهر لك بوضوح: كم ليد جاء من البحث، كم بيع، وأين تذهب ميزانيتك.' );
 $seo_proof_title    = sh_field( 'seo_proof_title',     null, 'نتائج حقيقية لعملاء حقيقيين' );
 $seo_cta_title      = sh_field( 'seo_cta_title',       null, 'ابدأ بكسب عملاء يبحثون عنك فعلاً' );
+
+$seo_hero_cta1    = sh_field( 'seo_hero_cta1',    null, 'احجز استشارة مجانية — 30 دقيقة' );
+$seo_hero_cta2    = sh_field( 'seo_hero_cta2',    null, 'خدماتنا' );
+$seo_hero_stats   = sh_field( 'seo_hero_stats',   null, [] );
+$seo_lost_cards   = sh_field( 'seo_lost_cards',   null, [] );
+$seo_why_items    = sh_field( 'seo_why_items',    null, [] );
+$seo_impact_rows  = sh_field( 'seo_impact_rows',  null, [] );
+$seo_sub_desc     = sh_field( 'seo_sub_desc',     null, 'كل خدمة يمكن تنفيذها مستقلة أو ضمن باقة سيو متكاملة — حسب وضع موقعك ومرحلتك.' );
+$seo_method_title = sh_field( 'seo_method_title', null, 'منهجية شفافة من اليوم الأول' );
+$seo_method_desc  = sh_field( 'seo_method_desc',  null, 'كل مرحلة لها هدف واضح ومؤشر قياس — لا خطوات غامضة، لا وعود بدون تنفيذ.' );
+$seo_proof_desc   = sh_field( 'seo_proof_desc',   null, 'نماذج من نتائج عملاء سابقين — أرقام موثّقة من Search Console وAnalytics، لا ادعاءات.' );
+$seo_proof_cards  = sh_field( 'seo_proof_cards',  null, [] );
+$seo_ind_title    = sh_field( 'seo_ind_title',    null, 'السيو يختلف من قطاع إلى آخر — ونحن نفهم ذلك' );
+$seo_ind_desc     = sh_field( 'seo_ind_desc',     null, 'لكل قطاع جمهوره، كلماته، وقواعد ترتيبه. نُخصّص الاستراتيجية حسب طبيعة عملك.' );
+$seo_faq_title    = sh_field( 'seo_faq_title',    null, 'أسئلة يسألها كل صاحب عمل' );
+
+if ( empty( $seo_hero_stats ) ) {
+    $seo_hero_stats = [
+        [ 'stat_n' => '',     'stat_em' => '+200%', 'stat_label' => 'نمو متوسط في الزيارات' ],
+        [ 'stat_n' => '90',   'stat_em' => 'يوم',   'stat_label' => 'أول مؤشرات النمو' ],
+        [ 'stat_n' => '+100', 'stat_em' => '',      'stat_label' => 'عميل في السعودية والخليج' ],
+        [ 'stat_n' => '100%', 'stat_em' => '',      'stat_label' => 'تقارير شفافة شهرياً' ],
+    ];
+}
+if ( empty( $seo_lost_cards ) ) {
+    $seo_lost_cards = [
+        [ 'lc_title' => 'طلب بحث لا يصل إليك',  'lc_body' => 'كل شهر آلاف الأشخاص يبحثون عن خدمتك في جوجل. إذا لم يكن موقعك في النتائج الأولى، ذهب الطلب إلى منافس آخر.' ],
+        [ 'lc_title' => 'ميزانية إعلانية تتبخّر', 'lc_body' => 'تنفق على Google Ads وميتا — وحين تتوقف عن الدفع، تتوقف الزيارات. السيو يبني أصلاً يستمر في جلب العملاء بدون نزيف يومي.' ],
+        [ 'lc_title' => 'ليدز قليلة الجودة',      'lc_body' => 'الزيارات العضوية تأتي من أشخاص يبحثون فعلاً عن خدمتك — عملاء جاهزون بنية شراء حقيقية.' ],
+        [ 'lc_title' => 'قرارات مبنية على الحدس', 'lc_body' => 'بدون تقارير ذكية تتخذ قرارات بناءً على شعور لا أرقام. تقاريرنا تربط البحث بالليدز والمبيعات — لتقرر بعقل.' ],
+    ];
+}
+if ( empty( $seo_why_items ) ) {
+    $seo_why_items = [
+        [ 'wi_label' => 'تكلفة عميل أقل',        'wi_desc' => 'كلما نمت الزيارات العضوية، انخفض اعتمادك على الإعلانات' ],
+        [ 'wi_label' => 'عملاء بنية شراء أعلى',  'wi_desc' => 'الباحث في جوجل لديه احتياج حقيقي' ],
+        [ 'wi_label' => 'أصل تجاري متراكم',       'wi_desc' => 'كل شهر يبني على السابق، الإعلان يعود للصفر' ],
+        [ 'wi_label' => 'مصداقية تلقائية',         'wi_desc' => 'الظهور العضوي يبني ثقة لا يبنيها الإعلان' ],
+    ];
+}
+if ( empty( $seo_impact_rows ) ) {
+    $seo_impact_rows = [
+        [ 'ir_label' => 'تكلفة العميل (CAC)', 'ir_from' => 'ر.س عالية', 'ir_to' => '↓ 40%' ],
+        [ 'ir_label' => 'الليدز الشهرية',     'ir_from' => 'قليلة',      'ir_to' => '↑ 3x'  ],
+        [ 'ir_label' => 'الاعتماد على Ads',   'ir_from' => '100%',       'ir_to' => '↓ 50%' ],
+        [ 'ir_label' => 'قيمة العميل (LTV)',  'ir_from' => 'عادية',      'ir_to' => '↑ 2x'  ],
+    ];
+}
+if ( empty( $seo_proof_cards ) ) {
+    $seo_proof_cards = [
+        [ 'pc_sector' => 'قطاع الصحة والطب',        'pc_result' => '+312%', 'pc_desc' => 'نمو في الزيارات العضوية لعيادة طبية متخصصة خلال 8 أشهر — انتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.', 'pc_meta' => '8 أشهر تعاون مستمر' ],
+        [ 'pc_sector' => 'قطاع التجارة الإلكترونية', 'pc_result' => '+184%', 'pc_desc' => 'زيادة في المبيعات العضوية لمتجر سلة في قطاع الأزياء مع خفض اعتماده على Google Ads بنسبة 45%.', 'pc_meta' => '10 أشهر تعاون مستمر' ],
+        [ 'pc_sector' => 'قطاع التعليم والتدريب',    'pc_result' => '+220%', 'pc_desc' => 'نمو في عدد الليدز الشهرية لمنصة تدريب مع وصول 14 كلمة مفتاحية تنافسية إلى الصفحة الأولى.', 'pc_meta' => '6 أشهر تعاون مستمر' ],
+    ];
+}
 ?>
 
 <!-- Hero -->
@@ -44,15 +99,20 @@ $seo_cta_title      = sh_field( 'seo_cta_title',       null, 'ابدأ بكسب 
       <div style="display:flex;gap:11px;justify-content:center;flex-wrap:wrap">
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p lg">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          احجز استشارة مجانية — 30 دقيقة
+          <?php echo esc_html( $seo_hero_cta1 ); ?>
         </a>
-        <a href="#sub-services" class="btn btn-g lg">خدماتنا</a>
+        <a href="#sub-services" class="btn btn-g lg"><?php echo esc_html( $seo_hero_cta2 ); ?></a>
       </div>
       <div class="h-stats">
-        <div class="h-stat"><div class="h-stat-n"><em>+200%</em></div><div class="h-stat-l">نمو متوسط في الزيارات</div></div>
-        <div class="h-stat"><div class="h-stat-n">90<em>يوم</em></div><div class="h-stat-l">أول مؤشرات النمو</div></div>
-        <div class="h-stat"><div class="h-stat-n">+100</div><div class="h-stat-l">عميل في السعودية والخليج</div></div>
-        <div class="h-stat"><div class="h-stat-n">100%</div><div class="h-stat-l">تقارير شفافة شهرياً</div></div>
+        <?php foreach ( $seo_hero_stats as $st ) : ?>
+        <div class="h-stat">
+          <div class="h-stat-n">
+            <?php echo esc_html( $st['stat_n'] ?? '' ); ?>
+            <?php if ( ! empty( $st['stat_em'] ) ) : ?><em><?php echo esc_html( $st['stat_em'] ); ?></em><?php endif; ?>
+          </div>
+          <div class="h-stat-l"><?php echo esc_html( $st['stat_label'] ?? '' ); ?></div>
+        </div>
+        <?php endforeach; ?>
       </div>
     </div>
   </div>
@@ -63,26 +123,22 @@ $seo_cta_title      = sh_field( 'seo_cta_title',       null, 'ابدأ بكسب 
   <div class="wrap">
     <div class="sh c sr"><span class="tag">الفرص الضائعة</span><h2 class="h2"><?php echo esc_html( $seo_lost_title ); ?></h2><p class="bod"><?php echo esc_html( $seo_lost_desc ); ?></p></div>
     <div class="lost-grid">
-      <div class="lost-card sr">
-        <div class="lost-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M8 11h6"/></svg></div>
-        <h3>طلب بحث لا يصل إليك</h3>
-        <p>كل شهر آلاف الأشخاص يبحثون عن خدمتك في جوجل. إذا لم يكن موقعك في النتائج الأولى، ذهب الطلب إلى منافس آخر.</p>
+      <?php
+      $lost_icons = [
+          '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M8 11h6"/>',
+          '<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>',
+          '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>',
+          '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
+      ];
+      $lost_delays = [ '', ' d1', ' d2', ' d3' ];
+      foreach ( $seo_lost_cards as $li => $lc ) :
+      ?>
+      <div class="lost-card sr<?php echo esc_attr( $lost_delays[ $li ] ?? '' ); ?>">
+        <div class="lost-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $lost_icons[ $li ] ?? $lost_icons[0]; // phpcs:ignore ?></svg></div>
+        <h3><?php echo esc_html( $lc['lc_title'] ?? '' ); ?></h3>
+        <p><?php echo esc_html( $lc['lc_body'] ?? '' ); ?></p>
       </div>
-      <div class="lost-card sr d1">
-        <div class="lost-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-        <h3>ميزانية إعلانية تتبخّر</h3>
-        <p>تنفق على Google Ads وميتا — وحين تتوقف عن الدفع، تتوقف الزيارات. السيو يبني أصلاً يستمر في جلب العملاء بدون نزيف يومي.</p>
-      </div>
-      <div class="lost-card sr d2">
-        <div class="lost-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-        <h3>ليدز قليلة الجودة</h3>
-        <p>الزيارات العضوية تأتي من أشخاص يبحثون فعلاً عن خدمتك — عملاء جاهزون بنية شراء حقيقية.</p>
-      </div>
-      <div class="lost-card sr d3">
-        <div class="lost-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-        <h3>قرارات مبنية على الحدس</h3>
-        <p>بدون تقارير ذكية تتخذ قرارات بناءً على شعور لا أرقام. تقاريرنا تربط البحث بالليدز والمبيعات — لتقرر بعقل.</p>
-      </div>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
@@ -94,10 +150,9 @@ $seo_cta_title      = sh_field( 'seo_cta_title',       null, 'ابدأ بكسب 
       <div>
         <div class="sh sr"><span class="tag">لماذا السيو يهم تجارياً</span><h2 class="h2"><?php echo wp_kses_post( $seo_why_title ); ?></h2><p class="bod" style="margin-top:12px"><?php echo esc_html( $seo_why_desc ); ?></p></div>
         <div class="chklist sr d1" style="margin-bottom:24px">
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>تكلفة عميل أقل</strong> — كلما نمت الزيارات العضوية، انخفض اعتمادك على الإعلانات</div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>عملاء بنية شراء أعلى</strong> — الباحث في جوجل لديه احتياج حقيقي</div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>أصل تجاري متراكم</strong> — كل شهر يبني على السابق، الإعلان يعود للصفر</div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>مصداقية تلقائية</strong> — الظهور العضوي يبني ثقة لا يبنيها الإعلان</div>
+          <?php foreach ( $seo_why_items as $wi ) : ?>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong><?php echo esc_html( $wi['wi_label'] ?? '' ); ?></strong><?php if ( ! empty( $wi['wi_desc'] ) ) : ?> — <?php echo esc_html( $wi['wi_desc'] ); ?><?php endif; ?></div>
+          <?php endforeach; ?>
         </div>
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p sr d2">احجز استشارة مجانية</a>
       </div>
@@ -107,12 +162,8 @@ $seo_cta_title      = sh_field( 'seo_cta_title',       null, 'ابدأ بكسب 
           <div style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:20px;position:relative;z-index:1">تأثير السيو على مؤشرات عملك</div>
           <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:14px">
             <?php
-            foreach ( [
-                [ 'label' => 'تكلفة العميل (CAC)', 'from' => 'ر.س عالية', 'to' => '↓ 40%' ],
-                [ 'label' => 'الليدز الشهرية',     'from' => 'قليلة',      'to' => '↑ 3x'  ],
-                [ 'label' => 'الاعتماد على Ads',   'from' => '100%',       'to' => '↓ 50%' ],
-                [ 'label' => 'قيمة العميل (LTV)',  'from' => 'عادية',      'to' => '↑ 2x'  ],
-            ] as $imp ) :
+            foreach ( $seo_impact_rows as $imp ) :
+                $imp = [ 'label' => $imp['ir_label'] ?? '', 'from' => $imp['ir_from'] ?? '', 'to' => $imp['ir_to'] ?? '' ];
             ?>
             <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
               <strong style="font-size:13.5px;font-weight:700;color:rgba(255,255,255,.8)"><?php echo esc_html( $imp['label'] ); ?></strong>
@@ -163,7 +214,7 @@ $seo_cta_title      = sh_field( 'seo_cta_title',       null, 'ابدأ بكسب 
 <!-- Sub-services -->
 <section id="sub-services" class="sec sec-surface">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">خدمات السيو</span><h2 class="h2"><?php echo esc_html( $seo_sub_title ); ?></h2><p class="bod">كل خدمة يمكن تنفيذها مستقلة أو ضمن باقة سيو متكاملة — حسب وضع موقعك ومرحلتك.</p></div>
+    <div class="sh c sr"><span class="tag">خدمات السيو</span><h2 class="h2"><?php echo esc_html( $seo_sub_title ); ?></h2><p class="bod"><?php echo esc_html( $seo_sub_desc ); ?></p></div>
     <div class="ss-grid sr d1">
       <?php
       foreach ( [
@@ -245,7 +296,7 @@ $seo_cta_title      = sh_field( 'seo_cta_title',       null, 'ابدأ بكسب 
 <!-- Methodology -->
 <section class="sec sec-navy">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag d">منهجيتنا</span><h2 class="h2 wh">منهجية شفافة من اليوم الأول</h2><p class="bod d">كل مرحلة لها هدف واضح ومؤشر قياس — لا خطوات غامضة، لا وعود بدون تنفيذ.</p></div>
+    <div class="sh c sr"><span class="tag d">منهجيتنا</span><h2 class="h2 wh"><?php echo esc_html( $seo_method_title ); ?></h2><p class="bod d"><?php echo esc_html( $seo_method_desc ); ?></p></div>
     <div class="method-grid">
       <?php
       $method_items = ! empty( $steps ) ? array_slice( $steps, 0, 6 ) : [
@@ -272,20 +323,17 @@ $seo_cta_title      = sh_field( 'seo_cta_title',       null, 'ابدأ بكسب 
 <!-- Proof / Results -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">دلائل النتائج</span><h2 class="h2"><?php echo esc_html( $seo_proof_title ); ?></h2><p class="bod">نماذج من نتائج عملاء سابقين — أرقام موثّقة من Search Console وAnalytics، لا ادعاءات.</p></div>
+    <div class="sh c sr"><span class="tag">دلائل النتائج</span><h2 class="h2"><?php echo esc_html( $seo_proof_title ); ?></h2><p class="bod"><?php echo esc_html( $seo_proof_desc ); ?></p></div>
     <div class="proof-grid">
       <?php
-      foreach ( [
-          [ 'sector' => 'قطاع الصحة والطب',        'result' => '+312%', 'desc' => 'نمو في الزيارات العضوية لعيادة طبية متخصصة خلال 8 أشهر — انتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.', 'meta' => '8 أشهر تعاون مستمر', 'dc' => '' ],
-          [ 'sector' => 'قطاع التجارة الإلكترونية', 'result' => '+184%', 'desc' => 'زيادة في المبيعات العضوية لمتجر سلة في قطاع الأزياء مع خفض اعتماده على Google Ads بنسبة 45%.', 'meta' => '10 أشهر تعاون مستمر', 'dc' => 'd1' ],
-          [ 'sector' => 'قطاع التعليم والتدريب',    'result' => '+220%', 'desc' => 'نمو في عدد الليدز الشهرية لمنصة تدريب مع وصول 14 كلمة مفتاحية تنافسية إلى الصفحة الأولى.', 'meta' => '6 أشهر تعاون مستمر', 'dc' => 'd2' ],
-      ] as $pc ) :
+      $proof_delays = [ '', 'd1', 'd2' ];
+      foreach ( $seo_proof_cards as $pci => $pc ) :
       ?>
-      <div class="proof-card sr <?php echo esc_attr( $pc['dc'] ); ?>">
-        <div class="proof-sector"><?php echo esc_html( $pc['sector'] ); ?></div>
-        <div class="proof-result"><em><?php echo esc_html( $pc['result'] ); ?></em></div>
-        <div class="proof-desc"><?php echo esc_html( $pc['desc'] ); ?></div>
-        <div class="proof-meta"><div class="proof-dot"></div><?php echo esc_html( $pc['meta'] ); ?></div>
+      <div class="proof-card sr <?php echo esc_attr( $proof_delays[ $pci ] ?? '' ); ?>">
+        <div class="proof-sector"><?php echo esc_html( $pc['pc_sector'] ?? '' ); ?></div>
+        <div class="proof-result"><em><?php echo esc_html( $pc['pc_result'] ?? '' ); ?></em></div>
+        <div class="proof-desc"><?php echo esc_html( $pc['pc_desc'] ?? '' ); ?></div>
+        <div class="proof-meta"><div class="proof-dot"></div><?php echo esc_html( $pc['pc_meta'] ?? '' ); ?></div>
       </div>
       <?php endforeach; ?>
     </div>
@@ -298,7 +346,7 @@ $seo_cta_title      = sh_field( 'seo_cta_title',       null, 'ابدأ بكسب 
 <!-- Industries -->
 <section class="sec sec-surface">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag">القطاعات التي نخدمها</span><h2 class="h2">السيو يختلف من قطاع إلى آخر — ونحن نفهم ذلك</h2><p class="bod">لكل قطاع جمهوره، كلماته، وقواعد ترتيبه. نُخصّص الاستراتيجية حسب طبيعة عملك.</p></div>
+    <div class="sh c sr"><span class="tag">القطاعات التي نخدمها</span><h2 class="h2"><?php echo esc_html( $seo_ind_title ); ?></h2><p class="bod"><?php echo esc_html( $seo_ind_desc ); ?></p></div>
     <div class="ind-grid sr d1">
       <?php
       foreach ( [
@@ -327,7 +375,7 @@ $seo_cta_title      = sh_field( 'seo_cta_title',       null, 'ابدأ بكسب 
   <div class="wrap">
     <div class="faq-cta-layout">
       <div>
-        <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2">أسئلة يسألها كل صاحب عمل</h2></div>
+        <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2"><?php echo esc_html( $seo_faq_title ); ?></h2></div>
         <div class="faq-list sr d1">
           <?php
           $faq_data = ! empty( $faqs ) ? $faqs : [

@@ -58,6 +58,13 @@ add_action( 'acf/init', function () {
             'parent_slug' => 'seohouse-options',
         ] );
 
+        acf_add_options_sub_page( [
+            'page_title'  => 'إعدادات صفحة التواصل',
+            'menu_title'  => 'صفحة التواصل',
+            'menu_slug'   => 'seohouse-contact',
+            'parent_slug' => 'seohouse-options',
+        ] );
+
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -247,6 +254,7 @@ add_action( 'acf/init', function () {
         'location' => [ [ [ 'param' => 'post_type', 'operator' => '==', 'value' => 'sector' ] ] ],
         'fields'   => [
             [ 'key' => 'field_sec_hero_desc',  'label' => 'وصف الهيرو',   'name' => 'hero_description', 'type' => 'textarea', 'rows' => 2 ],
+            [ 'key' => 'field_sec_card_desc',  'label' => 'وصف البطاقة في أرشيف القطاعات', 'name' => 'sector_card_desc', 'type' => 'text' ],
             [ 'key' => 'field_sec_icon_svg',   'label' => 'SVG أيقونة القطاع (كود كامل)', 'name' => 'sector_icon_svg', 'type' => 'textarea', 'rows' => 5 ],
             [
                 'key'          => 'field_sec_challenges',
@@ -490,6 +498,72 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_web_hero_pre',  'label' => 'السطر الأول في العنوان',  'name' => 'web_hero_pre',  'type' => 'text',     'default_value' => 'تصميم مواقع' ],
             [ 'key' => 'field_web_hero_em',   'label' => 'الكلمة المُبرَزة (السطر الثاني)', 'name' => 'web_hero_em', 'type' => 'text', 'default_value' => 'تبني الثقة وتجلب العملاء' ],
             [ 'key' => 'field_web_hero_desc', 'label' => 'وصف الهيرو',              'name' => 'web_hero_desc', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'الموقع الإلكتروني هو مقرّك الرقمي — نُصمّمه ليُمثّلك باحترافية، يُحمّل بسرعة، يُقنع زوّارك، ويُحوّلهم إلى عملاء فعليين.' ],
+            [ 'key' => 'field_web_why_title', 'label' => 'عنوان قسم "لماذا يهم الموقع"', 'name' => 'web_why_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "قبل أن يتّصل بك العميل،\nهو يبحث عنك" ],
+            [ 'key' => 'field_web_why_desc',  'label' => 'وصف قسم "لماذا يهم الموقع"',  'name' => 'web_why_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'في أول 3 ثوانٍ من زيارة موقعك، يُقرّر زائرك إن كان سيتعامل معك أم لا. الموقع الضعيف يُضيع كل ميزانيتك التسويقية لأنه يفقد الزوار قبل أن يقرأوا عرضك أصلاً.' ],
+            [
+                'key'          => 'field_web_why_items',
+                'label'        => 'نقاط "لماذا يهم الموقع" (4)',
+                'name'         => 'web_why_items',
+                'type'         => 'repeater',
+                'min'          => 4,
+                'max'          => 4,
+                'button_label' => 'إضافة نقطة',
+                'sub_fields'   => [
+                    [ 'key' => 'field_wwi_label', 'label' => 'العنوان المميز', 'name' => 'wwi_label', 'type' => 'text' ],
+                    [ 'key' => 'field_wwi_desc',  'label' => 'الشرح',         'name' => 'wwi_desc',  'type' => 'text' ],
+                ],
+            ],
+            [ 'key' => 'field_web_types_title', 'label' => 'عنوان قسم أنواع المواقع',  'name' => 'web_types_title', 'type' => 'text',     'default_value' => 'نُصمّم 6 أنواع من المواقع' ],
+            [ 'key' => 'field_web_types_desc',  'label' => 'وصف قسم أنواع المواقع',   'name' => 'web_types_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'لكل نشاط نوع موقع يخدم أهدافه بأفضل شكل ممكن — اختيار النوع الصحيح هو نصف الطريق للنجاح.' ],
+            [
+                'key'          => 'field_web_types_cards',
+                'label'        => 'بطاقات أنواع المواقع (6)',
+                'name'         => 'web_types_cards',
+                'type'         => 'repeater',
+                'min'          => 6,
+                'max'          => 6,
+                'button_label' => 'إضافة نوع',
+                'sub_fields'   => [
+                    [ 'key' => 'field_tc_tag',   'label' => 'التصنيف (تاج)',        'name' => 'tc_tag',   'type' => 'text' ],
+                    [ 'key' => 'field_tc_title', 'label' => 'العنوان',              'name' => 'tc_title', 'type' => 'text' ],
+                    [ 'key' => 'field_tc_desc',  'label' => 'الوصف',               'name' => 'tc_desc',  'type' => 'textarea', 'rows' => 2 ],
+                    [ 'key' => 'field_tc_feats', 'label' => 'المميزات (سطر لكل ميزة)', 'name' => 'tc_feats', 'type' => 'textarea', 'rows' => 3 ],
+                ],
+            ],
+            [ 'key' => 'field_web_tech_title', 'label' => 'عنوان قسم التقنيات',       'name' => 'web_tech_title', 'type' => 'text',     'default_value' => 'التقنيات التي نعمل بها' ],
+            [ 'key' => 'field_web_tech_desc',  'label' => 'وصف قسم التقنيات',        'name' => 'web_tech_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'نختار التقنية الأنسب لكل مشروع — لا نُجبر العميل على تقنية واحدة.' ],
+            [ 'key' => 'field_web_eff_title',  'label' => 'عنوان قسم "ما يُحدث الفرق"', 'name' => 'web_eff_title', 'type' => 'text', 'default_value' => 'ما الذي يجعل الموقع ينجح تجارياً؟' ],
+            [ 'key' => 'field_web_eff_desc',   'label' => 'وصف قسم "ما يُحدث الفرق"',  'name' => 'web_eff_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'الموقع الجميل ليس بالضرورة موقعاً ناجحاً — هذه هي العناصر التي تُفرّق بين الاثنين.' ],
+            [ 'key' => 'field_web_proc_title', 'label' => 'عنوان قسم المراحل',        'name' => 'web_proc_title', 'type' => 'text',     'default_value' => '5 مراحل لإطلاق موقعك' ],
+            [ 'key' => 'field_web_proc_desc',  'label' => 'وصف قسم المراحل',         'name' => 'web_proc_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'كل مرحلة لها مخرج محدّد توافق عليه قبل الانتقال للمرحلة التالية.' ],
+            [
+                'key'          => 'field_web_proc_steps',
+                'label'        => 'مراحل تصميم الموقع (5)',
+                'name'         => 'web_proc_steps',
+                'type'         => 'repeater',
+                'min'          => 5,
+                'max'          => 5,
+                'button_label' => 'إضافة مرحلة',
+                'sub_fields'   => [
+                    [ 'key' => 'field_wps_num',   'label' => 'رقم المرحلة', 'name' => 'wps_num',   'type' => 'text' ],
+                    [ 'key' => 'field_wps_title', 'label' => 'عنوان المرحلة', 'name' => 'wps_title', 'type' => 'text' ],
+                    [ 'key' => 'field_wps_desc',  'label' => 'وصف المرحلة',  'name' => 'wps_desc',  'type' => 'textarea', 'rows' => 2 ],
+                ],
+            ],
+            [ 'key' => 'field_web_faq_title', 'label' => 'عنوان قسم الأسئلة الشائعة', 'name' => 'web_faq_title', 'type' => 'text',     'default_value' => 'أسئلة عن تصميم المواقع' ],
+            [
+                'key'          => 'field_web_faqs',
+                'label'        => 'الأسئلة الشائعة',
+                'name'         => 'web_faqs',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة سؤال',
+                'sub_fields'   => [
+                    [ 'key' => 'field_wfaq_q', 'label' => 'السؤال', 'name' => 'wfaq_q', 'type' => 'text' ],
+                    [ 'key' => 'field_wfaq_a', 'label' => 'الجواب', 'name' => 'wfaq_a', 'type' => 'textarea', 'rows' => 3 ],
+                ],
+            ],
+            [ 'key' => 'field_web_cta_title', 'label' => 'عنوان CTA النهائي',  'name' => 'web_cta_title', 'type' => 'text',     'default_value' => 'ابنِ موقعاً يستحق علامتك التجارية' ],
+            [ 'key' => 'field_web_cta_desc',  'label' => 'وصف CTA النهائي',   'name' => 'web_cta_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'احجز استشارة مجانية ولنبدأ معاً في تصميم موقعك الجديد.' ],
         ],
     ] );
 
@@ -554,6 +628,22 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_sectors_why_body1',   'label' => 'الفقرة الأولى — لماذا التخصص', 'name' => 'sectors_why_body1',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'كل قطاع يملك كلماته المفتاحية الخاصة، نية بحث مختلفة، ومنافسين محددين. الاستراتيجية الناجحة للعيادة تختلف عن استراتيجية المتجر الإلكتروني تماماً.' ],
             [ 'key' => 'field_sectors_why_body2',   'label' => 'الفقرة الثانية — لماذا التخصص', 'name' => 'sectors_why_body2', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'نبني استراتيجية السيو لكل عميل بناءً على فهم عميق لقطاعه — وليس نسخاً من قالب جاهز.' ],
             [ 'key' => 'field_sectors_cta_title',   'label' => 'عنوان CTA',                     'name' => 'sectors_cta_title',   'type' => 'text',     'default_value' => 'احجز استشارة مجانية ولنبدأ معاً' ],
+            [ 'key' => 'field_sectors_hero_tag',    'label' => 'تصنيف الهيرو',                  'name' => 'sectors_hero_tag',    'type' => 'text',     'default_value' => 'تخصص قطاعي' ],
+            [ 'key' => 'field_sectors_why_tag',     'label' => 'تصنيف قسم "لماذا التخصص مهم"', 'name' => 'sectors_why_tag',     'type' => 'text',     'default_value' => 'لماذا التخصص مهم' ],
+            [ 'key' => 'field_sectors_intent_title','label' => 'عنوان بطاقة نية البحث',         'name' => 'sectors_intent_title','type' => 'text',     'default_value' => 'مثال: نية البحث تختلف حسب القطاع' ],
+            [
+                'key'          => 'field_sectors_intent_items',
+                'label'        => 'عناصر مقارنة نية البحث (4)',
+                'name'         => 'sectors_intent_items',
+                'type'         => 'repeater',
+                'min'          => 4,
+                'max'          => 4,
+                'button_label' => 'إضافة عنصر',
+                'sub_fields'   => [
+                    [ 'key' => 'field_si_color', 'label' => 'لون النقطة (CSS)', 'name' => 'si_color', 'type' => 'text' ],
+                    [ 'key' => 'field_si_text',  'label' => 'النص',             'name' => 'si_text',  'type' => 'text' ],
+                ],
+            ],
         ],
     ] );
 
@@ -591,6 +681,118 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_seo_reporting_desc',   'label' => 'وصف قسم التقارير',             'name' => 'seo_reporting_desc',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'في معظم الوكالات تأتيك تقارير ممتلئة بمصطلحات جوجل لا تفهم منها شيئاً. عندنا التقرير يُظهر لك بوضوح: كم ليد جاء من البحث، كم بيع، وأين تذهب ميزانيتك.' ],
             [ 'key' => 'field_seo_proof_title',      'label' => 'عنوان قسم النتائج',            'name' => 'seo_proof_title',      'type' => 'text',     'default_value' => 'نتائج حقيقية لعملاء حقيقيين' ],
             [ 'key' => 'field_seo_cta_title',        'label' => 'عنوان CTA',                     'name' => 'seo_cta_title',        'type' => 'text',     'default_value' => 'ابدأ بكسب عملاء يبحثون عنك فعلاً' ],
+            [ 'key' => 'field_seo_hero_cta1',        'label' => 'نص زر الهيرو الأول',            'name' => 'seo_hero_cta1',        'type' => 'text',     'default_value' => 'احجز استشارة مجانية — 30 دقيقة' ],
+            [ 'key' => 'field_seo_hero_cta2',        'label' => 'نص زر الهيرو الثاني',           'name' => 'seo_hero_cta2',        'type' => 'text',     'default_value' => 'خدماتنا' ],
+            [
+                'key'          => 'field_seo_hero_stats',
+                'label'        => 'إحصائيات الهيرو (4 عناصر)',
+                'name'         => 'seo_hero_stats',
+                'type'         => 'repeater',
+                'min'          => 4,
+                'max'          => 4,
+                'button_label' => 'إضافة إحصائية',
+                'sub_fields'   => [
+                    [ 'key' => 'field_seo_stat_n',     'label' => 'الجزء قبل em (أو كل الرقم إن لا em)',  'name' => 'stat_n',     'type' => 'text' ],
+                    [ 'key' => 'field_seo_stat_em',    'label' => 'الجزء داخل em (اتركه فارغاً لعدم التمييز)', 'name' => 'stat_em', 'type' => 'text' ],
+                    [ 'key' => 'field_seo_stat_label', 'label' => 'التسمية تحت الرقم',             'name' => 'stat_label', 'type' => 'text' ],
+                ],
+            ],
+            [
+                'key'          => 'field_seo_lost_cards',
+                'label'        => 'بطاقات الفرص الضائعة (4)',
+                'name'         => 'seo_lost_cards',
+                'type'         => 'repeater',
+                'min'          => 4,
+                'max'          => 4,
+                'button_label' => 'إضافة بطاقة',
+                'sub_fields'   => [
+                    [ 'key' => 'field_lc_title', 'label' => 'العنوان', 'name' => 'lc_title', 'type' => 'text' ],
+                    [ 'key' => 'field_lc_body',  'label' => 'النص',   'name' => 'lc_body',  'type' => 'textarea', 'rows' => 2 ],
+                ],
+            ],
+            [
+                'key'          => 'field_seo_why_items',
+                'label'        => 'نقاط "لماذا السيو تجارياً" (4)',
+                'name'         => 'seo_why_items',
+                'type'         => 'repeater',
+                'min'          => 4,
+                'max'          => 4,
+                'button_label' => 'إضافة نقطة',
+                'sub_fields'   => [
+                    [ 'key' => 'field_wi_label', 'label' => 'العنوان المميز', 'name' => 'wi_label', 'type' => 'text' ],
+                    [ 'key' => 'field_wi_desc',  'label' => 'الشرح',         'name' => 'wi_desc',  'type' => 'text' ],
+                ],
+            ],
+            [
+                'key'          => 'field_seo_impact_rows',
+                'label'        => 'صفوف مقارنة التأثير (4)',
+                'name'         => 'seo_impact_rows',
+                'type'         => 'repeater',
+                'min'          => 4,
+                'max'          => 4,
+                'button_label' => 'إضافة صف',
+                'sub_fields'   => [
+                    [ 'key' => 'field_ir_label', 'label' => 'التسمية', 'name' => 'ir_label', 'type' => 'text' ],
+                    [ 'key' => 'field_ir_from',  'label' => 'القيمة السابقة', 'name' => 'ir_from', 'type' => 'text' ],
+                    [ 'key' => 'field_ir_to',    'label' => 'القيمة الجديدة', 'name' => 'ir_to',   'type' => 'text' ],
+                ],
+            ],
+            [ 'key' => 'field_seo_sub_desc',     'label' => 'وصف قسم الخدمات الفرعية',    'name' => 'seo_sub_desc',     'type' => 'textarea', 'rows' => 2, 'default_value' => 'كل خدمة يمكن تنفيذها مستقلة أو ضمن باقة سيو متكاملة — حسب وضع موقعك ومرحلتك.' ],
+            [ 'key' => 'field_seo_method_title', 'label' => 'عنوان قسم المنهجية',          'name' => 'seo_method_title', 'type' => 'text',     'default_value' => 'منهجية شفافة من اليوم الأول' ],
+            [ 'key' => 'field_seo_method_desc',  'label' => 'وصف قسم المنهجية',           'name' => 'seo_method_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'كل مرحلة لها هدف واضح ومؤشر قياس — لا خطوات غامضة، لا وعود بدون تنفيذ.' ],
+            [ 'key' => 'field_seo_proof_desc',   'label' => 'وصف قسم نتائج العملاء',      'name' => 'seo_proof_desc',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'نماذج من نتائج عملاء سابقين — أرقام موثّقة من Search Console وAnalytics، لا ادعاءات.' ],
+            [
+                'key'          => 'field_seo_proof_cards',
+                'label'        => 'بطاقات نتائج العملاء (3)',
+                'name'         => 'seo_proof_cards',
+                'type'         => 'repeater',
+                'min'          => 3,
+                'max'          => 3,
+                'button_label' => 'إضافة بطاقة',
+                'sub_fields'   => [
+                    [ 'key' => 'field_pc_sector', 'label' => 'القطاع',            'name' => 'pc_sector', 'type' => 'text' ],
+                    [ 'key' => 'field_pc_result', 'label' => 'النتيجة (مثال: +312%)', 'name' => 'pc_result', 'type' => 'text' ],
+                    [ 'key' => 'field_pc_desc',   'label' => 'الوصف',             'name' => 'pc_desc',   'type' => 'textarea', 'rows' => 2 ],
+                    [ 'key' => 'field_pc_meta',   'label' => 'مدة التعاون',       'name' => 'pc_meta',   'type' => 'text' ],
+                ],
+            ],
+            [ 'key' => 'field_seo_ind_title',    'label' => 'عنوان قسم القطاعات',         'name' => 'seo_ind_title',    'type' => 'text',     'default_value' => 'السيو يختلف من قطاع إلى آخر — ونحن نفهم ذلك' ],
+            [ 'key' => 'field_seo_ind_desc',     'label' => 'وصف قسم القطاعات',          'name' => 'seo_ind_desc',     'type' => 'textarea', 'rows' => 2, 'default_value' => 'لكل قطاع جمهوره، كلماته، وقواعد ترتيبه. نُخصّص الاستراتيجية حسب طبيعة عملك.' ],
+            [ 'key' => 'field_seo_faq_title',    'label' => 'عنوان قسم الأسئلة الشائعة', 'name' => 'seo_faq_title',    'type' => 'text',     'default_value' => 'أسئلة يسألها كل صاحب عمل' ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // Contact Page Options Fields
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_contact_page',
+        'title'    => 'محتوى صفحة: التواصل',
+        'location' => [ [ [ 'param' => 'options_page', 'operator' => '==', 'value' => 'seohouse-contact' ] ] ],
+        'fields'   => [
+            [ 'key' => 'field_con_hero_tag',      'label' => 'تصنيف الهيرو',               'name' => 'contact_hero_tag',      'type' => 'text',     'default_value' => 'استشارة مجانية' ],
+            [ 'key' => 'field_con_hero_title',    'label' => 'عنوان الهيرو (سطر في كل سطر)', 'name' => 'contact_hero_title',  'type' => 'textarea', 'rows' => 2, 'default_value' => "30 دقيقة قد تغيّر\nمسار موقعك" ],
+            [ 'key' => 'field_con_hero_em',       'label' => 'الكلمة المُبرَزة',            'name' => 'contact_hero_em',       'type' => 'text',     'default_value' => 'موقعك' ],
+            [ 'key' => 'field_con_hero_desc',     'label' => 'وصف الهيرو',                  'name' => 'contact_hero_desc',     'type' => 'textarea', 'rows' => 2, 'default_value' => 'أخبرنا عن موقعك ونشاطك — وسنخبرك بصدق أين أنت وما الذي يمكن تحقيقه. مجاناً، وبدون التزام.' ],
+            [ 'key' => 'field_con_form_title',    'label' => 'عنوان النموذج',               'name' => 'contact_form_title',    'type' => 'text',     'default_value' => 'أرسل لنا طلبك' ],
+            [ 'key' => 'field_con_form_sub',      'label' => 'وصف تحت عنوان النموذج',       'name' => 'contact_form_sub',      'type' => 'textarea', 'rows' => 2, 'default_value' => 'سنتواصل معك خلال 24 ساعة لتأكيد موعد الاستشارة.' ],
+            [ 'key' => 'field_con_form_note',     'label' => 'الملاحظة تحت زر الإرسال',    'name' => 'contact_form_note',     'type' => 'text',     'default_value' => 'أو تواصل معنا على واتساب مباشرةً — سنردّ في أقرب وقت' ],
+            [ 'key' => 'field_con_success_title', 'label' => 'عنوان رسالة الإرسال الناجح', 'name' => 'contact_success_title', 'type' => 'text',     'default_value' => 'تم الإرسال بنجاح!' ],
+            [ 'key' => 'field_con_success_desc',  'label' => 'نص رسالة الإرسال الناجح',    'name' => 'contact_success_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'شكراً على تواصلك — سيتصل بك أحد متخصصينا خلال 24 ساعة لتحديد موعد الاستشارة.' ],
+            [ 'key' => 'field_con_cal_title',     'label' => 'عنوان بطاقة الحجز',          'name' => 'contact_cal_title',     'type' => 'text',     'default_value' => 'احجز وقتك مباشرةً' ],
+            [ 'key' => 'field_con_expect_title',  'label' => 'عنوان قسم "ماذا تتوقع"',     'name' => 'contact_expect_title',  'type' => 'text',     'default_value' => 'ماذا تتوقع بعد التواصل' ],
+            [
+                'key'          => 'field_con_expect_items',
+                'label'        => 'عناصر قسم "ماذا تتوقع" (4)',
+                'name'         => 'contact_expect_items',
+                'type'         => 'repeater',
+                'min'          => 4,
+                'max'          => 6,
+                'button_label' => 'إضافة عنصر',
+                'sub_fields'   => [
+                    [ 'key' => 'field_con_exp_text', 'label' => 'النص', 'name' => 'exp_text', 'type' => 'text' ],
+                ],
+            ],
         ],
     ] );
 
