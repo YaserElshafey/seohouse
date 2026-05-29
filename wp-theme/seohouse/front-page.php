@@ -209,6 +209,8 @@ if ( empty( $process_steps ) ) {
 .p-step:hover .p-num{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:var(--sh-b)}
 .p-step h3{font-size:14.5px;font-weight:800;color:rgba(255,255,255,.8);margin-bottom:7px}
 .p-step p{font-size:12.5px;color:rgba(255,255,255,.36);line-height:1.72;max-width:180px}
+/* Cases */
+#cases .sh{margin-bottom:28px}
 /* Reviews */
 .rev-hrow{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:40px;flex-wrap:wrap}
 .rev-agg{background:#fff;border:1px solid var(--line);border-radius:var(--r2);padding:13px 18px;display:flex;align-items:center;gap:12px}
@@ -514,7 +516,7 @@ if ( empty( $process_steps ) ) {
 <section id="cases" class="sec sec-surface">
   <div class="wrap">
     <div class="sh c sr"><span class="tag">نتائج فعلية</span><h2 class="h2"><?php echo esc_html( $hp_cases_title ); ?></h2><p class="bod"><?php echo esc_html( $hp_cases_desc ); ?></p></div>
-    <div class="proof-grid" style="margin-top:40px">
+    <div class="proof-grid">
       <?php
       $cases_query = new WP_Query( [
           'post_type'      => 'case_study',
@@ -568,8 +570,8 @@ if ( empty( $process_steps ) ) {
           <?php endforeach;
       endif; ?>
     </div>
-    <div style="text-align:center;margin-top:28px">
-      <a href="<?php echo esc_url( $results_url ); ?>" class="btn btn-g">جميع النتائج <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <div style="text-align:center;margin-top:36px">
+      <a href="<?php echo esc_url( $results_url ); ?>" class="btn btn-p lg">جميع النتائج <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
