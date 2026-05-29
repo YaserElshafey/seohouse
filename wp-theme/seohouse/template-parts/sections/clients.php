@@ -27,8 +27,8 @@ if ( empty( $cl_items ) ) {
     }
 }
 
-// Duplicate for seamless loop
-$display_items = array_merge( $cl_items, $cl_items );
+// 4 copies: ensures one copy's width (≤960px) always fills the viewport at any animation point
+$display_items = array_merge( $cl_items, $cl_items, $cl_items, $cl_items );
 ?>
 <section id="clients">
   <div class="wrap">
