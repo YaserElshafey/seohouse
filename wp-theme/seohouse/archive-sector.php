@@ -10,9 +10,8 @@ $contact_url = sh_page_url( 'contact' );
 $sec_em    = sh_option( 'sectors_hero_em',    'لقطاعك' );
 $sec_raw   = sh_option( 'sectors_hero_title', "سيو مخصص\nلقطاعك" );
 $sec_desc  = sh_option( 'sectors_hero_desc',  'لكل قطاع كلماته المفتاحية، جمهوره، ومنافسوه — استراتيجيتنا مبنية على هذا الفهم، لا على قوالب جاهزة.' );
-$sec_em_style = 'font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite';
 $sec_title = $sec_em
-    ? str_replace( $sec_em, '<em style="' . $sec_em_style . '">' . esc_html( $sec_em ) . '</em>', esc_html( $sec_raw ) )
+    ? str_replace( $sec_em, '<em class="grad-em">' . esc_html( $sec_em ) . '</em>', esc_html( $sec_raw ) )
     : esc_html( $sec_raw );
 $sec_title = nl2br( $sec_title );
 

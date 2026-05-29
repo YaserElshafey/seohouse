@@ -14,9 +14,8 @@ $contact_hero_raw  = sh_option( 'contact_hero_title', "30 دقيقة قد تغي
 $contact_hero_em   = sh_option( 'contact_hero_em',   'موقعك' );
 $contact_hero_desc = sh_option( 'contact_hero_desc', 'أخبرنا عن موقعك ونشاطك — وسنخبرك بصدق أين أنت وما الذي يمكن تحقيقه. مجاناً، وبدون التزام.' );
 
-$em_style = 'font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite';
 $contact_hero_display = $contact_hero_em
-    ? str_replace( $contact_hero_em, '<em style="' . $em_style . '">' . esc_html( $contact_hero_em ) . '</em>', esc_html( $contact_hero_raw ) )
+    ? str_replace( $contact_hero_em, '<em>' . esc_html( $contact_hero_em ) . '</em>', esc_html( $contact_hero_raw ) )
     : esc_html( $contact_hero_raw );
 $contact_hero_display = nl2br( $contact_hero_display );
 
