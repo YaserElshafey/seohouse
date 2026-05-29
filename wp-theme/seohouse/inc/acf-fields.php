@@ -653,6 +653,46 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_stores_hero_pre',  'label' => 'السطر الأول في العنوان',  'name' => 'stores_hero_pre',  'type' => 'text',     'default_value' => 'إنشاء وتصميم' ],
             [ 'key' => 'field_stores_hero_em',   'label' => 'الكلمة المُبرَزة (السطر الثاني)', 'name' => 'stores_hero_em', 'type' => 'text', 'default_value' => 'متجرك الإلكتروني' ],
             [ 'key' => 'field_stores_hero_desc', 'label' => 'وصف الهيرو',              'name' => 'stores_hero_desc', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'من فكرة إلى متجر جاهز للبيع — هيكل تجاري ذكي، تجربة شراء سلسة، وقابلية للنمو على أي منصة (سلة، زد، شوبيفاي، أو ووكومرس).' ],
+            [ 'key' => 'field_stores_why_tag',  'label' => 'تصنيف قسم "لماذا يهم"',        'name' => 'stores_why_tag',  'type' => 'text',     'default_value' => 'لماذا يهم إعداد المتجر' ],
+            [ 'key' => 'field_stores_why_h2',   'label' => 'عنوان قسم "لماذا يهم"',         'name' => 'stores_why_h2',   'type' => 'text',     'default_value' => 'المتجر الإلكتروني ليس مجرد منتجات على صفحة' ],
+            [ 'key' => 'field_stores_why_body',  'label' => 'فقرة قسم "لماذا يهم"',         'name' => 'stores_why_body', 'type' => 'textarea', 'rows' => 3, 'default_value' => 'الفرق بين متجر يبيع ومتجر يستهلك ميزانية إعلانك يبدأ من اللحظة الأولى — هيكل الفئات، خطوات الشراء، الثقة، وسرعة التحميل. كلها قرارات تُتّخذ في مرحلة الإعداد لا بعدها.' ],
+            [
+                'key'          => 'field_stores_why_items',
+                'label'        => 'قائمة مزايا "لماذا يهم"',
+                'name'         => 'stores_why_items',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة عنصر',
+                'sub_fields'   => [
+                    [ 'key' => 'field_stw_bold', 'label' => 'النص الغامق', 'name' => 'wi_bold', 'type' => 'text' ],
+                    [ 'key' => 'field_stw_tail', 'label' => 'النص الإضافي', 'name' => 'wi_tail', 'type' => 'text' ],
+                ],
+            ],
+            [
+                'key'          => 'field_stores_faqs',
+                'label'        => 'الأسئلة الشائعة',
+                'name'         => 'stores_faqs',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة سؤال',
+                'sub_fields'   => [
+                    [ 'key' => 'field_stfaq_q', 'label' => 'السؤال', 'name' => 'question', 'type' => 'text' ],
+                    [ 'key' => 'field_stfaq_a', 'label' => 'الجواب', 'name' => 'answer',   'type' => 'textarea', 'rows' => 3 ],
+                ],
+            ],
+            [ 'key' => 'field_stores_scta_h3',   'label' => 'عنوان بطاقة CTA الجانبية',    'name' => 'stores_side_cta_h3',     'type' => 'textarea', 'rows' => 2, 'default_value' => "جاهز لتجهيز\nمتجرك للبيع؟" ],
+            [ 'key' => 'field_stores_scta_desc',  'label' => 'وصف بطاقة CTA الجانبية',     'name' => 'stores_side_cta_desc',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'احجز استشارة مجانية، وسنناقش معاً المنصة الأنسب وخطة الإطلاق.' ],
+            [ 'key' => 'field_stores_scta_btn',   'label' => 'نص زر CTA الجانبي',           'name' => 'stores_side_cta_btn',    'type' => 'text',     'default_value' => 'احجز استشارة مجانية' ],
+            [
+                'key'          => 'field_stores_scta_checks',
+                'label'        => 'قائمة مزايا CTA الجانبي',
+                'name'         => 'stores_side_cta_checks',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة عنصر',
+                'sub_fields'   => [
+                    [ 'key' => 'field_stck_text', 'label' => 'النص', 'name' => 'sc_text', 'type' => 'text' ],
+                ],
+            ],
+            [ 'key' => 'field_stores_cta_title', 'label' => 'عنوان CTA أسفل الصفحة',       'name' => 'stores_cta_title', 'type' => 'text',     'default_value' => 'ابدأ متجرك الإلكتروني اليوم' ],
+            [ 'key' => 'field_stores_cta_desc',  'label' => 'وصف CTA أسفل الصفحة',         'name' => 'stores_cta_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'من الفكرة إلى أول طلب — نُرافقك في كل خطوة.' ],
         ],
     ] );
 
@@ -668,6 +708,7 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_prod_hero_title', 'label' => 'عنوان الهيرو (سطر في كل سطر)',    'name' => 'prod_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "رفع المنتجات للمتاجر\nباحترافية" ],
             [ 'key' => 'field_prod_hero_em',    'label' => 'الكلمة المُبرَزة',                'name' => 'prod_hero_em',    'type' => 'text',     'default_value' => 'باحترافية' ],
             [ 'key' => 'field_prod_hero_desc',  'label' => 'وصف الهيرو',                      'name' => 'prod_hero_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'ليس مجرّد إدخال بيانات — رفع منظّم واحترافي عبر جميع المنصات مع تحسين لكل منتج يرفع فرصته في الظهور.' ],
+            [ 'key' => 'field_prod_cta_title', 'label' => 'عنوان CTA أسفل الصفحة', 'name' => 'prod_cta_title', 'type' => 'text', 'default_value' => 'جاهز لرفع منتجاتك؟' ],
         ],
     ] );
 

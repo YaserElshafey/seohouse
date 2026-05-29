@@ -7,6 +7,40 @@ get_header();
 $stores_hero_pre  = sh_field( 'stores_hero_pre',  null, 'إنشاء وتصميم' );
 $stores_hero_em   = sh_field( 'stores_hero_em',   null, 'متجرك الإلكتروني' );
 $stores_hero_desc = sh_field( 'stores_hero_desc', null, 'من فكرة إلى متجر جاهز للبيع — هيكل تجاري ذكي، تجربة شراء سلسة، وقابلية للنمو على أي منصة (سلة، زد، شوبيفاي، أو ووكومرس).' );
+
+$stores_why_tag  = sh_field( 'stores_why_tag',  null, 'لماذا يهم إعداد المتجر' );
+$stores_why_h2   = sh_field( 'stores_why_h2',   null, 'المتجر الإلكتروني<br>ليس مجرد منتجات على صفحة' );
+$stores_why_body = sh_field( 'stores_why_body', null, 'الفرق بين متجر يبيع ومتجر يستهلك ميزانية إعلانك يبدأ من اللحظة الأولى — هيكل الفئات، خطوات الشراء، الثقة، وسرعة التحميل. كلها قرارات تُتّخذ في مرحلة الإعداد لا بعدها.' );
+
+$_why_items_acf   = sh_field( 'stores_why_items' );
+$stores_why_items = ! empty( $_why_items_acf )
+	? array_map( static fn( $i ) => [ 'b' => $i['wi_bold'] ?? '', 't' => $i['wi_tail'] ?? '' ], $_why_items_acf )
+	: [
+		[ 'b' => 'هيكل ذكي',              't' => '— فئات منظّمة تُسهّل الوصول للمنتج المناسب' ],
+		[ 'b' => 'تجربة شراء سلسة',       't' => '— أقل خطوات، أقل تخلٍّ عن السلة' ],
+		[ 'b' => 'عناصر ثقة واضحة',       't' => '— تقييمات، ضمان، أمان الدفع، توصيل' ],
+		[ 'b' => 'أساس تقني سليم',        't' => '— استعداد للسيو والتسويق منذ اليوم الأول' ],
+	];
+
+$_faqs_acf    = sh_field( 'stores_faqs' );
+$stores_faqs  = ! empty( $_faqs_acf ) ? $_faqs_acf : [
+	[ 'question' => 'ما المنصة الأنسب لمتجري؟',           'answer' => 'يعتمد على نوع منتجاتك، حجم عملك، خطط التوسع، والميزانية. في الاستشارة الأولى نناقش هذا معك بصراحة — أحياناً سلة أنسب، وأحياناً Shopify، حسب وضعك.' ],
+	[ 'question' => 'كم يستغرق إطلاق المتجر؟',           'answer' => 'بين أسبوعين و6 أسابيع — يعتمد على حجم المتجر، عدد المنتجات، التخصيصات المطلوبة، والمنصة المختارة.' ],
+	[ 'question' => 'هل يشمل المشروع رفع المنتجات؟',     'answer' => 'إعداد المتجر يشمل هيكل المتجر وعدد محدود من المنتجات النموذجية. رفع المنتجات خدمة منفصلة يمكن إضافتها للمشروع.' ],
+	[ 'question' => 'هل تنقلون متجري من منصة لأخرى؟',   'answer' => 'نعم. ننقل المنتجات، الطلبات، العملاء، وأهم الروابط (مع الحفاظ على السيو) من منصة إلى أخرى — بدون فقدان بياناتك أو ترتيبك.' ],
+	[ 'question' => 'هل يمكن البدء بالسيو من اليوم الأول؟', 'answer' => 'نعم — وننصح بذلك. نبني المتجر بأساس سيو سليم منذ البداية، ثم تنطلق خدمة السيو للمتاجر لاستثمار الفترة قبل الإطلاق وبعده.' ],
+];
+
+$stores_side_cta_h3   = sh_field( 'stores_side_cta_h3',   null, "جاهز لتجهيز\nمتجرك للبيع؟" );
+$stores_side_cta_desc = sh_field( 'stores_side_cta_desc', null, 'احجز استشارة مجانية، وسنناقش معاً المنصة الأنسب وخطة الإطلاق.' );
+$stores_side_cta_btn  = sh_field( 'stores_side_cta_btn',  null, 'احجز استشارة مجانية' );
+$_scta_checks_acf     = sh_field( 'stores_side_cta_checks' );
+$stores_side_checks   = ! empty( $_scta_checks_acf )
+	? array_map( static fn( $i ) => $i['sc_text'] ?? '', $_scta_checks_acf )
+	: [ 'توصية بالمنصة الأنسب', 'عرض سعر شفاف', 'بدون أي التزام' ];
+
+$stores_cta_title = sh_field( 'stores_cta_title', null, 'ابدأ متجرك الإلكتروني اليوم' );
+$stores_cta_desc  = sh_field( 'stores_cta_desc',  null, 'من الفكرة إلى أول طلب — نُرافقك في كل خطوة.' );
 ?>
 
 <!-- Hero -->
@@ -40,14 +74,13 @@ $stores_hero_desc = sh_field( 'stores_hero_desc', null, 'من فكرة إلى م
   <div class="wrap">
     <div class="why-grid">
       <div class="sr">
-        <span class="tag" style="margin-bottom:12px">لماذا يهم إعداد المتجر</span>
-        <h2 class="h2" style="margin-bottom:16px">المتجر الإلكتروني<br>ليس مجرد منتجات على صفحة</h2>
-        <p class="bod" style="margin-bottom:18px">الفرق بين متجر يبيع ومتجر يستهلك ميزانية إعلانك يبدأ من اللحظة الأولى — هيكل الفئات، خطوات الشراء، الثقة، وسرعة التحميل. كلها قرارات تُتّخذ في مرحلة الإعداد لا بعدها.</p>
+        <span class="tag" style="margin-bottom:12px"><?php echo esc_html( $stores_why_tag ); ?></span>
+        <h2 class="h2" style="margin-bottom:16px"><?php echo wp_kses_post( nl2br( esc_html( $stores_why_h2 ) ) ); ?></h2>
+        <p class="bod" style="margin-bottom:18px"><?php echo esc_html( $stores_why_body ); ?></p>
         <div class="chklist sr d1" style="margin-bottom:24px">
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>هيكل ذكي</strong> — فئات منظّمة تُسهّل الوصول للمنتج المناسب</div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>تجربة شراء سلسة</strong> — أقل خطوات، أقل تخلٍّ عن السلة</div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>عناصر ثقة واضحة</strong> — تقييمات، ضمان، أمان الدفع، توصيل</div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>أساس تقني سليم</strong> — استعداد للسيو والتسويق منذ اليوم الأول</div>
+          <?php foreach ( $stores_why_items as $ck ) : ?>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong><?php echo esc_html( $ck['b'] ); ?></strong><?php echo $ck['t'] ? ' ' . esc_html( $ck['t'] ) : ''; ?></div>
+          <?php endforeach; ?>
         </div>
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p sr d2">احجز استشارة مجانية</a>
       </div>
@@ -206,18 +239,13 @@ $stores_hero_desc = sh_field( 'stores_hero_desc', null, 'من فكرة إلى م
       <div>
         <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2">أسئلة عن إعداد المتاجر</h2></div>
         <div class="faq-list sr d1">
-          <?php
-          foreach ( [
-              [ 'q' => 'ما المنصة الأنسب لمتجري؟', 'a' => 'يعتمد على نوع منتجاتك، حجم عملك، خطط التوسع، والميزانية. في الاستشارة الأولى نناقش هذا معك بصراحة — أحياناً سلة أنسب، وأحياناً Shopify، حسب وضعك.' ],
-              [ 'q' => 'كم يستغرق إطلاق المتجر؟', 'a' => 'بين أسبوعين و6 أسابيع — يعتمد على حجم المتجر، عدد المنتجات، التخصيصات المطلوبة، والمنصة المختارة.' ],
-              [ 'q' => 'هل يشمل المشروع رفع المنتجات؟', 'a' => 'إعداد المتجر يشمل هيكل المتجر وعدد محدود من المنتجات النموذجية. رفع المنتجات خدمة منفصلة يمكن إضافتها للمشروع.' ],
-              [ 'q' => 'هل تنقلون متجري من منصة لأخرى؟', 'a' => 'نعم. ننقل المنتجات، الطلبات، العملاء، وأهم الروابط (مع الحفاظ على السيو) من منصة إلى أخرى — بدون فقدان بياناتك أو ترتيبك.' ],
-              [ 'q' => 'هل يمكن البدء بالسيو من اليوم الأول؟', 'a' => 'نعم — وننصح بذلك. نبني المتجر بأساس سيو سليم منذ البداية، ثم تنطلق خدمة السيو للمتاجر لاستثمار الفترة قبل الإطلاق وبعده.' ],
-          ] as $faq ) :
+          <?php foreach ( $stores_faqs as $faq ) :
+              $q = $faq['question'] ?? ( $faq['q'] ?? '' );
+              $a = $faq['answer']   ?? ( $faq['a'] ?? '' );
           ?>
           <div class="faq-item">
-            <div class="faq-q"><span><?php echo esc_html( $faq['q'] ); ?></span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-            <div class="faq-a"><div class="faq-a-inner"><?php echo esc_html( $faq['a'] ); ?></div></div>
+            <div class="faq-q"><span><?php echo esc_html( $q ); ?></span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+            <div class="faq-a"><div class="faq-a-inner"><?php echo esc_html( $a ); ?></div></div>
           </div>
           <?php endforeach; ?>
         </div>
@@ -225,14 +253,14 @@ $stores_hero_desc = sh_field( 'stores_hero_desc', null, 'من فكرة إلى م
       <div class="cta-sticky">
         <div class="cta-side-card sr d1">
           <span class="tag d" style="position:relative;z-index:1;margin-bottom:10px">ابدأ الآن</span>
-          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1">جاهز لتجهيز<br>متجرك للبيع؟</h3>
-          <p style="font-size:13.5px;color:rgba(255,255,255,.44);line-height:1.8;margin-bottom:22px;position:relative;z-index:1">احجز استشارة مجانية، وسنناقش معاً المنصة الأنسب وخطة الإطلاق.</p>
+          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1"><?php echo nl2br( esc_html( $stores_side_cta_h3 ) ); ?></h3>
+          <p style="font-size:13.5px;color:rgba(255,255,255,.44);line-height:1.8;margin-bottom:22px;position:relative;z-index:1"><?php echo esc_html( $stores_side_cta_desc ); ?></p>
           <div class="chklist" style="margin-bottom:22px">
-            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>توصية بالمنصة الأنسب</div>
-            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>عرض سعر شفاف</div>
-            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>بدون أي التزام</div>
+            <?php foreach ( $stores_side_checks as $ck ) : ?>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><?php echo esc_html( $ck ); ?></div>
+            <?php endforeach; ?>
           </div>
-          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p" style="width:100%;justify-content:center;position:relative;z-index:1">احجز استشارة مجانية</a>
+          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p" style="width:100%;justify-content:center;position:relative;z-index:1"><?php echo esc_html( $stores_side_cta_btn ); ?></a>
         </div>
       </div>
     </div>
@@ -242,8 +270,8 @@ $stores_hero_desc = sh_field( 'stores_hero_desc', null, 'من فكرة إلى م
 <?php
 get_template_part( 'template-parts/layout/cta-banner', null, [
     'tag'         => 'ابدأ الآن',
-    'title'       => 'ابدأ متجرك الإلكتروني اليوم',
-    'description' => 'من الفكرة إلى أول طلب — نُرافقك في كل خطوة.',
+    'title'       => $stores_cta_title,
+    'description' => $stores_cta_desc,
     'buttons'     => [
         [ 'text' => 'احجز استشارة مجانية', 'url' => sh_page_url( 'contact' ), 'class' => 'btn-w lg' ],
         [ 'text' => 'خدمة رفع المنتجات', 'url' => sh_page_url( 'services/products' ), 'class' => 'btn-g lg' ],
