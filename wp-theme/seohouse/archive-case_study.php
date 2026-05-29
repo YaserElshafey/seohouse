@@ -68,6 +68,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
           $sector      = ( ! is_wp_error( $terms ) && ! empty( $terms ) ) ? $terms[0]->name : '';
           $sector_slug = ( ! is_wp_error( $terms ) && ! empty( $terms ) ) ? $terms[0]->slug : '';
           $headline  = sh_field( 'headline_result' ) ?: ( sh_field( 'metrics' )[0]['value'] ?? '—' );
+          $client    = sh_field( 'client_name' );
           $meta_text = sh_field( 'card_meta' );
           $dc          = $delays[ $ci % count( $delays ) ];
           $ci++;
@@ -76,7 +77,10 @@ get_template_part( 'template-parts/layout/page-hero', null, [
         <?php if ( $sector ) : ?>
         <div class="proof-sector"><?php echo esc_html( $sector ); ?></div>
         <?php endif; ?>
-        <div class="proof-result"><em><?php echo esc_html( $headline ); ?></em></div>
+        <?php if ( $client ) : ?>
+        <div class="proof-client"><?php echo esc_html( $client ); ?></div>
+        <?php endif; ?>
+        <div class="proof-result <?php echo esc_attr( sh_value_class( $headline ) ); ?>"><em><?php echo esc_html( $headline ); ?></em></div>
         <div class="proof-desc"><?php echo esc_html( get_the_excerpt() ); ?></div>
         <?php if ( $meta_text ) : ?>
         <div class="proof-meta"><div class="proof-dot"></div><?php echo esc_html( $meta_text ); ?></div>

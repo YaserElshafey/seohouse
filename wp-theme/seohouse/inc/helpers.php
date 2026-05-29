@@ -77,6 +77,16 @@ function sh_initials( string $name ): string {
 }
 
 /**
+ * CSS class for a result/metric value: 'pos' if starts with +, 'neg' if starts with -.
+ */
+function sh_value_class( string $v ): string {
+    $v = ltrim( $v );
+    if ( $v !== '' && $v[0] === '+' ) return 'pos';
+    if ( $v !== '' && $v[0] === '-' ) return 'neg';
+    return '';
+}
+
+/**
  * Render client logos section query.
  */
 function sh_get_clients( int $per_page = -1 ): WP_Query {

@@ -192,6 +192,13 @@ add_action( 'acf/init', function () {
                 'instructions' => 'يظهر في بطاقة المشروع وصفحة التفاصيل.',
             ],
             [
+                'key'          => 'field_cs_client_url',
+                'label'        => 'رابط موقع العميل (اختياري)',
+                'name'         => 'client_url',
+                'type'         => 'url',
+                'instructions' => 'رابط الموقع الإلكتروني للعميل — يظهر كرابط قابل للنقر في صفحة التفاصيل.',
+            ],
+            [
                 'key'          => 'field_cs_headline_result',
                 'label'        => 'النتيجة الرئيسية',
                 'name'         => 'headline_result',
@@ -262,6 +269,14 @@ add_action( 'acf/init', function () {
                 'name'      => '',
                 'type'      => 'tab',
                 'placement' => 'top',
+            ],
+            [
+                'key'          => 'field_cs_gallery_title',
+                'label'        => 'عنوان قسم المعرض',
+                'name'         => 'gallery_section_title',
+                'type'         => 'text',
+                'placeholder'  => 'نظرة على النتائج',
+                'instructions' => 'اتركه فارغاً لاستخدام العنوان الافتراضي: "نظرة على النتائج".',
             ],
             [
                 'key'           => 'field_cs_gallery',
