@@ -118,4 +118,16 @@ get_template_part( 'template-parts/layout/page-hero', null, [
   </div>
 </section>
 
+<?php
+get_template_part( 'template-parts/layout/cta-banner', null, [
+    'tag'         => sh_option( 'ra_cta_tag',   'هل موقعك التالي؟' ),
+    'title'       => sh_option( 'ra_cta_title', 'لنبني نتائجك معاً' ),
+    'description' => sh_option( 'ra_cta_desc',  'احجز استشارة مجانية ونضع الأساس لنتيجة تستحق أن تُعرض هنا.' ),
+    'buttons'     => [
+        [ 'text' => 'احجز استشارة مجانية',                    'url' => sh_page_url( 'contact' ),       'class' => 'btn-w lg' ],
+        [ 'text' => sh_option( 'ra_btn2_txt', 'تعرّف على السيو' ), 'url' => sh_page_url( 'services/seo' ), 'class' => 'btn-g lg' ],
+    ],
+] );
+?>
+
 <?php get_footer(); ?>

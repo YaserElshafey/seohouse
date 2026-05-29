@@ -4,24 +4,26 @@
  */
 get_header();
 
-$_blog_hero_raw   = sh_option( 'blog_hero_title', "رؤى وأدوات\nتبني موقعك" );
-$_blog_hero_em    = sh_option( 'blog_hero_em',    'تبني موقعك' );
+$_blog_pid = (int) get_option( 'page_for_posts' ) ?: null;
+
+$_blog_hero_raw   = sh_field( 'blog_hero_title', $_blog_pid, "رؤى وأدوات\nتبني موقعك" );
+$_blog_hero_em    = sh_field( 'blog_hero_em',    $_blog_pid, 'تبني موقعك' );
 $_blog_em_style   = 'font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite';
 $_blog_hero_title = $_blog_hero_em
     ? str_replace( $_blog_hero_em, '<em style="' . $_blog_em_style . '">' . esc_html( $_blog_hero_em ) . '</em>', esc_html( $_blog_hero_raw ) )
     : esc_html( $_blog_hero_raw );
 $_blog_hero_title = nl2br( $_blog_hero_title );
 
-$_blog_sb_title = sh_option( 'blog_sidebar_cta_title', 'استشارة مجانية' );
-$_blog_sb_desc  = sh_option( 'blog_sidebar_cta_desc',  'هل تريد تحسين ترتيب موقعك؟ احجز 30 دقيقة معنا مجاناً.' );
-$_blog_sb_btn   = sh_option( 'blog_sidebar_cta_btn',   'احجز الآن' );
+$_blog_sb_title = sh_field( 'blog_sidebar_cta_title', $_blog_pid, 'استشارة مجانية' );
+$_blog_sb_desc  = sh_field( 'blog_sidebar_cta_desc',  $_blog_pid, 'هل تريد تحسين ترتيب موقعك؟ احجز 30 دقيقة معنا مجاناً.' );
+$_blog_sb_btn   = sh_field( 'blog_sidebar_cta_btn',   $_blog_pid, 'احجز الآن' );
 ?>
 
 <?php
 get_template_part( 'template-parts/layout/page-hero', null, [
-    'tag'         => sh_option( 'blog_hero_tag', 'المدونة' ),
+    'tag'         => sh_field( 'blog_hero_tag',  $_blog_pid, 'المدونة' ),
     'title'       => $_blog_hero_title,
-    'description' => sh_option( 'blog_hero_desc', 'مقالات متخصصة في السيو والتجارة الإلكترونية من فريق سيو هاوس — مكتوبة للتطبيق، لا للقراءة فقط.' ),
+    'description' => sh_field( 'blog_hero_desc', $_blog_pid, 'مقالات متخصصة في السيو والتجارة الإلكترونية من فريق سيو هاوس — مكتوبة للتطبيق، لا للقراءة فقط.' ),
     'breadcrumb'  => [ 'المدونة' => '' ],
 ] );
 ?>

@@ -786,6 +786,10 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_ra_hero_title', 'label' => 'عنوان الهيرو (سطر في كل سطر)', 'name' => 'ra_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "نتائج من\nمشاريع حقيقية" ],
             [ 'key' => 'field_ra_hero_em',    'label' => 'الكلمة المُبرَزة',             'name' => 'ra_hero_em',    'type' => 'text',     'default_value' => 'مشاريع حقيقية' ],
             [ 'key' => 'field_ra_hero_desc',  'label' => 'وصف الهيرو',                   'name' => 'ra_hero_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'لا نتحدث عن نتائج افتراضية — هذه مشاريع نفّذناها لعملاء حقيقيين في قطاعات متنوعة. الأرقام الدقيقة تُضاف بعد موافقة العملاء.' ],
+            [ 'key' => 'field_ra_cta_tag',   'label' => 'تصنيف CTA أسفل الصفحة',       'name' => 'ra_cta_tag',   'type' => 'text',     'default_value' => 'هل موقعك التالي؟' ],
+            [ 'key' => 'field_ra_cta_title', 'label' => 'عنوان CTA أسفل الصفحة',       'name' => 'ra_cta_title', 'type' => 'text',     'default_value' => 'لنبني نتائجك معاً' ],
+            [ 'key' => 'field_ra_cta_desc',  'label' => 'وصف CTA أسفل الصفحة',         'name' => 'ra_cta_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'احجز استشارة مجانية ونضع الأساس لنتيجة تستحق أن تُعرض هنا.' ],
+            [ 'key' => 'field_ra_btn2_txt',  'label' => 'نص الزر الثاني في CTA',        'name' => 'ra_btn2_txt',  'type' => 'text',     'default_value' => 'تعرّف على السيو' ],
         ],
     ] );
 
@@ -929,7 +933,7 @@ add_action( 'acf/init', function () {
     acf_add_local_field_group( [
         'key'      => 'group_blog_options',
         'title'    => 'إعدادات المدونة',
-        'location' => [ [ [ 'param' => 'options_page', 'operator' => '==', 'value' => 'seohouse-blog' ] ] ],
+        'location' => [ [ [ 'param' => 'page_type', 'operator' => '==', 'value' => 'posts_page' ] ] ],
         'fields'   => [
             [ 'key' => 'field_blog_hero_tag',   'label' => 'تصنيف هيرو المدونة',               'name' => 'blog_hero_tag',   'type' => 'text',     'default_value' => 'المدونة' ],
             [ 'key' => 'field_blog_hero_title', 'label' => 'عنوان هيرو المدونة (سطر في كل سطر)', 'name' => 'blog_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "رؤى وأدوات\nتبني موقعك" ],
