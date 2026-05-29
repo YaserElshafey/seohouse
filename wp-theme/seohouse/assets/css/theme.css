@@ -318,14 +318,16 @@
 .method-item p{font-size:13px;color:rgba(255,255,255,.4);line-height:1.78}
 
 /* ─ SEO service — proof/results ─ */
-.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
-.proof-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:24px 22px;transition:all .26s var(--fast)}
-.proof-card:hover{transform:translateY(-3px);box-shadow:var(--sh-md);border-color:rgba(30,46,245,.18)}
-.proof-sector{font-size:10.5px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
-.proof-result{font-size:32px;font-weight:900;color:var(--ink);letter-spacing:-.02em;line-height:1;margin-bottom:10px}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.proof-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:28px 26px;transition:transform .26s var(--fast),box-shadow .26s var(--fast),border-color .26s var(--fast);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.proof-card::before{content:'';position:absolute;top:0;inset-inline:0;height:3px;background:var(--blue);opacity:0;transition:opacity .26s var(--fast)}
+.proof-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(30,46,245,.1),0 2px 8px rgba(0,0,0,.06);border-color:rgba(30,46,245,.2)}
+.proof-card:hover::before{opacity:1}
+.proof-sector{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.09em;margin-bottom:16px}
+.proof-result{font-size:42px;font-weight:900;color:var(--ink);letter-spacing:-.03em;line-height:1;margin-bottom:12px}
 .proof-result em{font-style:normal;color:var(--green)}
-.proof-desc{font-size:13px;color:var(--muted);line-height:1.78;margin-bottom:14px}
-.proof-meta{display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.proof-desc{font-size:13px;color:var(--muted);line-height:1.8;flex:1;margin-bottom:0}
+.proof-meta{display:flex;align-items:center;gap:10px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);margin-top:18px}
 .proof-dot{width:5px;height:5px;border-radius:50%;background:var(--green)}
 
 /* ─ SEO service — industries ─ */
