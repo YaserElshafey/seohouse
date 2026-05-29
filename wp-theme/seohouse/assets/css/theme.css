@@ -113,9 +113,24 @@
 .filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
 .filter-btn{padding:8px 18px;border-radius:50px;font-size:13px;font-weight:700;border:1.5px solid var(--line);background:#fff;color:var(--ink-2);cursor:pointer;transition:all .18s;font-family:'Cairo',sans-serif}
 .filter-btn:hover,.filter-btn.act{background:var(--blue);color:#fff;border-color:var(--blue)}
-.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 @media(max-width:860px){.results-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.results-grid{grid-template-columns:1fr}}
+@media(max-width:580px){.results-grid{grid-template-columns:1fr}}
+.cs-arc-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);overflow:hidden;transition:all .26s var(--fast);display:flex;flex-direction:column}
+.cs-arc-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:transparent}
+.cs-arc-thumb{position:relative;height:190px;background:var(--navy-2);overflow:hidden;flex-shrink:0}
+.cs-arc-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s var(--fast)}
+.cs-arc-card:hover .cs-arc-thumb img{transform:scale(1.04)}
+.cs-arc-thumb-placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.cs-arc-sector{position:absolute;top:12px;inset-inline-start:12px;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.85);background:rgba(30,46,245,.7);padding:4px 9px;border-radius:5px;backdrop-filter:blur(8px)}
+.cs-arc-body{padding:20px 22px;display:flex;flex-direction:column;flex:1;gap:0}
+.cs-arc-body h3{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:8px;letter-spacing:-.01em;line-height:1.35}
+.cs-arc-body > p{font-size:13px;color:var(--muted);line-height:1.78;margin-bottom:16px;flex:1}
+.cs-arc-metrics{display:flex;gap:20px;padding-top:14px;border-top:1px solid var(--line);margin-bottom:18px}
+.cs-arc-ml{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.cs-arc-mv{font-size:18px;font-weight:900;color:var(--ink);letter-spacing:-.02em;line-height:1}
+.cs-arc-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue);text-decoration:none;transition:gap .18s var(--fast);margin-top:auto;padding-top:2px}
+.cs-arc-link:hover{gap:10px}
 
 /* ─ Contact page ─ */
 .con-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}

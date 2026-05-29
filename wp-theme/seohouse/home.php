@@ -8,9 +8,8 @@ $_blog_pid = (int) get_option( 'page_for_posts' ) ?: null;
 
 $_blog_hero_raw   = sh_field( 'blog_hero_title', $_blog_pid, "رؤى وأدوات\nتبني موقعك" );
 $_blog_hero_em    = sh_field( 'blog_hero_em',    $_blog_pid, 'تبني موقعك' );
-$_blog_em_style   = 'font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite';
 $_blog_hero_title = $_blog_hero_em
-    ? str_replace( $_blog_hero_em, '<em style="' . $_blog_em_style . '">' . esc_html( $_blog_hero_em ) . '</em>', esc_html( $_blog_hero_raw ) )
+    ? str_replace( $_blog_hero_em, '<em>' . esc_html( $_blog_hero_em ) . '</em>', esc_html( $_blog_hero_raw ) )
     : esc_html( $_blog_hero_raw );
 $_blog_hero_title = nl2br( $_blog_hero_title );
 
