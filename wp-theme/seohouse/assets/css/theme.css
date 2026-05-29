@@ -16,7 +16,7 @@
 /* ─ Client logos bar ─ */
 #clients{padding-block:clamp(28px,3.5vw,44px);background:var(--surface);border-block:1px solid var(--line)}
 .cl-lbl{text-align:center;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:24px}
-.cl-marquee-outer{overflow:hidden;mask-image:linear-gradient(to left,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(to left,transparent,#000 8%,#000 92%,transparent)}
+.cl-marquee-outer{overflow:hidden;direction:ltr;mask-image:linear-gradient(to left,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(to left,transparent,#000 8%,#000 92%,transparent)}
 .cl-marquee-track{display:flex;direction:ltr;width:max-content;animation:cl-scroll 36s linear infinite}
 .cl-marquee-track:hover{animation-play-state:paused}
 @keyframes cl-scroll{from{transform:translateX(0)}to{transform:translateX(-25%)}}
