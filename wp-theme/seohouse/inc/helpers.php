@@ -64,18 +64,6 @@ function sh_breadcrumb( array $items = [] ): void {
     echo '</div>';
 }
 
-/**
- * Get case study chart bars (returns array of heights 0-100).
- */
-function sh_case_chart_bars( int $post_id ): array {
-    $bars = sh_field( 'chart_bars', $post_id );
-    if ( is_array( $bars ) && ! empty( $bars ) ) {
-        return array_map( function ( $bar ) {
-            return is_array( $bar ) ? (int) ( $bar['bar_height'] ?? 50 ) : (int) $bar;
-        }, $bars );
-    }
-    return [ 20, 28, 24, 42, 55, 65, 74, 82, 92, 100 ];
-}
 
 /**
  * Get team member initials from name.

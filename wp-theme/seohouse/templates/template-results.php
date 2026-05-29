@@ -56,53 +56,29 @@ get_template_part( 'template-parts/layout/page-hero', null, [
     ?>
 
     <?php if ( $cases->have_posts() ) : ?>
-    <div class="results-grid">
+    <div class="proof-grid" style="gap:18px">
       <?php
       $delays = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ];
       $ci     = 0;
       while ( $cases->have_posts() ) : $cases->the_post();
-          $terms     = get_the_terms( get_the_ID(), 'case_study_sector' );
-          $sector    = ( ! is_wp_error( $terms ) && ! empty( $terms ) ) ? $terms[0]->name : '';
+          $terms       = get_the_terms( get_the_ID(), 'case_study_sector' );
+          $sector      = ( ! is_wp_error( $terms ) && ! empty( $terms ) ) ? $terms[0]->name : '';
           $sector_slug = ( ! is_wp_error( $terms ) && ! empty( $terms ) ) ? $terms[0]->slug : '';
-          $bars      = sh_case_chart_bars( get_the_ID() );
-          $metrics   = sh_field( 'metrics' );
-          $dc        = $delays[ $ci % count( $delays ) ];
+          $headline    = sh_field( 'headline_result' ) ?: ( sh_field( 'metrics' )[0]['value'] ?? '—' );
+          $meta_text   = sh_field( 'card_meta' );
+          $dc          = $delays[ $ci % count( $delays ) ];
           $ci++;
       ?>
-      <div class="r-card sr <?php echo esc_attr( $dc ); ?>" data-sector="<?php echo esc_attr( $sector_slug ); ?>">
-        <div class="r-screen">
-          <div class="r-chrome">
-            <div class="r-dots"><span></span><span></span><span></span></div>
-            <div class="r-cbar"></div>
-          </div>
-          <div class="r-img">
-            <?php if ( has_post_thumbnail() ) : ?>
-              <?php the_post_thumbnail( 'seohouse-case-thumb', [ 'style' => 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4' ] ); ?>
-            <?php endif; ?>
-            <div class="r-chart">
-              <?php foreach ( $bars as $bar ) : ?>
-                <div class="r-b <?php echo $bar > 60 ? 'hi' : ''; ?>" style="height:<?php echo esc_attr( $bar ); ?>%"></div>
-              <?php endforeach; ?>
-            </div>
-          </div>
-        </div>
-        <div class="r-body">
-          <?php if ( $sector ) : ?>
-            <div class="r-sector"><?php echo esc_html( $sector ); ?></div>
-          <?php endif; ?>
-          <h3><?php the_title(); ?></h3>
-          <p><?php echo esc_html( get_the_excerpt() ); ?></p>
-          <?php if ( ! empty( $metrics ) ) : ?>
-          <div class="r-meta">
-            <?php foreach ( array_slice( $metrics, 0, 2 ) as $metric ) : ?>
-            <div>
-              <div class="r-ml"><?php echo esc_html( $metric['label'] ?? '' ); ?></div>
-              <div class="r-mv"><?php echo esc_html( $metric['value'] ?? 'سيُضاف لاحقاً' ); ?></div>
-            </div>
-            <?php endforeach; ?>
-          </div>
-          <?php endif; ?>
-        </div>
+      <div class="proof-card r-card sr <?php echo esc_attr( $dc ); ?>" data-sector="<?php echo esc_attr( $sector_slug ); ?>">
+        <?php if ( $sector ) : ?>
+        <div class="proof-sector"><?php echo esc_html( $sector ); ?></div>
+        <?php endif; ?>
+        <div class="proof-result"><em><?php echo esc_html( $headline ); ?></em></div>
+        <div class="proof-desc"><?php echo esc_html( get_the_excerpt() ); ?></div>
+        <?php if ( $meta_text ) : ?>
+        <div class="proof-meta"><div class="proof-dot"></div><?php echo esc_html( $meta_text ); ?></div>
+        <?php endif; ?>
+        <a href="<?php the_permalink(); ?>" class="proof-cta">اقرأ القصة كاملاً <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
       <?php endwhile; wp_reset_postdata(); ?>
     </div>

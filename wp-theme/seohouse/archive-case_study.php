@@ -67,10 +67,8 @@ get_template_part( 'template-parts/layout/page-hero', null, [
           $terms       = get_the_terms( get_the_ID(), 'case_study_sector' );
           $sector      = ( ! is_wp_error( $terms ) && ! empty( $terms ) ) ? $terms[0]->name : '';
           $sector_slug = ( ! is_wp_error( $terms ) && ! empty( $terms ) ) ? $terms[0]->slug : '';
-          $metrics     = sh_field( 'metrics' );
-          $duration    = sh_field( 'project_duration' );
-          $main_value  = ! empty( $metrics[0]['value'] ) ? $metrics[0]['value'] : '—';
-          $meta_text   = $duration ?: ( ! empty( $metrics[1]['value'] ) ? $metrics[1]['value'] . ' ' . ( $metrics[1]['label'] ?? '' ) : '' );
+          $headline  = sh_field( 'headline_result' ) ?: ( sh_field( 'metrics' )[0]['value'] ?? '—' );
+          $meta_text = sh_field( 'card_meta' );
           $dc          = $delays[ $ci % count( $delays ) ];
           $ci++;
       ?>
@@ -78,7 +76,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
         <?php if ( $sector ) : ?>
         <div class="proof-sector"><?php echo esc_html( $sector ); ?></div>
         <?php endif; ?>
-        <div class="proof-result"><em><?php echo esc_html( $main_value ); ?></em></div>
+        <div class="proof-result"><em><?php echo esc_html( $headline ); ?></em></div>
         <div class="proof-desc"><?php echo esc_html( get_the_excerpt() ); ?></div>
         <?php if ( $meta_text ) : ?>
         <div class="proof-meta"><div class="proof-dot"></div><?php echo esc_html( $meta_text ); ?></div>
