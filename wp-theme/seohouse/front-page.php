@@ -534,20 +534,19 @@ if ( empty( $process_steps ) ) {
               $cid          = get_the_ID();
               $cterms       = get_the_terms( $cid, 'case_study_sector' );
               $csector      = ( ! is_wp_error( $cterms ) && ! empty( $cterms ) ) ? $cterms[0]->name : sh_field( 'client_name', $cid, '' );
-              $cmetrics     = sh_field( 'metrics', $cid );
-              $cduration    = sh_field( 'project_duration', $cid );
-              $cmain_value  = ! empty( $cmetrics[0]['value'] ) ? $cmetrics[0]['value'] : '—';
-              $cmeta_text   = $cduration ?: ( ! empty( $cmetrics[1]['value'] ) ? $cmetrics[1]['value'] . ' ' . ( $cmetrics[1]['label'] ?? '' ) : '' );
+              $cmetrics  = sh_field( 'metrics', $cid );
+              $cheadline = sh_field( 'headline_result', $cid ) ?: ( $cmetrics[0]['value'] ?? '—' );
+              $cmeta     = sh_field( 'card_meta', $cid );
               $cdc          = $case_delays[ $ci ] ?? '';
           ?>
           <div class="proof-card sr<?php echo esc_attr( $cdc ); ?>">
             <?php if ( $csector ) : ?>
             <div class="proof-sector"><?php echo esc_html( $csector ); ?></div>
             <?php endif; ?>
-            <div class="proof-result"><em><?php echo esc_html( $cmain_value ); ?></em></div>
+            <div class="proof-result"><em><?php echo esc_html( $cheadline ); ?></em></div>
             <div class="proof-desc"><?php echo esc_html( get_the_excerpt() ); ?></div>
-            <?php if ( $cmeta_text ) : ?>
-            <div class="proof-meta"><div class="proof-dot"></div><?php echo esc_html( $cmeta_text ); ?></div>
+            <?php if ( $cmeta ) : ?>
+            <div class="proof-meta"><div class="proof-dot"></div><?php echo esc_html( $cmeta ); ?></div>
             <?php endif; ?>
           </div>
           <?php $ci++;

@@ -7,15 +7,15 @@ get_header();
 while ( have_posts() ) : the_post();
     $terms      = get_the_terms( get_the_ID(), 'case_study_sector' );
     $sector     = ( ! is_wp_error( $terms ) && ! empty( $terms ) ) ? $terms[0]->name : '';
-    $client     = sh_field( 'client_name' );
-    $challenge  = sh_field( 'challenge' );
-    $solution   = sh_field( 'solution' );
-    $result     = sh_field( 'result' );
-    $metrics    = sh_field( 'metrics' );
-    $duration   = sh_field( 'project_duration' );
-    $cta_url    = sh_field( 'cta_url' );
-    $gallery    = sh_field( 'gallery' );
-    $bars       = sh_case_chart_bars( get_the_ID() );
+    $client          = sh_field( 'client_name' );
+    $headline_result = sh_field( 'headline_result' );
+    $card_meta       = sh_field( 'card_meta' );
+    $challenge       = sh_field( 'challenge' );
+    $solution        = sh_field( 'solution' );
+    $result          = sh_field( 'result' );
+    $metrics         = sh_field( 'metrics' );
+    $cta_url         = sh_field( 'cta_url' );
+    $gallery         = sh_field( 'gallery' );
 ?>
 
 <?php
@@ -36,21 +36,15 @@ get_template_part( 'template-parts/layout/page-hero', null, [
 
       <div class="cs-detail-body">
 
-        <!-- Visual chart card -->
-        <div class="cs-detail-section" style="background:var(--navy);padding:0;overflow:hidden">
-          <div style="height:200px;background:linear-gradient(140deg,rgba(7,13,50,.96),rgba(30,46,245,.12));display:flex;align-items:flex-end;padding:20px 24px 0;position:relative">
-            <div style="position:absolute;top:0;inset-inline:0;height:28px;background:rgba(255,255,255,.04);display:flex;align-items:center;padding-inline:12px;gap:6px;border-bottom:1px solid rgba(255,255,255,.05)">
-              <span style="width:7px;height:7px;border-radius:50%;background:rgba(255,80,80,.35)"></span>
-              <span style="width:7px;height:7px;border-radius:50%;background:rgba(255,190,50,.35)"></span>
-              <span style="width:7px;height:7px;border-radius:50%;background:rgba(60,200,80,.35)"></span>
-            </div>
-            <div style="display:flex;align-items:flex-end;gap:4px;height:130px;width:100%">
-              <?php foreach ( $bars as $bar ) : ?>
-                <div style="flex:1;border-radius:3px 3px 0 0;background:<?php echo $bar > 60 ? 'rgba(123,144,255,.6)' : 'rgba(30,46,245,.25)'; ?>;height:<?php echo esc_attr( $bar ); ?>%"></div>
-              <?php endforeach; ?>
-            </div>
-          </div>
+        <!-- Headline result panel -->
+        <?php if ( $headline_result ) : ?>
+        <div class="cs-detail-section" style="background:var(--navy-2);text-align:center;padding:32px 28px">
+          <div class="proof-result" style="margin-bottom:10px"><em><?php echo esc_html( $headline_result ); ?></em></div>
+          <?php if ( $card_meta ) : ?>
+          <div class="proof-meta" style="justify-content:center;border-top:none;padding-top:0"><div class="proof-dot"></div><?php echo esc_html( $card_meta ); ?></div>
+          <?php endif; ?>
         </div>
+        <?php endif; ?>
 
         <!-- Challenge -->
         <?php if ( $challenge ) : ?>
@@ -120,7 +114,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
       <!-- Sidebar -->
       <div class="cs-sidebar">
 
-        <?php if ( $client || $sector || $duration ) : ?>
+        <?php if ( $client || $sector || $card_meta ) : ?>
         <div class="cs-sidebar-box">
           <h4>تفاصيل المشروع</h4>
           <?php if ( $client ) : ?>
@@ -135,10 +129,10 @@ get_template_part( 'template-parts/layout/page-hero', null, [
             <strong><?php echo esc_html( $sector ); ?></strong>
           </div>
           <?php endif; ?>
-          <?php if ( $duration ) : ?>
+          <?php if ( $card_meta ) : ?>
           <div class="cs-sidebar-stat">
             <span>المدة</span>
-            <strong><?php echo esc_html( $duration ); ?></strong>
+            <strong><?php echo esc_html( $card_meta ); ?></strong>
           </div>
           <?php endif; ?>
         </div>
