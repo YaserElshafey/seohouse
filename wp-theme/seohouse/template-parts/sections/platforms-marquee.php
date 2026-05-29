@@ -1,12 +1,10 @@
 <?php
 /**
- * Template part: platforms marquee
- * Loops platform CPT twice to create an infinite marquee effect.
+ * Template part: execution platforms — floating logo cloud
  */
-$platforms = sh_get_platforms();
+$platforms     = sh_get_platforms();
 $has_platforms = $platforms->have_posts();
 
-// Collect platform items for duplication
 $items = [];
 if ( $has_platforms ) {
     while ( $platforms->have_posts() ) {
@@ -25,19 +23,16 @@ if ( $has_platforms ) {
 // Fallback static platforms if none are added yet
 if ( empty( $items ) ) {
     $items = [
-        [ 'title' => 'WordPress',       'icon_url' => '', 'svg_id' => 'logo-wp' ],
-        [ 'title' => 'Shopify',         'icon_url' => '', 'svg_id' => 'logo-shopify' ],
-        [ 'title' => 'سلة',             'icon_url' => '', 'svg_id' => 'logo-salla' ],
-        [ 'title' => 'زد',              'icon_url' => '', 'svg_id' => 'logo-zid' ],
-        [ 'title' => 'WooCommerce',     'icon_url' => '', 'svg_id' => 'logo-woo' ],
-        [ 'title' => 'Google Analytics','icon_url' => '', 'svg_id' => 'logo-ga' ],
-        [ 'title' => 'Search Console',  'icon_url' => '', 'svg_id' => 'logo-sc' ],
-        [ 'title' => 'Magento',         'icon_url' => '', 'svg_id' => 'logo-magento' ],
+        [ 'title' => 'WordPress',        'icon_url' => '', 'svg_id' => 'logo-wp' ],
+        [ 'title' => 'Shopify',          'icon_url' => '', 'svg_id' => 'logo-shopify' ],
+        [ 'title' => 'سلة',              'icon_url' => '', 'svg_id' => 'logo-salla' ],
+        [ 'title' => 'زد',               'icon_url' => '', 'svg_id' => 'logo-zid' ],
+        [ 'title' => 'WooCommerce',      'icon_url' => '', 'svg_id' => 'logo-woo' ],
+        [ 'title' => 'Google Analytics', 'icon_url' => '', 'svg_id' => 'logo-ga' ],
+        [ 'title' => 'Search Console',   'icon_url' => '', 'svg_id' => 'logo-sc' ],
+        [ 'title' => 'Magento',          'icon_url' => '', 'svg_id' => 'logo-magento' ],
     ];
 }
-
-// Duplicate for seamless loop
-$display_items = array_merge( $items, $items );
 ?>
 
 <?php if ( empty( $has_platforms ) ) : ?>
@@ -60,22 +55,24 @@ $display_items = array_merge( $items, $items );
       <span class="tag">منصات التنفيذ</span>
       <h2 class="h2">نعمل على المنصات التي تثق بها</h2>
     </div>
-  </div>
-  <div class="marquee-outer">
-    <div class="marquee-track">
-      <?php foreach ( $display_items as $item ) : ?>
-        <div class="plat-card">
-          <div class="plat-logo">
-            <?php if ( ! empty( $item['icon_url'] ) ) : ?>
-              <img src="<?php echo esc_url( $item['icon_url'] ); ?>" alt="<?php echo esc_attr( $item['title'] ); ?>" style="width:56px;height:56px;object-fit:contain">
-            <?php elseif ( ! empty( $item['svg_id'] ) ) : ?>
-              <svg width="56" height="56"><use href="#<?php echo esc_attr( $item['svg_id'] ); ?>"/></svg>
-            <?php else : ?>
-              <span style="font-size:22px;font-weight:900;color:var(--blue)"><?php echo esc_html( mb_substr( $item['title'], 0, 2 ) ); ?></span>
-            <?php endif; ?>
+    <div class="plat-cloud">
+      <?php foreach ( $items as $idx => $item ) :
+          $tag   = $item['url'] ? 'a' : 'div';
+          $attrs = $item['url'] ? 'href="' . esc_url( $item['url'] ) . '" target="_blank" rel="noopener"' : '';
+      ?>
+        <<?php echo $tag; ?> <?php echo $attrs; ?> class="plat-badge" style="--i:<?php echo $idx; ?>" title="<?php echo esc_attr( $item['title'] ); ?>">
+          <div class="plat-badge-inner">
+            <div class="plat-ico-wrap">
+              <?php if ( ! empty( $item['icon_url'] ) ) : ?>
+                <img src="<?php echo esc_url( $item['icon_url'] ); ?>" alt="<?php echo esc_attr( $item['title'] ); ?>">
+              <?php elseif ( ! empty( $item['svg_id'] ) ) : ?>
+                <svg aria-hidden="true" focusable="false"><use href="#<?php echo esc_attr( $item['svg_id'] ); ?>"/></svg>
+              <?php else : ?>
+                <span><?php echo esc_html( mb_substr( $item['title'], 0, 2 ) ); ?></span>
+              <?php endif; ?>
+            </div>
           </div>
-          <span class="plat-nm"><?php echo esc_html( $item['title'] ); ?></span>
-        </div>
+        </<?php echo $tag; ?>>
       <?php endforeach; ?>
     </div>
   </div>
