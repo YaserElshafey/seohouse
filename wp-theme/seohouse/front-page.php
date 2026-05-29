@@ -112,12 +112,7 @@ if ( empty( $process_steps ) ) {
 .kw-bg{flex:1;height:3.5px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
 .kw-f{height:100%;border-radius:2px;background:rgba(123,144,255,.42)}
 .kw-r:first-child .kw-f{background:#7b90ff;width:94%}.kw-r:nth-child(2) .kw-f{width:67%}.kw-r:nth-child(3) .kw-f{width:50%}
-/* Clients bar */
-#clients{padding-block:20px;background:var(--surface);border-block:1px solid var(--line)}
-.cl-lbl{text-align:center;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
-.cl-row{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:9px}
-.cl-ph{height:40px;min-width:96px;padding-inline:16px;border-radius:var(--r1);background:#fff;border:1.5px dashed var(--line);display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:600;color:var(--muted);transition:all .2s}
-.cl-ph:hover{border-color:rgba(30,46,245,.28);background:var(--blue-50);color:var(--blue)}
+
 /* Why */
 .why-grid{display:grid;grid-template-columns:5fr 6fr;gap:60px;align-items:center}
 .why-pts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
