@@ -536,7 +536,6 @@ if ( empty( $process_steps ) ) {
               $cid          = get_the_ID();
               $cterms       = get_the_terms( $cid, 'case_study_sector' );
               $csector      = ( ! is_wp_error( $cterms ) && ! empty( $cterms ) ) ? $cterms[0]->name : '';
-              $cclient      = sh_field( 'client_name', $cid );
               $cmetrics  = sh_field( 'metrics', $cid );
               $cheadline = sh_field( 'headline_result', $cid ) ?: ( $cmetrics[0]['value'] ?? '—' );
               $cmeta     = sh_field( 'card_meta', $cid );
@@ -545,9 +544,6 @@ if ( empty( $process_steps ) ) {
           <div class="proof-card sr<?php echo esc_attr( $cdc ); ?>">
             <?php if ( $csector ) : ?>
             <div class="proof-sector"><?php echo esc_html( $csector ); ?></div>
-            <?php endif; ?>
-            <?php if ( $cclient ) : ?>
-            <div class="proof-client"><?php echo esc_html( $cclient ); ?></div>
             <?php endif; ?>
             <div class="proof-result <?php echo esc_attr( sh_value_class( $cheadline ) ); ?>"><em><?php echo esc_html( $cheadline ); ?></em></div>
             <div class="proof-desc"><?php echo esc_html( get_the_excerpt() ); ?></div>
