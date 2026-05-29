@@ -352,6 +352,31 @@ add_action( 'acf/init', function () {
                     [ 'key' => 'field_faq_a', 'label' => 'الجواب',  'name' => 'answer',   'type' => 'textarea', 'rows' => 3 ],
                 ],
             ],
+            [
+                'key'          => 'field_sp_deliverables',
+                'label'        => 'بطاقات ماذا نقدّم',
+                'name'         => 'service_deliverables',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة بطاقة',
+                'sub_fields'   => [
+                    [ 'key' => 'field_del_title', 'label' => 'العنوان', 'name' => 'del_title', 'type' => 'text' ],
+                    [ 'key' => 'field_del_desc',  'label' => 'الوصف',   'name' => 'del_desc',  'type' => 'textarea', 'rows' => 2 ],
+                ],
+            ],
+            [ 'key' => 'field_sp_bottom_cta',      'label' => 'عنوان CTA أسفل الصفحة',        'name' => 'service_bottom_cta_title', 'type' => 'text' ],
+            [ 'key' => 'field_sp_side_cta_h3',     'label' => 'عنوان بطاقة CTA الجانبية',     'name' => 'service_side_cta_h3',     'type' => 'textarea', 'rows' => 2 ],
+            [ 'key' => 'field_sp_side_cta_desc',   'label' => 'وصف بطاقة CTA الجانبية',      'name' => 'service_side_cta_desc',   'type' => 'textarea', 'rows' => 2 ],
+            [ 'key' => 'field_sp_side_cta_btn',    'label' => 'نص زر CTA الجانبي',            'name' => 'service_side_cta_btn',    'type' => 'text' ],
+            [
+                'key'          => 'field_sp_side_cta_checks',
+                'label'        => 'قائمة مزايا CTA الجانبي',
+                'name'         => 'service_side_cta_checks',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة عنصر',
+                'sub_fields'   => [
+                    [ 'key' => 'field_sc_text', 'label' => 'النص', 'name' => 'sc_text', 'type' => 'text' ],
+                ],
+            ],
         ],
     ] );
 
