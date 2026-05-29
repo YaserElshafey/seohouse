@@ -207,22 +207,7 @@ if ( empty( $process_steps ) ) {
 /* Cases */
 #cases .sh{margin-bottom:28px}
 /* Reviews */
-.rev-hrow{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:40px;flex-wrap:wrap}
-.rev-agg{background:#fff;border:1px solid var(--line);border-radius:var(--r2);padding:13px 18px;display:flex;align-items:center;gap:12px}
-.rev-score{font-size:34px;font-weight:900;color:var(--ink);line-height:1}
-.rev-stars{display:flex;gap:3px;margin-bottom:3px}
-.star-ph{width:13px;height:13px;border-radius:3px;background:var(--blue-50);border:1.5px dashed var(--blue-100)}
-.rev-ct{font-size:11px;color:var(--muted)}
-.g-badge{display:flex;align-items:center;gap:5px;font-size:10.5px;font-weight:600;color:var(--muted);padding:4px 8px;background:var(--surface);border-radius:5px;border:1px solid var(--line);margin-top:5px}
-.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.rev-card{background:#fff;border:1.5px dashed rgba(30,46,245,.11);border-radius:var(--r3);padding:22px;display:flex;flex-direction:column;min-height:180px;transition:all .24s var(--fast)}
-.rev-card:hover{box-shadow:var(--sh-md);border-color:rgba(30,46,245,.2);transform:translateY(-3px)}
-.ph-stars{display:flex;gap:3px;margin-bottom:13px}.ph-star{width:12px;height:12px;border-radius:3px;background:var(--blue-50)}
-.ph-lines{flex:1;display:flex;flex-direction:column;gap:5px;margin-bottom:14px}.ph-ln{height:7px;border-radius:4px;background:var(--surface)}
-.ph-au{display:flex;align-items:center;gap:8px;border-top:1px solid var(--line);padding-top:12px}
-.ph-av{width:34px;height:34px;border-radius:50%;background:var(--surface);border:1.5px dashed var(--line);flex-shrink:0}
-.ph-nm-ln{height:7px;width:72px;border-radius:4px;background:var(--surface)}.ph-dt-ln{height:6px;width:50px;border-radius:4px;background:var(--surface)}
-.rev-note{text-align:center;font-size:11px;color:var(--muted);margin-top:16px;font-style:italic}
+.rev-plugin{width:100%}
 /* Blog */
 .blog-hrow{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:36px;flex-wrap:wrap}
 .art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -254,9 +239,9 @@ if ( empty( $process_steps ) ) {
 #process::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.022) 1px,transparent 1px);background-size:38px 38px;pointer-events:none}
 .ind-card{text-decoration:none}
 /* Responsive */
-@media(max-width:1100px){.hero-grid{grid-template-columns:1fr;gap:28px}.serp-card{display:none}.why-grid{grid-template-columns:1fr;gap:40px}.why-vis{display:none}.rev-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:860px){.svc-layout{grid-template-columns:1fr}.svc-card.feat{min-height:auto;padding:28px}.svc-stack{grid-template-rows:auto}.ind-grid{grid-template-columns:repeat(2,1fr)}.proc-wrap{grid-template-columns:repeat(2,1fr)}.proc-line{display:none}.rev-grid{grid-template-columns:1fr}.art-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.hero-grid{padding-block:clamp(96px,12vh,120px) 44px}.h1{font-size:clamp(34px,9vw,48px)}.h-btns{flex-direction:column}.h-btns .btn{justify-content:center;width:100%}.h-kicker{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:18px;margin-top:24px;border-top:1px solid rgba(255,255,255,.07)}.k-item{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:9px 11px;font-size:11.5px;justify-content:center}.k-sep{display:none}.why-pts{grid-template-columns:1fr}.ind-grid{grid-template-columns:repeat(2,1fr);gap:9px}.proc-wrap{grid-template-columns:1fr;gap:0}.p-step{flex-direction:row;text-align:right;gap:16px;padding:16px 0;border-block-end:1px solid rgba(255,255,255,.06)}.p-step:last-child{border-block-end:none}.p-num{flex-shrink:0;margin-bottom:0;width:40px;height:40px;font-size:13px}.p-step h3{font-size:14px;margin-bottom:4px}.p-step p{max-width:100%;font-size:12px}.cta-btns{flex-direction:column;align-items:center}.cta-pills{flex-direction:column;align-items:center;gap:8px}.blog-hrow{flex-direction:column;align-items:flex-start}.rev-hrow{flex-direction:column;align-items:flex-start}}
+@media(max-width:1100px){.hero-grid{grid-template-columns:1fr;gap:28px}.serp-card{display:none}.why-grid{grid-template-columns:1fr;gap:40px}.why-vis{display:none}}
+@media(max-width:860px){.svc-layout{grid-template-columns:1fr}.svc-card.feat{min-height:auto;padding:28px}.svc-stack{grid-template-rows:auto}.ind-grid{grid-template-columns:repeat(2,1fr)}.proc-wrap{grid-template-columns:repeat(2,1fr)}.proc-line{display:none}.art-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.hero-grid{padding-block:clamp(96px,12vh,120px) 44px}.h1{font-size:clamp(34px,9vw,48px)}.h-btns{flex-direction:column}.h-btns .btn{justify-content:center;width:100%}.h-kicker{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:18px;margin-top:24px;border-top:1px solid rgba(255,255,255,.07)}.k-item{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:9px 11px;font-size:11.5px;justify-content:center}.k-sep{display:none}.why-pts{grid-template-columns:1fr}.ind-grid{grid-template-columns:repeat(2,1fr);gap:9px}.proc-wrap{grid-template-columns:1fr;gap:0}.p-step{flex-direction:row;text-align:right;gap:16px;padding:16px 0;border-block-end:1px solid rgba(255,255,255,.06)}.p-step:last-child{border-block-end:none}.p-num{flex-shrink:0;margin-bottom:0;width:40px;height:40px;font-size:13px}.p-step h3{font-size:14px;margin-bottom:4px}.p-step p{max-width:100%;font-size:12px}.cta-btns{flex-direction:column;align-items:center}.cta-pills{flex-direction:column;align-items:center;gap:8px}.blog-hrow{flex-direction:column;align-items:flex-start}}
 </style>
 
 <!-- ── HERO ── -->
@@ -571,31 +556,20 @@ if ( empty( $process_steps ) ) {
   </div>
 </section>
 
-<!-- ── REVIEWS (placeholder — connect to Google Business Profile) ── -->
+<!-- ── REVIEWS ── -->
+<?php $_rev_sc = trim( sh_option( 'reviews_shortcode', '' ) ); if ( $_rev_sc ) : ?>
 <section id="reviews" class="sec sec-off">
   <div class="wrap">
-    <div class="rev-hrow sr">
-      <div class="sh" style="margin-bottom:0">
-        <span class="tag">تقييمات العملاء</span>
-        <h2 class="h2">آراء من عملوا معنا</h2>
-      </div>
-      <div class="rev-agg">
-        <div class="rev-score"><?php echo esc_html( sh_option( 'reviews_score', '—' ) ); ?></div>
-        <div>
-          <div class="rev-stars"><div class="star-ph"></div><div class="star-ph"></div><div class="star-ph"></div><div class="star-ph"></div><div class="star-ph"></div></div>
-          <div class="rev-ct"><?php echo esc_html( sh_option( 'reviews_count', 'سيُضاف من Google Business Profile' ) ); ?></div>
-          <div class="g-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>Google Reviews</div>
-        </div>
-      </div>
+    <div class="sh c sr" style="margin-bottom:36px">
+      <span class="tag">تقييمات العملاء</span>
+      <h2 class="h2">آراء من عملوا معنا</h2>
     </div>
-    <div class="rev-grid">
-      <div class="rev-card sr"><div class="ph-stars"><div class="ph-star"></div><div class="ph-star"></div><div class="ph-star"></div><div class="ph-star"></div><div class="ph-star"></div></div><div class="ph-lines"><div class="ph-ln" style="width:88%"></div><div class="ph-ln" style="width:72%"></div><div class="ph-ln" style="width:58%"></div></div><div class="ph-au"><div class="ph-av"></div><div><div class="ph-nm-ln"></div><div class="ph-dt-ln" style="margin-top:4px"></div></div></div></div>
-      <div class="rev-card sr d1"><div class="ph-stars"><div class="ph-star"></div><div class="ph-star"></div><div class="ph-star"></div><div class="ph-star"></div><div class="ph-star"></div></div><div class="ph-lines"><div class="ph-ln" style="width:82%"></div><div class="ph-ln" style="width:68%"></div><div class="ph-ln" style="width:48%"></div></div><div class="ph-au"><div class="ph-av"></div><div><div class="ph-nm-ln"></div><div class="ph-dt-ln" style="margin-top:4px"></div></div></div></div>
-      <div class="rev-card sr d2"><div class="ph-stars"><div class="ph-star"></div><div class="ph-star"></div><div class="ph-star"></div><div class="ph-star"></div><div class="ph-star"></div></div><div class="ph-lines"><div class="ph-ln" style="width:90%"></div><div class="ph-ln" style="width:65%"></div><div class="ph-ln" style="width:52%"></div></div><div class="ph-au"><div class="ph-av"></div><div><div class="ph-nm-ln"></div><div class="ph-dt-ln" style="margin-top:4px"></div></div></div></div>
+    <div class="rev-plugin">
+      <?php echo do_shortcode( wp_kses_post( $_rev_sc ) ); ?>
     </div>
-    <p class="rev-note">للمطوّر: اربط بـ Google Business Profile API أو أضف مراجعات يدوياً</p>
   </div>
 </section>
+<?php endif; ?>
 
 <!-- ── PLATFORMS MARQUEE ── -->
 <?php get_template_part( 'template-parts/sections/platforms-marquee' ); ?>
