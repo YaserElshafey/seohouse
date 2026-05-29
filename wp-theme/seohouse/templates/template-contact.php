@@ -4,17 +4,45 @@
  */
 get_header();
 
-$contact_email  = sh_option( 'contact_email', 'info@seohouse.sa' );
-$contact_phone  = sh_option( 'contact_phone', '' );
-$social_linkedin = sh_option( 'social_linkedin', '#' );
+$contact_email    = sh_option( 'contact_email',    'info@seohouse.sa' );
+$contact_phone    = sh_option( 'contact_phone',    '' );
+$social_linkedin  = sh_option( 'social_linkedin',  '#' );
 $consult_duration = sh_option( 'consult_duration', '30 دقيقة' );
+
+$contact_hero_tag  = sh_option( 'contact_hero_tag',  'استشارة مجانية' );
+$contact_hero_raw  = sh_option( 'contact_hero_title', "30 دقيقة قد تغيّر\nمسار موقعك" );
+$contact_hero_em   = sh_option( 'contact_hero_em',   'موقعك' );
+$contact_hero_desc = sh_option( 'contact_hero_desc', 'أخبرنا عن موقعك ونشاطك — وسنخبرك بصدق أين أنت وما الذي يمكن تحقيقه. مجاناً، وبدون التزام.' );
+
+$em_style = 'font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite';
+$contact_hero_display = $contact_hero_em
+    ? str_replace( $contact_hero_em, '<em style="' . $em_style . '">' . esc_html( $contact_hero_em ) . '</em>', esc_html( $contact_hero_raw ) )
+    : esc_html( $contact_hero_raw );
+$contact_hero_display = nl2br( $contact_hero_display );
+
+$contact_form_title    = sh_option( 'contact_form_title',    'أرسل لنا طلبك' );
+$contact_form_sub      = sh_option( 'contact_form_sub',      'سنتواصل معك خلال 24 ساعة لتأكيد موعد الاستشارة.' );
+$contact_form_note     = sh_option( 'contact_form_note',     'أو تواصل معنا على واتساب مباشرةً — سنردّ في أقرب وقت' );
+$contact_success_title = sh_option( 'contact_success_title', 'تم الإرسال بنجاح!' );
+$contact_success_desc  = sh_option( 'contact_success_desc',  'شكراً على تواصلك — سيتصل بك أحد متخصصينا خلال 24 ساعة لتحديد موعد الاستشارة.' );
+$contact_cal_title     = sh_option( 'contact_cal_title',     'احجز وقتك مباشرةً' );
+$contact_expect_title  = sh_option( 'contact_expect_title',  'ماذا تتوقع بعد التواصل' );
+$contact_expect_items  = sh_option( 'contact_expect_items',  [] );
+if ( empty( $contact_expect_items ) ) {
+    $contact_expect_items = [
+        [ 'exp_text' => 'ردّ خلال 24 ساعة في أيام العمل' ],
+        [ 'exp_text' => 'تحليل أولي سريع لموقعك' ],
+        [ 'exp_text' => 'اجتماع ' . $consult_duration . ' عبر Google Meet' ],
+        [ 'exp_text' => 'توصيات فورية — بدون أي التزام' ],
+    ];
+}
 ?>
 
 <?php
 get_template_part( 'template-parts/layout/page-hero', null, [
-    'tag'         => 'استشارة مجانية',
-    'title'       => '30 دقيقة قد تغيّر<br>مسار <em>موقعك</em>',
-    'description' => 'أخبرنا عن موقعك ونشاطك — وسنخبرك بصدق أين أنت وما الذي يمكن تحقيقه. مجاناً، وبدون التزام.',
+    'tag'         => $contact_hero_tag,
+    'title'       => $contact_hero_display,
+    'description' => $contact_hero_desc,
     'breadcrumb'  => [ 'اتصل بنا' => '' ],
 ] );
 ?>
@@ -27,8 +55,8 @@ get_template_part( 'template-parts/layout/page-hero', null, [
       <div class="sr">
         <div class="form-card">
           <div id="formWrap">
-            <div class="form-title">أرسل لنا طلبك</div>
-            <p class="form-sub">سنتواصل معك خلال 24 ساعة لتأكيد موعد الاستشارة.</p>
+            <div class="form-title"><?php echo esc_html( $contact_form_title ); ?></div>
+            <p class="form-sub"><?php echo esc_html( $contact_form_sub ); ?></p>
             <?php
             if ( function_exists( 'the_content' ) ) {
                 ob_start();
@@ -81,7 +109,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
                 أرسل الطلب
               </button>
-              <p class="form-note">أو تواصل معنا على واتساب مباشرةً — سنردّ في أقرب وقت</p>
+              <p class="form-note"><?php echo esc_html( $contact_form_note ); ?></p>
             </form>
             <?php else :
                 echo wp_kses_post( $custom_content );
@@ -92,8 +120,8 @@ get_template_part( 'template-parts/layout/page-hero', null, [
             <div class="success-ico">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:8px">تم الإرسال بنجاح!</h3>
-            <p style="font-size:14px;color:var(--muted);line-height:1.72;max-width:320px;margin-inline:auto">شكراً على تواصلك — سيتصل بك أحد متخصصينا خلال 24 ساعة لتحديد موعد الاستشارة.</p>
+            <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:8px"><?php echo esc_html( $contact_success_title ); ?></h3>
+            <p style="font-size:14px;color:var(--muted);line-height:1.72;max-width:320px;margin-inline:auto"><?php echo esc_html( $contact_success_desc ); ?></p>
           </div>
         </div>
       </div>
@@ -108,7 +136,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             </div>
             <div>
-              <div class="info-t">احجز وقتك مباشرةً</div>
+              <div class="info-t"><?php echo esc_html( $contact_cal_title ); ?></div>
               <div class="info-sub"><?php echo esc_html( $consult_duration ); ?> · Google Meet · مجانية</div>
             </div>
           </div>
@@ -170,12 +198,11 @@ get_template_part( 'template-parts/layout/page-hero', null, [
 
         <!-- Quick expectations -->
         <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r2);padding:18px 20px" class="sr d3">
-          <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px">ماذا تتوقع بعد التواصل</div>
+          <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px"><?php echo esc_html( $contact_expect_title ); ?></div>
           <div class="chklist">
-            <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>ردّ خلال 24 ساعة في أيام العمل</div>
-            <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>تحليل أولي سريع لموقعك</div>
-            <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>اجتماع <?php echo esc_html( $consult_duration ); ?> عبر Google Meet</div>
-            <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>توصيات فورية — بدون أي التزام</div>
+            <?php foreach ( $contact_expect_items as $ei ) : ?>
+            <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><?php echo esc_html( $ei['exp_text'] ?? '' ); ?></div>
+            <?php endforeach; ?>
           </div>
         </div>
 

@@ -23,6 +23,18 @@ $sectors_why_title  = nl2br( esc_html( $sectors_why_raw ) );
 $sectors_why_body1  = sh_option( 'sectors_why_body1',  'كل قطاع يملك كلماته المفتاحية الخاصة، نية بحث مختلفة، ومنافسين محددين. الاستراتيجية الناجحة للعيادة تختلف عن استراتيجية المتجر الإلكتروني تماماً.' );
 $sectors_why_body2  = sh_option( 'sectors_why_body2',  'نبني استراتيجية السيو لكل عميل بناءً على فهم عميق لقطاعه — وليس نسخاً من قالب جاهز.' );
 $sectors_cta_title  = sh_option( 'sectors_cta_title',  'احجز استشارة مجانية ولنبدأ معاً' );
+$sectors_hero_tag     = sh_option( 'sectors_hero_tag',     'تخصص قطاعي' );
+$sectors_why_tag      = sh_option( 'sectors_why_tag',      'لماذا التخصص مهم' );
+$sectors_intent_title = sh_option( 'sectors_intent_title', 'مثال: نية البحث تختلف حسب القطاع' );
+$sectors_intent_items = sh_option( 'sectors_intent_items', [] );
+if ( empty( $sectors_intent_items ) ) {
+    $sectors_intent_items = [
+        [ 'si_color' => 'var(--blue)',   'si_text' => 'متجر إلكتروني → كلمات شرائية' ],
+        [ 'si_color' => 'var(--green)',  'si_text' => 'عيادة طبية → كلمات استفسارية' ],
+        [ 'si_color' => '#f59e0b',       'si_text' => 'شركة عقارية → كلمات موقعية' ],
+        [ 'si_color' => '#8b5cf6',       'si_text' => 'مركز تدريبي → كلمات معلوماتية' ],
+    ];
+}
 
 // 8 sectors in Claude Design order
 $all_sectors = [
@@ -85,12 +97,17 @@ $all_sectors = [
 ];
 
 // Build a map from CPT posts if they exist
-$cpt_links = [];
+$cpt_data  = [];
 $sectors_q = new WP_Query( [ 'post_type' => 'sector', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC' ] );
 if ( $sectors_q->have_posts() ) {
     while ( $sectors_q->have_posts() ) {
         $sectors_q->the_post();
-        $cpt_links[ get_post_field( 'post_name' ) ] = get_permalink();
+        $slug = get_post_field( 'post_name' );
+        $cpt_data[ $slug ] = [
+            'url'   => get_permalink(),
+            'title' => get_the_title(),
+            'desc'  => sh_field( 'sector_card_desc' ) ?: '',
+        ];
     }
     wp_reset_postdata();
 }
@@ -107,7 +124,7 @@ if ( $sectors_q->have_posts() ) {
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
         <span style="color:rgba(255,255,255,.6)">القطاعات</span>
       </div>
-      <span class="tag d" style="margin-bottom:18px">تخصص قطاعي</span>
+      <span class="tag d" style="margin-bottom:18px"><?php echo esc_html( $sectors_hero_tag ); ?></span>
       <h1 style="font-size:clamp(30px,4.5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px;animation:fu .75s .08s var(--ease) both"><?php echo wp_kses_post( $sec_title ); ?></h1>
       <p style="font-size:clamp(14px,1.5vw,17px);line-height:1.9;color:rgba(255,255,255,.48);max-width:600px;margin-bottom:28px;animation:fu .75s .16s var(--ease) both"><?php echo esc_html( $sec_desc ); ?></p>
     </div>
@@ -120,15 +137,17 @@ if ( $sectors_q->have_posts() ) {
     <div class="sh c sr"><span class="tag">القطاعات</span><h2 class="h2"><?php echo esc_html( $sectors_grid_title ); ?></h2><p class="bod"><?php echo esc_html( $sectors_grid_desc ); ?></p></div>
     <div class="sec-grid">
       <?php foreach ( $all_sectors as $s ) :
-          // Prefer CPT permalink; fall back to path-based URL
-          $url = $cpt_links[ $s['slug'] ] ?? sh_page_url( 'sectors/' . $s['slug'] );
+          $cpt   = $cpt_data[ $s['slug'] ] ?? [];
+          $url   = $cpt['url']   ?? sh_page_url( 'sectors/' . $s['slug'] );
+          $label = $cpt['title'] ?: $s['label'];
+          $desc  = ( ! empty( $cpt['desc'] ) ) ? $cpt['desc'] : $s['desc'];
       ?>
       <a href="<?php echo esc_url( $url ); ?>" class="sec-card sr<?php echo esc_attr( $s['dc'] ); ?>">
         <div class="sec-ico">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $s['icon']; // phpcs:ignore ?></svg>
         </div>
-        <h3><?php echo esc_html( $s['label'] ); ?></h3>
-        <p><?php echo esc_html( $s['desc'] ); ?></p>
+        <h3><?php echo esc_html( $label ); ?></h3>
+        <p><?php echo esc_html( $desc ); ?></p>
         <div class="sec-arr">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
@@ -143,7 +162,7 @@ if ( $sectors_q->have_posts() ) {
   <div class="wrap">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center">
       <div class="sr">
-        <span class="tag" style="margin-bottom:12px">لماذا التخصص مهم</span>
+        <span class="tag" style="margin-bottom:12px"><?php echo esc_html( $sectors_why_tag ); ?></span>
         <h2 class="h2" style="margin-bottom:16px"><?php echo wp_kses_post( $sectors_why_title ); ?></h2>
         <p class="bod" style="margin-bottom:18px"><?php echo esc_html( $sectors_why_body1 ); ?></p>
         <p class="bod" style="margin-bottom:24px"><?php echo esc_html( $sectors_why_body2 ); ?></p>
@@ -152,12 +171,11 @@ if ( $sectors_q->have_posts() ) {
       <div class="sr d1">
         <div style="background:var(--navy-2);border-radius:var(--r4);padding:28px;position:relative;overflow:hidden">
           <div style="position:absolute;inset-inline-end:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.28),transparent 70%)"></div>
-          <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:18px;position:relative;z-index:1">مثال: نية البحث تختلف حسب القطاع</div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:18px;position:relative;z-index:1"><?php echo esc_html( $sectors_intent_title ); ?></div>
           <div style="display:flex;flex-direction:column;gap:10px;position:relative;z-index:1">
-            <div style="display:flex;align-items:center;gap:10px;padding:12px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)"><div style="width:8px;height:8px;border-radius:50%;background:var(--blue);flex-shrink:0"></div><div style="font-size:13px;color:rgba(255,255,255,.7)">متجر إلكتروني → كلمات شرائية</div></div>
-            <div style="display:flex;align-items:center;gap:10px;padding:12px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)"><div style="width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0"></div><div style="font-size:13px;color:rgba(255,255,255,.7)">عيادة طبية → كلمات استفسارية</div></div>
-            <div style="display:flex;align-items:center;gap:10px;padding:12px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)"><div style="width:8px;height:8px;border-radius:50%;background:#f59e0b;flex-shrink:0"></div><div style="font-size:13px;color:rgba(255,255,255,.7)">شركة عقارية → كلمات موقعية</div></div>
-            <div style="display:flex;align-items:center;gap:10px;padding:12px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)"><div style="width:8px;height:8px;border-radius:50%;background:#8b5cf6;flex-shrink:0"></div><div style="font-size:13px;color:rgba(255,255,255,.7)">مركز تدريبي → كلمات معلوماتية</div></div>
+            <?php foreach ( $sectors_intent_items as $si ) : ?>
+            <div style="display:flex;align-items:center;gap:10px;padding:12px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)"><div style="width:8px;height:8px;border-radius:50%;background:<?php echo esc_attr( $si['si_color'] ?? 'var(--blue)' ); ?>;flex-shrink:0"></div><div style="font-size:13px;color:rgba(255,255,255,.7)"><?php echo esc_html( $si['si_text'] ?? '' ); ?></div></div>
+            <?php endforeach; ?>
           </div>
         </div>
       </div>
