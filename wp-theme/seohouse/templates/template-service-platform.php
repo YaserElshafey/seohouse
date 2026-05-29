@@ -240,6 +240,25 @@ switch ( $slug ) {
         ];
         break;
 }
+
+// ── ACF overrides for deliverables and CTA sections ──────────
+$acf_deliverables = sh_field( 'service_deliverables' );
+if ( ! empty( $acf_deliverables ) ) {
+	$_icon        = '<path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/>';
+	$deliverables = array_map( static fn( $item ) => [
+		'title' => $item['del_title'] ?? '',
+		'desc'  => $item['del_desc']  ?? '',
+		'icon'  => $_icon,
+	], $acf_deliverables );
+}
+$bottom_cta_title = sh_field( 'service_bottom_cta_title' ) ?: $bottom_cta_title;
+$side_cta_h3      = sh_field( 'service_side_cta_h3' );
+$side_cta_desc    = sh_field( 'service_side_cta_desc' );
+$side_cta_btn     = sh_field( 'service_side_cta_btn' )  ?: 'احجز استشارة مجانية';
+$acf_side_checks  = sh_field( 'service_side_cta_checks' );
+$side_cta_checks  = ! empty( $acf_side_checks )
+	? array_map( static fn( $item ) => $item['sc_text'] ?? '', $acf_side_checks )
+	: [ 'تحليل احتياجاتك بدقّة', 'عرض سعر شفّاف', 'بدون أي التزام' ];
 ?>
 
 <!-- Hero ─────────────────────────────────────────────── -->
@@ -385,14 +404,14 @@ switch ( $slug ) {
       <div class="cta-sticky">
         <div class="cta-side-card sr d1">
           <span class="tag d" style="position:relative;z-index:1;margin-bottom:10px">ابدأ الآن</span>
-          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1">جاهز لإطلاق مشروعك<br>على <?php echo esc_html( $display_tag ); ?>؟</h3>
-          <p style="font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:22px;position:relative;z-index:1">احجز استشارة مجانية ولنناقش متطلباتك وعرض السعر المناسب.</p>
+          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1"><?php echo $side_cta_h3 ? nl2br( esc_html( $side_cta_h3 ) ) : 'جاهز لإطلاق مشروعك<br>على ' . esc_html( $display_tag ) . '؟'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></h3>
+          <p style="font-size:13.5px;color:rgba(255,255,255,.5);line-height:1.8;margin-bottom:22px;position:relative;z-index:1"><?php echo esc_html( $side_cta_desc ?: 'احجز استشارة مجانية ولنناقش متطلباتك وعرض السعر المناسب.' ); ?></p>
           <div class="chklist" style="margin-bottom:22px">
-            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>تحليل احتياجاتك بدقّة</div>
-            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>عرض سعر شفّاف</div>
-            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>بدون أي التزام</div>
+            <?php foreach ( $side_cta_checks as $ck ) : ?>
+            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><?php echo esc_html( $ck ); ?></div>
+            <?php endforeach; ?>
           </div>
-          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p" style="width:100%;justify-content:center;position:relative;z-index:1">احجز استشارة مجانية</a>
+          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p" style="width:100%;justify-content:center;position:relative;z-index:1"><?php echo esc_html( $side_cta_btn ); ?></a>
         </div>
       </div>
     </div>

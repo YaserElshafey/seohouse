@@ -65,6 +65,13 @@ add_action( 'acf/init', function () {
             'parent_slug' => 'seohouse-options',
         ] );
 
+        acf_add_options_sub_page( [
+            'page_title'  => 'إعدادات المدونة',
+            'menu_title'  => 'المدونة',
+            'menu_slug'   => 'seohouse-blog',
+            'parent_slug' => 'seohouse-options',
+        ] );
+
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -352,6 +359,31 @@ add_action( 'acf/init', function () {
                     [ 'key' => 'field_faq_a', 'label' => 'الجواب',  'name' => 'answer',   'type' => 'textarea', 'rows' => 3 ],
                 ],
             ],
+            [
+                'key'          => 'field_sp_deliverables',
+                'label'        => 'بطاقات ماذا نقدّم',
+                'name'         => 'service_deliverables',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة بطاقة',
+                'sub_fields'   => [
+                    [ 'key' => 'field_del_title', 'label' => 'العنوان', 'name' => 'del_title', 'type' => 'text' ],
+                    [ 'key' => 'field_del_desc',  'label' => 'الوصف',   'name' => 'del_desc',  'type' => 'textarea', 'rows' => 2 ],
+                ],
+            ],
+            [ 'key' => 'field_sp_bottom_cta',      'label' => 'عنوان CTA أسفل الصفحة',        'name' => 'service_bottom_cta_title', 'type' => 'text' ],
+            [ 'key' => 'field_sp_side_cta_h3',     'label' => 'عنوان بطاقة CTA الجانبية',     'name' => 'service_side_cta_h3',     'type' => 'textarea', 'rows' => 2 ],
+            [ 'key' => 'field_sp_side_cta_desc',   'label' => 'وصف بطاقة CTA الجانبية',      'name' => 'service_side_cta_desc',   'type' => 'textarea', 'rows' => 2 ],
+            [ 'key' => 'field_sp_side_cta_btn',    'label' => 'نص زر CTA الجانبي',            'name' => 'service_side_cta_btn',    'type' => 'text' ],
+            [
+                'key'          => 'field_sp_side_cta_checks',
+                'label'        => 'قائمة مزايا CTA الجانبي',
+                'name'         => 'service_side_cta_checks',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة عنصر',
+                'sub_fields'   => [
+                    [ 'key' => 'field_sc_text', 'label' => 'النص', 'name' => 'sc_text', 'type' => 'text' ],
+                ],
+            ],
         ],
     ] );
 
@@ -460,6 +492,56 @@ add_action( 'acf/init', function () {
                     [ 'key' => 'field_sfaq_a', 'label' => 'الجواب', 'name' => 'answer',   'type' => 'textarea', 'rows' => 3 ],
                 ],
             ],
+            [ 'key' => 'field_ss_why_tag',  'label' => 'تصنيف قسم "لماذا"',       'name' => 'sub_why_tag',  'type' => 'text' ],
+            [ 'key' => 'field_ss_why_h2',   'label' => 'عنوان قسم "لماذا" (سطران)', 'name' => 'sub_why_h2', 'type' => 'textarea', 'rows' => 2 ],
+            [ 'key' => 'field_ss_why_p',    'label' => 'فقرة قسم "لماذا"',         'name' => 'sub_why_p',   'type' => 'textarea', 'rows' => 3 ],
+            [
+                'key'          => 'field_ss_why_items',
+                'label'        => 'قائمة مزايا "لماذا"',
+                'name'         => 'sub_why_items',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة عنصر',
+                'sub_fields'   => [
+                    [ 'key' => 'field_ss_wi_bold', 'label' => 'النص الغامق', 'name' => 'wi_bold', 'type' => 'text' ],
+                    [ 'key' => 'field_ss_wi_tail', 'label' => 'النص الإضافي (اختياري)', 'name' => 'wi_tail', 'type' => 'text' ],
+                ],
+            ],
+            [ 'key' => 'field_ss_tac_tag',  'label' => 'تصنيف قسم المنهجية/التكتيك', 'name' => 'sub_tac_tag',  'type' => 'text' ],
+            [ 'key' => 'field_ss_tac_h2',   'label' => 'عنوان قسم المنهجية',          'name' => 'sub_tac_h2',  'type' => 'text' ],
+            [ 'key' => 'field_ss_tac_desc', 'label' => 'وصف قسم المنهجية',            'name' => 'sub_tac_desc', 'type' => 'textarea', 'rows' => 2 ],
+            [ 'key' => 'field_ss_proc_tag',  'label' => 'تصنيف قسم الخطوات',         'name' => 'sub_proc_tag',  'type' => 'text' ],
+            [ 'key' => 'field_ss_proc_h2',   'label' => 'عنوان قسم الخطوات',         'name' => 'sub_proc_h2',   'type' => 'text' ],
+            [ 'key' => 'field_ss_proc_desc', 'label' => 'وصف قسم الخطوات',           'name' => 'sub_proc_desc', 'type' => 'textarea', 'rows' => 2 ],
+            [
+                'key'          => 'field_ss_proc_steps',
+                'label'        => 'خطوات العملية',
+                'name'         => 'sub_proc_steps',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة خطوة',
+                'sub_fields'   => [
+                    [ 'key' => 'field_ss_ps_n', 'label' => 'الرقم', 'name' => 'ps_n', 'type' => 'text' ],
+                    [ 'key' => 'field_ss_ps_h', 'label' => 'العنوان', 'name' => 'ps_h', 'type' => 'text' ],
+                    [ 'key' => 'field_ss_ps_p', 'label' => 'الوصف القصير', 'name' => 'ps_p', 'type' => 'text' ],
+                ],
+            ],
+            [ 'key' => 'field_ss_faq_tag', 'label' => 'تصنيف قسم الأسئلة', 'name' => 'sub_faq_tag', 'type' => 'text' ],
+            [ 'key' => 'field_ss_faq_h2',  'label' => 'عنوان قسم الأسئلة', 'name' => 'sub_faq_h2',  'type' => 'text' ],
+            [ 'key' => 'field_ss_cta_h3',   'label' => 'عنوان بطاقة CTA الجانبية',    'name' => 'sub_cta_h3',   'type' => 'textarea', 'rows' => 2 ],
+            [ 'key' => 'field_ss_cta_desc', 'label' => 'وصف بطاقة CTA الجانبية',     'name' => 'sub_cta_desc', 'type' => 'textarea', 'rows' => 2 ],
+            [ 'key' => 'field_ss_cta_btn',  'label' => 'نص زر CTA الجانبي',          'name' => 'sub_cta_btn',  'type' => 'text' ],
+            [
+                'key'          => 'field_ss_cta_checks',
+                'label'        => 'قائمة مزايا CTA الجانبي',
+                'name'         => 'sub_cta_checks',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة عنصر',
+                'sub_fields'   => [
+                    [ 'key' => 'field_ss_ck_text', 'label' => 'النص', 'name' => 'ck_text', 'type' => 'text' ],
+                ],
+            ],
+            [ 'key' => 'field_ss_bottom_h2',  'label' => 'عنوان CTA أسفل الصفحة',  'name' => 'sub_bottom_h2', 'type' => 'text' ],
+            [ 'key' => 'field_ss_bottom_p',   'label' => 'وصف CTA أسفل الصفحة',   'name' => 'sub_bottom_p',  'type' => 'textarea', 'rows' => 2 ],
+            [ 'key' => 'field_ss_btn2_txt',   'label' => 'نص الزر الثاني (أسفل)', 'name' => 'sub_btn2_txt',  'type' => 'text' ],
         ],
     ] );
 
@@ -578,6 +660,46 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_stores_hero_pre',  'label' => 'السطر الأول في العنوان',  'name' => 'stores_hero_pre',  'type' => 'text',     'default_value' => 'إنشاء وتصميم' ],
             [ 'key' => 'field_stores_hero_em',   'label' => 'الكلمة المُبرَزة (السطر الثاني)', 'name' => 'stores_hero_em', 'type' => 'text', 'default_value' => 'متجرك الإلكتروني' ],
             [ 'key' => 'field_stores_hero_desc', 'label' => 'وصف الهيرو',              'name' => 'stores_hero_desc', 'type' => 'textarea', 'rows' => 2, 'default_value' => 'من فكرة إلى متجر جاهز للبيع — هيكل تجاري ذكي، تجربة شراء سلسة، وقابلية للنمو على أي منصة (سلة، زد، شوبيفاي، أو ووكومرس).' ],
+            [ 'key' => 'field_stores_why_tag',  'label' => 'تصنيف قسم "لماذا يهم"',        'name' => 'stores_why_tag',  'type' => 'text',     'default_value' => 'لماذا يهم إعداد المتجر' ],
+            [ 'key' => 'field_stores_why_h2',   'label' => 'عنوان قسم "لماذا يهم"',         'name' => 'stores_why_h2',   'type' => 'text',     'default_value' => 'المتجر الإلكتروني ليس مجرد منتجات على صفحة' ],
+            [ 'key' => 'field_stores_why_body',  'label' => 'فقرة قسم "لماذا يهم"',         'name' => 'stores_why_body', 'type' => 'textarea', 'rows' => 3, 'default_value' => 'الفرق بين متجر يبيع ومتجر يستهلك ميزانية إعلانك يبدأ من اللحظة الأولى — هيكل الفئات، خطوات الشراء، الثقة، وسرعة التحميل. كلها قرارات تُتّخذ في مرحلة الإعداد لا بعدها.' ],
+            [
+                'key'          => 'field_stores_why_items',
+                'label'        => 'قائمة مزايا "لماذا يهم"',
+                'name'         => 'stores_why_items',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة عنصر',
+                'sub_fields'   => [
+                    [ 'key' => 'field_stw_bold', 'label' => 'النص الغامق', 'name' => 'wi_bold', 'type' => 'text' ],
+                    [ 'key' => 'field_stw_tail', 'label' => 'النص الإضافي', 'name' => 'wi_tail', 'type' => 'text' ],
+                ],
+            ],
+            [
+                'key'          => 'field_stores_faqs',
+                'label'        => 'الأسئلة الشائعة',
+                'name'         => 'stores_faqs',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة سؤال',
+                'sub_fields'   => [
+                    [ 'key' => 'field_stfaq_q', 'label' => 'السؤال', 'name' => 'question', 'type' => 'text' ],
+                    [ 'key' => 'field_stfaq_a', 'label' => 'الجواب', 'name' => 'answer',   'type' => 'textarea', 'rows' => 3 ],
+                ],
+            ],
+            [ 'key' => 'field_stores_scta_h3',   'label' => 'عنوان بطاقة CTA الجانبية',    'name' => 'stores_side_cta_h3',     'type' => 'textarea', 'rows' => 2, 'default_value' => "جاهز لتجهيز\nمتجرك للبيع؟" ],
+            [ 'key' => 'field_stores_scta_desc',  'label' => 'وصف بطاقة CTA الجانبية',     'name' => 'stores_side_cta_desc',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'احجز استشارة مجانية، وسنناقش معاً المنصة الأنسب وخطة الإطلاق.' ],
+            [ 'key' => 'field_stores_scta_btn',   'label' => 'نص زر CTA الجانبي',           'name' => 'stores_side_cta_btn',    'type' => 'text',     'default_value' => 'احجز استشارة مجانية' ],
+            [
+                'key'          => 'field_stores_scta_checks',
+                'label'        => 'قائمة مزايا CTA الجانبي',
+                'name'         => 'stores_side_cta_checks',
+                'type'         => 'repeater',
+                'button_label' => 'إضافة عنصر',
+                'sub_fields'   => [
+                    [ 'key' => 'field_stck_text', 'label' => 'النص', 'name' => 'sc_text', 'type' => 'text' ],
+                ],
+            ],
+            [ 'key' => 'field_stores_cta_title', 'label' => 'عنوان CTA أسفل الصفحة',       'name' => 'stores_cta_title', 'type' => 'text',     'default_value' => 'ابدأ متجرك الإلكتروني اليوم' ],
+            [ 'key' => 'field_stores_cta_desc',  'label' => 'وصف CTA أسفل الصفحة',         'name' => 'stores_cta_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'من الفكرة إلى أول طلب — نُرافقك في كل خطوة.' ],
         ],
     ] );
 
@@ -593,6 +715,7 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_prod_hero_title', 'label' => 'عنوان الهيرو (سطر في كل سطر)',    'name' => 'prod_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "رفع المنتجات للمتاجر\nباحترافية" ],
             [ 'key' => 'field_prod_hero_em',    'label' => 'الكلمة المُبرَزة',                'name' => 'prod_hero_em',    'type' => 'text',     'default_value' => 'باحترافية' ],
             [ 'key' => 'field_prod_hero_desc',  'label' => 'وصف الهيرو',                      'name' => 'prod_hero_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'ليس مجرّد إدخال بيانات — رفع منظّم واحترافي عبر جميع المنصات مع تحسين لكل منتج يرفع فرصته في الظهور.' ],
+            [ 'key' => 'field_prod_cta_title', 'label' => 'عنوان CTA أسفل الصفحة', 'name' => 'prod_cta_title', 'type' => 'text', 'default_value' => 'جاهز لرفع منتجاتك؟' ],
         ],
     ] );
 
@@ -608,6 +731,10 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_results_hero_title', 'label' => 'عنوان الهيرو (سطر في كل سطر)', 'name' => 'results_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "نتائج من\nمشاريع حقيقية" ],
             [ 'key' => 'field_results_hero_em',    'label' => 'الكلمة المُبرَزة',             'name' => 'results_hero_em',    'type' => 'text',     'default_value' => 'مشاريع حقيقية' ],
             [ 'key' => 'field_results_hero_desc',  'label' => 'وصف الهيرو',                   'name' => 'results_hero_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'لا نتحدث عن نتائج افتراضية — هذه مشاريع نفّذناها لعملاء حقيقيين في قطاعات متنوعة. الأرقام الدقيقة تُضاف بعد موافقة العملاء.' ],
+            [ 'key' => 'field_results_cta_tag',   'label' => 'تصنيف CTA أسفل الصفحة',       'name' => 'results_cta_tag',    'type' => 'text',     'default_value' => 'هل موقعك التالي؟' ],
+            [ 'key' => 'field_results_cta_title', 'label' => 'عنوان CTA أسفل الصفحة',       'name' => 'results_cta_title',  'type' => 'text',     'default_value' => 'لنبني نتائجك معاً' ],
+            [ 'key' => 'field_results_cta_desc',  'label' => 'وصف CTA أسفل الصفحة',         'name' => 'results_cta_desc',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'احجز استشارة مجانية ونضع الأساس لنتيجة تستحق أن تُعرض هنا.' ],
+            [ 'key' => 'field_results_btn2_txt',  'label' => 'نص الزر الثاني في CTA',        'name' => 'results_btn2_txt',   'type' => 'text',     'default_value' => 'تعرّف على السيو' ],
         ],
     ] );
 
@@ -793,6 +920,24 @@ add_action( 'acf/init', function () {
                     [ 'key' => 'field_con_exp_text', 'label' => 'النص', 'name' => 'exp_text', 'type' => 'text' ],
                 ],
             ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // Blog Options Fields
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_blog_options',
+        'title'    => 'إعدادات المدونة',
+        'location' => [ [ [ 'param' => 'options_page', 'operator' => '==', 'value' => 'seohouse-blog' ] ] ],
+        'fields'   => [
+            [ 'key' => 'field_blog_hero_tag',   'label' => 'تصنيف هيرو المدونة',               'name' => 'blog_hero_tag',   'type' => 'text',     'default_value' => 'المدونة' ],
+            [ 'key' => 'field_blog_hero_title', 'label' => 'عنوان هيرو المدونة (سطر في كل سطر)', 'name' => 'blog_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "رؤى وأدوات\nتبني موقعك" ],
+            [ 'key' => 'field_blog_hero_em',    'label' => 'الكلمة المُبرَزة في عنوان المدونة', 'name' => 'blog_hero_em',   'type' => 'text',     'default_value' => 'تبني موقعك' ],
+            [ 'key' => 'field_blog_hero_desc',  'label' => 'وصف هيرو المدونة',                 'name' => 'blog_hero_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'مقالات متخصصة في السيو والتجارة الإلكترونية من فريق سيو هاوس — مكتوبة للتطبيق، لا للقراءة فقط.' ],
+            [ 'key' => 'field_blog_sb_cta_title', 'label' => 'عنوان بطاقة CTA في الشريط الجانبي', 'name' => 'blog_sidebar_cta_title', 'type' => 'text',     'default_value' => 'استشارة مجانية' ],
+            [ 'key' => 'field_blog_sb_cta_desc',  'label' => 'وصف بطاقة CTA في الشريط الجانبي',  'name' => 'blog_sidebar_cta_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'هل تريد تحسين ترتيب موقعك؟ احجز 30 دقيقة معنا مجاناً.' ],
+            [ 'key' => 'field_blog_sb_cta_btn',   'label' => 'نص زر CTA في الشريط الجانبي',     'name' => 'blog_sidebar_cta_btn',   'type' => 'text',     'default_value' => 'احجز الآن' ],
         ],
     ] );
 

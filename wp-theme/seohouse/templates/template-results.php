@@ -150,13 +150,18 @@ get_template_part( 'template-parts/layout/page-hero', null, [
 </section>
 
 <?php
+$results_cta_tag   = sh_field( 'results_cta_tag',   null, 'هل موقعك التالي؟' );
+$results_cta_title = sh_field( 'results_cta_title', null, 'لنبني نتائجك معاً' );
+$results_cta_desc  = sh_field( 'results_cta_desc',  null, 'احجز استشارة مجانية ونضع الأساس لنتيجة تستحق أن تُعرض هنا.' );
+$results_btn2_txt  = sh_field( 'results_btn2_txt',  null, 'تعرّف على السيو' );
+
 get_template_part( 'template-parts/layout/cta-banner', null, [
-    'tag'         => 'هل موقعك التالي؟',
-    'title'       => 'لنبني نتائجك معاً',
-    'description' => 'احجز استشارة مجانية ونضع الأساس لنتيجة تستحق أن تُعرض هنا.',
+    'tag'         => $results_cta_tag,
+    'title'       => $results_cta_title,
+    'description' => $results_cta_desc,
     'buttons'     => [
         [ 'text' => 'احجز استشارة مجانية', 'url' => sh_page_url( 'contact' ),       'class' => 'btn-w lg' ],
-        [ 'text' => 'تعرّف على السيو',      'url' => sh_page_url( 'services/seo' ), 'class' => 'btn-g lg' ],
+        [ 'text' => $results_btn2_txt,      'url' => sh_page_url( 'services/seo' ), 'class' => 'btn-g lg' ],
     ],
 ] );
 ?>

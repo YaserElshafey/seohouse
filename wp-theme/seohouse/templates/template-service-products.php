@@ -101,7 +101,7 @@ while ( have_posts() ) : the_post();
 <?php
 get_template_part( 'template-parts/layout/cta-banner', null, [
     'tag'   => 'ابدأ الآن',
-    'title' => 'جاهز لرفع منتجاتك؟',
+    'title' => sh_field( 'prod_cta_title', null, 'جاهز لرفع منتجاتك؟' ),
 ] );
 ?>
 
