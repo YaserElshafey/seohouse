@@ -129,7 +129,14 @@ get_template_part( 'template-parts/layout/page-hero', null, [
       <!-- Info panel -->
       <div class="info-panel">
 
-        <!-- Booking calendar card -->
+        <!-- Booking via Calendly -->
+        <?php
+        $_cal_url = trim( sh_option( 'calendly_url', '' ) );
+        if ( $_cal_url ) {
+            wp_enqueue_script( 'calendly-widget', 'https://assets.calendly.com/assets/external/widget.js', [], null, true );
+        }
+        ?>
+        <?php if ( $_cal_url ) : ?>
         <div class="info-card sr d1">
           <div class="info-head">
             <div class="info-ico">
@@ -140,43 +147,14 @@ get_template_part( 'template-parts/layout/page-hero', null, [
               <div class="info-sub"><?php echo esc_html( $consult_duration ); ?> · Google Meet · مجانية</div>
             </div>
           </div>
-
-          <div class="mini-cal">
-            <div class="cal-nav">
-              <button class="cal-a" id="calPrev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
-              <span class="cal-m" id="calMonth"></span>
-              <button class="cal-a" id="calNext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
-            </div>
-            <div class="cal-dh">
-              <span>أح</span><span>إث</span><span>ثل</span><span>أر</span><span>خم</span><span>جم</span><span>سب</span>
-            </div>
-            <div class="cal-days" id="calDays"></div>
+          <div class="calendly-wrap">
+            <div class="calendly-inline-widget"
+                 data-url="<?php echo esc_url( $_cal_url ); ?>"
+                 data-resize="true"
+                 style="min-width:280px;height:580px"></div>
           </div>
-
-          <div class="time-slots">
-            <button class="ts">09:00 ص</button>
-            <button class="ts">10:00 ص</button>
-            <button class="ts taken">11:00 ص</button>
-            <button class="ts">12:00 م</button>
-            <button class="ts">01:00 م</button>
-            <button class="ts taken">02:00 م</button>
-            <button class="ts">03:00 م</button>
-            <button class="ts">04:00 م</button>
-            <button class="ts">05:00 م</button>
-          </div>
-
-          <div class="bk-fields">
-            <input class="form-input" type="text"  id="bkName"  placeholder="الاسم *" autocomplete="name">
-            <input class="form-input" type="tel"   id="bkPhone" placeholder="الجوال *" autocomplete="tel">
-            <input class="form-input" type="email" id="bkEmail" placeholder="البريد الإلكتروني (لتأكيد الحجز)" autocomplete="email">
-          </div>
-          <p id="bkError" class="form-error"></p>
-
-          <button class="bc-btn" id="bookBtn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            تأكيد الحجز
-          </button>
         </div>
+        <?php endif; ?>
 
         <!-- Contact details card -->
         <div class="info-card sr d2">
