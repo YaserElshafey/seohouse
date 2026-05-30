@@ -1012,6 +1012,14 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_con_success_title', 'label' => 'عنوان رسالة الإرسال الناجح', 'name' => 'contact_success_title', 'type' => 'text',     'default_value' => 'تم الإرسال بنجاح!' ],
             [ 'key' => 'field_con_success_desc',  'label' => 'نص رسالة الإرسال الناجح',    'name' => 'contact_success_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'شكراً على تواصلك — سيتصل بك أحد متخصصينا خلال 24 ساعة لتحديد موعد الاستشارة.' ],
             [ 'key' => 'field_con_cal_title',     'label' => 'عنوان بطاقة الحجز',          'name' => 'contact_cal_title',     'type' => 'text',     'default_value' => 'احجز وقتك مباشرةً' ],
+            [
+                'key'          => 'field_con_calendly_url',
+                'label'        => 'رابط Calendly للحجز',
+                'name'         => 'calendly_url',
+                'type'         => 'url',
+                'placeholder'  => 'https://calendly.com/username/30min',
+                'instructions' => 'أدخل رابط الحجز من Calendly. إذا كان الحقل فارغاً، لن تظهر بطاقة الحجز.',
+            ],
             [ 'key' => 'field_con_expect_title',  'label' => 'عنوان قسم "ماذا تتوقع"',     'name' => 'contact_expect_title',  'type' => 'text',     'default_value' => 'ماذا تتوقع بعد التواصل' ],
             [
                 'key'          => 'field_con_expect_items',
