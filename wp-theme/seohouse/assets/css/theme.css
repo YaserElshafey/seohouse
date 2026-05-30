@@ -568,6 +568,9 @@
 .feat-cta-desc{font-size:12px;color:rgba(255,255,255,.4);line-height:1.6}
 .feat-cta-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:#7b90ff;white-space:nowrap;padding-bottom:4px}
 
+/* Why website matters — 2-col layout (desktop) */
+.why-web-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+
 /* Base icon box for svc-cards */
 .svc-ico{width:46px;height:46px;border-radius:12px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin-bottom:16px;flex-shrink:0;transition:background .22s}
 .svc-card:hover .svc-ico{background:var(--blue)}
@@ -590,10 +593,16 @@
   .svc-stack{grid-template-rows:auto;grid-template-columns:1fr}
   .why-grid{grid-template-columns:1fr}
   .pbtns{flex-direction:column;align-items:center}
+  .why-web-layout{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:860px){
+  .why-web-layout{gap:28px}
 }
 @media(max-width:600px){
   .pbtns .btn{width:100%;justify-content:center}
   .feat-cta-block{flex-direction:column;align-items:flex-start}
+  .why-web-layout{gap:20px}
+  .why-web-layout .btn{width:100%;justify-content:center}
 }
 
 /* ─ SEO sub-service — quality vs quantity ─ */
