@@ -153,8 +153,8 @@ if ( empty( $process_steps ) ) {
 .wb-t span{font-size:11px;color:var(--muted)}
 /* Services */
 #services{padding-block:var(--sec);background:var(--surface);position:relative;overflow:hidden}
-.svc-layout{display:grid;grid-template-columns:1.15fr 1fr;gap:14px;position:relative;z-index:1;align-items:stretch}
-.svc-stack{display:grid;grid-template-rows:repeat(3,1fr);gap:14px}
+.svc-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;position:relative;z-index:1;align-items:stretch}
+.svc-stack{display:grid;grid-template-rows:repeat(3,1fr);gap:18px}
 .svc-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:24px 26px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:all .3s var(--fast)}
 .svc-card::after{content:'';position:absolute;top:0;inset-inline:0;height:3px;background:linear-gradient(90deg,var(--blue-d),var(--blue));transform:scaleX(0);transform-origin:right;transition:transform .3s var(--fast)}
 .svc-card:hover{box-shadow:var(--sh-md);border-color:transparent;transform:translateY(-4px)}.svc-card:hover::after{transform:scaleX(1)}
@@ -174,15 +174,14 @@ if ( empty( $process_steps ) ) {
 .feat-cta-desc{font-size:12px;color:rgba(255,255,255,.6);line-height:1.55;margin:0}
 .feat-cta-link{display:inline-flex;align-items:center;gap:7px;font-size:13.5px;font-weight:800;color:#fff;background:var(--blue);padding:11px 18px;border-radius:var(--r1);transition:all .22s;text-decoration:none}
 .feat-cta-link:hover{background:var(--blue-d);gap:11px}
-.svc-stack .svc-card{padding:22px 24px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;gap:4px 16px;align-items:center}
-.svc-stack .svc-card .svc-ico{grid-row:span 2;align-self:start;margin-top:4px;margin-bottom:0}
+.svc-stack .svc-card{padding:22px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;gap:4px 16px;align-items:center}
+.svc-stack .svc-card .svc-ico{grid-row:span 2;align-self:center;margin-top:0;margin-bottom:0;width:40px;height:40px;border-radius:10px}
+.svc-stack .svc-card .svc-ico svg{width:18px;height:18px}
 .svc-stack .svc-card h3{margin-bottom:0;grid-column:2}
 .svc-stack .svc-card p{margin-bottom:0;grid-column:2;font-size:12.5px;line-height:1.65}
-.svc-stack .svc-card .svc-link{display:none}
-.svc-stack .svc-card::after{display:none}
-.svc-stack .svc-card .svc-arrow{position:absolute;top:50%;inset-inline-start:22px;transform:translateY(-50%);opacity:.4;transition:all .22s}
-.svc-stack .svc-card:hover .svc-arrow{opacity:1;inset-inline-start:14px;color:var(--blue)}
-.svc-stack .svc-card:hover{box-shadow:var(--sh-sm);border-color:rgba(30,46,245,.25);transform:translateX(-3px)}
+.svc-stack .svc-card .svc-link,.svc-stack .svc-card .svc-arrow{display:none}
+.svc-stack .svc-card::after{display:block}
+.svc-stack .svc-card:hover{box-shadow:var(--sh-md);border-color:transparent;transform:translateY(-3px)}
 .svc-ico{width:46px;height:46px;border-radius:12px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin-bottom:16px;flex-shrink:0;transition:background .22s}
 .svc-card:hover .svc-ico{background:var(--blue)}.svc-card:hover .svc-ico svg{stroke:#fff}
 .svc-ico svg{stroke:var(--blue);transition:stroke .22s;width:22px;height:22px}
