@@ -129,14 +129,15 @@ get_template_part( 'template-parts/layout/page-hero', null, [
       <!-- Info panel -->
       <div class="info-panel">
 
-        <!-- Booking via Calendly -->
+        <!-- Booking via Calendly embed -->
         <?php
-        $_cal_url = trim( sh_option( 'calendly_url', '' ) );
-        if ( $_cal_url ) {
+        $_cal_embed = trim( sh_option( 'calendly_embed', '' ) );
+        $_show_cal  = $_cal_embed && strpos( $_cal_embed, 'calendly.com' ) !== false;
+        if ( $_show_cal ) {
             wp_enqueue_script( 'calendly-widget', 'https://assets.calendly.com/assets/external/widget.js', [], null, true );
         }
         ?>
-        <?php if ( $_cal_url ) : ?>
+        <?php if ( $_show_cal ) : ?>
         <div class="info-card sr d1">
           <div class="info-head">
             <div class="info-ico">
@@ -148,10 +149,25 @@ get_template_part( 'template-parts/layout/page-hero', null, [
             </div>
           </div>
           <div class="calendly-wrap">
-            <div class="calendly-inline-widget"
-                 data-url="<?php echo esc_url( $_cal_url ); ?>"
-                 data-resize="true"
-                 style="min-width:280px;height:580px"></div>
+            <?php
+            // Strip <script> tags from embed (widget.js already enqueued above).
+            $strip = preg_replace( '/<script\b[^>]*>.*?<\/script>/is', '', $_cal_embed );
+            echo wp_kses( $strip, [
+                'div' => [
+                    'class'            => true,
+                    'style'            => true,
+                    'id'               => true,
+                    'data-url'         => true,
+                    'data-resize'      => true,
+                    'data-prefill'     => true,
+                    'data-utm-source'  => true,
+                    'data-utm-medium'  => true,
+                    'data-utm-campaign'=> true,
+                    'data-utm-content' => true,
+                    'data-utm-term'    => true,
+                ],
+            ] );
+            ?>
           </div>
         </div>
         <?php endif; ?>
