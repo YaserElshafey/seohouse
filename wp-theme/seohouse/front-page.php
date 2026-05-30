@@ -35,8 +35,10 @@ $display_headline = $hero_emphasis
     : esc_html( $hero_headline );
 $display_headline = nl2br( $display_headline );
 
-// Default why feature points
-if ( empty( $hp_why_points ) ) {
+// Default why feature points — also fall back if ACF rows exist but are all empty
+$_why_has_content = ! empty( $hp_why_points ) &&
+    ! empty( array_filter( array_column( (array) $hp_why_points, 'wp_title' ) ) );
+if ( ! $_why_has_content ) {
     $hp_why_points = [
         [ 'wp_title' => 'تقارير واضحة',       'wp_desc' => 'تقرير شهري تفصيلي بمستوى الأداء' ],
         [ 'wp_title' => 'نتائج قابلة للقياس',  'wp_desc' => 'كل قرار مبني على بيانات حقيقية' ],
@@ -121,8 +123,9 @@ if ( empty( $process_steps ) ) {
 .wpt-ico{width:34px;height:34px;border-radius:9px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
 .wpt:hover .wpt-ico{background:var(--blue)}.wpt:hover .wpt-ico svg{stroke:#fff}
 .wpt-ico svg{stroke:var(--blue);transition:stroke .2s;width:17px;height:17px}
+.wpt-t{flex:1;min-width:0}
 .wpt-t strong{display:block;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:3px;line-height:1.25}
-.wpt-t p{font-size:12px;color:var(--ink-2);line-height:1.6}
+.wpt-t p{font-size:12px;color:var(--ink-2);line-height:1.6;margin:0}
 .why-vis{position:relative;background:transparent;padding:0;min-height:auto;overflow:visible;display:block}
 .why-vis::before{display:none}
 .why-card{background:var(--navy-2);border-radius:var(--r4);padding:30px;overflow:hidden;position:relative}
