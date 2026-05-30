@@ -41,8 +41,19 @@ if ( ! isset( $content_width ) ) {
     $content_width = 1200;
 }
 
-// ── Permalink flush on theme switch ───────────────────────────────
-add_action( 'after_switch_theme', 'flush_rewrite_rules' );
+// ── Permalink structure: /blog/%postname%/ ────────────────────────
+add_action( 'after_switch_theme', function () {
+    update_option( 'permalink_structure', '/blog/%postname%/' );
+    flush_rewrite_rules();
+} );
+
+// One-time setter for already-active installs
+add_action( 'admin_init', function () {
+    if ( get_option( 'seohouse_permalink_v1' ) ) return;
+    update_option( 'permalink_structure', '/blog/%postname%/' );
+    flush_rewrite_rules();
+    update_option( 'seohouse_permalink_v1', '1' );
+} );
 
 // ── Excerpt length ────────────────────────────────────────────────
 add_filter( 'excerpt_length', fn() => 28 );
