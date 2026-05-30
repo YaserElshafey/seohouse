@@ -126,7 +126,47 @@ add_action( 'init', function () {
         'show_in_rest'        => true,
     ] );
 
+    // ── Bookings (contact page form submissions) ──────────────────
+    register_post_type( 'sh_booking', [
+        'labels'       => [
+            'name'          => 'الحجوزات',
+            'singular_name' => 'حجز',
+            'all_items'     => 'جميع الحجوزات',
+            'edit_item'     => 'تفاصيل الحجز',
+            'not_found'     => 'لا توجد حجوزات بعد',
+        ],
+        'public'       => false,
+        'show_ui'      => true,
+        'show_in_menu' => true,
+        'supports'     => [ 'title' ],
+        'menu_icon'    => 'dashicons-calendar-alt',
+        'capabilities' => [ 'create_posts' => 'do_not_allow' ],
+        'map_meta_cap' => true,
+    ] );
+
 } );
+
+// ── Booking admin columns ─────────────────────────────────────────
+add_filter( 'manage_sh_booking_posts_columns', function ( $cols ) {
+    return [
+        'cb'             => $cols['cb'],
+        'title'          => 'الاسم',
+        'bk_phone'       => 'الجوال',
+        'bk_email'       => 'البريد',
+        'bk_date'        => 'التاريخ',
+        'bk_time'        => 'الوقت',
+        'date_submitted' => 'وقت الإرسال',
+    ];
+} );
+
+add_action( 'manage_sh_booking_posts_custom_column', function ( $col, $post_id ) {
+    if ( in_array( $col, [ 'bk_phone', 'bk_email', 'bk_date', 'bk_time' ], true ) ) {
+        echo esc_html( get_post_meta( $post_id, $col, true ) );
+    }
+    if ( 'date_submitted' === $col ) {
+        echo esc_html( get_the_date( 'Y-m-d H:i', $post_id ) );
+    }
+}, 10, 2 );
 
 // ════════════════════════════════════════════════════════════════
 // Taxonomies

@@ -180,13 +180,69 @@
   function initBookBtn() {
     var btn = document.getElementById('bookBtn');
     if (!btn) return;
+    var errEl = document.getElementById('bkError');
+
     btn.addEventListener('click', function () {
-      btn.textContent = '✓ تم الحجز — ستصلك رسالة التأكيد';
-      btn.style.background = 'var(--green)';
-      setTimeout(function () {
-        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>تأكيد الحجز';
-        btn.style.background = '';
-      }, 3500);
+      if (errEl) errEl.textContent = '';
+
+      var selDate = '';
+      if (calSelectedDay > 0) {
+        selDate = months[calMonth] + ' ' + calSelectedDay + ', ' + calYear;
+      }
+      var selTs  = document.querySelector('.ts.sel');
+      var selTime = selTs ? selTs.textContent.trim() : '';
+
+      var bkName  = document.getElementById('bkName');
+      var bkPhone = document.getElementById('bkPhone');
+      var bkEmail = document.getElementById('bkEmail');
+
+      if (!selDate || !selTime) {
+        if (errEl) errEl.textContent = 'يرجى اختيار اليوم والوقت أولاً';
+        return;
+      }
+      if (!bkName || !bkName.value.trim()) {
+        if (errEl) errEl.textContent = 'يرجى إدخال الاسم';
+        return;
+      }
+      if (!bkPhone || !bkPhone.value.trim()) {
+        if (errEl) errEl.textContent = 'يرجى إدخال رقم الجوال';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.style.opacity = '0.7';
+
+      var data = new FormData();
+      data.append('action',   'sh_booking');
+      data.append('nonce',    (window.SeohouseData || {}).nonce || '');
+      data.append('bk_name',  bkName.value.trim());
+      data.append('bk_phone', bkPhone.value.trim());
+      data.append('bk_email', bkEmail ? bkEmail.value.trim() : '');
+      data.append('bk_date',  selDate);
+      data.append('bk_time',  selTime);
+
+      fetch((window.SeohouseData || {}).ajaxUrl || '/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        body: data,
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res.success) {
+            btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> تم الحجز — ستصلك رسالة التأكيد';
+            btn.style.background = 'var(--green)';
+            btn.style.opacity = '';
+          } else {
+            var msg = res.data && res.data.msg ? res.data.msg : 'حدث خطأ، يرجى المحاولة مرة أخرى';
+            if (errEl) errEl.textContent = msg;
+            btn.disabled = false;
+            btn.style.opacity = '';
+          }
+        })
+        .catch(function () {
+          if (errEl) errEl.textContent = 'حدث خطأ في الاتصال، يرجى المحاولة مرة أخرى';
+          btn.disabled = false;
+          btn.style.opacity = '';
+        });
     });
   }
 
@@ -194,12 +250,39 @@
   function initContactForm() {
     var form = document.getElementById('conForm');
     if (!form) return;
+    var errEl = document.getElementById('conFormError');
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var wrap = document.getElementById('formWrap');
-      var success = document.getElementById('formSuccess');
-      if (wrap) wrap.style.display = 'none';
-      if (success) success.style.display = 'block';
+      var btn = form.querySelector('.form-submit');
+      if (btn) { btn.disabled = true; btn.style.opacity = '0.7'; }
+      if (errEl) errEl.textContent = '';
+
+      var data = new FormData(form);
+      data.append('action', 'sh_contact');
+      data.append('nonce',  (window.SeohouseData || {}).nonce || '');
+
+      fetch((window.SeohouseData || {}).ajaxUrl || '/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        body: data,
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (res.success) {
+            var wrap    = document.getElementById('formWrap');
+            var success = document.getElementById('formSuccess');
+            if (wrap) wrap.style.display = 'none';
+            if (success) success.style.display = 'block';
+          } else {
+            var msg = res.data && res.data.msg ? res.data.msg : 'حدث خطأ، يرجى المحاولة مرة أخرى';
+            if (errEl) errEl.textContent = msg;
+            if (btn) { btn.disabled = false; btn.style.opacity = ''; }
+          }
+        })
+        .catch(function () {
+          if (errEl) errEl.textContent = 'حدث خطأ في الاتصال، يرجى المحاولة مرة أخرى';
+          if (btn) { btn.disabled = false; btn.style.opacity = ''; }
+        });
     });
   }
 
