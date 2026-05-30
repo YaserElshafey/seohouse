@@ -232,8 +232,8 @@ svg{display:block;flex-shrink:0}
 .burger.on span:nth-child(1){transform:rotate(45deg) translate(4px,4px);width:20px}
 .burger.on span:nth-child(2){opacity:0}
 .burger.on span:nth-child(3){transform:rotate(-45deg) translate(4px,-4px);width:20px}
-.mob{display:none;flex-direction:column;background:#fff;border-top:1px solid var(--line);padding:6px 0 18px;max-height:0;overflow:hidden;transition:max-height .38s var(--fast)}
-.mob.on{max-height:900px}
+.mob{display:none;flex-direction:column;background:#fff;max-height:0;overflow:hidden;transition:max-height .38s var(--fast)}
+.mob.on{max-height:900px;border-top:1px solid var(--line);padding-bottom:18px}
 .mob a{display:block;padding:10px var(--pad);font-size:14px;font-weight:600;color:var(--ink);transition:background .16s,color .16s}
 .mob a:hover{background:var(--blue-50);color:var(--blue)}
 .mob .mob-sub{padding-inline-start:calc(var(--pad) + 16px);font-size:13px;color:var(--muted)}
