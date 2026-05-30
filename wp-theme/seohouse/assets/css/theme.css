@@ -842,6 +842,11 @@
   .svc-hub-card{padding:26px 22px}
   .faq-cta-layout{gap:32px}
   .ind-grid{grid-template-columns:repeat(2,1fr)}
+  /* Reduce large column gaps on stacked two-col grids */
+  .why-grid{gap:32px}
+  .why-com-grid{gap:32px}
+  .rep-layout{gap:28px}
+  .con-layout{gap:28px}
   /* Typography polish — Arabic heading line-heights */
   .svc-hero-h1{line-height:1.2;letter-spacing:-.015em}
   .post-body h1{line-height:1.22;letter-spacing:-.015em}
@@ -871,6 +876,11 @@
   .rep-mock{padding:18px}
   /* Sector challenges */
   .sector-challenges{grid-template-columns:1fr}
+  /* Tighter column gaps on phone */
+  .why-grid{gap:20px}
+  .why-com-grid{gap:20px}
+  .rep-layout{gap:20px}
+  .con-layout{gap:20px}
   /* About grid text */
   .about-grid{gap:32px}
   /* opp-card reduce padding */
