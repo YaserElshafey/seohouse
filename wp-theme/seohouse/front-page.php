@@ -122,7 +122,7 @@ if ( empty( $process_steps ) ) {
 .wpt:hover .wpt-ico{background:var(--blue)}.wpt:hover .wpt-ico svg{stroke:#fff}
 .wpt-ico svg{stroke:var(--blue);transition:stroke .2s;width:17px;height:17px}
 .wpt-t strong{display:block;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:3px;line-height:1.25}
-.wpt-t p{font-size:12px;color:var(--muted);line-height:1.6}
+.wpt-t p{font-size:12px;color:var(--ink-2);line-height:1.6}
 .why-vis{position:relative;background:transparent;padding:0;min-height:auto;overflow:visible;display:block}
 .why-vis::before{display:none}
 .why-card{background:var(--navy-2);border-radius:var(--r4);padding:30px;overflow:hidden;position:relative}
