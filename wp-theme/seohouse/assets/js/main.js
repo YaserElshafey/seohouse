@@ -5,6 +5,7 @@
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
     initNav();
+    initMobAcc();
     initSR();
     initFAQ();
     initFilters();
@@ -29,6 +30,11 @@
         mob.classList.remove('on');
         document.body.classList.remove('mob-open');
         if (nav && window.scrollY <= 40) nav.classList.remove('solid');
+        document.querySelectorAll('.mob-acc').forEach(function (acc) {
+          acc.classList.remove('open');
+          var tog = acc.querySelector('.mob-acc-tog');
+          if (tog) tog.setAttribute('aria-expanded', 'false');
+        });
       }
       burger.addEventListener('click', function () {
         var isOpen = mob.classList.toggle('on');
@@ -77,6 +83,19 @@
         item.classList.add('act');
         var sub = document.getElementById(item.dataset.sub);
         if (sub) sub.classList.add('show');
+      });
+    });
+  }
+
+  /* ── Mobile accordion menu ── */
+  function initMobAcc() {
+    document.querySelectorAll('.mob-acc-tog').forEach(function (tog) {
+      tog.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var acc = tog.closest('.mob-acc');
+        if (!acc) return;
+        var isOpen = acc.classList.toggle('open');
+        tog.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       });
     });
   }

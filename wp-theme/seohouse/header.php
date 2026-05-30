@@ -232,24 +232,52 @@ if ( ! $_blog_url ) {
     <!-- Mobile Menu -->
     <div class="mob" id="mob">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>">الرئيسية</a>
-      <div class="mob-head">تحسين محركات البحث</div>
-      <a href="<?php echo esc_url( sh_page_url( 'services/seo' ) ); ?>" class="mob-sub">تحسين محركات البحث</a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/seo/backlinks' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">بناء الباك لينك</a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/seo/content' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">كتابة المحتوى</a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/seo/consulting' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">استشارات الأداء</a>
-      <div class="mob-head">إنشاء وتصميم مواقع</div>
-      <a href="<?php echo esc_url( sh_page_url( 'services/web-design' ) ); ?>" class="mob-sub">نظرة عامة</a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/web-design/wordpress' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">تصميم ووردبريس</a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/web-design/webflow' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">تصميم ويب فلو</a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/web-design/react-next' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">تصميم رياكت ونكست</a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/web-design/custom-dev' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">برمجة مواقع خاصة</a>
-      <div class="mob-head">إنشاء وتصميم متاجر</div>
-      <a href="<?php echo esc_url( sh_page_url( 'services/stores' ) ); ?>" class="mob-sub">نظرة عامة</a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/stores/shopify' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">متاجر شوبيفاي</a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/stores/salla' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">متاجر سلة</a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/stores/zid' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">متاجر زد</a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/stores/woocommerce' ) ); ?>" class="mob-sub" style="padding-inline-start:calc(var(--pad) + 16px)">متاجر ووكومرس</a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/products' ) ); ?>" class="mob-sub">رفع المنتجات</a>
+
+      <div class="mob-acc">
+        <div class="mob-acc-h">
+          <a href="<?php echo esc_url( sh_page_url( 'services/seo' ) ); ?>" class="mob-acc-link">تحسين محركات البحث</a>
+          <button class="mob-acc-tog" aria-expanded="false" aria-label="عرض الخدمات الفرعية">
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="mob-acc-body">
+          <a href="<?php echo esc_url( sh_page_url( 'services/seo/backlinks' ) ); ?>" class="mob-sub">بناء الباك لينك</a>
+          <a href="<?php echo esc_url( sh_page_url( 'services/seo/content' ) ); ?>" class="mob-sub">كتابة المحتوى</a>
+          <a href="<?php echo esc_url( sh_page_url( 'services/seo/consulting' ) ); ?>" class="mob-sub">استشارات الأداء</a>
+        </div>
+      </div>
+
+      <div class="mob-acc">
+        <div class="mob-acc-h">
+          <a href="<?php echo esc_url( sh_page_url( 'services/web-design' ) ); ?>" class="mob-acc-link">إنشاء وتصميم مواقع</a>
+          <button class="mob-acc-tog" aria-expanded="false" aria-label="عرض الخدمات الفرعية">
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="mob-acc-body">
+          <a href="<?php echo esc_url( sh_page_url( 'services/web-design/wordpress' ) ); ?>" class="mob-sub">تصميم ووردبريس</a>
+          <a href="<?php echo esc_url( sh_page_url( 'services/web-design/webflow' ) ); ?>" class="mob-sub">تصميم ويب فلو</a>
+          <a href="<?php echo esc_url( sh_page_url( 'services/web-design/react-next' ) ); ?>" class="mob-sub">تصميم رياكت ونكست</a>
+          <a href="<?php echo esc_url( sh_page_url( 'services/web-design/custom-dev' ) ); ?>" class="mob-sub">برمجة مواقع خاصة</a>
+        </div>
+      </div>
+
+      <div class="mob-acc">
+        <div class="mob-acc-h">
+          <a href="<?php echo esc_url( sh_page_url( 'services/stores' ) ); ?>" class="mob-acc-link">إنشاء وتصميم متاجر</a>
+          <button class="mob-acc-tog" aria-expanded="false" aria-label="عرض الخدمات الفرعية">
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="mob-acc-body">
+          <a href="<?php echo esc_url( sh_page_url( 'services/stores/shopify' ) ); ?>" class="mob-sub">متاجر شوبيفاي</a>
+          <a href="<?php echo esc_url( sh_page_url( 'services/stores/salla' ) ); ?>" class="mob-sub">متاجر سلة</a>
+          <a href="<?php echo esc_url( sh_page_url( 'services/stores/zid' ) ); ?>" class="mob-sub">متاجر زد</a>
+          <a href="<?php echo esc_url( sh_page_url( 'services/stores/woocommerce' ) ); ?>" class="mob-sub">متاجر ووكومرس</a>
+          <a href="<?php echo esc_url( sh_page_url( 'services/products' ) ); ?>" class="mob-sub">رفع المنتجات</a>
+        </div>
+      </div>
+
       <a href="<?php echo esc_url( sh_page_url( 'results' ) ); ?>">نتائج الأعمال</a>
       <a href="<?php echo esc_url( sh_page_url( 'about' ) ); ?>">عن الشركة</a>
       <a href="<?php echo esc_url( sh_page_url( 'team' ) ); ?>">فريق العمل</a>
