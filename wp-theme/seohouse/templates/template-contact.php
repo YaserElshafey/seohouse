@@ -108,6 +108,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
                 أرسل الطلب
               </button>
+              <p id="conFormError" class="form-error"></p>
               <p class="form-note"><?php echo esc_html( $contact_form_note ); ?></p>
             </form>
             <?php else :
@@ -163,6 +164,13 @@ get_template_part( 'template-parts/layout/page-hero', null, [
             <button class="ts">04:00 م</button>
             <button class="ts">05:00 م</button>
           </div>
+
+          <div class="bk-fields">
+            <input class="form-input" type="text"  id="bkName"  placeholder="الاسم *" autocomplete="name">
+            <input class="form-input" type="tel"   id="bkPhone" placeholder="الجوال *" autocomplete="tel">
+            <input class="form-input" type="email" id="bkEmail" placeholder="البريد الإلكتروني (لتأكيد الحجز)" autocomplete="email">
+          </div>
+          <p id="bkError" class="form-error"></p>
 
           <button class="bc-btn" id="bookBtn">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
