@@ -60,7 +60,7 @@ if ( empty( $process_steps ) ) {
 
 <style>
 /* ── Hero ── */
-#hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--navy);overflow:hidden}
+#hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--navy);overflow:hidden;clip-path:inset(0)}
 .h-bg{position:absolute;inset:0;pointer-events:none}
 .h-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,#000 10%,transparent 75%)}
 .h-g1{position:absolute;inset-inline-start:-200px;bottom:-100px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.22),transparent 65%);filter:blur(60px)}
