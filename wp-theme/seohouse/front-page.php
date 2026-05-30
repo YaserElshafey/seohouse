@@ -252,10 +252,11 @@ if ( empty( $process_steps ) ) {
   .art-grid{grid-template-columns:1fr}
   .why-pts{gap:10px}
   .blog-hrow{gap:12px}
+  .h1{line-height:1.22;letter-spacing:-.015em}
 }
 @media(max-width:600px){
   .hero-grid{padding-block:clamp(96px,12vh,120px) 44px}
-  .h1{font-size:clamp(34px,9vw,48px)}
+  .h1{font-size:clamp(34px,9vw,48px);line-height:1.25;letter-spacing:-.01em}
   .h-btns{flex-direction:column}
   .h-btns .btn{justify-content:center;width:100%}
   .h-kicker{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:18px;margin-top:24px;border-top:1px solid rgba(255,255,255,.07)}
@@ -269,10 +270,11 @@ if ( empty( $process_steps ) ) {
   .p-step{flex-direction:row;text-align:right;gap:16px;padding:16px 0;border-block-end:1px solid rgba(255,255,255,.06)}
   .p-step:last-child{border-block-end:none}
   .p-num{flex-shrink:0;margin-bottom:0;width:40px;height:40px;font-size:13px}
-  .p-step h3{font-size:14px;margin-bottom:4px}
-  .p-step p{max-width:100%;font-size:12px}
-  .svc-card.feat h3{font-size:20px}
-  .svc-card.feat .feat-p{font-size:13.5px}
+  .p-step h3{font-size:14px;margin-bottom:4px;line-height:1.45}
+  .p-step p{max-width:100%;font-size:12px;line-height:1.78}
+  .svc-card.feat h3{font-size:20px;line-height:1.28}
+  .svc-card.feat .feat-p{font-size:13.5px;line-height:1.9}
+  .wpt-t p{font-size:13px;line-height:1.65}
   .feat-cta-block{padding:14px 16px;gap:10px}
   .cta-btns{flex-direction:column;align-items:center}
   .cta-pills{flex-direction:column;align-items:center;gap:8px}
