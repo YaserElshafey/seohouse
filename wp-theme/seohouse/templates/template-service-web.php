@@ -103,7 +103,7 @@ $web_cta_desc  = sh_field( 'web_cta_desc',  null, 'احجز استشارة مج�
         <p class="bod" style="margin-bottom:18px"><?php echo esc_html( $web_why_desc ); ?></p>
         <div class="chklist sr d1" style="margin-bottom:24px">
           <?php foreach ( $web_why_items as $wwi ) : ?>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong><?php echo esc_html( $wwi['wwi_label'] ?? '' ); ?></strong><?php if ( ! empty( $wwi['wwi_desc'] ) ) : ?> — <?php echo esc_html( $wwi['wwi_desc'] ); ?><?php endif; ?></div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong><?php echo esc_html( $wwi['wwi_label'] ?? '' ); ?></strong><?php if ( ! empty( $wwi['wwi_desc'] ) ) : ?> — <?php echo esc_html( $wwi['wwi_desc'] ); ?><?php endif; ?></span></div>
           <?php endforeach; ?>
         </div>
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p sr d2">احجز استشارة مجانية</a>
