@@ -338,7 +338,7 @@ if ( empty( $seo_proof_cards ) ) {
       <?php endforeach; ?>
     </div>
     <div style="text-align:center;margin-top:32px">
-      <a href="<?php echo esc_url( sh_page_url( 'results' ) ); ?>" class="btn btn-g lg">جميع نتائج الأعمال <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="<?php echo esc_url( sh_page_url( 'results' ) ); ?>" class="btn btn-p lg">جميع نتائج الأعمال <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
