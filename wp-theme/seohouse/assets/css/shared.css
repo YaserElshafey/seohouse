@@ -239,7 +239,19 @@ svg{display:block;flex-shrink:0}
 .mob .mob-sub{padding-inline-start:calc(var(--pad) + 14px);font-size:13.5px;color:var(--ink-2);font-weight:500}
 .mob .mob-cta{margin:14px var(--pad) 0;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--blue);color:#fff;border-radius:var(--r1);padding:14px;font-weight:700;font-size:14px;min-height:48px}
 .mob .mob-cta:hover{background:var(--blue-d);color:#fff}
-.mob .mob-head{padding:14px var(--pad) 5px;font-size:10.5px;font-weight:700;letter-spacing:0;text-transform:uppercase;color:var(--muted);border-block-start:1px solid var(--line)}
+/* Mobile menu accordion */
+.mob-acc{border-block-start:1px solid var(--line)}
+.mob-acc-h{display:flex;align-items:stretch}
+.mob-acc-h:hover{background:var(--blue-50)}
+.mob .mob-acc-link{flex:1;font-weight:700}
+.mob .mob-acc-link:hover{background:none;color:var(--blue)}
+.mob-acc-tog{display:flex;align-items:center;justify-content:center;padding:0 16px;border:none;background:none;cursor:pointer;color:var(--muted);flex-shrink:0;transition:color .16s}
+.mob-acc-tog:hover{color:var(--blue)}
+.mob-acc-tog .chev{width:16px;height:16px;stroke:currentColor;stroke-width:2.5;fill:none;transition:transform .25s var(--fast)}
+.mob-acc.open .mob-acc-tog{color:var(--blue)}
+.mob-acc.open .mob-acc-tog .chev{transform:rotate(180deg)}
+.mob-acc-body{max-height:0;overflow:hidden;transition:max-height .3s var(--fast)}
+.mob-acc.open .mob-acc-body{max-height:400px}
 body.mob-open{overflow:hidden}
 
 /* ─ Footer ─ */
