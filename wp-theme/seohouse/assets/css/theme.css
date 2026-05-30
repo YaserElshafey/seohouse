@@ -603,6 +603,8 @@
   .feat-cta-block{flex-direction:column;align-items:flex-start}
   .why-web-layout{gap:20px}
   .why-web-layout .btn{width:100%;justify-content:center}
+  .why-com-grid .btn{width:100%;justify-content:center}
+  .why-grid .btn{width:100%;justify-content:center}
 }
 
 /* ─ SEO sub-service — quality vs quantity ─ */
