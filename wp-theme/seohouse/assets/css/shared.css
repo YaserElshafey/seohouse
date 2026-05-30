@@ -24,7 +24,7 @@
 
 /* ─ Reset ─ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{font-family:'Cairo',sans-serif;font-size:16px;color:var(--ink);background:#fff;overflow-x:hidden;direction:rtl;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%} a{text-decoration:none;color:inherit}
 ul{list-style:none} button{cursor:pointer;border:none;background:none;font-family:'Cairo',sans-serif}
@@ -309,6 +309,11 @@ body.mob-open{overflow:hidden}
   .h2{line-height:1.32}
   .sh{margin-bottom:28px}
   .page-h1{line-height:1.25}
+}
+
+@media(min-width:861px){
+  .nav-logo{order:2}
+  .nav-links{order:1}
 }
 
 /* ─ Nav script ─ */
