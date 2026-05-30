@@ -14,18 +14,30 @@
   /* ── Navigation ── */
   function initNav() {
     const nav = document.getElementById('nav');
+    const burger = document.getElementById('burger');
+    const mob = document.getElementById('mob');
+
     if (nav) {
       window.addEventListener('scroll', function () {
-        nav.classList.toggle('solid', window.scrollY > 40);
+        nav.classList.toggle('solid', window.scrollY > 40 || (mob && mob.classList.contains('on')));
       }, { passive: true });
     }
 
-    const burger = document.getElementById('burger');
-    const mob = document.getElementById('mob');
     if (burger && mob) {
+      function closeMob() {
+        burger.classList.remove('on');
+        mob.classList.remove('on');
+        document.body.classList.remove('mob-open');
+        if (nav && window.scrollY <= 40) nav.classList.remove('solid');
+      }
       burger.addEventListener('click', function () {
-        burger.classList.toggle('on');
-        mob.classList.toggle('on');
+        var isOpen = mob.classList.toggle('on');
+        burger.classList.toggle('on', isOpen);
+        document.body.classList.toggle('mob-open', isOpen);
+        if (nav) nav.classList.toggle('solid', isOpen || window.scrollY > 40);
+      });
+      mob.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', closeMob);
       });
     }
 
