@@ -238,7 +238,7 @@ svg{display:block;flex-shrink:0}
 .mob a:hover{background:var(--blue-50);color:var(--blue)}
 .mob .mob-sub{padding-inline-start:calc(var(--pad) + 16px);font-size:13px;color:var(--muted)}
 .mob .mob-cta{margin:10px var(--pad) 0;text-align:center;background:var(--blue);color:#fff;border-radius:var(--r1);padding:12px;display:block;font-weight:700}
-.mob .mob-head{padding:10px var(--pad) 4px;font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.mob .mob-head{padding:16px var(--pad) 4px;font-size:11px;font-weight:700;letter-spacing:0;color:var(--ink-2)}
 
 /* ─ Footer ─ */
 #footer{background:var(--navy);padding-block-start:56px;color:rgba(255,255,255,.9);position:relative}

@@ -836,3 +836,46 @@
 .sec-card:hover .sec-arr svg{stroke:#fff}
 @media(max-width:860px){.sec-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:500px){.sec-grid{grid-template-columns:1fr 1fr;gap:10px}}
+
+/* ─ Mobile polish (additional breakpoint rules) ─ */
+@media(max-width:860px){
+  .svc-hub-card{padding:26px 22px}
+  .faq-cta-layout{gap:32px}
+  .ind-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  /* Card padding — reduce desktop-scale padding on small phones */
+  .form-card{padding:22px 18px}
+  .post-body{padding:22px 16px}
+  .ss-head,.ss-body{padding:16px 18px}
+  .svc-hub-card{padding:22px 18px}
+  .svc-hub-ico{width:44px;height:44px;border-radius:13px;margin-bottom:14px}
+  .proof-card{padding:20px 16px}
+  .proof-result{font-size:36px}
+  .cons-head{padding:22px 18px}
+  .cons-body{padding:18px 18px}
+  .ep-plat-head{padding:18px 14px}
+  .ep-plat-body{padding:18px 14px}
+  .ep-plat-name{font-size:18px}
+  .cs-detail-section{padding:18px 16px}
+  .cs-metrics-grid{grid-template-columns:1fr}
+  .wd-card{padding:20px 16px;gap:14px}
+  .step-item{gap:14px}
+  .faq-cta-layout{gap:20px}
+  /* Service page hero stats — better spacing in single-col mode */
+  .h-stat{padding-block:14px}
+  /* Rep mock — readable on phone */
+  .rep-mock{padding:18px}
+  /* Sector challenges */
+  .sector-challenges{grid-template-columns:1fr}
+  /* About grid text */
+  .about-grid{gap:32px}
+  /* opp-card reduce padding */
+  .opp-card{padding:18px 16px;gap:14px}
+  /* inc-card reduce padding */
+  .inc-card{padding:22px 16px}
+  /* flow-step reduce padding */
+  .flow-step{padding:20px 20px}
+  /* plat-exp reduce padding */
+  .plat-exp-head,.plat-exp-body{padding:18px 16px}
+}
