@@ -79,7 +79,7 @@ $stores_cta_desc  = sh_field( 'stores_cta_desc',  null, 'من الفكرة إل�
         <p class="bod" style="margin-bottom:18px"><?php echo esc_html( $stores_why_body ); ?></p>
         <div class="chklist sr d1" style="margin-bottom:24px">
           <?php foreach ( $stores_why_items as $ck ) : ?>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong><?php echo esc_html( $ck['b'] ); ?></strong><?php echo $ck['t'] ? ' ' . esc_html( $ck['t'] ) : ''; ?></div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong><?php echo esc_html( $ck['b'] ); ?></strong><?php echo $ck['t'] ? ' ' . esc_html( $ck['t'] ) : ''; ?></span></div>
           <?php endforeach; ?>
         </div>
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p sr d2">احجز استشارة مجانية</a>

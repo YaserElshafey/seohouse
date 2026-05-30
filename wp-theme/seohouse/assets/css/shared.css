@@ -110,6 +110,7 @@ svg{display:block;flex-shrink:0}
 .chk-item.d{color:rgba(255,255,255,.58)}
 .chk-item.d .chk-ico{background:rgba(30,46,245,.22)}
 .chk-item.d .chk-ico svg{stroke:#7b90ff}
+.chk-item > span{flex:1;min-width:0}
 
 /* Tags/chips */
 .chip{font-size:10.5px;font-weight:600;color:var(--blue);background:var(--blue-50);border:1px solid var(--blue-100);border-radius:5px;padding:3px 8px;display:inline-block}

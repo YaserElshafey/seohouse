@@ -151,7 +151,7 @@ if ( empty( $seo_proof_cards ) ) {
         <div class="sh sr"><span class="tag">لماذا السيو يهم تجارياً</span><h2 class="h2"><?php echo wp_kses_post( $seo_why_title ); ?></h2><p class="bod" style="margin-top:12px"><?php echo esc_html( $seo_why_desc ); ?></p></div>
         <div class="chklist sr d1" style="margin-bottom:24px">
           <?php foreach ( $seo_why_items as $wi ) : ?>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong><?php echo esc_html( $wi['wi_label'] ?? '' ); ?></strong><?php if ( ! empty( $wi['wi_desc'] ) ) : ?> — <?php echo esc_html( $wi['wi_desc'] ); ?><?php endif; ?></div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong><?php echo esc_html( $wi['wi_label'] ?? '' ); ?></strong><?php if ( ! empty( $wi['wi_desc'] ) ) : ?> — <?php echo esc_html( $wi['wi_desc'] ); ?><?php endif; ?></span></div>
           <?php endforeach; ?>
         </div>
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p sr d2">احجز استشارة مجانية</a>
@@ -261,10 +261,10 @@ if ( empty( $seo_proof_cards ) ) {
         <h2 class="h2" style="margin-bottom:16px"><?php echo wp_kses_post( $seo_reporting_title ); ?></h2>
         <p class="bod" style="margin-bottom:18px"><?php echo esc_html( $seo_reporting_desc ); ?></p>
         <div class="chklist sr d1" style="margin-bottom:24px">
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>الترافيك</strong> — مصدره، جودته، وسلوكه على موقعك</div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>الليدز</strong> — كم نموذج تُعبّأ، كم مكالمة، وتكلفة كل واحد</div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>المبيعات</strong> — للمتاجر نربط البحث بالمنتج المباع وقيمته</div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><strong>الأداء اللحظي</strong> — لوحة تحكم حية تتابعها وقتما شئت</div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>الترافيك</strong> — مصدره، جودته، وسلوكه على موقعك</span></div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>الليدز</strong> — كم نموذج تُعبّأ، كم مكالمة، وتكلفة كل واحد</span></div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>المبيعات</strong> — للمتاجر نربط البحث بالمنتج المباع وقيمته</span></div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>الأداء اللحظي</strong> — لوحة تحكم حية تتابعها وقتما شئت</span></div>
         </div>
       </div>
       <div class="sr d1">
