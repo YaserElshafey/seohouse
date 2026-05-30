@@ -96,7 +96,7 @@ $web_cta_desc  = sh_field( 'web_cta_desc',  null, 'احجز استشارة مج�
 <!-- Why websites matter -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center">
+    <div class="why-web-layout">
       <div class="sr">
         <span class="tag" style="margin-bottom:12px">لماذا يهم الموقع</span>
         <h2 class="h2" style="margin-bottom:16px"><?php echo wp_kses_post( $web_why_title ); ?></h2>
