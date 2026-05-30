@@ -161,14 +161,28 @@ if ( ! $_blog_url ) {
               <?php
               $sectors = new WP_Query( [ 'post_type' => 'sector', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC' ] );
               if ( $sectors->have_posts() ) :
+                  $nav_icon_paths = [
+                      'ecommerce'  => '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>',
+                      'health'     => '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+                      'realestate' => '<path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>',
+                      'education'  => '<path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>',
+                      'food'       => '<path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>',
+                      'legal'      => '<path d="M3 6l9 6 9-6"/><path d="M3 6v12l9 6 9-6V6"/>',
+                      'tech'       => '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>',
+                      'tourism'    => '<circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>',
+                  ];
                   while ( $sectors->have_posts() ) : $sectors->the_post();
                       $sector_icon_svg = sh_field( 'sector_icon_svg' );
-                      if ( empty( $sector_icon_svg ) ) {
-                          $sector_icon_svg = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/></svg>';
+                      $slug            = get_post_field( 'post_name' );
+                      if ( $sector_icon_svg ) {
+                          $icon_out = sh_svg( $sector_icon_svg );
+                      } else {
+                          $ico      = $nav_icon_paths[ $slug ] ?? '<circle cx="12" cy="12" r="10"/>';
+                          $icon_out = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">' . $ico . '</svg>';
                       }
                       ?>
                       <a href="<?php the_permalink(); ?>" class="sd-link<?php echo is_singular( 'sector' ) && get_the_ID() === get_queried_object_id() ? ' active' : ''; ?>">
-                        <?php echo sh_svg( $sector_icon_svg ); ?>
+                        <?php echo $icon_out; // phpcs:ignore ?>
                         <?php the_title(); ?>
                       </a>
                       <?php
