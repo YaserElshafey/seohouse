@@ -40,6 +40,15 @@ $seo_ind_title    = sh_field( 'seo_ind_title',    null, 'السيو يختلف �
 $seo_ind_desc     = sh_field( 'seo_ind_desc',     null, 'لكل قطاع جمهوره، كلماته، وقواعد ترتيبه. نُخصّص الاستراتيجية حسب طبيعة عملك.' );
 $seo_faq_title    = sh_field( 'seo_faq_title',    null, 'أسئلة يسألها كل صاحب عمل' );
 
+// ACF repeater fields may return an array of rows with all sub-fields empty when
+// the admin saves the page without filling in the repeater. Filter those out so
+// the empty() check below correctly falls back to the hardcoded defaults.
+$seo_hero_stats  = array_values( array_filter( (array) $seo_hero_stats,  fn( $r ) => ! empty( $r['stat_label'] ) || ! empty( $r['stat_em'] ) || ! empty( $r['stat_n'] ) ) );
+$seo_lost_cards  = array_values( array_filter( (array) $seo_lost_cards,  fn( $r ) => ! empty( $r['lc_title'] ) ) );
+$seo_why_items   = array_values( array_filter( (array) $seo_why_items,   fn( $r ) => ! empty( $r['wi_label'] ) ) );
+$seo_impact_rows = array_values( array_filter( (array) $seo_impact_rows, fn( $r ) => ! empty( $r['ir_label'] ) ) );
+$seo_proof_cards = array_values( array_filter( (array) $seo_proof_cards, fn( $r ) => ! empty( $r['pc_result'] ) || ! empty( $r['pc_sector'] ) ) );
+
 if ( empty( $seo_hero_stats ) ) {
     $seo_hero_stats = [
         [ 'stat_n' => '',     'stat_em' => '+200%', 'stat_label' => 'نمو متوسط في الزيارات' ],

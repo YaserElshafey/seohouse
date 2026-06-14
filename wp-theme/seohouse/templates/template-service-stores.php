@@ -13,6 +13,7 @@ $stores_why_h2   = sh_field( 'stores_why_h2',   null, 'المتجر الإلكت
 $stores_why_body = sh_field( 'stores_why_body', null, 'الفرق بين متجر يبيع ومتجر يستهلك ميزانية إعلانك يبدأ من اللحظة الأولى — هيكل الفئات، خطوات الشراء، الثقة، وسرعة التحميل. كلها قرارات تُتّخذ في مرحلة الإعداد لا بعدها.' );
 
 $_why_items_acf   = sh_field( 'stores_why_items' );
+$_why_items_acf   = array_values( array_filter( (array) $_why_items_acf,   fn( $r ) => ! empty( $r['wi_bold'] ) || ! empty( $r['wi_tail'] ) ) );
 $stores_why_items = ! empty( $_why_items_acf )
 	? array_map( static fn( $i ) => [ 'b' => $i['wi_bold'] ?? '', 't' => $i['wi_tail'] ?? '' ], $_why_items_acf )
 	: [
@@ -23,6 +24,7 @@ $stores_why_items = ! empty( $_why_items_acf )
 	];
 
 $_faqs_acf    = sh_field( 'stores_faqs' );
+$_faqs_acf    = array_values( array_filter( (array) $_faqs_acf,    fn( $r ) => ! empty( $r['question'] ) ) );
 $stores_faqs  = ! empty( $_faqs_acf ) ? $_faqs_acf : [
 	[ 'question' => 'ما المنصة الأنسب لمتجري؟',           'answer' => 'يعتمد على نوع منتجاتك، حجم عملك، خطط التوسع، والميزانية. في الاستشارة الأولى نناقش هذا معك بصراحة — أحياناً سلة أنسب، وأحياناً Shopify، حسب وضعك.' ],
 	[ 'question' => 'كم يستغرق إطلاق المتجر؟',           'answer' => 'بين أسبوعين و6 أسابيع — يعتمد على حجم المتجر، عدد المنتجات، التخصيصات المطلوبة، والمنصة المختارة.' ],
@@ -35,6 +37,7 @@ $stores_side_cta_h3   = sh_field( 'stores_side_cta_h3',   null, "جاهز لتج
 $stores_side_cta_desc = sh_field( 'stores_side_cta_desc', null, 'احجز استشارة مجانية، وسنناقش معاً المنصة الأنسب وخطة الإطلاق.' );
 $stores_side_cta_btn  = sh_field( 'stores_side_cta_btn',  null, 'احجز استشارة مجانية' );
 $_scta_checks_acf     = sh_field( 'stores_side_cta_checks' );
+$_scta_checks_acf     = array_values( array_filter( (array) $_scta_checks_acf, fn( $r ) => ! empty( $r['sc_text'] ) ) );
 $stores_side_checks   = ! empty( $_scta_checks_acf )
 	? array_map( static fn( $i ) => $i['sc_text'] ?? '', $_scta_checks_acf )
 	: [ 'توصية بالمنصة الأنسب', 'عرض سعر شفاف', 'بدون أي التزام' ];
