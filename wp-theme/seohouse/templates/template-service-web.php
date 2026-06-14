@@ -12,6 +12,7 @@ $web_why_raw   = sh_field( 'web_why_title', null, "قبل أن يتّصل بك �
 $web_why_title = nl2br( esc_html( $web_why_raw ) );
 $web_why_desc  = sh_field( 'web_why_desc',  null, 'في أول 3 ثوانٍ من زيارة موقعك، يُقرّر زائرك إن كان سيتعامل معك أم لا. الموقع الضعيف يُضيع كل ميزانيتك التسويقية لأنه يفقد الزوار قبل أن يقرأوا عرضك أصلاً.' );
 $web_why_items = sh_field( 'web_why_items', null, [] );
+$web_why_items   = array_values( array_filter( (array) $web_why_items,   fn( $r ) => ! empty( $r['wwi_label'] ) ) );
 if ( empty( $web_why_items ) ) {
     $web_why_items = [
         [ 'wwi_label' => 'الانطباع الأول يبني الثقة', 'wwi_desc' => 'أو يقتلها فوراً' ],
@@ -24,6 +25,7 @@ if ( empty( $web_why_items ) ) {
 $web_types_title  = sh_field( 'web_types_title', null, 'نُصمّم 6 أنواع من المواقع' );
 $web_types_desc   = sh_field( 'web_types_desc',  null, 'لكل نشاط نوع موقع يخدم أهدافه بأفضل شكل ممكن — اختيار النوع الصحيح هو نصف الطريق للنجاح.' );
 $web_types_cards  = sh_field( 'web_types_cards', null, [] );
+$web_types_cards  = array_values( array_filter( (array) $web_types_cards, fn( $r ) => ! empty( $r['tc_title'] ) ) );
 if ( empty( $web_types_cards ) ) {
     $web_types_cards = [
         [ 'tc_tag' => 'للشركات والمؤسسات',    'tc_title' => 'مواقع الشركات',              'tc_dc' => '',   'tc_desc' => 'موقع يُمثّل علامتك التجارية أمام السوق — يُبرز خبرتك، عملاءك، خدماتك، ويبني صورة احترافية للشركة.',                                  'tc_feats' => "صفحات: عن الشركة، الخدمات، فريق العمل، المعرض\nعناصر بناء الثقة: شهادات، عملاء، إنجازات\nمتعدد اللغات (عربي/إنجليزي) عند الحاجة" ],
@@ -42,6 +44,7 @@ $web_eff_desc    = sh_field( 'web_eff_desc',   null, 'الموقع الجميل 
 $web_proc_title  = sh_field( 'web_proc_title', null, '5 مراحل لإطلاق موقعك' );
 $web_proc_desc   = sh_field( 'web_proc_desc',  null, 'كل مرحلة لها مخرج محدّد توافق عليه قبل الانتقال للمرحلة التالية.' );
 $web_proc_steps  = sh_field( 'web_proc_steps', null, [] );
+$web_proc_steps  = array_values( array_filter( (array) $web_proc_steps,  fn( $r ) => ! empty( $r['wps_title'] ) ) );
 if ( empty( $web_proc_steps ) ) {
     $web_proc_steps = [
         [ 'wps_num' => '1', 'wps_title' => 'اكتشاف',  'wps_desc' => 'نفهم نشاطك، أهدافك، وجمهورك' ],
@@ -53,6 +56,7 @@ if ( empty( $web_proc_steps ) ) {
 }
 $web_faq_title = sh_field( 'web_faq_title', null, 'أسئلة عن تصميم المواقع' );
 $web_faqs      = sh_field( 'web_faqs',      null, [] );
+$web_faqs      = array_values( array_filter( (array) $web_faqs,      fn( $r ) => ! empty( $r['wfaq_q'] ) ) );
 if ( empty( $web_faqs ) ) {
     $web_faqs = [
         [ 'wfaq_q' => 'كم يستغرق إطلاق الموقع؟',                             'wfaq_a' => 'صفحة هبوط: 1–2 أسبوع. موقع شركة عادي: 3–5 أسابيع. موقع ضخم أو تطوير مخصّص: 6–12 أسبوع. الجدول الزمني الدقيق يُحدَّد بعد فهم متطلبات مشروعك.' ],
