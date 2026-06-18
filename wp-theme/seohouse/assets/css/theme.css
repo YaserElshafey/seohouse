@@ -221,7 +221,7 @@
 .h-stat:last-child{border:none}
 .h-stat-n{font-size:clamp(22px,2.6vw,30px);font-weight:900;color:#fff;line-height:1;margin-bottom:6px;letter-spacing:-.02em}
 .h-stat-n em{font-style:normal;color:#7b90ff}
-.h-stat-l{font-size:11.5px;font-weight:600;color:rgba(255,255,255,.4)}
+.h-stat-l{font-size:11.5px;font-weight:600;color:rgba(255,255,255,.62)}
 .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
 .feat-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:24px 22px;transition:all .26s var(--fast);position:relative;overflow:hidden}
 .feat-card::after{content:'';position:absolute;top:0;inset-inline:0;height:3px;background:linear-gradient(90deg,var(--blue-d),var(--blue));transform:scaleX(0);transform-origin:right;transition:transform .3s}
@@ -275,7 +275,7 @@
 .ss-hico{width:42px;height:42px;border-radius:11px;background:rgba(30,46,245,.25);display:flex;align-items:center;justify-content:center;margin-bottom:13px;position:relative;z-index:1}
 .ss-hico svg{stroke:#7b90ff;width:19px;height:19px}
 .ss-head h3{font-size:18px;font-weight:800;color:#fff;position:relative;z-index:1;margin-bottom:6px}
-.ss-head p{font-size:13px;color:rgba(255,255,255,.45);position:relative;z-index:1;line-height:1.7}
+.ss-head p{font-size:13px;color:rgba(255,255,255,.62);position:relative;z-index:1;line-height:1.7}
 .ss-body{padding:20px 24px}
 .ss-items{display:flex;flex-direction:column;gap:0}
 .ss-item{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--ink-2);padding:11px 0;border-bottom:1px solid var(--line);line-height:1.65}
@@ -307,7 +307,7 @@
 .m-num{width:48px;height:48px;border-radius:50%;background:rgba(30,46,245,.18);border:1.5px solid rgba(30,46,245,.35);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;color:#7b90ff;margin-bottom:18px;transition:all .22s}
 .method-item:hover .m-num{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:var(--sh-b)}
 .method-item h3{font-size:16px;font-weight:800;color:rgba(255,255,255,.85);margin-bottom:8px}
-.method-item p{font-size:13px;color:rgba(255,255,255,.4);line-height:1.78}
+.method-item p{font-size:13px;color:rgba(255,255,255,.58);line-height:1.78}
 
 /* ─ SEO service — proof/results ─ */
 .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
@@ -336,7 +336,7 @@
 .ind-card:hover .ind-ico svg{stroke:#fff}
 .ind-ico svg{stroke:var(--blue);width:17px;height:17px;transition:stroke .22s}
 .ind-card-body{flex:1;min-width:0}
-.ind-card h4{font-size:14px;font-weight:800;color:var(--ink);margin-bottom:3px}
+.ind-card h3{font-size:14px;font-weight:800;color:var(--ink);margin-bottom:3px}
 .ind-card p{font-size:12px;color:var(--muted)}
 
 /* ─ FAQ + CTA sidebar (shared) ─ */

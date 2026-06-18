@@ -43,7 +43,7 @@ $instagram_url = sh_option( 'social_instagram', '#' );
       </div>
 
       <div class="foot-col">
-        <h4><?php echo esc_html( $footer_col1 ); ?></h4>
+        <h3><?php echo esc_html( $footer_col1 ); ?></h3>
         <?php
         if ( has_nav_menu( 'footer-menu-seo' ) ) {
             wp_nav_menu( [ 'theme_location' => 'footer-menu-seo', 'container' => false, 'menu_class' => 'foot-links', 'depth' => 1, 'fallback_cb' => false ] );
@@ -59,7 +59,7 @@ $instagram_url = sh_option( 'social_instagram', '#' );
       </div>
 
       <div class="foot-col">
-        <h4><?php echo esc_html( $footer_col2 ); ?></h4>
+        <h3><?php echo esc_html( $footer_col2 ); ?></h3>
         <?php
         if ( has_nav_menu( 'footer-menu-web' ) ) {
             wp_nav_menu( [ 'theme_location' => 'footer-menu-web', 'container' => false, 'menu_class' => 'foot-links', 'depth' => 1, 'fallback_cb' => false ] );
@@ -75,7 +75,7 @@ $instagram_url = sh_option( 'social_instagram', '#' );
       </div>
 
       <div class="foot-col">
-        <h4><?php echo esc_html( $footer_col3 ); ?></h4>
+        <h3><?php echo esc_html( $footer_col3 ); ?></h3>
         <?php
         if ( has_nav_menu( 'footer-menu-stores' ) ) {
             wp_nav_menu( [ 'theme_location' => 'footer-menu-stores', 'container' => false, 'menu_class' => 'foot-links', 'depth' => 1, 'fallback_cb' => false ] );
@@ -92,7 +92,7 @@ $instagram_url = sh_option( 'social_instagram', '#' );
       </div>
 
       <div class="foot-col">
-        <h4><?php echo esc_html( $footer_col4 ); ?></h4>
+        <h3><?php echo esc_html( $footer_col4 ); ?></h3>
         <?php
         if ( has_nav_menu( 'footer-menu-company' ) ) {
             wp_nav_menu( [ 'theme_location' => 'footer-menu-company', 'container' => false, 'menu_class' => 'foot-links', 'depth' => 1, 'fallback_cb' => false ] );
