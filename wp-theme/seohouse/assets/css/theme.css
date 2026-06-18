@@ -236,7 +236,7 @@
 .step-body h3{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:7px}
 .step-body p{font-size:13.5px;color:var(--muted);line-height:1.78}
 @media(max-width:860px){.features-grid{grid-template-columns:repeat(2,1fr)}.h-stats{grid-template-columns:repeat(2,1fr)}.h-stat:nth-child(2){border-inline-end:none}.h-stat:nth-child(3){border-inline-end:1px solid rgba(255,255,255,.06)}}
-@media(max-width:600px){.features-grid{grid-template-columns:1fr}.h-stats{grid-template-columns:1fr}.h-stat{border-inline-end:none!important;border-bottom:1px solid rgba(255,255,255,.06);padding-block:16px}.h-stat:last-child{border-bottom:none}}
+@media(max-width:600px){.features-grid{grid-template-columns:1fr}.h-stats{grid-template-columns:repeat(2,1fr)}.h-stat{border-inline-end:none!important;border-bottom:1px solid rgba(255,255,255,.06);padding-block:14px}.h-stat:nth-child(odd){border-inline-end:1px solid rgba(255,255,255,.06)!important}.h-stat:nth-child(n+3){border-bottom:none}}
 
 /* ─ SEO service — lost opportunities ─ */
 .lost-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
@@ -525,6 +525,7 @@
 }
 @media(max-width:860px){
   .ss-grid{grid-template-columns:1fr}
+  .svc-blob{display:none}
 }
 @media(max-width:600px){
   .wwd-grid,.method-grid,.proof-grid,.ind-grid{grid-template-columns:1fr}
@@ -905,4 +906,11 @@
   /* Typography */
   .svc-hero-h1{line-height:1.24;letter-spacing:-.008em}
   .post-body h1{line-height:1.28}
+  /* Hero section — reduce excessive vertical padding on phone */
+  .svc-hero{padding-block:80px 36px}
+}
+@media(prefers-reduced-motion:reduce){
+  .svc-hero-h1{animation:none}
+  .svc-hero-h1 em{animation:none}
+  .h-bdot{animation:none}
 }
