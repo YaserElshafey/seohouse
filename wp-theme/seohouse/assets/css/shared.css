@@ -309,6 +309,8 @@ body.mob-open{overflow:hidden}
   .h2{line-height:1.32}
   .sh{margin-bottom:28px}
   .page-h1{line-height:1.25}
+  /* Tighter section rhythm on phone — saves ~200px total scroll height */
+  :root{--sec:40px}
 }
 
 @media(min-width:861px){

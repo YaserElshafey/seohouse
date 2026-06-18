@@ -5,19 +5,11 @@ add_action( 'wp_enqueue_scripts', function () {
 
     $ver = wp_get_theme()->get( 'Version' );
 
-    // Google Fonts — Cairo
-    wp_enqueue_style(
-        'seohouse-fonts',
-        'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap',
-        [],
-        null
-    );
-
-    // Main design system CSS
+    // Main design system CSS (font loaded non-blocking via wp_head preload below)
     wp_enqueue_style(
         'seohouse-shared',
         get_template_directory_uri() . '/assets/css/shared.css',
-        [ 'seohouse-fonts' ],
+        [],
         $ver
     );
 
@@ -64,8 +56,11 @@ add_action( 'wp_enqueue_scripts', function () {
     remove_action( 'wp_footer', 'wp_enqueue_global_styles', 1 );
 }, 100 );
 
-// Preconnect for Google Fonts
+// Preconnect + non-blocking font load — removes render-blocking Cairo stylesheet
 add_action( 'wp_head', function () {
     echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
     echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+    $f = 'https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap';
+    echo '<link rel="preload" as="style" href="' . esc_url( $f ) . '" onload="this.onload=null;this.rel=\'stylesheet\'">' . "\n";
+    echo '<noscript><link rel="stylesheet" href="' . esc_url( $f ) . '"></noscript>' . "\n";
 }, 1 );
