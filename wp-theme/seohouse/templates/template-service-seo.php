@@ -210,7 +210,7 @@ if ( empty( $seo_proof_cards ) ) {
           $def = $wwd_defaults[ $idx % 6 ];
       ?>
       <div class="wwd-card sr <?php echo esc_attr( $dc ); ?>">
-        <div class="wwd-n"><?php echo esc_html( $def['n'] ); ?></div>
+        <div class="wwd-n" aria-hidden="true"><?php echo esc_html( $def['n'] ); ?></div>
         <div class="wwd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="21" height="21"><?php echo $def['svg']; ?></svg></div>
         <h3><?php echo esc_html( $feat['title'] ?? $def['title'] ); ?></h3>
         <p><?php echo esc_html( $feat['desc'] ?? $def['desc'] ); ?></p>
@@ -369,7 +369,7 @@ if ( empty( $seo_proof_cards ) ) {
       ?>
       <a href="<?php echo esc_url( $ic['url'] ); ?>" class="ind-card">
         <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $ic['svg']; ?></svg></div>
-        <div class="ind-card-body"><h4><?php echo esc_html( $ic['label'] ); ?></h4><p><?php echo esc_html( $ic['sub'] ); ?></p></div>
+        <div class="ind-card-body"><h3><?php echo esc_html( $ic['label'] ); ?></h3><p><?php echo esc_html( $ic['sub'] ); ?></p></div>
       </a>
       <?php endforeach; ?>
     </div>
