@@ -920,10 +920,14 @@
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .plan-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--r3);padding:30px 26px;position:relative;transition:transform .24s var(--fast),box-shadow .24s var(--fast);display:flex;flex-direction:column}
 .plan-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md)}
-.plan-card.featured{background:var(--navy);border-color:var(--blue);box-shadow:0 12px 44px rgba(30,46,245,.28)}
-.plan-card.featured:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(30,46,245,.38)}
+.plan-card.featured{background:var(--navy);border-color:var(--blue);box-shadow:0 12px 44px rgba(30,46,245,.3),0 0 0 1px rgba(30,46,245,.14),inset 0 1px 0 rgba(255,255,255,.07);overflow:hidden;padding-top:38px}
+.plan-card.featured:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(30,46,245,.42),0 0 0 1px rgba(30,46,245,.18),inset 0 1px 0 rgba(255,255,255,.09)}
 .plan-badge-pill{display:inline-block;font-size:10.5px;font-weight:800;padding:4px 13px;border-radius:50px;margin-bottom:18px;letter-spacing:.04em;background:rgba(30,46,245,.1);color:var(--blue)}
 .plan-card.featured .plan-badge-pill{background:rgba(255,255,255,.14);color:rgba(255,255,255,.9)}
+.plan-ribbon{position:absolute;top:18px;left:-40px;width:140px;padding:5px 0;background:linear-gradient(to bottom right,#0fcfdd,#1a40e8);color:#fff;font-size:10px;font-weight:800;text-align:center;letter-spacing:.08em;transform:rotate(-45deg);z-index:3;box-shadow:0 2px 10px rgba(0,0,0,.35);text-shadow:0 1px 3px rgba(0,0,0,.4)}
+.plan-ribbon::before{content:'';position:absolute;bottom:-5px;left:0;border-top:5px solid #007a8c;border-left:5px solid transparent}
+.plan-ribbon::after{content:'';position:absolute;bottom:-5px;right:0;border-top:5px solid #0d1b8a;border-right:5px solid transparent}
+.plan-card.featured::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#0fcfdd 35%,var(--blue-light) 65%,transparent);z-index:1;pointer-events:none}
 .plan-name{font-size:19px;font-weight:900;color:var(--ink);margin-bottom:6px}
 .plan-card.featured .plan-name{color:#fff}
 .plan-desc{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:22px}
@@ -950,8 +954,8 @@
 .plan-cta-btn{display:block;width:100%;text-align:center;padding:13px 20px;border-radius:var(--r1);font-size:14px;font-weight:700;transition:all .22s var(--fast);cursor:pointer;border:1.5px solid transparent;font-family:'IBM Plex Sans Arabic',sans-serif}
 .plan-card:not(.featured) .plan-cta-btn{background:var(--blue-50);color:var(--blue);border-color:var(--blue-100)}
 .plan-card:not(.featured) .plan-cta-btn:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
-.plan-card.featured .plan-cta-btn{background:#fff;color:var(--navy);border-color:transparent}
-.plan-card.featured .plan-cta-btn:hover{background:var(--blue-light);color:var(--navy)}
+.plan-card.featured .plan-cta-btn{background:#fff;color:var(--navy);border-color:transparent;box-shadow:0 4px 20px rgba(255,255,255,.16),0 2px 8px rgba(0,0,0,.12);padding-block:15px}
+.plan-card.featured .plan-cta-btn:hover{background:rgba(240,246,255,.96);color:var(--navy);box-shadow:0 8px 30px rgba(255,255,255,.24),0 4px 12px rgba(0,0,0,.14);transform:translateY(-2px)}
 .pricing-contact-head{text-align:center;margin-bottom:52px}
 .pricing-contact-head .h2{margin-bottom:12px}
 .pricing-contact-head .tag{justify-content:center}
@@ -962,12 +966,17 @@
   .pricing-grid{grid-template-columns:repeat(2,1fr)}
   .pricing-grid .plan-card:nth-child(3){grid-column:1 / -1;max-width:420px;margin-inline:auto;width:100%}
 }
+@media(min-width:981px){
+  .plan-card.featured{transform:translateY(-14px);box-shadow:0 24px 64px rgba(30,46,245,.44),0 0 0 1px rgba(30,46,245,.18),inset 0 1px 0 rgba(255,255,255,.08)}
+  .plan-card.featured:hover{transform:translateY(-20px);box-shadow:0 32px 80px rgba(30,46,245,.54),0 0 0 1px rgba(30,46,245,.24),inset 0 1px 0 rgba(255,255,255,.1)}
+}
 @media(max-width:600px){
   .pricing-grid{grid-template-columns:1fr}
   .pricing-grid .plan-card:nth-child(3){grid-column:auto;max-width:none;margin-inline:0}
   .plan-card.featured{order:-1}
   .ptog-btn{padding:8px 16px;font-size:13px}
   .pricing-toggle{gap:2px}
+  .plan-ribbon{top:14px;left:-36px;width:120px;font-size:9px;padding:4px 0}
 }
 
 @media(prefers-reduced-motion:reduce){
