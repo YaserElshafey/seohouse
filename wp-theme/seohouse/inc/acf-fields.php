@@ -1078,7 +1078,7 @@ add_action( 'acf/init', function () {
                     [ 'key' => 'field_pr_featured',       'label' => 'الباقة المميزة (تبرز بخلفية داكنة)', 'name' => 'plan_featured',  'type' => 'true_false', 'default_value' => 0 ],
                     [ 'key' => 'field_pr_monthly_price',  'label' => 'السعر الشهري',                   'name' => 'plan_monthly_price',  'type' => 'text',     'instructions' => 'الرقم فقط — مثال: 2,500' ],
                     [ 'key' => 'field_pr_yearly_price',   'label' => 'السعر السنوي (يُدخل يدويًا)',    'name' => 'plan_yearly_price',   'type' => 'text',     'instructions' => 'الرقم فقط — لا يُحسب تلقائيًا' ],
-                    [ 'key' => 'field_pr_currency',       'label' => 'العملة',                         'name' => 'plan_currency',       'type' => 'text',     'default_value' => 'ر.س' ],
+                    [ 'key' => 'field_pr_currency',       'label' => 'العملة',                         'name' => 'plan_currency',       'type' => 'text',     'default_value' => 'ريال' ],
                     [ 'key' => 'field_pr_monthly_suffix', 'label' => 'لاحقة السعر الشهري',            'name' => 'plan_monthly_suffix', 'type' => 'text',     'default_value' => 'شهريًا' ],
                     [ 'key' => 'field_pr_yearly_suffix',  'label' => 'لاحقة السعر السنوي',            'name' => 'plan_yearly_suffix',  'type' => 'text',     'default_value' => 'سنويًا' ],
                     [

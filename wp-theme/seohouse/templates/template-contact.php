@@ -66,6 +66,8 @@ get_template_part( 'template-parts/layout/page-hero', null, [
           'success_title'  => $contact_success_title,
           'success_desc'   => $contact_success_desc,
           'custom_content' => $custom_content,
+          'expect_title'   => $contact_expect_title,
+          'expect_items'   => $contact_expect_items,
       ] );
       ?>
 
@@ -140,15 +142,6 @@ get_template_part( 'template-parts/layout/page-hero', null, [
           </div>
         </div>
 
-        <!-- Quick expectations -->
-        <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r2);padding:18px 20px" class="sr d3">
-          <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px"><?php echo esc_html( $contact_expect_title ); ?></div>
-          <div class="chklist">
-            <?php foreach ( $contact_expect_items as $ei ) : ?>
-            <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><?php echo esc_html( $ei['exp_text'] ?? '' ); ?></div>
-            <?php endforeach; ?>
-          </div>
-        </div>
 
       </div>
     </div>

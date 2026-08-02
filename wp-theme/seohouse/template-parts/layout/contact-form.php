@@ -9,6 +9,8 @@
  *   success_title  (string) — success screen title
  *   success_desc   (string) — success screen body text
  *   custom_content (string) — optional HTML; replaces the <form> if non-empty
+ *   expect_title   (string) — heading for the expectations card (shown below form)
+ *   expect_items   (array)  — array of ['exp_text' => '...'] items; card hidden if empty
  *
  * The form submits to the existing sh_handle_contact() AJAX handler.
  * The hidden plan_selected field carries the chosen pricing plan (empty on the
@@ -20,7 +22,10 @@ $form_note     = $args['form_note']     ?? sh_option( 'contact_form_note',     '
 $success_title = $args['success_title'] ?? sh_option( 'contact_success_title', 'تم الإرسال بنجاح!' );
 $success_desc  = $args['success_desc']  ?? sh_option( 'contact_success_desc',  'شكراً على تواصلك — سيتصل بك أحد متخصصينا خلال 24 ساعة لتحديد موعد الاستشارة.' );
 $custom_content = $args['custom_content'] ?? '';
+$expect_title  = $args['expect_title']  ?? '';
+$expect_items  = $args['expect_items']  ?? [];
 ?>
+<div class="con-form-col">
 <div class="sr">
   <div class="form-card">
     <div id="formWrap">
@@ -86,4 +91,17 @@ $custom_content = $args['custom_content'] ?? '';
       <p style="font-size:14px;color:var(--muted);line-height:1.72;max-width:320px;margin-inline:auto"><?php echo esc_html( $success_desc ); ?></p>
     </div>
   </div>
+</div>
+
+<?php if ( ! empty( $expect_items ) ) : ?>
+<div class="expect-card sr">
+  <div class="expect-card-title"><?php echo esc_html( $expect_title ); ?></div>
+  <div class="chklist">
+    <?php foreach ( $expect_items as $ei ) : ?>
+    <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><?php echo esc_html( $ei['exp_text'] ?? '' ); ?></div>
+    <?php endforeach; ?>
+  </div>
+</div>
+<?php endif; ?>
+
 </div>
