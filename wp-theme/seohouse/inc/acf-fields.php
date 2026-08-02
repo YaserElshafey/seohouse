@@ -72,6 +72,13 @@ add_action( 'acf/init', function () {
             'parent_slug' => 'seohouse-options',
         ] );
 
+        acf_add_options_sub_page( [
+            'page_title'  => 'إعدادات صفحة الباقات',
+            'menu_title'  => 'صفحة الباقات',
+            'menu_slug'   => 'seohouse-pricing',
+            'parent_slug' => 'seohouse-options',
+        ] );
+
     }
 
     // ═══════════════════════════════════════════════════════════
@@ -1034,6 +1041,64 @@ add_action( 'acf/init', function () {
                     [ 'key' => 'field_con_exp_text', 'label' => 'النص', 'name' => 'exp_text', 'type' => 'text' ],
                 ],
             ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
+    // Pricing Page Fields
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_pricing_page',
+        'title'    => 'محتوى صفحة: الباقات والأسعار',
+        'location' => [ [ [ 'param' => 'options_page', 'operator' => '==', 'value' => 'seohouse-pricing' ] ] ],
+        'fields'   => [
+            // Hero
+            [ 'key' => 'field_pr_hero_tag',   'label' => 'تصنيف الهيرو',               'name' => 'pricing_hero_tag',   'type' => 'text',     'default_value' => 'الباقات والأسعار' ],
+            [ 'key' => 'field_pr_hero_title', 'label' => 'عنوان الهيرو (سطر في كل سطر)', 'name' => 'pricing_hero_title', 'type' => 'textarea', 'rows' => 2, 'default_value' => "اختر الباقة\nالمناسبة لنشاطك" ],
+            [ 'key' => 'field_pr_hero_em',    'label' => 'الكلمة المُبرَزة في العنوان', 'name' => 'pricing_hero_em',    'type' => 'text',     'default_value' => 'المناسبة' ],
+            [ 'key' => 'field_pr_hero_desc',  'label' => 'وصف الهيرو',                 'name' => 'pricing_hero_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'باقات سيو شاملة مصممة لأهدافك — من البداية إلى الهيمنة الكاملة على نتائج البحث.' ],
+            // Toggle labels
+            [ 'key' => 'field_pr_tog_monthly', 'label' => 'نص زر الدفع الشهري',       'name' => 'pricing_toggle_monthly', 'type' => 'text', 'default_value' => 'شهري' ],
+            [ 'key' => 'field_pr_tog_yearly',  'label' => 'نص زر الدفع السنوي',       'name' => 'pricing_toggle_yearly',  'type' => 'text', 'default_value' => 'سنوي' ],
+            [ 'key' => 'field_pr_tog_badge',   'label' => 'شارة التوفير على الدفع السنوي', 'name' => 'pricing_yearly_badge', 'type' => 'text', 'default_value' => 'وفّر 20%' ],
+            // Plans repeater
+            [
+                'key'          => 'field_pr_plans',
+                'label'        => 'الباقات',
+                'name'         => 'pricing_plans',
+                'type'         => 'repeater',
+                'min'          => 1,
+                'max'          => 6,
+                'layout'       => 'block',
+                'button_label' => 'إضافة باقة',
+                'sub_fields'   => [
+                    [ 'key' => 'field_pr_name',           'label' => 'اسم الباقة',                     'name' => 'plan_name',           'type' => 'text' ],
+                    [ 'key' => 'field_pr_desc',           'label' => 'وصف قصير للباقة',               'name' => 'plan_desc',           'type' => 'textarea', 'rows' => 2 ],
+                    [ 'key' => 'field_pr_badge',          'label' => 'نص الشارة (اختياري)',            'name' => 'plan_badge',          'type' => 'text',     'instructions' => 'مثال: الأكثر طلبًا — اتركه فارغًا إذا لا تريد شارة' ],
+                    [ 'key' => 'field_pr_featured',       'label' => 'الباقة المميزة (تبرز بخلفية داكنة)', 'name' => 'plan_featured',  'type' => 'true_false', 'default_value' => 0 ],
+                    [ 'key' => 'field_pr_monthly_price',  'label' => 'السعر الشهري',                   'name' => 'plan_monthly_price',  'type' => 'text',     'instructions' => 'الرقم فقط — مثال: 2,500' ],
+                    [ 'key' => 'field_pr_yearly_price',   'label' => 'السعر السنوي (يُدخل يدويًا)',    'name' => 'plan_yearly_price',   'type' => 'text',     'instructions' => 'الرقم فقط — لا يُحسب تلقائيًا' ],
+                    [ 'key' => 'field_pr_currency',       'label' => 'العملة',                         'name' => 'plan_currency',       'type' => 'text',     'default_value' => 'ر.س' ],
+                    [ 'key' => 'field_pr_monthly_suffix', 'label' => 'لاحقة السعر الشهري',            'name' => 'plan_monthly_suffix', 'type' => 'text',     'default_value' => 'شهريًا' ],
+                    [ 'key' => 'field_pr_yearly_suffix',  'label' => 'لاحقة السعر السنوي',            'name' => 'plan_yearly_suffix',  'type' => 'text',     'default_value' => 'سنويًا' ],
+                    [
+                        'key'          => 'field_pr_features',
+                        'label'        => 'مميزات الباقة',
+                        'name'         => 'plan_features',
+                        'type'         => 'repeater',
+                        'min'          => 1,
+                        'button_label' => 'إضافة ميزة',
+                        'sub_fields'   => [
+                            [ 'key' => 'field_pr_feat_text',     'label' => 'نص الميزة',        'name' => 'feature_text',     'type' => 'text' ],
+                            [ 'key' => 'field_pr_feat_included', 'label' => 'مضمّنة في الباقة', 'name' => 'feature_included', 'type' => 'true_false', 'default_value' => 1 ],
+                        ],
+                    ],
+                    [ 'key' => 'field_pr_cta_text', 'label' => 'نص زر الطلب', 'name' => 'plan_cta_text', 'type' => 'text', 'default_value' => 'ابدأ الآن' ],
+                ],
+            ],
+            // Contact section
+            [ 'key' => 'field_pr_contact_title', 'label' => 'عنوان قسم التواصل',  'name' => 'pricing_contact_title', 'type' => 'text',     'default_value' => 'اطلب استشارة مجانية' ],
+            [ 'key' => 'field_pr_contact_sub',   'label' => 'وصف قسم التواصل',    'name' => 'pricing_contact_sub',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'غير متأكد من الباقة المناسبة؟ تواصل معنا وسنساعدك في اختيار الخطة الأنسب لأهدافك.' ],
         ],
     ] );
 
