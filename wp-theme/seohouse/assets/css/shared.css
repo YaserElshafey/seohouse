@@ -25,10 +25,11 @@
 /* ─ Reset ─ */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
-body{font-family:'Cairo',sans-serif;font-size:16px;color:var(--ink);background:#fff;overflow-x:hidden;direction:rtl;-webkit-font-smoothing:antialiased}
+body{font-family:'IBM Plex Sans Arabic',sans-serif;font-size:16px;color:var(--ink);background:#fff;overflow-x:hidden;direction:rtl;-webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%} a{text-decoration:none;color:inherit}
-ul{list-style:none} button{cursor:pointer;border:none;background:none;font-family:'Cairo',sans-serif}
+ul{list-style:none} button{cursor:pointer;border:none;background:none;font-family:'IBM Plex Sans Arabic',sans-serif}
 svg{display:block;flex-shrink:0}
+h1,h2,h3,h4,h5,h6,.h2,.h3,.page-h1,.svc-hero-h1{font-family:'Alexandria','IBM Plex Sans Arabic',system-ui,sans-serif}
 
 /* ─ Layout ─ */
 .wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
@@ -52,7 +53,7 @@ svg{display:block;flex-shrink:0}
 .sh{margin-bottom:44px}.sh.c{text-align:center}.sh.c .bod{margin-inline:auto;max-width:500px}
 
 /* ─ Buttons ─ */
-.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;font-family:'Cairo',sans-serif;font-size:14px;font-weight:700;line-height:1;border-radius:var(--r1);white-space:nowrap;transition:all .22s var(--fast);cursor:pointer}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:14px;font-weight:700;line-height:1;border-radius:var(--r1);white-space:nowrap;transition:all .22s var(--fast);cursor:pointer}
 .btn.lg{padding:15px 30px;font-size:15px}
 .btn.sm{padding:9px 18px;font-size:13px}
 .btn-p{background:var(--blue);color:#fff;box-shadow:var(--sh-b)}
@@ -182,7 +183,7 @@ svg{display:block;flex-shrink:0}
 #nav.solid .logo-w{display:none}#nav.solid .logo-c{display:block}
 .nav-links{display:flex;align-items:center;gap:0;flex:1;justify-content:center}
 .ni{position:relative}
-.ni>a,.ni>button{display:flex;align-items:center;gap:4px;padding:6px 9px;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.7);border-radius:6px;transition:all .18s;background:none;border:none;font-family:'Cairo',sans-serif;cursor:pointer;white-space:nowrap}
+.ni>a,.ni>button{display:flex;align-items:center;gap:4px;padding:6px 9px;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.7);border-radius:6px;transition:all .18s;background:none;border:none;font-family:'IBM Plex Sans Arabic',sans-serif;cursor:pointer;white-space:nowrap}
 .ni>a:hover,.ni>button:hover,.ni>a.active{color:#fff;background:rgba(255,255,255,.08)}
 #nav.solid .ni>a,#nav.solid .ni>button{color:var(--ink-2)}
 #nav.solid .ni>a:hover,#nav.solid .ni>button:hover{color:var(--blue);background:var(--blue-50)}

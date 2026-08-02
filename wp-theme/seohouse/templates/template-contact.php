@@ -50,81 +50,24 @@ get_template_part( 'template-parts/layout/page-hero', null, [
   <div class="wrap">
     <div class="con-layout">
 
-      <!-- Form -->
-      <div class="sr">
-        <div class="form-card">
-          <div id="formWrap">
-            <div class="form-title"><?php echo esc_html( $contact_form_title ); ?></div>
-            <p class="form-sub"><?php echo esc_html( $contact_form_sub ); ?></p>
-            <?php
-            if ( function_exists( 'the_content' ) ) {
-                ob_start();
-                the_content();
-                $custom_content = ob_get_clean();
-            } else {
-                $custom_content = '';
-            }
-            if ( ! trim( wp_strip_all_tags( $custom_content ) ) ) :
-            ?>
-            <form id="conForm">
-              <div class="form-row">
-                <div class="form-group">
-                  <label>الاسم <span>*</span></label>
-                  <input class="form-input" type="text" name="name" placeholder="اسمك الكريم" required>
-                </div>
-                <div class="form-group">
-                  <label>رقم الجوال <span>*</span></label>
-                  <input class="form-input" type="tel" name="phone" placeholder="05xxxxxxxx" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>البريد الإلكتروني <span>*</span></label>
-                <input class="form-input" type="email" name="email" placeholder="your@email.com" required>
-              </div>
-              <div class="form-group">
-                <label>رابط الموقع أو المتجر</label>
-                <input class="form-input" type="url" name="website" placeholder="https://yourwebsite.com">
-              </div>
-              <div class="form-group">
-                <label>الخدمة المطلوبة <span>*</span></label>
-                <select class="form-select" name="service" required>
-                  <option value="" disabled selected>اختر الخدمة</option>
-                  <option>تحسين محركات البحث</option>
-                  <option>سيو المتاجر الإلكترونية</option>
-                  <option>بناء الباك لينك</option>
-                  <option>كتابة المحتوى</option>
-                  <option>استشارة تحليل الأداء</option>
-                  <option>إنشاء وتصميم موقع</option>
-                  <option>إنشاء وتصميم متجر</option>
-                  <option>رفع منتجات متجر</option>
-                  <option>لست متأكداً — أحتاج استشارة</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>ما الذي تريد تحسينه؟</label>
-                <textarea class="form-textarea" name="message" placeholder="أخبرنا باختصار عن وضع موقعك الحالي وما تريد تحقيقه..."></textarea>
-              </div>
-              <button type="submit" class="form-submit">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-                أرسل الطلب
-              </button>
-              <p id="conFormError" class="form-error"></p>
-              <p class="form-note"><?php echo esc_html( $contact_form_note ); ?></p>
-            </form>
-            <?php else :
-                echo wp_kses_post( $custom_content );
-            endif; ?>
-          </div>
-
-          <div class="form-success" id="formSuccess">
-            <div class="success-ico">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:8px"><?php echo esc_html( $contact_success_title ); ?></h3>
-            <p style="font-size:14px;color:var(--muted);line-height:1.72;max-width:320px;margin-inline:auto"><?php echo esc_html( $contact_success_desc ); ?></p>
-          </div>
-        </div>
-      </div>
+      <!-- Form (reusable template part) -->
+      <?php
+      if ( function_exists( 'the_content' ) ) {
+          ob_start();
+          the_content();
+          $custom_content = ob_get_clean();
+      } else {
+          $custom_content = '';
+      }
+      get_template_part( 'template-parts/layout/contact-form', null, [
+          'form_title'     => $contact_form_title,
+          'form_sub'       => $contact_form_sub,
+          'form_note'      => $contact_form_note,
+          'success_title'  => $contact_success_title,
+          'success_desc'   => $contact_success_desc,
+          'custom_content' => $custom_content,
+      ] );
+      ?>
 
       <!-- Info panel -->
       <div class="info-panel">

@@ -8,12 +8,13 @@ add_action( 'wp_ajax_nopriv_sh_contact', 'sh_handle_contact' );
 function sh_handle_contact(): void {
     check_ajax_referer( 'seohouse_nonce', 'nonce' );
 
-    $name    = sanitize_text_field(     wp_unslash( $_POST['name']    ?? '' ) );
-    $phone   = sanitize_text_field(     wp_unslash( $_POST['phone']   ?? '' ) );
-    $email   = sanitize_email(          wp_unslash( $_POST['email']   ?? '' ) );
-    $website = esc_url_raw(             wp_unslash( $_POST['website'] ?? '' ) );
-    $service = sanitize_text_field(     wp_unslash( $_POST['service'] ?? '' ) );
-    $message = sanitize_textarea_field( wp_unslash( $_POST['message'] ?? '' ) );
+    $name          = sanitize_text_field(     wp_unslash( $_POST['name']          ?? '' ) );
+    $phone         = sanitize_text_field(     wp_unslash( $_POST['phone']         ?? '' ) );
+    $email         = sanitize_email(          wp_unslash( $_POST['email']         ?? '' ) );
+    $website       = esc_url_raw(             wp_unslash( $_POST['website']       ?? '' ) );
+    $service       = sanitize_text_field(     wp_unslash( $_POST['service']       ?? '' ) );
+    $message       = sanitize_textarea_field( wp_unslash( $_POST['message']       ?? '' ) );
+    $plan_selected = sanitize_text_field(     wp_unslash( $_POST['plan_selected'] ?? '' ) );
 
     if ( ! $name || ! $phone || ! $email || ! $service ) {
         wp_send_json_error( [ 'msg' => 'يرجى ملء الحقول المطلوبة' ] );
@@ -29,6 +30,9 @@ function sh_handle_contact(): void {
         $body .= "الموقع: {$website}\n";
     }
     $body .= "الخدمة: {$service}\n";
+    if ( $plan_selected ) {
+        $body .= "الباقة المختارة: {$plan_selected}\n";
+    }
     if ( $message ) {
         $body .= "\nالرسالة:\n{$message}";
     }
