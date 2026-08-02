@@ -159,7 +159,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
         $plan_name  = trim( $plan['plan_name']           ?? '' );
         $m_price    = trim( $plan['plan_monthly_price']  ?? '' );
         $y_price    = trim( $plan['plan_yearly_price']   ?? '' );
-        $currency   = trim( $plan['plan_currency']       ?? 'ر.س' );
+        $currency   = trim( $plan['plan_currency']       ?? 'ريال' );
         $m_suffix   = trim( $plan['plan_monthly_suffix'] ?? 'شهريًا' );
         $y_suffix   = trim( $plan['plan_yearly_suffix']  ?? 'سنويًا' );
         $features   = is_array( $plan['plan_features'] ?? null ) ? array_filter( $plan['plan_features'] ) : [];
@@ -181,8 +181,9 @@ get_template_part( 'template-parts/layout/page-hero', null, [
              data-yearly="<?php echo esc_attr( $y_price ); ?>"
              data-monthly-suffix="<?php echo esc_attr( $m_suffix ); ?>"
              data-yearly-suffix="<?php echo esc_attr( $y_suffix ); ?>">
-          <span class="plan-currency"><?php echo esc_html( $currency ); ?></span>
           <span class="plan-amount"><?php echo esc_html( $m_price ); ?></span>
+          <span class="plan-price-sep">/</span>
+          <span class="plan-currency"><?php echo esc_html( $currency ); ?></span>
           <span class="plan-suffix"><?php echo esc_html( $m_suffix ); ?></span>
         </div>
 
@@ -241,6 +242,8 @@ get_template_part( 'template-parts/layout/page-hero', null, [
           'form_note'     => sh_option( 'contact_form_note',     'أو تواصل معنا على واتساب مباشرةً — سنردّ في أقرب وقت' ),
           'success_title' => sh_option( 'contact_success_title', 'تم الإرسال بنجاح!' ),
           'success_desc'  => sh_option( 'contact_success_desc',  'شكراً على تواصلك — سيتصل بك أحد متخصصينا خلال 24 ساعة لتحديد موعد الاستشارة.' ),
+          'expect_title'  => $contact_expect_title,
+          'expect_items'  => $contact_expect_items,
       ] );
       ?>
 
@@ -298,17 +301,6 @@ get_template_part( 'template-parts/layout/page-hero', null, [
           </div>
         </div>
 
-        <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r2);padding:18px 20px" class="sr d3">
-          <div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:12px"><?php echo esc_html( $contact_expect_title ); ?></div>
-          <div class="chklist">
-            <?php foreach ( $contact_expect_items as $ei ) : ?>
-            <div class="chk-item">
-              <div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
-              <?php echo esc_html( $ei['exp_text'] ?? '' ); ?>
-            </div>
-            <?php endforeach; ?>
-          </div>
-        </div>
 
       </div>
     </div>
