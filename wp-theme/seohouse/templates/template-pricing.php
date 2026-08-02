@@ -169,7 +169,9 @@ get_template_part( 'template-parts/layout/page-hero', null, [
       ?>
       <article class="<?php echo esc_attr( $card_class ); ?>" aria-label="<?php echo esc_attr( $plan_name ); ?>">
 
-        <?php if ( $badge ) : ?>
+        <?php if ( $featured ) : ?>
+          <div class="plan-ribbon" aria-label="الأنسب للنمو">الأنسب للنمو</div>
+        <?php elseif ( $badge ) : ?>
           <div class="plan-badge-pill"><?php echo esc_html( $badge ); ?></div>
         <?php endif; ?>
 
