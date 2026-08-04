@@ -34,7 +34,7 @@ if ( empty( $plans ) ) {
             'plan_featured'       => false,
             'plan_monthly_price'  => '2,500',
             'plan_yearly_price'   => '24,000',
-            'plan_currency'       => 'ر.س',
+            'plan_currency'       => 'ريال',
             'plan_monthly_suffix' => 'شهريًا',
             'plan_yearly_suffix'  => 'سنويًا',
             'plan_features'       => [
@@ -54,7 +54,7 @@ if ( empty( $plans ) ) {
             'plan_featured'       => true,
             'plan_monthly_price'  => '4,500',
             'plan_yearly_price'   => '43,200',
-            'plan_currency'       => 'ر.س',
+            'plan_currency'       => 'ريال',
             'plan_monthly_suffix' => 'شهريًا',
             'plan_yearly_suffix'  => 'سنويًا',
             'plan_features'       => [
@@ -74,7 +74,7 @@ if ( empty( $plans ) ) {
             'plan_featured'       => false,
             'plan_monthly_price'  => '7,500',
             'plan_yearly_price'   => '72,000',
-            'plan_currency'       => 'ر.س',
+            'plan_currency'       => 'ريال',
             'plan_monthly_suffix' => 'شهريًا',
             'plan_yearly_suffix'  => 'سنويًا',
             'plan_features'       => [
@@ -192,6 +192,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
         <div class="plan-divider" role="separator"></div>
 
         <?php if ( ! empty( $features ) ) : ?>
+        <div class="plan-feat-heading" aria-hidden="true">تشمل الباقة</div>
         <div class="plan-features" role="list">
           <?php foreach ( $features as $feat ) :
             $included = ! empty( $feat['feature_included'] );
@@ -199,9 +200,9 @@ get_template_part( 'template-parts/layout/page-hero', null, [
           <div class="plan-feat<?php echo $included ? '' : ' off'; ?>" role="listitem">
             <span class="plan-feat-ico <?php echo $included ? 'yes' : 'no'; ?>" aria-hidden="true">
               <?php if ( $included ) : ?>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 0L14 7L7 14L0 7Z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="currentColor" opacity=".15"/><polyline points="4.5,8.5 7,11 11.5,5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
               <?php else : ?>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0L14 7L7 14L0 7Z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.5" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2.5"/></svg>
               <?php endif; ?>
             </span>
             <span><?php echo esc_html( $feat['feature_text'] ?? '' ); ?></span>
