@@ -60,7 +60,7 @@ add_action( 'wp_enqueue_scripts', function () {
 add_action( 'wp_head', function () {
     echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
     echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
-    $f = 'https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap';
+    $f = 'https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Tajawal:wght@400;500;700&display=swap';
     echo '<link rel="preload" as="style" href="' . esc_url( $f ) . '" onload="this.onload=null;this.rel=\'stylesheet\'">' . "\n";
     echo '<noscript><link rel="stylesheet" href="' . esc_url( $f ) . '"></noscript>' . "\n";
 }, 1 );
