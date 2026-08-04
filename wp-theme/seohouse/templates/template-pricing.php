@@ -132,12 +132,12 @@ get_template_part( 'template-parts/layout/page-hero', null, [
 <section id="pricing-plans" class="sec sec-surface">
   <div class="wrap">
 
-    <div class="sh c">
+    <div class="pr-section-head">
       <h2 class="h2">اختر الباقة المناسبة لك</h2>
     </div>
 
     <!-- Monthly / Yearly toggle -->
-    <div style="text-align:center;margin-bottom:44px">
+    <div class="pr-toggle-wrap">
       <div class="pricing-toggle" role="group" aria-label="خيار الدفع">
         <button class="ptog-btn act" data-plan="monthly" aria-pressed="true"><?php echo esc_html( $monthly_label ); ?></button>
         <button class="ptog-btn" data-plan="yearly" aria-pressed="false">
@@ -170,7 +170,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
       <article class="<?php echo esc_attr( $card_class ); ?>" aria-label="<?php echo esc_attr( $plan_name ); ?>">
 
         <?php if ( $featured ) : ?>
-          <div class="plan-ribbon" aria-label="الأنسب للنمو">الأنسب للنمو</div>
+          <div class="plan-label-chip">الأنسب للنمو</div>
         <?php elseif ( $badge ) : ?>
           <div class="plan-badge-pill"><?php echo esc_html( $badge ); ?></div>
         <?php endif; ?>
@@ -199,9 +199,9 @@ get_template_part( 'template-parts/layout/page-hero', null, [
           <div class="plan-feat<?php echo $included ? '' : ' off'; ?>" role="listitem">
             <span class="plan-feat-ico <?php echo $included ? 'yes' : 'no'; ?>" aria-hidden="true">
               <?php if ( $included ) : ?>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M7 0L14 7L7 14L0 7Z"/></svg>
               <?php else : ?>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 0L14 7L7 14L0 7Z"/></svg>
               <?php endif; ?>
             </span>
             <span><?php echo esc_html( $feat['feature_text'] ?? '' ); ?></span>
