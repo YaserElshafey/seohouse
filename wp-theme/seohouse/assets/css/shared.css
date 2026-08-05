@@ -79,6 +79,8 @@ h1,h2,h3,h4,h5,h6,.h2,.h3,.page-h1,.svc-hero-h1{font-family:'Alexandria','IBM Pl
 .breadcrumb a{color:rgba(255,255,255,.55);transition:color .16s}
 .breadcrumb a:hover{color:rgba(255,255,255,.72)}
 .bc-sep{stroke:rgba(255,255,255,.2);flex-shrink:0}
+.bc-current{color:rgba(255,255,255,.62)}
+.page-hero .tag.d{margin-bottom:18px}
 .page-h1{font-size:clamp(42px,5vw,72px);font-weight:900;line-height:1.22;letter-spacing:-.03em;color:#fff;margin-bottom:18px;animation:fu .75s .08s var(--ease) both;max-width:950px;margin-inline:auto;text-wrap:balance}
 .page-h1 em,.grad-em{font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite}
 .page-hero-p{font-size:clamp(15px,1.55vw,17.5px);line-height:1.85;color:rgba(255,255,255,.65);max-width:780px;margin-inline:auto;margin-bottom:28px;animation:fu .75s .16s var(--ease) both}
