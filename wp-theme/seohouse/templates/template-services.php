@@ -25,27 +25,18 @@ $hub_cta_desc       = sh_field( 'hub_cta_desc',        null, 'احجز استش�
 ?>
 
 <!-- Hero ─────────────────────────────────────────────── -->
-<section class="svc-hero" style="text-align:center">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,#000 10%,transparent 75%);pointer-events:none"></div>
-  <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-start:-200px;bottom:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(30,46,245,.22),transparent 65%)"></div>
-  <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-end:-100px;top:0;width:480px;height:480px;background:radial-gradient(circle,rgba(30,46,245,.14),transparent 65%)"></div>
-  <div class="wrap">
-    <div style="position:relative;z-index:2;max-width:820px;margin-inline:auto">
-      <div class="h-badge">
-        <span class="h-bdot"></span>
-        <?php echo esc_html( $hub_hero_badge ); ?>
-      </div>
-      <h1 style="font-size:clamp(32px,5vw,62px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:18px">
-        <?php echo wp_kses_post( $hub_hero_title ); ?>
-      </h1>
-      <p style="font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.6);max-width:680px;margin-inline:auto;margin-bottom:30px"><?php echo esc_html( $hub_hero_desc ); ?></p>
-      <div style="display:flex;gap:11px;justify-content:center;flex-wrap:wrap">
-        <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p lg">احجز استشارة مجانية</a>
-        <a href="<?php echo esc_url( sh_page_url( 'results' ) ); ?>" class="btn btn-g lg">شاهد نتائجنا</a>
-      </div>
-    </div>
-  </div>
-</section>
+<?php
+$_hub_badge_html = '<div class="h-badge"><span class="h-bdot"></span>' . esc_html( $hub_hero_badge ) . '</div>';
+get_template_part( 'template-parts/layout/page-hero', null, [
+    'badge_html'  => $_hub_badge_html,
+    'title'       => $hub_hero_title,
+    'description' => $hub_hero_desc,
+    'buttons'     => [
+        [ 'text' => 'احجز استشارة مجانية', 'url' => sh_page_url( 'contact' ), 'class' => 'btn-p lg' ],
+        [ 'text' => 'شاهد نتائجنا',        'url' => sh_page_url( 'results' ), 'class' => 'btn-g lg' ],
+    ],
+] );
+?>
 
 <!-- Service categories ──────────────────────────────── -->
 <section class="sec sec-surface">

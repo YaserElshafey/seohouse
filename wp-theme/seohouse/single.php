@@ -13,9 +13,6 @@ while ( have_posts() ) : the_post();
 ?>
 
 <section class="page-hero">
-  <div class="h-dots"></div>
-  <div class="h-g1"></div>
-  <div class="h-g2"></div>
   <div class="wrap">
     <div class="page-hero-inner">
       <div class="breadcrumb">

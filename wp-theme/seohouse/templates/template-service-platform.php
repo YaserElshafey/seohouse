@@ -262,14 +262,11 @@ $side_cta_checks  = ! empty( $acf_side_checks )
 ?>
 
 <!-- Hero ─────────────────────────────────────────────── -->
-<section class="svc-hero" style="text-align:center">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,#000 10%,transparent 75%);pointer-events:none"></div>
-  <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-start:-200px;bottom:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(30,46,245,.22),transparent 65%)"></div>
-  <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-end:-100px;top:0;width:480px;height:480px;background:radial-gradient(circle,<?php echo esc_attr( $dot_color ); ?>22,transparent 65%)"></div>
+<section class="svc-hero">
   <div class="wrap">
-    <div style="position:relative;z-index:2;max-width:820px;margin-inline:auto">
+    <div class="svc-hero-inner">
 
-      <div class="breadcrumb" style="justify-content:center;margin-bottom:22px">
+      <div class="breadcrumb">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">الرئيسية</a>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
         <a href="<?php echo esc_url( $parent_url ); ?>"><?php echo esc_html( $parent_label ); ?></a>
@@ -288,15 +285,15 @@ $side_cta_checks  = ! empty( $acf_side_checks )
         </div>
       <?php endif; ?>
 
-      <h1 style="font-size:clamp(32px,5vw,60px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px">
+      <h1 class="svc-hero-h1">
         <?php if ( $hero_em ) : ?>
-          <?php echo esc_html( $display_title ); ?> <em style="font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite"><?php echo esc_html( $hero_em ); ?></em>
+          <?php echo esc_html( $display_title ); ?> <em><?php echo esc_html( $hero_em ); ?></em>
         <?php else : ?>
           <?php echo wp_kses_post( $display_title ); ?>
         <?php endif; ?>
       </h1>
 
-      <p style="font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.6);max-width:680px;margin-inline:auto;margin-bottom:30px"><?php echo esc_html( $display_desc ); ?></p>
+      <p class="page-hero-p"><?php echo esc_html( $display_desc ); ?></p>
 
       <div class="pbtns">
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p lg">احجز استشارة مجانية</a>

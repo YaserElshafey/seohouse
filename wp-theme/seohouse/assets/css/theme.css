@@ -217,8 +217,10 @@
 .err-p{font-size:15px;color:var(--muted);max-width:420px;margin-inline:auto;line-height:1.85;margin-bottom:28px}
 
 /* ─ Service page ─ */
-.svc-hero{padding-block:clamp(110px,13vh,150px) clamp(52px,6vh,72px);background:var(--navy);position:relative;overflow:hidden;clip-path:inset(0);text-align:center}
-.svc-hero-inner{position:relative;z-index:2;max-width:880px;margin-inline:auto}
+.svc-hero{padding-block:clamp(110px,13vh,148px) clamp(52px,6vh,72px);background:#071650;position:relative;overflow:hidden;clip-path:inset(0)}
+.svc-hero::before{content:'';position:absolute;inset-inline:0;margin-inline:auto;top:-80px;width:700px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(38,71,199,.18),transparent 65%);filter:blur(80px);pointer-events:none}
+.svc-hero::after{content:'';position:absolute;inset-inline:0;margin-inline:auto;bottom:-100px;width:600px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(76,172,255,.08),transparent 65%);filter:blur(90px);pointer-events:none}
+.svc-hero-inner{position:relative;z-index:2;max-width:1050px;margin-inline:auto;text-align:center}
 .h-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,.07)}
 .h-stat{text-align:center;padding-inline:14px;border-inline-end:1px solid rgba(255,255,255,.06)}
 .h-stat:last-child{border:none}
@@ -628,7 +630,7 @@
 @media(max-width:860px){.qv-grid{grid-template-columns:1fr}}
 
 /* ─ SEO main hero h1 ─ */
-.svc-hero-h1{font-size:clamp(34px,5.2vw,64px);font-weight:900;line-height:1.06;letter-spacing:-.03em;color:#fff;margin-bottom:18px;animation:fu .75s .08s var(--ease) both}
+.svc-hero-h1{font-size:clamp(42px,5vw,72px);font-weight:900;line-height:1.22;letter-spacing:-.03em;color:#fff;margin-bottom:18px;animation:fu .75s .08s var(--ease) both;max-width:950px;margin-inline:auto;text-wrap:balance}
 .svc-hero-h1 em{font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite}
 
 /* ─ Sectors menu icon sizing ─ */
@@ -863,7 +865,7 @@
   .rep-layout{gap:28px}
   .con-layout{gap:28px}
   /* Typography polish — Arabic heading line-heights */
-  .svc-hero-h1{line-height:1.2;letter-spacing:-.015em}
+  .svc-hero-h1{line-height:1.28;letter-spacing:-.012em}
   .post-body h1{line-height:1.22;letter-spacing:-.015em}
 }
 @media(max-width:600px){
@@ -907,7 +909,7 @@
   /* plat-exp reduce padding */
   .plat-exp-head,.plat-exp-body{padding:18px 16px}
   /* Typography */
-  .svc-hero-h1{line-height:1.24;letter-spacing:-.008em}
+  .svc-hero-h1{line-height:1.32;letter-spacing:-.008em}
   .post-body h1{line-height:1.28}
   /* Hero section — reduce excessive vertical padding on phone */
   .svc-hero{padding-block:80px 36px}
