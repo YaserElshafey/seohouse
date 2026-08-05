@@ -8,10 +8,10 @@ $cat_name    = ! empty( $categories ) ? $categories[0]->name : '';
 $read_time   = ceil( str_word_count( strip_tags( get_the_content() ) ) / 200 );
 ?>
 <article class="art-card sr<?php echo esc_attr( $delay_class ); ?>">
-  <a href="<?php the_permalink(); ?>" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;height:100%">
+  <a href="<?php the_permalink(); ?>">
     <div class="art-thumb">
       <?php if ( has_post_thumbnail() ) : ?>
-        <?php the_post_thumbnail( 'seohouse-blog-thumb', [ 'style' => 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7' ] ); ?>
+        <?php the_post_thumbnail( 'seohouse-blog-thumb' ); ?>
       <?php endif; ?>
       <?php if ( $cat_name ) : ?>
         <span class="art-cat"><?php echo esc_html( $cat_name ); ?></span>
