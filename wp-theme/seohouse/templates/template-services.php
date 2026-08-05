@@ -10,7 +10,7 @@ $hub_hero_em      = sh_field( 'hub_hero_em',     null, 'وجودك الرقمي'
 $hub_hero_raw     = sh_field( 'hub_hero_title',  null, "خدمات تبني\nوجودك الرقمي" );
 $hub_hero_desc    = sh_field( 'hub_hero_desc',   null, 'من تحسين محركات البحث إلى إنشاء المتاجر — نغطّي كل ما يحتاجه عملك لينمو رقمياً.' );
 $hub_hero_title = $hub_hero_em
-    ? str_replace( $hub_hero_em, '<em style="font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite">' . esc_html( $hub_hero_em ) . '</em>', esc_html( $hub_hero_raw ) )
+    ? str_replace( $hub_hero_em, '<em class="grad-em">' . esc_html( $hub_hero_em ) . '</em>', esc_html( $hub_hero_raw ) )
     : esc_html( $hub_hero_raw );
 $hub_hero_title = nl2br( $hub_hero_title );
 $hub_services_title = sh_field( 'hub_services_title', null, 'اختر الخدمة التي تحتاجها' );
@@ -49,7 +49,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
 
     <!-- SEO (featured) + Web & Stores (stacked) -->
     <div class="svc-layout" style="margin-bottom:56px">
-      <a href="<?php echo esc_url( sh_page_url( 'services/seo' ) ); ?>" class="svc-card feat sr" style="text-decoration:none">
+      <a href="<?php echo esc_url( sh_page_url( 'services/seo' ) ); ?>" class="svc-card feat sr">
         <div class="feat-body">
           <span class="feat-tag"><span class="feat-tag-dot"></span>الخدمة الأساسية</span>
           <h3>تحسين محركات البحث</h3>
@@ -72,19 +72,19 @@ get_template_part( 'template-parts/layout/page-hero', null, [
       </a>
 
       <div class="svc-stack">
-        <a href="<?php echo esc_url( sh_page_url( 'services/web-design' ) ); ?>" class="svc-card sr d1" style="text-decoration:none">
+        <a href="<?php echo esc_url( sh_page_url( 'services/web-design' ) ); ?>" class="svc-card sr d1">
           <span class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></span>
           <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg></div>
           <h3>إنشاء وتصميم مواقع</h3>
           <p>مواقع احترافية سريعة، مبنية للأداء والتحويل من اليوم الأول.</p>
         </a>
-        <a href="<?php echo esc_url( sh_page_url( 'services/stores' ) ); ?>" class="svc-card sr d2" style="text-decoration:none">
+        <a href="<?php echo esc_url( sh_page_url( 'services/stores' ) ); ?>" class="svc-card sr d2">
           <span class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></span>
           <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
           <h3>إنشاء وتصميم متاجر</h3>
           <p>سلة، زد، شوبيفاي — تصميم، إعداد، وربط بوابات الدفع المحلية.</p>
         </a>
-        <a href="<?php echo esc_url( sh_page_url( 'services/products' ) ); ?>" class="svc-card sr d3" style="text-decoration:none">
+        <a href="<?php echo esc_url( sh_page_url( 'services/products' ) ); ?>" class="svc-card sr d3">
           <span class="svc-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg></span>
           <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg></div>
           <h3>رفع المنتجات للمتاجر</h3>
@@ -94,13 +94,13 @@ get_template_part( 'template-parts/layout/page-hero', null, [
     </div>
 
     <!-- SEO sub-services hub -->
-    <div class="sh c sr" style="margin-top:16px">
+    <div class="sh c sr">
       <span class="tag">خدمات سيو التخصصية</span>
       <h2 class="h2"><?php echo esc_html( $hub_seo_sub_title ); ?></h2>
       <p class="bod"><?php echo esc_html( $hub_seo_sub_desc ); ?></p>
     </div>
     <div class="svc-hub-grid">
-      <a href="<?php echo esc_url( sh_page_url( 'services/seo/backlinks' ) ); ?>" class="svc-hub-card sr" style="text-decoration:none">
+      <a href="<?php echo esc_url( sh_page_url( 'services/seo/backlinks' ) ); ?>" class="svc-hub-card sr">
         <div class="svc-hub-ico">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
         </div>
@@ -112,7 +112,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
           <li class="svc-sub-item">Digital PR</li>
         </ul>
       </a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/seo/content' ) ); ?>" class="svc-hub-card sr d1" style="text-decoration:none">
+      <a href="<?php echo esc_url( sh_page_url( 'services/seo/content' ) ); ?>" class="svc-hub-card sr d1">
         <div class="svc-hub-ico">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         </div>
@@ -124,7 +124,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
           <li class="svc-sub-item">أوصاف المنتجات</li>
         </ul>
       </a>
-      <a href="<?php echo esc_url( sh_page_url( 'services/seo/consulting' ) ); ?>" class="svc-hub-card sr d2" style="text-decoration:none">
+      <a href="<?php echo esc_url( sh_page_url( 'services/seo/consulting' ) ); ?>" class="svc-hub-card sr d2">
         <div class="svc-hub-ico">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
         </div>
@@ -136,7 +136,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
           <li class="svc-sub-item">خارطة طريق</li>
         </ul>
       </a>
-      <a href="<?php echo esc_url( sh_page_url( 'sectors/ecommerce' ) ); ?>" class="svc-hub-card sr d3" style="text-decoration:none">
+      <a href="<?php echo esc_url( sh_page_url( 'sectors/ecommerce' ) ); ?>" class="svc-hub-card sr d3">
         <div class="svc-hub-ico">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
         </div>
