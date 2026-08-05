@@ -1111,3 +1111,13 @@
 
 /* Service hub cards used as <a> elements */
 a.svc-card,a.svc-hub-card{text-decoration:none;color:inherit}
+
+/* ─ Search results page ─ */
+.srch-empty{padding:40px 0;max-width:560px}
+.srch-empty-ico{width:64px;height:64px;border-radius:50%;background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.srch-empty-ico svg{stroke:var(--blue)}
+.srch-empty-msg{font-size:15px;color:var(--ink-2);line-height:1.75;margin-bottom:24px}
+.srch-form{display:flex;gap:10px;margin-bottom:16px;align-items:flex-start}
+.srch-input{flex:1;min-width:0}
+.srch-links{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:500px){.srch-form{flex-direction:column}.srch-form .btn{width:100%;justify-content:center}}
