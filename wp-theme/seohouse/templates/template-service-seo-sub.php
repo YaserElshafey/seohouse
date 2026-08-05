@@ -364,7 +364,7 @@ $seo_url     = sh_page_url( 'services/seo' );
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
         <a href="<?php echo esc_url( $seo_url ); ?>">تحسين محركات البحث</a>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        <span style="color:rgba(255,255,255,.55)"><?php echo esc_html( $tag ); ?></span>
+        <span class="bc-current"><?php echo esc_html( $tag ); ?></span>
       </div>
       <span class="tag d" style="margin-bottom:20px"><?php echo esc_html( $def['hero_badge'] ?? 'خدمة فرعية' ); ?></span>
       <?php if ( $em_inline ) : ?>

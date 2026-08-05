@@ -271,7 +271,7 @@ $side_cta_checks  = ! empty( $acf_side_checks )
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
         <a href="<?php echo esc_url( $parent_url ); ?>"><?php echo esc_html( $parent_label ); ?></a>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        <span style="color:rgba(255,255,255,.55)"><?php echo esc_html( $display_tag ); ?></span>
+        <span class="bc-current"><?php echo esc_html( $display_tag ); ?></span>
       </div>
 
       <div class="acc-badge">
