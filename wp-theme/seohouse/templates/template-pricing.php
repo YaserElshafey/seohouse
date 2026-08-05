@@ -153,40 +153,56 @@ get_template_part( 'template-parts/layout/page-hero', null, [
     <div class="pricing-grid">
       <?php
       $delay_classes = [ 'd1', 'd2', 'd3', 'd1', 'd2', 'd3' ];
+      $fmt_price = function ( string $p ) : string {
+          $n = preg_replace( '/[^\d]/', '', $p );
+          return $n !== '' ? number_format( (int) $n ) : $p;
+      };
       foreach ( $plans as $idx => $plan ) :
-        $featured   = ! empty( $plan['plan_featured'] );
-        $badge      = trim( $plan['plan_badge']          ?? '' );
-        $plan_name  = trim( $plan['plan_name']           ?? '' );
-        $m_price    = trim( $plan['plan_monthly_price']  ?? '' );
-        $y_price    = trim( $plan['plan_yearly_price']   ?? '' );
-        $currency   = trim( $plan['plan_currency']       ?? 'ريال' );
-        $m_suffix   = trim( $plan['plan_monthly_suffix'] ?? 'شهريًا' );
-        $y_suffix   = trim( $plan['plan_yearly_suffix']  ?? 'سنويًا' );
-        $features   = is_array( $plan['plan_features'] ?? null ) ? array_filter( $plan['plan_features'] ) : [];
-        $cta_text   = trim( $plan['plan_cta_text']       ?? 'ابدأ الآن' ) ?: 'ابدأ الآن';
-        $delay      = $delay_classes[ $idx % 6 ];
+        $featured  = ! empty( $plan['plan_featured'] );
+        $badge     = trim( $plan['plan_badge']          ?? '' );
+        $plan_name = trim( $plan['plan_name']           ?? '' );
+        $m_price   = trim( $plan['plan_monthly_price']  ?? '' );
+        $y_price   = trim( $plan['plan_yearly_price']   ?? '' );
+        $raw_cur   = trim( $plan['plan_currency'] ?? '' );
+        $currency  = ( $raw_cur === '' || in_array( $raw_cur, [ 'ر.س', 'ر.س.', 'SAR' ], true ) )
+                         ? 'ريال' : $raw_cur;
+        $m_suffix  = trim( $plan['plan_monthly_suffix'] ?? 'شهريًا' );
+        $y_suffix  = trim( $plan['plan_yearly_suffix']  ?? 'سنويًا' );
+        $features  = is_array( $plan['plan_features'] ?? null ) ? array_filter( $plan['plan_features'] ) : [];
+        $cta_text  = trim( $plan['plan_cta_text']       ?? 'ابدأ الآن' ) ?: 'ابدأ الآن';
+        $plan_desc = trim( $plan['plan_desc']            ?? '' );
+        $m_price_d = $fmt_price( $m_price );
+        $y_price_d = $fmt_price( $y_price );
+        $delay     = $delay_classes[ $idx % 6 ];
         $card_class = 'plan-card sr ' . $delay . ( $featured ? ' featured' : '' );
       ?>
       <article class="<?php echo esc_attr( $card_class ); ?>" aria-label="<?php echo esc_attr( $plan_name ); ?>">
 
-        <?php if ( $featured ) : ?>
-          <div class="plan-label-chip">الأنسب للنمو</div>
-        <?php elseif ( $badge ) : ?>
-          <div class="plan-badge-pill"><?php echo esc_html( $badge ); ?></div>
+        <!-- Name + label on same row -->
+        <div class="plan-card-header">
+          <h3 class="plan-name"><?php echo esc_html( $plan_name ); ?></h3>
+          <?php if ( $featured ) : ?>
+            <div class="plan-label-chip">الأنسب للنمو</div>
+          <?php elseif ( $badge ) : ?>
+            <div class="plan-badge-pill"><?php echo esc_html( $badge ); ?></div>
+          <?php endif; ?>
+        </div>
+
+        <?php if ( $plan_desc ) : ?>
+        <p class="plan-desc"><?php echo esc_html( $plan_desc ); ?></p>
         <?php endif; ?>
 
-        <h3 class="plan-name"><?php echo esc_html( $plan_name ); ?></h3>
-        <p class="plan-desc"><?php echo esc_html( $plan['plan_desc'] ?? '' ); ?></p>
-
         <div class="plan-price-row"
-             data-monthly="<?php echo esc_attr( $m_price ); ?>"
-             data-yearly="<?php echo esc_attr( $y_price ); ?>"
+             data-monthly="<?php echo esc_attr( $m_price_d ); ?>"
+             data-yearly="<?php echo esc_attr( $y_price_d ); ?>"
              data-monthly-suffix="<?php echo esc_attr( $m_suffix ); ?>"
              data-yearly-suffix="<?php echo esc_attr( $y_suffix ); ?>">
-          <span class="plan-amount"><?php echo esc_html( $m_price ); ?></span>
-          <span class="plan-price-sep">/</span>
-          <span class="plan-currency"><?php echo esc_html( $currency ); ?></span>
-          <span class="plan-suffix"><?php echo esc_html( $m_suffix ); ?></span>
+          <span class="plan-amount"><?php echo esc_html( $m_price_d ); ?></span>
+          <span class="plan-price-unit">
+            <span class="plan-price-sep">/</span>
+            <span class="plan-currency"><?php echo esc_html( $currency ); ?></span>
+            <span class="plan-suffix"><?php echo esc_html( $m_suffix ); ?></span>
+          </span>
         </div>
 
         <div class="plan-divider" role="separator"></div>
