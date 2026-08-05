@@ -38,7 +38,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
               if ( $first ) : ?>
                 <div class="art-card art-feat sr">
                   <div class="art-thumb feat-h">
-                    <?php if ( has_post_thumbnail() ) the_post_thumbnail( 'seohouse-blog-thumb', [ 'style' => 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover' ] ); ?>
+                    <?php if ( has_post_thumbnail() ) the_post_thumbnail( 'seohouse-blog-thumb' ); ?>
                     <?php $cats = get_the_category(); if ( $cats ) : ?><span class="art-cat"><?php echo esc_html( $cats[0]->name ); ?></span><?php endif; ?>
                   </div>
                   <div class="art-body">
@@ -107,7 +107,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
             <?php while ( $popular->have_posts() ) : $popular->the_post(); ?>
               <a href="<?php the_permalink(); ?>" class="pop-item">
                 <div class="pop-thumb">
-                  <?php if ( has_post_thumbnail() ) the_post_thumbnail( 'thumbnail', [ 'style' => 'width:100%;height:100%;object-fit:cover' ] ); ?>
+                  <?php if ( has_post_thumbnail() ) the_post_thumbnail( 'thumbnail' ); ?>
                 </div>
                 <div>
                   <div class="pop-t"><?php the_title(); ?></div>
@@ -119,10 +119,10 @@ get_template_part( 'template-parts/layout/page-hero', null, [
         </div>
         <?php endif; ?>
 
-        <div class="sb-box sr d2" style="background:var(--blue);border-color:var(--blue)">
-          <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:10px"><?php echo esc_html( $_blog_sb_title ); ?></div>
-          <p style="font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.72;margin-bottom:16px"><?php echo esc_html( $_blog_sb_desc ); ?></p>
-          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-w sm" style="width:100%;justify-content:center"><?php echo esc_html( $_blog_sb_btn ); ?></a>
+        <div class="sb-box sb-cta sr d2">
+          <div class="sb-cta-title"><?php echo esc_html( $_blog_sb_title ); ?></div>
+          <p class="sb-cta-desc"><?php echo esc_html( $_blog_sb_desc ); ?></p>
+          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-w sm"><?php echo esc_html( $_blog_sb_btn ); ?></a>
         </div>
       </div>
     </div>
