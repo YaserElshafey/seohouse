@@ -16,18 +16,16 @@ $buttons     = $args['buttons']     ?? [
     [ 'text' => 'تعرّف على السيو',     'url' => sh_page_url( 'services/seo' ), 'class' => 'btn-g lg' ],
 ];
 ?>
-<section class="sec" style="background:var(--blue);position:relative;overflow:hidden;text-align:center">
-  <div style="position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.07);top:50%;left:50%;transform:translate(-50%,-50%);width:420px;height:420px;pointer-events:none"></div>
-  <div style="position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.04);top:50%;left:50%;transform:translate(-50%,-50%);width:650px;height:650px;pointer-events:none"></div>
-  <div style="position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.025);top:50%;left:50%;transform:translate(-50%,-50%);width:880px;height:880px;pointer-events:none"></div>
+<section class="sec cta-banner">
+  <div class="cta-ring-lg" aria-hidden="true"></div>
   <div class="wrap">
-    <div style="position:relative;z-index:1;max-width:520px;margin-inline:auto" class="sr">
+    <div class="cta-content sr">
       <?php if ( $tag ) : ?>
-        <span class="tag d" style="justify-content:center;margin-bottom:11px"><?php echo esc_html( $tag ); ?></span>
+        <span class="tag d"><?php echo esc_html( $tag ); ?></span>
       <?php endif; ?>
-      <h2 class="h2 wh" style="margin-bottom:11px"><?php echo esc_html( $title ); ?></h2>
-      <p style="font-size:clamp(14px,1.4vw,16px);color:rgba(255,255,255,.55);line-height:1.88;margin-bottom:28px"><?php echo esc_html( $description ); ?></p>
-      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <h2 class="h2 wh"><?php echo esc_html( $title ); ?></h2>
+      <p class="cta-desc"><?php echo esc_html( $description ); ?></p>
+      <div class="cta-btns">
         <?php foreach ( $buttons as $btn ) : ?>
           <a href="<?php echo esc_url( $btn['url'] ?? '#' ); ?>" class="btn <?php echo esc_attr( $btn['class'] ?? 'btn-w lg' ); ?>">
             <?php echo esc_html( $btn['text'] ); ?>
