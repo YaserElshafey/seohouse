@@ -263,7 +263,6 @@ $side_cta_checks  = ! empty( $acf_side_checks )
 
 <!-- Hero ─────────────────────────────────────────────── -->
 <section class="svc-hero">
-  <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-end:-100px;top:0;width:480px;height:480px;background:radial-gradient(circle,<?php echo esc_attr( $dot_color ); ?>22,transparent 65%)"></div>
   <div class="wrap">
     <div class="svc-hero-inner">
 
