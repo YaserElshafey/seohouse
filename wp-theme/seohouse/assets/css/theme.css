@@ -1059,3 +1059,52 @@
   .svc-hero-h1 em{animation:none}
   .h-bdot{animation:none}
 }
+
+/* ═══════════════════════════════════════════════
+   Phase 2 — additional layout & component CSS
+   ═══════════════════════════════════════════════ */
+
+/* Info card label — WCAG AA contrast fix (.22 → .6) */
+.info-card-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:14px;position:relative;z-index:1}
+
+/* Sectors archive — why-section responsive 2-col layout */
+.sectors-why-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+@media(max-width:860px){.sectors-why-grid{grid-template-columns:1fr;gap:28px}}
+.sectors-why-col>.tag{margin-bottom:12px}
+.sectors-why-col>.h2{margin-bottom:16px}
+.sectors-why-col>.bod{margin-bottom:20px}
+
+/* Intent panel — right column of sectors why-section */
+.intent-card{background:var(--navy-2);border-radius:var(--r4);padding:28px;position:relative;overflow:hidden}
+.intent-card::before{content:'';position:absolute;inset-inline-end:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.28),transparent 70%)}
+.intent-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:18px;position:relative;z-index:1}
+.intent-list{display:flex;flex-direction:column;gap:10px;position:relative;z-index:1}
+.intent-item{display:flex;align-items:center;gap:10px;padding:12px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)}
+.intent-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.intent-text{font-size:13px;color:rgba(255,255,255,.7)}
+
+/* Single post — hero meta row & dot separators */
+.post-meta-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.meta-dot{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.3);display:inline-block;flex-shrink:0}
+
+/* Related posts block */
+.related-posts{margin-top:32px}
+.related-posts-title{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:18px}
+.art-grid-related{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.art-grid-related{grid-template-columns:1fr}}
+
+/* Sidebar blue CTA box */
+.sb-box.sb-cta{background:var(--blue);border-color:var(--blue)}
+.sb-cta-title{font-size:13px;font-weight:800;color:#fff;margin-bottom:10px}
+.sb-cta-desc{font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.72;margin-bottom:16px}
+.sb-box.sb-cta .btn{width:100%;justify-content:center}
+
+/* Team join card */
+.tm-join-card.tm-card{background:var(--off)}
+.tm-join-inner{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;text-align:center;min-height:320px}
+.tm-join-ico{width:52px;height:52px;border-radius:14px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.tm-join-title{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.tm-join-desc{font-size:13px;color:var(--muted);line-height:1.72;margin-bottom:18px}
+
+/* Archive empty state */
+.empty-state{color:var(--muted);font-size:14px}
