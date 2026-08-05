@@ -368,9 +368,9 @@ $seo_url     = sh_page_url( 'services/seo' );
       </div>
       <span class="tag d" style="margin-bottom:20px"><?php echo esc_html( $def['hero_badge'] ?? 'خدمة فرعية' ); ?></span>
       <?php if ( $em_inline ) : ?>
-      <h1 class="svc-hero-h1"><?php echo esc_html( $pre_em ); ?><em><?php echo esc_html( $em_inline ); ?></em><br><?php echo esc_html( $line2 ); ?></h1>
+      <h1 class="svc-hero-h1"><?php echo esc_html( $pre_em ); ?><em><?php echo esc_html( $em_inline ); ?></em> <?php echo esc_html( $line2 ); ?></h1>
       <?php else : ?>
-      <h1 class="svc-hero-h1"><?php echo esc_html( $h1 ); ?><br><em><?php echo esc_html( $em ); ?></em></h1>
+      <h1 class="svc-hero-h1"><?php echo esc_html( $h1 ); ?> <em><?php echo esc_html( $em ); ?></em></h1>
       <?php endif; ?>
       <p class="page-hero-p"><?php echo esc_html( $desc ); ?></p>
       <div class="pbtns">

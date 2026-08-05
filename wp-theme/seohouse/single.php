@@ -12,7 +12,7 @@ while ( have_posts() ) : the_post();
     $read_time = max( 1, round( $words / 200 ) );
 ?>
 
-<section class="page-hero">
+<section class="page-hero page-hero--post">
   <div class="wrap">
     <div class="page-hero-inner">
       <div class="breadcrumb">

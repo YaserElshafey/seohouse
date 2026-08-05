@@ -5,7 +5,7 @@
 get_header();
 
 $hero_tag  = sh_field( 'service_hero_tag' )  ?: 'تحسين محركات البحث';
-$hero_title = sh_field( 'service_hero_title' ) ?: 'شركة <em>تحسين محركات البحث</em><br>التي تُترجم البحث إلى مبيعات';
+$hero_title = sh_field( 'service_hero_title' ) ?: 'شركة <em>تحسين محركات البحث</em> التي تُترجم البحث إلى مبيعات';
 $hero_desc  = sh_field( 'service_hero_desc' )  ?: 'عملاؤك يبحثون عنك على جوجل اليوم — السؤال هو: هل يجدونك؟ نُحوّل الزيارات العضوية إلى ليدز ومبيعات حقيقية.';
 $features   = sh_field( 'service_features' );
 $steps      = sh_field( 'service_steps' );

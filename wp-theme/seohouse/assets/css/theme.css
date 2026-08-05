@@ -217,7 +217,7 @@
 .err-p{font-size:15px;color:var(--muted);max-width:420px;margin-inline:auto;line-height:1.85;margin-bottom:28px}
 
 /* ─ Service page ─ */
-.svc-hero{padding-block:clamp(110px,13vh,148px) clamp(52px,6vh,72px);background:#071650;position:relative;overflow:hidden;clip-path:inset(0)}
+.svc-hero{padding-block:clamp(88px,10vh,120px) clamp(44px,5vh,58px);background:#071650;position:relative;overflow:hidden;clip-path:inset(0)}
 .svc-hero::before{content:'';position:absolute;inset-inline:0;margin-inline:auto;top:-80px;width:700px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(38,71,199,.18),transparent 65%);filter:blur(80px);pointer-events:none}
 .svc-hero::after{content:'';position:absolute;inset-inline:0;margin-inline:auto;bottom:-100px;width:600px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(76,172,255,.08),transparent 65%);filter:blur(90px);pointer-events:none}
 .svc-hero-inner{position:relative;z-index:2;max-width:1050px;margin-inline:auto;text-align:center}
@@ -630,7 +630,7 @@
 @media(max-width:860px){.qv-grid{grid-template-columns:1fr}}
 
 /* ─ SEO main hero h1 ─ */
-.svc-hero-h1{font-size:clamp(42px,5vw,72px);font-weight:900;line-height:1.22;letter-spacing:-.03em;color:#fff;margin-bottom:18px;animation:fu .75s .08s var(--ease) both;max-width:950px;margin-inline:auto;text-wrap:balance}
+.svc-hero-h1{font-size:clamp(42px,4.5vw,64px);font-weight:900;line-height:1.25;letter-spacing:-.028em;color:#fff;margin-bottom:14px;animation:fu .75s .08s var(--ease) both;max-width:950px;margin-inline:auto;text-wrap:balance}
 .svc-hero-h1 em{font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite}
 
 /* ─ Sectors menu icon sizing ─ */
