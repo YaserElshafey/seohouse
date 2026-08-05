@@ -81,7 +81,7 @@ $web_cta_desc  = sh_field( 'web_cta_desc',  null, 'احجز استشارة مج�
         <span style="color:rgba(255,255,255,.55)">إنشاء وتصميم مواقع</span>
       </div>
       <span class="tag d" style="margin-bottom:18px">خدمة متخصصة</span>
-      <h1 class="svc-hero-h1"><?php echo esc_html( $web_hero_pre ); ?><br><em><?php echo esc_html( $web_hero_em ); ?></em></h1>
+      <h1 class="svc-hero-h1"><?php echo esc_html( $web_hero_pre ); ?> <em><?php echo esc_html( $web_hero_em ); ?></em></h1>
       <p class="page-hero-p"><?php echo esc_html( $web_hero_desc ); ?></p>
       <div class="pbtns">
         <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p lg">
