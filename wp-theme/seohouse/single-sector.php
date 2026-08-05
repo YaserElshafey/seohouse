@@ -283,12 +283,9 @@ if ( empty( $sector_data ) ) :
 
 <!-- ─── HERO ───────────────────────────────────────────────────────────── -->
 <section class="svc-hero">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,#000 10%,transparent 75%);pointer-events:none"></div>
-  <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-start:-200px;bottom:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(30,46,245,.22),transparent 65%)"></div>
-  <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-end:-100px;top:0;width:480px;height:480px;background:radial-gradient(circle,rgba(30,46,245,.12),transparent 65%)"></div>
   <div class="wrap">
     <div class="svc-hero-inner">
-      <div class="breadcrumb" style="justify-content:center;margin-bottom:22px">
+      <div class="breadcrumb">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">الرئيسية</a>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
         <a href="<?php echo esc_url( $sectors_url ); ?>">القطاعات</a>
@@ -299,10 +296,10 @@ if ( empty( $sector_data ) ) :
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $sector_data['badge_svg']; // phpcs:ignore ?></svg>
         قطاع متخصّص
       </div>
-      <h1 style="font-size:clamp(32px,5vw,60px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px">
-        <?php echo esc_html( $sector_data['h1_pre'] ?? '' ); ?><em style="font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite"><?php echo esc_html( $sector_data['h1_em'] ?? get_the_title() ); ?></em>
+      <h1 class="svc-hero-h1">
+        <?php echo esc_html( $sector_data['h1_pre'] ?? '' ); ?><em><?php echo esc_html( $sector_data['h1_em'] ?? get_the_title() ); ?></em>
       </h1>
-      <p style="font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.55);max-width:680px;margin-inline:auto;margin-bottom:30px"><?php echo esc_html( $sector_data['sub'] ?? '' ); ?></p>
+      <p class="page-hero-p"><?php echo esc_html( $sector_data['sub'] ?? '' ); ?></p>
       <div class="pbtns">
         <a href="<?php echo esc_url( $contact_url ); ?>" class="btn btn-p lg">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>

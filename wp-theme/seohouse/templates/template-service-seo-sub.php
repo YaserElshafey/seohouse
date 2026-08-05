@@ -357,25 +357,22 @@ $seo_url     = sh_page_url( 'services/seo' );
      HERO
      ═══════════════════════════════════════════════════════════ -->
 <section class="svc-hero">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,#000 10%,transparent 75%);pointer-events:none"></div>
-  <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-start:-200px;bottom:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(30,46,245,.22),transparent 65%)"></div>
-  <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-end:-100px;top:0;width:480px;height:480px;background:radial-gradient(circle,rgba(30,46,245,.12),transparent 65%)"></div>
   <div class="wrap">
     <div class="svc-hero-inner">
-      <div class="breadcrumb" style="justify-content:center;margin-bottom:22px">
+      <div class="breadcrumb">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">الرئيسية</a>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
         <a href="<?php echo esc_url( $seo_url ); ?>">تحسين محركات البحث</a>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
         <span style="color:rgba(255,255,255,.55)"><?php echo esc_html( $tag ); ?></span>
       </div>
-      <span class="tag d" style="justify-content:center;margin-bottom:20px"><?php echo esc_html( $def['hero_badge'] ?? 'خدمة فرعية' ); ?></span>
+      <span class="tag d" style="margin-bottom:20px"><?php echo esc_html( $def['hero_badge'] ?? 'خدمة فرعية' ); ?></span>
       <?php if ( $em_inline ) : ?>
-      <h1 class="page-h1"><?php echo esc_html( $pre_em ); ?><em><?php echo esc_html( $em_inline ); ?></em><br><?php echo esc_html( $line2 ); ?></h1>
+      <h1 class="svc-hero-h1"><?php echo esc_html( $pre_em ); ?><em><?php echo esc_html( $em_inline ); ?></em><br><?php echo esc_html( $line2 ); ?></h1>
       <?php else : ?>
-      <h1 class="page-h1"><?php echo esc_html( $h1 ); ?><br><em><?php echo esc_html( $em ); ?></em></h1>
+      <h1 class="svc-hero-h1"><?php echo esc_html( $h1 ); ?><br><em><?php echo esc_html( $em ); ?></em></h1>
       <?php endif; ?>
-      <p style="font-size:clamp(15px,1.55vw,17.5px);line-height:1.9;color:rgba(255,255,255,.55);max-width:660px;margin-inline:auto;margin-bottom:30px"><?php echo esc_html( $desc ); ?></p>
+      <p class="page-hero-p"><?php echo esc_html( $desc ); ?></p>
       <div class="pbtns">
         <a href="<?php echo esc_url( $contact_url ); ?>" class="btn btn-p lg">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>

@@ -113,22 +113,14 @@ if ( $sectors_q->have_posts() ) {
 ?>
 
 <!-- ─── HERO ─────────────────────────────────────────────────────────────── -->
-<section style="padding-block:clamp(110px,13vh,148px) clamp(52px,6vh,68px);background:var(--navy);position:relative;overflow:hidden">
-  <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 80% at 50% 50%,#000 10%,transparent 75%);pointer-events:none"></div>
-  <div style="position:absolute;border-radius:50%;filter:blur(60px);pointer-events:none;inset-inline-start:-150px;bottom:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(30,46,245,.2),transparent 65%)"></div>
-  <div class="wrap" style="position:relative;z-index:2">
-    <div style="max-width:700px">
-      <div class="breadcrumb">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">الرئيسية</a>
-        <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        <span style="color:rgba(255,255,255,.6)">القطاعات</span>
-      </div>
-      <span class="tag d" style="margin-bottom:18px"><?php echo esc_html( $sectors_hero_tag ); ?></span>
-      <h1 style="font-size:clamp(30px,4.5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:16px;animation:fu .75s .08s var(--ease) both"><?php echo wp_kses_post( $sec_title ); ?></h1>
-      <p style="font-size:clamp(14px,1.5vw,17px);line-height:1.9;color:rgba(255,255,255,.48);max-width:600px;margin-bottom:28px;animation:fu .75s .16s var(--ease) both"><?php echo esc_html( $sec_desc ); ?></p>
-    </div>
-  </div>
-</section>
+<?php
+get_template_part( 'template-parts/layout/page-hero', null, [
+    'tag'         => $sectors_hero_tag,
+    'title'       => $sec_title,
+    'description' => $sec_desc,
+    'breadcrumb'  => [ 'القطاعات' => '' ],
+] );
+?>
 
 <!-- ─── 8-CARD SECTORS GRID ───────────────────────────────────────────────── -->
 <section class="sec sec-surface">
