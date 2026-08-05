@@ -87,8 +87,8 @@ $expect_items  = $args['expect_items']  ?? [];
       <div class="success-ico">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
       </div>
-      <h3 style="font-size:20px;font-weight:800;color:var(--ink);margin-bottom:8px"><?php echo esc_html( $success_title ); ?></h3>
-      <p style="font-size:14px;color:var(--muted);line-height:1.72;max-width:320px;margin-inline:auto"><?php echo esc_html( $success_desc ); ?></p>
+      <h3><?php echo esc_html( $success_title ); ?></h3>
+      <p><?php echo esc_html( $success_desc ); ?></p>
     </div>
   </div>
 </div>

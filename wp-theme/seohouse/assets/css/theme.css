@@ -983,8 +983,141 @@
   .ptog-btn{padding:8px 18px;font-size:13px}
 }
 
+/* ─ 404 — section wrapper ─ */
+.err-section{background:var(--navy);padding-block:clamp(100px,12vh,140px) 0;position:relative;overflow:hidden;clip-path:inset(0)}
+.err-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.03) 1px,transparent 1px);background-size:36px 36px;pointer-events:none}
+.err-section::after{content:'';position:absolute;inset-inline-start:-100px;bottom:-60px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.2),transparent 65%);filter:blur(55px);pointer-events:none}
+.err-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+/* ─ CTA banner ─ */
+.cta-banner{background:var(--blue);position:relative;overflow:hidden;text-align:center}
+.cta-banner::before{content:'';position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.07);top:50%;left:50%;transform:translate(-50%,-50%);width:420px;height:420px;pointer-events:none}
+.cta-banner::after{content:'';position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.04);top:50%;left:50%;transform:translate(-50%,-50%);width:650px;height:650px;pointer-events:none}
+.cta-ring-lg{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.025);top:50%;left:50%;transform:translate(-50%,-50%);width:880px;height:880px;pointer-events:none}
+.cta-content{position:relative;z-index:1;max-width:520px;margin-inline:auto}
+.cta-banner .tag.d{justify-content:center;margin-bottom:11px}
+.cta-banner .h2.wh{margin-bottom:11px}
+.cta-desc{font-size:clamp(14px,1.4vw,16px);color:rgba(255,255,255,.62);line-height:1.88;margin-bottom:28px}
+.cta-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+
+/* ─ About — who section ─ */
+.about-who-col>.tag{margin-bottom:12px}
+.about-who-col>.h2{margin-bottom:16px}
+.about-who-col>.bod{margin-bottom:18px}
+
+/* ─ About — principles card ─ */
+.principles-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:20px}
+.principle-list{display:flex;flex-direction:column;gap:14px}
+.principle-item{display:flex;align-items:flex-start;gap:12px;padding:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)}
+.principle-ico{width:32px;height:32px;border-radius:8px;background:rgba(30,46,245,.22);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.principle-head{font-size:13.5px;font-weight:700;color:rgba(255,255,255,.85);margin-bottom:3px}
+.principle-desc{font-size:12px;color:rgba(255,255,255,.65);line-height:1.65}
+
+/* ─ Blog article card ─ */
+.art-card a{text-decoration:none;color:inherit;display:flex;flex-direction:column;height:100%}
+.art-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7}
+
+/* ─ Team card avatar image ─ */
+.tm-avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 15%}
+
+/* ─ Contact form success state ─ */
+.form-success h3{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.form-success p{font-size:14px;color:var(--muted);line-height:1.72;max-width:320px;margin-inline:auto}
+
+/* ─ Case study detail body ─ */
+.cs-detail-p{font-size:14.5px;color:var(--ink-2);line-height:1.9}
+.cs-headline-box{background:var(--navy-2);text-align:center;padding:32px 28px}
+.cs-headline-box .proof-result{margin-bottom:10px}
+.cs-headline-box .proof-meta{justify-content:center;border-top:none;padding-top:0}
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cs-gallery-img{border-radius:var(--r2);width:100%;height:auto;cursor:zoom-in}
+@media(max-width:480px){.gallery-grid{grid-template-columns:1fr}}
+
+/* ─ Case study sidebar CTA ─ */
+.cs-cta-box{background:var(--blue);border-color:var(--blue)}
+.cs-cta-box h4{color:rgba(255,255,255,.65)}
+.cs-cta-box p{font-size:13px;color:rgba(255,255,255,.72);line-height:1.72;margin-bottom:16px}
+.cs-cta-box .btn-w{width:100%;justify-content:center}
+
+/* ─ Case study back link ─ */
+.cs-back-link{display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:700;color:var(--blue);padding:14px 16px;background:var(--blue-50);border-radius:var(--r2);text-decoration:none;transition:background .16s}
+.cs-back-link:hover{background:var(--blue-100)}
+.cs-client-link{color:var(--blue);font-weight:700;font-size:13px}
+
+/* ─ Case study lightbox ─ */
+.cs-lightbox{display:none;position:fixed;inset:0;z-index:9000;background:rgba(7,13,50,.96);align-items:center;justify-content:center;gap:16px}
+.cs-lightbox.is-open{display:flex}
+.cs-lb-nav{background:rgba(255,255,255,.1);border:none;border-radius:50%;width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;color:#fff;transition:background .18s}
+.cs-lb-nav:hover{background:rgba(255,255,255,.2)}
+.cs-lb-frame{position:relative;max-width:80vw;max-height:85vh}
+.cs-lb-img{max-width:100%;max-height:85vh;border-radius:var(--r2);display:block}
+.cs-lb-close{position:absolute;top:-14px;inset-inline-end:-14px;background:rgba(255,255,255,.15);border:none;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;transition:background .18s}
+.cs-lb-close:hover{background:rgba(255,255,255,.25)}
+
 @media(prefers-reduced-motion:reduce){
   .svc-hero-h1{animation:none}
   .svc-hero-h1 em{animation:none}
   .h-bdot{animation:none}
 }
+
+/* ═══════════════════════════════════════════════
+   Phase 2 — additional layout & component CSS
+   ═══════════════════════════════════════════════ */
+
+/* Info card label — WCAG AA contrast fix (.22 → .6) */
+.info-card-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:14px;position:relative;z-index:1}
+
+/* Sectors archive — why-section responsive 2-col layout */
+.sectors-why-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+@media(max-width:860px){.sectors-why-grid{grid-template-columns:1fr;gap:28px}}
+.sectors-why-col>.tag{margin-bottom:12px}
+.sectors-why-col>.h2{margin-bottom:16px}
+.sectors-why-col>.bod{margin-bottom:20px}
+
+/* Intent panel — right column of sectors why-section */
+.intent-card{background:var(--navy-2);border-radius:var(--r4);padding:28px;position:relative;overflow:hidden}
+.intent-card::before{content:'';position:absolute;inset-inline-end:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.28),transparent 70%)}
+.intent-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:18px;position:relative;z-index:1}
+.intent-list{display:flex;flex-direction:column;gap:10px;position:relative;z-index:1}
+.intent-item{display:flex;align-items:center;gap:10px;padding:12px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)}
+.intent-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.intent-text{font-size:13px;color:rgba(255,255,255,.7)}
+
+/* Single post — hero meta row & dot separators */
+.post-meta-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.meta-dot{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.3);display:inline-block;flex-shrink:0}
+
+/* Related posts block */
+.related-posts{margin-top:32px}
+.related-posts-title{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:18px}
+.art-grid-related{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.art-grid-related{grid-template-columns:1fr}}
+
+/* Sidebar blue CTA box */
+.sb-box.sb-cta{background:var(--blue);border-color:var(--blue)}
+.sb-cta-title{font-size:13px;font-weight:800;color:#fff;margin-bottom:10px}
+.sb-cta-desc{font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.72;margin-bottom:16px}
+.sb-box.sb-cta .btn{width:100%;justify-content:center}
+
+/* Team join card */
+.tm-join-card.tm-card{background:var(--off)}
+.tm-join-inner{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;text-align:center;min-height:320px}
+.tm-join-ico{width:52px;height:52px;border-radius:14px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.tm-join-title{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.tm-join-desc{font-size:13px;color:var(--muted);line-height:1.72;margin-bottom:18px}
+
+/* Archive empty state */
+.empty-state{color:var(--muted);font-size:14px}
+
+/* Service hub cards used as <a> elements */
+a.svc-card,a.svc-hub-card{text-decoration:none;color:inherit}
+
+/* ─ Search results page ─ */
+.srch-empty{padding:40px 0;max-width:560px}
+.srch-empty-ico{width:64px;height:64px;border-radius:50%;background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.srch-empty-ico svg{stroke:var(--blue)}
+.srch-empty-msg{font-size:15px;color:var(--ink-2);line-height:1.75;margin-bottom:24px}
+.srch-form{display:flex;gap:10px;margin-bottom:16px;align-items:flex-start}
+.srch-input{flex:1;min-width:0}
+.srch-links{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:500px){.srch-form{flex-direction:column}.srch-form .btn{width:100%;justify-content:center}}

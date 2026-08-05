@@ -151,21 +151,23 @@ get_template_part( 'template-parts/layout/page-hero', null, [
 <!-- ─── WHY SECTOR SPECIALISATION ────────────────────────────────────────── -->
 <section class="sec sec-white">
   <div class="wrap">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center">
-      <div class="sr">
-        <span class="tag" style="margin-bottom:12px"><?php echo esc_html( $sectors_why_tag ); ?></span>
-        <h2 class="h2" style="margin-bottom:16px"><?php echo wp_kses_post( $sectors_why_title ); ?></h2>
-        <p class="bod" style="margin-bottom:18px"><?php echo esc_html( $sectors_why_body1 ); ?></p>
-        <p class="bod" style="margin-bottom:24px"><?php echo esc_html( $sectors_why_body2 ); ?></p>
+    <div class="sectors-why-grid">
+      <div class="sectors-why-col sr">
+        <span class="tag"><?php echo esc_html( $sectors_why_tag ); ?></span>
+        <h2 class="h2"><?php echo wp_kses_post( $sectors_why_title ); ?></h2>
+        <p class="bod"><?php echo esc_html( $sectors_why_body1 ); ?></p>
+        <p class="bod"><?php echo esc_html( $sectors_why_body2 ); ?></p>
         <a href="<?php echo esc_url( $contact_url ); ?>" class="btn btn-p">احجز استشارة مجانية</a>
       </div>
       <div class="sr d1">
-        <div style="background:var(--navy-2);border-radius:var(--r4);padding:28px;position:relative;overflow:hidden">
-          <div style="position:absolute;inset-inline-end:-40px;top:-40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.28),transparent 70%)"></div>
-          <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:18px;position:relative;z-index:1"><?php echo esc_html( $sectors_intent_title ); ?></div>
-          <div style="display:flex;flex-direction:column;gap:10px;position:relative;z-index:1">
+        <div class="intent-card">
+          <div class="intent-label"><?php echo esc_html( $sectors_intent_title ); ?></div>
+          <div class="intent-list">
             <?php foreach ( $sectors_intent_items as $si ) : ?>
-            <div style="display:flex;align-items:center;gap:10px;padding:12px 13px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)"><div style="width:8px;height:8px;border-radius:50%;background:<?php echo esc_attr( $si['si_color'] ?? 'var(--blue)' ); ?>;flex-shrink:0"></div><div style="font-size:13px;color:rgba(255,255,255,.7)"><?php echo esc_html( $si['si_text'] ?? '' ); ?></div></div>
+            <div class="intent-item">
+              <div class="intent-dot" style="background:<?php echo esc_attr( $si['si_color'] ?? 'var(--blue)' ); ?>"></div>
+              <div class="intent-text"><?php echo esc_html( $si['si_text'] ?? '' ); ?></div>
+            </div>
             <?php endforeach; ?>
           </div>
         </div>

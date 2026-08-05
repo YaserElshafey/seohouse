@@ -21,18 +21,18 @@ while ( have_posts() ) : the_post();
         <a href="<?php echo esc_url( sh_page_url( 'blog' ) ); ?>">المدونة</a>
         <?php if ( $cat_name ) : ?>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        <span style="color:rgba(255,255,255,.6)"><?php echo esc_html( $cat_name ); ?></span>
+        <span class="bc-current"><?php echo esc_html( $cat_name ); ?></span>
         <?php endif; ?>
       </div>
       <?php if ( $cat_name ) : ?>
-        <span class="tag d" style="margin-bottom:18px"><?php echo esc_html( $cat_name ); ?></span>
+        <span class="tag d"><?php echo esc_html( $cat_name ); ?></span>
       <?php endif; ?>
       <h1 class="page-h1"><?php the_title(); ?></h1>
-      <p class="page-hero-p" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+      <p class="page-hero-p post-meta-row">
         <span><?php echo esc_html( get_the_date() ); ?></span>
-        <span style="width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.3)"></span>
+        <span class="meta-dot"></span>
         <span><?php echo esc_html( $read_time ); ?> دق قراءة</span>
-        <span style="width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.3)"></span>
+        <span class="meta-dot"></span>
         <span><?php the_author(); ?></span>
       </p>
     </div>
@@ -73,9 +73,9 @@ while ( have_posts() ) : the_post();
         ] );
         if ( $related->have_posts() ) :
         ?>
-        <div style="margin-top:32px">
-          <h3 style="font-size:16px;font-weight:800;color:var(--ink);margin-bottom:18px">مقالات ذات صلة</h3>
-          <div class="art-grid" style="grid-template-columns:1fr 1fr">
+        <div class="related-posts">
+          <h3 class="related-posts-title">مقالات ذات صلة</h3>
+          <div class="art-grid-related">
             <?php while ( $related->have_posts() ) : $related->the_post(); ?>
               <?php get_template_part( 'template-parts/cards/article-card' ); ?>
             <?php endwhile; wp_reset_postdata(); ?>
@@ -102,10 +102,10 @@ while ( have_posts() ) : the_post();
         </div>
 
         <?php $blog_pid = (int) get_option( 'page_for_posts' ) ?: null; ?>
-        <div class="sb-box" style="background:var(--blue);border-color:var(--blue)">
-          <div style="font-size:13px;font-weight:800;color:#fff;margin-bottom:10px"><?php echo esc_html( sh_field( 'blog_sidebar_cta_title', $blog_pid, 'استشارة مجانية' ) ); ?></div>
-          <p style="font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.72;margin-bottom:16px"><?php echo esc_html( sh_field( 'blog_sidebar_cta_desc', $blog_pid, 'هل تريد تحسين ترتيب موقعك؟ احجز 30 دقيقة معنا مجاناً.' ) ); ?></p>
-          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-w sm" style="width:100%;justify-content:center"><?php echo esc_html( sh_field( 'blog_sidebar_cta_btn', $blog_pid, 'احجز الآن' ) ); ?></a>
+        <div class="sb-box sb-cta">
+          <div class="sb-cta-title"><?php echo esc_html( sh_field( 'blog_sidebar_cta_title', $blog_pid, 'استشارة مجانية' ) ); ?></div>
+          <p class="sb-cta-desc"><?php echo esc_html( sh_field( 'blog_sidebar_cta_desc', $blog_pid, 'هل تريد تحسين ترتيب موقعك؟ احجز 30 دقيقة معنا مجاناً.' ) ); ?></p>
+          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-w sm"><?php echo esc_html( sh_field( 'blog_sidebar_cta_btn', $blog_pid, 'احجز الآن' ) ); ?></a>
         </div>
       </div>
     </div>

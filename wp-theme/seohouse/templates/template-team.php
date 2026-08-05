@@ -88,13 +88,13 @@ get_template_part( 'template-parts/layout/page-hero', null, [
       endif; ?>
 
       <!-- Join us card -->
-      <div class="tm-card sr d3" style="background:var(--off)">
-        <div style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;text-align:center;min-height:320px">
-          <div style="width:52px;height:52px;border-radius:14px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin-bottom:16px">
+      <div class="tm-card tm-join-card sr d3">
+        <div class="tm-join-inner">
+          <div class="tm-join-ico">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
           </div>
-          <h3 style="font-size:16px;font-weight:800;color:var(--ink);margin-bottom:8px"><?php echo esc_html( $team_join_title ); ?></h3>
-          <p style="font-size:13px;color:var(--muted);line-height:1.72;margin-bottom:18px"><?php echo esc_html( $team_join_desc ); ?></p>
+          <h3 class="tm-join-title"><?php echo esc_html( $team_join_title ); ?></h3>
+          <p class="tm-join-desc"><?php echo esc_html( $team_join_desc ); ?></p>
           <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p sm"><?php echo esc_html( $team_join_btn ); ?></a>
         </div>
       </div>

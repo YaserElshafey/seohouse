@@ -31,7 +31,7 @@ $after_cta_html = $args['after_cta_html'] ?? '';
             <?php if ( $url ) : ?>
               <a href="<?php echo esc_url( $url ); ?>"><?php echo esc_html( $label ); ?></a>
             <?php else : ?>
-              <span style="color:rgba(255,255,255,.6)"><?php echo esc_html( $label ); ?></span>
+              <span class="bc-current"><?php echo esc_html( $label ); ?></span>
             <?php endif; ?>
           <?php endforeach; ?>
         </div>
@@ -40,7 +40,7 @@ $after_cta_html = $args['after_cta_html'] ?? '';
       <?php if ( $badge_html ) : ?>
         <?php echo $badge_html; // phpcs:ignore WordPress.Security.EscapeOutput ?>
       <?php elseif ( $tag ) : ?>
-        <span class="tag d" style="margin-bottom:18px"><?php echo esc_html( $tag ); ?></span>
+        <span class="tag d"><?php echo esc_html( $tag ); ?></span>
       <?php endif; ?>
 
       <h1 class="page-h1"><?php echo wp_kses_post( $title ); ?></h1>

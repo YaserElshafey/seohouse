@@ -37,7 +37,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
               if ( $first ) : ?>
                 <div class="art-card art-feat sr">
                   <div class="art-thumb feat-h">
-                    <?php if ( has_post_thumbnail() ) the_post_thumbnail( 'seohouse-blog-thumb', [ 'style' => 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover' ] ); ?>
+                    <?php if ( has_post_thumbnail() ) the_post_thumbnail( 'seohouse-blog-thumb' ); ?>
                     <?php $cats = get_the_category(); if ( $cats ) : ?><span class="art-cat"><?php echo esc_html( $cats[0]->name ); ?></span><?php endif; ?>
                   </div>
                   <div class="art-body">
@@ -53,13 +53,13 @@ get_template_part( 'template-parts/layout/page-hero', null, [
               endif;
           endwhile;
       else : ?>
-        <p style="color:var(--muted);font-size:14px">لا توجد مقالات في هذا الأرشيف.</p>
+        <p class="empty-state">لا توجد مقالات في هذا الأرشيف.</p>
       <?php endif; ?>
     </div>
 
     <?php if ( $GLOBALS['wp_query']->max_num_pages > 1 ) : ?>
-    <div class="pager sr" style="margin-top:32px">
-      <?php echo paginate_links( [ 'prev_text' => '→', 'next_text' => '←' ] ); ?>
+    <div class="pager sr">
+      <?php echo paginate_links( [ 'prev_text' => '←', 'next_text' => '→' ] ); ?>
     </div>
     <?php endif; ?>
   </div>

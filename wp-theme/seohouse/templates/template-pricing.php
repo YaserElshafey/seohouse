@@ -297,7 +297,7 @@ get_template_part( 'template-parts/layout/page-hero', null, [
         <?php endif; ?>
 
         <div class="info-card sr d2">
-          <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:14px;position:relative;z-index:1">وسائل التواصل</div>
+          <div class="info-card-label">وسائل التواصل</div>
           <div class="con-details">
             <?php if ( $contact_email ) : ?>
             <a href="mailto:<?php echo esc_attr( $contact_email ); ?>" class="con-detail">

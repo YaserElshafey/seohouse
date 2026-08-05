@@ -80,26 +80,26 @@ get_template_part( 'template-parts/layout/page-hero', null, [
 <section class="sec sec-white">
   <div class="wrap">
     <div class="about-grid">
-      <div class="sr">
-        <span class="tag" style="margin-bottom:12px"><?php echo esc_html( $about_who_tag ); ?></span>
-        <h2 class="h2" style="margin-bottom:16px"><?php echo nl2br( esc_html( $about_who_heading ) ); ?></h2>
-        <p class="bod" style="margin-bottom:18px"><?php echo esc_html( $about_who_body1 ); ?></p>
-        <p class="bod" style="margin-bottom:24px"><?php echo esc_html( $about_who_body2 ); ?></p>
+      <div class="sr about-who-col">
+        <span class="tag"><?php echo esc_html( $about_who_tag ); ?></span>
+        <h2 class="h2"><?php echo nl2br( esc_html( $about_who_heading ) ); ?></h2>
+        <p class="bod"><?php echo esc_html( $about_who_body1 ); ?></p>
+        <p class="bod"><?php echo esc_html( $about_who_body2 ); ?></p>
         <a href="<?php echo esc_url( sh_page_url( 'team' ) ); ?>" class="btn btn-o">تعرّف على فريقنا</a>
       </div>
       <div class="sr d1">
         <div class="story-card">
           <div style="position:relative;z-index:1">
-            <div style="font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.24);margin-bottom:20px"><?php echo esc_html( $about_principles_heading ); ?></div>
-            <div style="display:flex;flex-direction:column;gap:14px">
+            <div class="principles-label"><?php echo esc_html( $about_principles_heading ); ?></div>
+            <div class="principle-list">
               <?php foreach ( $about_principles as $i => $principle ) :
                   $icon = $principle_icons[ $i ] ?? $principle_icons[0];
               ?>
-              <div style="display:flex;align-items:flex-start;gap:12px;padding:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
-                <div style="width:32px;height:32px;border-radius:8px;background:rgba(30,46,245,.22);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7b90ff" stroke-width="1.8"><?php echo $icon; ?></svg></div>
+              <div class="principle-item">
+                <div class="principle-ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#7b90ff" stroke-width="1.8"><?php echo $icon; ?></svg></div>
                 <div>
-                  <div style="font-size:13.5px;font-weight:700;color:rgba(255,255,255,.8);margin-bottom:3px"><?php echo esc_html( $principle['title'] ); ?></div>
-                  <div style="font-size:12px;color:rgba(255,255,255,.38);line-height:1.65"><?php echo esc_html( $principle['desc'] ); ?></div>
+                  <div class="principle-head"><?php echo esc_html( $principle['title'] ); ?></div>
+                  <div class="principle-desc"><?php echo esc_html( $principle['desc'] ); ?></div>
                 </div>
               </div>
               <?php endforeach; ?>
