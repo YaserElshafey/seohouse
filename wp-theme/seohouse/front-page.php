@@ -5,10 +5,10 @@
 get_header();
 
 // ── Options ────────────────────────────────────────────────────
-$hero_headline    = sh_option( 'hero_headline', "كن آخر نقرة\nيبحث عنها عميلك" );
+$hero_headline    = sh_option( 'hero_headline', 'شركة تحسين محركات البحث التي تجعل علامتك آخر نقرة' );
 $hero_emphasis    = sh_option( 'hero_emphasis', 'آخر نقرة' );
-$hero_subtext     = sh_option( 'hero_subtext', 'نضع موقعك أمام العملاء الذين يبحثون عمّا تقدّمه — بدقة، بأدلة، وبنتائج قابلة للقياس.' );
-$hero_cta_primary = sh_option( 'hero_cta_primary', 'احجز استشارة مجانية 30 دقيقة' );
+$hero_subtext     = sh_option( 'hero_subtext', 'نضع موقعك أمام العملاء في اللحظة التي يبحثون فيها عن خدماتك، باستراتيجية SEO مبنية على البيانات ونتائج واضحة قابلة للقياس.' );
+$hero_cta_primary = sh_option( 'hero_cta_primary', 'احجز استشارة مجانية' );
 $why_title        = sh_option( 'why_title', "نعمل بمنطق الأداء،\nلا بمنطق الوعود" );
 $why_text         = sh_option( 'why_text', 'لسنا وكالة تسويق عامة. نحن متخصصون في محركات البحث ونعرف ما يحتاجه موقعك للوصول إلى العملاء الصحيحين.' );
 $process_steps    = sh_option( 'process_steps', [] );
@@ -20,8 +20,8 @@ $process_section_title    = sh_option( 'process_section_title',    'منهجية
 $process_section_desc     = sh_option( 'process_section_desc',     'خطوات محددة لكل مشروع حتى نصل إلى نتائج مقاسة.' );
 $hp_cta_title             = sh_option( 'hp_cta_title',             'موقعك يستحق أن يُرى' );
 $hp_cta_desc              = sh_option( 'hp_cta_desc',              'خصص 30 دقيقة معنا — وسنخبرك بصدق أين أنت وأين يمكن أن تكون.' );
-$hp_hero_live_badge    = sh_option( 'hp_hero_live_badge',    'نعمل الآن على مشاريع تحسين نشطة' );
-$hp_hero_cta_secondary = sh_option( 'hp_hero_cta_secondary', 'تعرّف على خدماتنا' );
+$hp_hero_live_badge    = sh_option( 'hp_hero_live_badge',    'نحوّل البحث إلى نمو' );
+$hp_hero_cta_secondary = sh_option( 'hp_hero_cta_secondary', 'استكشف خدماتنا' );
 $hp_cases_title        = sh_option( 'hp_cases_title',        'الأرقام تتكلم' );
 $hp_cases_desc         = sh_option( 'hp_cases_desc',         'نماذج من مشاريع نفّذناها — الأرقام الفعلية تُضاف بعد موافقة العملاء.' );
 $hp_why_points         = sh_option( 'hp_why_points',         [] );
@@ -60,60 +60,74 @@ if ( empty( $process_steps ) ) {
 
 <style>
 /* ── Hero ── */
-#hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--navy);overflow:hidden;clip-path:inset(0)}
+#hero{position:relative;min-height:100svh;display:flex;align-items:center;background:#071650;overflow:hidden;clip-path:inset(0)}
 .h-bg{position:absolute;inset:0;pointer-events:none}
-.h-dots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,#000 10%,transparent 75%)}
-.h-g1{position:absolute;inset-inline-start:-200px;bottom:-100px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.22),transparent 65%);filter:blur(60px)}
-.h-g2{position:absolute;inset-inline-end:-100px;top:0;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.12),transparent 65%);filter:blur(70px)}
-.h-ring{position:absolute;inset-inline-start:-280px;top:-220px;width:840px;height:840px;border-radius:50%;border:1px solid rgba(30,46,245,.12)}
-.h-ring::after{content:'';position:absolute;inset:100px;border-radius:50%;border:1px solid rgba(30,46,245,.07)}
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;position:relative;z-index:2;padding-block:clamp(116px,14vh,152px) clamp(56px,7vh,80px)}
-.h-live{display:inline-flex;align-items:center;gap:8px;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:22px;animation:fu .7s var(--ease) both}
-.h-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:lp 2s ease-in-out infinite}
-.h1{font-size:clamp(36px,5.4vw,68px);font-weight:900;line-height:1.08;letter-spacing:-.03em;color:#fff;margin-bottom:18px;animation:fu .75s .08s var(--ease) both}
-.h1 em{font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 55%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite}
-.h-p{font-size:clamp(14px,1.5vw,16.5px);line-height:1.9;color:rgba(255,255,255,.46);max-width:500px;margin-bottom:32px;animation:fu .75s .16s var(--ease) both}
-.h-btns{display:flex;gap:10px;flex-wrap:wrap;animation:fu .75s .24s var(--ease) both}
-.h-kicker{margin-top:32px;padding-top:22px;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;flex-wrap:nowrap;animation:fu .75s .32s var(--ease) both}
-.k-item{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:rgba(255,255,255,.38);white-space:nowrap;padding-inline:14px}
+/* Restrained Blueprint Blue glow behind content (right in RTL) */
+.h-glow-r{position:absolute;inset-inline-end:6%;top:5%;width:700px;height:650px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.13),transparent 65%);filter:blur(90px)}
+/* Softer Horizon Blue glow behind visual (left in RTL) */
+.h-glow-l{position:absolute;inset-inline-start:4%;top:18%;width:560px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(76,172,255,.07),transparent 65%);filter:blur(90px)}
+/* Very subtle central light bridge */
+.h-glow-c{position:absolute;inset-inline:0;margin-inline:auto;top:30%;width:500px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.04),transparent 65%);filter:blur(80px)}
+#hero .wrap{max-width:1320px}
+.hero-grid{display:grid;grid-template-columns:52% 1fr;gap:clamp(36px,4.5vw,80px);align-items:center;position:relative;z-index:2;padding-block:clamp(116px,14vh,152px) clamp(52px,6.5vh,76px)}
+/* Eyebrow */
+.h-live{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.72);margin-bottom:22px;animation:fu .7s var(--ease) both}
+.h-dot{width:7px;height:7px;border-radius:50%;background:#84cc16;box-shadow:0 0 8px rgba(132,204,22,.6);animation:lp 2s ease-in-out infinite;flex-shrink:0}
+/* H1 */
+.h1{font-size:clamp(44px,4.6vw,72px);font-weight:900;line-height:1.22;letter-spacing:-.028em;color:#fff;margin-bottom:20px;animation:fu .75s .08s var(--ease) both;text-wrap:balance}
+/* Horizon Blue → Blueprint gradient highlight */
+.h1 em{font-style:normal;background:linear-gradient(110deg,#4cacff,#7b90ff 50%,#4cacff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite}
+/* Description — Tajawal for supporting copy */
+.h-p{font-family:'Tajawal','IBM Plex Sans Arabic',sans-serif;font-size:clamp(15px,1.5vw,17px);line-height:1.88;color:rgba(255,255,255,.7);max-width:520px;margin-bottom:32px;animation:fu .75s .16s var(--ease) both}
+.h-btns{display:flex;gap:12px;flex-wrap:wrap;animation:fu .75s .24s var(--ease) both}
+/* Trust row */
+.h-kicker{margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,.09);display:flex;align-items:center;flex-wrap:nowrap;animation:fu .75s .32s var(--ease) both}
+.k-item{display:flex;align-items:center;gap:9px;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.7);white-space:nowrap;padding-inline:16px}
 .k-item:first-child{padding-inline-start:0}
-.k-ico{width:25px;height:25px;border-radius:6px;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.k-ico svg{stroke:rgba(255,255,255,.38);width:12px;height:12px}
-.k-sep{width:1px;height:16px;background:rgba(255,255,255,.08);flex-shrink:0}
+.k-ico{width:28px;height:28px;border-radius:7px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.k-ico svg{stroke:rgba(255,255,255,.6);width:13px;height:13px}
+.k-sep{width:1px;height:20px;background:rgba(255,255,255,.1);flex-shrink:0}
 /* Hero visual */
 .h-vis{animation:fi .85s .1s var(--ease) both;display:flex;flex-direction:column;gap:12px}
-@keyframes fi{from{opacity:0;transform:translateX(26px)}to{opacity:1;transform:translateX(0)}}
-.serp-card{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.09);border-radius:var(--r3);overflow:hidden;backdrop-filter:blur(12px)}
-.sc{background:rgba(255,255,255,.05);padding:9px 13px;display:flex;align-items:center;gap:8px;border-block-end:1px solid rgba(255,255,255,.06)}
+@keyframes fi{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:translateX(0)}}
+/* SERP panel — higher contrast for immediate visibility */
+.serp-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);border-radius:var(--r3);overflow:hidden;backdrop-filter:blur(16px)}
+.sc{background:rgba(255,255,255,.07);padding:10px 14px;display:flex;align-items:center;gap:8px;border-block-end:1px solid rgba(255,255,255,.09)}
 .sc-dots{display:flex;gap:4px}.sc-dots span{width:7px;height:7px;border-radius:50%}
-.sc-dots span:nth-child(1){background:rgba(255,80,80,.4)}.sc-dots span:nth-child(2){background:rgba(255,190,50,.4)}.sc-dots span:nth-child(3){background:rgba(60,200,80,.4)}
-.sc-bar{flex:1;margin-inline:10px;height:20px;background:rgba(255,255,255,.05);border-radius:5px;display:flex;align-items:center;padding-inline:9px;gap:6px}
-.sc-bar svg{stroke:rgba(255,255,255,.26);flex-shrink:0;width:11px;height:11px}
-.sc-bar-t{font-size:10px;color:rgba(255,255,255,.26)}
-.sb{padding:15px 17px;display:flex;flex-direction:column;gap:9px}
-.sr-r{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:var(--r1);border:1px solid transparent}
-.sr-r.p1{background:rgba(30,46,245,.14);border-color:rgba(30,46,245,.26)}
-.sr-r.p2,.sr-r.p3{background:rgba(255,255,255,.025)}
-.sr-n{width:19px;height:19px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:800;flex-shrink:0;margin-top:2px}
-.sr-r.p1 .sr-n{background:var(--blue);color:#fff}
-.sr-r.p2 .sr-n,.sr-r.p3 .sr-n{background:rgba(255,255,255,.05);color:rgba(255,255,255,.28)}
-.sr-url{font-size:10px;color:rgba(255,255,255,.26);margin-bottom:3px}
-.sr-t{font-size:12.5px;font-weight:700;color:rgba(255,255,255,.8);margin-bottom:3px;line-height:1.3}
-.sr-r.p2 .sr-t,.sr-r.p3 .sr-t{color:rgba(255,255,255,.32)}
-.sr-d{font-size:10.5px;color:rgba(255,255,255,.3);line-height:1.5}
-.sr-r.p2 .sr-d,.sr-r.p3 .sr-d{color:rgba(255,255,255,.16)}
+.sc-dots span:nth-child(1){background:rgba(255,80,80,.55)}.sc-dots span:nth-child(2){background:rgba(255,190,50,.55)}.sc-dots span:nth-child(3){background:rgba(60,200,80,.55)}
+.sc-bar{flex:1;margin-inline:10px;height:22px;background:rgba(255,255,255,.07);border-radius:6px;display:flex;align-items:center;padding-inline:10px;gap:7px}
+.sc-bar svg{stroke:rgba(255,255,255,.42);flex-shrink:0;width:11px;height:11px}
+.sc-bar-t{font-size:10.5px;color:rgba(255,255,255,.55)}
+.sb{padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.sr-r{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;border-radius:var(--r1);border:1px solid transparent}
+/* First result: Blueprint Blue border + soft glow */
+.sr-r.p1{background:rgba(30,46,245,.16);border-color:rgba(30,46,245,.38);box-shadow:0 0 18px rgba(30,46,245,.12)}
+/* Secondary results: readable but clearly less prominent */
+.sr-r.p2,.sr-r.p3{background:rgba(255,255,255,.04)}
+.sr-n{width:20px;height:20px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:9.5px;font-weight:800;flex-shrink:0;margin-top:2px}
+.sr-r.p1 .sr-n{background:#1e2ef5;color:#fff}
+.sr-r.p2 .sr-n,.sr-r.p3 .sr-n{background:rgba(255,255,255,.07);color:rgba(255,255,255,.38)}
+.sr-url{font-size:10px;color:rgba(255,255,255,.4);margin-bottom:3px}
+.sr-t{font-size:12.5px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:3px;line-height:1.3}
+.sr-r.p2 .sr-t,.sr-r.p3 .sr-t{color:rgba(255,255,255,.42)}
+.sr-d{font-size:10.5px;color:rgba(255,255,255,.58);line-height:1.5}
+.sr-r.p2 .sr-d,.sr-r.p3 .sr-d{color:rgba(255,255,255,.24)}
+/* Data cards */
 .vis-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.vm{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08);border-radius:var(--r2);padding:14px 16px}
-.vm-l{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.26);margin-bottom:8px}
-.sparkline{display:flex;align-items:flex-end;gap:3px;height:28px}
-.sp{flex:1;border-radius:2px 2px 0 0;background:rgba(30,46,245,.28)}.sp.hi{background:rgba(123,144,255,.7)}
-.kw-list{display:flex;flex-direction:column;gap:5px}
+.vm{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r2);padding:14px 16px;backdrop-filter:blur(10px)}
+.vm-l{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.48);margin-bottom:9px}
+/* Growth chart — strictly ascending bars, Horizon Blue */
+.sparkline{display:flex;align-items:flex-end;gap:3px;height:30px}
+.sp{flex:1;border-radius:2px 2px 0 0;background:rgba(76,172,255,.22)}.sp.hi{background:#4cacff}
+/* Keyword rankings — Horizon Blue accents */
+.kw-list{display:flex;flex-direction:column;gap:6px}
 .kw-r{display:flex;align-items:center;gap:7px}
-.kw-n{width:16px;height:16px;border-radius:4px;background:rgba(30,46,245,.25);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;color:rgba(255,255,255,.52);flex-shrink:0}
-.kw-n.r1{background:var(--blue);color:#fff}
-.kw-bg{flex:1;height:3.5px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
-.kw-f{height:100%;border-radius:2px;background:rgba(123,144,255,.42)}
-.kw-r:first-child .kw-f{background:#7b90ff;width:94%}.kw-r:nth-child(2) .kw-f{width:67%}.kw-r:nth-child(3) .kw-f{width:50%}
+.kw-n{width:17px;height:17px;border-radius:4px;background:rgba(76,172,255,.18);display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:800;color:rgba(255,255,255,.52);flex-shrink:0}
+.kw-n.r1{background:#1e2ef5;color:#fff}
+.kw-bg{flex:1;height:3.5px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
+.kw-f{height:100%;border-radius:2px;background:rgba(76,172,255,.45)}
+.kw-r:first-child .kw-f{background:#4cacff;width:92%}.kw-r:nth-child(2) .kw-f{width:64%}.kw-r:nth-child(3) .kw-f{width:46%}
+@media(prefers-reduced-motion:reduce){.h1,.h-p,.h-live,.h-btns,.h-kicker,.h-vis,.h1 em{animation:none}}
 
 /* Why */
 .why-grid{display:grid;grid-template-columns:5fr 6fr;gap:60px;align-items:center}
@@ -241,7 +255,10 @@ if ( empty( $process_steps ) ) {
 #process::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.022) 1px,transparent 1px);background-size:38px 38px;pointer-events:none}
 .ind-card{text-decoration:none}
 /* Responsive */
-@media(max-width:1100px){.hero-grid{grid-template-columns:1fr;gap:28px}.serp-card{display:none}.why-grid{grid-template-columns:1fr;gap:40px}.why-vis{display:none}}
+/* Tablet: why section stacks at 1100px (hero stays 2-col until 900px) */
+@media(max-width:1100px){.why-grid{grid-template-columns:1fr;gap:40px}.why-vis{display:none}}
+/* Tablet ~900px: hero stacks; hide data cards, keep serp panel */
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:28px}.vis-row{display:none}}
 @media(max-width:860px){
   .svc-layout{grid-template-columns:1fr}
   .svc-card.feat{min-height:auto;padding:26px}
@@ -252,17 +269,17 @@ if ( empty( $process_steps ) ) {
   .art-grid{grid-template-columns:1fr}
   .why-pts{gap:10px}
   .blog-hrow{gap:12px}
-  .h1{line-height:1.22;letter-spacing:-.015em}
+  .h1{line-height:1.26;letter-spacing:-.018em}
 }
 @media(max-width:600px){
-  .hero-grid{padding-block:clamp(96px,12vh,120px) 44px}
-  .h1{font-size:clamp(34px,9vw,48px);line-height:1.25;letter-spacing:-.01em}
+  .hero-grid{padding-block:clamp(92px,12vh,118px) 44px}
+  .h1{font-size:clamp(36px,9.5vw,50px);line-height:1.28;letter-spacing:-.016em}
+  .h-p{max-width:100%}
   .h-btns{flex-direction:column}
   .h-btns .btn{justify-content:center;width:100%}
-  .h-kicker{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:18px;margin-top:24px;border-top:1px solid rgba(255,255,255,.07)}
-  .k-item{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:9px 11px;font-size:11.5px;justify-content:center}
+  .h-kicker{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding-top:18px;margin-top:24px;border-top:1px solid rgba(255,255,255,.09)}
+  .k-item{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:8px;padding:9px 11px;font-size:11.5px;justify-content:center;color:rgba(255,255,255,.72)}
   .k-sep{display:none}
-  .vis-row{grid-template-columns:1fr}
   .why-pts{grid-template-columns:1fr}
   .why-grid{gap:28px}
   .ind-grid{grid-template-columns:repeat(2,1fr);gap:9px}
@@ -285,15 +302,19 @@ if ( empty( $process_steps ) ) {
 <!-- ── HERO ── -->
 <section id="hero">
   <div class="h-bg">
-    <div class="h-dots"></div>
-    <div class="h-g1"></div>
-    <div class="h-g2"></div>
-    <div class="h-ring"></div>
+    <div class="h-glow-r"></div>
+    <div class="h-glow-l"></div>
+    <div class="h-glow-c"></div>
   </div>
   <div class="wrap">
     <div class="hero-grid">
+
+      <!-- Content: value proposition + CTAs (right in RTL) -->
       <div>
-        <div class="h-live"><span class="h-dot"></span><?php echo esc_html( $hp_hero_live_badge ); ?></div>
+        <div class="h-live">
+          <span class="h-dot"></span>
+          <?php echo esc_html( $hp_hero_live_badge ); ?>
+        </div>
         <h1 class="h1"><?php echo wp_kses_post( $display_headline ); ?></h1>
         <p class="h-p"><?php echo esc_html( $hero_subtext ); ?></p>
         <div class="h-btns">
@@ -304,30 +325,88 @@ if ( empty( $process_steps ) ) {
           <a href="<?php echo esc_url( $seo_url ); ?>" class="btn btn-g lg"><?php echo esc_html( $hp_hero_cta_secondary ); ?></a>
         </div>
         <div class="h-kicker">
-          <div class="k-item"><div class="k-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>قرارات مبنية على البيانات</div>
+          <div class="k-item">
+            <div class="k-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            قرارات مبنية على البيانات
+          </div>
           <div class="k-sep"></div>
-          <div class="k-item"><div class="k-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>تقارير شهرية شفافة</div>
+          <div class="k-item">
+            <div class="k-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            تقارير شهرية شفافة
+          </div>
           <div class="k-sep"></div>
-          <div class="k-item"><div class="k-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z"/></svg></div>بدون عقود مفتوحة</div>
+          <div class="k-item">
+            <div class="k-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z"/></svg></div>
+            بدون عقود ملزمة
+          </div>
         </div>
       </div>
-      <div class="h-vis">
+
+      <!-- SEO performance visual (left in RTL) — decorative, not essential content -->
+      <div class="h-vis" aria-hidden="true">
         <div class="serp-card">
           <div class="sc">
             <div class="sc-dots"><span></span><span></span><span></span></div>
-            <div class="sc-bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><span class="sc-bar-t">شركة سيو في السعودية</span></div>
+            <div class="sc-bar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+              <span class="sc-bar-t">شركة تحسين محركات البحث السعودية</span>
+            </div>
           </div>
           <div class="sb">
-            <div class="sr-r p1"><div class="sr-n">1</div><div><div class="sr-url"><?php echo esc_html( parse_url( home_url(), PHP_URL_HOST ) ); ?> › الخدمات</div><div class="sr-t"><?php bloginfo( 'name' ); ?> — شركة تحسين محركات البحث</div><div class="sr-d">نتائج حقيقية، تقارير شفافة، بدون عقود ملزمة.</div></div></div>
-            <div class="sr-r p2"><div class="sr-n">2</div><div><div class="sr-url">competitor.com</div><div class="sr-t">وكالة تسويق رقمي</div><div class="sr-d">خدمات تسويقية شاملة</div></div></div>
-            <div class="sr-r p3"><div class="sr-n">3</div><div><div class="sr-url">agency.sa</div><div class="sr-t">خدمات SEO والإعلانات</div><div class="sr-d">ظهور في نتائج البحث</div></div></div>
+            <div class="sr-r p1">
+              <div class="sr-n">1</div>
+              <div>
+                <div class="sr-url"><?php echo esc_html( parse_url( home_url(), PHP_URL_HOST ) ); ?> › الخدمات</div>
+                <div class="sr-t"><?php bloginfo( 'name' ); ?> — شركة تحسين محركات البحث</div>
+                <div class="sr-d">نتائج حقيقية، تقارير شفافة، بدون عقود ملزمة.</div>
+              </div>
+            </div>
+            <div class="sr-r p2">
+              <div class="sr-n">2</div>
+              <div>
+                <div class="sr-url">competitor.com</div>
+                <div class="sr-t">وكالة تسويق رقمي</div>
+                <div class="sr-d">خدمات تسويقية متكاملة</div>
+              </div>
+            </div>
+            <div class="sr-r p3">
+              <div class="sr-n">3</div>
+              <div>
+                <div class="sr-url">agency.sa</div>
+                <div class="sr-t">خدمات SEO والإعلانات</div>
+                <div class="sr-d">ظهور في نتائج البحث</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="vis-row">
-          <div class="vm"><div class="vm-l">نمو الزيارات العضوية</div><div class="sparkline"><div class="sp" style="height:28%"></div><div class="sp" style="height:36%"></div><div class="sp" style="height:32%"></div><div class="sp" style="height:50%"></div><div class="sp" style="height:58%"></div><div class="sp hi" style="height:68%"></div><div class="sp hi" style="height:76%"></div><div class="sp hi" style="height:84%"></div><div class="sp hi" style="height:92%"></div><div class="sp hi" style="height:100%"></div></div></div>
-          <div class="vm"><div class="vm-l">ترتيب الكلمات المستهدفة</div><div class="kw-list"><div class="kw-r"><div class="kw-n r1">1</div><div class="kw-bg"><div class="kw-f"></div></div></div><div class="kw-r"><div class="kw-n">2</div><div class="kw-bg"><div class="kw-f"></div></div></div><div class="kw-r"><div class="kw-n">4</div><div class="kw-bg"><div class="kw-f"></div></div></div></div></div>
+          <div class="vm">
+            <div class="vm-l">نمو الزيارات العضوية</div>
+            <!-- Bars strictly ascending — upward trend only -->
+            <div class="sparkline">
+              <div class="sp"  style="height:18%"></div>
+              <div class="sp"  style="height:26%"></div>
+              <div class="sp"  style="height:35%"></div>
+              <div class="sp"  style="height:44%"></div>
+              <div class="sp"  style="height:54%"></div>
+              <div class="sp hi" style="height:64%"></div>
+              <div class="sp hi" style="height:74%"></div>
+              <div class="sp hi" style="height:84%"></div>
+              <div class="sp hi" style="height:92%"></div>
+              <div class="sp hi" style="height:100%"></div>
+            </div>
+          </div>
+          <div class="vm">
+            <div class="vm-l">ترتيب الكلمات المستهدفة</div>
+            <div class="kw-list">
+              <div class="kw-r"><div class="kw-n r1">1</div><div class="kw-bg"><div class="kw-f"></div></div></div>
+              <div class="kw-r"><div class="kw-n">2</div><div class="kw-bg"><div class="kw-f"></div></div></div>
+              <div class="kw-r"><div class="kw-n">4</div><div class="kw-bg"><div class="kw-f"></div></div></div>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
