@@ -290,7 +290,7 @@ if ( empty( $sector_data ) ) :
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
         <a href="<?php echo esc_url( $sectors_url ); ?>">القطاعات</a>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        <span style="color:rgba(255,255,255,.55)"><?php echo esc_html( $sector_data['h1_em'] ?? get_the_title() ); ?></span>
+        <span class="bc-current"><?php echo esc_html( $sector_data['h1_em'] ?? get_the_title() ); ?></span>
       </div>
       <div class="sec-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $sector_data['badge_svg']; // phpcs:ignore ?></svg>

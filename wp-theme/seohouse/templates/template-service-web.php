@@ -78,7 +78,7 @@ $web_cta_desc  = sh_field( 'web_cta_desc',  null, 'احجز استشارة مج�
       <div class="breadcrumb">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">الرئيسية</a>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        <span style="color:rgba(255,255,255,.55)">إنشاء وتصميم مواقع</span>
+        <span class="bc-current">إنشاء وتصميم مواقع</span>
       </div>
       <span class="tag d" style="margin-bottom:18px">خدمة متخصصة</span>
       <h1 class="svc-hero-h1"><?php echo esc_html( $web_hero_pre ); ?> <em><?php echo esc_html( $web_hero_em ); ?></em></h1>

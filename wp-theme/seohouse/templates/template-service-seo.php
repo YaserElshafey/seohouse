@@ -97,7 +97,7 @@ if ( empty( $seo_proof_cards ) ) {
       <div class="breadcrumb">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">الرئيسية</a>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        <span style="color:rgba(255,255,255,.55)"><?php echo esc_html( $hero_tag ); ?></span>
+        <span class="bc-current"><?php echo esc_html( $hero_tag ); ?></span>
       </div>
       <div class="h-badge"><span class="h-bdot"></span><?php echo esc_html( $hero_tag ); ?></div>
       <h1 class="svc-hero-h1"><?php echo wp_kses_post( $hero_title ); ?></h1>

@@ -101,13 +101,13 @@ $sectors_url = sh_page_url( 'sectors' );
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
         <a href="<?php echo esc_url( $sectors_url ); ?>">القطاعات</a>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        <span style="color:rgba(255,255,255,.55)">التجارة الإلكترونية</span>
+        <span class="bc-current">التجارة الإلكترونية</span>
       </div>
       <span class="tag d" style="margin-bottom:20px"><?php echo esc_html( $def['hero_badge'] ); ?></span>
       <?php if ( $em_inline ) : ?>
-      <h1 class="svc-hero-h1"><?php echo esc_html( $pre_em ); ?><em><?php echo esc_html( $em_inline ); ?></em><br><?php echo esc_html( $line2 ); ?></h1>
+      <h1 class="svc-hero-h1"><?php echo esc_html( $pre_em ); ?><em><?php echo esc_html( $em_inline ); ?></em> <?php echo esc_html( $line2 ); ?></h1>
       <?php else : ?>
-      <h1 class="svc-hero-h1"><?php echo esc_html( $h1 ); ?><br><em><?php echo esc_html( $em ); ?></em></h1>
+      <h1 class="svc-hero-h1"><?php echo esc_html( $h1 ); ?> <em><?php echo esc_html( $em ); ?></em></h1>
       <?php endif; ?>
       <p class="page-hero-p"><?php echo esc_html( $desc ); ?></p>
       <div class="pbtns">
