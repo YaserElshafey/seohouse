@@ -1152,13 +1152,6 @@ a.svc-card,a.svc-hub-card{text-decoration:none;color:inherit}
 /* ─ Buttons — universal keyboard focus ─ */
 .btn:focus-visible{outline:2px solid currentColor;outline-offset:2px}
 
-/* ─ Short icon-cards on dark navy — center aligned ─ */
-/* Stores "who is this for", consulting "scenarios" and similar short icon+h3+p cards on dark */
-.sec-navy .who-card{text-align:center}
-.sec-navy .who-ico{margin-inline:auto}
-/* Reset who-q line decoration for centered layout */
-.sec-navy .who-card .who-q{justify-content:center}
-
 /* ─ Sectors archive — readable card height on 4-col grid ─ */
 /* Prevent isolated stretched card when sector count doesn't fill last row */
 @media(min-width:861px){.sec-grid{align-items:start}}
