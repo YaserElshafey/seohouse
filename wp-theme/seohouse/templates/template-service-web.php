@@ -187,19 +187,21 @@ $web_cta_desc  = sh_field( 'web_cta_desc',  null, 'احجز استشارة مج�
     <div class="sh c sr"><span class="tag d">التقنيات</span><h2 class="h2 wh"><?php echo esc_html( $web_tech_title ); ?></h2><p class="bod d"><?php echo esc_html( $web_tech_desc ); ?></p></div>
     <?php
     $tech_cards = [
-      [ 'logo' => 'WP',  'logo_style' => '',                                                             'title' => 'WordPress',              'desc' => 'الأكثر مرونة وانتشاراً — مناسب لمعظم المواقع',                         'path' => 'services/web-design/wordpress' ],
-      [ 'logo' => 'WF',  'logo_style' => 'background:rgba(99,102,241,.18);color:#a5b4fc',               'title' => 'Webflow',                 'desc' => 'تصاميم متقدمة بصرياً وأداء عالٍ',                                    'path' => 'services/web-design/webflow' ],
-      [ 'logo' => 'N',   'logo_style' => 'background:rgba(16,185,129,.18);color:#6ee7b7',               'title' => 'Next.js / React',         'desc' => 'تطوير مخصّص للمواقع التي تتطلب أداءً وتعقيداً عالياً',             'path' => 'services/web-design/react-next' ],
-      [ 'logo' => 'PHP', 'logo_style' => 'background:rgba(250,204,21,.16);color:#fde68a',               'title' => 'تطوير برمجي مخصّص',       'desc' => 'لاحتياجاتك الخاصة وأنظمة الإدارة المعقدة',                         'path' => 'services/web-design/custom' ],
+      [ 'logo' => 'WP',  'logo_style' => '',                                             'title' => 'WordPress',          'desc' => 'الأكثر مرونة وانتشاراً — مناسب لمعظم المواقع',               'key' => 'wordpress',  'path' => 'services/web-design/wordpress' ],
+      [ 'logo' => 'WF',  'logo_style' => 'background:rgba(99,102,241,.18);color:#a5b4fc', 'title' => 'Webflow',           'desc' => 'تصاميم متقدمة بصرياً وأداء عالٍ',                           'key' => 'webflow',    'path' => 'services/web-design/webflow' ],
+      [ 'logo' => 'N',   'logo_style' => 'background:rgba(16,185,129,.18);color:#6ee7b7', 'title' => 'Next.js / React',  'desc' => 'تطوير مخصّص للمواقع التي تتطلب أداءً وتعقيداً عالياً',     'key' => 'react_next', 'path' => 'services/web-design/react-next' ],
+      [ 'logo' => 'PHP', 'logo_style' => 'background:rgba(250,204,21,.16);color:#fde68a', 'title' => 'تطوير برمجي مخصّص', 'desc' => 'لاحتياجاتك الخاصة وأنظمة الإدارة المعقدة',               'key' => 'custom',     'path' => 'services/web-design/custom' ],
     ];
     ?>
     <div class="tech-grid sr d1">
       <?php foreach ( $tech_cards as $tech ) :
-        $tech_url     = sh_safe_url( $tech['path'] );
+        $tech_result  = sh_service_permalink( $tech['key'], $tech['path'] );
+        $tech_url     = $tech_result['url'];
+        $tech_status  = $tech_result['status'];
         $tech_has_url = $tech_url !== '';
         $tech_tag     = $tech_has_url ? 'a' : 'div';
         $tech_href    = $tech_has_url ? ' href="' . esc_url( $tech_url ) . '"' : '';
-        $tech_style   = $tech_has_url ? ' style="text-decoration:none;color:inherit;display:flex;flex-direction:column"' : '';
+        $tech_style   = $tech_has_url ? ' style="text-decoration:none;color:inherit;display:block"' : '';
         $logo_style   = $tech['logo_style'] ? ' style="' . esc_attr( $tech['logo_style'] ) . '"' : '';
       ?>
       <<?php echo $tech_tag; ?> class="tech-card"<?php echo $tech_href . $tech_style; ?>>
@@ -207,10 +209,13 @@ $web_cta_desc  = sh_field( 'web_cta_desc',  null, 'احجز استشارة مج�
         <h3><?php echo esc_html( $tech['title'] ); ?></h3>
         <p><?php echo esc_html( $tech['desc'] ); ?></p>
         <?php if ( $tech_has_url ) : ?>
-        <span style="display:inline-flex;align-items:center;gap:4px;margin-top:auto;padding-top:16px;font-size:13px;font-weight:600;color:#a5b4fc">اعرف المزيد <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
+        <span style="display:inline-flex;align-items:center;justify-content:center;gap:4px;margin-top:12px;font-size:13px;font-weight:600;color:#a5b4fc">اعرف المزيد <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <?php elseif ( current_user_can( 'manage_options' ) ) : ?>
+        <?php if ( 'duplicate' === $tech_status ) : ?>
+        <span style="display:block;margin-top:10px;padding:6px 10px;background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.4);border-radius:4px;font-size:11px;color:#fca5a5;direction:ltr">Admin: duplicate service_card_key "<?php echo esc_html( $tech['key'] ); ?>"</span>
+        <?php else : ?>
+        <span style="display:block;margin-top:10px;padding:6px 10px;background:rgba(230,168,23,.12);border:1px solid rgba(230,168,23,.4);border-radius:4px;font-size:11px;color:#fde68a;direction:ltr">Admin: no page with service_card_key "<?php echo esc_html( $tech['key'] ); ?>"</span>
         <?php endif; ?>
-        <?php if ( ! $tech_has_url && current_user_can( 'manage_options' ) ) : ?>
-        <span style="display:block;margin-top:10px;padding:6px 10px;background:#fef9c3;color:#713f12;border-radius:4px;font-size:11px">Admin: no published page found at "<?php echo esc_html( $tech['path'] ); ?>"</span>
         <?php endif; ?>
       </<?php echo $tech_tag; ?>>
       <?php endforeach; ?>

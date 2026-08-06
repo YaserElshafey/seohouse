@@ -140,7 +140,7 @@ $stores_cta_desc  = sh_field( 'stores_cta_desc',  null, 'من الفكرة إل�
               'name' => 'سلة', 'abbr' => 'سل', 'color' => '#00b286', 'flag' => 'سعودية',
               'tag'  => 'الأكثر انتشاراً في السوق السعودي',
               'desc' => 'منصة سعودية متكاملة بتركيز قوي على السوق المحلي — بوابات دفع جاهزة، شركات شحن، وتطبيقات محلية. مثالية للتجّار الذين يريدون البدء سريعاً.',
-              'url'  => sh_safe_url( 'services/salla' ),
+              'key'  => 'salla',
               'path' => 'services/salla',
               'feats' => [ 'إعداد كامل وتخصيص القالب', 'ربط بوابات الدفع وشركات الشحن المحلية', 'تثبيت تطبيقات سلة الإضافية حسب الحاجة' ],
           ],
@@ -148,7 +148,7 @@ $stores_cta_desc  = sh_field( 'stores_cta_desc',  null, 'من الفكرة إل�
               'name' => 'زد', 'abbr' => 'زد', 'color' => '#5b4fcf', 'flag' => 'سعودية',
               'tag'  => 'مرونة تقنية أعلى للتجّار المتقدمين',
               'desc' => 'منصة سعودية تمنح التاجر مرونة أكبر في التخصيص والتحكم — مناسبة للمتاجر التي تنوي التوسع وبناء هوية متجر مميّزة.',
-              'url'  => sh_safe_url( 'services/zid' ),
+              'key'  => 'zid',
               'path' => 'services/zid',
               'feats' => [ 'إعداد المتجر بهيكل قابل للتوسع', 'تخصيص متقدم للقالب وتجربة المستخدم', 'دعم التكاملات المتقدمة مع الأنظمة المحاسبية' ],
           ],
@@ -156,7 +156,7 @@ $stores_cta_desc  = sh_field( 'stores_cta_desc',  null, 'من الفكرة إل�
               'name' => 'شوبيفاي', 'abbr' => 'Sh', 'color' => '#95bf47', 'flag' => 'عالمية',
               'tag'  => 'للتجار الذين يستهدفون السوق الخليجي والعالمي',
               'desc' => 'منصة عالمية بتطبيقات لا حصر لها وأدوات تسويق متقدمة. مثالية للعلامات التجارية التي تستهدف السعودية والخليج معاً، أو تخطّط للتوسع دولياً.',
-              'url'  => sh_safe_url( 'services/shopify' ),
+              'key'  => 'shopify',
               'path' => 'services/shopify',
               'feats' => [ 'تخصيص Liquid وتطوير القالب', 'ربط بوابات الدفع المحلية والعالمية', 'إدارة التطبيقات وتحسين الأداء' ],
           ],
@@ -164,16 +164,19 @@ $stores_cta_desc  = sh_field( 'stores_cta_desc',  null, 'من الفكرة إل�
               'name' => 'ووكومرس', 'abbr' => 'Wc', 'color' => '#7f54b3', 'flag' => 'مفتوح المصدر',
               'tag'  => 'حرية كاملة على ووردبريس — لمن يريد التحكم الكامل',
               'desc' => 'للأعمال التي تريد تحكماً كاملاً في كل تفصيل — التصميم، التقنية، السيو. مناسبة للمتاجر ذات المتطلبات الخاصة أو التكاملات المعقدة.',
-              'url'  => sh_safe_url( 'services/woocommerce' ),
+              'key'  => 'woocommerce',
               'path' => 'services/woocommerce',
               'feats' => [ 'تطوير ووردبريس وووكومرس مخصص', 'أمان متقدم واستضافة محسّنة للأداء', 'تكاملات مخصصة مع أنظمة ERP/CRM' ],
           ],
       ] as $plat ) :
-          $plat_has_url = ! empty( $plat['url'] );
+          $plat_result  = sh_service_permalink( $plat['key'], $plat['path'] );
+          $plat_url     = $plat_result['url'];
+          $plat_status  = $plat_result['status'];
+          $plat_has_url = $plat_url !== '';
           $plat_tag     = $plat_has_url ? 'a' : 'div';
-          $plat_href    = $plat_has_url ? ' href="' . esc_url( $plat['url'] ) . '"' : '';
+          $plat_href    = $plat_has_url ? ' href="' . esc_url( $plat_url ) . '"' : '';
       ?>
-      <<?php echo $plat_tag; ?><?php echo $plat_href; ?> class="ep-plat-card sr" style="<?php echo $plat_has_url ? 'text-decoration:none;color:inherit;display:flex;flex-direction:column' : ''; ?>">
+      <<?php echo $plat_tag; ?><?php echo $plat_href; ?> class="ep-plat-card sr" style="<?php echo $plat_has_url ? 'text-decoration:none;color:inherit' : ''; ?>">
         <div class="ep-plat-head">
           <div class="ep-plat-head-l">
             <div class="ep-plat-logo" style="background:<?php echo esc_attr( $plat['color'] ); ?>"><?php echo esc_html( $plat['abbr'] ); ?></div>
@@ -192,7 +195,11 @@ $stores_cta_desc  = sh_field( 'stores_cta_desc',  null, 'من الفكرة إل�
           <?php if ( $plat_has_url ) : ?>
           <span style="display:inline-flex;align-items:center;gap:6px;margin-top:18px;font-size:13.5px;font-weight:700;color:var(--blue)">اعرف المزيد <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           <?php elseif ( current_user_can( 'manage_options' ) ) : ?>
-          <div style="margin-top:14px;font-size:11px;font-weight:700;color:#e6a817;background:rgba(230,168,23,.12);border:1px solid rgba(230,168,23,.4);border-radius:4px;padding:4px 8px;direction:ltr">Admin: no published page found at "<?php echo esc_html( $plat['path'] ); ?>"</div>
+          <?php if ( 'duplicate' === $plat_status ) : ?>
+          <div style="margin-top:14px;font-size:11px;font-weight:700;color:#dc2626;background:rgba(220,38,38,.08);border:1px solid rgba(220,38,38,.4);border-radius:4px;padding:4px 8px;direction:ltr">Admin: duplicate service_card_key "<?php echo esc_html( $plat['key'] ); ?>" — assign this key to exactly one page</div>
+          <?php else : ?>
+          <div style="margin-top:14px;font-size:11px;font-weight:700;color:#e6a817;background:rgba(230,168,23,.12);border:1px solid rgba(230,168,23,.4);border-radius:4px;padding:4px 8px;direction:ltr">Admin: no page with service_card_key "<?php echo esc_html( $plat['key'] ); ?>" — assign this key in the page editor</div>
+          <?php endif; ?>
           <?php endif; ?>
         </div>
       </<?php echo $plat_tag; ?>>

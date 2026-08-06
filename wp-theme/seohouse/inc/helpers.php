@@ -81,6 +81,44 @@ function sh_market_permalink( string $market_key, string $slug_path = '' ): stri
 }
 
 /**
+ * Get the permalink for a published service child page by its stable `service_card_key`
+ * ACF value (e.g. 'salla', 'wordpress').
+ *
+ * Returns an array:
+ *   'url'    => string  — permalink, or '' when unavailable
+ *   'status' => 'ok' | 'missing' | 'duplicate'
+ *
+ * Primary: ACF meta query (slug-independent).
+ * Backward compat: falls back to a verified slug path when no key is saved yet.
+ */
+function sh_service_permalink( string $service_key, string $slug_path = '' ): array {
+    $pages = get_posts( [
+        'post_type'      => 'page',
+        'post_status'    => 'publish',
+        'posts_per_page' => 2,
+        'fields'         => 'ids',
+        'meta_query'     => [ [ 'key' => 'service_card_key', 'value' => $service_key ] ],
+    ] );
+
+    if ( count( $pages ) > 1 ) {
+        return [ 'url' => '', 'status' => 'duplicate' ];
+    }
+    if ( count( $pages ) === 1 ) {
+        return [ 'url' => (string) get_permalink( $pages[0] ), 'status' => 'ok' ];
+    }
+
+    // Backward compat: verify the legacy slug path exists and is published
+    if ( $slug_path ) {
+        $page = get_page_by_path( $slug_path );
+        if ( $page && 'publish' === get_post_status( $page->ID ) ) {
+            return [ 'url' => (string) get_permalink( $page->ID ), 'status' => 'ok' ];
+        }
+    }
+
+    return [ 'url' => '', 'status' => 'missing' ];
+}
+
+/**
  * Render an SVG icon safely.
  */
 function sh_svg( string $svg ): string {
