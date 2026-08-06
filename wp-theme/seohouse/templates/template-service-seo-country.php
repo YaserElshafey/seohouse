@@ -142,24 +142,33 @@ $hero_desc  = sh_field( 'service_hero_desc' )  ?: $c['hero_desc'];
 $faqs       = sh_field( 'service_faqs' );
 $faq_data   = is_array( $faqs ) && count( array_filter( $faqs, fn( $r ) => ! empty( $r['question'] ) ) ) ? $faqs : $c['faqs'];
 
-// SEO service parent URL
-$seo_url = sh_page_url( 'services/seo' );
+// Services and SEO parent URLs (used in breadcrumb and back-links)
+$services_url = sh_page_url( 'services' );
+$seo_url      = sh_page_url( 'services/seo' );
 ?>
 
-<!-- BreadcrumbList JSON-LD schema -->
+<!-- BreadcrumbList JSON-LD schema — 4 levels: Home > Services > SEO > Country -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "<?php echo esc_url( home_url( '/' ) ); ?>"},
-    {"@type": "ListItem", "position": 2, "name": "تحسين محركات البحث", "item": "<?php echo esc_url( $seo_url ); ?>"},
-    {"@type": "ListItem", "position": 3, "name": "<?php echo esc_js( $c['hero_tag'] ); ?>", "item": "<?php echo esc_url( get_permalink() ); ?>"}
+    {"@type": "ListItem", "position": 1, "name": "الرئيسية",              "item": "<?php echo esc_url( home_url( '/' ) ); ?>"},
+    {"@type": "ListItem", "position": 2, "name": "الخدمات",               "item": "<?php echo esc_url( $services_url ); ?>"},
+    {"@type": "ListItem", "position": 3, "name": "تحسين محركات البحث",    "item": "<?php echo esc_url( $seo_url ); ?>"},
+    {"@type": "ListItem", "position": 4, "name": "<?php echo esc_js( $c['hero_tag'] ); ?>", "item": "<?php echo esc_url( get_permalink() ); ?>"}
   ]
 }
 </script>
 
-<!-- Service JSON-LD schema -->
+<?php
+/*
+ * Service schema — output unconditionally.
+ * The canonical suppression above is separate: when RankMath is active it
+ * manages canonical tags itself, but it does NOT automatically generate a
+ * country-specific Service entity, so we always output this block.
+ */
+?>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -187,6 +196,8 @@ $seo_url = sh_page_url( 'services/seo' );
     <div class="svc-hero-inner">
       <div class="breadcrumb">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>">الرئيسية</a>
+        <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        <a href="<?php echo esc_url( $services_url ); ?>">الخدمات</a>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
         <a href="<?php echo esc_url( $seo_url ); ?>">تحسين محركات البحث</a>
         <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
