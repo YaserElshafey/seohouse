@@ -32,6 +32,20 @@ function sh_page_url( string $path, string $fallback = '' ): string {
 }
 
 /**
+ * Get permalink for a published page by path.
+ * Unlike sh_page_url(), this returns '' (not a fallback URL) when the page
+ * cannot be confirmed as existing and published. Use this wherever a "not
+ * found" state should suppress a link rather than produce a potential 404.
+ */
+function sh_safe_url( string $path ): string {
+    $page = get_page_by_path( $path );
+    if ( $page && 'publish' === get_post_status( $page->ID ) ) {
+        return (string) get_permalink( $page->ID );
+    }
+    return '';
+}
+
+/**
  * Get the permalink for a published country SEO page by its saved `seo_market`
  * ACF value (e.g. 'egypt', 'saudi_arabia', 'uae').
  *
