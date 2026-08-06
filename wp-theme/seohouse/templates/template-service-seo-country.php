@@ -30,6 +30,8 @@ $slug = get_post_field( 'post_name', get_the_ID() );
 $country_config = [
 
     'egypt' => [
+        'area_served_en'   => 'Egypt',
+        'area_served_wiki' => 'https://en.wikipedia.org/wiki/Egypt',
         'name'         => 'مصر',
         'hero_tag'     => 'تحسين محركات البحث في مصر',
         'hero_title'   => 'شركة <em>تحسين محركات البحث</em> في مصر',
@@ -62,6 +64,8 @@ $country_config = [
     ],
 
     'saudi-arabia' => [
+        'area_served_en'   => 'Saudi Arabia',
+        'area_served_wiki' => 'https://en.wikipedia.org/wiki/Saudi_Arabia',
         'name'         => 'السعودية',
         'hero_tag'     => 'تحسين محركات البحث في السعودية',
         'hero_title'   => 'شركة <em>تحسين محركات البحث</em> في السعودية',
@@ -94,6 +98,8 @@ $country_config = [
     ],
 
     'uae' => [
+        'area_served_en'   => 'United Arab Emirates',
+        'area_served_wiki' => 'https://en.wikipedia.org/wiki/United_Arab_Emirates',
         'name'         => 'الإمارات',
         'hero_tag'     => 'تحسين محركات البحث في الإمارات',
         'hero_title'   => 'شركة <em>تحسين محركات البحث</em> في الإمارات',
@@ -150,6 +156,28 @@ $seo_url = sh_page_url( 'services/seo' );
     {"@type": "ListItem", "position": 2, "name": "تحسين محركات البحث", "item": "<?php echo esc_url( $seo_url ); ?>"},
     {"@type": "ListItem", "position": 3, "name": "<?php echo esc_js( $c['hero_tag'] ); ?>", "item": "<?php echo esc_url( get_permalink() ); ?>"}
   ]
+}
+</script>
+
+<!-- Service JSON-LD schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "<?php echo esc_js( $hero_tag ); ?>",
+  "description": "<?php echo esc_js( $hero_desc ); ?>",
+  "url": "<?php echo esc_url( get_permalink() ); ?>",
+  "provider": {
+    "@type": "Organization",
+    "name": "سيو هاوس",
+    "url": "<?php echo esc_url( home_url( '/' ) ); ?>"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "<?php echo esc_js( $c['area_served_en'] ); ?>",
+    "sameAs": "<?php echo esc_js( $c['area_served_wiki'] ); ?>"
+  },
+  "serviceType": "Search Engine Optimization"
 }
 </script>
 
@@ -212,7 +240,7 @@ $seo_url = sh_page_url( 'services/seo' );
             ] as $svc ) :
             ?>
             <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7b90ff" stroke-width="2.5" flex-shrink="0"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7b90ff" stroke-width="2.5" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
               <span style="font-size:13.5px;font-weight:600;color:rgba(255,255,255,.82)"><?php echo esc_html( $svc ); ?></span>
             </div>
             <?php endforeach; ?>
@@ -227,7 +255,7 @@ $seo_url = sh_page_url( 'services/seo' );
 <section class="sec sec-surface">
   <div class="wrap">
     <div class="sh c sr"><span class="tag"><?php echo esc_html( $c['why_tag'] ); ?></span><h2 class="h2"><?php echo esc_html( $c['why_title'] ); ?></h2></div>
-    <div class="features-grid sr d1">
+    <div class="features-grid sr d1" style="grid-template-columns:repeat(2,1fr)">
       <?php foreach ( $c['why_items'] as $wi ) : ?>
       <div class="feat-card">
         <div class="ico-box" style="margin-bottom:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
