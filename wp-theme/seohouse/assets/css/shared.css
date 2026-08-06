@@ -221,6 +221,9 @@ h1,h2,h3,h4,h5,h6,.h2,.h3,.page-h1,.svc-hero-h1{font-family:'Alexandria','IBM Pl
 .sl p{font-size:10.5px;color:var(--muted);line-height:1.4}
 .mega-foot{padding:9px 13px;border-block-start:1px solid var(--line);display:flex;justify-content:flex-end}
 .mega-all{font-size:12px;font-weight:700;color:var(--blue);display:flex;align-items:center;gap:5px}
+/* Simplified services mega */
+.mega-svc{width:270px}
+.mega-list{padding:8px;display:flex;flex-direction:column;gap:2px}
 /* Sectors dropdown */
 .sec-drop{position:absolute;inset-block-start:calc(100% + 8px);inset-inline-start:50%;transform:translateX(50%);width:320px;background:#fff;border:1px solid var(--line);border-radius:var(--r2);box-shadow:var(--sh-lg);opacity:0;visibility:hidden;pointer-events:none;transition:all .24s var(--fast);padding:10px}
 .ni.op .sec-drop{opacity:1;visibility:visible;pointer-events:all}

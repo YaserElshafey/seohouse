@@ -376,6 +376,29 @@ if ( empty( $seo_proof_cards ) ) {
   </div>
 </section>
 
+<!-- Markets we serve -->
+<section class="sec sec-white">
+  <div class="wrap">
+    <div class="sh c sr"><span class="tag">أسواقنا</span><h2 class="h2">الأسواق التي نعمل بها</h2><p class="bod">خبرة محلية حقيقية في ثلاثة من أكبر أسواق البحث في المنطقة العربية — استراتيجية مخصّصة لكل سوق، لا نسخة واحدة للجميع.</p></div>
+    <div class="markets-grid sr d1">
+      <?php
+      foreach ( [
+          [ 'flag' => '🇸🇦', 'name' => 'السعودية', 'desc' => 'بيئة رقمية تدفعها رؤية 2030 — قاعدة مستخدمين بقوة شرائية مرتفعة وعائد واضح على كل ليد من البحث العضوي.', 'url' => sh_page_url( 'services/seo/saudi-arabia' ) ],
+          [ 'flag' => '🇦🇪', 'name' => 'الإمارات',  'desc' => 'سوق دولي يجمع جمهوراً عربياً وأجنبياً — المنافسة عالية، لكن الفرص لمن يُحسن الاستهداف بالعربية والإنجليزية معاً.', 'url' => sh_page_url( 'services/seo/uae' ) ],
+          [ 'flag' => '🇪🇬', 'name' => 'مصر',       'desc' => 'أكبر سوق رقمي عربي بحجم بحث ضخم — كثير من القطاعات لا تزال تفتقر إلى منافسة سيو جادة، وهذه فرصة حقيقية.', 'url' => sh_page_url( 'services/seo/egypt' ) ],
+      ] as $mkt ) :
+      ?>
+      <a href="<?php echo esc_url( $mkt['url'] ); ?>" class="market-card">
+        <div class="market-flag" aria-hidden="true"><?php echo esc_html( $mkt['flag'] ); ?></div>
+        <h3><?php echo esc_html( $mkt['name'] ); ?></h3>
+        <p><?php echo esc_html( $mkt['desc'] ); ?></p>
+        <span class="market-cta">اعرف المزيد <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
 <!-- FAQ -->
 <section class="sec sec-off">
   <div class="wrap">
