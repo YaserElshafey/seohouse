@@ -3,15 +3,19 @@
  * Template Name: Service — SEO Country Page
  *
  * Reusable template for market-specific SEO landing pages.
- * Create a child WordPress page under /services/seo/ with one of the
- * following slugs and assign this template:
- *   egypt          → /services/seo/egypt/
- *   saudi-arabia   → /services/seo/saudi-arabia/
- *   uae            → /services/seo/uae/
  *
- * Content is managed via ACF fields (same group as the SEO main template)
- * with rich Arabic-default fallbacks so pages render immediately after
- * creation with no ACF configuration required.
+ * COUNTRY DETECTION — content is driven by the "SEO Market" ACF field
+ * (field name: seo_market), not by the page slug or URL structure.
+ * After creating a country page in WP Admin, open it → Page Attributes
+ * (sidebar) → SEO Market → select Egypt, Saudi Arabia, or UAE → Update.
+ *
+ * Backward compat: if the ACF field is not yet saved, the template falls
+ * back to slug-based detection (egypt / saudi-arabia / uae) so existing
+ * pages continue to render before the field is configured.
+ *
+ * If neither ACF field nor slug resolves to a known market, an admin-only
+ * warning is shown and the page renders nothing for regular visitors.
+ * The template never silently defaults to the wrong country's content.
  */
 
 // Canonical tag — output only when no SEO plugin handles it.
@@ -21,11 +25,7 @@ add_action( 'wp_head', function () {
     }
 }, 1 );
 
-get_header();
-
 // ─ Country configuration ─────────────────────────────────────────────────────
-
-$slug = get_post_field( 'post_name', get_the_ID() );
 
 $country_config = [
 
@@ -132,8 +132,40 @@ $country_config = [
     ],
 ];
 
-// Fallback to Saudi Arabia if an unrecognised slug is used
-$c = $country_config[ $slug ] ?? $country_config['saudi-arabia'];
+// ─ Market detection ──────────────────────────────────────────────────────────
+// ACF values use underscores; $country_config keys use hyphens for saudi-arabia.
+$acf_to_config = [
+    'egypt'        => 'egypt',
+    'saudi_arabia' => 'saudi-arabia',
+    'uae'          => 'uae',
+];
+
+$acf_market = sh_field( 'seo_market' );
+
+if ( $acf_market && isset( $acf_to_config[ $acf_market ] ) ) {
+    // Primary path: saved ACF value drives content — slug-independent.
+    $c = $country_config[ $acf_to_config[ $acf_market ] ];
+} else {
+    // Backward compat: ACF not yet configured — try the page slug.
+    $slug = get_post_field( 'post_name', get_the_ID() );
+    $c    = $country_config[ $slug ] ?? null;
+}
+
+get_header();
+
+// No market resolved — never silently default to the wrong country.
+if ( null === $c ) {
+    if ( current_user_can( 'manage_options' ) ) {
+        echo '<div style="margin:40px auto;max-width:760px;padding:24px 28px;background:#fff3cd;border:2px solid #e6a817;border-radius:8px;font-family:sans-serif;direction:ltr;line-height:1.6">';
+        echo '<strong style="display:block;margin-bottom:8px">&#9888;&#xFE0F; Admin Notice — SEO Market not configured</strong>';
+        echo 'This page uses the <em>Service &mdash; SEO Country Page</em> template but no <strong>SEO Market</strong> has been selected.<br>';
+        echo 'Fix: WP Admin &rarr; Edit this page &rarr; Page Attributes sidebar &rarr; <strong>SEO Market</strong> &rarr; choose Egypt, Saudi Arabia, or UAE &rarr; Update.<br>';
+        echo '<small style="color:#666;margin-top:8px;display:block">This notice is only visible to administrators. Visitors see a blank page until a market is selected.</small>';
+        echo '</div>';
+    }
+    get_footer();
+    exit;
+}
 
 // Allow ACF overrides on specific fields
 $hero_tag   = sh_field( 'service_hero_tag' )  ?: $c['hero_tag'];
