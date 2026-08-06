@@ -1121,6 +1121,39 @@ add_action( 'acf/init', function () {
     ] );
 
     // ═══════════════════════════════════════════════════════════
+    // Service Platform Page — Card Key
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_service_card_page',
+        'title'    => 'بطاقة الخدمة — مفتاح التعريف',
+        'location' => [ [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-service-platform.php' ] ] ],
+        'position' => 'side',
+        'fields'   => [
+            [
+                'key'           => 'field_service_card_key',
+                'label'         => 'Service Card Key',
+                'name'          => 'service_card_key',
+                'type'          => 'select',
+                'instructions'  => 'اختر مفتاح التعريف لهذه الصفحة. يُستخدم لربط البطاقة في صفحات الخدمات الرئيسية — يبقى ثابتاً حتى لو تغيّر الرابط الدائم أو اسم الصفحة.',
+                'required'      => 0,
+                'allow_null'    => 1,
+                'choices'       => [
+                    'salla'       => 'سلة — Salla',
+                    'zid'         => 'زد — Zid',
+                    'shopify'     => 'شوبيفاي — Shopify',
+                    'woocommerce' => 'ووكومرس — WooCommerce',
+                    'wordpress'   => 'ووردبريس — WordPress',
+                    'webflow'     => 'ويب فلو — Webflow',
+                    'react_next'  => 'Next.js / React',
+                    'custom'      => 'تطوير مخصص — Custom Dev',
+                ],
+                'default_value' => '',
+                'return_format' => 'value',
+            ],
+        ],
+    ] );
+
+    // ═══════════════════════════════════════════════════════════
     // SEO Country Page — Market Selector
     // ═══════════════════════════════════════════════════════════
     acf_add_local_field_group( [

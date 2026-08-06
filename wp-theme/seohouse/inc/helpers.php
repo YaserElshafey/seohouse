@@ -32,6 +32,20 @@ function sh_page_url( string $path, string $fallback = '' ): string {
 }
 
 /**
+ * Get permalink for a published page by path.
+ * Unlike sh_page_url(), this returns '' (not a fallback URL) when the page
+ * cannot be confirmed as existing and published. Use this wherever a "not
+ * found" state should suppress a link rather than produce a potential 404.
+ */
+function sh_safe_url( string $path ): string {
+    $page = get_page_by_path( $path );
+    if ( $page && 'publish' === get_post_status( $page->ID ) ) {
+        return (string) get_permalink( $page->ID );
+    }
+    return '';
+}
+
+/**
  * Get the permalink for a published country SEO page by its saved `seo_market`
  * ACF value (e.g. 'egypt', 'saudi_arabia', 'uae').
  *
@@ -64,6 +78,44 @@ function sh_market_permalink( string $market_key, string $slug_path = '' ): stri
     }
 
     return '';
+}
+
+/**
+ * Get the permalink for a published service child page by its stable `service_card_key`
+ * ACF value (e.g. 'salla', 'wordpress').
+ *
+ * Returns an array:
+ *   'url'    => string  — permalink, or '' when unavailable
+ *   'status' => 'ok' | 'missing' | 'duplicate'
+ *
+ * Primary: ACF meta query (slug-independent).
+ * Backward compat: falls back to a verified slug path when no key is saved yet.
+ */
+function sh_service_permalink( string $service_key, string $slug_path = '' ): array {
+    $pages = get_posts( [
+        'post_type'      => 'page',
+        'post_status'    => 'publish',
+        'posts_per_page' => 2,
+        'fields'         => 'ids',
+        'meta_query'     => [ [ 'key' => 'service_card_key', 'value' => $service_key ] ],
+    ] );
+
+    if ( count( $pages ) > 1 ) {
+        return [ 'url' => '', 'status' => 'duplicate' ];
+    }
+    if ( count( $pages ) === 1 ) {
+        return [ 'url' => (string) get_permalink( $pages[0] ), 'status' => 'ok' ];
+    }
+
+    // Backward compat: verify the legacy slug path exists and is published
+    if ( $slug_path ) {
+        $page = get_page_by_path( $slug_path );
+        if ( $page && 'publish' === get_post_status( $page->ID ) ) {
+            return [ 'url' => (string) get_permalink( $page->ID ), 'status' => 'ok' ];
+        }
+    }
+
+    return [ 'url' => '', 'status' => 'missing' ];
 }
 
 /**
