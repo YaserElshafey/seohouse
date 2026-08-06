@@ -32,6 +32,41 @@ function sh_page_url( string $path, string $fallback = '' ): string {
 }
 
 /**
+ * Get the permalink for a published country SEO page by its saved `seo_market`
+ * ACF value (e.g. 'egypt', 'saudi_arabia', 'uae').
+ *
+ * Primary lookup: ACF meta query — slug-independent.
+ * Backward compat: if no ACF value is saved yet, falls back to a slug path
+ * only when the page at that path actually exists and is published.
+ *
+ * Returns empty string when no qualifying page is found so callers can
+ * handle the missing-page case without outputting a broken URL.
+ */
+function sh_market_permalink( string $market_key, string $slug_path = '' ): string {
+    // Primary: find a published page whose seo_market meta matches
+    $pages = get_posts( [
+        'post_type'      => 'page',
+        'post_status'    => 'publish',
+        'posts_per_page' => 1,
+        'fields'         => 'ids',
+        'meta_query'     => [ [ 'key' => 'seo_market', 'value' => $market_key ] ],
+    ] );
+    if ( ! empty( $pages ) ) {
+        return (string) get_permalink( $pages[0] );
+    }
+
+    // Backward compat: check the legacy slug path only if the page exists
+    if ( $slug_path ) {
+        $page = get_page_by_path( $slug_path );
+        if ( $page && 'publish' === get_post_status( $page->ID ) ) {
+            return (string) get_permalink( $page->ID );
+        }
+    }
+
+    return '';
+}
+
+/**
  * Render an SVG icon safely.
  */
 function sh_svg( string $svg ): string {

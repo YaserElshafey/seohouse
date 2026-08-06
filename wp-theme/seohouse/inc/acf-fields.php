@@ -1120,4 +1120,32 @@ add_action( 'acf/init', function () {
         ],
     ] );
 
+    // ═══════════════════════════════════════════════════════════
+    // SEO Country Page — Market Selector
+    // ═══════════════════════════════════════════════════════════
+    acf_add_local_field_group( [
+        'key'      => 'group_seo_country_page',
+        'title'    => 'صفحة سيو — السوق المستهدف',
+        'location' => [ [ [ 'param' => 'page_template', 'operator' => '==', 'value' => 'templates/template-service-seo-country.php' ] ] ],
+        'position' => 'side',
+        'fields'   => [
+            [
+                'key'          => 'field_seo_market',
+                'label'        => 'SEO Market',
+                'name'         => 'seo_market',
+                'type'         => 'select',
+                'instructions' => 'اختر السوق المستهدف لهذه الصفحة. هذا الإعداد يتحكم في المحتوى بالكامل — بغض النظر عن الرابط الدائم أو الاسم.',
+                'required'     => 0,
+                'allow_null'   => 1,
+                'choices'      => [
+                    'egypt'        => 'Egypt / مصر',
+                    'saudi_arabia' => 'Saudi Arabia / السعودية',
+                    'uae'          => 'UAE / الإمارات',
+                ],
+                'default_value' => '',
+                'return_format' => 'value',
+            ],
+        ],
+    ] );
+
 } );
