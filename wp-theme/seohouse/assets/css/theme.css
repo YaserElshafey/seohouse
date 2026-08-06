@@ -820,18 +820,19 @@ a.ep-plat-card:focus-visible{outline:2px solid var(--blue);outline-offset:3px;te
 @media(max-width:600px){.sr-grid{grid-template-columns:1fr}}
 
 /* ─ SEO service — markets section ─ */
-.markets-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.market-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:28px 24px;transition:all .26s var(--fast);text-decoration:none;position:relative;overflow:hidden}
+.markets-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:920px;margin-inline:auto}
+.market-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:32px 28px;transition:all .26s var(--fast);text-decoration:none;position:relative;overflow:hidden;text-align:center}
 .market-card::after{content:'';position:absolute;top:0;inset-inline:0;height:3px;background:linear-gradient(90deg,var(--blue-d),var(--blue));transform:scaleX(0);transform-origin:right;transition:transform .3s var(--fast)}
 .market-card:hover{border-color:transparent;box-shadow:var(--sh-md);transform:translateY(-4px)}
 .market-card:hover::after{transform:scaleX(1)}
-.market-flag{font-size:34px;line-height:1;margin-bottom:14px}
-.market-card h3{font-size:19px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.market-flag{font-size:38px;line-height:1;margin-bottom:18px}
+.market-card h3{font-size:19px;font-weight:800;color:var(--ink);margin-bottom:10px}
 .market-card p{font-size:13px;color:var(--muted);line-height:1.78;flex:1;margin-bottom:18px}
-.market-cta{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue);transition:gap .16s}
+.market-cta{display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue);transition:gap .16s}
 .market-card:hover .market-cta{gap:10px}
-@media(max-width:860px){.markets-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.markets-grid{grid-template-columns:1fr;gap:12px}}
+a.market-card:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+@media(max-width:860px){.markets-grid{grid-template-columns:1fr 1fr;max-width:640px}}
+@media(max-width:600px){.markets-grid{grid-template-columns:1fr;gap:12px;max-width:440px}}
 
 /* ─ Sector pages ─ */
 .sec-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(16,185,129,.18);border:1px solid rgba(16,185,129,.38);border-radius:50px;padding:7px 16px;font-size:11.5px;font-weight:700;color:#34d399;margin-bottom:18px}
@@ -1137,3 +1138,65 @@ a.svc-card,a.svc-hub-card{text-decoration:none;color:inherit}
 .srch-input{flex:1;min-width:0}
 .srch-links{display:flex;gap:10px;flex-wrap:wrap}
 @media(max-width:500px){.srch-form{flex-direction:column}.srch-form .btn{width:100%;justify-content:center}}
+
+/* ═══════════════════════════════════════════════
+   Design refinement — v1
+   ═══════════════════════════════════════════════ */
+
+/* ─ Section headings — prevent awkward wrapping ─ */
+.sh .h2,.sh .h3,.page-hero .page-h1,.svc-hero .svc-hero-h1{text-wrap:balance}
+
+/* ─ Section heading body text — readable line length ─ */
+.sh.c .bod{max-width:520px}
+
+/* ─ Buttons — universal keyboard focus ─ */
+.btn:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+
+/* ─ Short icon-cards on dark navy — center aligned ─ */
+/* Stores "who is this for", consulting "scenarios" and similar short icon+h3+p cards on dark */
+.sec-navy .who-card{text-align:center}
+.sec-navy .who-ico{margin-inline:auto}
+/* Reset who-q line decoration for centered layout */
+.sec-navy .who-card .who-q{justify-content:center}
+
+/* ─ Sectors archive — readable card height on 4-col grid ─ */
+/* Prevent isolated stretched card when sector count doesn't fill last row */
+@media(min-width:861px){.sec-grid{align-items:start}}
+
+/* ─ Content/Products inc-grid — better centering on wide screens ─ */
+/* inc-grid already has max-width:1080px; ensure it doesn't stretch at 2-col breakpoint */
+@media(max-width:1100px){.inc-grid{max-width:700px}}
+@media(max-width:600px){.inc-grid{max-width:none}}
+
+/* ─ Platform cards (ep-plat) — name size scale ─ */
+/* Prevent platform name overflowing at very small widths */
+@media(max-width:400px){.ep-plat-name{font-size:17px}}
+
+/* ─ Who-cards 3-col on tablet ─ */
+@media(max-width:860px){
+  .who-grid{grid-template-columns:1fr}
+}
+
+/* ─ Tech-grid CTA span — center-align consistently ─ */
+/* tech-card is text-align:center; the span inside uses inline-flex */
+.tech-card>span{display:block;text-align:center}
+
+/* ─ Mobile — market cards RTL arrow orientation ─ */
+/* Arrow path draws ← in LTR canvas; in RTL context this visually points → which is correct for "go to" */
+/* No transform needed — already correct for RTL */
+
+/* ─ Mobile — reduce excessive vertical spacing in hero on small phones ─ */
+@media(max-width:480px){
+  .svc-hero-inner,.page-hero-inner{padding-inline:4px}
+  .h-stats{gap:0}
+}
+
+/* ─ Results page — proof-result large number responsive ─ */
+@media(max-width:380px){.proof-result{font-size:32px}}
+
+/* ─ Pricing page — featured card offset on desktop ─ */
+/* Already handled in existing rules (line ~992); no additional changes needed */
+
+/* ─ Typography — body text on wide cards remains RTL-aligned ─ */
+/* Centered text-align is only set on cards with explicitly short content (market-card, who-card on dark) */
+/* All other card body text (.feat-card p, .wwd-card p, .svc-hub-card p, etc.) inherits RTL default = right-aligned */
