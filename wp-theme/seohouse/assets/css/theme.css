@@ -259,16 +259,16 @@
 
 /* ─ SEO service — what we do ─ */
 .wwd-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
-.wwd-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:24px 22px;transition:all .26s var(--fast);position:relative;overflow:hidden}
+.wwd-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:20px 20px;transition:all .26s var(--fast);position:relative;overflow:hidden}
 .wwd-card::after{content:'';position:absolute;top:0;inset-inline:0;height:3px;background:linear-gradient(90deg,var(--blue-d),var(--blue));transform:scaleX(0);transform-origin:right;transition:transform .3s}
 .wwd-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:transparent}
 .wwd-card:hover::after{transform:scaleX(1)}
-.wwd-n{font-size:11px;font-weight:800;color:rgba(30,46,245,.14);margin-bottom:14px;letter-spacing:.04em}
-.wwd-ico{width:46px;height:46px;border-radius:12px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin-bottom:14px;transition:all .22s}
+.wwd-n{font-size:11px;font-weight:800;color:rgba(30,46,245,.14);margin-bottom:10px;letter-spacing:.04em}
+.wwd-ico{width:46px;height:46px;border-radius:12px;background:var(--blue-50);display:flex;align-items:center;justify-content:center;margin-bottom:12px;transition:all .22s}
 .wwd-card:hover .wwd-ico{background:var(--blue)}
 .wwd-card:hover .wwd-ico svg{stroke:#fff}
 .wwd-ico svg{stroke:var(--blue);transition:stroke .22s;width:21px;height:21px}
-.wwd-card h3{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.wwd-card h3{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:7px}
 .wwd-card p{font-size:13px;color:var(--muted);line-height:1.78}
 
 /* ─ SEO service — sub-services ─ */
@@ -316,15 +316,16 @@
 
 /* ─ SEO service — proof/results ─ */
 .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.proof-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:28px 26px;transition:transform .26s var(--fast),box-shadow .26s var(--fast),border-color .26s var(--fast);display:flex;flex-direction:column;position:relative;overflow:hidden}
+.proof-card{background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:24px 22px;transition:transform .26s var(--fast),box-shadow .26s var(--fast),border-color .26s var(--fast);display:flex;flex-direction:column;position:relative;overflow:hidden}
 .proof-card::before{content:'';position:absolute;top:0;inset-inline:0;height:3px;background:var(--blue);opacity:0;transition:opacity .26s var(--fast)}
 .proof-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(30,46,245,.1),0 2px 8px rgba(0,0,0,.06);border-color:rgba(30,46,245,.2)}
 .proof-card:hover::before{opacity:1}
-.proof-sector{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.09em;margin-bottom:16px}
-.proof-result{font-size:42px;font-weight:900;color:var(--ink);letter-spacing:-.03em;line-height:1;margin-bottom:12px}
+.proof-sector{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.09em;margin-bottom:12px}
+.proof-result{font-size:42px;font-weight:900;color:var(--ink);letter-spacing:-.03em;line-height:1;margin-bottom:10px}
 .proof-result em{font-style:normal;color:var(--green)}
 .proof-desc{font-size:13px;color:var(--muted);line-height:1.8;flex:1;margin-bottom:0}
-.proof-meta{display:flex;align-items:center;gap:10px;padding-top:18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);margin-top:18px}
+.proof-meta{display:flex;align-items:center;gap:10px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);margin-top:14px}
+.proof-grid .proof-sector,.proof-grid .proof-result,.proof-grid .proof-desc{text-align:right}
 .proof-dot{width:5px;height:5px;border-radius:50%;background:var(--green)}
 .proof-client{font-size:11.5px;font-weight:700;color:var(--muted);margin-bottom:10px}
 .proof-sector:has(+.proof-client){margin-bottom:4px}
@@ -586,10 +587,10 @@ a.ep-plat-card:focus-visible{outline:2px solid var(--blue);outline-offset:3px;te
 .svc-ico svg{stroke:var(--blue);transition:stroke .22s;width:22px;height:22px}
 
 /* Compact stacked svc-card */
-.svc-stack .svc-card{padding:22px 24px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;gap:4px 16px;align-items:center;text-decoration:none;color:inherit}
-.svc-stack .svc-card .svc-ico{grid-row:span 2;align-self:start;margin-top:4px;margin-bottom:0}
-.svc-stack .svc-card h3{margin-bottom:0;grid-column:2;font-size:16px;font-weight:800;color:var(--ink)}
-.svc-stack .svc-card p{margin-bottom:0;grid-column:2;font-size:12.5px;line-height:1.65;color:var(--muted)}
+.svc-stack .svc-card{padding:16px 20px;display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;gap:10px 20px;align-items:center;text-decoration:none;color:inherit}
+.svc-stack .svc-card .svc-ico{grid-row:span 2;align-self:center;margin-top:0;margin-bottom:0}
+.svc-stack .svc-card h3{margin-bottom:0;grid-column:2;font-size:16px;font-weight:800;color:var(--ink);text-align:right}
+.svc-stack .svc-card p{margin-bottom:0;grid-column:2;font-size:12.5px;line-height:1.65;color:var(--muted);text-align:right}
 .svc-stack .svc-card::after{display:none}
 .svc-arrow{position:absolute;top:50%;inset-inline-start:22px;transform:translateY(-50%);opacity:.4;transition:all .22s;color:var(--ink)}
 .svc-stack .svc-card:hover .svc-arrow{opacity:1;inset-inline-start:14px;color:var(--blue)}
@@ -820,18 +821,19 @@ a.ep-plat-card:focus-visible{outline:2px solid var(--blue);outline-offset:3px;te
 @media(max-width:600px){.sr-grid{grid-template-columns:1fr}}
 
 /* ─ SEO service — markets section ─ */
-.markets-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.market-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:28px 24px;transition:all .26s var(--fast);text-decoration:none;position:relative;overflow:hidden}
+.markets-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:920px;margin-inline:auto}
+.market-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r3);padding:32px 28px;transition:all .26s var(--fast);text-decoration:none;position:relative;overflow:hidden;text-align:center}
 .market-card::after{content:'';position:absolute;top:0;inset-inline:0;height:3px;background:linear-gradient(90deg,var(--blue-d),var(--blue));transform:scaleX(0);transform-origin:right;transition:transform .3s var(--fast)}
 .market-card:hover{border-color:transparent;box-shadow:var(--sh-md);transform:translateY(-4px)}
 .market-card:hover::after{transform:scaleX(1)}
-.market-flag{font-size:34px;line-height:1;margin-bottom:14px}
-.market-card h3{font-size:19px;font-weight:800;color:var(--ink);margin-bottom:8px}
+.market-flag{font-size:38px;line-height:1;margin-bottom:18px}
+.market-card h3{font-size:19px;font-weight:800;color:var(--ink);margin-bottom:10px}
 .market-card p{font-size:13px;color:var(--muted);line-height:1.78;flex:1;margin-bottom:18px}
-.market-cta{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue);transition:gap .16s}
+.market-cta{display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue);transition:gap .16s}
 .market-card:hover .market-cta{gap:10px}
-@media(max-width:860px){.markets-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.markets-grid{grid-template-columns:1fr;gap:12px}}
+a.market-card:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+@media(max-width:860px){.markets-grid{grid-template-columns:1fr 1fr;max-width:640px}}
+@media(max-width:600px){.markets-grid{grid-template-columns:1fr;gap:12px;max-width:440px}}
 
 /* ─ Sector pages ─ */
 .sec-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(16,185,129,.18);border:1px solid rgba(16,185,129,.38);border-radius:50px;padding:7px 16px;font-size:11.5px;font-weight:700;color:#34d399;margin-bottom:18px}
@@ -1137,3 +1139,58 @@ a.svc-card,a.svc-hub-card{text-decoration:none;color:inherit}
 .srch-input{flex:1;min-width:0}
 .srch-links{display:flex;gap:10px;flex-wrap:wrap}
 @media(max-width:500px){.srch-form{flex-direction:column}.srch-form .btn{width:100%;justify-content:center}}
+
+/* ═══════════════════════════════════════════════
+   Design refinement — v1
+   ═══════════════════════════════════════════════ */
+
+/* ─ Section headings — prevent awkward wrapping ─ */
+.sh .h2,.sh .h3,.page-hero .page-h1,.svc-hero .svc-hero-h1{text-wrap:balance}
+
+/* ─ Section heading body text — readable line length ─ */
+.sh.c .bod{max-width:520px}
+
+/* ─ Buttons — universal keyboard focus ─ */
+.btn:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+
+/* ─ Sectors archive — readable card height on 4-col grid ─ */
+/* Prevent isolated stretched card when sector count doesn't fill last row */
+@media(min-width:861px){.sec-grid{align-items:start}}
+
+/* ─ Content/Products inc-grid — better centering on wide screens ─ */
+/* inc-grid already has max-width:1080px; ensure it doesn't stretch at 2-col breakpoint */
+@media(max-width:1100px){.inc-grid{max-width:700px}}
+@media(max-width:600px){.inc-grid{max-width:none}}
+
+/* ─ Platform cards (ep-plat) — name size scale ─ */
+/* Prevent platform name overflowing at very small widths */
+@media(max-width:400px){.ep-plat-name{font-size:17px}}
+
+/* ─ Who-cards 3-col on tablet ─ */
+@media(max-width:860px){
+  .who-grid{grid-template-columns:1fr}
+}
+
+/* ─ Tech-grid CTA span — center-align consistently ─ */
+/* tech-card is text-align:center; the span inside uses inline-flex */
+.tech-card>span{display:block;text-align:center}
+
+/* ─ Mobile — market cards RTL arrow orientation ─ */
+/* Arrow path draws ← in LTR canvas; in RTL context this visually points → which is correct for "go to" */
+/* No transform needed — already correct for RTL */
+
+/* ─ Mobile — reduce excessive vertical spacing in hero on small phones ─ */
+@media(max-width:480px){
+  .svc-hero-inner,.page-hero-inner{padding-inline:4px}
+  .h-stats{gap:0}
+}
+
+/* ─ Results page — proof-result large number responsive ─ */
+@media(max-width:380px){.proof-result{font-size:32px}}
+
+/* ─ Pricing page — featured card offset on desktop ─ */
+/* Already handled in existing rules (line ~992); no additional changes needed */
+
+/* ─ Typography — body text on wide cards remains RTL-aligned ─ */
+/* Centered text-align is only set on cards with explicitly short content (market-card, who-card on dark) */
+/* All other card body text (.feat-card p, .wwd-card p, .svc-hub-card p, etc.) inherits RTL default = right-aligned */
