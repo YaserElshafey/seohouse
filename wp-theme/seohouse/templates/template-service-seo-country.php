@@ -578,11 +578,12 @@ $trust_items = [
 
 <?php
 get_template_part( 'template-parts/layout/cta-banner', null, [
-    'tag'     => 'ابدأ الآن',
-    'title'   => $c['cta_title'],
-    'buttons' => [
-        [ 'text' => 'احجز استشارة',             'url' => sh_page_url( 'contact' ), 'class' => 'btn-w lg' ],
-        [ 'text' => 'تعرّف على خدمة السيو',   'url' => $seo_url,                 'class' => 'btn-g lg' ],
+    'tag'         => 'ابدأ الآن',
+    'title'       => $c['cta_title'],
+    'description' => 'احجز استشارة أولية لمناقشة وضع الموقع وأولويات التحسين والخطوات الممكنة وفق نطاق العمل.',
+    'buttons'     => [
+        [ 'text' => 'احجز استشارة',           'url' => sh_page_url( 'contact' ), 'class' => 'btn-w lg' ],
+        [ 'text' => 'تعرّف على خدمة السيو', 'url' => $seo_url,                 'class' => 'btn-g lg' ],
     ],
 ] );
 ?>
