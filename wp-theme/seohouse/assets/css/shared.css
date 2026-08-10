@@ -45,12 +45,12 @@ h1,h2,h3,h4,h5,h6,.h2,.h3,.page-h1,.svc-hero-h1{font-family:'Alexandria','IBM Pl
 .tag::before{content:'';width:14px;height:2px;background:currentColor;border-radius:2px;flex-shrink:0}
 .tag.d{color:rgba(255,255,255,.58)}.tag.d::before{background:rgba(255,255,255,.48)}
 .tag.g{color:var(--muted)}.tag.g::before{background:var(--muted)}
-.h2{font-size:clamp(24px,3.2vw,40px);font-weight:900;line-height:1.14;letter-spacing:-.025em;color:var(--ink)}
+.h2{font-size:clamp(24px,3.2vw,40px);font-weight:900;line-height:1.22;letter-spacing:-.025em;color:var(--ink)}
 .h2.wh{color:#fff}
 .h3{font-size:clamp(19px,2.2vw,26px);font-weight:800;line-height:1.2;letter-spacing:-.02em;color:var(--ink)}
 .bod{font-size:clamp(14px,1.35vw,16px);line-height:1.9;color:var(--ink-2)}
 .bod.d{color:rgba(255,255,255,.65)}
-.sh{margin-bottom:44px}.sh.c{text-align:center}.sh.c .bod{margin-inline:auto;max-width:500px}
+.sh{margin-bottom:44px}.sh.c{text-align:center}.sh.c .bod{margin-inline:auto;max-width:500px}.sh .h2{margin-bottom:12px}
 
 /* ─ Buttons ─ */
 .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:14px;font-weight:700;line-height:1;border-radius:var(--r1);white-space:nowrap;transition:all .22s var(--fast);cursor:pointer}

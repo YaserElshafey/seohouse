@@ -371,7 +371,7 @@ if ( empty( $seo_proof_cards ) ) {
       <?php endforeach; ?>
     </div>
     <div style="text-align:center;margin-top:28px">
-      <a href="<?php echo esc_url( sh_page_url( 'sectors' ) ); ?>" class="btn btn-g">جميع القطاعات</a>
+      <a href="<?php echo esc_url( sh_page_url( 'sectors' ) ); ?>" class="btn btn-o">جميع القطاعات</a>
     </div>
   </div>
 </section>
