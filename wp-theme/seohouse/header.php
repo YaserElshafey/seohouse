@@ -162,7 +162,7 @@ if ( ! $_blog_url ) {
         </li>
 
         <li class="ni"><a href="<?php echo esc_url( $_blog_url ); ?>" <?php echo is_home() || is_singular( 'post' ) ? 'class="active"' : ''; ?>>المدونة</a></li>
-        <li class="ni"><a href="<?php echo esc_url( sh_page_url( 'pricing' ) ); ?>" <?php echo is_page( 'pricing' ) ? 'class="active"' : ''; ?>>الباقات</a></li>
+        <li class="ni"><a href="<?php echo esc_url( sh_page_url( 'pricing' ) ); ?>" <?php echo is_page( 'pricing' ) ? 'class="active"' : ''; ?>>أسعارنا</a></li>
         <li class="ni"><a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" <?php echo is_page( 'contact' ) ? 'class="active"' : ''; ?>>اتصل بنا</a></li>
       </ul>
 
@@ -186,7 +186,7 @@ if ( ! $_blog_url ) {
       <a href="<?php echo esc_url( sh_page_url( 'team' ) ); ?>">فريق العمل</a>
       <a href="<?php echo esc_url( get_post_type_archive_link( 'sector' ) ); ?>">القطاعات</a>
       <a href="<?php echo esc_url( $_blog_url ); ?>">المدونة</a>
-      <a href="<?php echo esc_url( sh_page_url( 'pricing' ) ); ?>">الباقات</a>
+      <a href="<?php echo esc_url( sh_page_url( 'pricing' ) ); ?>">أسعارنا</a>
       <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="mob-cta">احجز استشارة مجانية</a>
     </div>
 
