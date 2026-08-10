@@ -44,6 +44,17 @@ add_action( 'wp_enqueue_scripts', function () {
 
 }, 10 );
 
+// SEO Pricing V2 — page-specific stylesheet (loaded only on this template)
+add_action( 'wp_enqueue_scripts', function () {
+    if ( ! is_page_template( 'templates/template-seo-pricing-v2.php' ) ) return;
+    wp_enqueue_style(
+        'seohouse-seo-pricing-v2',
+        get_template_directory_uri() . '/assets/css/seo-pricing-v2.css',
+        [ 'seohouse-theme' ],
+        (string) filemtime( get_template_directory() . '/assets/css/seo-pricing-v2.css' )
+    );
+}, 10 );
+
 // Remove WordPress block/global styles — this is a custom theme that does not use the block editor
 add_action( 'wp_enqueue_scripts', function () {
     wp_dequeue_style( 'wp-block-library' );

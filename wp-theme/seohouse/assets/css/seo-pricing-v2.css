@@ -1,0 +1,426 @@
+/* ─────────────────────────────────────────────────────────────────
+   SEO Pricing V2 — page-specific stylesheet
+   Loaded only on template-seo-pricing-v2.php via is_page_template()
+   ALL selectors are scoped under .seo-pricing-v2 to prevent bleed.
+   ───────────────────────────────────────────────────────────────── */
+
+/* ── Hero: price range visual ────────────────────────────────────── */
+.seo-pricing-v2 .spv2-range-wrap {
+  margin-top: 34px;
+  margin-bottom: 24px;
+}
+.seo-pricing-v2 .spv2-range-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.42);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.seo-pricing-v2 .spv2-range-bar {
+  height: 7px;
+  border-radius: 50px;
+  background: linear-gradient(to left, #5b21b6 0%, var(--blue) 50%, rgba(30,46,245,.22) 100%);
+  margin-bottom: 14px;
+}
+.seo-pricing-v2 .spv2-range-ends {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.seo-pricing-v2 .spv2-range-end {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.seo-pricing-v2 .spv2-range-end.end-max {
+  text-align: start;
+}
+.seo-pricing-v2 .spv2-range-amount {
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -.025em;
+  line-height: 1;
+}
+.seo-pricing-v2 .spv2-range-suffix {
+  font-size: 11.5px;
+  color: rgba(255,255,255,.45);
+  font-weight: 600;
+}
+.seo-pricing-v2 .spv2-range-note {
+  text-align: center;
+  font-size: 13.5px;
+  color: rgba(255,255,255,.52);
+  margin-top: 22px;
+  line-height: 1.82;
+  max-width: 600px;
+  margin-inline: auto;
+}
+.seo-pricing-v2 .spv2-trust-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,.45);
+  margin-top: 18px;
+}
+.seo-pricing-v2 .spv2-trust-note svg {
+  flex-shrink: 0;
+}
+
+/* ── Section heading narrow ──────────────────────────────────────── */
+.seo-pricing-v2 .spv2-narrow {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+/* ── Factor cards (section 2) ────────────────────────────────────── */
+.seo-pricing-v2 .spv2-factor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.seo-pricing-v2 .spv2-factor-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r2);
+  padding: 22px 20px;
+  transition: border-color .22s, box-shadow .22s, transform .22s;
+}
+.seo-pricing-v2 .spv2-factor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sh-sm);
+  border-color: rgba(30,46,245,.18);
+}
+.seo-pricing-v2 .spv2-factor-num {
+  font-size: 10.5px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+.seo-pricing-v2 .spv2-factor-card h3 {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 8px;
+  line-height: 1.42;
+}
+.seo-pricing-v2 .spv2-factor-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.78;
+  margin: 0;
+}
+
+/* ── Price scale (section 3) ─────────────────────────────────────── */
+.seo-pricing-v2 .spv2-scale-box {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r3);
+  padding: 36px 40px;
+}
+.seo-pricing-v2 .spv2-scale-ends {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.seo-pricing-v2 .spv2-scale-amount {
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 900;
+  letter-spacing: -.02em;
+  color: var(--ink);
+}
+.seo-pricing-v2 .spv2-scale-ends-arrow {
+  font-size: 13px;
+  color: var(--muted);
+}
+.seo-pricing-v2 .spv2-scale-track {
+  position: relative;
+  height: 6px;
+  background: var(--line);
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+.seo-pricing-v2 .spv2-scale-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  background: linear-gradient(to left, #5b21b6, var(--blue), rgba(30,46,245,.3));
+}
+.seo-pricing-v2 .spv2-scale-markers {
+  display: flex;
+  gap: 0;
+}
+.seo-pricing-v2 .spv2-scale-marker {
+  flex: 1;
+  padding-inline-end: 16px;
+  border-inline-start: 2px solid var(--line);
+  padding-inline-start: 12px;
+  padding-top: 4px;
+}
+.seo-pricing-v2 .spv2-scale-marker:first-child {
+  border-inline-start-color: var(--blue);
+}
+.seo-pricing-v2 .spv2-scale-marker:nth-child(2) {
+  border-inline-start-color: var(--blue);
+  opacity: .85;
+}
+.seo-pricing-v2 .spv2-scale-marker:last-child {
+  border-inline-start-color: #5b21b6;
+  opacity: .72;
+}
+.seo-pricing-v2 .spv2-scale-marker-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+.seo-pricing-v2 .spv2-scale-marker-sub {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.seo-pricing-v2 .spv2-scale-disclaimer {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .05em;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ── Scope groups (section 4) ────────────────────────────────────── */
+.seo-pricing-v2 .spv2-scope-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.seo-pricing-v2 .spv2-scope-group {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r3);
+  padding: 24px 22px;
+}
+.seo-pricing-v2 .spv2-scope-group-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.seo-pricing-v2 .spv2-scope-ico {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--blue-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.seo-pricing-v2 .spv2-scope-ico svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--blue);
+}
+.seo-pricing-v2 .spv2-scope-group-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.38;
+}
+.seo-pricing-v2 .spv2-scope-items {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.seo-pricing-v2 .spv2-scope-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.65;
+}
+.seo-pricing-v2 .spv2-scope-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+.seo-pricing-v2 .spv2-scope-clarify {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* ── Tech equation (section 5) ───────────────────────────────────── */
+.seo-pricing-v2 .spv2-tech-eq {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-block: 28px 10px;
+}
+.seo-pricing-v2 .spv2-tech-node {
+  background: rgba(30,46,245,.12);
+  border: 1px solid rgba(30,46,245,.28);
+  border-radius: var(--r2);
+  padding: 12px 26px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #7b90ff;
+}
+.seo-pricing-v2 .spv2-tech-op {
+  font-size: 24px;
+  font-weight: 900;
+  color: rgba(255,255,255,.25);
+  line-height: 1;
+}
+.seo-pricing-v2 .spv2-tech-result {
+  background: var(--blue);
+  border-radius: var(--r2);
+  padding: 12px 26px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: var(--sh-b);
+}
+.seo-pricing-v2 .spv2-tech-disclaimer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12.5px;
+  color: rgba(255,255,255,.38);
+  line-height: 1.7;
+  max-width: 540px;
+  margin-inline: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,.07);
+}
+
+/* ── Ecommerce factor list (section 6) ───────────────────────────── */
+.seo-pricing-v2 .spv2-eco-factors {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+  margin-block: 18px;
+}
+.seo-pricing-v2 .spv2-eco-factor {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--ink-2);
+  line-height: 1.65;
+}
+.seo-pricing-v2 .spv2-eco-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+/* ── Reporting items (section 8) ─────────────────────────────────── */
+.seo-pricing-v2 .spv2-report-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 24px;
+}
+.seo-pricing-v2 .spv2-report-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(30,46,245,.08);
+  border: 1px solid rgba(30,46,245,.15);
+  border-radius: var(--r2);
+  padding: 14px 16px;
+}
+.seo-pricing-v2 .spv2-report-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--blue);
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+.seo-pricing-v2 .spv2-report-item span {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,.72);
+  line-height: 1.62;
+}
+
+/* ── Highlight pill (section 10 range note) ──────────────────────── */
+.seo-pricing-v2 .spv2-highlight-pill {
+  display: inline-block;
+  background: var(--blue-50);
+  border: 1px solid rgba(30,46,245,.2);
+  border-radius: 50px;
+  padding: 7px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 28px;
+}
+
+/* ── FAQ button reset — faq-q is <button type="button">, strip browser defaults ── */
+.seo-pricing-v2 .faq-q {
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  width: 100%;
+  text-align: inherit;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.seo-pricing-v2 .faq-q:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: -2px;
+  border-radius: 4px;
+}
+
+/* ── Centered form wrapper ────────────────────────────────────────── */
+.seo-pricing-v2 .spv2-form-wrap {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .seo-pricing-v2 .spv2-factor-grid { grid-template-columns: 1fr 1fr; }
+  .seo-pricing-v2 .spv2-scope-groups { grid-template-columns: 1fr; }
+  .seo-pricing-v2 .spv2-report-grid { grid-template-columns: 1fr 1fr; }
+  .seo-pricing-v2 .spv2-scale-box { padding: 24px 22px; }
+}
+
+@media (max-width: 600px) {
+  .seo-pricing-v2 .spv2-factor-grid { grid-template-columns: 1fr; }
+  .seo-pricing-v2 .spv2-report-grid { grid-template-columns: 1fr; }
+  .seo-pricing-v2 .spv2-eco-factors { grid-template-columns: 1fr; }
+  .seo-pricing-v2 .spv2-tech-eq { gap: 10px; }
+  .seo-pricing-v2 .spv2-tech-node,
+  .seo-pricing-v2 .spv2-tech-result { padding: 10px 18px; font-size: 14px; }
+  .seo-pricing-v2 .spv2-scale-markers { flex-direction: column; gap: 16px; }
+  .seo-pricing-v2 .spv2-scale-marker { border-inline-start-width: 2px; padding-top: 6px; padding-bottom: 4px; }
+}
