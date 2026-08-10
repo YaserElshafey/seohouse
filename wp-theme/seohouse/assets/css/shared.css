@@ -45,12 +45,12 @@ h1,h2,h3,h4,h5,h6,.h2,.h3,.page-h1,.svc-hero-h1{font-family:'Alexandria','IBM Pl
 .tag::before{content:'';width:14px;height:2px;background:currentColor;border-radius:2px;flex-shrink:0}
 .tag.d{color:rgba(255,255,255,.58)}.tag.d::before{background:rgba(255,255,255,.48)}
 .tag.g{color:var(--muted)}.tag.g::before{background:var(--muted)}
-.h2{font-size:clamp(24px,3.2vw,40px);font-weight:900;line-height:1.22;letter-spacing:-.025em;color:var(--ink)}
+.h2{font-size:clamp(22px,2.6vw,36px);font-weight:900;line-height:1.42;letter-spacing:-.018em;color:var(--ink)}
 .h2.wh{color:#fff}
-.h3{font-size:clamp(19px,2.2vw,26px);font-weight:800;line-height:1.2;letter-spacing:-.02em;color:var(--ink)}
+.h3{font-size:clamp(18px,1.9vw,23px);font-weight:800;line-height:1.38;letter-spacing:-.012em;color:var(--ink)}
 .bod{font-size:clamp(14px,1.35vw,16px);line-height:1.9;color:var(--ink-2)}
 .bod.d{color:rgba(255,255,255,.65)}
-.sh{margin-bottom:44px}.sh.c{text-align:center}.sh.c .bod{margin-inline:auto;max-width:500px}.sh .h2{margin-bottom:12px}
+.sh{margin-bottom:44px}.sh.c{text-align:center}.sh.c .bod{margin-inline:auto;max-width:500px}.sh .h2{margin-bottom:14px}.sh .h3{margin-bottom:12px}
 
 /* ─ Buttons ─ */
 .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 26px;font-family:'IBM Plex Sans Arabic',sans-serif;font-size:14px;font-weight:700;line-height:1;border-radius:var(--r1);white-space:nowrap;transition:all .22s var(--fast);cursor:pointer}
@@ -81,12 +81,12 @@ h1,h2,h3,h4,h5,h6,.h2,.h3,.page-h1,.svc-hero-h1{font-family:'Alexandria','IBM Pl
 .bc-sep{stroke:rgba(255,255,255,.22);flex-shrink:0}
 .bc-current{color:rgba(255,255,255,.68)}
 .page-hero .tag.d{margin-bottom:10px}
-.page-h1{font-size:clamp(34px,3.4vw,52px);font-weight:900;line-height:1.28;letter-spacing:-.026em;color:#fff;margin-bottom:10px;animation:fu .75s .08s var(--ease) both;max-width:900px;margin-inline:auto;text-wrap:balance}
+.page-h1{font-size:clamp(28px,3.0vw,44px);font-weight:900;line-height:1.36;letter-spacing:-.022em;color:#fff;margin-bottom:10px;animation:fu .75s .08s var(--ease) both;max-width:900px;margin-inline:auto;text-wrap:balance}
 .page-h1 em,.grad-em{font-style:normal;background:linear-gradient(110deg,#7b90ff,#aab8ff 50%,#7b90ff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:sh 5s linear infinite}
 .page-hero-p{font-size:clamp(14px,1.35vw,16px);line-height:1.75;color:rgba(255,255,255,.65);max-width:680px;margin-inline:auto;margin-bottom:18px;animation:fu .75s .16s var(--ease) both}
 .page-hero-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;animation:fu .75s .24s var(--ease) both}
 .page-hero--post{padding-block:clamp(36px,4.5vh,52px) clamp(24px,3vh,36px)}
-.page-hero--post .page-h1{font-size:clamp(30px,3.2vw,46px);line-height:1.3;letter-spacing:-.022em;margin-bottom:8px}
+.page-hero--post .page-h1{font-size:clamp(26px,2.8vw,40px);line-height:1.38;letter-spacing:-.018em;margin-bottom:8px}
 @keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes sh{to{background-position:-200% center}}
 @keyframes lp{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.5)}50%{box-shadow:0 0 0 5px rgba(16,185,129,0)}}
@@ -300,12 +300,12 @@ body.mob-open{overflow:hidden}
   .foot-brand{grid-column:1 / -1;text-align:center}
   .foot-brand p{max-width:100%}
   .socials{justify-content:center}
-  /* Arabic heading line-height and letter-spacing */
-  .h2{line-height:1.28;letter-spacing:-.012em}
-  .h3{line-height:1.3;letter-spacing:0}
+  /* Arabic heading line-height and letter-spacing — tablet */
+  .h2{line-height:1.44;letter-spacing:-.008em}
+  .h3{line-height:1.42;letter-spacing:0}
   .tag{letter-spacing:0}
-  .page-h1{line-height:1.3}
-  .page-hero--post .page-h1{line-height:1.32}
+  .page-h1{line-height:1.4}
+  .page-hero--post .page-h1{line-height:1.42}
   .sh{margin-bottom:36px}
 }
 @media(max-width:600px){
@@ -313,13 +313,13 @@ body.mob-open{overflow:hidden}
   .page-hero-btns .btn{justify-content:center;width:100%}
   .foot-bot{flex-direction:column;text-align:center}
   .cta-banner .btns{flex-direction:column;align-items:center}
-  /* Tighter screens */
-  .h2{line-height:1.32}
+  /* Tighter screens — mobile */
+  .h2{line-height:1.46}
   .sh{margin-bottom:28px}
   .page-hero{padding-block:32px 26px}
-  .page-h1{line-height:1.34}
+  .page-h1{line-height:1.44}
   .page-hero--post{padding-block:28px 20px}
-  .page-hero--post .page-h1{line-height:1.36}
+  .page-hero--post .page-h1{line-height:1.46}
   /* Tighter section rhythm on phone — saves ~200px total scroll height */
   :root{--sec:40px}
 }
