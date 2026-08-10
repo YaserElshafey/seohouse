@@ -381,6 +381,25 @@
   margin-bottom: 28px;
 }
 
+/* ── FAQ button reset — faq-q is <button type="button">, strip browser defaults ── */
+.seo-pricing-v2 .faq-q {
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  width: 100%;
+  text-align: inherit;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.seo-pricing-v2 .faq-q:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: -2px;
+  border-radius: 4px;
+}
+
 /* ── Centered form wrapper ────────────────────────────────────────── */
 .seo-pricing-v2 .spv2-form-wrap {
   max-width: 640px;

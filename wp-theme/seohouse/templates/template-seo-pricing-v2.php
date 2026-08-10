@@ -1,26 +1,30 @@
 <?php
 /**
- * Template Name: SEO Pricing V2
+ * Template Name: SEO Pricing
  *
- * Temporary review page — /seo-pricing-v2/
- * noindex enforced until promoted to main navigation.
- * Do NOT add to nav menus or sitemap until approved.
+ * Supports two pages:
+ *   /seo-pricing-v2/ — review page, noindex enforced by slug check
+ *   /pricing/        — production page, SEO plugin controls robots
+ *
+ * noindex is applied ONLY when the page slug is exactly "seo-pricing-v2".
  */
 defined( 'ABSPATH' ) || exit;
 
-// ── noindex (review phase) ────────────────────────────────────────
-// WordPress native (WP 5.7+, theme requires WP 6.0)
-add_filter( 'wp_robots', function ( $robots ) {
-    $robots['noindex'] = true;
-    return $robots;
-} );
-// Rank Math compatibility
-add_filter( 'rank_math/frontend/robots', function ( $robots ) {
-    $robots['index'] = 'noindex';
-    return $robots;
-} );
-// Yoast SEO compatibility
-add_filter( 'wpseo_robots', fn() => 'noindex, follow' );
+// ── noindex: review slug only, never on /pricing/ ────────────────
+if ( is_page( 'seo-pricing-v2' ) ) {
+    // WordPress native (WP 5.7+, theme requires WP 6.0)
+    add_filter( 'wp_robots', function ( $robots ) {
+        $robots['noindex'] = true;
+        return $robots;
+    } );
+    // Rank Math compatibility
+    add_filter( 'rank_math/frontend/robots', function ( $robots ) {
+        $robots['index'] = 'noindex';
+        return $robots;
+    } );
+    // Yoast SEO compatibility
+    add_filter( 'wpseo_robots', fn() => 'noindex, follow' );
+}
 
 // ── Meta description (only when no SEO plugin handles it) ─────────
 add_action( 'wp_head', function () {
@@ -263,7 +267,6 @@ get_header();
 
     <div class="spv2-scope-groups">
 
-      <!-- Group 1: Strategy -->
       <div class="spv2-scope-group sr">
         <div class="spv2-scope-group-head">
           <div class="spv2-scope-ico" aria-hidden="true">
@@ -278,7 +281,6 @@ get_header();
         </div>
       </div>
 
-      <!-- Group 2: Content -->
       <div class="spv2-scope-group sr d1">
         <div class="spv2-scope-group-head">
           <div class="spv2-scope-ico" aria-hidden="true">
@@ -294,7 +296,6 @@ get_header();
         </div>
       </div>
 
-      <!-- Group 3: Technical -->
       <div class="spv2-scope-group sr d1">
         <div class="spv2-scope-group-head">
           <div class="spv2-scope-ico" aria-hidden="true">
@@ -311,7 +312,6 @@ get_header();
         </div>
       </div>
 
-      <!-- Group 4: Authority -->
       <div class="spv2-scope-group sr d2">
         <div class="spv2-scope-group-head">
           <div class="spv2-scope-ico" aria-hidden="true">
@@ -494,7 +494,7 @@ get_header();
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════ -->
-<!-- §9 FAQ                                                          -->
+<!-- §9 FAQ — accessible button implementation                       -->
 <!-- ══════════════════════════════════════════════════════════════ -->
 <section class="sec sec-white">
   <div class="wrap">
@@ -507,73 +507,73 @@ get_header();
     <div class="faq-list spv2-narrow" role="list">
 
       <div class="faq-item" role="listitem">
-        <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="spv2-faq-a-1">
           <span>لماذا لا تقدم SEO House باقات SEO ثابتة؟</span>
           <div class="faq-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </div>
-        </div>
-        <div class="faq-a" role="region">
+        </button>
+        <div class="faq-a" id="spv2-faq-a-1">
           <div class="faq-a-inner">لأن حجم العمل المطلوب يختلف من موقع إلى آخر. نفضل تحديد نطاق العمل حسب الموقع والمنافسة والأهداف بدل إجبار جميع العملاء على الباقة نفسها.</div>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
-        <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="spv2-faq-a-2">
           <span>كم تبدأ أسعار خدمات SEO؟</span>
           <div class="faq-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </div>
-        </div>
-        <div class="faq-a" role="region">
+        </button>
+        <div class="faq-a" id="spv2-faq-a-2">
           <div class="faq-a-inner">تتراوح معظم المشاريع عادةً بين 1,500 و7,000 ريال شهريًا حسب حجم الموقع والمنافسة ونطاق التنفيذ المطلوب. وقد تحتاج المشاريع الكبيرة أو شديدة التعقيد إلى تسعير مخصص.</div>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
-        <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="spv2-faq-a-3">
           <span>كيف أعرف السعر المناسب لموقعي؟</span>
           <div class="faq-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </div>
-        </div>
-        <div class="faq-a" role="region">
+        </button>
+        <div class="faq-a" id="spv2-faq-a-3">
           <div class="faq-a-inner">نراجع الموقع والمنافسين وفرص البحث أولًا، ثم نحدد نطاق العمل والسعر الشهري المناسب قبل بدء المشروع.</div>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
-        <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="spv2-faq-a-4">
           <span>هل السعر يختلف للمتاجر الإلكترونية؟</span>
           <div class="faq-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </div>
-        </div>
-        <div class="faq-a" role="region">
+        </button>
+        <div class="faq-a" id="spv2-faq-a-4">
           <div class="faq-a-inner">نعم. عدد المنتجات والتصنيفات وحجم المتجر والمشاكل التقنية والمنافسة عوامل تؤثر في حجم العمل المطلوب.</div>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
-        <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="spv2-faq-a-5">
           <span>هل يشمل العمل حل المشاكل التقنية؟</span>
           <div class="faq-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </div>
-        </div>
-        <div class="faq-a" role="region">
+        </button>
+        <div class="faq-a" id="spv2-faq-a-5">
           <div class="faq-a-inner">لدينا دعم تقني ومطور يعمل مع فريق SEO لتنفيذ الحلول المطلوبة ضمن نطاق المشروع المتفق عليه. أما أعمال التطوير الكبيرة أو الخارجة عن النطاق، فيتم الاتفاق عليها بصورة منفصلة.</div>
         </div>
       </div>
 
       <div class="faq-item" role="listitem">
-        <div class="faq-q" tabindex="0" role="button" aria-expanded="false">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="spv2-faq-a-6">
           <span>هل تكاليف نشر Guest Posts والروابط الخارجية ضمن السعر؟</span>
           <div class="faq-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </div>
-        </div>
-        <div class="faq-a" role="region">
+        </button>
+        <div class="faq-a" id="spv2-faq-a-6">
           <div class="faq-a-inner">نتولى البحث عن فرص الروابط وتجهيز استراتيجية Off-Page SEO، لكن رسوم النشر التي تفرضها المواقع الخارجية ليست ضمن الاشتراك الشهري. يتم عرض تكلفة كل فرصة على العميل والحصول على موافقته قبل النشر.</div>
         </div>
       </div>
@@ -584,7 +584,7 @@ get_header();
 </section>
 
 <!-- ══════════════════════════════════════════════════════════════ -->
-<!-- §10 CTA + Lead Form                                             -->
+<!-- §10 CTA + Lead Form (isolated pricing form)                     -->
 <!-- ══════════════════════════════════════════════════════════════ -->
 <section id="pricing-review" class="sec sec-surface">
   <div class="wrap">
@@ -597,15 +597,75 @@ get_header();
     </div>
 
     <div class="spv2-form-wrap sr d1">
-      <?php
-      get_template_part( 'template-parts/layout/contact-form', null, [
-          'form_title'    => 'اطلب مراجعة موقعك',
-          'form_sub'      => 'سنراجع موقعك والمنافسة، ونوافيك بنطاق العمل والسعر الشهري المناسب قبل بدء أي التزام.',
-          'form_note'     => 'أو تواصل معنا على واتساب مباشرةً — سنردّ في أقرب وقت',
-          'success_title' => 'تم الإرسال بنجاح!',
-          'success_desc'  => 'شكراً على تواصلك — سيتصل بك أحد متخصصينا خلال 24 ساعة لمراجعة موقعك وتحديد نطاق العمل.',
-      ] );
-      ?>
+      <div class="form-card">
+        <div id="spv2FormWrap">
+          <div class="form-title">اطلب مراجعة موقعك</div>
+          <p class="form-sub">سنراجع موقعك والمنافسة، ونوافيك بنطاق العمل والسعر الشهري المناسب قبل بدء أي التزام.</p>
+
+          <form id="spv2Form" novalidate>
+            <?php /* Hidden fields — not submitted in FormData since no name attr on ajaxUrl */ ?>
+            <input type="hidden" name="action" value="sh_pricing_contact">
+            <input type="hidden" name="nonce"  id="spv2Nonce"   value="<?php echo esc_attr( wp_create_nonce( 'seohouse_nonce' ) ); ?>">
+            <input type="hidden" id="spv2AjaxUrl" value="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="spv2Name">الاسم <span aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" id="spv2Name" name="name"
+                       placeholder="اسمك الكريم" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="spv2Phone">رقم الجوال <span aria-hidden="true">*</span></label>
+                <input class="form-input" type="tel" id="spv2Phone" name="phone"
+                       placeholder="05xxxxxxxx" required autocomplete="tel">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="spv2Email">البريد الإلكتروني <span aria-hidden="true">*</span></label>
+              <input class="form-input" type="email" id="spv2Email" name="email"
+                     placeholder="your@email.com" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+              <label for="spv2Website">رابط الموقع الإلكتروني <span aria-hidden="true">*</span></label>
+              <input class="form-input" type="url" id="spv2Website" name="website"
+                     placeholder="https://yourwebsite.com" required autocomplete="url">
+            </div>
+
+            <div class="form-group">
+              <label for="spv2Service">نوع النشاط <span aria-hidden="true">*</span></label>
+              <select class="form-select" id="spv2Service" name="service" required>
+                <option value="" disabled selected>اختر نوع النشاط</option>
+                <option>موقع خدمات أو شركة</option>
+                <option>متجر إلكتروني</option>
+                <option>عيادة أو مركز طبي</option>
+                <option>عقارات أو مكتب استشارات</option>
+                <option>تعليم أو تدريب</option>
+                <option>مطعم أو أغذية</option>
+                <option>تقنية أو برمجيات</option>
+                <option>أخرى</option>
+              </select>
+            </div>
+
+            <button type="submit" class="form-submit">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              اطلب مراجعة موقعك
+            </button>
+
+            <p id="spv2FormError" class="form-error" role="alert" aria-live="polite"></p>
+            <p class="form-note">أو تواصل معنا على واتساب مباشرةً — سنردّ في أقرب وقت</p>
+          </form>
+        </div>
+
+        <div class="form-success" id="spv2Success">
+          <div class="success-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>تم الإرسال بنجاح!</h3>
+          <p>شكراً على تواصلك — سيتصل بك أحد متخصصينا خلال 24 ساعة لمراجعة موقعك وتحديد نطاق العمل.</p>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -623,5 +683,100 @@ get_template_part( 'template-parts/layout/cta-banner', null, [
 ?>
 
 </div><!-- /.seo-pricing-v2 -->
+
+<script>
+/* ── SEO Pricing V2 — page-specific JS (FAQ a11y + form) ─────────
+   Loaded inline so it executes before main.js (which is footer-enqueued).
+   MutationObserver is in place before main.js opens the first FAQ item.
+   ──────────────────────────────────────────────────────────────── */
+(function () {
+  'use strict';
+
+  /* ─ 1. FAQ: sync aria-expanded with .open class toggled by main.js ─ */
+  document.querySelectorAll('.seo-pricing-v2 .faq-item').forEach(function (item) {
+    var btn = item.querySelector('button.faq-q');
+    if (!btn) return;
+
+    /* Set initial state (handles case where main.js already ran) */
+    btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
+
+    /* Observe class attribute changes on .faq-item */
+    new MutationObserver(function () {
+      btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
+    }).observe(item, { attributes: true, attributeFilter: ['class'] });
+  });
+
+  /* ─ 2. Pricing contact form ──────────────────────────────────── */
+  var form    = document.getElementById('spv2Form');
+  if (!form) return;
+
+  var ajaxUrl = document.getElementById('spv2AjaxUrl').value;
+  var errEl   = document.getElementById('spv2FormError');
+  var wrap    = document.getElementById('spv2FormWrap');
+  var success = document.getElementById('spv2Success');
+
+  function showError(msg) {
+    if (errEl) errEl.textContent = msg;
+  }
+
+  function isValidUrl(str) {
+    try {
+      var u = new URL(str);
+      return u.protocol === 'http:' || u.protocol === 'https:';
+    } catch (e) { return false; }
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var name    = form.elements['name'].value.trim();
+    var phone   = form.elements['phone'].value.trim();
+    var email   = form.elements['email'].value.trim();
+    var website = form.elements['website'].value.trim();
+    var service = form.elements['service'].value.trim();
+
+    showError('');
+
+    if (!name || !phone || !service) {
+      showError('يرجى ملء جميع الحقول المطلوبة');
+      return;
+    }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showError('البريد الإلكتروني غير صحيح');
+      return;
+    }
+    if (!website) {
+      showError('يرجى إدخال رابط موقعك الإلكتروني');
+      return;
+    }
+    if (!isValidUrl(website)) {
+      showError('رابط الموقع غير صحيح. أدخل عنوانًا كاملًا مثل: https://example.com');
+      return;
+    }
+
+    var submitBtn = form.querySelector('.form-submit');
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.style.opacity = '.7'; }
+
+    var fd = new FormData(form);
+
+    fetch(ajaxUrl, { method: 'POST', credentials: 'same-origin', body: fd })
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data.success) {
+          if (wrap)    wrap.style.display    = 'none';
+          if (success) success.style.display = 'block';
+        } else {
+          showError((data.data && data.data.msg) ? data.data.msg : 'حدث خطأ أثناء الإرسال، يرجى المحاولة مرة أخرى');
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.style.opacity = ''; }
+        }
+      })
+      .catch(function () {
+        showError('حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى');
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.style.opacity = ''; }
+      });
+  });
+
+}());
+</script>
 
 <?php get_footer(); ?>
