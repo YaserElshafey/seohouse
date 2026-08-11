@@ -1,466 +1,946 @@
 <?php
 /**
  * Template Name: Service — SEO Main
+ *
+ * TODO before publishing:
+ *   Replace every [مجال العميل], [مدة العمل], [السوق المستهدف],
+ *   [الخدمة أو المنتج], [المدينة أو المنطقة] placeholder below
+ *   with the real client data.
  */
 get_header();
 
-$hero_tag  = sh_field( 'service_hero_tag' )  ?: 'تحسين محركات البحث';
-$hero_title = sh_field( 'service_hero_title' ) ?: 'شركة <em>تحسين محركات البحث</em> التي تُترجم البحث إلى مبيعات';
-$hero_desc  = sh_field( 'service_hero_desc' )  ?: 'عملاؤك يبحثون عنك على جوجل اليوم — السؤال هو: هل يجدونك؟ نُحوّل الزيارات العضوية إلى ليدز ومبيعات حقيقية.';
-$features   = sh_field( 'service_features' );
-$steps      = sh_field( 'service_steps' );
-$faqs       = sh_field( 'service_faqs' );
+// ── Editable placeholders — replace before publishing ──────────────────────
+$cs1_sector  = '[مجال العميل]';
+$cs1_period  = '[مدة العمل]';
+$cs1_market  = '[السوق المستهدف]';
 
-$seo_lost_title     = sh_field( 'seo_lost_title',      null, 'كل يوم يبحث عملاؤك — وكل يوم تخسر أنت' );
-$seo_lost_desc      = sh_field( 'seo_lost_desc',       null, 'إذا كان موقعك لا يظهر في الصفحة الأولى، فأنت لا تخسر زيارة فقط — أنت تخسر طلباً وعرض سعر وعميلاً يذهب لمنافسك.' );
-$seo_why_raw        = sh_field( 'seo_why_title',       null, "السيو ليس بنداً في الميزانية —\nهو خفض في تكلفة العميل" );
-$seo_why_desc       = sh_field( 'seo_why_desc',        null, 'كل عميل يأتي عبر البحث العضوي يكلّفك أقل من نظيره عبر الإعلان. والأهم — يبقى يأتي حتى بعد توقفك عن الإنفاق.' );
-$seo_why_title      = nl2br( esc_html( $seo_why_raw ) );
-$seo_wwd_title      = sh_field( 'seo_wwd_title',       null, 'ستة محاور تنفيذية تشكّل خدمة السيو' );
-$seo_wwd_desc       = sh_field( 'seo_wwd_desc',        null, 'السيو ليس مهمة واحدة — هو منظومة من ستة محاور كل واحد منها يدعم الآخر.' );
-$seo_sub_title      = sh_field( 'seo_sub_title',       null, 'اختر الخدمة التي يحتاجها عملك' );
-$seo_reporting_raw  = sh_field( 'seo_reporting_title', null, "تقارير تتكلم لغة عملك\n— لا لغة المطورين" );
-$seo_reporting_title = nl2br( esc_html( $seo_reporting_raw ) );
-$seo_reporting_desc  = sh_field( 'seo_reporting_desc', null, 'في معظم الوكالات تأتيك تقارير ممتلئة بمصطلحات جوجل لا تفهم منها شيئاً. عندنا التقرير يُظهر لك بوضوح: كم ليد جاء من البحث، كم بيع، وأين تذهب ميزانيتك.' );
-$seo_proof_title    = sh_field( 'seo_proof_title',     null, 'نتائج حقيقية لعملاء حقيقيين' );
-$seo_cta_title      = sh_field( 'seo_cta_title',       null, 'ابدأ بكسب عملاء يبحثون عنك فعلاً' );
+$cs2_period  = '[مدة العمل]';
+$cs2_service = '[الخدمة أو المنتج]';
+$cs2_market  = '[السوق المستهدف]';
 
-$seo_hero_cta1    = sh_field( 'seo_hero_cta1',    null, 'احجز استشارة مجانية — 30 دقيقة' );
-$seo_hero_cta2    = sh_field( 'seo_hero_cta2',    null, 'خدماتنا' );
-$seo_hero_stats   = sh_field( 'seo_hero_stats',   null, [] );
-$seo_lost_cards   = sh_field( 'seo_lost_cards',   null, [] );
-$seo_why_items    = sh_field( 'seo_why_items',    null, [] );
-$seo_impact_rows  = sh_field( 'seo_impact_rows',  null, [] );
-$seo_sub_desc     = sh_field( 'seo_sub_desc',     null, 'كل خدمة يمكن تنفيذها مستقلة أو ضمن باقة سيو متكاملة — حسب وضع موقعك ومرحلتك.' );
-$seo_method_title = sh_field( 'seo_method_title', null, 'منهجية شفافة من اليوم الأول' );
-$seo_method_desc  = sh_field( 'seo_method_desc',  null, 'كل مرحلة لها هدف واضح ومؤشر قياس — لا خطوات غامضة، لا وعود بدون تنفيذ.' );
-$seo_proof_desc   = sh_field( 'seo_proof_desc',   null, 'نماذج من نتائج عملاء سابقين — أرقام موثّقة من Search Console وAnalytics، لا ادعاءات.' );
-$seo_proof_cards  = sh_field( 'seo_proof_cards',  null, [] );
-$seo_ind_title    = sh_field( 'seo_ind_title',    null, 'السيو يختلف من قطاع إلى آخر — ونحن نفهم ذلك' );
-$seo_ind_desc     = sh_field( 'seo_ind_desc',     null, 'لكل قطاع جمهوره، كلماته، وقواعد ترتيبه. نُخصّص الاستراتيجية حسب طبيعة عملك.' );
-$seo_faq_title    = sh_field( 'seo_faq_title',    null, 'أسئلة يسألها كل صاحب عمل' );
+$cs3_sector  = '[مجال العميل]';
+$cs3_city    = '[المدينة أو المنطقة]';
 
-// ACF repeater fields may return an array of rows with all sub-fields empty when
-// the admin saves the page without filling in the repeater. Filter those out so
-// the empty() check below correctly falls back to the hardcoded defaults.
-$seo_hero_stats  = array_values( array_filter( (array) $seo_hero_stats,  fn( $r ) => ! empty( $r['stat_label'] ) || ! empty( $r['stat_em'] ) || ! empty( $r['stat_n'] ) ) );
-$seo_lost_cards  = array_values( array_filter( (array) $seo_lost_cards,  fn( $r ) => ! empty( $r['lc_title'] ) ) );
-$seo_why_items   = array_values( array_filter( (array) $seo_why_items,   fn( $r ) => ! empty( $r['wi_label'] ) ) );
-$seo_impact_rows = array_values( array_filter( (array) $seo_impact_rows, fn( $r ) => ! empty( $r['ir_label'] ) ) );
-$seo_proof_cards = array_values( array_filter( (array) $seo_proof_cards, fn( $r ) => ! empty( $r['pc_result'] ) || ! empty( $r['pc_sector'] ) ) );
+// ── Pricing page URL — link once published, leave empty to hide ─────────────
+$pricing_url = sh_page_url( 'seo-pricing' ) ?: '';
 
-if ( empty( $seo_hero_stats ) ) {
-    $seo_hero_stats = [
-        [ 'stat_n' => '',     'stat_em' => '+200%', 'stat_label' => 'نمو متوسط في الزيارات' ],
-        [ 'stat_n' => '90',   'stat_em' => 'يوم',   'stat_label' => 'أول مؤشرات النمو' ],
-        [ 'stat_n' => '+100', 'stat_em' => '',      'stat_label' => 'عميل في السعودية والخليج' ],
-        [ 'stat_n' => '100%', 'stat_em' => '',      'stat_label' => 'تقارير شفافة شهرياً' ],
-    ];
-}
-if ( empty( $seo_lost_cards ) ) {
-    $seo_lost_cards = [
-        [ 'lc_title' => 'طلب بحث لا يصل إليك',  'lc_body' => 'كل شهر آلاف الأشخاص يبحثون عن خدمتك في جوجل. إذا لم يكن موقعك في النتائج الأولى، ذهب الطلب إلى منافس آخر.' ],
-        [ 'lc_title' => 'ميزانية إعلانية تتبخّر', 'lc_body' => 'تنفق على Google Ads وميتا — وحين تتوقف عن الدفع، تتوقف الزيارات. السيو يبني أصلاً يستمر في جلب العملاء بدون نزيف يومي.' ],
-        [ 'lc_title' => 'ليدز قليلة الجودة',      'lc_body' => 'الزيارات العضوية تأتي من أشخاص يبحثون فعلاً عن خدمتك — عملاء جاهزون بنية شراء حقيقية.' ],
-        [ 'lc_title' => 'قرارات مبنية على الحدس', 'lc_body' => 'بدون تقارير ذكية تتخذ قرارات بناءً على شعور لا أرقام. تقاريرنا تربط البحث بالليدز والمبيعات — لتقرر بعقل.' ],
-    ];
-}
-if ( empty( $seo_why_items ) ) {
-    $seo_why_items = [
-        [ 'wi_label' => 'تكلفة عميل أقل',        'wi_desc' => 'كلما نمت الزيارات العضوية، انخفض اعتمادك على الإعلانات' ],
-        [ 'wi_label' => 'عملاء بنية شراء أعلى',  'wi_desc' => 'الباحث في جوجل لديه احتياج حقيقي' ],
-        [ 'wi_label' => 'أصل تجاري متراكم',       'wi_desc' => 'كل شهر يبني على السابق، الإعلان يعود للصفر' ],
-        [ 'wi_label' => 'مصداقية تلقائية',         'wi_desc' => 'الظهور العضوي يبني ثقة لا يبنيها الإعلان' ],
-    ];
-}
-if ( empty( $seo_impact_rows ) ) {
-    $seo_impact_rows = [
-        [ 'ir_label' => 'تكلفة العميل (CAC)', 'ir_from' => 'ر.س عالية', 'ir_to' => '↓ 40%' ],
-        [ 'ir_label' => 'الليدز الشهرية',     'ir_from' => 'قليلة',      'ir_to' => '↑ 3x'  ],
-        [ 'ir_label' => 'الاعتماد على Ads',   'ir_from' => '100%',       'ir_to' => '↓ 50%' ],
-        [ 'ir_label' => 'قيمة العميل (LTV)',  'ir_from' => 'عادية',      'ir_to' => '↑ 2x'  ],
-    ];
-}
-if ( empty( $seo_proof_cards ) ) {
-    $seo_proof_cards = [
-        [ 'pc_sector' => 'قطاع الصحة والطب',        'pc_result' => '+312%', 'pc_desc' => 'نمو في الزيارات العضوية لعيادة طبية متخصصة خلال 8 أشهر — انتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.', 'pc_meta' => '8 أشهر تعاون مستمر' ],
-        [ 'pc_sector' => 'قطاع التجارة الإلكترونية', 'pc_result' => '+184%', 'pc_desc' => 'زيادة في المبيعات العضوية لمتجر سلة في قطاع الأزياء مع خفض اعتماده على Google Ads بنسبة 45%.', 'pc_meta' => '10 أشهر تعاون مستمر' ],
-        [ 'pc_sector' => 'قطاع التعليم والتدريب',    'pc_result' => '+220%', 'pc_desc' => 'نمو في عدد الليدز الشهرية لمنصة تدريب مع وصول 14 كلمة مفتاحية تنافسية إلى الصفحة الأولى.', 'pc_meta' => '6 أشهر تعاون مستمر' ],
-    ];
-}
+// ── Image base path ─────────────────────────────────────────────────────────
+$img = get_template_directory_uri() . '/assets/images/seo-service';
 ?>
+<div class="svc-seo">
 
-<!-- Hero -->
-<section class="svc-hero">
-  <div class="wrap">
-    <div class="svc-hero-inner">
-      <div class="breadcrumb">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>">الرئيسية</a>
-        <svg class="bc-sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-        <span class="bc-current"><?php echo esc_html( $hero_tag ); ?></span>
-      </div>
-      <div class="h-badge"><span class="h-bdot"></span><?php echo esc_html( $hero_tag ); ?></div>
-      <h1 class="svc-hero-h1"><?php echo wp_kses_post( $hero_title ); ?></h1>
-      <p class="page-hero-p"><?php echo esc_html( $hero_desc ); ?></p>
-      <div class="pbtns">
-        <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p lg">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          <?php echo esc_html( $seo_hero_cta1 ); ?>
-        </a>
-        <a href="#sub-services" class="btn btn-g lg"><?php echo esc_html( $seo_hero_cta2 ); ?></a>
-      </div>
-      <div class="h-stats">
-        <?php foreach ( $seo_hero_stats as $st ) : ?>
-        <div class="h-stat">
-          <div class="h-stat-n">
-            <?php echo esc_html( $st['stat_n'] ?? '' ); ?>
-            <?php if ( ! empty( $st['stat_em'] ) ) : ?><em><?php echo esc_html( $st['stat_em'] ); ?></em><?php endif; ?>
-          </div>
-          <div class="h-stat-l"><?php echo esc_html( $st['stat_label'] ?? '' ); ?></div>
+<!-- ═══════════════════════════════════════════════════════
+     1. HERO
+═══════════════════════════════════════════════════════ -->
+<section class="ss-hero sec-navy">
+  <span class="ss-hero-glow" aria-hidden="true"></span>
+  <div class="sh">
+    <div class="ss-hero-grid">
+
+      <!-- Text column -->
+      <div class="ss-hero-text">
+        <span class="ss-hero-eyebrow">
+          <span class="ss-hero-dot" aria-hidden="true"></span>
+          خدمات تحسين محركات البحث
+        </span>
+        <h1 class="ss-hero-h1">شركة سيو لا تكتفي بإرسال التوصيات</h1>
+        <p class="ss-hero-p">
+          نحوّل بيانات البحث إلى خطة تنفيذ واضحة تشمل الجوانب التقنية والمحتوى والصفحات والقياس، ثم نتابع تنفيذها مع فريقك أو ننفذها من خلال فريق SEO House.
+        </p>
+        <p class="ss-hero-p">
+          هدفنا ليس زيادة الزيارات بأي كلمات، بل تحسين ظهورك أمام الأشخاص الذين يبحثون فعلًا عن خدماتك أو منتجاتك، وربط هذا الظهور بالطلبات والعملاء المحتملين والمبيعات.
+        </p>
+        <div class="ss-hero-ctas">
+          <a href="#seoSvcFormWrap" class="btn btn-primary">اطلب مراجعة موقعك</a>
+          <a href="#ss-journey" class="btn btn-ghost">شاهد كيف نعمل</a>
         </div>
-        <?php endforeach; ?>
+        <ul class="ss-hero-trust" aria-label="مميزات الخدمة">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="rgba(30,46,245,.6)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#7b90ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            خطة مبنية على بيانات موقعك
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="rgba(30,46,245,.6)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#7b90ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            دعم تقني ومتابعة للتنفيذ
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="rgba(30,46,245,.6)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#7b90ff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            لوحة أداء محدثة باستمرار
+          </li>
+        </ul>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- Lost Opportunities -->
-<section class="sec sec-white">
-  <div class="wrap">
-    <div class="sh c sr"><span class="tag">الفرص الضائعة</span><h2 class="h2"><?php echo esc_html( $seo_lost_title ); ?></h2><p class="bod"><?php echo esc_html( $seo_lost_desc ); ?></p></div>
-    <div class="lost-grid">
-      <?php
-      $lost_icons = [
-          '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M8 11h6"/>',
-          '<line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>',
-          '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>',
-          '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
-      ];
-      $lost_delays = [ '', ' d1', ' d2', ' d3' ];
-      foreach ( $seo_lost_cards as $li => $lc ) :
-      ?>
-      <div class="lost-card sr<?php echo esc_attr( $lost_delays[ $li ] ?? '' ); ?>">
-        <div class="lost-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $lost_icons[ $li ] ?? $lost_icons[0]; // phpcs:ignore ?></svg></div>
-        <h3><?php echo esc_html( $lc['lc_title'] ?? '' ); ?></h3>
-        <p><?php echo esc_html( $lc['lc_body'] ?? '' ); ?></p>
-      </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
-<!-- Why SEO Matters Commercially -->
-<section class="sec sec-surface">
-  <div class="wrap">
-    <div class="why-com-grid">
-      <div>
-        <div class="sh sr"><span class="tag">لماذا السيو يهم تجارياً</span><h2 class="h2"><?php echo wp_kses_post( $seo_why_title ); ?></h2><p class="bod" style="margin-top:12px"><?php echo esc_html( $seo_why_desc ); ?></p></div>
-        <div class="chklist sr d1" style="margin-bottom:24px">
-          <?php foreach ( $seo_why_items as $wi ) : ?>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong><?php echo esc_html( $wi['wi_label'] ?? '' ); ?></strong><?php if ( ! empty( $wi['wi_desc'] ) ) : ?> — <?php echo esc_html( $wi['wi_desc'] ); ?><?php endif; ?></span></div>
-          <?php endforeach; ?>
-        </div>
-        <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p sr d2">احجز استشارة مجانية</a>
-      </div>
-      <div class="sr d2">
-        <div style="background:var(--navy-2);border-radius:var(--r4);padding:32px 28px;position:relative;overflow:hidden">
-          <div style="position:absolute;inset-inline-end:-50px;top:-50px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.28),transparent 70%)"></div>
-          <div style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:20px;position:relative;z-index:1">تأثير السيو على مؤشرات عملك</div>
-          <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:14px">
-            <?php
-            foreach ( $seo_impact_rows as $imp ) :
-                $imp = [ 'label' => $imp['ir_label'] ?? '', 'from' => $imp['ir_from'] ?? '', 'to' => $imp['ir_to'] ?? '' ];
-            ?>
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
-              <strong style="font-size:13.5px;font-weight:700;color:rgba(255,255,255,.8)"><?php echo esc_html( $imp['label'] ); ?></strong>
-              <div style="display:flex;align-items:center;gap:10px">
-                <span style="font-size:13px;color:rgba(255,255,255,.36);text-decoration:line-through"><?php echo esc_html( $imp['from'] ); ?></span>
-                <span style="font-size:14.5px;font-weight:800;color:var(--green)"><?php echo esc_html( $imp['to'] ); ?></span>
-              </div>
-            </div>
-            <?php endforeach; ?>
+      <!-- Photo column -->
+      <div class="ss-hero-photo-col" aria-hidden="true">
+        <div class="ss-hero-photo-wrap">
+          <img
+            src="<?php echo esc_url( $img . '/office-laptop-dashboard.png' ); ?>"
+            alt="فريق SEO House أمام لوحة أداء Looker Studio على لابتوب"
+            width="640"
+            height="480"
+            loading="eager"
+            fetchpriority="high"
+            class="ss-hero-photo"
+          >
+          <div class="ss-hero-stat-badge" aria-hidden="true">
+            <span class="ss-hero-stat-num">106,274</span>
+            <span class="ss-hero-stat-label">إيرادات عضوية — ريال سعودي</span>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+
+    </div><!-- /ss-hero-grid -->
+  </div><!-- /sh -->
 </section>
 
-<!-- What We Do -->
-<section class="sec sec-white">
-  <div class="wrap">
-    <div class="sh c sr"><span class="tag">ماذا نفعل بالضبط</span><h2 class="h2"><?php echo esc_html( $seo_wwd_title ); ?></h2><p class="bod"><?php echo esc_html( $seo_wwd_desc ); ?></p></div>
-    <div class="wwd-grid">
-      <?php
-      $wwd_defaults = [
-          [ 'n' => '01', 'title' => 'تحليل تقني عميق',     'desc' => 'فحص بنية الموقع، السرعة، الزحف، Core Web Vitals — نكشف ما يُعيق ترتيبك.', 'svg' => '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' ],
-          [ 'n' => '02', 'title' => 'بحث الكلمات الذكي',   'desc' => 'الكلمات التي يبحث بها عملاؤك الجادون — لا الكلمات العامة الواسعة.', 'svg' => '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>' ],
-          [ 'n' => '03', 'title' => 'تحسين الصفحات',        'desc' => 'عناوين، أوصاف، روابط داخلية، بيانات هيكلية — كل صفحة تُعامَل كصفحة هبوط.', 'svg' => '<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>' ],
-          [ 'n' => '04', 'title' => 'محتوى يستحق الترتيب', 'desc' => 'محتوى يستهدف نية البحث الصحيحة ويُقنع القارئ بالتحرك.', 'svg' => '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>' ],
-          [ 'n' => '05', 'title' => 'روابط موثوقة',          'desc' => 'روابط طبيعية من مصادر ذات سلطة حقيقية — تُعزز ترتيبك بدون مخاطر.', 'svg' => '<path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>' ],
-          [ 'n' => '06', 'title' => 'تقارير تربط بعملك',   'desc' => 'تقرير شهري يربط الزيارات بالليدز والمبيعات وقرارات النمو.', 'svg' => '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>' ],
-      ];
-      $dcs = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ];
-      $items = ! empty( $features ) ? $features : $wwd_defaults;
-      foreach ( $items as $idx => $feat ) :
-          $dc  = $dcs[ $idx % 6 ];
-          $def = $wwd_defaults[ $idx % 6 ];
-      ?>
-      <div class="wwd-card sr <?php echo esc_attr( $dc ); ?>">
-        <div class="wwd-n" aria-hidden="true"><?php echo esc_html( $def['n'] ); ?></div>
-        <div class="wwd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="21" height="21"><?php echo $def['svg']; ?></svg></div>
-        <h3><?php echo esc_html( $feat['title'] ?? $def['title'] ); ?></h3>
-        <p><?php echo esc_html( $feat['desc'] ?? $def['desc'] ); ?></p>
-      </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
-<!-- Sub-services -->
-<section id="sub-services" class="sec sec-surface">
-  <div class="wrap">
-    <div class="sh c sr"><span class="tag">خدمات السيو</span><h2 class="h2"><?php echo esc_html( $seo_sub_title ); ?></h2><p class="bod"><?php echo esc_html( $seo_sub_desc ); ?></p></div>
-    <div class="ss-grid sr d1">
-      <?php
-      foreach ( [
-          [ 'icon' => '<path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>',
-            'title' => 'بناء الباك لينك', 'desc' => 'روابط موثوقة من مواقع ذات سلطة — استراتيجية، ليست شراء روابط عشوائي.',
-            'url' => sh_page_url( 'services/seo/backlinks' ),
-            'items' => [ 'تحليل بروفايل الروابط الحالي والمنافسين', 'روابط تحريرية من مواقع عربية موثوقة', 'Guest Posting باستراتيجية واضحة', 'تقرير شهري بكل رابط ومصدره' ] ],
-          [ 'icon' => '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>',
-            'title' => 'كتابة المحتوى', 'desc' => 'محتوى عربي مدروس استراتيجياً — يستهدف نية البحث ويُحوّل القارئ.',
-            'url' => sh_page_url( 'services/seo/content' ),
-            'items' => [ 'استراتيجية محتوى مبنية على البيانات', 'مقالات مدونة، صفحات خدمات، أوصاف منتجات', 'محتوى متخصص لكل قطاع', 'كتّاب بشريون — لا اعتماد على AI وحده' ] ],
-          [ 'icon' => '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',
-            'title' => 'استشارات تحليل الأداء', 'desc' => 'نُفسّر أرقام موقعك بلغة تجارية — لتعرف هل وكالتك الحالية تعمل.',
-            'url' => sh_page_url( 'services/seo/consulting' ),
-            'items' => [ 'تدقيق سيو شامل وتشخيص الوضع الحالي', 'قراءة Search Console وAnalytics', 'تحليل أداء وكالتك السيو الحالية', 'خطة تحسين قابلة للتنفيذ' ] ],
-      ] as $ss ) :
-      ?>
-      <div class="ss-card">
-        <div class="ss-head">
-          <div class="ss-hico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="19" height="19"><?php echo $ss['icon']; ?></svg></div>
-          <h3><?php echo esc_html( $ss['title'] ); ?></h3>
-          <p><?php echo esc_html( $ss['desc'] ); ?></p>
-        </div>
-        <div class="ss-body">
-          <div class="ss-items">
-            <?php foreach ( $ss['items'] as $item ) : ?>
-            <div class="ss-item"><div class="ss-dot"></div><?php echo esc_html( $item ); ?></div>
-            <?php endforeach; ?>
-          </div>
-          <a href="<?php echo esc_url( $ss['url'] ); ?>" class="ss-link">تفاصيل الخدمة <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
-<!-- Reporting -->
-<section class="sec sec-white">
-  <div class="wrap">
-    <div class="rep-layout">
-      <div class="sr">
-        <span class="tag" style="margin-bottom:12px">من السيو إلى نتائج العمل</span>
-        <h2 class="h2" style="margin-bottom:16px"><?php echo wp_kses_post( $seo_reporting_title ); ?></h2>
-        <p class="bod" style="margin-bottom:18px"><?php echo esc_html( $seo_reporting_desc ); ?></p>
-        <div class="chklist sr d1" style="margin-bottom:24px">
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>الترافيك</strong> — مصدره، جودته، وسلوكه على موقعك</span></div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>الليدز</strong> — كم نموذج تُعبّأ، كم مكالمة، وتكلفة كل واحد</span></div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>المبيعات</strong> — للمتاجر نربط البحث بالمنتج المباع وقيمته</span></div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>الأداء اللحظي</strong> — لوحة تحكم حية تتابعها وقتما شئت</span></div>
-        </div>
-      </div>
-      <div class="sr d1">
-        <div class="rep-mock">
-          <div class="rep-head">
-            <div class="rep-title">تقرير سيو شهري — أكتوبر</div>
-            <div class="rep-pill">+34% مقارنة بالشهر السابق</div>
-          </div>
-          <div class="rep-grid">
-            <div class="rep-stat"><div class="rep-stat-l">الزيارات العضوية</div><div class="rep-stat-n">42,180 <span class="up">↑ 28%</span></div></div>
-            <div class="rep-stat"><div class="rep-stat-l">ليدز عضوية</div><div class="rep-stat-n">312 <span class="up">↑ 41%</span></div></div>
-            <div class="rep-stat"><div class="rep-stat-l">كلمات صفحة 1</div><div class="rep-stat-n">186 <span class="up">↑ 22</span></div></div>
-            <div class="rep-stat"><div class="rep-stat-l">قيمة المبيعات</div><div class="rep-stat-n">142K <span class="up">↑ 38%</span></div></div>
-          </div>
-          <div class="rep-chart">
-            <div class="rep-bars">
-              <?php foreach ( [ 38, 46, 52, 58, 64, 71, 78, 84, 91, 96 ] as $rh ) : ?>
-              <div class="rep-bar" style="height:<?php echo esc_attr( $rh ); ?>%<?php echo $rh === 96 ? ';background:linear-gradient(180deg,var(--green),rgba(16,185,129,.3))' : ''; ?>"></div>
-              <?php endforeach; ?>
-            </div>
-          </div>
-          <div class="rep-foot">نمو متراكم على 10 أشهر — مثال توضيحي</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Methodology -->
-<section class="sec sec-navy">
-  <div class="wrap">
-    <div class="sh c sr"><span class="tag d">منهجيتنا</span><h2 class="h2 wh"><?php echo esc_html( $seo_method_title ); ?></h2><p class="bod d"><?php echo esc_html( $seo_method_desc ); ?></p></div>
-    <div class="method-grid">
-      <?php
-      $method_items = ! empty( $steps ) ? array_slice( $steps, 0, 6 ) : [
-          [ 'title' => 'استكشاف وفهم العمل',      'desc' => 'نتعرف على نشاطك، جمهورك، منافسيك، وأهدافك التجارية الفعلية' ],
-          [ 'title' => 'تدقيق سيو شامل',           'desc' => 'تحليل تقني ومحتوى وروابط — نكشف فجوات الأداء والفرص الكامنة' ],
-          [ 'title' => 'الاستراتيجية والخطة',      'desc' => 'خارطة طريق مخصصة بأولويات وجداول زمنية — قابلة للتنفيذ والمتابعة' ],
-          [ 'title' => 'التنفيذ الدقيق',           'desc' => 'تطبيق التحسينات بالترتيب الصحيح — تقني ثم محتوى ثم روابط' ],
-          [ 'title' => 'القياس والربط بالأعمال',  'desc' => 'تقرير شهري يربط السيو بالليدز والمبيعات — لا أرقام مجردة' ],
-          [ 'title' => 'التحسين المستمر',          'desc' => 'كل شهر يبني على السابق — السيو لعبة طويلة المدى تتراكم بالوقت' ],
-      ];
-      $dcs = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ];
-      foreach ( $method_items as $idx => $mi ) :
-      ?>
-      <div class="method-item sr <?php echo esc_attr( $dcs[ $idx % 6 ] ); ?>">
-        <div class="m-num"><?php echo esc_html( str_pad( $idx + 1, 2, '0', STR_PAD_LEFT ) ); ?></div>
-        <h3><?php echo esc_html( $mi['title'] ?? '' ); ?></h3>
-        <p><?php echo esc_html( $mi['desc'] ?? '' ); ?></p>
-      </div>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
-<!-- Proof / Results -->
-<section class="sec sec-white">
-  <div class="wrap">
-    <div class="sh c sr"><span class="tag">دلائل النتائج</span><h2 class="h2"><?php echo esc_html( $seo_proof_title ); ?></h2><p class="bod"><?php echo esc_html( $seo_proof_desc ); ?></p></div>
-    <div class="proof-grid">
-      <?php
-      $proof_delays = [ '', 'd1', 'd2' ];
-      foreach ( $seo_proof_cards as $pci => $pc ) :
-      ?>
-      <div class="proof-card sr <?php echo esc_attr( $proof_delays[ $pci ] ?? '' ); ?>">
-        <div class="proof-sector"><?php echo esc_html( $pc['pc_sector'] ?? '' ); ?></div>
-        <div class="proof-result"><em><?php echo esc_html( $pc['pc_result'] ?? '' ); ?></em></div>
-        <div class="proof-desc"><?php echo esc_html( $pc['pc_desc'] ?? '' ); ?></div>
-        <div class="proof-meta"><div class="proof-dot"></div><?php echo esc_html( $pc['pc_meta'] ?? '' ); ?></div>
-      </div>
-      <?php endforeach; ?>
-    </div>
-    <div style="text-align:center;margin-top:32px">
-      <a href="<?php echo esc_url( sh_page_url( 'results' ) ); ?>" class="btn btn-p lg">جميع نتائج الأعمال <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<!-- Industries -->
-<section class="sec sec-surface">
-  <div class="wrap">
-    <div class="sh c sr"><span class="tag">القطاعات التي نخدمها</span><h2 class="h2"><?php echo esc_html( $seo_ind_title ); ?></h2><p class="bod"><?php echo esc_html( $seo_ind_desc ); ?></p></div>
-    <div class="ind-grid sr d1">
-      <?php
-      foreach ( [
-          [ 'label' => 'التجارة الإلكترونية', 'sub' => 'متاجر سلة، زد، شوبيفاي', 'url' => sh_page_url( 'sectors/ecommerce' ), 'svg' => '<path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/>' ],
-          [ 'label' => 'الصحة والطب',         'sub' => 'عيادات، مستشفيات، صحة',  'url' => sh_page_url( 'sectors/health' ),       'svg' => '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>' ],
-          [ 'label' => 'التعليم والتدريب',    'sub' => 'منصات، أكاديميات',         'url' => sh_page_url( 'sectors/education' ),    'svg' => '<path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>' ],
-          [ 'label' => 'الأغذية والمطاعم',   'sub' => 'مطاعم، توصيل، أغذية',     'url' => sh_page_url( 'sectors/food' ),         'svg' => '<path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>' ],
-          [ 'label' => 'القانون والاستشارات', 'sub' => 'محاماة، استشارات، شركات', 'url' => sh_page_url( 'sectors/legal' ),        'svg' => '<path d="M3 6l9 6 9-6"/><path d="M3 6v12l9 6 9-6V6"/>' ],
-          [ 'label' => 'التقنية والبرمجيات',  'sub' => 'SaaS، شركات تقنية',       'url' => sh_page_url( 'sectors/tech' ),         'svg' => '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' ],
-      ] as $ic ) :
-      ?>
-      <a href="<?php echo esc_url( $ic['url'] ); ?>" class="ind-card">
-        <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $ic['svg']; ?></svg></div>
-        <div class="ind-card-body"><h3><?php echo esc_html( $ic['label'] ); ?></h3><p><?php echo esc_html( $ic['sub'] ); ?></p></div>
-      </a>
-      <?php endforeach; ?>
-    </div>
-    <div style="text-align:center;margin-top:28px">
-      <a href="<?php echo esc_url( sh_page_url( 'sectors' ) ); ?>" class="btn btn-o">جميع القطاعات</a>
-    </div>
-  </div>
-</section>
-
-<!-- Markets we serve -->
-<section class="sec sec-white">
-  <div class="wrap">
-    <div class="sh c sr"><span class="tag">أسواقنا</span><h2 class="h2">الأسواق التي نعمل بها</h2><p class="bod">خبرة محلية حقيقية في ثلاثة من أكبر أسواق البحث في المنطقة العربية — استراتيجية مخصّصة لكل سوق، لا نسخة واحدة للجميع.</p></div>
-    <div class="markets-grid sr d1">
-      <?php
-      // Market key (seo_market ACF value) + legacy slug fallback for backward compat.
-      foreach ( [
-          [ 'flag' => '🇸🇦', 'name' => 'السعودية', 'desc' => 'بيئة رقمية تدفعها رؤية 2030 — قاعدة مستخدمين بقوة شرائية مرتفعة وعائد واضح على كل ليد من البحث العضوي.', 'market' => 'saudi_arabia', 'slug' => 'services/seo/saudi-arabia' ],
-          [ 'flag' => '🇦🇪', 'name' => 'الإمارات',  'desc' => 'سوق دولي يجمع جمهوراً عربياً وأجنبياً — المنافسة عالية، لكن الفرص لمن يُحسن الاستهداف بالعربية والإنجليزية معاً.', 'market' => 'uae',          'slug' => 'services/seo/uae' ],
-          [ 'flag' => '🇪🇬', 'name' => 'مصر',       'desc' => 'أكبر سوق رقمي عربي بحجم بحث ضخم — كثير من القطاعات لا تزال تفتقر إلى منافسة سيو جادة، وهذه فرصة حقيقية.', 'market' => 'egypt',         'slug' => 'services/seo/egypt' ],
-      ] as $mkt ) :
-          $mkt_url  = sh_market_permalink( $mkt['market'], $mkt['slug'] );
-          $has_url  = $mkt_url !== '';
-          $tag      = $has_url ? 'a' : 'div';
-          $href     = $has_url ? ' href="' . esc_url( $mkt_url ) . '"' : '';
-          $no_click = $has_url ? '' : ' style="cursor:default"';
-      ?>
-      <<?php echo $tag; ?><?php echo $href . $no_click; ?> class="market-card">
-        <?php if ( ! $has_url && current_user_can( 'manage_options' ) ) : ?>
-        <div style="font-size:11px;font-weight:700;color:#e6a817;background:rgba(230,168,23,.12);border:1px solid rgba(230,168,23,.4);border-radius:4px;padding:4px 8px;margin-bottom:10px;direction:ltr">
-          Admin: no published page found for market "<?php echo esc_html( $mkt['market'] ); ?>"
-        </div>
-        <?php endif; ?>
-        <div class="market-flag" aria-hidden="true"><?php echo esc_html( $mkt['flag'] ); ?></div>
-        <h3><?php echo esc_html( $mkt['name'] ); ?></h3>
-        <p><?php echo esc_html( $mkt['desc'] ); ?></p>
-        <span class="market-cta">اعرف المزيد <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </<?php echo $tag; ?>>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="sec sec-off">
-  <div class="wrap">
-    <div class="faq-cta-layout">
-      <div>
-        <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2"><?php echo esc_html( $seo_faq_title ); ?></h2></div>
-        <div class="faq-list sr d1">
-          <?php
-          $faq_data = ! empty( $faqs ) ? $faqs : [
-              [ 'question' => 'كم يستغرق السيو حتى أرى نتائج في عملي؟', 'answer' => 'المؤشرات الأولى تظهر خلال 30–60 يوم. الترافيك الفعلي والليدز يبدآن في الظهور بين الشهر الثالث والسادس. أما النتائج الكبيرة فتأتي بعد 6–12 شهر — السيو لعبة تراكم.' ],
-              [ 'question' => 'كيف أفرّق بين شركة سيو حقيقية وأخرى تبيع وعوداً؟', 'answer' => 'شركة السيو الحقيقية: تطلب وصولاً لـ Search Console، تُقدّم تدقيقاً تفصيلياً قبل البيع، تربط تقاريرها بنتائج عملك، ولا تَعِد بمراتب محددة في وقت محدد.' ],
-              [ 'question' => 'هل السيو يحلّ محل إعلانات Google Ads؟', 'answer' => 'لا — يُكمّلها. الإعلانات تجلب زيارات فورية، السيو يبني أصلاً مستداماً. الاستراتيجية الذكية: الإعلانات للحاجة الفورية، والسيو للمدى البعيد.' ],
-              [ 'question' => 'هل أحتاج عقداً طويلاً؟', 'answer' => 'لا. نعمل بدون عقود ملزمة. نُثبت قيمتنا شهراً بعد شهر — وأنت من يُقرّر الاستمرار.' ],
-              [ 'question' => 'هل تعملون مع المتاجر الإلكترونية؟', 'answer' => 'نعم وبشكل متخصص. لدينا خدمة سيو المتاجر الإلكترونية لمنصات سلة، زد، شوبيفاي، وووكومرس — بمنهجية مختلفة عن السيو التقليدي.' ],
-          ];
-          foreach ( $faq_data as $faq ) :
-          ?>
-          <div class="faq-item">
-            <div class="faq-q"><span><?php echo esc_html( $faq['question'] ?? '' ); ?></span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-            <div class="faq-a"><div class="faq-a-inner"><?php echo esc_html( $faq['answer'] ?? '' ); ?></div></div>
-          </div>
-          <?php endforeach; ?>
-        </div>
-      </div>
-      <div class="cta-sticky">
-        <div class="cta-side-card sr d1">
-          <span class="tag d" style="position:relative;z-index:1;margin-bottom:10px">ابدأ الآن</span>
-          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1">هل موقعك يحقق<br>أقصى ما يمكن؟</h3>
-          <p style="font-size:13.5px;color:rgba(255,255,255,.44);line-height:1.8;margin-bottom:22px;position:relative;z-index:1">استشارة 30 دقيقة مجانية — نُحلّل وضعك، نكشف الفرص الضائعة، ونضع معاً خطة الخطوات الأولى.</p>
-          <div class="chklist" style="margin-bottom:22px">
-            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>تحليل أولي مجاني لموقعك</div>
-            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>كشف الفرص الضائعة في البحث</div>
-            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>توصيات قابلة للتنفيذ فوراً</div>
-            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>بدون أي التزام مسبق</div>
-          </div>
-          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p" style="width:100%;justify-content:center;position:relative;z-index:1">احجز استشارة مجانية</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- ═══════════════════════════════════════════════════════
+     2. CLIENTS
+═══════════════════════════════════════════════════════ -->
 <?php
-get_template_part( 'template-parts/layout/cta-banner', null, [
-    'tag'     => 'ابدأ الآن',
-    'title'   => $seo_cta_title,
-    'buttons' => [
-        [ 'text' => 'احجز استشارة مجانية', 'url' => sh_page_url( 'contact' ), 'class' => 'btn-w lg' ],
-        [ 'text' => 'تعرّف على نتائجنا',    'url' => sh_page_url( 'results' ), 'class' => 'btn-g lg' ],
-    ],
-] );
+$clients = sh_get_clients();
+if ( $clients && $clients->have_posts() ) :
 ?>
+<section class="sec-white ss-clients-section">
+  <div class="sh c sr">
+    <p class="ss-clients-label">جهات وثقت في SEO House</p>
+  </div>
+  <div class="cl-marquee" aria-hidden="true">
+    <div class="cl-marquee-track">
+      <?php
+      while ( $clients->have_posts() ) :
+        $clients->the_post();
+        $logo = get_field( 'client_logo' );
+        $url  = get_field( 'client_url' ) ?: '';
+        if ( ! $logo ) continue;
+        $img_tag = '<img src="' . esc_url( $logo['url'] ) . '" alt="' . esc_attr( get_the_title() ) . '" width="' . esc_attr( $logo['width'] ?? 120 ) . '" height="' . esc_attr( $logo['height'] ?? 40 ) . '" loading="lazy">';
+        if ( $url ) {
+          echo '<a href="' . esc_url( $url ) . '" class="cl-logo" target="_blank" rel="noopener noreferrer">' . $img_tag . '</a>';
+        } else {
+          echo '<span class="cl-logo">' . $img_tag . '</span>';
+        }
+      endwhile;
+      wp_reset_postdata();
+      // duplicate for seamless loop
+      rewind_posts();
+      $clients_dup = sh_get_clients();
+      while ( $clients_dup->have_posts() ) :
+        $clients_dup->the_post();
+        $logo = get_field( 'client_logo' );
+        $url  = get_field( 'client_url' ) ?: '';
+        if ( ! $logo ) continue;
+        $img_tag = '<img src="' . esc_url( $logo['url'] ) . '" alt="' . esc_attr( get_the_title() ) . '" width="' . esc_attr( $logo['width'] ?? 120 ) . '" height="' . esc_attr( $logo['height'] ?? 40 ) . '" loading="lazy">';
+        if ( $url ) {
+          echo '<a href="' . esc_url( $url ) . '" class="cl-logo" target="_blank" rel="noopener noreferrer">' . $img_tag . '</a>';
+        } else {
+          echo '<span class="cl-logo">' . $img_tag . '</span>';
+        }
+      endwhile;
+      wp_reset_postdata();
+      ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+
+<!-- ═══════════════════════════════════════════════════════
+     3. INTRO — النتيجة التي نهتم بها
+═══════════════════════════════════════════════════════ -->
+<section class="sec-surface ss-intro">
+  <div class="sh c sr">
+    <span class="tag">النتيجة التي نهتم بها</span>
+    <h2 class="h2">الظهور مهم، لكن أثره على النشاط هو الأهم</h2>
+    <div class="ss-intro-body">
+      <p>لا نتعامل مع الزيارات باعتبارها النتيجة النهائية. نراجع الكلمات والصفحات والتحويلات والإيرادات لفهم ما إذا كان النمو العضوي يصل إلى الجمهور الصحيح ويحقق قيمة فعلية للنشاط.</p>
+      <p>لذلك قد تكون النتيجة الأقوى أحيانًا زيادة المبيعات أو العملاء المحتملين، حتى لو لم تكن الزيادة في عدد المستخدمين هي الرقم الأكبر داخل التقرير.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     4. MAIN CASE STUDY — نمو المبيعات العضوية
+═══════════════════════════════════════════════════════ -->
+<section class="sec-white ss-case">
+  <div class="sh">
+    <p class="ss-case-label"><!-- TODO: Replace <?php echo esc_html( $cs1_sector ); ?> before publishing -->
+      دراسة حالة — <?php echo esc_html( $cs1_sector ); ?>
+    </p>
+    <div class="ss-case-grid">
+
+      <!-- Content -->
+      <div class="ss-case-content">
+        <h2 class="ss-case-h2">عندما أصبح البحث العضوي قناة مبيعات، لا مجرد مصدر زيارات</h2>
+        <p class="ss-case-p">بدأنا بتحليل الصفحات والكلمات التي تجذب مستخدمين لديهم نية حقيقية للشراء، ثم أعدنا ترتيب الأولويات حول الأقسام والمنتجات والصفحات القادرة على تحقيق إيرادات، بدل التركيز على زيادة الترافيك فقط.</p>
+        <p class="ss-case-p">
+          خلال <?php echo esc_html( $cs1_period ); ?> في سوق <?php echo esc_html( $cs1_market ); ?>، ارتفعت الإيرادات المنسوبة إلى البحث العضوي من <strong>19,956</strong> إلى <strong>106,274 ريال</strong> وفق بيانات القياس الظاهرة في الصورة.
+        </p>
+
+        <div class="ss-stat-highlight">
+          <span class="ss-stat-from">19,956 ﷼</span>
+          <svg width="24" height="14" viewBox="0 0 24 14" fill="none" aria-hidden="true"><path d="M0 7h22M16 1l6 6-6 6" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="ss-stat-to">106,274 ﷼</span>
+        </div>
+
+        <ul class="ss-what-list">
+          <li class="ss-what-item">
+            <!-- TODO: Replace with real deliverable -->
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7.25" stroke="var(--blue)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            [تحسين الأقسام أو صفحات المنتجات ذات الأولوية]
+          </li>
+          <li class="ss-what-item">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7.25" stroke="var(--blue)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            [معالجة مشكلات تقنية وفهرسة مؤثرة]
+          </li>
+          <li class="ss-what-item">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7.25" stroke="var(--blue)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            [تطوير المحتوى والربط الداخلي]
+          </li>
+          <li class="ss-what-item">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7.25" stroke="var(--blue)" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="var(--blue)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            [تحسين القياس ومتابعة مسار الشراء]
+          </li>
+        </ul>
+        <p class="ss-privacy-note">الأرقام المعروضة مأخوذة من بيانات العميل الفعلية، وقد تم إخفاء المعلومات الحساسة حفاظًا على الخصوصية.</p>
+      </div>
+
+      <!-- Screenshot -->
+      <div class="ss-case-screenshot-col">
+        <figure class="ss-screenshot">
+          <img
+            src="<?php echo esc_url( $img . '/result-revenue-organic-106k.png' ); ?>"
+            alt="لوحة Looker Studio تُظهر ارتفاع الإيرادات العضوية من 19,956 إلى 106,274 ريال"
+            width="760"
+            height="500"
+            loading="lazy"
+          >
+          <figcaption class="ss-screenshot-caption">بيانات Looker Studio — إيرادات البحث العضوي</figcaption>
+        </figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     5. TWO ADDITIONAL RESULTS
+═══════════════════════════════════════════════════════ -->
+<section class="sec-surface ss-results">
+  <div class="sh">
+    <div class="ss-results-pair">
+
+      <!-- Case 2: GSC clicks growth -->
+      <article class="ss-result-item">
+        <div class="ss-result-body">
+          <span class="tag">نمو الظهور والنقرات</span>
+          <h2 class="h3 ss-result-h">من ظهور محدود إلى نمو عضوي يمكن تتبعه</h2>
+          <p>عملنا على توسيع تغطية الكلمات وتحسين الصفحات الحالية وإنشاء الصفحات المطلوبة وربط المحتوى ببعضه، مع متابعة الفهرسة والأداء من خلال Search Console.</p>
+          <p>
+            خلال <?php echo esc_html( $cs2_period ); ?>، ارتفعت النقرات العضوية من <strong>825</strong> إلى <strong>12.9 ألف نقرة</strong>، مع تحسن واضح في وصول الصفحات إلى الباحثين عن <?php echo esc_html( $cs2_service ); ?> داخل <?php echo esc_html( $cs2_market ); ?>.
+          </p>
+        </div>
+        <figure class="ss-result-screenshot">
+          <img
+            src="<?php echo esc_url( $img . '/result-gsc-clicks-12k.png' ); ?>"
+            alt="Google Search Console تُظهر نمو النقرات من 825 إلى 12.9 ألف نقرة"
+            width="680"
+            height="400"
+            loading="lazy"
+          >
+          <figcaption class="ss-screenshot-caption">Google Search Console — نمو النقرات</figcaption>
+        </figure>
+      </article>
+
+      <!-- Case 3: Local SEO -->
+      <article class="ss-result-item ss-result-item--compact">
+        <div class="ss-result-body">
+          <span class="tag">Local SEO</span>
+          <h2 class="h3 ss-result-h">ظهور أقرب للعميل في نتائج البحث المحلية</h2>
+          <p>ركز العمل على ربط الخدمات بالمناطق المستهدفة، وتحسين إشارات الموقع والملف التجاري والمحتوى المحلي، ومتابعة الكلمات التي يستخدمها العميل عند البحث عن خدمة قريبة منه.</p>
+          <p>
+            ساعد ذلك <?php echo esc_html( $cs3_sector ); ?> على تحسين ظهوره أمام الباحثين في <?php echo esc_html( $cs3_city ); ?> وزيادة فرص الوصول من نتائج البحث المحلية.
+          </p>
+        </div>
+        <figure class="ss-result-screenshot">
+          <img
+            src="<?php echo esc_url( $img . '/result-local-seo-lawfirm.png' ); ?>"
+            alt="نتائج Google المحلية لمكتب المحاماة تُظهر ظهور قوي في خرائط Google"
+            width="680"
+            height="400"
+            loading="lazy"
+          >
+          <figcaption class="ss-screenshot-caption">Google Maps — ظهور محلي لمكتب محاماة</figcaption>
+        </figure>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     6. WORK JOURNEY TIMELINE
+═══════════════════════════════════════════════════════ -->
+<section id="ss-journey" class="sec-white ss-journey">
+  <div class="sh c sr">
+    <span class="tag">تأسيس المشروع</span>
+    <h2 class="h2">نعرف أين يبدأ الموقع قبل أن نقرر ماذا ننفذ</h2>
+    <p class="bod">كل مشروع يبدأ بفهم النشاط وأهدافه التجارية وتحديد المسؤوليات والصلاحيات ونقطة البداية، ثم تتحول البيانات إلى خريطة كلمات وخطة تنفيذ مرتبة حسب الأولوية.</p>
+  </div>
+  <div class="sh">
+    <ol class="ss-timeline" aria-label="مراحل تأسيس المشروع">
+
+      <li class="ss-phase">
+        <div class="ss-phase-num" aria-hidden="true">01</div>
+        <div class="ss-phase-body">
+          <h3 class="ss-phase-title">الـOnboarding والاجتماع الأول</h3>
+          <p>نرسل نموذجًا لجمع المعلومات الأساسية عن النشاط والخدمات أو المنتجات ذات الأولوية والأسواق المستهدفة والمنافسين والعملاء المثاليين وأهداف المشروع.</p>
+          <p>بعد ذلك نعقد اجتماعًا لتأكيد نطاق العمل، وتحديد المسؤولين عن الموافقات والتنفيذ، والاتفاق على قنوات التواصل ومواعيد المتابعة.</p>
+        </div>
+      </li>
+
+      <li class="ss-phase">
+        <div class="ss-phase-num" aria-hidden="true">02</div>
+        <div class="ss-phase-body">
+          <h3 class="ss-phase-title">استلام الصلاحيات وضبط القياس</h3>
+          <p>نراجع صلاحيات الموقع وGoogle Search Console وGA4 وGoogle Tag Manager، بالإضافة إلى Google Business Profile أو Merchant Center عندما يكون ذلك مناسبًا للمشروع.</p>
+          <p>نتأكد أيضًا من قياس الإجراءات المهمة مثل إرسال النماذج واتصالات الهاتف وضغطات واتساب والطلبات والمبيعات، حتى نقيس أثر SEO على النشاط وليس الزيارات فقط.</p>
+        </div>
+      </li>
+
+      <li class="ss-phase">
+        <div class="ss-phase-num" aria-hidden="true">03</div>
+        <div class="ss-phase-body">
+          <h3 class="ss-phase-title">تحليل الوضع الحالي والفرص</h3>
+          <p>نفحص الجوانب التقنية والفهرسة وبنية الموقع والمحتوى الحالي والكلمات التي يظهر بها الموقع وأداء المنافسين والصفحات التي تمتلك فرصة حقيقية للنمو.</p>
+          <p>نسجل نقطة البداية قبل تنفيذ التعديلات، بحيث يمكن مقارنة النتائج اللاحقة بأرقام واضحة وموثقة.</p>
+        </div>
+      </li>
+
+      <li class="ss-phase">
+        <div class="ss-phase-num" aria-hidden="true">04</div>
+        <div class="ss-phase-body">
+          <h3 class="ss-phase-title">خريطة الكلمات وخطة أول 90 يومًا</h3>
+          <p>نربط مجموعات الكلمات بالصفحات المناسبة، ونحدد الصفحات التي تحتاج إلى تحسين والصفحات الجديدة المطلوبة وفرص المحتوى والربط الداخلي.</p>
+          <p>بعد ذلك نحوّل النتائج إلى خطة لأول 90 يومًا مرتبة حسب الأولوية والتأثير المتوقع، مع توضيح ما سينفذه فريق SEO House وما يحتاج إلى موافقة أو تعاون من فريق العميل.</p>
+        </div>
+      </li>
+
+    </ol>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     7. MONTHLY CYCLE (dark section)
+═══════════════════════════════════════════════════════ -->
+<section class="sec-navy ss-cycle-section">
+  <div class="sh c sr">
+    <span class="tag tag-light">عمل مستمر، لا قائمة ثابتة</span>
+    <h2 class="h2 h2-light">كل شهر يبدأ من البيانات وينتهي بخطة أوضح للشهر التالي</h2>
+  </div>
+  <div class="sh">
+    <ol class="ss-cycle-grid" aria-label="دورة التنفيذ الشهرية">
+
+      <li class="ss-cycle-step">
+        <span class="ss-cycle-num" aria-hidden="true">01</span>
+        <h3 class="ss-cycle-title">تحديد أولويات الشهر</h3>
+        <p>نراجع بيانات الأداء وخطة المشروع ونحدد المهام الأعلى تأثيرًا، بدل تنفيذ قائمة ثابتة لا تراعي تغير الموقع أو السوق.</p>
+      </li>
+
+      <li class="ss-cycle-step">
+        <span class="ss-cycle-num" aria-hidden="true">02</span>
+        <h3 class="ss-cycle-title">التنفيذ والتنسيق</h3>
+        <p>يبدأ فريق المحتوى في تجهيز الصفحات المعتمدة، بينما يحوّل فريق SEO المشكلات التقنية إلى مهام واضحة وقابلة للتنفيذ.</p>
+      </li>
+
+      <li class="ss-cycle-step">
+        <span class="ss-cycle-num" aria-hidden="true">03</span>
+        <h3 class="ss-cycle-title">المراجعة والـQA والمتابعة</h3>
+        <p>نراجع الصفحات والتعديلات بعد التنفيذ، ونتأكد من الفهرسة والتتبع وعمل الصفحات على الديسكتوب والموبايل.</p>
+      </li>
+
+      <li class="ss-cycle-step">
+        <span class="ss-cycle-num" aria-hidden="true">04</span>
+        <h3 class="ss-cycle-title">المراجعة الشهرية وخطة الشهر التالي</h3>
+        <p>يحصل العميل على ملخص واضح لما تم تنفيذه وما تغير في الأداء والعوائق، ثم نحدد أولويات الشهر التالي.</p>
+      </li>
+
+    </ol>
+    <blockquote class="ss-cycle-quote">
+      تعرف دائمًا ما الذي نعمل عليه، وما الذي تم تنفيذه، وما الذي تغير، وما الخطوة التالية.
+    </blockquote>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     8. DELIVERABLES
+═══════════════════════════════════════════════════════ -->
+<section class="sec-off ss-deliverables-section">
+  <div class="sh c sr">
+    <span class="tag">تسليمات واضحة</span>
+    <h2 class="h2">لا نرسل توصيات عامة ونتركك أمام ملف طويل</h2>
+    <p class="bod">كل تحليل يتحول إلى مرجع أو مهمة أو خطة قابلة للتنفيذ، مع مسؤول واضح وحالة متابعة.</p>
+  </div>
+
+  <div class="sh ss-deliverables">
+
+    <!-- 01 Keyword map -->
+    <div class="ss-deliverable">
+      <div class="ss-deliv-content">
+        <span class="ss-deliv-num" aria-hidden="true">01</span>
+        <h3 class="ss-deliv-h3">خريطة الكلمات والصفحات</h3>
+        <p class="ss-deliv-p">لا نقدم قائمة طويلة من الكلمات المفتاحية فقط؛ بل نربط كل مجموعة كلمات بالصفحة المناسبة، ونحدد نية البحث والصفحات الحالية التي تحتاج إلى تطوير والصفحات الجديدة المطلوبة.</p>
+        <p class="ss-deliv-p">تتحول خريطة الكلمات إلى مرجع للمحتوى وتحسين الصفحات والربط الداخلي، وتساعد على منع استهداف الكلمة نفسها بأكثر من صفحة.</p>
+      </div>
+      <div class="ss-deliv-preview" aria-hidden="true">
+        <div class="ss-deliv-preview-inner">
+          <div class="ss-kw-row">
+            <span class="ss-kw-pill ss-kw-pill--blue">خدمات SEO</span>
+            <span class="ss-kw-pill">تحسين محركات البحث</span>
+            <span class="ss-kw-pill">شركة سيو</span>
+          </div>
+          <div class="ss-kw-row">
+            <span class="ss-kw-pill">سيو محلي</span>
+            <span class="ss-kw-pill ss-kw-pill--blue">Local SEO</span>
+            <span class="ss-kw-pill">Google Business</span>
+          </div>
+          <div class="ss-kw-row">
+            <span class="ss-kw-pill ss-kw-pill--blue">SEO تقني</span>
+            <span class="ss-kw-pill">Technical SEO</span>
+          </div>
+          <p class="ss-deliv-preview-note">نموذج مبسّط — التفاصيل داخل ملف العمل</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Tech audit -->
+    <div class="ss-deliverable ss-deliverable--alt">
+      <div class="ss-deliv-content">
+        <span class="ss-deliv-num" aria-hidden="true">02</span>
+        <h3 class="ss-deliv-h3">المراجعة التقنية وخطة التنفيذ</h3>
+        <p class="ss-deliv-p">نفحص الفهرسة والزحف وسرعة الموقع وبنية الروابط والصفحات المكررة والتحويلات والـCanonical والمشكلات التي قد تعيق الظهور أو تؤثر في تجربة المستخدم.</p>
+        <p class="ss-deliv-p">لا يتوقف العمل عند اكتشاف المشكلة؛ نحولها إلى مهام تنفيذية مرتبة حسب الأولوية والتأثير، ثم ننفذها أو نتابع تنفيذها ونراجع النتيجة.</p>
+      </div>
+      <div class="ss-deliv-preview" aria-hidden="true">
+        <div class="ss-deliv-preview-inner">
+          <div class="ss-audit-item">
+            <span class="ss-audit-dot ss-audit-dot--high"></span>
+            <div>
+              <span class="ss-audit-label">Canonical مكررة</span>
+              <div class="ss-audit-bar" style="width:78%"></div>
+            </div>
+          </div>
+          <div class="ss-audit-item">
+            <span class="ss-audit-dot ss-audit-dot--med"></span>
+            <div>
+              <span class="ss-audit-label">Core Web Vitals</span>
+              <div class="ss-audit-bar" style="width:52%"></div>
+            </div>
+          </div>
+          <div class="ss-audit-item">
+            <span class="ss-audit-dot ss-audit-dot--low"></span>
+            <div>
+              <span class="ss-audit-label">روابط معطوبة</span>
+              <div class="ss-audit-bar" style="width:30%"></div>
+            </div>
+          </div>
+          <p class="ss-deliv-preview-note">تمثيل بصري — الأولوية من الأعلى للأدنى</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 Content plan -->
+    <div class="ss-deliverable">
+      <div class="ss-deliv-content">
+        <span class="ss-deliv-num" aria-hidden="true">03</span>
+        <h3 class="ss-deliv-h3">خطة المحتوى</h3>
+        <p class="ss-deliv-p">نحدد الصفحات والموضوعات التي يحتاج إليها الموقع بناءً على البحث الفعلي وفجوات المنافسين ومراحل رحلة العميل، وليس بهدف نشر عدد ثابت من المقالات كل شهر.</p>
+        <p class="ss-deliv-p">توضح الخطة الكلمة المستهدفة وهدف الصفحة ونوع المحتوى والأولوية وحالة الموافقة والكتابة والمراجعة والنشر.</p>
+      </div>
+      <div class="ss-deliv-preview" aria-hidden="true">
+        <div class="ss-deliv-preview-inner">
+          <div class="ss-plan-row">
+            <span class="ss-plan-title">صفحة خدمة</span>
+            <span class="ss-plan-status ss-plan-status--done">منشورة</span>
+          </div>
+          <div class="ss-plan-row">
+            <span class="ss-plan-title">مقالة مقارنة</span>
+            <span class="ss-plan-status ss-plan-status--prog">قيد الكتابة</span>
+          </div>
+          <div class="ss-plan-row">
+            <span class="ss-plan-title">صفحة محلية</span>
+            <span class="ss-plan-status ss-plan-status--wait">في الانتظار</span>
+          </div>
+          <p class="ss-deliv-preview-note">نموذج مبسّط — الخطة الكاملة داخل ملف العمل</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Dashboard -->
+    <div class="ss-deliverable ss-deliverable--alt">
+      <div class="ss-deliv-content">
+        <span class="ss-deliv-num" aria-hidden="true">04</span>
+        <h3 class="ss-deliv-h3">لوحة متابعة لحظية</h3>
+        <p class="ss-deliv-p">يحصل العميل على لوحة Looker Studio محدثة باستمرار تعرض مؤشرات الأداء المهمة من Search Console وGA4 ومصادر القياس المرتبطة بالمشروع.</p>
+        <p class="ss-deliv-p">نركز داخل اللوحة على ما يهم النشاط: الظهور والنقرات والكلمات والصفحات والتحويلات والطلبات أو الإيرادات.</p>
+      </div>
+      <div class="ss-deliv-preview" aria-hidden="true">
+        <div class="ss-deliv-preview-inner">
+          <div class="ss-dash-metrics">
+            <div class="ss-dash-metric">
+              <span class="ss-dash-metric-label">النقرات</span>
+              <span class="ss-dash-metric-val">—</span>
+            </div>
+            <div class="ss-dash-metric">
+              <span class="ss-dash-metric-label">الظهور</span>
+              <span class="ss-dash-metric-val">—</span>
+            </div>
+            <div class="ss-dash-metric">
+              <span class="ss-dash-metric-label">التحويلات</span>
+              <span class="ss-dash-metric-val">—</span>
+            </div>
+          </div>
+          <div class="ss-dash-bar-wrap">
+            <div class="ss-dash-bar" style="height:30%"></div>
+            <div class="ss-dash-bar" style="height:55%"></div>
+            <div class="ss-dash-bar" style="height:45%"></div>
+            <div class="ss-dash-bar" style="height:70%"></div>
+            <div class="ss-dash-bar" style="height:60%"></div>
+            <div class="ss-dash-bar" style="height:80%"></div>
+          </div>
+          <p class="ss-deliv-preview-note">تمثيل بصري للوحة — البيانات من GA4 و Search Console</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     9. SCOPE ACCORDION
+═══════════════════════════════════════════════════════ -->
+<section class="sec-white ss-scope-section">
+  <div class="sh c sr">
+    <h2 class="h2">ما الذي يمكن أن يشمله العمل؟</h2>
+    <p class="bod">نحدد نطاق العمل بعد مراجعة الموقع وحجم المنافسة والموارد المتاحة، لأن متجرًا يضم مئات المنتجات لا يحتاج إلى الخطة نفسها التي يحتاج إليها موقع خدمات أو منصة تعمل في أكثر من سوق.</p>
+  </div>
+  <div class="sh">
+    <ul class="ss-scope-list" id="ssScopeList" aria-label="محاور خدمة SEO">
+
+      <li class="ss-scope-item">
+        <button type="button" class="ss-scope-btn" aria-expanded="false" aria-controls="ssScope1">
+          <span class="ss-scope-num" aria-hidden="true">01</span>
+          <span class="ss-scope-title">Technical SEO</span>
+          <svg class="ss-scope-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M5 7l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="ssScope1" class="ss-scope-body" role="region">
+          <p class="ss-scope-inner">الزحف والفهرسة والسرعة وبنية الموقع والتحويلات والـCanonical والمشكلات التقنية المؤثرة — تتحول كل مشكلة إلى مهمة واضحة مرتبة حسب أولويتها وتأثيرها.</p>
+        </div>
+      </li>
+
+      <li class="ss-scope-item">
+        <button type="button" class="ss-scope-btn" aria-expanded="false" aria-controls="ssScope2">
+          <span class="ss-scope-num" aria-hidden="true">02</span>
+          <span class="ss-scope-title">Keyword &amp; Page Strategy</span>
+          <svg class="ss-scope-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M5 7l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="ssScope2" class="ss-scope-body" role="region">
+          <p class="ss-scope-inner">خريطة الكلمات، نية البحث، هيكلة الصفحات ومنع التنافس بين صفحات الموقع — بحيث تستهدف كل صفحة مجموعتها الخاصة دون تداخل.</p>
+        </div>
+      </li>
+
+      <li class="ss-scope-item">
+        <button type="button" class="ss-scope-btn" aria-expanded="false" aria-controls="ssScope3">
+          <span class="ss-scope-num" aria-hidden="true">03</span>
+          <span class="ss-scope-title">On-Page SEO</span>
+          <svg class="ss-scope-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M5 7l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="ssScope3" class="ss-scope-body" role="region">
+          <p class="ss-scope-inner">العناوين والوصف وH1 والمحتوى والروابط الداخلية وتحسين الصفحات ذات الأولوية — التحسين على مستوى الصفحة يُسرّع الظهور أمام الكلمات الأقرب لنية البحث.</p>
+        </div>
+      </li>
+
+      <li class="ss-scope-item">
+        <button type="button" class="ss-scope-btn" aria-expanded="false" aria-controls="ssScope4">
+          <span class="ss-scope-num" aria-hidden="true">04</span>
+          <span class="ss-scope-title">Content Strategy</span>
+          <svg class="ss-scope-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M5 7l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="ssScope4" class="ss-scope-body" role="region">
+          <p class="ss-scope-inner">صفحات الخدمات والأقسام والمقالات وتحديث المحتوى القائم وفق فرص البحث ورحلة العميل — الموضوعات تُختار وفق الكلمات والفرص ذات الأولوية، لا بهدف رقم ثابت.</p>
+        </div>
+      </li>
+
+      <li class="ss-scope-item">
+        <button type="button" class="ss-scope-btn" aria-expanded="false" aria-controls="ssScope5">
+          <span class="ss-scope-num" aria-hidden="true">05</span>
+          <span class="ss-scope-title">Authority &amp; Off-Page</span>
+          <svg class="ss-scope-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M5 7l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="ssScope5" class="ss-scope-body" role="region">
+          <p class="ss-scope-inner">تحليل الروابط والفرص المناسبة وبناء الإشارات الخارجية وفق نطاق متفق عليه، من دون وعود بعدد عشوائي من الروابط — الجودة والصلة بالموضوع أهم من الكمية.</p>
+        </div>
+      </li>
+
+      <li class="ss-scope-item">
+        <button type="button" class="ss-scope-btn" aria-expanded="false" aria-controls="ssScope6">
+          <span class="ss-scope-num" aria-hidden="true">06</span>
+          <span class="ss-scope-title">Measurement &amp; Reporting</span>
+          <svg class="ss-scope-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M5 7l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="ssScope6" class="ss-scope-body" role="region">
+          <p class="ss-scope-inner">إعداد وطرح مؤشرات القياس، تتبع التحويلات، لوحة الأداء والمراجعة الشهرية — القياس يربط العمل بالنتائج ويُحدد الأولويات للشهر التالي.</p>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     10. REPORTING — حضور الشركة الحقيقي
+═══════════════════════════════════════════════════════ -->
+<section class="sec-surface ss-report">
+  <div class="sh">
+    <div class="ss-report-grid">
+
+      <!-- Photo -->
+      <div class="ss-report-photo-col">
+        <figure class="ss-report-photo">
+          <img
+            src="<?php echo esc_url( $img . '/office-laptop-dashboard.png' ); ?>"
+            alt="فريق SEO House يعمل على لوحة Looker Studio"
+            width="640"
+            height="480"
+            loading="lazy"
+          >
+        </figure>
+      </div>
+
+      <!-- Content -->
+      <div class="ss-report-content">
+        <span class="tag">متابعة مستمرة</span>
+        <h2 class="h2 ss-report-h">ترى الأرقام وقتما تحتاج، ونراجع معناها معك كل شهر</h2>
+        <p>لا ننتظر نهاية الشهر لنرسل ملف PDF ثابتًا. يحصل العميل على لوحة Looker Studio محدثة باستمرار، تعرض البيانات الأهم وفق طبيعة مشروعه ومصادر القياس المتاحة.</p>
+        <p>وفي المراجعة الشهرية لا نكتفي بقراءة الأرقام؛ نوضح ما تم تنفيذه، وما الذي تغير، وما الذي لم يتحرك بعد، وأين توجد الفرصة أو العائق الذي سيؤثر في خطة الشهر التالي.</p>
+        <ul class="ss-report-bullets" aria-label="ما يتضمنه التقرير">
+          <li class="ss-report-bullet">
+            <span class="ss-report-dot" aria-hidden="true"></span>
+            بيانات من Search Console وGA4 والمصادر المرتبطة بالمشروع
+          </li>
+          <li class="ss-report-bullet">
+            <span class="ss-report-dot" aria-hidden="true"></span>
+            متابعة للكلمات والصفحات والتحويلات والإيرادات عند توافرها
+          </li>
+          <li class="ss-report-bullet">
+            <span class="ss-report-dot" aria-hidden="true"></span>
+            ملخص تنفيذ واضح وأولويات للشهر التالي
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     11. REVIEWS
+═══════════════════════════════════════════════════════ -->
+<?php
+$reviews_sc = sh_option( 'reviews_shortcode' );
+if ( $reviews_sc ) :
+?>
+<section class="sec-white ss-reviews">
+  <div class="sh c sr">
+    <span class="tag">تجربة العمل معنا</span>
+    <h2 class="h2">ماذا يقول عملاؤنا عن SEO House؟</h2>
+  </div>
+  <div class="sh">
+    <?php echo do_shortcode( $reviews_sc ); ?>
+  </div>
+</section>
+<?php endif; ?>
+
+<!-- ═══════════════════════════════════════════════════════
+     12. FAQ
+═══════════════════════════════════════════════════════ -->
+<section class="sec-off ss-faq-section">
+  <div class="sh">
+    <div class="sh c sr" style="margin-bottom:clamp(28px,4vw,48px)">
+      <h2 class="h2">الأسئلة الشائعة</h2>
+    </div>
+
+    <div class="faq-list" id="svcSeoFaq" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="svcSeoFaqA-1">
+          متى تبدأ نتائج SEO في الظهور؟
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="svcSeoFaqA-1" class="faq-a" role="region" aria-label="الإجابة">
+          <p>تختلف المدة حسب حالة الموقع والمنافسة وسرعة تنفيذ التعديلات. قد تظهر مؤشرات أولية بعد معالجة مشكلات واضحة أو تحسين صفحات تمتلك فرصة قائمة، بينما يحتاج بناء نمو مستقر عادةً إلى عمل متراكم ومتابعة مستمرة.</p>
+          <p>قبل بدء المشروع نسجل نقطة البداية ونحدد مؤشرات القياس، ثم نراجع التغير شهريًا بدل تقديم وعد بزمن أو ترتيب لا يمكن ضمانه.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="svcSeoFaqA-2">
+          هل تنفذون التعديلات التقنية أم ترسلون التوصيات فقط؟
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="svcSeoFaqA-2" class="faq-a" role="region" aria-label="الإجابة">
+          <p>نحوّل المشكلات إلى مهام واضحة مرتبة حسب الأولوية. وبحسب نطاق الاتفاق، يمكن تنفيذ التعديلات من خلال مطور SEO House أو التنسيق مع مطور العميل ومراجعة ما تم تنفيذه.</p>
+          <p>لا نعتبر المهمة منتهية بمجرد إرسال الملاحظة؛ نتابع التنفيذ ونراجع النتيجة على الموقع.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="svcSeoFaqA-3">
+          هل يحصل العميل على تقرير شهري؟
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="svcSeoFaqA-3" class="faq-a" role="region" aria-label="الإجابة">
+          <p>يحصل العميل على لوحة Looker Studio محدثة باستمرار، إلى جانب مراجعة شهرية توضّح ما تم تنفيذه وما تغير في الأداء والعوائق وخطة الشهر التالي.</p>
+          <p>الهدف ليس إرسال ملف ممتلئ بالأرقام، بل ربط البيانات بما تم عمله والقرار التالي داخل المشروع.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="svcSeoFaqA-4">
+          هل تشمل الخدمة كتابة المحتوى؟
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="svcSeoFaqA-4" class="faq-a" role="region" aria-label="الإجابة">
+          <p>يمكن أن يشمل نطاق المشروع تخطيط المحتوى وكتابته ومراجعته وتحسينه ونشره، أو التنسيق مع فريق المحتوى لدى العميل، وفق ما يتم الاتفاق عليه قبل بدء العمل.</p>
+          <p>لا نحدد موضوعات المحتوى لمجرد الوصول إلى عدد ثابت من المقالات؛ نختارها وفق الكلمات والصفحات والفرص ذات الأولوية.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="svcSeoFaqA-5">
+          هل تضمنون الوصول إلى المركز الأول؟
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="svcSeoFaqA-5" class="faq-a" role="region" aria-label="الإجابة">
+          <p>لا توجد شركة يمكنها ضمان ترتيب محدد داخل نتائج Google. ما يمكننا الالتزام به هو تحليل واضح وتنفيذ منظم وقياس مستمر وشفافية في عرض ما تحقق وما يحتاج إلى وقت أو قرار.</p>
+          <p>نقيّم النجاح وفق مؤشرات تناسب المشروع، مثل الظهور والنقرات والكلمات المؤثرة والعملاء المحتملين والطلبات والإيرادات عند إمكان قياسها.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button type="button" class="faq-q" aria-expanded="false" aria-controls="svcSeoFaqA-6">
+          كم تبلغ تكلفة خدمة SEO؟
+          <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="svcSeoFaqA-6" class="faq-a" role="region" aria-label="الإجابة">
+          <p>تتراوح أغلب مشاريع SEO House بين <strong>1,500</strong> و<strong>7,000 ريال شهريًا</strong>، وفق حجم الموقع والسوق المستهدف ومستوى المنافسة وحجم المحتوى والدعم التقني المطلوب.</p>
+          <p>بعد مراجعة الموقع نحدد نطاق العمل والأولويات والتكلفة المناسبة بوضوح، بدل وضع باقة ثابتة لا تناسب احتياج المشروع.
+          <?php if ( $pricing_url ) : ?>
+            <a href="<?php echo esc_url( $pricing_url ); ?>" class="ss-faq-link">تفاصيل التكلفة والنطاق</a>
+          <?php endif; ?>
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /faq-list -->
+  </div><!-- /sh -->
+</section>
+
+<!-- ═══════════════════════════════════════════════════════
+     13. CTA + INLINE FORM
+═══════════════════════════════════════════════════════ -->
+<section class="sec-navy ss-cta-section" id="seoSvcFormWrap">
+  <div class="sh">
+    <div class="ss-form-grid">
+
+      <!-- Intro -->
+      <div class="ss-form-intro">
+        <h2 class="h2 h2-light">لنبدأ بمراجعة موقعك وتحديد الفرصة الأقرب</h2>
+        <p class="ss-form-intro-p">أرسل لنا رابط الموقع والخدمة أو السوق الذي تريد التركيز عليه. سنراجع الوضع الحالي ونوضح لك أين توجد الأولويات وما نطاق العمل المناسب قبل بدء المشروع.</p>
+        <p class="ss-form-intro-p">لا نرسل عرضًا عامًا قبل فهم الموقع؛ لأن حجم الصفحات والمنافسة وسرعة التنفيذ المطلوبة هي ما تحدد الخطة والتكلفة.</p>
+        <?php
+        $wa_num = sh_option( 'whatsapp_number' );
+        if ( $wa_num ) :
+          $wa_clean = preg_replace( '/\D/', '', $wa_num );
+        ?>
+        <a
+          href="https://wa.me/<?php echo esc_attr( $wa_clean ); ?>?text=<?php echo rawurlencode( 'مرحبًا، أريد مراجعة موقعي' ); ?>"
+          class="ss-wa-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.862L.057 23.515a.5.5 0 00.614.618l5.77-1.514A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 01-5.007-1.374l-.36-.213-3.727.977.997-3.642-.234-.374A9.789 9.789 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+          تواصل معنا عبر واتساب
+        </a>
+        <?php endif; ?>
+      </div>
+
+      <!-- Form -->
+      <div class="ss-form-col">
+        <div id="seoSvcWrap">
+          <form id="seoSvcForm" class="sh-form" novalidate>
+            <input type="hidden" id="seoSvcAjaxUrl" value="<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>">
+            <input type="hidden" id="seoSvcNonce"   value="<?php echo esc_attr( wp_create_nonce( 'seohouse_nonce' ) ); ?>">
+
+            <div class="form-row">
+              <label for="seoSvcName" class="form-label">الاسم <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="seoSvcName" name="name" class="form-input" required autocomplete="name" placeholder="اسمك الكريم">
+            </div>
+
+            <div class="form-row">
+              <label for="seoSvcCompany" class="form-label">اسم الشركة</label>
+              <input type="text" id="seoSvcCompany" name="company" class="form-input" autocomplete="organization" placeholder="اسم شركتك أو نشاطك">
+            </div>
+
+            <div class="form-row">
+              <label for="seoSvcPhone" class="form-label">رقم الهاتف أو واتساب <span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="seoSvcPhone" name="phone" class="form-input" required autocomplete="tel" placeholder="+966 5x xxx xxxx" dir="ltr">
+            </div>
+
+            <div class="form-row">
+              <label for="seoSvcEmail" class="form-label">البريد الإلكتروني</label>
+              <input type="email" id="seoSvcEmail" name="email" class="form-input" autocomplete="email" placeholder="email@example.com" dir="ltr">
+            </div>
+
+            <div class="form-row">
+              <label for="seoSvcSite" class="form-label">رابط الموقع <span class="req" aria-hidden="true">*</span></label>
+              <input type="url" id="seoSvcSite" name="website" class="form-input" required autocomplete="url" placeholder="https://yoursite.com" dir="ltr">
+            </div>
+
+            <div class="form-row">
+              <label for="seoSvcMarket" class="form-label">السوق المستهدف</label>
+              <input type="text" id="seoSvcMarket" name="target_market" class="form-input" placeholder="مثال: المملكة العربية السعودية — قطاع العقارات">
+            </div>
+
+            <div class="form-row">
+              <label for="seoSvcMsg" class="form-label">الهدف الأساسي أو رسالة مختصرة</label>
+              <textarea id="seoSvcMsg" name="message" class="form-input" rows="3" placeholder="ما الذي تريد تحسينه أو ما التحدي الأساسي الذي تواجهه؟"></textarea>
+            </div>
+
+            <div id="seoSvcError" class="form-error" aria-live="polite" hidden></div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="seoSvcSubmit">
+              <span class="btn-label">اطلب مراجعة موقعك</span>
+              <span class="btn-spinner" aria-hidden="true" hidden></span>
+            </button>
+          </form>
+        </div>
+
+        <div id="seoSvcSuccess" class="form-success" hidden role="alert">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" stroke="var(--blue)" stroke-width="2"/><path d="M12 20l6 6 10-12" stroke="var(--blue)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="form-success-title">تم الإرسال بنجاح</p>
+          <p class="form-success-msg">سنراجع موقعك ونتواصل معك خلال يوم عمل.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</div><!-- /svc-seo -->
+
+<script>
+(function () {
+  // ── Scope accordion ──────────────────────────────────────────────────
+  var list = document.getElementById('ssScopeList');
+  if (list) {
+    list.addEventListener('click', function (e) {
+      var btn = e.target.closest('.ss-scope-btn');
+      if (!btn) return;
+      var item   = btn.closest('.ss-scope-item');
+      var isOpen = item.classList.contains('open');
+      // close all
+      list.querySelectorAll('.ss-scope-item.open').forEach(function (el) {
+        el.classList.remove('open');
+        el.querySelector('.ss-scope-btn').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  }
+
+  // ── FAQ aria-expanded sync (main.js toggles .open on .faq-item) ─────
+  var faqList = document.getElementById('svcSeoFaq');
+  if (faqList && typeof MutationObserver !== 'undefined') {
+    var obs = new MutationObserver(function (muts) {
+      muts.forEach(function (m) {
+        if (m.attributeName !== 'class') return;
+        var item = m.target;
+        var btn  = item.querySelector('.faq-q');
+        if (btn) btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
+      });
+    });
+    faqList.querySelectorAll('.faq-item').forEach(function (el) {
+      obs.observe(el, { attributes: true });
+    });
+  }
+
+  // ── Contact form ─────────────────────────────────────────────────────
+  var form    = document.getElementById('seoSvcForm');
+  var wrap    = document.getElementById('seoSvcWrap');
+  var success = document.getElementById('seoSvcSuccess');
+  var errBox  = document.getElementById('seoSvcError');
+  var submit  = document.getElementById('seoSvcSubmit');
+
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    errBox.hidden = true;
+
+    var ajaxUrl = document.getElementById('seoSvcAjaxUrl').value;
+    var nonce   = document.getElementById('seoSvcNonce').value;
+
+    var company = (form.querySelector('#seoSvcCompany').value || '').trim();
+    var market  = (form.querySelector('#seoSvcMarket').value  || '').trim();
+    var baseMsg = (form.querySelector('#seoSvcMsg').value     || '').trim();
+
+    var prefixParts = [];
+    if (company) prefixParts.push('الشركة: ' + company);
+    if (market)  prefixParts.push('السوق المستهدف: ' + market);
+    var fullMsg = prefixParts.length
+      ? prefixParts.join(' | ') + (baseMsg ? '\n\n' + baseMsg : '')
+      : baseMsg;
+
+    var data = new FormData();
+    data.append('action',  'sh_contact');
+    data.append('nonce',   nonce);
+    data.append('name',    form.querySelector('#seoSvcName').value.trim());
+    data.append('phone',   form.querySelector('#seoSvcPhone').value.trim());
+    data.append('email',   form.querySelector('#seoSvcEmail').value.trim());
+    data.append('website', form.querySelector('#seoSvcSite').value.trim());
+    data.append('message', fullMsg);
+    data.append('source',  'seo-service');
+
+    var label   = submit.querySelector('.btn-label');
+    var spinner = submit.querySelector('.btn-spinner');
+    submit.disabled = true;
+    if (label)   label.hidden   = true;
+    if (spinner) spinner.hidden = false;
+
+    fetch(ajaxUrl, { method: 'POST', body: data })
+      .then(function (r) { return r.json(); })
+      .then(function (json) {
+        if (json && json.success) {
+          wrap.hidden    = true;
+          success.hidden = false;
+        } else {
+          var msg = (json && json.data) ? json.data : 'حدث خطأ، يرجى المحاولة مرة أخرى.';
+          errBox.textContent = msg;
+          errBox.hidden = false;
+          submit.disabled = false;
+          if (label)   label.hidden   = false;
+          if (spinner) spinner.hidden = true;
+        }
+      })
+      .catch(function () {
+        errBox.textContent = 'حدث خطأ في الاتصال، يرجى المحاولة مرة أخرى.';
+        errBox.hidden = false;
+        submit.disabled = false;
+        if (label)   label.hidden   = false;
+        if (spinner) spinner.hidden = true;
+      });
+  });
+}());
+</script>
 
 <?php get_footer(); ?>
