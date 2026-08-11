@@ -55,9 +55,9 @@ add_action( 'wp_enqueue_scripts', function () {
     );
 }, 10 );
 
-// SEO Service page — page-specific stylesheet (loaded only on this template)
+// SEO Service V2 Preview — page-specific stylesheet (V2 template only)
 add_action( 'wp_enqueue_scripts', function () {
-    if ( ! is_page_template( 'templates/template-service-seo.php' ) ) return;
+    if ( ! is_page_template( 'templates/template-service-seo-v2.php' ) ) return;
     wp_enqueue_style(
         'seohouse-service-seo',
         get_template_directory_uri() . '/assets/css/service-seo.css',

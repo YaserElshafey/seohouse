@@ -1,5 +1,6 @@
 /* ─────────────────────────────────────────────────────────────────
-   Service — SEO Main  (template-service-seo.php)
+   Service — SEO V2 Preview  (template-service-seo-v2.php)
+   Loaded exclusively on the V2 template via enqueue.php.
    All selectors scoped under .svc-seo to prevent bleed.
    ───────────────────────────────────────────────────────────────── */
 
@@ -819,3 +820,10 @@
   .svc-seo .ss-scope-inner { padding-inline-start: 22px; }
   .svc-seo .ss-hero-stat-badge { bottom: -12px; inset-inline-start: -4px; min-width: 150px; }
 }
+
+/* ── FAQ icon flex fix (scoped to this page only) ────────────────────────────
+   shared.css applies flex:1 to all .faq-q span children including .faq-icon.
+   This override prevents the icon from expanding beyond its defined 26×26 size,
+   which would cause it to render as a large diagonal slash when rotated 45°.   */
+.svc-seo .faq-q span:not(.faq-icon) { flex: 1; }
+.svc-seo .faq-icon { flex: none; }
