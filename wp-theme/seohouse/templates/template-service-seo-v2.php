@@ -80,30 +80,45 @@ get_header();
   <!-- ══════════════════════════════════════════════════════════
        2. CLIENT LOGOS
   ══════════════════════════════════════════════════════════ -->
-  <?php $clients = sh_get_clients(); if ( ! empty( $clients ) ) : ?>
+  <?php
+  // Build client items using the correct WP_Query loop (sh_get_clients returns WP_Query, not array)
+  $cl_query = sh_get_clients();
+  $cl_items = [];
+  if ( $cl_query->have_posts() ) {
+      while ( $cl_query->have_posts() ) {
+          $cl_query->the_post();
+          $logo = sh_field( 'client_logo' );
+          $url  = sh_field( 'client_url' );
+          $cl_items[] = [
+              'title'   => get_the_title(),
+              'img_url' => ! empty( $logo['url'] ) ? $logo['url'] : '',
+              'url'     => $url,
+          ];
+      }
+      wp_reset_postdata();
+  }
+  // 4 copies keeps one copy's width filling the viewport at every animation point
+  $cl_display = array_merge( $cl_items, $cl_items, $cl_items, $cl_items );
+  ?>
+  <?php if ( ! empty( $cl_items ) ) : ?>
   <section class="ss-clients">
     <div class="wrap">
       <p class="ss-clients-label">جهات وثقت في SEO House</p>
     </div>
     <div class="cl-marquee-outer">
       <div class="cl-marquee-track">
-        <?php foreach ( $clients as $cl ) : ?>
-          <div class="cl-item">
-            <?php if ( ! empty( $cl['logo'] ) ) : ?>
-              <img src="<?php echo esc_url( $cl['logo'] ); ?>" alt="<?php echo esc_attr( $cl['name'] ?? '' ); ?>" loading="lazy">
+        <?php foreach ( $cl_display as $item ) :
+            $tag   = $item['url'] ? 'a' : 'div';
+            $attrs = $item['url'] ? 'href="' . esc_url( $item['url'] ) . '" target="_blank" rel="noopener"' : '';
+            $extra = $item['img_url'] ? '' : ' cl-ph-txt';
+        ?>
+          <<?php echo $tag; ?> <?php echo $attrs; ?> class="cl-item<?php echo $extra; ?>" title="<?php echo esc_attr( $item['title'] ); ?>">
+            <?php if ( $item['img_url'] ) : ?>
+              <img src="<?php echo esc_url( $item['img_url'] ); ?>" alt="<?php echo esc_attr( $item['title'] ); ?>" loading="lazy">
             <?php else : ?>
-              <span><?php echo esc_html( $cl['name'] ?? '' ); ?></span>
+              <?php echo esc_html( $item['title'] ); ?>
             <?php endif; ?>
-          </div>
-        <?php endforeach; ?>
-        <?php foreach ( $clients as $cl ) : ?>
-          <div class="cl-item" aria-hidden="true">
-            <?php if ( ! empty( $cl['logo'] ) ) : ?>
-              <img src="<?php echo esc_url( $cl['logo'] ); ?>" alt="" loading="lazy">
-            <?php else : ?>
-              <span><?php echo esc_html( $cl['name'] ?? '' ); ?></span>
-            <?php endif; ?>
-          </div>
+          </<?php echo $tag; ?>>
         <?php endforeach; ?>
       </div>
     </div>
