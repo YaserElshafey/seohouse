@@ -30,18 +30,15 @@ $cs1_market = '';
 $cs2_sector = '';
 $cs2_period = '';
 
-$cs3_sector = '';
-$cs3_period = '';
-
 $cs4_sector = '';
 $cs4_period = '';
 
 // ── Image asset paths ─────────────────────────────────────────────────
-$img_dir = get_template_directory_uri() . '/assets/images/seo-service/';
+// Three verified results only. GA4 card removed until original file available.
+$img_dir  = get_template_directory_uri() . '/assets/images/seo-service/';
 $img_hero = $img_dir . '01-hero-seohouse-office.png';
 $img_cs1  = $img_dir . '02-case-organic-revenue-106274.png';
 $img_cs2  = $img_dir . '03-case-gsc-clicks-12900.png';
-$img_cs3  = $img_dir . '04-case-ga4-revenue-growth-253.png';
 $img_cs4  = $img_dir . '05-case-organic-ranking-law-firm-number-1.png';
 
 get_header();
@@ -311,30 +308,6 @@ get_header();
               <div class="ss-bento-tags">
                 <?php if ( $cs2_sector ) : ?><span><?php echo esc_html( $cs2_sector ); ?></span><?php endif; ?>
                 <?php if ( $cs2_period ) : ?><span><?php echo esc_html( $cs2_period ); ?></span><?php endif; ?>
-              </div>
-              <?php endif; ?>
-            </div>
-          </div><!-- /.ss-bento-card -->
-
-          <div class="ss-bento-card">
-            <div class="ss-bento-img-wrap ss-bento-img-sm">
-              <img
-                src="<?php echo esc_url( $img_cs3 ); ?>"
-                alt="GA4 يُظهر نمو الإيرادات من البحث العضوي (Organic Search) من SAR 4,089 إلى SAR 14,436 بنسبة +253%"
-                loading="lazy"
-              >
-            </div>
-            <div class="ss-bento-info">
-              <div class="ss-metric" dir="ltr">
-                <span class="ss-metric-from">4,089</span>
-                <span class="ss-metric-arrow">→</span>
-                <span class="ss-metric-to">14,436 SAR</span>
-              </div>
-              <p class="ss-bento-desc">نمو إيرادات GA4 (Organic Search) <strong dir="ltr">+253%</strong></p>
-              <?php if ( $cs3_sector || $cs3_period ) : ?>
-              <div class="ss-bento-tags">
-                <?php if ( $cs3_sector ) : ?><span><?php echo esc_html( $cs3_sector ); ?></span><?php endif; ?>
-                <?php if ( $cs3_period ) : ?><span><?php echo esc_html( $cs3_period ); ?></span><?php endif; ?>
               </div>
               <?php endif; ?>
             </div>

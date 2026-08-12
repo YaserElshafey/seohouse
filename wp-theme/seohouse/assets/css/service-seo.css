@@ -285,9 +285,9 @@
 .svc-seo .ss-bento-feat .ss-bento-img-wrap img {
   max-height: 360px;
 }
-/* Side card images */
+/* Side card images — two cards, so each gets more vertical room */
 .svc-seo .ss-bento-img-sm img {
-  max-height: 180px;
+  max-height: 220px;
 }
 /* Info sections */
 .svc-seo .ss-bento-info {
