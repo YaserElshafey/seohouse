@@ -320,17 +320,17 @@ get_header();
             <div class="ss-bento-img-wrap ss-bento-img-sm">
               <img
                 src="<?php echo esc_url( $img_cs3 ); ?>"
-                alt="GA4 يُظهر نمو إيرادات البحث العضوي من 4,088 ريال إلى 14,435 ريال بنسبة +253%"
+                alt="GA4 يُظهر نمو الإيرادات من البحث العضوي (Organic Search) من SAR 4,089 إلى SAR 14,436 بنسبة +253%"
                 loading="lazy"
               >
             </div>
             <div class="ss-bento-info">
               <div class="ss-metric" dir="ltr">
-                <span class="ss-metric-from">SAR 4,088</span>
+                <span class="ss-metric-from">4,089</span>
                 <span class="ss-metric-arrow">→</span>
-                <span class="ss-metric-to">SAR 14,435</span>
+                <span class="ss-metric-to">14,436 SAR</span>
               </div>
-              <p class="ss-bento-desc">نمو إيرادات البحث العضوي <strong dir="ltr">+253%</strong></p>
+              <p class="ss-bento-desc">نمو إيرادات GA4 (Organic Search) <strong dir="ltr">+253%</strong></p>
               <?php if ( $cs3_sector || $cs3_period ) : ?>
               <div class="ss-bento-tags">
                 <?php if ( $cs3_sector ) : ?><span><?php echo esc_html( $cs3_sector ); ?></span><?php endif; ?>
