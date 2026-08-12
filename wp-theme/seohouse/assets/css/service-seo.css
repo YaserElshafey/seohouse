@@ -1,144 +1,94 @@
 /* =============================================================
-   service-seo.css — SEO Service V2 Preview
-   ALL selectors are scoped under .svc-seo
-   Do NOT edit shared.css or theme.css for V2-specific styles
+   service-seo.css — SEO Service V2
+   All selectors scoped under .svc-seo — do not touch theme.css,
+   shared.css, or front-page.php for these styles.
    ============================================================= */
 
-/* ── Reset / base ─────────────────────────────────────────── */
 .svc-seo * { box-sizing: border-box; }
 .svc-seo img { max-width: 100%; height: auto; display: block; }
 
 /* ═══════════════════════════════════════════════════════════
-   1. HERO
+   1. HERO — compact, copy-first
 ═══════════════════════════════════════════════════════════ */
 .svc-seo .ss-hero {
   background: linear-gradient(160deg, var(--navy) 0%, #0d1a4a 55%, #131f5c 100%);
-  padding-block: clamp(72px, 10vh, 110px) clamp(60px, 8vh, 90px);
+  padding-block: clamp(56px, 7vh, 88px) clamp(48px, 6vh, 72px);
   position: relative;
   overflow: hidden;
 }
 .svc-seo .ss-hero::before {
   content: '';
   position: absolute;
-  inset-inline-end: -120px;
-  top: -120px;
-  width: 520px;
-  height: 520px;
+  inset-inline-end: -80px;
+  top: -80px;
+  width: 480px;
+  height: 480px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(30,46,245,.28), transparent 65%);
+  background: radial-gradient(circle, rgba(30,46,245,.22), transparent 65%);
   pointer-events: none;
 }
 .svc-seo .ss-hero-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 400px;
   gap: 52px;
   align-items: center;
-}
-.svc-seo .ss-eyebrow {
-  display: inline-block;
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.55);
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.12);
-  padding: 5px 14px;
-  border-radius: 50px;
-  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
 }
 .svc-seo .ss-h1 {
-  font-size: clamp(32px, 4.2vw, 54px);
+  font-size: clamp(28px, 3.6vw, 48px);
   font-weight: 900;
   color: #fff;
-  line-height: 1.15;
+  line-height: 1.18;
   letter-spacing: -.025em;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  text-wrap: balance;
 }
 .svc-seo .ss-hero-p {
-  font-size: clamp(14px, 1.5vw, 16px);
-  color: rgba(255,255,255,.65);
-  line-height: 1.85;
-  margin-bottom: 30px;
-  max-width: 520px;
+  font-family: 'Tajawal', 'IBM Plex Sans Arabic', sans-serif;
+  font-size: clamp(14px, 1.4vw, 16px);
+  color: rgba(255,255,255,.68);
+  line-height: 1.9;
+  margin-bottom: 28px;
+  max-width: 540px;
 }
 .svc-seo .ss-hero-btns {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
 }
-.svc-seo .ss-hero-visual {
+.svc-seo .ss-hero-btn-sec {
+  background: rgba(255,255,255,.1);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.2);
+  box-shadow: none;
+}
+.svc-seo .ss-hero-btn-sec:hover {
+  background: rgba(255,255,255,.18);
+}
+.svc-seo .ss-hero-img-frame {
   border-radius: var(--r3);
   overflow: hidden;
-  position: relative;
+  max-width: 420px;
+  width: 100%;
+  margin-inline: auto;
+  box-shadow: 0 24px 60px -12px rgba(0,0,0,.45);
 }
-.svc-seo .ss-hero-visual img {
+.svc-seo .ss-hero-img-frame img {
   width: 100%;
   height: auto;
-  border-radius: var(--r3);
+  display: block;
   object-fit: cover;
+  aspect-ratio: 4 / 3;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   2. CLIENT LOGOS
+   3. SEO SERVICES — featured + 3 prominent cards
 ═══════════════════════════════════════════════════════════ */
-.svc-seo .ss-clients {
-  padding-block: 28px 20px;
-  border-bottom: 1px solid var(--line);
-}
-.svc-seo .ss-clients-label {
-  text-align: center;
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 20px;
-}
-
-/* ═══════════════════════════════════════════════════════════
-   3. SEO SERVICES — 8-card grid
-═══════════════════════════════════════════════════════════ */
-.svc-seo .ss-svc-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-.svc-seo .ss-svc-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--r3);
-  padding: 22px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  position: relative;
-  overflow: hidden;
-  transition: box-shadow .25s var(--fast), border-color .25s, transform .25s var(--fast);
-}
-.svc-seo .ss-svc-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  inset-inline: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--blue-d, #1630f0), var(--blue));
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform .28s var(--fast);
-}
-.svc-seo .ss-svc-card:hover {
-  box-shadow: var(--sh-md);
-  border-color: transparent;
-  transform: translateY(-4px);
-}
-.svc-seo .ss-svc-card:hover::after {
-  transform: scaleX(1);
-}
 .svc-seo .ss-svc-ico {
-  width: 44px;
-  height: 44px;
-  border-radius: 11px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   background: var(--blue-50);
   display: flex;
   align-items: center;
@@ -146,78 +96,98 @@
   flex-shrink: 0;
   transition: background .22s;
 }
-.svc-seo .ss-svc-ico svg {
-  stroke: var(--blue);
-  transition: stroke .22s;
-}
-.svc-seo .ss-svc-card:hover .ss-svc-ico {
-  background: var(--blue);
-}
-.svc-seo .ss-svc-card:hover .ss-svc-ico svg {
-  stroke: #fff;
-}
-.svc-seo .ss-svc-h {
-  font-size: 15px;
-  font-weight: 800;
-  color: var(--ink);
-  line-height: 1.3;
-  letter-spacing: -.01em;
-  margin: 0;
-}
-.svc-seo .ss-svc-p {
-  font-size: 12.5px;
-  color: var(--muted);
-  line-height: 1.72;
-  margin: 0;
-  flex: 1;
-}
+.svc-seo .ss-svc-ico svg { stroke: var(--blue); transition: stroke .22s; }
 
-/* ═══════════════════════════════════════════════════════════
-   4. TARGET MARKETS
-═══════════════════════════════════════════════════════════ */
-.svc-seo .ss-markets-grid {
+/* Featured area */
+.svc-seo .ss-svc-feat {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-inline-start: 4px solid var(--blue);
+  border-radius: var(--r3);
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.svc-seo .ss-svc-feat-body {
+  flex: 1;
+  min-width: 0;
+}
+.svc-seo .ss-svc-feat-h {
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--ink);
+  margin-bottom: 8px;
+  letter-spacing: -.018em;
+}
+.svc-seo .ss-svc-feat-p {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.78;
+  margin: 0 0 16px;
+}
+.svc-seo .ss-svc-support {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.svc-seo .ss-svc-support span {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--blue);
+  background: var(--blue-50);
+  border: 1px solid var(--blue-100);
+  border-radius: 20px;
+  padding: 4px 12px;
+}
+.svc-seo .ss-svc-feat-cta { flex-shrink: 0; align-self: center; white-space: nowrap; }
+
+/* Three cards grid */
+.svc-seo .ss-svc3-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-.svc-seo .ss-market-card {
-  background: var(--surface, #f8f9fb);
+.svc-seo .ss-svc3-card {
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--r3);
-  padding: 28px 24px;
+  padding: 26px 22px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  transition: box-shadow .25s var(--fast), transform .25s var(--fast);
+  transition: box-shadow .25s var(--fast), border-color .25s, transform .25s var(--fast);
 }
-.svc-seo .ss-market-card:hover {
+.svc-seo .ss-svc3-card:hover {
   box-shadow: var(--sh-md);
+  border-color: rgba(30,46,245,.18);
   transform: translateY(-3px);
 }
-.svc-seo .ss-market-flag {
-  font-size: 30px;
-  line-height: 1;
+.svc-seo .ss-svc3-card:hover .ss-svc-ico {
+  background: var(--blue);
 }
-.svc-seo .ss-market-body {
-  flex: 1;
-}
-.svc-seo .ss-market-h {
-  font-size: 17px;
+.svc-seo .ss-svc3-card:hover .ss-svc-ico svg { stroke: #fff; }
+.svc-seo .ss-svc3-h {
+  font-size: 16px;
   font-weight: 800;
   color: var(--ink);
-  margin-bottom: 8px;
-  letter-spacing: -.01em;
-}
-.svc-seo .ss-market-p {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.78;
+  line-height: 1.3;
+  letter-spacing: -.012em;
   margin: 0;
 }
-.svc-seo .ss-market-cta {
+.svc-seo .ss-svc3-p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin: 0;
+  flex: 1;
+}
+.svc-seo .ss-svc3-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   font-size: 13px;
   font-weight: 700;
   color: var(--blue);
@@ -225,15 +195,60 @@
   margin-top: auto;
   transition: gap .18s;
 }
-.svc-seo .ss-market-cta:hover {
-  gap: 10px;
+.svc-seo .ss-svc3-link:hover { gap: 9px; }
+.svc-seo .ss-svc3-link svg { flex-shrink: 0; }
+
+/* ═══════════════════════════════════════════════════════════
+   4. TARGET MARKETS — navy, fully clickable
+═══════════════════════════════════════════════════════════ */
+.svc-seo .ss-markets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
-.svc-seo .ss-market-cta svg {
-  flex-shrink: 0;
+.svc-seo .ss-market-card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--r3);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-decoration: none;
+  cursor: default;
+  transition: background .22s, border-color .22s, transform .22s;
+}
+.svc-seo .ss-market-link {
+  cursor: pointer;
+}
+.svc-seo .ss-market-link:hover {
+  background: rgba(255,255,255,.09);
+  border-color: rgba(76,172,255,.35);
+  transform: translateY(-4px);
+}
+.svc-seo .ss-market-flag {
+  font-size: 36px;
+  line-height: 1;
+}
+.svc-seo .ss-market-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.3;
+  flex: 1;
+}
+.svc-seo .ss-market-arrow {
+  color: rgba(255,255,255,.45);
+  margin-top: auto;
+  transition: color .2s, transform .2s;
+}
+.svc-seo .ss-market-link:hover .ss-market-arrow {
+  color: #7b90ff;
+  transform: translateX(-4px);
 }
 
 /* ═══════════════════════════════════════════════════════════
-   5. RESULTS BENTO
+   5. RESULTS BENTO — 3 verified screenshots
 ═══════════════════════════════════════════════════════════ */
 .svc-seo .ss-bento {
   display: grid;
@@ -241,7 +256,6 @@
   gap: 16px;
   align-items: start;
 }
-/* Featured large card */
 .svc-seo .ss-bento-feat {
   background: #fff;
   border: 1px solid var(--line);
@@ -250,7 +264,6 @@
   display: flex;
   flex-direction: column;
 }
-/* Supporting cards column */
 .svc-seo .ss-bento-side {
   display: flex;
   flex-direction: column;
@@ -264,13 +277,13 @@
   display: flex;
   flex-direction: column;
 }
-/* Image wrappers */
 .svc-seo .ss-bento-img-wrap {
   background: var(--off);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  min-height: 160px;
 }
 .svc-seo .ss-bento-img-wrap img {
   width: 100%;
@@ -278,25 +291,11 @@
   object-fit: contain;
   display: block;
 }
-/* Featured image — taller */
-.svc-seo .ss-bento-feat .ss-bento-img-wrap {
-  min-height: 240px;
-}
-.svc-seo .ss-bento-feat .ss-bento-img-wrap img {
-  max-height: 360px;
-}
-/* Side card images — two cards, so each gets more vertical room */
-.svc-seo .ss-bento-img-sm img {
-  max-height: 220px;
-}
-/* Info sections */
-.svc-seo .ss-bento-info {
-  padding: 18px 20px;
-}
-.svc-seo .ss-bento-feat .ss-bento-info {
-  padding: 22px 24px;
-}
-/* Metric row — always LTR */
+.svc-seo .ss-bento-feat .ss-bento-img-wrap { min-height: 240px; }
+.svc-seo .ss-bento-feat .ss-bento-img-wrap img { max-height: 360px; }
+.svc-seo .ss-bento-img-sm img { max-height: 220px; }
+.svc-seo .ss-bento-info { padding: 18px 20px; }
+.svc-seo .ss-bento-feat .ss-bento-info { padding: 22px 24px; }
 .svc-seo .ss-metric {
   display: flex;
   align-items: center;
@@ -304,108 +303,73 @@
   flex-wrap: wrap;
   margin-bottom: 8px;
 }
-.svc-seo .ss-metric-from {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--muted);
-}
-.svc-seo .ss-metric-arrow {
-  font-size: 16px;
-  color: var(--muted);
-  font-weight: 300;
-}
-.svc-seo .ss-metric-to {
-  font-size: 18px;
-  font-weight: 900;
-  color: var(--blue);
-  letter-spacing: -.02em;
-}
+.svc-seo .ss-metric-from { font-size: 14px; font-weight: 700; color: var(--muted); }
+.svc-seo .ss-metric-arrow { font-size: 16px; color: var(--muted); font-weight: 300; }
+.svc-seo .ss-metric-to { font-size: 18px; font-weight: 900; color: var(--blue); letter-spacing: -.02em; }
 .svc-seo .ss-bento-feat .ss-metric-from { font-size: 16px; }
 .svc-seo .ss-bento-feat .ss-metric-to   { font-size: 24px; }
-/* Description line */
 .svc-seo .ss-bento-desc {
   font-size: 13px;
   font-weight: 600;
   color: var(--ink);
   line-height: 1.5;
-  margin: 0 0 8px;
-}
-.svc-seo .ss-bento-desc strong {
-  color: var(--green, #10b981);
-  font-weight: 800;
-}
-.svc-seo .ss-bento-ranking {
-  font-size: 13.5px;
-  line-height: 1.55;
-}
-/* Meta tags */
-.svc-seo .ss-bento-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 4px;
-}
-.svc-seo .ss-bento-tags span {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--muted);
-  background: var(--off);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 3px 10px;
+  margin: 0;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   6. WHY SEO HOUSE
+   6. WHY SEO HOUSE — navy, 2-column layout
 ═══════════════════════════════════════════════════════════ */
-.svc-seo .ss-why-grid {
+.svc-seo .ss-why-inner {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: 1fr 2fr;
+  gap: 64px;
+  align-items: start;
 }
-.svc-seo .ss-why-card {
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.1);
-  border-radius: var(--r3);
-  padding: 26px 22px;
+.svc-seo .ss-why-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,.6);
+  line-height: 1.75;
+  margin-top: 14px;
+}
+.svc-seo .ss-why-pts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 36px;
+}
+.svc-seo .ss-why-pt {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  transition: background .25s, border-color .25s;
-}
-.svc-seo .ss-why-card:hover {
-  background: rgba(255,255,255,.08);
-  border-color: rgba(255,255,255,.18);
+  align-items: flex-start;
+  gap: 14px;
 }
 .svc-seo .ss-why-ico {
-  width: 44px;
-  height: 44px;
-  border-radius: 11px;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
   background: rgba(30,46,245,.25);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  margin-top: 2px;
 }
-.svc-seo .ss-why-ico svg {
-  stroke: #7b90ff;
-}
+.svc-seo .ss-why-ico svg { stroke: #7b90ff; }
 .svc-seo .ss-why-h {
-  font-size: 15.5px;
+  display: block;
+  font-size: 14.5px;
   font-weight: 800;
   color: #fff;
+  margin-bottom: 5px;
   line-height: 1.3;
-  margin: 0;
 }
 .svc-seo .ss-why-p {
-  font-size: 13px;
-  color: rgba(255,255,255,.6);
-  line-height: 1.78;
+  font-size: 12.5px;
+  color: rgba(255,255,255,.58);
+  line-height: 1.75;
   margin: 0;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   7. HOW WE WORK — compact numbered steps
+   7. HOW WE WORK — compact 4-step timeline
 ═══════════════════════════════════════════════════════════ */
 .svc-seo .ss-steps {
   display: grid;
@@ -413,7 +377,6 @@
   gap: 0;
   position: relative;
 }
-/* Connector line between steps */
 .svc-seo .ss-steps::before {
   content: '';
   position: absolute;
@@ -421,7 +384,7 @@
   inset-inline-start: calc(12.5% + 16px);
   width: calc(75% - 32px);
   height: 1px;
-  background: linear-gradient(to left, rgba(30,46,245,.25), rgba(30,46,245,.06));
+  background: linear-gradient(to left, rgba(30,46,245,.2), rgba(30,46,245,.06));
   pointer-events: none;
 }
 .svc-seo .ss-step {
@@ -436,7 +399,7 @@
   height: 42px;
   border-radius: 50%;
   background: var(--blue-50);
-  border: 2px solid rgba(30,46,245,.25);
+  border: 2px solid rgba(30,46,245,.22);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -470,96 +433,65 @@
 }
 
 /* ═══════════════════════════════════════════════════════════
-   8. WHAT CLIENT RECEIVES — 4-card grid
+   8. DELIVERABLES — navy, 2-column checklist
 ═══════════════════════════════════════════════════════════ */
-.svc-seo .ss-deliv-grid {
+.svc-seo .ss-deliv-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 48px;
+  max-width: 900px;
+  margin-inline: auto;
 }
-.svc-seo .ss-deliv-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--r3);
-  padding: 24px 20px;
+.svc-seo .ss-deliv-item {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
   gap: 12px;
-  transition: box-shadow .25s var(--fast), transform .25s var(--fast);
-}
-.svc-seo .ss-deliv-card:hover {
-  box-shadow: var(--sh-md);
-  transform: translateY(-3px);
+  color: rgba(255,255,255,.82);
+  font-size: 14px;
+  line-height: 1.65;
 }
 .svc-seo .ss-deliv-ico {
-  width: 44px;
-  height: 44px;
-  border-radius: 11px;
-  background: var(--blue-50);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  stroke: #7b90ff;
   flex-shrink: 0;
-  transition: background .22s;
-}
-.svc-seo .ss-deliv-ico svg {
-  stroke: var(--blue);
-  transition: stroke .22s;
-}
-.svc-seo .ss-deliv-card:hover .ss-deliv-ico {
-  background: var(--blue);
-}
-.svc-seo .ss-deliv-card:hover .ss-deliv-ico svg {
-  stroke: #fff;
-}
-.svc-seo .ss-deliv-h {
-  font-size: 15px;
-  font-weight: 800;
-  color: var(--ink);
-  line-height: 1.3;
-  margin: 0;
-  letter-spacing: -.01em;
-}
-.svc-seo .ss-deliv-p {
-  font-size: 12.5px;
-  color: var(--muted);
-  line-height: 1.72;
-  margin: 0;
-  flex: 1;
+  margin-top: 3px;
+  width: 17px;
+  height: 17px;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   9. REVIEWS
+   9. REVIEWS — inherits .rev-plugin from theme
 ═══════════════════════════════════════════════════════════ */
-.svc-seo .ss-reviews-inner {
+.svc-seo .ss-reviews .rev-plugin {
   margin-top: -8px;
 }
 
 /* ═══════════════════════════════════════════════════════════
-   10. FAQ — scoped overrides
+   10. FAQ — scoped fixes for RTL icon alignment
 ═══════════════════════════════════════════════════════════ */
 .svc-seo .ss-faq-list {
-  max-width: 800px;
+  max-width: 820px;
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-/* Fix: faq-q text span should grow; icon should stay fixed */
-.svc-seo .faq-q span:not(.faq-icon) { flex: 1; }
+.svc-seo .faq-q span:not(.faq-icon) { flex: 1; text-align: right; }
 .svc-seo .faq-icon                  { flex: none; }
 
 /* ═══════════════════════════════════════════════════════════
-   11. FINAL CTA — navy + AJAX form
+   11. CTA — navy section with template-part form
 ═══════════════════════════════════════════════════════════ */
 .svc-seo .ss-cta-layout {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 56px;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 60px;
   align-items: start;
 }
 .svc-seo .ss-cta-h {
-  font-size: clamp(24px, 3vw, 36px);
+  font-size: clamp(26px, 3vw, 38px);
   font-weight: 900;
   color: #fff;
-  line-height: 1.2;
+  line-height: 1.18;
   letter-spacing: -.025em;
   margin-bottom: 14px;
 }
@@ -567,63 +499,40 @@
   font-size: 15px;
   color: rgba(255,255,255,.62);
   line-height: 1.8;
-  margin: 0;
+  margin: 0 0 24px;
 }
-/* Form card on navy bg */
-.svc-seo .ss-form-card {
-  background: #fff;
-  border-radius: var(--r3);
-  padding: 28px 28px;
-  box-shadow: 0 24px 60px -16px rgba(0,0,0,.4);
-}
-.svc-seo .ss-form-card label {
-  color: var(--ink);
-}
-/* Submit button */
-.svc-seo .ss-submit-btn {
-  width: 100%;
-  justify-content: center;
-}
-/* Form feedback */
-.svc-seo .ss-form-feedback {
-  min-height: 20px;
-  margin-top: 8px;
-  font-size: 13px;
-  text-align: center;
-}
-.svc-seo .ss-form-err {
-  color: #dc2626;
-}
-/* Success state */
-.svc-seo .ss-form-success {
+.svc-seo .ss-cta-pts {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+.svc-seo .ss-cta-pt {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 14px;
-  padding: 40px 20px;
-  text-align: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: rgba(255,255,255,.75);
 }
-.svc-seo .ss-form-success svg {
-  stroke: var(--green, #10b981);
-}
-.svc-seo .ss-form-success p {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--ink);
-  margin: 0;
+.svc-seo .ss-cta-pt svg { stroke: #7b90ff; flex-shrink: 0; }
+/* Override template part within the navy section */
+.svc-seo .ss-cta-form .con-form-col { gap: 0; }
+.svc-seo .ss-cta-form .form-card {
+  box-shadow: 0 28px 64px -16px rgba(0,0,0,.45);
 }
 
 /* ═══════════════════════════════════════════════════════════
    RESPONSIVE — Tablet ≤ 1100px
 ═══════════════════════════════════════════════════════════ */
 @media (max-width: 1100px) {
-  .svc-seo .ss-svc-grid     { grid-template-columns: repeat(2, 1fr); }
-  .svc-seo .ss-why-grid     { grid-template-columns: repeat(2, 1fr); }
+  .svc-seo .ss-hero-inner   { grid-template-columns: 1fr 340px; gap: 36px; }
+  .svc-seo .ss-svc3-grid    { grid-template-columns: repeat(3, 1fr); }
+  .svc-seo .ss-why-inner    { grid-template-columns: 1fr; gap: 36px; }
+  .svc-seo .ss-why-pts      { grid-template-columns: repeat(2, 1fr); }
   .svc-seo .ss-steps        { grid-template-columns: repeat(2, 1fr); gap: 32px; }
   .svc-seo .ss-steps::before{ display: none; }
-  .svc-seo .ss-deliv-grid   { grid-template-columns: repeat(2, 1fr); }
-  .svc-seo .ss-cta-layout   { grid-template-columns: 1fr; gap: 36px; }
+  .svc-seo .ss-deliv-list   { gap: 16px 32px; }
+  .svc-seo .ss-cta-layout   { grid-template-columns: 1fr; gap: 40px; }
   .svc-seo .ss-bento        { grid-template-columns: 1fr; }
 }
 
@@ -633,7 +542,10 @@
 @media (max-width: 860px) {
   .svc-seo .ss-hero-inner   { grid-template-columns: 1fr; gap: 32px; }
   .svc-seo .ss-hero-visual  { order: -1; }
-  .svc-seo .ss-hero-visual img { max-height: 280px; object-fit: cover; }
+  .svc-seo .ss-hero-img-frame { max-width: 360px; }
+  .svc-seo .ss-svc-feat     { flex-direction: column; gap: 16px; }
+  .svc-seo .ss-svc-feat-cta { align-self: flex-start; }
+  .svc-seo .ss-svc3-grid    { grid-template-columns: 1fr; }
   .svc-seo .ss-markets-grid { grid-template-columns: 1fr; gap: 14px; }
   .svc-seo .ss-bento-side   { gap: 14px; }
 }
@@ -642,33 +554,27 @@
    RESPONSIVE — Mobile ≤ 600px
 ═══════════════════════════════════════════════════════════ */
 @media (max-width: 600px) {
-  .svc-seo .ss-hero { padding-block: 60px 48px; }
-  .svc-seo .ss-h1   { font-size: clamp(28px, 8vw, 38px); }
-  .svc-seo .ss-hero-btns { flex-direction: column; }
+  .svc-seo .ss-hero         { padding-block: 52px 44px; }
+  .svc-seo .ss-h1           { font-size: clamp(26px, 7.5vw, 36px); }
+  .svc-seo .ss-hero-btns    { flex-direction: column; }
   .svc-seo .ss-hero-btns .btn { justify-content: center; }
 
-  .svc-seo .ss-svc-grid   { grid-template-columns: 1fr; }
-  .svc-seo .ss-why-grid   { grid-template-columns: 1fr; }
-  .svc-seo .ss-steps      { grid-template-columns: 1fr; gap: 24px; }
-  .svc-seo .ss-deliv-grid { grid-template-columns: 1fr; }
+  .svc-seo .ss-svc-feat     { padding: 20px 18px; }
+  .svc-seo .ss-svc3-grid    { grid-template-columns: 1fr; }
 
-  /* Steps: horizontal layout on mobile */
-  .svc-seo .ss-step {
-    flex-direction: row;
-    text-align: right;
-    align-items: flex-start;
-    gap: 16px;
-  }
-  .svc-seo .ss-step-num {
-    flex-shrink: 0;
-    margin-bottom: 0;
-  }
-  .svc-seo .ss-step-body {
-    flex: 1;
-  }
-
-  .svc-seo .ss-form-card  { padding: 20px 18px; }
   .svc-seo .ss-markets-grid { gap: 12px; }
+  .svc-seo .ss-market-card  { padding: 22px 20px; flex-direction: row; align-items: center; gap: 16px; }
+  .svc-seo .ss-market-flag  { font-size: 28px; }
+  .svc-seo .ss-market-name  { font-size: 15px; }
+  .svc-seo .ss-market-arrow { margin-top: 0; }
 
-  .svc-seo .ss-bento-feat .ss-bento-img-wrap { min-height: 160px; }
+  .svc-seo .ss-why-pts      { grid-template-columns: 1fr; }
+  .svc-seo .ss-steps        { grid-template-columns: 1fr; gap: 24px; }
+  .svc-seo .ss-step         { flex-direction: row; text-align: right; align-items: flex-start; }
+  .svc-seo .ss-step-num     { flex-shrink: 0; margin-bottom: 0; }
+  .svc-seo .ss-step-body    { flex: 1; }
+
+  .svc-seo .ss-deliv-list   { grid-template-columns: 1fr; }
+
+  .svc-seo .ss-bento-feat .ss-bento-img-wrap { min-height: 140px; }
 }
