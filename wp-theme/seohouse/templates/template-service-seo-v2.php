@@ -7,7 +7,7 @@
  */
 
 // ── Country landing page URLs — primary: ACF seo_market meta, fallback: slug ──
-$url_sa  = sh_market_permalink( 'saudi_arabia', 'services/seo/saudi-arabia' );
+$url_sa  = sh_market_permalink( 'saudi_arabia', 'services/seo/ksa' );
 $url_eg  = sh_market_permalink( 'egypt',        'services/seo/egypt' );
 $url_uae = sh_market_permalink( 'uae',          'services/seo/uae' );
 
