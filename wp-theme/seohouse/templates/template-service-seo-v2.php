@@ -445,7 +445,7 @@ get_header();
       ];
       foreach ( $faqs as $faq ) : ?>
       <div class="faq-item">
-        <button type="button" class="faq-q">
+        <button type="button" class="faq-q" aria-expanded="false">
           <span><?php echo esc_html( $faq['q'] ); ?></span>
           <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
         </button>
@@ -500,14 +500,5 @@ get_header();
 </section><!-- /.ss-cta -->
 
 </div><!-- /.svc-seo -->
-
-<script>
-// Close the auto-opened first FAQ item (main.js opens it by default)
-window.addEventListener('load', function () {
-  document.querySelectorAll('.svc-seo .faq-item').forEach(function (i) {
-    i.classList.remove('open');
-  });
-});
-</script>
 
 <?php get_footer(); ?>
