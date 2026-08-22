@@ -324,7 +324,7 @@
   gap: clamp(28px,4vw,60px);
   align-items: start;
 }
-.svc-seo-final .pil-intro { position: sticky; top: 96px; }
+.svc-seo-final .pil-side { position: sticky; top: 96px; }
 .svc-seo-final .pil-intro .num {
   font-size: 13px; font-weight: 800;
   color: var(--blue); letter-spacing: .1em; margin-bottom: 14px;
@@ -439,9 +439,9 @@
 .svc-seo-final .viz-flow .st .c svg { stroke: #a9b6ff; width: 18px; height: 18px; }
 .svc-seo-final .viz-flow .st small { font-size: 9.5px; color: rgba(255,255,255,.55); font-weight: 600; }
 .svc-seo-final .viz-flow .arw { color: rgba(255,255,255,.3); font-size: 12px; }
-.svc-seo-final .viz-net { display: grid; grid-template-columns: repeat(4,1fr); gap: 9px; }
+.svc-seo-final .viz-net { display: grid; grid-template-columns: repeat(4,48px); gap: 8px; justify-content: center; }
 .svc-seo-final .viz-node {
-  aspect-ratio: 1; border-radius: 11px;
+  width: 48px; height: 48px; border-radius: 11px;
   background: rgba(30,46,245,.24); border: 1.5px solid rgba(140,158,255,.6);
   display: flex; align-items: center; justify-content: center; position: relative;
 }
@@ -471,8 +471,10 @@
 .svc-seo-final .spec-strip p { font-size: 13px; color: var(--ink-2); }
 
 @media(max-width:860px) {
-  .svc-seo-final .pil-layout { grid-template-columns: 1fr; gap: 24px; }
-  .svc-seo-final .pil-intro { position: static; }
+  .svc-seo-final .pil-layout { display: flex; flex-direction: column; gap: 0; }
+  /* display:contents makes pil-side transparent — children join pil-layout flex flow */
+  .svc-seo-final .pil-side { display: contents; }
+  .svc-seo-final .pil-intro { padding-bottom: 20px; }
   .svc-seo-final .pil-count {
     position: sticky; top: 60px; z-index: 20;
     background: #fff;
@@ -483,8 +485,8 @@
   }
   .svc-seo-final .pil-count::-webkit-scrollbar { display: none; }
   .svc-seo-final .pil-count-item { min-width: max-content; flex-shrink: 0; min-height: 44px; }
-  .svc-seo-final .pil-scenes { margin-top: 8px; }
-  .svc-seo-final .scene { min-height: auto; padding: 22px; }
+  .svc-seo-final .pil-scenes { margin-top: 16px; }
+  .svc-seo-final .scene { min-height: auto; padding: 22px; scroll-margin-top: 130px; }
 }
 /* WP Admin Bar offsets (32px desktop, 46px at ≤600px) */
 html.admin-bar .svc-seo-final .pil-count { top: 92px; }
@@ -790,33 +792,6 @@ html.admin-bar .svc-seo-final .pil-count { top: 92px; }
 .svc-seo-final .faq-item.open .faq-q .ic svg { stroke: #fff; }
 .svc-seo-final .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s var(--ease); }
 .svc-seo-final .faq-a p { padding: 0 20px 20px; font-size: 13.5px; line-height: 1.85; color: var(--ink-2); }
-
-/* ══ CTA FINAL ══ */
-.svc-seo-final .cta-final {
-  background: linear-gradient(150deg,var(--navy),var(--navy-3));
-  border-radius: 0; padding: clamp(48px,6vw,80px) 0;
-  position: relative; overflow: hidden;
-}
-.svc-seo-final .cta-final::before {
-  content: ''; position: absolute;
-  inset-inline-end: -100px; top: -100px;
-  width: 400px; height: 400px; border-radius: 50%;
-  background: radial-gradient(circle,rgba(30,46,245,.34),transparent 66%);
-  filter: blur(60px);
-}
-.svc-seo-final .cta-grid {
-  position: relative; z-index: 1;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: clamp(32px,4vw,56px); align-items: start;
-}
-.svc-seo-final .cta-text { display: flex; flex-direction: column; }
-.svc-seo-final .cta-final h2 { color: #fff; margin-bottom: 14px; }
-.svc-seo-final .cta-text p { font-size: 15px; color: rgba(255,255,255,.62); line-height: 1.8; margin-bottom: 30px; }
-.svc-seo-final .cta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-@media(max-width:860px) {
-  .svc-seo-final .cta-grid { grid-template-columns: 1fr; gap: 32px; }
-  .svc-seo-final .cta-btns { justify-content: center; }
-}
 
 /* ══ LIGHTBOX ══ */
 .sf-lb {

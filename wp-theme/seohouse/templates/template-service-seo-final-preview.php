@@ -18,6 +18,7 @@ $content_url  = sh_safe_url( 'services/content' );
 $backlinks_url = sh_safe_url( 'services/backlinks' );
 $consulting_url = sh_safe_url( 'services/consulting' );
 $stores_url   = sh_safe_url( 'services/seo/stores-seo' );
+$results_url  = sh_page_url( 'results' );
 $sec_ecom     = sh_safe_url( 'sectors/ecommerce' ) ?: home_url( '/sectors/ecommerce/' );
 $sec_health   = sh_safe_url( 'sectors/health' ) ?: home_url( '/sectors/health/' );
 $sec_edu      = sh_safe_url( 'sectors/education' ) ?: home_url( '/sectors/education/' );
@@ -175,10 +176,12 @@ function sf_strip_col( array $items ): void {
 <section id="pillars" class="sf-sec">
   <div class="sf-wrap">
     <div class="pil-layout">
-      <div class="pil-intro">
-        <div class="num">خدمات السيو</div>
-        <h2 class="sf-h2">خمس خدمات تدفع نمو موقعك من البحث</h2>
-        <p class="sf-bod" style="margin-top:14px">من تهيئة الموقع تقنيًا إلى بناء المحتوى والسلطة وقياس الأداء — كل جزء له دور واضح في النتيجة، ويعمل مع البقية كمنظومة واحدة.</p>
+      <aside class="pil-side">
+        <div class="pil-intro">
+          <div class="num">خدمات السيو</div>
+          <h2 class="sf-h2">خمس خدمات تدفع نمو موقعك من البحث</h2>
+          <p class="sf-bod" style="margin-top:14px">من تهيئة الموقع تقنيًا إلى بناء المحتوى والسلطة وقياس الأداء — كل جزء له دور واضح في النتيجة، ويعمل مع البقية كمنظومة واحدة.</p>
+        </div>
         <div class="pil-count" id="pilCount">
           <div class="pil-count-item active" data-i="0"><span class="n">١</span><span>السيو التقني</span></div>
           <div class="pil-count-item" data-i="1"><span class="n">٢</span><span>السيو الداخلي</span></div>
@@ -186,7 +189,7 @@ function sf_strip_col( array $items ): void {
           <div class="pil-count-item" data-i="3"><span class="n">٤</span><span>السيو الخارجي</span></div>
           <div class="pil-count-item" data-i="4"><span class="n">٥</span><span>الاستشارات وتحليل الأداء</span></div>
         </div>
-      </div>
+      </aside>
       <div class="pil-scenes">
         <!-- Technical SEO -->
         <div class="scene" id="scene0" data-i="0">
@@ -632,28 +635,6 @@ function sf_strip_col( array $items ): void {
   </div>
 </section><!-- /#faq -->
 
-<!-- ══ CTA FINAL ══ -->
-<div class="cta-final">
-  <div class="sf-wrap">
-    <div class="cta-grid">
-      <div class="cta-text">
-        <h2 class="sf-h2 wh">لنبدأ بمراجعة موقعك</h2>
-        <p>احجز استشارة مجانية — نحلّل وضعك الحالي، نكشف الفرص، ونضع معك أولويات التنفيذ. بدون التزام.</p>
-        <div class="cta-btns">
-          <a href="<?php echo esc_url( $contact_url ); ?>" class="sf-btn sf-btn-w lg">اطلب مراجعة موقعك</a>
-          <a href="<?php echo esc_url( $contact_url ); ?>" class="sf-btn sf-btn-gh lg">تواصل معنا</a>
-        </div>
-      </div>
-      <div class="cta-form">
-        <?php get_template_part( 'template-parts/layout/contact-form', null, [
-            'form_title' => 'احجز استشارتك المجانية',
-            'form_sub'   => 'أرسل طلبك وسنتواصل معك خلال 24 ساعة.',
-        ] ); ?>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Lightbox -->
 <div id="sfLb" class="sf-lb" role="dialog" aria-modal="true" aria-label="عرض الصورة">
   <button class="sf-lb-x" aria-label="إغلاق">×</button>
@@ -661,5 +642,17 @@ function sf_strip_col( array $items ): void {
 </div>
 
 </main><!-- /.svc-seo-final -->
+
+<?php
+get_template_part( 'template-parts/layout/cta-banner', null, [
+    'tag'         => 'ابدأ الآن',
+    'title'       => 'ابدأ بكسب عملاء يبحثون عنك فعلاً',
+    'description' => 'احجز استشارة مجانية لنراجع وضع موقعك، ونوضح لك الفرص وأولويات التنفيذ.',
+    'buttons'     => [
+        [ 'text' => 'احجز استشارة مجانية', 'url' => $contact_url,            'class' => 'btn-w lg' ],
+        [ 'text' => 'تعرّف على نتائجنا',    'url' => sh_page_url( 'results' ), 'class' => 'btn-g lg' ],
+    ],
+] );
+?>
 
 <?php get_footer(); ?>
