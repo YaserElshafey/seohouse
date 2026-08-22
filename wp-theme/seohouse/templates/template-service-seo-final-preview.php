@@ -18,9 +18,9 @@ $content_url  = sh_safe_url( 'services/content' );
 $backlinks_url = sh_safe_url( 'services/backlinks' );
 $consulting_url = sh_safe_url( 'services/consulting' );
 $stores_url   = sh_safe_url( 'services/seo/stores-seo' );
-$mkt_sa       = sh_market_permalink( 'sa', 'services/seo/sa' );
-$mkt_eg       = sh_market_permalink( 'eg', 'services/seo/eg' );
-$mkt_ae       = sh_market_permalink( 'ae', 'services/seo/ae' );
+$mkt_sa       = sh_market_permalink( 'saudi_arabia', 'services/seo/ksa' ) ?: home_url( '/services/seo/ksa/' );
+$mkt_eg       = sh_market_permalink( 'egypt', 'services/seo/egypt' ) ?: home_url( '/services/seo/egypt/' );
+$mkt_ae       = sh_market_permalink( 'uae', 'services/seo/uae' ) ?: home_url( '/services/seo/uae/' );
 
 // ── Evidence images ───────────────────────────────────────────────────
 $img_base     = get_template_directory_uri() . '/assets/images/seo-service/';
@@ -72,16 +72,19 @@ if ( empty( $col1 ) ) {
     ];
 }
 
-// Helper: render strip items (duplicated for seamless scroll)
+// Helper: render two .strip-set groups for seamless CSS scroll loop
 function sf_strip_col( array $items ): void {
-    $all = array_merge( $items, $items );
-    foreach ( $all as $m ) {
-        echo '<div class="strip-ph">';
-        if ( ! empty( $m['thumb'] ) ) {
-            echo '<img src="' . esc_url( $m['thumb'] ) . '" alt="' . esc_attr( $m['name'] ) . '" loading="lazy">';
-        } else {
-            echo '<div class="strip-initials" style="background:' . esc_attr( $m['color'] ) . '">';
-            echo '<span>' . esc_html( $m['initials'] ) . '</span>';
+    for ( $s = 0; $s < 2; $s++ ) {
+        echo '<div class="strip-set"' . ( $s > 0 ? ' aria-hidden="true"' : '' ) . '>';
+        foreach ( $items as $m ) {
+            echo '<div class="strip-ph">';
+            if ( ! empty( $m['thumb'] ) ) {
+                echo '<img src="' . esc_url( $m['thumb'] ) . '" alt="' . esc_attr( $m['name'] ) . '" loading="lazy">';
+            } else {
+                echo '<div class="strip-initials" style="background:' . esc_attr( $m['color'] ) . '">';
+                echo '<span>' . esc_html( $m['initials'] ) . '</span>';
+                echo '</div>';
+            }
             echo '</div>';
         }
         echo '</div>';
@@ -169,12 +172,12 @@ function sf_strip_col( array $items ): void {
         <div class="num">خدمات السيو</div>
         <h2 class="sf-h2">خمس خدمات تدفع نمو موقعك من البحث</h2>
         <p class="sf-bod" style="margin-top:14px">من تهيئة الموقع تقنيًا إلى بناء المحتوى والسلطة وقياس الأداء — كل جزء له دور واضح في النتيجة، ويعمل مع البقية كمنظومة واحدة.</p>
-        <div class="pil-count" id="pilCount">
-          <div class="pil-count-item" data-i="0"><span class="n">١</span><span>السيو التقني</span></div>
-          <div class="pil-count-item" data-i="1"><span class="n">٢</span><span>السيو الداخلي</span></div>
-          <div class="pil-count-item" data-i="2"><span class="n">٣</span><span>كتابة المحتوى</span></div>
-          <div class="pil-count-item" data-i="3"><span class="n">٤</span><span>السيو الخارجي</span></div>
-          <div class="pil-count-item" data-i="4"><span class="n">٥</span><span>الاستشارات وتحليل الأداء</span></div>
+        <div class="pil-count" id="pilCount" role="tablist" aria-label="خدمات السيو">
+          <div class="pil-count-item active" role="tab" aria-selected="true" data-i="0" tabindex="0"><span class="n">١</span><span>السيو التقني</span></div>
+          <div class="pil-count-item" role="tab" aria-selected="false" data-i="1" tabindex="-1"><span class="n">٢</span><span>السيو الداخلي</span></div>
+          <div class="pil-count-item" role="tab" aria-selected="false" data-i="2" tabindex="-1"><span class="n">٣</span><span>كتابة المحتوى</span></div>
+          <div class="pil-count-item" role="tab" aria-selected="false" data-i="3" tabindex="-1"><span class="n">٤</span><span>السيو الخارجي</span></div>
+          <div class="pil-count-item" role="tab" aria-selected="false" data-i="4" tabindex="-1"><span class="n">٥</span><span>الاستشارات وتحليل الأداء</span></div>
         </div>
       </div>
       <div class="pil-scenes">
@@ -195,7 +198,7 @@ function sf_strip_col( array $items ): void {
           <?php endif; ?>
         </div>
         <!-- On-page SEO -->
-        <div class="scene" id="scene1" data-i="1">
+        <div class="scene" id="scene1" data-i="1" hidden>
           <div class="scene-n">٠٢ — السيو الداخلي</div>
           <h3>نحسّن صفحاتك لتناسب ما يبحث عنه العميل</h3>
           <p>نراجع العناوين والمحتوى والروابط الداخلية. ونرتب كل صفحة حول نية البحث والخطوة التي نريد من الزائر اتخاذها.</p>
@@ -215,7 +218,7 @@ function sf_strip_col( array $items ): void {
           <?php endif; ?>
         </div>
         <!-- Content writing -->
-        <div class="scene" id="scene2" data-i="2">
+        <div class="scene" id="scene2" data-i="2" hidden>
           <div class="scene-n">٠٣ — كتابة المحتوى</div>
           <h3>نخطط للمحتوى ونكتبه ونراجعه قبل النشر</h3>
           <p>نحدد الموضوعات والكلمات التي يحتاجها الموقع. ثم نعدّ المحتوى ونراجعه حتى يكون مفيدًا للقارئ وقابلًا للمنافسة في البحث.</p>
@@ -238,7 +241,7 @@ function sf_strip_col( array $items ): void {
           <?php endif; ?>
         </div>
         <!-- Off-page SEO -->
-        <div class="scene" id="scene3" data-i="3">
+        <div class="scene" id="scene3" data-i="3" hidden>
           <div class="scene-n">٠٤ — السيو الخارجي</div>
           <h3>نبني روابط خارجية من مواقع موثوقة ومرتبطة بمجالك</h3>
           <p>نراجع روابط الموقع الحالية والمنافسين، ثم ننفّذ خطة روابط واضحة بدل شراء روابط عشوائية لا تخدم الموقع.</p>
@@ -260,7 +263,7 @@ function sf_strip_col( array $items ): void {
           <?php endif; ?>
         </div>
         <!-- Consulting -->
-        <div class="scene" id="scene4" data-i="4">
+        <div class="scene" id="scene4" data-i="4" hidden>
           <div class="scene-n">٠٥ — الاستشارات وتحليل الأداء</div>
           <h3>نراجع وضع موقعك ونحدد ما يحتاج إلى تنفيذ أولًا</h3>
           <p>نحلل الموقع والبيانات وعمل الفريق أو الوكالة الحالية. ثم نرتب المشاكل والفرص حسب الأولوية ونوضح لك الخطوة التالية.</p>
@@ -509,23 +512,20 @@ function sf_strip_col( array $items ): void {
 
 <!-- ══ REVIEWS ══ -->
 <?php if ( $_rev_sc ) : ?>
-<section id="reviews" class="sf-sec">
-  <div class="sf-wrap">
-    <div class="sf-sec-head c" style="max-width:560px">
-      <span class="sf-tag" style="justify-content:center">آراء العملاء</span>
-      <h2 class="sf-h2">تقييمات موثّقة على Google</h2>
+<section id="reviews" class="sec sec-off">
+  <div class="wrap">
+    <div class="sh c sr" style="margin-bottom:36px">
+      <span class="tag">تقييمات العملاء</span>
+      <h2 class="h2">آراء من عملوا معنا</h2>
     </div>
-    <div class="sf-rev-panel">
-      <div class="rev-plugin">
-        <?php echo do_shortcode( wp_kses_post( $_rev_sc ) ); ?>
-      </div>
-      <a href="<?php echo esc_url( $contact_url ); ?>" class="sf-btn sf-btn-o" style="margin-top:20px">شاهد تقييماتنا على Google</a>
+    <div class="rev-plugin">
+      <?php echo do_shortcode( wp_kses_post( $_rev_sc ) ); ?>
     </div>
   </div>
-</section><!-- /#reviews -->
+</section>
 <?php endif; ?>
 
-<!-- ══ FAQ + CTA ══ -->
+<!-- ══ FAQ ══ -->
 <section id="faq" class="sf-sec">
   <div class="sf-wrap">
     <div class="sf-sec-head c" style="max-width:560px">
@@ -558,15 +558,22 @@ function sf_strip_col( array $items ): void {
         <div class="faq-a"><p>حسب النطاق المتّفق عليه. نغطّي المنظومة كاملة — التقني، الداخلي، المحتوى، الخارجي، والاستشارات — ونحدّد معك ما يخدم أولوياتك.</p></div>
       </div>
     </div>
-    <!-- CTA Final -->
-    <div class="cta-final">
-      <div class="cta-final-in">
+  </div>
+</section><!-- /#faq -->
+
+<!-- ══ CTA FINAL ══ -->
+<div class="cta-final">
+  <div class="sf-wrap">
+    <div class="cta-grid">
+      <div class="cta-text">
         <h2 class="sf-h2 wh">لنبدأ بمراجعة موقعك</h2>
         <p>احجز استشارة مجانية — نحلّل وضعك الحالي، نكشف الفرص، ونضع معك أولويات التنفيذ. بدون التزام.</p>
         <div class="cta-btns">
           <a href="<?php echo esc_url( $contact_url ); ?>" class="sf-btn sf-btn-w lg">اطلب مراجعة موقعك</a>
           <a href="<?php echo esc_url( $contact_url ); ?>" class="sf-btn sf-btn-gh lg">تواصل معنا</a>
         </div>
+      </div>
+      <div class="cta-form">
         <?php get_template_part( 'template-parts/layout/contact-form', null, [
             'form_title' => 'احجز استشارتك المجانية',
             'form_sub'   => 'أرسل طلبك وسنتواصل معك خلال 24 ساعة.',
@@ -574,7 +581,7 @@ function sf_strip_col( array $items ): void {
       </div>
     </div>
   </div>
-</section><!-- /#faq -->
+</div>
 
 <!-- Lightbox -->
 <div id="sfLb" class="sf-lb" role="dialog" aria-modal="true" aria-label="عرض الصورة">
