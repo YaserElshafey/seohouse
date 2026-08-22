@@ -38,8 +38,7 @@
     var tab = document.querySelector('.svc-seo-final .pil-count-item[data-i="' + idx + '"]');
     if (tab) {
       tab.classList.add('active');
-      var pc = document.getElementById('pilCount');
-      if (pc) pc.scrollTo({ left: tab.offsetLeft - 16, behavior: 'smooth' });
+      tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
     }
   }
   if (pilScenes.length && pilTabs.length) {
