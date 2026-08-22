@@ -159,32 +159,7 @@ function sf_strip_col( array $items ): void {
   <div class="hero-fade"></div>
 </section><!-- /#hero -->
 
-<!-- ══ TRUST STRIP ══ -->
-<section id="trust">
-  <p class="trust-lbl">نعمل بأدوات ومنصّات موثوقة لقياس كل خطوة</p>
-  <div class="trust-marquee">
-    <div class="trust-track">
-      <div class="trust-chip"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22 12c0-.7-.06-1.35-.17-2H12v3.8h5.6a4.8 4.8 0 01-2.08 3.15v2.6h3.36C20.8 17.7 22 15.1 22 12z"/><path fill="#34A853" d="M12 22c2.7 0 4.96-.9 6.62-2.42l-3.36-2.6c-.93.62-2.12.99-3.26.99-2.5 0-4.62-1.7-5.38-3.97H3.15v2.68A10 10 0 0012 22z"/><path fill="#FBBC05" d="M6.62 14c-.2-.6-.31-1.24-.31-1.9s.11-1.3.31-1.9V7.52H3.15A10 10 0 002 12c0 1.62.39 3.15 1.15 4.48z"/><path fill="#EA4335" d="M12 6.13c1.47 0 2.78.5 3.82 1.5l2.86-2.86A10 10 0 003.15 7.52l3.47 2.68C7.38 7.83 9.5 6.13 12 6.13z"/></svg><span>Google Search</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#458CF7" stroke-width="2"><path d="M4 18V9M9 18V5M14 18v-6M19 18v-9"/></svg><span>Search Console</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#F9AB00" stroke-width="2"><rect x="3" y="12" width="4" height="8" rx="1"/><rect x="10" y="7" width="4" height="13" rx="1"/><rect x="17" y="3" width="4" height="17" rx="1"/></svg><span>Looker Studio</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#E8710A" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Google Analytics 4</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#1e2ef5" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 01-8 0"/></svg><span>سلة</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#1e2ef5" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg><span>زد</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#7F54B3" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 9h4M6 13h8"/></svg><span>WooCommerce</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#95BF47" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/></svg><span>Shopify</span></div>
-      <!-- Duplicate for seamless loop -->
-      <div class="trust-chip"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22 12c0-.7-.06-1.35-.17-2H12v3.8h5.6a4.8 4.8 0 01-2.08 3.15v2.6h3.36C20.8 17.7 22 15.1 22 12z"/><path fill="#34A853" d="M12 22c2.7 0 4.96-.9 6.62-2.42l-3.36-2.6c-.93.62-2.12.99-3.26.99-2.5 0-4.62-1.7-5.38-3.97H3.15v2.68A10 10 0 0012 22z"/><path fill="#FBBC05" d="M6.62 14c-.2-.6-.31-1.24-.31-1.9s.11-1.3.31-1.9V7.52H3.15A10 10 0 002 12c0 1.62.39 3.15 1.15 4.48z"/><path fill="#EA4335" d="M12 6.13c1.47 0 2.78.5 3.82 1.5l2.86-2.86A10 10 0 003.15 7.52l3.47 2.68C7.38 7.83 9.5 6.13 12 6.13z"/></svg><span>Google Search</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#458CF7" stroke-width="2"><path d="M4 18V9M9 18V5M14 18v-6M19 18v-9"/></svg><span>Search Console</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#F9AB00" stroke-width="2"><rect x="3" y="12" width="4" height="8" rx="1"/><rect x="10" y="7" width="4" height="13" rx="1"/><rect x="17" y="3" width="4" height="17" rx="1"/></svg><span>Looker Studio</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#E8710A" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Google Analytics 4</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#1e2ef5" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 01-8 0"/></svg><span>سلة</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#1e2ef5" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg><span>زد</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#7F54B3" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 9h4M6 13h8"/></svg><span>WooCommerce</span></div>
-      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#95BF47" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/></svg><span>Shopify</span></div>
-    </div>
-  </div>
-  <p class="trust-note">كل نتيجة نعرضها لاحقًا مصدرها هذه الأدوات — بدون أرقام مُصطنعة</p>
-</section><!-- /#trust -->
+<?php get_template_part( 'template-parts/sections/clients' ); ?>
 
 <!-- ══ FIVE PILLARS ══ -->
 <section id="pillars" class="sf-sec">
