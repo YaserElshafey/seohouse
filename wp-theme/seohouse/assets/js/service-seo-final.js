@@ -30,30 +30,31 @@
     srEls.forEach(function (el) { el.classList.add('in'); });
   }
 
-  /* ── Pillars tab switching ──────────────────────────────────────── */
+  /* ── Pillars: scroll-driven active + click-to-scroll ───────────── */
   var pilScenes = document.querySelectorAll('.svc-seo-final .scene');
   var pilTabs   = document.querySelectorAll('.svc-seo-final .pil-count-item');
-  function switchPillar(idx) {
-    pilScenes.forEach(function (s) { s.hidden = true; });
-    pilTabs.forEach(function (t) {
-      t.classList.remove('active');
-      t.setAttribute('aria-selected', 'false');
-      t.setAttribute('tabindex', '-1');
-    });
-    var target = document.querySelector('.svc-seo-final .scene[data-i="' + idx + '"]');
-    if (target) { target.hidden = false; }
+  function setPillarActive(idx) {
+    pilTabs.forEach(function (t) { t.classList.remove('active'); });
     var tab = document.querySelector('.svc-seo-final .pil-count-item[data-i="' + idx + '"]');
     if (tab) {
       tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-      tab.setAttribute('tabindex', '0');
+      var pc = document.getElementById('pilCount');
+      if (pc) pc.scrollTo({ left: tab.offsetLeft - 16, behavior: 'smooth' });
     }
   }
   if (pilScenes.length && pilTabs.length) {
+    if (window.IntersectionObserver) {
+      var sio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { setPillarActive(e.target.dataset.i); }
+        });
+      }, { rootMargin: '-30% 0px -60% 0px' });
+      pilScenes.forEach(function (s) { sio.observe(s); });
+    }
     pilTabs.forEach(function (item) {
-      item.addEventListener('click', function () { switchPillar(item.dataset.i); });
-      item.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); switchPillar(item.dataset.i); }
+      item.addEventListener('click', function () {
+        var scene = document.querySelector('.svc-seo-final .scene[data-i="' + item.dataset.i + '"]');
+        if (scene) scene.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
   }

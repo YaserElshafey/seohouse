@@ -18,6 +18,13 @@ $content_url  = sh_safe_url( 'services/content' );
 $backlinks_url = sh_safe_url( 'services/backlinks' );
 $consulting_url = sh_safe_url( 'services/consulting' );
 $stores_url   = sh_safe_url( 'services/seo/stores-seo' );
+$sec_ecom     = sh_safe_url( 'sectors/ecommerce' ) ?: home_url( '/sectors/ecommerce/' );
+$sec_health   = sh_safe_url( 'sectors/health' ) ?: home_url( '/sectors/health/' );
+$sec_edu      = sh_safe_url( 'sectors/education' ) ?: home_url( '/sectors/education/' );
+$sec_food     = sh_safe_url( 'sectors/food' ) ?: home_url( '/sectors/food/' );
+$sec_legal    = sh_safe_url( 'sectors/legal' ) ?: home_url( '/sectors/legal/' );
+$sec_tech     = sh_safe_url( 'sectors/tech' ) ?: home_url( '/sectors/tech/' );
+$sec_all      = sh_safe_url( 'sectors' ) ?: home_url( '/sectors/' );
 $mkt_sa       = sh_market_permalink( 'saudi_arabia', 'services/seo/ksa' ) ?: home_url( '/services/seo/ksa/' );
 $mkt_eg       = sh_market_permalink( 'egypt', 'services/seo/egypt' ) ?: home_url( '/services/seo/egypt/' );
 $mkt_ae       = sh_market_permalink( 'uae', 'services/seo/uae' ) ?: home_url( '/services/seo/uae/' );
@@ -172,12 +179,12 @@ function sf_strip_col( array $items ): void {
         <div class="num">خدمات السيو</div>
         <h2 class="sf-h2">خمس خدمات تدفع نمو موقعك من البحث</h2>
         <p class="sf-bod" style="margin-top:14px">من تهيئة الموقع تقنيًا إلى بناء المحتوى والسلطة وقياس الأداء — كل جزء له دور واضح في النتيجة، ويعمل مع البقية كمنظومة واحدة.</p>
-        <div class="pil-count" id="pilCount" role="tablist" aria-label="خدمات السيو">
-          <div class="pil-count-item active" role="tab" aria-selected="true" data-i="0" tabindex="0"><span class="n">١</span><span>السيو التقني</span></div>
-          <div class="pil-count-item" role="tab" aria-selected="false" data-i="1" tabindex="-1"><span class="n">٢</span><span>السيو الداخلي</span></div>
-          <div class="pil-count-item" role="tab" aria-selected="false" data-i="2" tabindex="-1"><span class="n">٣</span><span>كتابة المحتوى</span></div>
-          <div class="pil-count-item" role="tab" aria-selected="false" data-i="3" tabindex="-1"><span class="n">٤</span><span>السيو الخارجي</span></div>
-          <div class="pil-count-item" role="tab" aria-selected="false" data-i="4" tabindex="-1"><span class="n">٥</span><span>الاستشارات وتحليل الأداء</span></div>
+        <div class="pil-count" id="pilCount">
+          <div class="pil-count-item active" data-i="0"><span class="n">١</span><span>السيو التقني</span></div>
+          <div class="pil-count-item" data-i="1"><span class="n">٢</span><span>السيو الداخلي</span></div>
+          <div class="pil-count-item" data-i="2"><span class="n">٣</span><span>كتابة المحتوى</span></div>
+          <div class="pil-count-item" data-i="3"><span class="n">٤</span><span>السيو الخارجي</span></div>
+          <div class="pil-count-item" data-i="4"><span class="n">٥</span><span>الاستشارات وتحليل الأداء</span></div>
         </div>
       </div>
       <div class="pil-scenes">
@@ -198,7 +205,7 @@ function sf_strip_col( array $items ): void {
           <?php endif; ?>
         </div>
         <!-- On-page SEO -->
-        <div class="scene" id="scene1" data-i="1" hidden>
+        <div class="scene" id="scene1" data-i="1">
           <div class="scene-n">٠٢ — السيو الداخلي</div>
           <h3>نحسّن صفحاتك لتناسب ما يبحث عنه العميل</h3>
           <p>نراجع العناوين والمحتوى والروابط الداخلية. ونرتب كل صفحة حول نية البحث والخطوة التي نريد من الزائر اتخاذها.</p>
@@ -218,7 +225,7 @@ function sf_strip_col( array $items ): void {
           <?php endif; ?>
         </div>
         <!-- Content writing -->
-        <div class="scene" id="scene2" data-i="2" hidden>
+        <div class="scene" id="scene2" data-i="2">
           <div class="scene-n">٠٣ — كتابة المحتوى</div>
           <h3>نخطط للمحتوى ونكتبه ونراجعه قبل النشر</h3>
           <p>نحدد الموضوعات والكلمات التي يحتاجها الموقع. ثم نعدّ المحتوى ونراجعه حتى يكون مفيدًا للقارئ وقابلًا للمنافسة في البحث.</p>
@@ -241,7 +248,7 @@ function sf_strip_col( array $items ): void {
           <?php endif; ?>
         </div>
         <!-- Off-page SEO -->
-        <div class="scene" id="scene3" data-i="3" hidden>
+        <div class="scene" id="scene3" data-i="3">
           <div class="scene-n">٠٤ — السيو الخارجي</div>
           <h3>نبني روابط خارجية من مواقع موثوقة ومرتبطة بمجالك</h3>
           <p>نراجع روابط الموقع الحالية والمنافسين، ثم ننفّذ خطة روابط واضحة بدل شراء روابط عشوائية لا تخدم الموقع.</p>
@@ -263,7 +270,7 @@ function sf_strip_col( array $items ): void {
           <?php endif; ?>
         </div>
         <!-- Consulting -->
-        <div class="scene" id="scene4" data-i="4" hidden>
+        <div class="scene" id="scene4" data-i="4">
           <div class="scene-n">٠٥ — الاستشارات وتحليل الأداء</div>
           <h3>نراجع وضع موقعك ونحدد ما يحتاج إلى تنفيذ أولًا</h3>
           <p>نحلل الموقع والبيانات وعمل الفريق أو الوكالة الحالية. ثم نرتب المشاكل والفرص حسب الأولوية ونوضح لك الخطوة التالية.</p>
@@ -415,6 +422,70 @@ function sf_strip_col( array $items ): void {
     </div>
   </div>
 </section><!-- /#markets -->
+
+<!-- ══ SECTORS ══ -->
+<section id="sectors" class="sf-sec">
+  <div class="sf-wrap">
+    <div class="sf-sec-head c" style="max-width:680px">
+      <span class="sf-tag" style="justify-content:center">القطاعات التي نخدمها</span>
+      <h2 class="sf-h2">السيو يختلف من قطاع إلى آخر — ونحن نفهم ذلك</h2>
+      <p class="sf-bod" style="margin-top:12px">لكل قطاع جمهوره، كلماته، وقواعد ترتيبه. نُخصّص الاستراتيجية حسب طبيعة عملك.</p>
+    </div>
+    <div class="sct-grid">
+      <a class="sct-card" href="<?php echo esc_url( $sec_ecom ); ?>">
+        <div class="sct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+        <div class="sct-body">
+          <div class="sct-name">التجارة الإلكترونية</div>
+          <div class="sct-desc">متاجر سلة، زد، شوبيفاي</div>
+        </div>
+        <svg class="sct-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      </a>
+      <a class="sct-card" href="<?php echo esc_url( $sec_health ); ?>">
+        <div class="sct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <div class="sct-body">
+          <div class="sct-name">الصحة والطب</div>
+          <div class="sct-desc">عيادات، مستشفيات، صحة</div>
+        </div>
+        <svg class="sct-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      </a>
+      <a class="sct-card" href="<?php echo esc_url( $sec_edu ); ?>">
+        <div class="sct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <div class="sct-body">
+          <div class="sct-name">التعليم والتدريب</div>
+          <div class="sct-desc">منصات، أكاديميات</div>
+        </div>
+        <svg class="sct-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      </a>
+      <a class="sct-card" href="<?php echo esc_url( $sec_food ); ?>">
+        <div class="sct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        <div class="sct-body">
+          <div class="sct-name">الأغذية والمطاعم</div>
+          <div class="sct-desc">مطاعم، توصيل، أغذية</div>
+        </div>
+        <svg class="sct-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      </a>
+      <a class="sct-card" href="<?php echo esc_url( $sec_legal ); ?>">
+        <div class="sct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+        <div class="sct-body">
+          <div class="sct-name">القانون والاستشارات</div>
+          <div class="sct-desc">محاماة، استشارات، شركات</div>
+        </div>
+        <svg class="sct-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      </a>
+      <a class="sct-card" href="<?php echo esc_url( $sec_tech ); ?>">
+        <div class="sct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <div class="sct-body">
+          <div class="sct-name">التقنية والبرمجيات</div>
+          <div class="sct-desc">SaaS، شركات تقنية</div>
+        </div>
+        <svg class="sct-arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      </a>
+    </div>
+    <div class="sct-foot">
+      <a href="<?php echo esc_url( $sec_all ); ?>" class="sf-btn sf-btn-o">جميع القطاعات <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
+    </div>
+  </div>
+</section><!-- /#sectors -->
 
 <!-- ══ PROJECT JOURNEY ══ -->
 <section id="journey" class="sf-sec">
