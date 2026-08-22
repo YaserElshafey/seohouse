@@ -33,23 +33,46 @@
   /* ── Pillars: scroll-driven active + click-to-scroll ───────────── */
   var pilScenes = document.querySelectorAll('.svc-seo-final .scene');
   var pilTabs   = document.querySelectorAll('.svc-seo-final .pil-count-item');
-  function setPillarActive(idx) {
+  var pilStrip  = document.getElementById('pilCount');
+  var pilCur    = -1;
+  var pilRaf    = null;
+
+  function pilActivate(idx) {
+    if (pilCur === idx) return;          /* skip if already active */
+    pilCur = idx;
     pilTabs.forEach(function (t) { t.classList.remove('active'); });
     var tab = document.querySelector('.svc-seo-final .pil-count-item[data-i="' + idx + '"]');
-    if (tab) {
-      tab.classList.add('active');
-      tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    if (!tab) return;
+    tab.classList.add('active');
+    /* Scroll the strip horizontally without touching the page.
+       Using getBoundingClientRect (visual coords) so RTL works correctly. */
+    if (pilStrip && pilStrip.scrollWidth > pilStrip.clientWidth) {
+      var sr = pilStrip.getBoundingClientRect();
+      var tr = tab.getBoundingClientRect();
+      pilStrip.scrollLeft += (tr.left + tr.width / 2) - (sr.left + sr.width / 2);
     }
   }
+
+  function pilTick() {
+    pilRaf = null;
+    if (!pilScenes.length) return;
+    /* Scene whose vertical midpoint is closest to 38% of viewport height */
+    var refY = window.innerHeight * 0.38;
+    var best = -1, bestDist = Infinity;
+    pilScenes.forEach(function (s) {
+      var r = s.getBoundingClientRect();
+      var dist = Math.abs(r.top + r.height / 2 - refY);
+      if (dist < bestDist) { bestDist = dist; best = parseInt(s.dataset.i, 10); }
+    });
+    if (best >= 0) pilActivate(best);
+  }
+
   if (pilScenes.length && pilTabs.length) {
-    if (window.IntersectionObserver) {
-      var sio = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { setPillarActive(e.target.dataset.i); }
-        });
-      }, { rootMargin: '-30% 0px -60% 0px' });
-      pilScenes.forEach(function (s) { sio.observe(s); });
-    }
+    window.addEventListener('scroll', function () {
+      if (!pilRaf) pilRaf = requestAnimationFrame(pilTick);
+    }, { passive: true });
+    pilTick(); /* set initial active tab on load */
+
     pilTabs.forEach(function (item) {
       item.addEventListener('click', function () {
         var scene = document.querySelector('.svc-seo-final .scene[data-i="' + item.dataset.i + '"]');

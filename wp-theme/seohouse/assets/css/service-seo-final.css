@@ -19,7 +19,7 @@
   --max:1200px; --pad:clamp(16px,4vw,44px);
   --fast:cubic-bezier(.25,.46,.45,.94); --ease:cubic-bezier(.22,.68,0,1.15);
   direction: rtl;
-  overflow-x: hidden;
+  overflow-x: clip; /* clip ≠ hidden: no scroll container, position:sticky works */
   color: var(--ink);
 }
 
