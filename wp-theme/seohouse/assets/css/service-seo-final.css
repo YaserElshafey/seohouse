@@ -471,15 +471,11 @@
 .svc-seo-final .spec-strip p { font-size: 13px; color: var(--ink-2); }
 
 @media(max-width:860px) {
-  .svc-seo-final .pil-layout { grid-template-columns: 1fr; gap: 0; }
-  .svc-seo-final .pil-intro {
-    position: sticky; top: 0; z-index: 20;
-    background: #fff; padding-bottom: 0;
-  }
-  .svc-seo-final .pil-intro .num,
-  .svc-seo-final .pil-intro .sf-h2,
-  .svc-seo-final .pil-intro .sf-bod { display: none; }
+  .svc-seo-final .pil-layout { grid-template-columns: 1fr; gap: 24px; }
+  .svc-seo-final .pil-intro { position: static; }
   .svc-seo-final .pil-count {
+    position: sticky; top: 60px; z-index: 20;
+    background: #fff;
     margin-top: 0; flex-direction: row; overflow-x: auto;
     padding: 10px 0 12px; gap: 8px;
     scrollbar-width: none;
@@ -487,8 +483,13 @@
   }
   .svc-seo-final .pil-count::-webkit-scrollbar { display: none; }
   .svc-seo-final .pil-count-item { min-width: max-content; flex-shrink: 0; min-height: 44px; }
-  .svc-seo-final .pil-scenes { margin-top: 16px; }
+  .svc-seo-final .pil-scenes { margin-top: 8px; }
   .svc-seo-final .scene { min-height: auto; padding: 22px; }
+}
+/* WP Admin Bar offsets (32px desktop, 46px at ≤600px) */
+html.admin-bar .svc-seo-final .pil-count { top: 92px; }
+@media screen and (max-width:600px) {
+  html.admin-bar .svc-seo-final .pil-count { top: 106px; }
 }
 
 /* ══ SECTORS ══ */
