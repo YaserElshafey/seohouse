@@ -323,7 +323,8 @@
 
 .svc-seo-final #pillars {
   position: relative;
-  height: calc(100vh + 5 * 480px);
+  --pil-scroll-range: 2400px;   /* 5 panels × 480px */
+  height: calc(100svh + var(--pil-scroll-range));
   background: #fff;
 }
 
@@ -331,7 +332,7 @@
 .svc-seo-final .pil-sticky {
   position: sticky;
   top: 0;
-  height: 100vh;
+  height: 100svh;
   background: #fff;
   overflow: clip;
   display: flex;
@@ -537,7 +538,7 @@
 
 /* ── Mobile (≤860px) ── */
 @media (max-width: 860px) {
-  .svc-seo-final #pillars { height: calc(100vh + 5 * 560px); }
+  .svc-seo-final #pillars { --pil-scroll-range: 2800px; /* 5 panels × 560px */ height: calc(100svh + var(--pil-scroll-range)); }
 
   .svc-seo-final .pil-sticky {
     align-items: flex-start;
