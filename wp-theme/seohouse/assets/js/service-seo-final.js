@@ -34,11 +34,13 @@
   (function () {
     var section = document.getElementById('pillars');
     if (!section) return;
+    var sticky = section.querySelector('.pil-sticky');
     var tabs   = section.querySelectorAll('.pil-count-item');
     var panels = document.querySelectorAll('#pilPanels .pil-panel');
     var strip  = document.getElementById('pilCount');
     var dots   = document.querySelectorAll('#pilProgress .pil-dot');
     var cur = -1, raf = null;
+    var pilTop = 0; /* cached; updated on load + resize only */
 
     function getPilTop() {
       var hdr = document.querySelector('.site-header') || document.querySelector('header:not(#pillars *)');
@@ -78,8 +80,11 @@
     function tick() {
       raf = null;
       var sTop = section.getBoundingClientRect().top;
-      var scrolled = -sTop;
-      var range = section.offsetHeight - window.innerHeight;
+      /* scrolled = distance section has moved above the sticky engagement point */
+      var scrolled = pilTop - sTop;
+      /* range = section height minus the sticky frame height (not window.innerHeight) */
+      var stickyH = sticky ? sticky.offsetHeight : (window.innerHeight - pilTop);
+      var range = section.offsetHeight - stickyH;
       if (range <= 0) { activate(0); return; }
       var progress = Math.max(0, Math.min(1, scrolled / range));
       activate(Math.min(Math.floor(progress * 5), 4));
@@ -93,8 +98,10 @@
     tabs.forEach(function (tab) {
       tab.addEventListener('click', function () {
         var idx = parseInt(tab.dataset.i, 10);
-        var range = section.offsetHeight - window.innerHeight;
-        window.scrollTo({ top: section.offsetTop + range * (idx + 0.5) / 5, behavior: 'smooth' });
+        var stickyH = sticky ? sticky.offsetHeight : (window.innerHeight - pilTop);
+        var range = section.offsetHeight - stickyH;
+        /* scroll track starts when section.top reaches pilTop in the viewport */
+        window.scrollTo({ top: section.offsetTop - pilTop + range * (idx + 0.5) / 5, behavior: 'smooth' });
       });
       tab.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); tab.click(); }
@@ -102,7 +109,8 @@
     });
 
     function setTop() {
-      document.documentElement.style.setProperty('--pil-top', getPilTop() + 'px');
+      pilTop = getPilTop();
+      document.documentElement.style.setProperty('--pil-top', pilTop + 'px');
     }
     setTop();
     window.addEventListener('resize', setTop, { passive: true });

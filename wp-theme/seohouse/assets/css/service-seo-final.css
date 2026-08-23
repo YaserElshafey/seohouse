@@ -317,27 +317,28 @@
 }
 
 /* ══ FIVE PILLARS — scroll-track architecture ══ */
-/*  --pil-top is set by JS from real header + admin-bar height.
+/*  --pil-top: set by JS (real header + admin-bar height); 96px safe default.
+    --pil-viewport-height: available height below the fixed header.
     The section is the scroll track; .pil-sticky never creates a
     scroll container (overflow:clip, not hidden).               */
 
 .svc-seo-final #pillars {
   position: relative;
   --pil-scroll-range: 2400px;   /* 5 panels × 480px */
-  height: calc(100svh + var(--pil-scroll-range));
+  --pil-viewport-height: calc(100svh - var(--pil-top, 96px));
+  height: calc(var(--pil-viewport-height) + var(--pil-scroll-range));
   background: #fff;
 }
 
-/* Sticky viewport frame */
+/* Sticky viewport frame — sits flush under the fixed header */
 .svc-seo-final .pil-sticky {
   position: sticky;
-  top: 0;
-  height: 100svh;
+  top: var(--pil-top, 96px);
+  height: var(--pil-viewport-height, calc(100svh - 96px));
   background: #fff;
   overflow: clip;
   display: flex;
   align-items: center;
-  padding-top: var(--pil-top, 96px);
   box-sizing: border-box;
 }
 
@@ -538,11 +539,10 @@
 
 /* ── Mobile (≤860px) ── */
 @media (max-width: 860px) {
-  .svc-seo-final #pillars { --pil-scroll-range: 2800px; /* 5 panels × 560px */ height: calc(100svh + var(--pil-scroll-range)); }
+  .svc-seo-final #pillars { --pil-scroll-range: 2800px; /* 5 panels × 560px */ height: calc(var(--pil-viewport-height) + var(--pil-scroll-range)); }
 
   .svc-seo-final .pil-sticky {
     align-items: flex-start;
-    padding-top: 0;
     overflow: clip;
   }
 
