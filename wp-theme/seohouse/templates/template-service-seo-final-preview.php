@@ -201,7 +201,7 @@ function sf_strip_col( array $items ): void {
         <div class="svc-do">
           <div class="svc-chips-label">يشمل</div>
           <div class="svc-chips"><span>تدقيق تقني</span><span>Core Web Vitals</span><span>Sitemap &amp; Robots</span><span>معالجة أخطاء الفهرسة</span></div>
-          <span class="svc-link">السيو التقني بالتفصيل <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
+          <span class="svc-link">تفاصيل خدمة السيو التقني <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
         </div>
       </a>
 
@@ -223,7 +223,7 @@ function sf_strip_col( array $items ): void {
         <div class="svc-do">
           <div class="svc-chips-label">يشمل</div>
           <div class="svc-chips"><span>هيكلة العناوين</span><span>الروابط الداخلية</span><span>مطابقة النية</span><span>عناصر التحويل</span></div>
-          <span class="svc-link">السيو الداخلي بالتفصيل <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
+          <span class="svc-link">تفاصيل خدمة السيو الداخلي <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
         </div>
       </a>
 
@@ -245,7 +245,7 @@ function sf_strip_col( array $items ): void {
         <div class="svc-do">
           <div class="svc-chips-label">يشمل</div>
           <div class="svc-chips"><span>بحث الكلمات</span><span>موجز المحتوى</span><span>كتابة متخصّصة</span><span>تحرير وتدقيق</span></div>
-          <span class="svc-link">خدمة المحتوى بالتفصيل <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
+          <span class="svc-link">تفاصيل خدمة كتابة المحتوى <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
         </div>
       </a>
 
@@ -267,7 +267,7 @@ function sf_strip_col( array $items ): void {
         <div class="svc-do">
           <div class="svc-chips-label">يشمل</div>
           <div class="svc-chips"><span>روابط تحريرية</span><span>مواقع ذات صلة</span><span>مراجعة ملف الروابط</span><span>بناء السلطة</span></div>
-          <span class="svc-link">السيو الخارجي بالتفصيل <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
+          <span class="svc-link">تفاصيل خدمة بناء الباك لينك <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
         </div>
       </a>
 
@@ -289,7 +289,7 @@ function sf_strip_col( array $items ): void {
         <div class="svc-do">
           <div class="svc-chips-label">يشمل</div>
           <div class="svc-chips"><span>تدقيق شامل</span><span>تحليل المنافسين</span><span>خارطة طريق</span><span>لوحة أداء</span></div>
-          <span class="svc-link">الاستشارات بالتفصيل <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
+          <span class="svc-link">تفاصيل استشارات السيو <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
         </div>
       </a>
 
