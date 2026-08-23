@@ -173,138 +173,173 @@ function sf_strip_col( array $items ): void {
 <?php get_template_part( 'template-parts/sections/clients' ); ?>
 
 <!-- ══ FIVE PILLARS ══ -->
-<section id="pillars" class="sf-sec">
-  <div class="sf-wrap">
-    <div class="pil-layout">
-      <aside class="pil-side">
-        <div class="pil-intro">
-          <div class="num">خدمات السيو</div>
-          <h2 class="sf-h2">خمس خدمات تدفع نمو موقعك من البحث</h2>
-          <p class="sf-bod" style="margin-top:14px">من تهيئة الموقع تقنيًا إلى بناء المحتوى والسلطة وقياس الأداء — كل جزء له دور واضح في النتيجة، ويعمل مع البقية كمنظومة واحدة.</p>
-        </div>
-        <div class="pil-count" id="pilCount">
-          <div class="pil-count-item active" data-i="0"><span class="n">١</span><span>السيو التقني</span></div>
-          <div class="pil-count-item" data-i="1"><span class="n">٢</span><span>السيو الداخلي</span></div>
-          <div class="pil-count-item" data-i="2"><span class="n">٣</span><span>كتابة المحتوى</span></div>
-          <div class="pil-count-item" data-i="3"><span class="n">٤</span><span>السيو الخارجي</span></div>
-          <div class="pil-count-item" data-i="4"><span class="n">٥</span><span>الاستشارات وتحليل الأداء</span></div>
-        </div>
-      </aside>
-      <div class="pil-scenes">
-        <!-- Technical SEO -->
-        <div class="scene" id="scene0" data-i="0">
-          <div class="scene-n">٠١ — السيو التقني</div>
-          <h3>نعالج المشاكل التقنية التي تعطل ظهور موقعك</h3>
-          <p>نراجع الزحف والفهرسة والسرعة وبنية الموقع. ثم ننفّذ الإصلاحات المطلوبة بالتعاون مع المطور عند الحاجة.</p>
-          <div class="viz">
-            <div class="viz-row"><div class="viz-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div><div class="lab">الزحف والفهرسة</div><div class="viz-check">✓</div></div>
-            <div class="viz-row"><div class="viz-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7v8l10-12h-7z"/></svg></div><div class="lab">سرعة التحميل</div><div class="viz-bar"><i style="width:82%"></i></div></div>
-            <div class="viz-row"><div class="viz-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="lab">البيانات المنظّمة Schema</div><div class="viz-check">✓</div></div>
-            <div class="viz-row"><div class="viz-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="lab">الأمان والبنية السليمة</div><div class="viz-check">✓</div></div>
+<!-- Section height = scroll track: 100vh travel + 5 × 480 px per service -->
+<section id="pillars" aria-label="خدمات السيو">
+  <div class="pil-sticky">
+    <div class="sf-wrap">
+      <div class="pil-layout">
+
+        <!-- Tabs sidebar -->
+        <aside class="pil-side">
+          <div class="pil-intro">
+            <div class="num">خدمات السيو</div>
+            <h2 class="sf-h2">خمس خدمات تدفع نمو موقعك من البحث</h2>
+            <p class="sf-bod" style="margin-top:14px">من تهيئة الموقع تقنيًا إلى بناء المحتوى والسلطة وقياس الأداء — كل جزء له دور واضح في النتيجة، ويعمل مع البقية كمنظومة واحدة.</p>
           </div>
-          <div class="scene-do"><span>تدقيق تقني</span><span>Core Web Vitals</span><span>Sitemap &amp; Robots</span><span>معالجة أخطاء الفهرسة</span></div>
-          <?php if ( $seo_url ) : ?>
-          <a href="<?php echo esc_url( $seo_url ); ?>" class="scene-link">تفاصيل السيو التقني <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-          <?php endif; ?>
-        </div>
-        <!-- On-page SEO -->
-        <div class="scene" id="scene1" data-i="1">
-          <div class="scene-n">٠٢ — السيو الداخلي</div>
-          <h3>نحسّن صفحاتك لتناسب ما يبحث عنه العميل</h3>
-          <p>نراجع العناوين والمحتوى والروابط الداخلية. ونرتب كل صفحة حول نية البحث والخطوة التي نريد من الزائر اتخاذها.</p>
-          <div class="viz">
-            <div class="viz-page">
-              <div class="viz-line title"></div>
-              <div class="viz-tags"><b>H1</b><b>نية البحث</b></div>
-              <div class="viz-line h"></div>
-              <div class="viz-line txt"></div>
-              <div class="viz-line txt2"></div>
-              <div class="viz-tags"><b>رابط داخلي</b><b>رابط داخلي</b><b>CTA — تحويل</b></div>
+          <div class="pil-count" id="pilCount" role="tablist" aria-label="خدمات السيو">
+            <div class="pil-count-item active" data-i="0" role="tab" aria-selected="true"  aria-controls="pil-panel-0" id="pil-tab-0" tabindex="0"><span class="n">١</span><span>السيو التقني</span></div>
+            <div class="pil-count-item"        data-i="1" role="tab" aria-selected="false" aria-controls="pil-panel-1" id="pil-tab-1" tabindex="-1"><span class="n">٢</span><span>السيو الداخلي</span></div>
+            <div class="pil-count-item"        data-i="2" role="tab" aria-selected="false" aria-controls="pil-panel-2" id="pil-tab-2" tabindex="-1"><span class="n">٣</span><span>كتابة المحتوى</span></div>
+            <div class="pil-count-item"        data-i="3" role="tab" aria-selected="false" aria-controls="pil-panel-3" id="pil-tab-3" tabindex="-1"><span class="n">٤</span><span>السيو الخارجي</span></div>
+            <div class="pil-count-item"        data-i="4" role="tab" aria-selected="false" aria-controls="pil-panel-4" id="pil-tab-4" tabindex="-1"><span class="n">٥</span><span>الاستشارات وتحليل الأداء</span></div>
+          </div>
+        </aside>
+
+        <!-- Single panel slot — all five panels overlay each other -->
+        <div class="pil-panels" id="pilPanels">
+
+          <!-- Panel 0: Technical SEO -->
+          <div class="pil-panel pil-panel-active" data-i="0" role="tabpanel" id="pil-panel-0" aria-labelledby="pil-tab-0">
+            <div class="scene">
+              <div class="scene-n">٠١ — السيو التقني</div>
+              <h3>نعالج المشاكل التقنية التي تعطل ظهور موقعك</h3>
+              <p>نراجع الزحف والفهرسة والسرعة وبنية الموقع. ثم ننفّذ الإصلاحات المطلوبة بالتعاون مع المطور عند الحاجة.</p>
+              <div class="viz">
+                <div class="viz-row"><div class="viz-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div><div class="lab">الزحف والفهرسة</div><div class="viz-check">✓</div></div>
+                <div class="viz-row"><div class="viz-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7v8l10-12h-7z"/></svg></div><div class="lab">سرعة التحميل</div><div class="viz-bar"><i style="width:82%"></i></div></div>
+                <div class="viz-row"><div class="viz-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="lab">البيانات المنظّمة Schema</div><div class="viz-check">✓</div></div>
+                <div class="viz-row"><div class="viz-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="lab">الأمان والبنية السليمة</div><div class="viz-check">✓</div></div>
+              </div>
+              <div class="scene-do"><span>تدقيق تقني</span><span>Core Web Vitals</span><span>Sitemap &amp; Robots</span><span>معالجة أخطاء الفهرسة</span></div>
+              <?php if ( $seo_url ) : ?>
+              <a href="<?php echo esc_url( $seo_url ); ?>" class="scene-link">تفاصيل السيو التقني <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
+              <?php endif; ?>
             </div>
           </div>
-          <div class="scene-do"><span>هيكلة العناوين</span><span>الروابط الداخلية</span><span>مطابقة النية</span><span>عناصر التحويل</span></div>
-          <?php if ( $seo_url ) : ?>
-          <a href="<?php echo esc_url( $seo_url ); ?>" class="scene-link">تفاصيل السيو الداخلي <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-          <?php endif; ?>
-        </div>
-        <!-- Content writing -->
-        <div class="scene" id="scene2" data-i="2">
-          <div class="scene-n">٠٣ — كتابة المحتوى</div>
-          <h3>نخطط للمحتوى ونكتبه ونراجعه قبل النشر</h3>
-          <p>نحدد الموضوعات والكلمات التي يحتاجها الموقع. ثم نعدّ المحتوى ونراجعه حتى يكون مفيدًا للقارئ وقابلًا للمنافسة في البحث.</p>
-          <div class="viz">
-            <div class="viz-flow">
-              <div class="st"><div class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></div><small>خريطة كلمات</small></div>
-              <div class="arw">←</div>
-              <div class="st"><div class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div><small>موجز</small></div>
-              <div class="arw">←</div>
-              <div class="st"><div class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></div><small>كتابة</small></div>
-              <div class="arw">←</div>
-              <div class="st"><div class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div><small>مراجعة</small></div>
-              <div class="arw">←</div>
-              <div class="st"><div class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></div><small>نشر</small></div>
+
+          <!-- Panel 1: On-page SEO -->
+          <div class="pil-panel" data-i="1" role="tabpanel" id="pil-panel-1" aria-labelledby="pil-tab-1" aria-hidden="true">
+            <div class="scene">
+              <div class="scene-n">٠٢ — السيو الداخلي</div>
+              <h3>نحسّن صفحاتك لتناسب ما يبحث عنه العميل</h3>
+              <p>نراجع العناوين والمحتوى والروابط الداخلية. ونرتب كل صفحة حول نية البحث والخطوة التي نريد من الزائر اتخاذها.</p>
+              <div class="viz">
+                <div class="viz-page">
+                  <div class="viz-line title"></div>
+                  <div class="viz-tags"><b>H1</b><b>نية البحث</b></div>
+                  <div class="viz-line h"></div>
+                  <div class="viz-line txt"></div>
+                  <div class="viz-line txt2"></div>
+                  <div class="viz-tags"><b>رابط داخلي</b><b>رابط داخلي</b><b>CTA — تحويل</b></div>
+                </div>
+              </div>
+              <div class="scene-do"><span>هيكلة العناوين</span><span>الروابط الداخلية</span><span>مطابقة النية</span><span>عناصر التحويل</span></div>
+              <?php if ( $seo_url ) : ?>
+              <a href="<?php echo esc_url( $seo_url ); ?>" class="scene-link">تفاصيل السيو الداخلي <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
+              <?php endif; ?>
             </div>
           </div>
-          <div class="scene-do"><span>بحث الكلمات</span><span>موجز المحتوى</span><span>كتابة متخصّصة</span><span>تحرير وتدقيق</span></div>
-          <?php if ( $content_url ) : ?>
-          <a href="<?php echo esc_url( $content_url ); ?>" class="scene-link">تفاصيل كتابة المحتوى <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-          <?php endif; ?>
-        </div>
-        <!-- Off-page SEO -->
-        <div class="scene" id="scene3" data-i="3">
-          <div class="scene-n">٠٤ — السيو الخارجي</div>
-          <h3>نبني روابط خارجية من مواقع موثوقة ومرتبطة بمجالك</h3>
-          <p>نراجع روابط الموقع الحالية والمنافسين، ثم ننفّذ خطة روابط واضحة بدل شراء روابط عشوائية لا تخدم الموقع.</p>
-          <div class="viz">
-            <div class="viz-net">
-              <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16M4 10h16M4 15h10M4 19h7"/></svg></div>
-              <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></div>
-              <div class="viz-node hub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.5.5l3-3a5 5 0 00-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 00-7.5-.5l-3 3a5 5 0 007 7l1.7-1.7"/></svg></div>
-              <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v5c0 4.4-3 8.3-7 10-4-1.7-7-5.6-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
-              <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></div>
-              <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l5-5 4 3 8-8"/><path d="M16 4h5v5"/></svg></div>
-              <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 01-11.9 7.8L3 21l1.7-6.1A8.5 8.5 0 1121 11.5z"/></svg></div>
-              <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 3h6v6"/></svg></div>
+
+          <!-- Panel 2: Content writing -->
+          <div class="pil-panel" data-i="2" role="tabpanel" id="pil-panel-2" aria-labelledby="pil-tab-2" aria-hidden="true">
+            <div class="scene">
+              <div class="scene-n">٠٣ — كتابة المحتوى</div>
+              <h3>نخطط للمحتوى ونكتبه ونراجعه قبل النشر</h3>
+              <p>نحدد الموضوعات والكلمات التي يحتاجها الموقع. ثم نعدّ المحتوى ونراجعه حتى يكون مفيدًا للقارئ وقابلًا للمنافسة في البحث.</p>
+              <div class="viz">
+                <div class="viz-flow">
+                  <div class="st"><div class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></div><small>خريطة كلمات</small></div>
+                  <div class="arw">←</div>
+                  <div class="st"><div class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div><small>موجز</small></div>
+                  <div class="arw">←</div>
+                  <div class="st"><div class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></div><small>كتابة</small></div>
+                  <div class="arw">←</div>
+                  <div class="st"><div class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div><small>مراجعة</small></div>
+                  <div class="arw">←</div>
+                  <div class="st"><div class="c"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg></div><small>نشر</small></div>
+                </div>
+              </div>
+              <div class="scene-do"><span>بحث الكلمات</span><span>موجز المحتوى</span><span>كتابة متخصّصة</span><span>تحرير وتدقيق</span></div>
+              <?php if ( $content_url ) : ?>
+              <a href="<?php echo esc_url( $content_url ); ?>" class="scene-link">تفاصيل كتابة المحتوى <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
+              <?php endif; ?>
             </div>
           </div>
-          <div class="scene-do"><span>روابط تحريرية</span><span>مواقع ذات صلة</span><span>مراجعة ملف الروابط</span><span>بناء السلطة</span></div>
-          <?php if ( $backlinks_url ) : ?>
-          <a href="<?php echo esc_url( $backlinks_url ); ?>" class="scene-link">تفاصيل السيو الخارجي <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-          <?php endif; ?>
-        </div>
-        <!-- Consulting -->
-        <div class="scene" id="scene4" data-i="4">
-          <div class="scene-n">٠٥ — الاستشارات وتحليل الأداء</div>
-          <h3>نراجع وضع موقعك ونحدد ما يحتاج إلى تنفيذ أولًا</h3>
-          <p>نحلل الموقع والبيانات وعمل الفريق أو الوكالة الحالية. ثم نرتب المشاكل والفرص حسب الأولوية ونوضح لك الخطوة التالية.</p>
-          <div class="viz">
-            <div class="viz-map">
-              <div class="mstep done"><span class="mn">✓</span><span>الوضع الحالي</span></div>
-              <div class="mstep done"><span class="mn">✓</span><span>الفرص المتاحة</span></div>
-              <div class="mstep"><span class="mn">٣</span><span>الأولويات</span></div>
-              <div class="mstep"><span class="mn">٤</span><span>خطة التنفيذ</span></div>
-              <div class="mstep"><span class="mn">٥</span><span>القياس والتطوير</span></div>
+
+          <!-- Panel 3: Off-page SEO -->
+          <div class="pil-panel" data-i="3" role="tabpanel" id="pil-panel-3" aria-labelledby="pil-tab-3" aria-hidden="true">
+            <div class="scene">
+              <div class="scene-n">٠٤ — السيو الخارجي</div>
+              <h3>نبني روابط خارجية من مواقع موثوقة ومرتبطة بمجالك</h3>
+              <p>نراجع روابط الموقع الحالية والمنافسين، ثم ننفّذ خطة روابط واضحة بدل شراء روابط عشوائية لا تخدم الموقع.</p>
+              <div class="viz">
+                <div class="viz-net">
+                  <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16M4 10h16M4 15h10M4 19h7"/></svg></div>
+                  <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg></div>
+                  <div class="viz-node hub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.5.5l3-3a5 5 0 00-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 00-7.5-.5l-3 3a5 5 0 007 7l1.7-1.7"/></svg></div>
+                  <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v5c0 4.4-3 8.3-7 10-4-1.7-7-5.6-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+                  <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg></div>
+                  <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l5-5 4 3 8-8"/><path d="M16 4h5v5"/></svg></div>
+                  <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.5 8.5 0 01-11.9 7.8L3 21l1.7-6.1A8.5 8.5 0 1121 11.5z"/></svg></div>
+                  <div class="viz-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 3h6v6"/></svg></div>
+                </div>
+              </div>
+              <div class="scene-do"><span>روابط تحريرية</span><span>مواقع ذات صلة</span><span>مراجعة ملف الروابط</span><span>بناء السلطة</span></div>
+              <?php if ( $backlinks_url ) : ?>
+              <a href="<?php echo esc_url( $backlinks_url ); ?>" class="scene-link">تفاصيل السيو الخارجي <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
+              <?php endif; ?>
             </div>
           </div>
-          <div class="scene-do"><span>تدقيق شامل</span><span>تحليل المنافسين</span><span>خارطة طريق</span><span>لوحة أداء</span></div>
-          <?php if ( $consulting_url ) : ?>
-          <a href="<?php echo esc_url( $consulting_url ); ?>" class="scene-link">تفاصيل الاستشارات <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-          <?php endif; ?>
-        </div>
-      </div><!-- /.pil-scenes -->
-    </div><!-- /.pil-layout -->
-    <!-- E-commerce strip -->
-    <?php if ( $stores_url ) : ?>
-    <div class="spec-strip sr">
-      <div>
-        <h4>تدير متجرًا إلكترونيًا؟</h4>
-        <p>لدينا مسار سيو متخصّص للمتاجر يركّز على صفحات المنتجات والفئات والمبيعات القادمة من محركات البحث.</p>
-      </div>
-      <a href="<?php echo esc_url( $stores_url ); ?>" class="sf-btn sf-btn-p">سيو المتاجر الإلكترونية</a>
+
+          <!-- Panel 4: Consulting -->
+          <div class="pil-panel" data-i="4" role="tabpanel" id="pil-panel-4" aria-labelledby="pil-tab-4" aria-hidden="true">
+            <div class="scene">
+              <div class="scene-n">٠٥ — الاستشارات وتحليل الأداء</div>
+              <h3>نراجع وضع موقعك ونحدد ما يحتاج إلى تنفيذ أولًا</h3>
+              <p>نحلل الموقع والبيانات وعمل الفريق أو الوكالة الحالية. ثم نرتب المشاكل والفرص حسب الأولوية ونوضح لك الخطوة التالية.</p>
+              <div class="viz">
+                <div class="viz-map">
+                  <div class="mstep done"><span class="mn">✓</span><span>الوضع الحالي</span></div>
+                  <div class="mstep done"><span class="mn">✓</span><span>الفرص المتاحة</span></div>
+                  <div class="mstep"><span class="mn">٣</span><span>الأولويات</span></div>
+                  <div class="mstep"><span class="mn">٤</span><span>خطة التنفيذ</span></div>
+                  <div class="mstep"><span class="mn">٥</span><span>القياس والتطوير</span></div>
+                </div>
+              </div>
+              <div class="scene-do"><span>تدقيق شامل</span><span>تحليل المنافسين</span><span>خارطة طريق</span><span>لوحة أداء</span></div>
+              <?php if ( $consulting_url ) : ?>
+              <a href="<?php echo esc_url( $consulting_url ); ?>" class="scene-link">تفاصيل الاستشارات <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
+              <?php endif; ?>
+            </div>
+          </div>
+
+        </div><!-- /.pil-panels -->
+      </div><!-- /.pil-layout -->
+    </div><!-- /.sf-wrap -->
+
+    <!-- Progress dots -->
+    <div class="pil-progress" id="pilProgress" aria-hidden="true">
+      <div class="pil-dot pil-dot-on"></div>
+      <div class="pil-dot"></div>
+      <div class="pil-dot"></div>
+      <div class="pil-dot"></div>
+      <div class="pil-dot"></div>
     </div>
-    <?php endif; ?>
-  </div><!-- /.sf-wrap -->
+  </div><!-- /.pil-sticky -->
 </section><!-- /#pillars -->
+
+<!-- E-commerce strip — appears after the scroll experience ends -->
+<?php if ( $stores_url ) : ?>
+<div class="pil-strip-wrap sf-wrap">
+  <div class="spec-strip sr">
+    <div>
+      <h4>تدير متجرًا إلكترونيًا؟</h4>
+      <p>لدينا مسار سيو متخصّص للمتاجر يركّز على صفحات المنتجات والفئات والمبيعات القادمة من محركات البحث.</p>
+    </div>
+    <a href="<?php echo esc_url( $stores_url ); ?>" class="sf-btn sf-btn-p">سيو المتاجر الإلكترونية</a>
+  </div>
+</div>
+<?php endif; ?>
 
 <!-- ══ RESULTS EXPLORER ══ -->
 <section id="results" class="sf-sec">

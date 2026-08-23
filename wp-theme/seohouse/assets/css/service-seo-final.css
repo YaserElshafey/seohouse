@@ -316,19 +316,47 @@
   .svc-seo-final .hero-btns .sf-btn { flex: 1; }
 }
 
-/* ══ FIVE PILLARS ══ */
-.svc-seo-final #pillars { background: #fff; }
+/* ══ FIVE PILLARS — scroll-track architecture ══ */
+/*  --pil-top is set by JS from real header + admin-bar height.
+    The section is the scroll track; .pil-sticky never creates a
+    scroll container (overflow:clip, not hidden).               */
+
+.svc-seo-final #pillars {
+  position: relative;
+  height: calc(100vh + 5 * 480px);
+  background: #fff;
+}
+
+/* Sticky viewport frame */
+.svc-seo-final .pil-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background: #fff;
+  overflow: clip;
+  display: flex;
+  align-items: center;
+  padding-top: var(--pil-top, 96px);
+  box-sizing: border-box;
+}
+
+.svc-seo-final .pil-sticky > .sf-wrap { width: 100%; }
+
 .svc-seo-final .pil-layout {
   display: grid;
   grid-template-columns: 0.82fr 1.18fr;
   gap: clamp(28px,4vw,60px);
   align-items: start;
 }
-.svc-seo-final .pil-side { position: sticky; top: 96px; }
+
+/* Sidebar: not sticky — section handles scrolling */
+.svc-seo-final .pil-side { position: static; }
+
 .svc-seo-final .pil-intro .num {
   font-size: 13px; font-weight: 800;
   color: var(--blue); letter-spacing: .1em; margin-bottom: 14px;
 }
+
 .svc-seo-final .pil-count { margin-top: 26px; display: flex; flex-direction: column; gap: 9px; }
 .svc-seo-final .pil-count-item {
   display: flex; align-items: center; gap: 12px;
@@ -347,13 +375,50 @@
 .svc-seo-final .pil-count-item.active { border-color: var(--blue); background: var(--blue-50); }
 .svc-seo-final .pil-count-item.active .n { background: var(--blue); color: #fff; }
 .svc-seo-final .pil-count-item.active span { color: var(--blue); }
-.svc-seo-final .pil-scenes { display: flex; flex-direction: column; gap: 24px; }
+
+/* Single panel slot — panels overlay each other; only .pil-panel-active is opaque */
+.svc-seo-final .pil-panels {
+  position: relative;
+  min-height: 480px;
+}
+.svc-seo-final .pil-panel {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.28s ease;
+}
+.svc-seo-final .pil-panel.pil-panel-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.svc-seo-final .pil-sticky .scene { min-height: auto; }
+
+/* Progress dots */
+.svc-seo-final .pil-progress {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.svc-seo-final .pil-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(9,16,46,.15);
+  transition: background .25s, transform .25s;
+}
+.svc-seo-final .pil-dot.pil-dot-on { background: var(--blue); transform: scale(1.35); }
+
+/* Service cards */
 .svc-seo-final .scene {
   background: var(--navy); border-radius: var(--r4);
   padding: 28px; box-sizing: border-box;
-  min-height: 520px; display: flex; flex-direction: column;
+  display: flex; flex-direction: column;
   position: relative; overflow: hidden;
-  scroll-margin-top: 96px;
 }
 .svc-seo-final .scene::before {
   content: '';
@@ -459,9 +524,9 @@
 .svc-seo-final .viz-map .mstep.done .mn { background: var(--green); color: #fff; }
 .svc-seo-final .viz-map .mstep span { font-size: 12px; color: rgba(255,255,255,.7); font-weight: 600; }
 
-/* E-commerce spec strip */
+/* E-commerce strip (sits after scroll track, outside #pillars) */
+.svc-seo-final .pil-strip-wrap { padding-bottom: clamp(56px,6vw,80px); }
 .svc-seo-final .spec-strip {
-  margin-top: 26px;
   background: linear-gradient(120deg,var(--blue-50),#fff);
   border: 1px solid var(--blue-100); border-radius: var(--r3);
   padding: 22px 26px;
@@ -470,28 +535,54 @@
 .svc-seo-final .spec-strip h4 { font-size: 17px; font-weight: 900; color: var(--ink); letter-spacing: -.02em; margin-bottom: 4px; }
 .svc-seo-final .spec-strip p { font-size: 13px; color: var(--ink-2); }
 
-@media(max-width:860px) {
-  .svc-seo-final .pil-layout { display: flex; flex-direction: column; gap: 0; }
-  /* display:contents makes pil-side transparent — children join pil-layout flex flow */
+/* ── Mobile (≤860px) ── */
+@media (max-width: 860px) {
+  .svc-seo-final #pillars { height: calc(100vh + 5 * 560px); }
+
+  .svc-seo-final .pil-sticky {
+    align-items: flex-start;
+    padding-top: 0;
+    overflow: clip;
+  }
+
+  .svc-seo-final .pil-sticky > .sf-wrap {
+    padding-inline: 0;
+    width: 100%;
+  }
+
+  .svc-seo-final .pil-layout {
+    display: flex; flex-direction: column; gap: 0; width: 100%;
+  }
+
+  /* display:contents makes .pil-side transparent — children join flex flow */
   .svc-seo-final .pil-side { display: contents; }
-  .svc-seo-final .pil-intro { padding-bottom: 20px; }
+  .svc-seo-final .pil-intro { padding: 16px 20px 12px; }
+
   .svc-seo-final .pil-count {
-    position: sticky; top: 60px; z-index: 20;
-    background: #fff;
-    margin-top: 0; flex-direction: row; overflow-x: auto;
-    padding: 10px 0 12px; gap: 8px;
+    position: static;
+    flex-direction: row; overflow-x: auto; overflow-y: visible;
+    padding: 8px 20px 12px; gap: 8px;
     scrollbar-width: none;
     box-shadow: 0 2px 8px rgba(9,16,46,.07);
+    background: #fff; margin-top: 0; max-width: 100%;
   }
   .svc-seo-final .pil-count::-webkit-scrollbar { display: none; }
   .svc-seo-final .pil-count-item { min-width: max-content; flex-shrink: 0; min-height: 44px; }
-  .svc-seo-final .pil-scenes { margin-top: 16px; }
-  .svc-seo-final .scene { min-height: auto; padding: 22px; scroll-margin-top: 130px; }
+
+  .svc-seo-final .pil-panels {
+    min-height: 0; overflow: clip; max-width: 100%;
+    margin: 14px 20px 20px;
+  }
+
+  .svc-seo-final .pil-panel { position: absolute; inset: 0; }
+  .svc-seo-final .pil-panel.pil-panel-active { position: relative; inset: auto; }
+
+  .svc-seo-final .pil-sticky .scene { padding: 20px; max-width: 100%; }
 }
-/* WP Admin Bar offsets (32px desktop, 46px at ≤600px) */
-html.admin-bar .svc-seo-final .pil-count { top: 92px; }
-@media screen and (max-width:600px) {
-  html.admin-bar .svc-seo-final .pil-count { top: 106px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .svc-seo-final .pil-panel { transition: none; }
+  .svc-seo-final .pil-dot { transition: none; }
 }
 
 /* ══ SECTORS ══ */
