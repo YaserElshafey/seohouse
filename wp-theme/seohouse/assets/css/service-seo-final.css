@@ -316,227 +316,107 @@
   .svc-seo-final .hero-btns .sf-btn { flex: 1; }
 }
 
-/* ══ FIVE PILLARS — scroll-track architecture ══ */
-/*  --pil-top: set by JS (real header + admin-bar height); 96px safe default.
-    --pil-viewport-height: available height below the fixed header.
-    The section is the scroll track; .pil-sticky never creates a
-    scroll container.
-    IMPORTANT — page-level overflow fix:
-    The global theme sets overflow-x:hidden on html/body, which creates a
-    scroll container and breaks position:sticky descendants. Override it for
-    this template only using the WordPress body class.                       */
-body.page-template-template-service-seo-final-preview {
-  overflow-x: clip !important;   /* clip ≠ hidden: no scroll container */
-  overflow-y: visible !important;
-}
-
+/* ══ FIVE PILLARS — static services grid ══ */
 .svc-seo-final #pillars {
-  position: relative;
-  --pil-scroll-range: 2400px;   /* 5 panels × 480px */
-  --pil-viewport-height: calc(100svh - var(--pil-top, 96px));
-  height: calc(var(--pil-viewport-height) + var(--pil-scroll-range));
-  background: #fff;
+  background: var(--off);
+  padding: clamp(48px,6vw,72px) 0;
 }
 
-/* Sticky viewport frame — sits flush under the fixed header */
-.svc-seo-final .pil-sticky {
-  position: sticky;
-  top: var(--pil-top, 96px);
-  height: var(--pil-viewport-height, calc(100svh - 96px));
-  background: #fff;
-  overflow: visible;  /* must not clip or scroll — would break sticky */
-  display: flex;
-  align-items: center;
-  box-sizing: border-box;
+.svc-seo-final .pil-head { margin-bottom: clamp(24px,3vw,36px); }
+.svc-seo-final .pil-head .num {
+  font-size: 12px; font-weight: 800;
+  color: var(--blue); letter-spacing: .1em; margin-bottom: 10px;
 }
+.svc-seo-final .pil-head .sf-h2 { margin-bottom: 10px; }
+.svc-seo-final .pil-head .sf-bod { max-width: 620px; }
 
-.svc-seo-final .pil-sticky > .sf-wrap { width: 100%; }
-
-.svc-seo-final .pil-layout {
+.svc-seo-final .svc-grid {
   display: grid;
-  grid-template-columns: 0.82fr 1.18fr;
-  gap: clamp(28px,4vw,60px);
-  align-items: start;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
 }
+.svc-seo-final .svc-card:last-child { grid-column: 1 / -1; }
 
-/* Sidebar: not sticky — section handles scrolling */
-.svc-seo-final .pil-side { position: static; }
-
-.svc-seo-final .pil-intro .num {
-  font-size: 13px; font-weight: 800;
-  color: var(--blue); letter-spacing: .1em; margin-bottom: 14px;
-}
-
-.svc-seo-final .pil-count { margin-top: 26px; display: flex; flex-direction: column; gap: 9px; }
-.svc-seo-final .pil-count-item {
-  display: flex; align-items: center; gap: 12px;
-  padding: 11px 14px; min-height: 56px;
-  border-radius: var(--r2); border: 1px solid var(--line);
-  transition: all .3s var(--fast); cursor: pointer; box-sizing: border-box;
-}
-.svc-seo-final .pil-count-item .n {
-  width: 30px; height: 30px; border-radius: 8px;
-  background: var(--surface); color: var(--muted);
-  font-size: 12px; font-weight: 800;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; transition: all .3s;
-}
-.svc-seo-final .pil-count-item span { font-size: 13.5px; font-weight: 700; color: var(--ink-2); transition: color .3s; }
-.svc-seo-final .pil-count-item.active { border-color: var(--blue); background: var(--blue-50); }
-.svc-seo-final .pil-count-item.active .n { background: var(--blue); color: #fff; }
-.svc-seo-final .pil-count-item.active span { color: var(--blue); }
-
-/* Single panel slot — panels overlay each other; only .pil-panel-active is opaque.
-   overflow:clip here (non-sticky element) prevents inactive panels bleeding out. */
-.svc-seo-final .pil-panels {
-  position: relative;
-  min-height: 480px;
-  overflow: clip;
-}
-.svc-seo-final .pil-panel {
-  position: absolute;
-  top: 0;
-  inset-inline-start: 0;
-  inset-inline-end: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.28s ease;
-}
-.svc-seo-final .pil-panel.pil-panel-active {
-  opacity: 1;
-  pointer-events: auto;
-}
-.svc-seo-final .pil-sticky .scene { min-height: auto; }
-
-/* Progress dots */
-.svc-seo-final .pil-progress {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+.svc-seo-final .svc-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r3);
+  padding: 22px 24px 20px;
+  box-sizing: border-box;
   display: flex;
-  gap: 7px;
-  align-items: center;
+  flex-direction: column;
+  transition: border-color .2s var(--fast), box-shadow .2s var(--fast);
 }
-.svc-seo-final .pil-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: rgba(9,16,46,.15);
-  transition: background .25s, transform .25s;
+.svc-seo-final .svc-card:hover {
+  border-color: rgba(30,46,245,.22);
+  box-shadow: var(--sh-sm);
 }
-.svc-seo-final .pil-dot.pil-dot-on { background: var(--blue); transform: scale(1.35); }
 
-/* Service cards */
-.svc-seo-final .scene {
-  background: var(--navy); border-radius: var(--r4);
-  padding: 28px; box-sizing: border-box;
-  display: flex; flex-direction: column;
-  position: relative; overflow: hidden;
+.svc-seo-final .svc-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-bottom: 13px;
 }
-.svc-seo-final .scene::before {
-  content: '';
-  position: absolute; inset-inline-end: -60px; top: -60px;
-  width: 220px; height: 220px; border-radius: 50%;
-  background: radial-gradient(circle,rgba(30,46,245,.3),transparent 68%);
-  pointer-events: none;
-}
-.svc-seo-final .scene-n {
-  font-size: 12px; font-weight: 800;
-  color: var(--blue-light); letter-spacing: .08em; margin-bottom: 12px;
-  position: relative; z-index: 1; flex-shrink: 0;
-}
-.svc-seo-final .scene h3 {
-  font-size: clamp(17px,1.6vw,20px); font-weight: 900; color: #fff;
-  letter-spacing: -.02em; margin-bottom: 10px;
-  position: relative; z-index: 1; flex-shrink: 0;
-}
-.svc-seo-final .scene p {
-  font-size: 13.5px; line-height: 1.8; color: rgba(255,255,255,.6);
-  margin-bottom: 0; position: relative; z-index: 1; flex-shrink: 0;
-}
-.svc-seo-final .scene-do {
-  font-size: 12px; color: rgba(255,255,255,.5);
-  margin-top: 16px; position: relative; z-index: 1;
-  display: flex; flex-wrap: wrap; gap: 7px; flex-shrink: 0;
-}
-.svc-seo-final .scene-do span {
-  background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
-  border-radius: 50px; padding: 5px 12px;
-  font-weight: 600; color: rgba(255,255,255,.72);
-}
-.svc-seo-final .scene-link {
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 13px; font-weight: 700; color: #a9b6ff;
-  position: relative; z-index: 1; transition: gap .2s;
-  text-decoration: none; margin-top: auto; padding-top: 20px;
-}
-.svc-seo-final .scene-link:hover { gap: 11px; }
-
-/* Scene visuals */
-.svc-seo-final .viz {
-  position: relative; z-index: 1; flex-shrink: 0;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.1);
-  border-radius: var(--r3); padding: 16px; margin-top: 16px;
-  height: 180px; overflow: hidden; box-sizing: border-box;
-}
-.svc-seo-final .viz-row {
-  display: flex; align-items: center; gap: 10px;
-  padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,.07);
-}
-.svc-seo-final .viz-row:last-child { border-bottom: none; }
-.svc-seo-final .viz-dot {
-  width: 38px; height: 38px; border-radius: 10px;
-  background: rgba(30,46,245,.22);
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-}
-.svc-seo-final .viz-dot svg { stroke: #a9b6ff; width: 18px; height: 18px; }
-.svc-seo-final .viz-row .lab { flex: 1; font-size: 12.5px; color: rgba(255,255,255,.75); font-weight: 600; }
-.svc-seo-final .viz-bar { width: 72px; height: 6px; border-radius: 3px; background: rgba(255,255,255,.1); overflow: hidden; }
-.svc-seo-final .viz-bar i { display: block; height: 100%; border-radius: 3px; background: linear-gradient(90deg,var(--blue),var(--blue-light)); }
-.svc-seo-final .viz-check { color: var(--green); font-size: 12px; font-weight: 800; }
-.svc-seo-final .viz-page { display: flex; flex-direction: column; gap: 8px; }
-.svc-seo-final .viz-line { background: rgba(255,255,255,.1); border-radius: 5px; height: 11px; }
-.svc-seo-final .viz-line.title { height: 16px; width: 70%; background: linear-gradient(90deg,var(--blue-light),rgba(123,144,255,.3)); }
-.svc-seo-final .viz-line.h { width: 52%; background: rgba(255,255,255,.2); }
-.svc-seo-final .viz-line.txt { width: 100%; }
-.svc-seo-final .viz-line.txt2 { width: 88%; }
-.svc-seo-final .viz-tags { display: flex; gap: 6px; margin-top: 4px; flex-wrap: wrap; }
-.svc-seo-final .viz-tags b {
-  font-size: 9.5px; font-weight: 700; color: #a9b6ff;
-  background: rgba(30,46,245,.2); border: 1px solid rgba(30,46,245,.32);
-  border-radius: 50px; padding: 3px 9px;
-}
-.svc-seo-final .viz-flow { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
-.svc-seo-final .viz-flow .st { flex: 1; text-align: center; }
-.svc-seo-final .viz-flow .st .c {
-  width: 38px; height: 38px; margin: 0 auto 6px;
-  border-radius: 10px; background: rgba(30,46,245,.2);
+.svc-seo-final .svc-card-ico {
+  width: 44px; height: 44px;
+  border-radius: 11px; flex-shrink: 0;
+  background: var(--blue-50);
+  border: 1px solid var(--blue-100);
   display: flex; align-items: center; justify-content: center;
 }
-.svc-seo-final .viz-flow .st .c svg { stroke: #a9b6ff; width: 18px; height: 18px; }
-.svc-seo-final .viz-flow .st small { font-size: 9.5px; color: rgba(255,255,255,.55); font-weight: 600; }
-.svc-seo-final .viz-flow .arw { color: rgba(255,255,255,.3); font-size: 12px; }
-.svc-seo-final .viz-net { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 8px; }
-.svc-seo-final .viz-node {
-  height: 54px; border-radius: 11px;
-  background: rgba(30,46,245,.24); border: 1.5px solid rgba(140,158,255,.6);
-  display: flex; align-items: center; justify-content: center; position: relative;
+.svc-seo-final .svc-card-ico svg {
+  width: 22px; height: 22px;
 }
-.svc-seo-final .viz-node.hub { background: rgba(30,46,245,.6); border-color: #c3ccff; box-shadow: 0 0 18px rgba(123,144,255,.6); }
-.svc-seo-final .viz-node svg { stroke: #eef1ff; width: 18px; height: 18px; }
-.svc-seo-final .viz-node.hub svg { stroke: #fff; }
-.svc-seo-final .viz-map { display: flex; flex-direction: column; gap: 0; }
-.svc-seo-final .viz-map .mstep { display: flex; align-items: center; gap: 11px; padding: 8px 0; }
-.svc-seo-final .viz-map .mstep .mn {
-  width: 22px; height: 22px; border-radius: 50%;
-  background: rgba(30,46,245,.25); color: #a9b6ff;
-  font-size: 10px; font-weight: 800;
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+.svc-seo-final .svc-card-meta {
+  display: flex; flex-direction: column; gap: 3px; padding-top: 3px;
 }
-.svc-seo-final .viz-map .mstep.done .mn { background: var(--green); color: #fff; }
-.svc-seo-final .viz-map .mstep span { font-size: 12px; color: rgba(255,255,255,.7); font-weight: 600; }
+.svc-seo-final .svc-card-num {
+  font-size: 11px; font-weight: 800;
+  color: var(--blue); letter-spacing: .08em;
+}
+.svc-seo-final .svc-card-name {
+  font-size: 14px; font-weight: 800; color: var(--ink);
+}
 
-/* E-commerce strip (sits after scroll track, outside #pillars) */
+.svc-seo-final .svc-card h3 {
+  font-size: clamp(14.5px,1.25vw,16.5px); font-weight: 800; color: var(--ink);
+  letter-spacing: -.02em; line-height: 1.35; margin-bottom: 8px;
+}
+.svc-seo-final .svc-card p {
+  font-size: 13px; line-height: 1.75; color: var(--ink-2);
+  margin-bottom: 13px;
+}
+.svc-seo-final .svc-chips {
+  display: flex; flex-wrap: wrap; gap: 7px;
+  margin-bottom: 16px;
+}
+.svc-seo-final .svc-chips span {
+  font-size: 11.5px; font-weight: 600; color: var(--ink-2);
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 50px; padding: 4px 11px;
+}
+.svc-seo-final .svc-card-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 700; color: var(--blue);
+  text-decoration: none; margin-top: auto;
+  transition: gap .2s var(--fast);
+}
+.svc-seo-final .svc-card-link:hover { gap: 10px; }
+
+/* 5th card: keep content width contained */
+.svc-seo-final .svc-card:last-child h3,
+.svc-seo-final .svc-card:last-child p { max-width: 680px; }
+
+@media (max-width: 860px) {
+  .svc-seo-final .svc-grid { gap: 11px; }
+}
+@media (max-width: 520px) {
+  .svc-seo-final .svc-grid { grid-template-columns: 1fr; }
+  .svc-seo-final .svc-card:last-child { grid-column: auto; }
+}
+
+/* E-commerce strip (sits after the services section, outside #pillars) */
 .svc-seo-final .pil-strip-wrap { padding-bottom: clamp(56px,6vw,80px); }
 .svc-seo-final .spec-strip {
   background: linear-gradient(120deg,var(--blue-50),#fff);
@@ -546,55 +426,6 @@ body.page-template-template-service-seo-final-preview {
 }
 .svc-seo-final .spec-strip h4 { font-size: 17px; font-weight: 900; color: var(--ink); letter-spacing: -.02em; margin-bottom: 4px; }
 .svc-seo-final .spec-strip p { font-size: 13px; color: var(--ink-2); }
-
-/* ── Mobile (≤860px) ── */
-@media (max-width: 860px) {
-  .svc-seo-final #pillars { --pil-scroll-range: 2800px; /* 5 panels × 560px */ height: calc(var(--pil-viewport-height) + var(--pil-scroll-range)); }
-
-  .svc-seo-final .pil-sticky {
-    align-items: flex-start;
-    overflow: clip;
-  }
-
-  .svc-seo-final .pil-sticky > .sf-wrap {
-    padding-inline: 0;
-    width: 100%;
-  }
-
-  .svc-seo-final .pil-layout {
-    display: flex; flex-direction: column; gap: 0; width: 100%;
-  }
-
-  /* display:contents makes .pil-side transparent — children join flex flow */
-  .svc-seo-final .pil-side { display: contents; }
-  .svc-seo-final .pil-intro { padding: 16px 20px 12px; }
-
-  .svc-seo-final .pil-count {
-    position: static;
-    flex-direction: row; overflow-x: auto; overflow-y: visible;
-    padding: 8px 20px 12px; gap: 8px;
-    scrollbar-width: none;
-    box-shadow: 0 2px 8px rgba(9,16,46,.07);
-    background: #fff; margin-top: 0; max-width: 100%;
-  }
-  .svc-seo-final .pil-count::-webkit-scrollbar { display: none; }
-  .svc-seo-final .pil-count-item { min-width: max-content; flex-shrink: 0; min-height: 44px; }
-
-  .svc-seo-final .pil-panels {
-    min-height: 0; overflow: clip; max-width: 100%;
-    margin: 14px 20px 20px;
-  }
-
-  .svc-seo-final .pil-panel { position: absolute; inset: 0; }
-  .svc-seo-final .pil-panel.pil-panel-active { position: relative; inset: auto; }
-
-  .svc-seo-final .pil-sticky .scene { padding: 20px; max-width: 100%; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .svc-seo-final .pil-panel { transition: none; }
-  .svc-seo-final .pil-dot { transition: none; }
-}
 
 /* ══ SECTORS ══ */
 .svc-seo-final #sectors { background: #fff; }
