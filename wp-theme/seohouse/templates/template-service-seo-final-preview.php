@@ -13,10 +13,10 @@ get_header();
 
 // ── Internal URLs ─────────────────────────────────────────────────────
 $contact_url  = sh_page_url( 'contact' );
-$seo_url      = sh_safe_url( 'services/seo' );
-$content_url  = sh_safe_url( 'services/content' );
-$backlinks_url = sh_safe_url( 'services/backlinks' );
-$consulting_url = sh_safe_url( 'services/consulting' );
+$seo_url        = home_url( '/services/seo/' );
+$content_url    = home_url( '/services/seo/content/' );
+$backlinks_url  = home_url( '/services/seo/backlinks/' );
+$consulting_url = home_url( '/services/seo/consulting/' );
 $stores_url   = sh_safe_url( 'services/seo/stores-seo' );
 $results_url  = sh_page_url( 'results' );
 $sec_ecom     = sh_safe_url( 'sectors/ecommerce' ) ?: home_url( '/sectors/ecommerce/' );
@@ -183,7 +183,7 @@ function sf_strip_col( array $items ): void {
     </div>
     <div class="svc-map sr">
 
-      <div class="svc-row">
+      <a class="svc-row" href="<?php echo esc_url( $seo_url ); ?>">
         <div class="svc-node" aria-hidden="true"><span>١</span></div>
         <div class="svc-id">
           <div class="svc-ico">
@@ -199,14 +199,13 @@ function sf_strip_col( array $items ): void {
           <p>نراجع الزحف والفهرسة والسرعة وبنية الموقع. ثم ننفّذ الإصلاحات المطلوبة بالتعاون مع المطور عند الحاجة.</p>
         </div>
         <div class="svc-do">
+          <div class="svc-chips-label">يشمل</div>
           <div class="svc-chips"><span>تدقيق تقني</span><span>Core Web Vitals</span><span>Sitemap &amp; Robots</span><span>معالجة أخطاء الفهرسة</span></div>
-          <?php if ( $seo_url ) : ?>
-          <a href="<?php echo esc_url( $seo_url ); ?>" class="svc-link">تفاصيل الخدمة <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-          <?php endif; ?>
+          <span class="svc-link">السيو التقني بالتفصيل <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
         </div>
-      </div>
+      </a>
 
-      <div class="svc-row">
+      <a class="svc-row" href="<?php echo esc_url( $seo_url ); ?>">
         <div class="svc-node" aria-hidden="true"><span>٢</span></div>
         <div class="svc-id">
           <div class="svc-ico">
@@ -222,14 +221,13 @@ function sf_strip_col( array $items ): void {
           <p>نراجع العناوين والمحتوى والروابط الداخلية. ونرتب كل صفحة حول نية البحث والخطوة التي نريد من الزائر اتخاذها.</p>
         </div>
         <div class="svc-do">
+          <div class="svc-chips-label">يشمل</div>
           <div class="svc-chips"><span>هيكلة العناوين</span><span>الروابط الداخلية</span><span>مطابقة النية</span><span>عناصر التحويل</span></div>
-          <?php if ( $seo_url ) : ?>
-          <a href="<?php echo esc_url( $seo_url ); ?>" class="svc-link">تفاصيل الخدمة <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-          <?php endif; ?>
+          <span class="svc-link">السيو الداخلي بالتفصيل <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
         </div>
-      </div>
+      </a>
 
-      <div class="svc-row">
+      <a class="svc-row" href="<?php echo esc_url( $content_url ); ?>">
         <div class="svc-node" aria-hidden="true"><span>٣</span></div>
         <div class="svc-id">
           <div class="svc-ico">
@@ -245,14 +243,13 @@ function sf_strip_col( array $items ): void {
           <p>نحدد الموضوعات والكلمات التي يحتاجها الموقع. ثم نعدّ المحتوى ونراجعه حتى يكون مفيدًا للقارئ وقابلًا للمنافسة في البحث.</p>
         </div>
         <div class="svc-do">
+          <div class="svc-chips-label">يشمل</div>
           <div class="svc-chips"><span>بحث الكلمات</span><span>موجز المحتوى</span><span>كتابة متخصّصة</span><span>تحرير وتدقيق</span></div>
-          <?php if ( $content_url ) : ?>
-          <a href="<?php echo esc_url( $content_url ); ?>" class="svc-link">تفاصيل الخدمة <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-          <?php endif; ?>
+          <span class="svc-link">خدمة المحتوى بالتفصيل <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
         </div>
-      </div>
+      </a>
 
-      <div class="svc-row">
+      <a class="svc-row" href="<?php echo esc_url( $backlinks_url ); ?>">
         <div class="svc-node" aria-hidden="true"><span>٤</span></div>
         <div class="svc-id">
           <div class="svc-ico">
@@ -268,14 +265,13 @@ function sf_strip_col( array $items ): void {
           <p>نراجع روابط الموقع الحالية والمنافسين، ثم ننفّذ خطة روابط واضحة بدل شراء روابط عشوائية لا تخدم الموقع.</p>
         </div>
         <div class="svc-do">
+          <div class="svc-chips-label">يشمل</div>
           <div class="svc-chips"><span>روابط تحريرية</span><span>مواقع ذات صلة</span><span>مراجعة ملف الروابط</span><span>بناء السلطة</span></div>
-          <?php if ( $backlinks_url ) : ?>
-          <a href="<?php echo esc_url( $backlinks_url ); ?>" class="svc-link">تفاصيل الخدمة <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-          <?php endif; ?>
+          <span class="svc-link">السيو الخارجي بالتفصيل <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
         </div>
-      </div>
+      </a>
 
-      <div class="svc-row">
+      <a class="svc-row" href="<?php echo esc_url( $consulting_url ); ?>">
         <div class="svc-node" aria-hidden="true"><span>٥</span></div>
         <div class="svc-id">
           <div class="svc-ico">
@@ -291,12 +287,11 @@ function sf_strip_col( array $items ): void {
           <p>نحلل الموقع والبيانات وعمل الفريق أو الوكالة الحالية. ثم نرتب المشاكل والفرص حسب الأولوية ونوضح لك الخطوة التالية.</p>
         </div>
         <div class="svc-do">
+          <div class="svc-chips-label">يشمل</div>
           <div class="svc-chips"><span>تدقيق شامل</span><span>تحليل المنافسين</span><span>خارطة طريق</span><span>لوحة أداء</span></div>
-          <?php if ( $consulting_url ) : ?>
-          <a href="<?php echo esc_url( $consulting_url ); ?>" class="svc-link">تفاصيل الخدمة <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-          <?php endif; ?>
+          <span class="svc-link">الاستشارات بالتفصيل <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
         </div>
-      </div>
+      </a>
 
     </div><!-- /.svc-map -->
   </div><!-- /.sf-wrap -->
