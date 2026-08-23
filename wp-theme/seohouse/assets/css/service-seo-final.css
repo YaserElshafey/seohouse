@@ -320,7 +320,15 @@
 /*  --pil-top: set by JS (real header + admin-bar height); 96px safe default.
     --pil-viewport-height: available height below the fixed header.
     The section is the scroll track; .pil-sticky never creates a
-    scroll container (overflow:clip, not hidden).               */
+    scroll container.
+    IMPORTANT — page-level overflow fix:
+    The global theme sets overflow-x:hidden on html/body, which creates a
+    scroll container and breaks position:sticky descendants. Override it for
+    this template only using the WordPress body class.                       */
+body.page-template-template-service-seo-final-preview {
+  overflow-x: clip !important;   /* clip ≠ hidden: no scroll container */
+  overflow-y: visible !important;
+}
 
 .svc-seo-final #pillars {
   position: relative;
@@ -336,7 +344,7 @@
   top: var(--pil-top, 96px);
   height: var(--pil-viewport-height, calc(100svh - 96px));
   background: #fff;
-  overflow: clip;
+  overflow: visible;  /* must not clip or scroll — would break sticky */
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -378,10 +386,12 @@
 .svc-seo-final .pil-count-item.active .n { background: var(--blue); color: #fff; }
 .svc-seo-final .pil-count-item.active span { color: var(--blue); }
 
-/* Single panel slot — panels overlay each other; only .pil-panel-active is opaque */
+/* Single panel slot — panels overlay each other; only .pil-panel-active is opaque.
+   overflow:clip here (non-sticky element) prevents inactive panels bleeding out. */
 .svc-seo-final .pil-panels {
   position: relative;
   min-height: 480px;
+  overflow: clip;
 }
 .svc-seo-final .pil-panel {
   position: absolute;
