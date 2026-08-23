@@ -316,104 +316,149 @@
   .svc-seo-final .hero-btns .sf-btn { flex: 1; }
 }
 
-/* ══ FIVE PILLARS — static services grid ══ */
+/* ══ FIVE PILLARS — SEO Services Map ══ */
 .svc-seo-final #pillars {
-  background: var(--off);
-  padding: clamp(48px,6vw,72px) 0;
-}
-
-.svc-seo-final .pil-head { margin-bottom: clamp(24px,3vw,36px); }
-.svc-seo-final .pil-head .num {
-  font-size: 12px; font-weight: 800;
-  color: var(--blue); letter-spacing: .1em; margin-bottom: 10px;
-}
-.svc-seo-final .pil-head .sf-h2 { margin-bottom: 10px; }
-.svc-seo-final .pil-head .sf-bod { max-width: 620px; }
-
-.svc-seo-final .svc-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-.svc-seo-final .svc-card:last-child { grid-column: 1 / -1; }
-
-.svc-seo-final .svc-card {
   background: #fff;
+  padding: clamp(40px,5vw,60px) 0;
+}
+
+.svc-seo-final .pil-head { margin-bottom: clamp(20px,2.5vw,28px); }
+.svc-seo-final .pil-head .num {
+  font-size: 11.5px; font-weight: 800;
+  color: var(--blue); letter-spacing: .1em; margin-bottom: 8px;
+}
+.svc-seo-final #pillars .sf-h2 {
+  font-size: clamp(26px,2.8vw,38px);
+  margin-bottom: 8px;
+}
+.svc-seo-final .pil-head .sf-bod { max-width: 580px; }
+
+/* ── Bordered map container ── */
+.svc-seo-final .svc-map {
   border: 1px solid var(--line);
   border-radius: var(--r3);
-  padding: 22px 24px 20px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  transition: border-color .2s var(--fast), box-shadow .2s var(--fast);
-}
-.svc-seo-final .svc-card:hover {
-  border-color: rgba(30,46,245,.22);
-  box-shadow: var(--sh-sm);
+  overflow: hidden;
+  background: #fff;
 }
 
-.svc-seo-final .svc-card-top {
-  display: flex;
-  align-items: flex-start;
-  gap: 13px;
-  margin-bottom: 13px;
+/* ── Service rows ── */
+.svc-seo-final .svc-row {
+  display: grid;
+  /* RTL: col1(52px)=rightmost=node, col2(164px)=identity, col3(1fr)=value, col4(216px)=deliverables */
+  grid-template-columns: 52px 164px 1fr 216px;
+  align-items: center;
+  column-gap: 20px;
+  padding-block: 22px;
+  padding-inline-end: 22px;
 }
-.svc-seo-final .svc-card-ico {
-  width: 44px; height: 44px;
-  border-radius: 11px; flex-shrink: 0;
-  background: var(--blue-50);
-  border: 1px solid var(--blue-100);
+.svc-seo-final .svc-row:nth-child(even) { background: #f8f9fc; }
+.svc-seo-final .svc-row + .svc-row     { border-top: 1px solid var(--line); }
+
+/* ── Connector node column (visual only) ── */
+.svc-seo-final .svc-node {
+  display: flex; align-items: center; justify-content: center;
+  align-self: stretch; position: relative;
+}
+/* Vertical line through all rows */
+.svc-seo-final .svc-node::before {
+  content: '';
+  position: absolute; top: 0; bottom: 0;
+  left: 50%; width: 1.5px;
+  background: rgba(30,46,245,.13);
+  transform: translateX(-50%);
+}
+.svc-seo-final .svc-row:first-child .svc-node::before { top: 50%; }
+.svc-seo-final .svc-row:last-child  .svc-node::before { bottom: 50%; }
+/* Node circle sits above the line */
+.svc-seo-final .svc-node span {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: #fff; border: 1.5px solid var(--blue);
+  color: var(--blue); font-size: 12px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1; flex-shrink: 0;
+}
+.svc-seo-final .svc-row:nth-child(even) .svc-node span { background: #f8f9fc; }
+
+/* Mobile number badge — hidden on desktop/tablet */
+.svc-seo-final .svc-num-badge { display: none; }
+
+/* ── Identity column: icon + name ── */
+.svc-seo-final .svc-id {
+  display: flex; align-items: center; gap: 12px;
+}
+.svc-seo-final .svc-ico {
+  width: 44px; height: 44px; border-radius: 11px; flex-shrink: 0;
+  background: var(--blue-50); border: 1px solid var(--blue-100);
   display: flex; align-items: center; justify-content: center;
 }
-.svc-seo-final .svc-card-ico svg {
-  width: 22px; height: 22px;
+.svc-seo-final .svc-ico svg { width: 22px; height: 22px; }
+.svc-seo-final .svc-meta { display: flex; flex-direction: column; gap: 2px; }
+.svc-seo-final .svc-num-badge {
+  font-size: 10.5px; font-weight: 800;
+  color: var(--blue); letter-spacing: .06em;
 }
-.svc-seo-final .svc-card-meta {
-  display: flex; flex-direction: column; gap: 3px; padding-top: 3px;
-}
-.svc-seo-final .svc-card-num {
-  font-size: 11px; font-weight: 800;
-  color: var(--blue); letter-spacing: .08em;
-}
-.svc-seo-final .svc-card-name {
-  font-size: 14px; font-weight: 800; color: var(--ink);
+.svc-seo-final .svc-name {
+  font-size: 13.5px; font-weight: 800; color: var(--ink); line-height: 1.3;
 }
 
-.svc-seo-final .svc-card h3 {
-  font-size: clamp(14.5px,1.25vw,16.5px); font-weight: 800; color: var(--ink);
-  letter-spacing: -.02em; line-height: 1.35; margin-bottom: 8px;
+/* ── Value column: headline + description ── */
+.svc-seo-final .svc-val h3 {
+  font-size: 15px; font-weight: 800; color: var(--ink);
+  letter-spacing: -.015em; line-height: 1.35; margin-bottom: 5px;
 }
-.svc-seo-final .svc-card p {
-  font-size: 13px; line-height: 1.75; color: var(--ink-2);
-  margin-bottom: 13px;
+.svc-seo-final .svc-val p {
+  font-size: 13px; line-height: 1.7; color: var(--ink-2); margin: 0;
+}
+
+/* ── Deliverables column: chips + link ── */
+.svc-seo-final .svc-do {
+  display: flex; flex-direction: column; gap: 10px; align-items: flex-start;
 }
 .svc-seo-final .svc-chips {
-  display: flex; flex-wrap: wrap; gap: 7px;
-  margin-bottom: 16px;
+  display: flex; flex-wrap: wrap; gap: 5px;
 }
 .svc-seo-final .svc-chips span {
-  font-size: 11.5px; font-weight: 600; color: var(--ink-2);
+  font-size: 11px; font-weight: 600; color: var(--ink-2);
   background: var(--surface); border: 1px solid var(--line);
-  border-radius: 50px; padding: 4px 11px;
+  border-radius: 50px; padding: 3px 9px;
 }
-.svc-seo-final .svc-card-link {
-  display: inline-flex; align-items: center; gap: 6px;
+.svc-seo-final .svc-link {
+  display: inline-flex; align-items: center; gap: 5px;
   font-size: 13px; font-weight: 700; color: var(--blue);
-  text-decoration: none; margin-top: auto;
-  transition: gap .2s var(--fast);
+  text-decoration: none; white-space: nowrap;
+  transition: gap .18s var(--fast);
 }
-.svc-seo-final .svc-card-link:hover { gap: 10px; }
+.svc-seo-final .svc-link:hover { gap: 8px; }
 
-/* 5th card: keep content width contained */
-.svc-seo-final .svc-card:last-child h3,
-.svc-seo-final .svc-card:last-child p { max-width: 680px; }
-
-@media (max-width: 860px) {
-  .svc-seo-final .svc-grid { gap: 11px; }
+/* ── Tablet (≤1024px): 3-column, value wraps to second line ── */
+@media (max-width: 1024px) {
+  .svc-seo-final .svc-row {
+    grid-template-columns: 52px 1fr 200px;
+    grid-template-areas:
+      "node id  do"
+      "node val val";
+    align-items: start;
+    column-gap: 16px;
+    padding-inline-end: 18px;
+  }
+  .svc-seo-final .svc-node { grid-area: node; align-self: stretch; }
+  .svc-seo-final .svc-id   { grid-area: id;   padding-block: 3px; }
+  .svc-seo-final .svc-do   { grid-area: do;   padding-block: 3px; }
+  .svc-seo-final .svc-val  { grid-area: val;  padding-top: 14px; }
 }
-@media (max-width: 520px) {
-  .svc-seo-final .svc-grid { grid-template-columns: 1fr; }
-  .svc-seo-final .svc-card:last-child { grid-column: auto; }
+
+/* ── Mobile (≤640px): compact vertical card, connector hidden ── */
+@media (max-width: 640px) {
+  .svc-seo-final .svc-map { border-radius: var(--r2); }
+  .svc-seo-final .svc-row {
+    display: flex; flex-direction: column;
+    padding: 18px 16px; gap: 10px;
+  }
+  .svc-seo-final .svc-node { display: none; }
+  .svc-seo-final .svc-num-badge { display: block; }
+  .svc-seo-final .svc-id { align-items: center; }
+  .svc-seo-final .svc-val h3 { font-size: 15px; }
+  .svc-seo-final .svc-do { align-items: flex-start; }
 }
 
 /* E-commerce strip (sits after the services section, outside #pillars) */

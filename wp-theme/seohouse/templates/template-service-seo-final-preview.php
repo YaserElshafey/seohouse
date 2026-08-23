@@ -181,99 +181,124 @@ function sf_strip_col( array $items ): void {
       <h2 class="sf-h2">خمس خدمات تدفع نمو موقعك من البحث</h2>
       <p class="sf-bod">من تهيئة الموقع تقنيًا إلى بناء المحتوى والسلطة وقياس الأداء — كل جزء له دور واضح في النتيجة، ويعمل مع البقية كمنظومة واحدة.</p>
     </div>
-    <div class="svc-grid">
+    <div class="svc-map sr">
 
-      <div class="svc-card sr">
-        <div class="svc-card-top">
-          <div class="svc-card-ico">
+      <div class="svc-row">
+        <div class="svc-node" aria-hidden="true"><span>١</span></div>
+        <div class="svc-id">
+          <div class="svc-ico">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
           </div>
-          <div class="svc-card-meta">
-            <div class="svc-card-num">٠١</div>
-            <div class="svc-card-name">السيو التقني</div>
+          <div class="svc-meta">
+            <span class="svc-num-badge">٠١</span>
+            <div class="svc-name">السيو التقني</div>
           </div>
         </div>
-        <h3>نعالج المشاكل التقنية التي تعطل ظهور موقعك</h3>
-        <p>نراجع الزحف والفهرسة والسرعة وبنية الموقع. ثم ننفّذ الإصلاحات المطلوبة بالتعاون مع المطور عند الحاجة.</p>
-        <div class="svc-chips"><span>تدقيق تقني</span><span>Core Web Vitals</span><span>Sitemap &amp; Robots</span><span>معالجة أخطاء الفهرسة</span></div>
-        <?php if ( $seo_url ) : ?>
-        <a href="<?php echo esc_url( $seo_url ); ?>" class="svc-card-link">تفاصيل السيو التقني <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-        <?php endif; ?>
+        <div class="svc-val">
+          <h3>نعالج المشاكل التقنية التي تعطل ظهور موقعك</h3>
+          <p>نراجع الزحف والفهرسة والسرعة وبنية الموقع. ثم ننفّذ الإصلاحات المطلوبة بالتعاون مع المطور عند الحاجة.</p>
+        </div>
+        <div class="svc-do">
+          <div class="svc-chips"><span>تدقيق تقني</span><span>Core Web Vitals</span><span>Sitemap &amp; Robots</span><span>معالجة أخطاء الفهرسة</span></div>
+          <?php if ( $seo_url ) : ?>
+          <a href="<?php echo esc_url( $seo_url ); ?>" class="svc-link">تفاصيل الخدمة <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
+          <?php endif; ?>
+        </div>
       </div>
 
-      <div class="svc-card sr">
-        <div class="svc-card-top">
-          <div class="svc-card-ico">
+      <div class="svc-row">
+        <div class="svc-node" aria-hidden="true"><span>٢</span></div>
+        <div class="svc-id">
+          <div class="svc-ico">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
           </div>
-          <div class="svc-card-meta">
-            <div class="svc-card-num">٠٢</div>
-            <div class="svc-card-name">السيو الداخلي</div>
+          <div class="svc-meta">
+            <span class="svc-num-badge">٠٢</span>
+            <div class="svc-name">السيو الداخلي</div>
           </div>
         </div>
-        <h3>نحسّن صفحاتك لتناسب ما يبحث عنه العميل</h3>
-        <p>نراجع العناوين والمحتوى والروابط الداخلية. ونرتب كل صفحة حول نية البحث والخطوة التي نريد من الزائر اتخاذها.</p>
-        <div class="svc-chips"><span>هيكلة العناوين</span><span>الروابط الداخلية</span><span>مطابقة النية</span><span>عناصر التحويل</span></div>
-        <?php if ( $seo_url ) : ?>
-        <a href="<?php echo esc_url( $seo_url ); ?>" class="svc-card-link">تفاصيل السيو الداخلي <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-        <?php endif; ?>
+        <div class="svc-val">
+          <h3>نحسّن صفحاتك لتناسب ما يبحث عنه العميل</h3>
+          <p>نراجع العناوين والمحتوى والروابط الداخلية. ونرتب كل صفحة حول نية البحث والخطوة التي نريد من الزائر اتخاذها.</p>
+        </div>
+        <div class="svc-do">
+          <div class="svc-chips"><span>هيكلة العناوين</span><span>الروابط الداخلية</span><span>مطابقة النية</span><span>عناصر التحويل</span></div>
+          <?php if ( $seo_url ) : ?>
+          <a href="<?php echo esc_url( $seo_url ); ?>" class="svc-link">تفاصيل الخدمة <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
+          <?php endif; ?>
+        </div>
       </div>
 
-      <div class="svc-card sr">
-        <div class="svc-card-top">
-          <div class="svc-card-ico">
+      <div class="svc-row">
+        <div class="svc-node" aria-hidden="true"><span>٣</span></div>
+        <div class="svc-id">
+          <div class="svc-ico">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </div>
-          <div class="svc-card-meta">
-            <div class="svc-card-num">٠٣</div>
-            <div class="svc-card-name">كتابة المحتوى</div>
+          <div class="svc-meta">
+            <span class="svc-num-badge">٠٣</span>
+            <div class="svc-name">كتابة المحتوى</div>
           </div>
         </div>
-        <h3>نخطط للمحتوى ونكتبه ونراجعه قبل النشر</h3>
-        <p>نحدد الموضوعات والكلمات التي يحتاجها الموقع. ثم نعدّ المحتوى ونراجعه حتى يكون مفيدًا للقارئ وقابلًا للمنافسة في البحث.</p>
-        <div class="svc-chips"><span>بحث الكلمات</span><span>موجز المحتوى</span><span>كتابة متخصّصة</span><span>تحرير وتدقيق</span></div>
-        <?php if ( $content_url ) : ?>
-        <a href="<?php echo esc_url( $content_url ); ?>" class="svc-card-link">تفاصيل كتابة المحتوى <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-        <?php endif; ?>
+        <div class="svc-val">
+          <h3>نخطط للمحتوى ونكتبه ونراجعه قبل النشر</h3>
+          <p>نحدد الموضوعات والكلمات التي يحتاجها الموقع. ثم نعدّ المحتوى ونراجعه حتى يكون مفيدًا للقارئ وقابلًا للمنافسة في البحث.</p>
+        </div>
+        <div class="svc-do">
+          <div class="svc-chips"><span>بحث الكلمات</span><span>موجز المحتوى</span><span>كتابة متخصّصة</span><span>تحرير وتدقيق</span></div>
+          <?php if ( $content_url ) : ?>
+          <a href="<?php echo esc_url( $content_url ); ?>" class="svc-link">تفاصيل الخدمة <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
+          <?php endif; ?>
+        </div>
       </div>
 
-      <div class="svc-card sr">
-        <div class="svc-card-top">
-          <div class="svc-card-ico">
+      <div class="svc-row">
+        <div class="svc-node" aria-hidden="true"><span>٤</span></div>
+        <div class="svc-id">
+          <div class="svc-ico">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
           </div>
-          <div class="svc-card-meta">
-            <div class="svc-card-num">٠٤</div>
-            <div class="svc-card-name">السيو الخارجي</div>
+          <div class="svc-meta">
+            <span class="svc-num-badge">٠٤</span>
+            <div class="svc-name">السيو الخارجي</div>
           </div>
         </div>
-        <h3>نبني روابط خارجية من مواقع موثوقة ومرتبطة بمجالك</h3>
-        <p>نراجع روابط الموقع الحالية والمنافسين، ثم ننفّذ خطة روابط واضحة بدل شراء روابط عشوائية لا تخدم الموقع.</p>
-        <div class="svc-chips"><span>روابط تحريرية</span><span>مواقع ذات صلة</span><span>مراجعة ملف الروابط</span><span>بناء السلطة</span></div>
-        <?php if ( $backlinks_url ) : ?>
-        <a href="<?php echo esc_url( $backlinks_url ); ?>" class="svc-card-link">تفاصيل السيو الخارجي <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-        <?php endif; ?>
+        <div class="svc-val">
+          <h3>نبني روابط خارجية من مواقع موثوقة ومرتبطة بمجالك</h3>
+          <p>نراجع روابط الموقع الحالية والمنافسين، ثم ننفّذ خطة روابط واضحة بدل شراء روابط عشوائية لا تخدم الموقع.</p>
+        </div>
+        <div class="svc-do">
+          <div class="svc-chips"><span>روابط تحريرية</span><span>مواقع ذات صلة</span><span>مراجعة ملف الروابط</span><span>بناء السلطة</span></div>
+          <?php if ( $backlinks_url ) : ?>
+          <a href="<?php echo esc_url( $backlinks_url ); ?>" class="svc-link">تفاصيل الخدمة <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
+          <?php endif; ?>
+        </div>
       </div>
 
-      <div class="svc-card sr">
-        <div class="svc-card-top">
-          <div class="svc-card-ico">
+      <div class="svc-row">
+        <div class="svc-node" aria-hidden="true"><span>٥</span></div>
+        <div class="svc-id">
+          <div class="svc-ico">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
           </div>
-          <div class="svc-card-meta">
-            <div class="svc-card-num">٠٥</div>
-            <div class="svc-card-name">الاستشارات وتحليل الأداء</div>
+          <div class="svc-meta">
+            <span class="svc-num-badge">٠٥</span>
+            <div class="svc-name">الاستشارات وتحليل الأداء</div>
           </div>
         </div>
-        <h3>نراجع وضع موقعك ونحدد ما يحتاج إلى تنفيذ أولًا</h3>
-        <p>نحلل الموقع والبيانات وعمل الفريق أو الوكالة الحالية. ثم نرتب المشاكل والفرص حسب الأولوية ونوضح لك الخطوة التالية.</p>
-        <div class="svc-chips"><span>تدقيق شامل</span><span>تحليل المنافسين</span><span>خارطة طريق</span><span>لوحة أداء</span></div>
-        <?php if ( $consulting_url ) : ?>
-        <a href="<?php echo esc_url( $consulting_url ); ?>" class="svc-card-link">تفاصيل الاستشارات <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
-        <?php endif; ?>
+        <div class="svc-val">
+          <h3>نراجع وضع موقعك ونحدد ما يحتاج إلى تنفيذ أولًا</h3>
+          <p>نحلل الموقع والبيانات وعمل الفريق أو الوكالة الحالية. ثم نرتب المشاكل والفرص حسب الأولوية ونوضح لك الخطوة التالية.</p>
+        </div>
+        <div class="svc-do">
+          <div class="svc-chips"><span>تدقيق شامل</span><span>تحليل المنافسين</span><span>خارطة طريق</span><span>لوحة أداء</span></div>
+          <?php if ( $consulting_url ) : ?>
+          <a href="<?php echo esc_url( $consulting_url ); ?>" class="svc-link">تفاصيل الخدمة <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
+          <?php endif; ?>
+        </div>
       </div>
 
-    </div><!-- /.svc-grid -->
+    </div><!-- /.svc-map -->
   </div><!-- /.sf-wrap -->
 </section><!-- /#pillars -->
 
