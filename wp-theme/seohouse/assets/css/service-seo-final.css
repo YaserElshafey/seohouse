@@ -316,180 +316,158 @@
   .svc-seo-final .hero-btns .sf-btn { flex: 1; }
 }
 
-/* ══ FIVE PILLARS — SEO Services Map ══ */
+/* ══ FIVE PILLARS — Editorial services layout ══ */
 .svc-seo-final #pillars {
   background: #fff;
-  padding: clamp(40px,5vw,60px) 0;
+  padding: clamp(56px,6vw,80px) 0;
 }
 
-.svc-seo-final .pil-head { margin-bottom: clamp(20px,2.5vw,28px); }
-.svc-seo-final .pil-head .num {
-  font-size: 11.5px; font-weight: 800;
-  color: var(--blue); letter-spacing: .1em; margin-bottom: 8px;
-}
-.svc-seo-final #pillars .sf-h2 {
-  font-size: clamp(26px,2.8vw,38px);
-  margin-bottom: 8px;
-}
-.svc-seo-final .pil-head .sf-bod { max-width: 580px; }
-
-/* ── Bordered map container ── */
-.svc-seo-final .svc-map {
-  border: 1px solid var(--line);
-  border-radius: var(--r3);
-  overflow: hidden;
-  background: #fff;
-}
-
-/* ── Service rows (each row is a full-width anchor) ── */
-.svc-seo-final .svc-row {
+/* ── Split editorial introduction ── */
+.svc-seo-final .ed-intro {
   display: grid;
-  /* RTL: col1(52px)=rightmost=node, col2(164px)=identity, col3(1fr)=value, col4(216px)=deliverables */
-  grid-template-columns: 52px 164px 1fr 216px;
-  align-items: center;
-  column-gap: 20px;
-  padding-block: 22px;
-  padding-inline-end: 22px;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 28px clamp(40px,5vw,80px);
+  margin-bottom: clamp(40px,4.5vw,56px);
+}
+.svc-seo-final .ed-eyebrow {
+  font-size: 11px; font-weight: 800; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 14px;
+}
+.svc-seo-final .ed-h2 {
+  font-size: clamp(32px,3.4vw,48px);
+  font-weight: 900; line-height: 1.15; letter-spacing: -.025em;
+  color: var(--ink); margin: 0;
+}
+.svc-seo-final .ed-intro-body {
+  display: flex; flex-direction: column; gap: 18px; padding-bottom: 4px;
+}
+.svc-seo-final .ed-lead {
+  font-size: 14.5px; line-height: 1.75; color: var(--ink-2);
+  max-width: 400px; margin: 0;
+}
+.svc-seo-final .ed-contact-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 700; color: var(--blue);
   text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  transition: background .18s var(--fast), box-shadow .18s var(--fast);
+  border-bottom: 1.5px solid rgba(30,46,245,.3);
+  padding-bottom: 1px;
+  transition: gap .18s var(--fast), border-color .18s var(--fast);
 }
-.svc-seo-final .svc-row:nth-child(even) { background: #f8f9fc; }
-.svc-seo-final .svc-row + .svc-row     { border-top: 1px solid var(--line); }
+.svc-seo-final .ed-contact-link:hover { gap: 9px; border-bottom-color: var(--blue); }
+.svc-seo-final .ed-contact-link svg { transition: transform .18s var(--fast); }
+.svc-seo-final .ed-contact-link:hover svg { transform: translateX(-3px); }
 
-/* Row hover: light blue tint + right inset border */
-.svc-seo-final .svc-row:hover {
-  background: rgba(30,46,245,.04);
-  box-shadow: inset -4px 0 0 var(--blue);
+/* ── 6-column editorial grid ── */
+.svc-seo-final .ed-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: var(--line);
 }
-.svc-seo-final .svc-row:nth-child(even):hover { background: rgba(30,46,245,.06); }
 
-/* Focus ring for keyboard nav */
-.svc-seo-final .svc-row:focus-visible {
+/* Row 1: 3 services × 2 cols | Row 2: 2 services × 3 cols */
+.svc-seo-final .ed-svc:nth-child(-n+3) { grid-column: span 2; }
+.svc-seo-final .ed-svc:nth-child(n+4)  { grid-column: span 3; }
+
+/* ── Service block (full anchor) ── */
+.svc-seo-final .ed-svc {
+  display: flex; flex-direction: column;
+  padding: 28px 24px 24px;
+  background: #fff;
+  border-top: 2px solid var(--line);
+  text-decoration: none; color: inherit; cursor: pointer;
+  transition: border-top-color .2s var(--fast), background .2s var(--fast);
+}
+.svc-seo-final .ed-svc:hover {
+  border-top-color: var(--blue);
+  background: rgba(30,46,245,.025);
+}
+.svc-seo-final .ed-svc:focus-visible {
   outline: 2px solid var(--blue);
   outline-offset: -2px;
 }
 
-/* ── Connector node column (visual only) ── */
-.svc-seo-final .svc-node {
-  display: flex; align-items: center; justify-content: center;
-  align-self: stretch; position: relative;
+/* ── Number + icon row ── */
+.svc-seo-final .ed-svc-top {
+  display: flex; align-items: center;
+  justify-content: space-between; margin-bottom: 18px;
 }
-/* Vertical line through all rows */
-.svc-seo-final .svc-node::before {
-  content: '';
-  position: absolute; top: 0; bottom: 0;
-  left: 50%; width: 1.5px;
-  background: rgba(30,46,245,.13);
-  transform: translateX(-50%);
+.svc-seo-final .ed-num {
+  font-size: 10.5px; font-weight: 800; letter-spacing: .07em;
+  color: var(--ink-3, #9ca3af);
 }
-.svc-seo-final .svc-row:first-child .svc-node::before { top: 50%; }
-.svc-seo-final .svc-row:last-child  .svc-node::before { bottom: 50%; }
-/* Node circle sits above the line */
-.svc-seo-final .svc-node span {
-  width: 28px; height: 28px; border-radius: 50%;
-  background: #fff; border: 1.5px solid var(--blue);
-  color: var(--blue); font-size: 12px; font-weight: 800;
-  display: flex; align-items: center; justify-content: center;
-  position: relative; z-index: 1; flex-shrink: 0;
-}
-.svc-seo-final .svc-row:nth-child(even) .svc-node span { background: #f8f9fc; }
-
-/* Mobile number badge — hidden on desktop/tablet */
-.svc-seo-final .svc-num-badge { display: none; }
-
-/* ── Identity column: icon + name ── */
-.svc-seo-final .svc-id {
-  display: flex; align-items: center; gap: 12px;
-}
-.svc-seo-final .svc-ico {
-  width: 44px; height: 44px; border-radius: 11px; flex-shrink: 0;
+.svc-seo-final .ed-ico {
+  width: 40px; height: 40px; flex-shrink: 0; border-radius: 10px;
   background: var(--blue-50); border: 1px solid var(--blue-100);
   display: flex; align-items: center; justify-content: center;
 }
-.svc-seo-final .svc-ico svg { width: 22px; height: 22px; }
-.svc-seo-final .svc-meta { display: flex; flex-direction: column; gap: 2px; }
-.svc-seo-final .svc-num-badge {
-  font-size: 10.5px; font-weight: 800;
-  color: var(--blue); letter-spacing: .06em;
-}
-.svc-seo-final .svc-name {
-  font-size: 13.5px; font-weight: 800; color: var(--ink); line-height: 1.3;
+.svc-seo-final .ed-ico svg { width: 20px; height: 20px; color: var(--blue); }
+
+/* ── Service name label ── */
+.svc-seo-final .ed-svc-name {
+  font-size: 10.5px; font-weight: 800; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 9px;
 }
 
-/* ── Value column: headline + description ── */
-.svc-seo-final .svc-val h3 {
-  font-size: 15px; font-weight: 800; color: var(--ink);
-  letter-spacing: -.015em; line-height: 1.35; margin-bottom: 5px;
-}
-.svc-seo-final .svc-val p {
-  font-size: 13px; line-height: 1.7; color: var(--ink-2); margin: 0;
+/* ── Benefit headline ── */
+.svc-seo-final .ed-h3 {
+  font-size: 15px; font-weight: 800; line-height: 1.4;
+  letter-spacing: -.015em; color: var(--ink); margin: 0 0 9px;
 }
 
-/* ── Deliverables column: chips + link ── */
-.svc-seo-final .svc-do {
-  display: flex; flex-direction: column; gap: 8px; align-items: flex-start;
+/* ── Description ── */
+.svc-seo-final .ed-desc {
+  font-size: 13px; line-height: 1.7; color: var(--ink-2);
+  margin: 0 0 16px; flex-grow: 1;
 }
-.svc-seo-final .svc-chips-label {
-  font-size: 10px; font-weight: 800; letter-spacing: .08em;
-  color: var(--ink-3, #9ca3af); text-transform: uppercase;
+
+/* ── Plain deliverables list ── */
+.svc-seo-final .ed-del {
+  list-style: none; padding: 0; margin: 0 0 20px;
+  display: flex; flex-direction: column; gap: 5px;
 }
-.svc-seo-final .svc-chips {
-  display: flex; flex-wrap: wrap; gap: 5px;
+.svc-seo-final .ed-del li {
+  font-size: 12.5px; color: var(--ink-2); font-weight: 500;
+  padding-inline-start: 14px; position: relative;
 }
-.svc-seo-final .svc-chips span {
-  font-size: 11px; font-weight: 600; color: var(--ink-2);
-  background: var(--surface); border: 1px solid var(--line);
-  border-radius: 50px; padding: 3px 9px;
+.svc-seo-final .ed-del li::before {
+  content: '—';
+  position: absolute; inset-inline-start: 0; top: 1px;
+  color: var(--blue); font-size: 10px;
 }
-.svc-seo-final .svc-link {
+
+/* ── Action link ── */
+.svc-seo-final .ed-link {
   display: inline-flex; align-items: center; gap: 6px;
-  font-size: 12.5px; font-weight: 800; color: var(--blue);
-  white-space: nowrap;
-  background: var(--blue-50); border: 1px solid var(--blue-100);
-  border-radius: 20px; padding: 4px 10px;
-  transition: gap .18s var(--fast), background .18s var(--fast);
+  font-size: 12.5px; font-weight: 700; color: var(--blue);
+  margin-top: auto;
+  transition: gap .18s var(--fast);
 }
-.svc-seo-final .svc-link svg {
-  transition: transform .18s var(--fast);
-  flex-shrink: 0;
-}
-.svc-seo-final a.svc-row:hover .svc-link {
-  gap: 9px;
-  background: var(--blue-100, rgba(30,46,245,.12));
-}
-.svc-seo-final a.svc-row:hover .svc-link svg { transform: translateX(-3px); }
+.svc-seo-final .ed-link svg { transition: transform .18s var(--fast); flex-shrink: 0; }
+.svc-seo-final .ed-svc:hover .ed-link { gap: 9px; }
+.svc-seo-final .ed-svc:hover .ed-link svg { transform: translateX(-3px); }
 
-/* ── Tablet (≤1024px): 3-column, value wraps to second line ── */
+/* ── Tablet ≤1024px: 2 equal columns ── */
 @media (max-width: 1024px) {
-  .svc-seo-final .svc-row {
-    grid-template-columns: 52px 1fr 200px;
-    grid-template-areas:
-      "node id  do"
-      "node val val";
-    align-items: start;
-    column-gap: 16px;
-    padding-inline-end: 18px;
-  }
-  .svc-seo-final .svc-node { grid-area: node; align-self: stretch; }
-  .svc-seo-final .svc-id   { grid-area: id;   padding-block: 3px; }
-  .svc-seo-final .svc-do   { grid-area: do;   padding-block: 3px; }
-  .svc-seo-final .svc-val  { grid-area: val;  padding-top: 14px; }
+  .svc-seo-final .ed-intro { gap: 24px clamp(24px,3vw,40px); }
+  .svc-seo-final .ed-grid  { grid-template-columns: repeat(2, 1fr); }
+  .svc-seo-final .ed-svc:nth-child(-n+3),
+  .svc-seo-final .ed-svc:nth-child(n+4) { grid-column: span 1; }
 }
 
-/* ── Mobile (≤640px): compact vertical card, connector hidden ── */
+/* ── Mobile ≤640px: single column ── */
 @media (max-width: 640px) {
-  .svc-seo-final .svc-map { border-radius: var(--r2); }
-  .svc-seo-final .svc-row {
-    display: flex; flex-direction: column;
-    padding: 18px 16px; gap: 10px;
+  .svc-seo-final .ed-intro {
+    grid-template-columns: 1fr;
+    margin-bottom: 28px;
   }
-  .svc-seo-final .svc-node { display: none; }
-  .svc-seo-final .svc-num-badge { display: block; }
-  .svc-seo-final .svc-id { align-items: center; }
-  .svc-seo-final .svc-val h3 { font-size: 15px; }
-  .svc-seo-final .svc-do { align-items: flex-start; }
+  .svc-seo-final .ed-lead { max-width: 100%; }
+  .svc-seo-final .ed-grid { grid-template-columns: 1fr; }
+  .svc-seo-final .ed-svc:nth-child(-n+3),
+  .svc-seo-final .ed-svc:nth-child(n+4) { grid-column: span 1; }
+  .svc-seo-final .ed-svc { padding: 20px 18px 18px; }
+  .svc-seo-final .ed-svc-top { margin-bottom: 12px; }
 }
 
 /* E-commerce strip (sits after the services section, outside #pillars) */

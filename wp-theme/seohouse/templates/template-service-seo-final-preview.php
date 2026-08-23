@@ -172,128 +172,116 @@ function sf_strip_col( array $items ): void {
 
 <?php get_template_part( 'template-parts/sections/clients' ); ?>
 
-<!-- ══ FIVE PILLARS ══ -->
-<!-- Section height = scroll track: 100vh travel + 5 × 480 px per service -->
+<!-- ══ FIVE PILLARS — Editorial services ══ -->
 <section id="pillars" aria-label="خدمات السيو">
   <div class="sf-wrap">
-    <div class="pil-head sr">
-      <div class="num">خدمات السيو</div>
-      <h2 class="sf-h2">خمس خدمات تدفع نمو موقعك من البحث</h2>
-      <p class="sf-bod">من تهيئة الموقع تقنيًا إلى بناء المحتوى والسلطة وقياس الأداء — كل جزء له دور واضح في النتيجة، ويعمل مع البقية كمنظومة واحدة.</p>
-    </div>
-    <div class="svc-map sr">
 
-      <a class="svc-row" href="<?php echo esc_url( $seo_url ); ?>">
-        <div class="svc-node" aria-hidden="true"><span>١</span></div>
-        <div class="svc-id">
-          <div class="svc-ico">
+    <!-- Split editorial introduction -->
+    <div class="ed-intro sr">
+      <div class="ed-intro-head">
+        <div class="ed-eyebrow">خدمات السيو</div>
+        <h2 class="ed-h2">خدمات متكاملة<br>لنمو موقعك من البحث</h2>
+      </div>
+      <div class="ed-intro-body">
+        <p class="ed-lead">من تهيئة الموقع تقنيًا إلى بناء المحتوى والسلطة وقياس الأداء — كل جزء له دور واضح في النتيجة، ويعمل مع البقية كمنظومة واحدة.</p>
+        <a href="<?php echo esc_url( $contact_url ); ?>" class="ed-contact-link">ناقش احتياجات موقعك <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
+      </div>
+    </div>
+
+    <!-- 6-column editorial grid: 3 × 2-col + 2 × 3-col -->
+    <div class="ed-grid sr">
+
+      <a class="ed-svc" href="<?php echo esc_url( $seo_url ); ?>">
+        <div class="ed-svc-top">
+          <span class="ed-num">٠١</span>
+          <div class="ed-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
           </div>
-          <div class="svc-meta">
-            <span class="svc-num-badge">٠١</span>
-            <div class="svc-name">السيو التقني</div>
-          </div>
         </div>
-        <div class="svc-val">
-          <h3>نعالج المشاكل التقنية التي تعطل ظهور موقعك</h3>
-          <p>نراجع الزحف والفهرسة والسرعة وبنية الموقع. ثم ننفّذ الإصلاحات المطلوبة بالتعاون مع المطور عند الحاجة.</p>
-        </div>
-        <div class="svc-do">
-          <div class="svc-chips-label">يشمل</div>
-          <div class="svc-chips"><span>تدقيق تقني</span><span>Core Web Vitals</span><span>Sitemap &amp; Robots</span><span>معالجة أخطاء الفهرسة</span></div>
-          <span class="svc-link">تفاصيل خدمة السيو التقني <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
-        </div>
+        <div class="ed-svc-name">السيو التقني</div>
+        <h3 class="ed-h3">نعالج المشاكل التقنية التي تعطل ظهور موقعك</h3>
+        <p class="ed-desc">نراجع الزحف والفهرسة والسرعة وبنية الموقع. ثم ننفّذ الإصلاحات المطلوبة بالتعاون مع المطور عند الحاجة.</p>
+        <ul class="ed-del">
+          <li>الزحف والفهرسة</li>
+          <li>سرعة وتجربة الموقع</li>
+          <li>البيانات المنظمة</li>
+        </ul>
+        <span class="ed-link">تفاصيل خدمة السيو التقني <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
       </a>
 
-      <a class="svc-row" href="<?php echo esc_url( $seo_url ); ?>">
-        <div class="svc-node" aria-hidden="true"><span>٢</span></div>
-        <div class="svc-id">
-          <div class="svc-ico">
+      <a class="ed-svc" href="<?php echo esc_url( $seo_url ); ?>">
+        <div class="ed-svc-top">
+          <span class="ed-num">٠٢</span>
+          <div class="ed-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
           </div>
-          <div class="svc-meta">
-            <span class="svc-num-badge">٠٢</span>
-            <div class="svc-name">السيو الداخلي</div>
-          </div>
         </div>
-        <div class="svc-val">
-          <h3>نحسّن صفحاتك لتناسب ما يبحث عنه العميل</h3>
-          <p>نراجع العناوين والمحتوى والروابط الداخلية. ونرتب كل صفحة حول نية البحث والخطوة التي نريد من الزائر اتخاذها.</p>
-        </div>
-        <div class="svc-do">
-          <div class="svc-chips-label">يشمل</div>
-          <div class="svc-chips"><span>هيكلة العناوين</span><span>الروابط الداخلية</span><span>مطابقة النية</span><span>عناصر التحويل</span></div>
-          <span class="svc-link">تفاصيل خدمة السيو الداخلي <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
-        </div>
+        <div class="ed-svc-name">السيو الداخلي</div>
+        <h3 class="ed-h3">نحسّن صفحاتك لتناسب ما يبحث عنه العميل</h3>
+        <p class="ed-desc">نراجع العناوين والمحتوى والروابط الداخلية. ونرتب كل صفحة حول نية البحث والخطوة التي نريد من الزائر اتخاذها.</p>
+        <ul class="ed-del">
+          <li>هيكلة الصفحات</li>
+          <li>الروابط الداخلية</li>
+          <li>تحسين نية البحث</li>
+        </ul>
+        <span class="ed-link">تفاصيل خدمة السيو الداخلي <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
       </a>
 
-      <a class="svc-row" href="<?php echo esc_url( $content_url ); ?>">
-        <div class="svc-node" aria-hidden="true"><span>٣</span></div>
-        <div class="svc-id">
-          <div class="svc-ico">
+      <a class="ed-svc" href="<?php echo esc_url( $content_url ); ?>">
+        <div class="ed-svc-top">
+          <span class="ed-num">٠٣</span>
+          <div class="ed-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </div>
-          <div class="svc-meta">
-            <span class="svc-num-badge">٠٣</span>
-            <div class="svc-name">كتابة المحتوى</div>
-          </div>
         </div>
-        <div class="svc-val">
-          <h3>نخطط للمحتوى ونكتبه ونراجعه قبل النشر</h3>
-          <p>نحدد الموضوعات والكلمات التي يحتاجها الموقع. ثم نعدّ المحتوى ونراجعه حتى يكون مفيدًا للقارئ وقابلًا للمنافسة في البحث.</p>
-        </div>
-        <div class="svc-do">
-          <div class="svc-chips-label">يشمل</div>
-          <div class="svc-chips"><span>بحث الكلمات</span><span>موجز المحتوى</span><span>كتابة متخصّصة</span><span>تحرير وتدقيق</span></div>
-          <span class="svc-link">تفاصيل خدمة كتابة المحتوى <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
-        </div>
+        <div class="ed-svc-name">كتابة المحتوى</div>
+        <h3 class="ed-h3">نخطط للمحتوى ونكتبه ونراجعه قبل النشر</h3>
+        <p class="ed-desc">نحدد الموضوعات والكلمات التي يحتاجها الموقع. ثم نعدّ المحتوى ونراجعه حتى يكون مفيدًا للقارئ وقابلًا للمنافسة في البحث.</p>
+        <ul class="ed-del">
+          <li>بحث الكلمات</li>
+          <li>كتابة المحتوى</li>
+          <li>التحرير والمراجعة</li>
+        </ul>
+        <span class="ed-link">تفاصيل خدمة كتابة المحتوى <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
       </a>
 
-      <a class="svc-row" href="<?php echo esc_url( $backlinks_url ); ?>">
-        <div class="svc-node" aria-hidden="true"><span>٤</span></div>
-        <div class="svc-id">
-          <div class="svc-ico">
+      <a class="ed-svc" href="<?php echo esc_url( $backlinks_url ); ?>">
+        <div class="ed-svc-top">
+          <span class="ed-num">٠٤</span>
+          <div class="ed-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
           </div>
-          <div class="svc-meta">
-            <span class="svc-num-badge">٠٤</span>
-            <div class="svc-name">السيو الخارجي</div>
-          </div>
         </div>
-        <div class="svc-val">
-          <h3>نبني روابط خارجية من مواقع موثوقة ومرتبطة بمجالك</h3>
-          <p>نراجع روابط الموقع الحالية والمنافسين، ثم ننفّذ خطة روابط واضحة بدل شراء روابط عشوائية لا تخدم الموقع.</p>
-        </div>
-        <div class="svc-do">
-          <div class="svc-chips-label">يشمل</div>
-          <div class="svc-chips"><span>روابط تحريرية</span><span>مواقع ذات صلة</span><span>مراجعة ملف الروابط</span><span>بناء السلطة</span></div>
-          <span class="svc-link">تفاصيل خدمة بناء الباك لينك <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
-        </div>
+        <div class="ed-svc-name">السيو الخارجي</div>
+        <h3 class="ed-h3">نبني روابط خارجية من مواقع موثوقة ومرتبطة بمجالك</h3>
+        <p class="ed-desc">نراجع روابط الموقع الحالية والمنافسين، ثم ننفّذ خطة روابط واضحة بدل شراء روابط عشوائية لا تخدم الموقع.</p>
+        <ul class="ed-del">
+          <li>روابط تحريرية</li>
+          <li>مراجعة ملف الروابط</li>
+          <li>بناء سلطة الموقع</li>
+        </ul>
+        <span class="ed-link">تفاصيل خدمة بناء الباك لينك <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
       </a>
 
-      <a class="svc-row" href="<?php echo esc_url( $consulting_url ); ?>">
-        <div class="svc-node" aria-hidden="true"><span>٥</span></div>
-        <div class="svc-id">
-          <div class="svc-ico">
+      <a class="ed-svc" href="<?php echo esc_url( $consulting_url ); ?>">
+        <div class="ed-svc-top">
+          <span class="ed-num">٠٥</span>
+          <div class="ed-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
           </div>
-          <div class="svc-meta">
-            <span class="svc-num-badge">٠٥</span>
-            <div class="svc-name">الاستشارات وتحليل الأداء</div>
-          </div>
         </div>
-        <div class="svc-val">
-          <h3>نراجع وضع موقعك ونحدد ما يحتاج إلى تنفيذ أولًا</h3>
-          <p>نحلل الموقع والبيانات وعمل الفريق أو الوكالة الحالية. ثم نرتب المشاكل والفرص حسب الأولوية ونوضح لك الخطوة التالية.</p>
-        </div>
-        <div class="svc-do">
-          <div class="svc-chips-label">يشمل</div>
-          <div class="svc-chips"><span>تدقيق شامل</span><span>تحليل المنافسين</span><span>خارطة طريق</span><span>لوحة أداء</span></div>
-          <span class="svc-link">تفاصيل استشارات السيو <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
-        </div>
+        <div class="ed-svc-name">الاستشارات وتحليل الأداء</div>
+        <h3 class="ed-h3">نراجع وضع موقعك ونحدد ما يحتاج إلى تنفيذ أولًا</h3>
+        <p class="ed-desc">نحلل الموقع والبيانات وعمل الفريق أو الوكالة الحالية. ثم نرتب المشاكل والفرص حسب الأولوية ونوضح لك الخطوة التالية.</p>
+        <ul class="ed-del">
+          <li>تدقيق شامل</li>
+          <li>تحليل المنافسين</li>
+          <li>خارطة طريق للتنفيذ</li>
+        </ul>
+        <span class="ed-link">تفاصيل استشارات السيو <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
       </a>
 
-    </div><!-- /.svc-map -->
+    </div><!-- /.ed-grid -->
   </div><!-- /.sf-wrap -->
 </section><!-- /#pillars -->
 
