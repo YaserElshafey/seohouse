@@ -172,116 +172,193 @@ function sf_strip_col( array $items ): void {
 
 <?php get_template_part( 'template-parts/sections/clients' ); ?>
 
-<!-- ══ FIVE PILLARS — Editorial services ══ -->
+<!-- ══ FIVE PILLARS — Bold services ══ -->
 <section id="pillars" aria-label="خدمات السيو">
   <div class="sf-wrap">
 
-    <!-- Split editorial introduction -->
-    <div class="ed-intro sr">
-      <div class="ed-intro-head">
-        <div class="ed-eyebrow">خدمات السيو</div>
-        <h2 class="ed-h2">خدمات متكاملة<br>لنمو موقعك من البحث</h2>
+    <!-- Balanced two-column intro -->
+    <div class="pil-intro sr">
+      <div class="pil-intro-head">
+        <div class="pil-eyebrow">خدمات السيو</div>
+        <h2 class="pil-h2">كل ما يحتاجه موقعك<br>للنمو من البحث</h2>
       </div>
-      <div class="ed-intro-body">
-        <p class="ed-lead">من تهيئة الموقع تقنيًا إلى بناء المحتوى والسلطة وقياس الأداء — كل جزء له دور واضح في النتيجة، ويعمل مع البقية كمنظومة واحدة.</p>
-        <a href="<?php echo esc_url( $contact_url ); ?>" class="ed-contact-link">ناقش احتياجات موقعك <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></a>
+      <div class="pil-intro-body">
+        <p class="pil-tagline">خمس خدمات تعمل معًا لتحسين ظهور موقعك وجذب عملاء أكثر من Google.</p>
       </div>
     </div>
 
-    <!-- 6-column editorial grid: 3 × 2-col + 2 × 3-col -->
-    <div class="ed-grid sr">
+    <!-- Desktop: bold checkerboard card grid -->
+    <div class="pil-grid sr">
 
-      <a class="ed-svc" href="<?php echo esc_url( $seo_url ); ?>">
-        <div class="ed-svc-top">
-          <span class="ed-num">٠١</span>
-          <div class="ed-ico" aria-hidden="true">
+      <!-- 1: السيو التقني — white -->
+      <a class="pil-card pil-card--w" href="<?php echo esc_url( $seo_url ); ?>">
+        <div class="pil-card-top">
+          <span class="pil-num">٠١</span>
+          <div class="pil-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
           </div>
         </div>
-        <div class="ed-svc-name">السيو التقني</div>
-        <h3 class="ed-h3">نعالج المشاكل التقنية التي تعطل ظهور موقعك</h3>
-        <p class="ed-desc">نراجع الزحف والفهرسة والسرعة وبنية الموقع. ثم ننفّذ الإصلاحات المطلوبة بالتعاون مع المطور عند الحاجة.</p>
-        <ul class="ed-del">
-          <li>الزحف والفهرسة</li>
-          <li>سرعة وتجربة الموقع</li>
-          <li>البيانات المنظمة</li>
-        </ul>
-        <span class="ed-link">تفاصيل خدمة السيو التقني <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
+        <div class="pil-name">السيو التقني</div>
+        <p class="pil-sentence">نعالج مشكلات الزحف والفهرسة والسرعة التي تؤثر في ظهور موقعك.</p>
+        <div class="pil-action">
+          <span class="pil-action-label">اعرف المزيد</span>
+          <span class="pil-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          </span>
+        </div>
       </a>
 
-      <a class="ed-svc" href="<?php echo esc_url( $seo_url ); ?>">
-        <div class="ed-svc-top">
-          <span class="ed-num">٠٢</span>
-          <div class="ed-ico" aria-hidden="true">
+      <!-- 2: السيو الداخلي — navy -->
+      <a class="pil-card pil-card--dk" href="<?php echo esc_url( $seo_url ); ?>">
+        <div class="pil-card-top">
+          <span class="pil-num">٠٢</span>
+          <div class="pil-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
           </div>
         </div>
-        <div class="ed-svc-name">السيو الداخلي</div>
-        <h3 class="ed-h3">نحسّن صفحاتك لتناسب ما يبحث عنه العميل</h3>
-        <p class="ed-desc">نراجع العناوين والمحتوى والروابط الداخلية. ونرتب كل صفحة حول نية البحث والخطوة التي نريد من الزائر اتخاذها.</p>
-        <ul class="ed-del">
-          <li>هيكلة الصفحات</li>
-          <li>الروابط الداخلية</li>
-          <li>تحسين نية البحث</li>
-        </ul>
-        <span class="ed-link">تفاصيل خدمة السيو الداخلي <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
+        <div class="pil-name">السيو الداخلي</div>
+        <p class="pil-sentence">نرتب صفحاتك لتناسب بحث العميل وتساعده على اتخاذ الخطوة التالية.</p>
+        <div class="pil-action">
+          <span class="pil-action-label">اعرف المزيد</span>
+          <span class="pil-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          </span>
+        </div>
       </a>
 
-      <a class="ed-svc" href="<?php echo esc_url( $content_url ); ?>">
-        <div class="ed-svc-top">
-          <span class="ed-num">٠٣</span>
-          <div class="ed-ico" aria-hidden="true">
+      <!-- 3: كتابة المحتوى — navy -->
+      <a class="pil-card pil-card--dk" href="<?php echo esc_url( $content_url ); ?>">
+        <div class="pil-card-top">
+          <span class="pil-num">٠٣</span>
+          <div class="pil-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </div>
         </div>
-        <div class="ed-svc-name">كتابة المحتوى</div>
-        <h3 class="ed-h3">نخطط للمحتوى ونكتبه ونراجعه قبل النشر</h3>
-        <p class="ed-desc">نحدد الموضوعات والكلمات التي يحتاجها الموقع. ثم نعدّ المحتوى ونراجعه حتى يكون مفيدًا للقارئ وقابلًا للمنافسة في البحث.</p>
-        <ul class="ed-del">
-          <li>بحث الكلمات</li>
-          <li>كتابة المحتوى</li>
-          <li>التحرير والمراجعة</li>
-        </ul>
-        <span class="ed-link">تفاصيل خدمة كتابة المحتوى <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
+        <div class="pil-name">كتابة المحتوى</div>
+        <p class="pil-sentence">نكتب محتوى يستهدف خدماتك ويجذب العملاء المناسبين من Google.</p>
+        <div class="pil-action">
+          <span class="pil-action-label">اعرف المزيد</span>
+          <span class="pil-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          </span>
+        </div>
       </a>
 
-      <a class="ed-svc" href="<?php echo esc_url( $backlinks_url ); ?>">
-        <div class="ed-svc-top">
-          <span class="ed-num">٠٤</span>
-          <div class="ed-ico" aria-hidden="true">
+      <!-- 4: السيو الخارجي — white -->
+      <a class="pil-card pil-card--w" href="<?php echo esc_url( $backlinks_url ); ?>">
+        <div class="pil-card-top">
+          <span class="pil-num">٠٤</span>
+          <div class="pil-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
           </div>
         </div>
-        <div class="ed-svc-name">السيو الخارجي</div>
-        <h3 class="ed-h3">نبني روابط خارجية من مواقع موثوقة ومرتبطة بمجالك</h3>
-        <p class="ed-desc">نراجع روابط الموقع الحالية والمنافسين، ثم ننفّذ خطة روابط واضحة بدل شراء روابط عشوائية لا تخدم الموقع.</p>
-        <ul class="ed-del">
-          <li>روابط تحريرية</li>
-          <li>مراجعة ملف الروابط</li>
-          <li>بناء سلطة الموقع</li>
-        </ul>
-        <span class="ed-link">تفاصيل خدمة بناء الباك لينك <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
+        <div class="pil-name">السيو الخارجي</div>
+        <p class="pil-sentence">نبني روابط موثوقة ومرتبطة بمجالك لتقوية ظهور موقعك.</p>
+        <div class="pil-action">
+          <span class="pil-action-label">اعرف المزيد</span>
+          <span class="pil-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          </span>
+        </div>
       </a>
 
-      <a class="ed-svc" href="<?php echo esc_url( $consulting_url ); ?>">
-        <div class="ed-svc-top">
-          <span class="ed-num">٠٥</span>
-          <div class="ed-ico" aria-hidden="true">
+      <!-- 5: الاستشارات — wide horizontal navy -->
+      <a class="pil-card pil-card--wide" href="<?php echo esc_url( $consulting_url ); ?>">
+        <div class="pil-wide-body">
+          <div class="pil-num" style="margin-bottom:10px">٠٥</div>
+          <div class="pil-name">الاستشارات وتحليل الأداء</div>
+          <p class="pil-sentence">نراجع أداء موقعك ونحدد المشكلات والفرص وأولويات التنفيذ.</p>
+        </div>
+        <div class="pil-wide-side">
+          <div class="pil-ico" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
           </div>
+          <div class="pil-wide-cta">
+            <span class="pil-action-label">اعرف المزيد</span>
+            <span class="pil-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+            </span>
+          </div>
         </div>
-        <div class="ed-svc-name">الاستشارات وتحليل الأداء</div>
-        <h3 class="ed-h3">نراجع وضع موقعك ونحدد ما يحتاج إلى تنفيذ أولًا</h3>
-        <p class="ed-desc">نحلل الموقع والبيانات وعمل الفريق أو الوكالة الحالية. ثم نرتب المشاكل والفرص حسب الأولوية ونوضح لك الخطوة التالية.</p>
-        <ul class="ed-del">
-          <li>تدقيق شامل</li>
-          <li>تحليل المنافسين</li>
-          <li>خارطة طريق للتنفيذ</li>
-        </ul>
-        <span class="ed-link">تفاصيل استشارات السيو <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg></span>
       </a>
 
-    </div><!-- /.ed-grid -->
+    </div><!-- /.pil-grid -->
+
+    <!-- Mobile: clean vertical list -->
+    <div class="pil-list sr">
+
+      <a class="pil-row" href="<?php echo esc_url( $seo_url ); ?>">
+        <span class="pil-dot">٠١</span>
+        <div class="pil-row-body">
+          <div class="pil-row-name">السيو التقني</div>
+          <p class="pil-row-sentence">نعالج مشكلات الزحف والفهرسة والسرعة التي تؤثر في ظهور موقعك.</p>
+        </div>
+        <span class="pil-row-chevron" aria-hidden="true">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="14" stroke="#1e2ef5" stroke-width="1.5"/>
+            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#1e2ef5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+
+      <a class="pil-row" href="<?php echo esc_url( $seo_url ); ?>">
+        <span class="pil-dot">٠٢</span>
+        <div class="pil-row-body">
+          <div class="pil-row-name">السيو الداخلي</div>
+          <p class="pil-row-sentence">نرتب صفحاتك لتناسب بحث العميل وتساعده على اتخاذ الخطوة التالية.</p>
+        </div>
+        <span class="pil-row-chevron" aria-hidden="true">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="14" stroke="#1e2ef5" stroke-width="1.5"/>
+            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#1e2ef5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+
+      <a class="pil-row" href="<?php echo esc_url( $content_url ); ?>">
+        <span class="pil-dot">٠٣</span>
+        <div class="pil-row-body">
+          <div class="pil-row-name">كتابة المحتوى</div>
+          <p class="pil-row-sentence">نكتب محتوى يستهدف خدماتك ويجذب العملاء المناسبين من Google.</p>
+        </div>
+        <span class="pil-row-chevron" aria-hidden="true">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="14" stroke="#1e2ef5" stroke-width="1.5"/>
+            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#1e2ef5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+
+      <a class="pil-row" href="<?php echo esc_url( $backlinks_url ); ?>">
+        <span class="pil-dot">٠٤</span>
+        <div class="pil-row-body">
+          <div class="pil-row-name">السيو الخارجي</div>
+          <p class="pil-row-sentence">نبني روابط موثوقة ومرتبطة بمجالك لتقوية ظهور موقعك.</p>
+        </div>
+        <span class="pil-row-chevron" aria-hidden="true">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="14" stroke="#1e2ef5" stroke-width="1.5"/>
+            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#1e2ef5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+
+      <a class="pil-row" href="<?php echo esc_url( $consulting_url ); ?>">
+        <span class="pil-dot">٠٥</span>
+        <div class="pil-row-body">
+          <div class="pil-row-name">الاستشارات وتحليل الأداء</div>
+          <p class="pil-row-sentence">نراجع أداء موقعك ونحدد المشكلات والفرص وأولويات التنفيذ.</p>
+        </div>
+        <span class="pil-row-chevron" aria-hidden="true">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="15" r="14" stroke="#1e2ef5" stroke-width="1.5"/>
+            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#1e2ef5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </a>
+
+    </div><!-- /.pil-list -->
+
   </div><!-- /.sf-wrap -->
 </section><!-- /#pillars -->
 
