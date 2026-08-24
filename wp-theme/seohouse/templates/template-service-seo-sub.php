@@ -13,6 +13,14 @@ if ( in_array( $slug, [ 'seo-stores', 'stores-seo' ], true ) ) {
 	exit;
 }
 
+// ── Temporary redirect — pages not yet published ──────────────
+// /services/seo/technical/ and /services/seo/on-page/ are not
+// yet live. Redirect users to the main SEO page until they exist.
+if ( in_array( $slug, [ 'technical', 'on-page', 'seo-on-page', 'on-page-seo', 'technical-seo' ], true ) ) {
+	wp_redirect( home_url( '/services/seo/' ), 307 );
+	exit;
+}
+
 get_header();
 
 // ── Per-service hardcoded defaults ────────────────────────────
@@ -353,6 +361,8 @@ $contact_url = sh_page_url( 'contact' );
 $seo_url     = sh_page_url( 'services/seo' );
 ?>
 
+<main class="svc-seo-sub">
+
 <!-- ═══════════════════════════════════════════════════════════
      HERO
      ═══════════════════════════════════════════════════════════ -->
@@ -418,18 +428,18 @@ $seo_url     = sh_page_url( 'services/seo' );
       <!-- Right: stats/visual card -->
       <div class="sr d1">
         <div style="background:var(--navy-2);border-radius:var(--r4);padding:30px;position:relative;overflow:hidden">
-          <div style="position:absolute;inset-inline-end:-50px;top:-50px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.28),transparent 70%)"></div>
+          <div style="position:absolute;inset-inline-end:-50px;top:-50px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(38,71,199,.28),transparent 70%)"></div>
 
           <?php if ( ( $def['why_card_type'] ?? 'default' ) === 'consulting' ) : ?>
             <!-- Consulting: 3 big-number stats -->
             <div style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:18px;position:relative;z-index:1">3 أرقام تُلخّص لماذا</div>
             <div style="display:flex;flex-direction:column;gap:12px;position:relative;z-index:1">
               <div style="padding:16px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
-                <div style="font-size:24px;font-weight:900;color:#7b90ff;letter-spacing:-.02em;margin-bottom:4px">68%</div>
+                <div style="font-size:24px;font-weight:900;color:#91A6F4;letter-spacing:-.02em;margin-bottom:4px">68%</div>
                 <div style="font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.6">من المعلنين على شركات سيو يصرّحون بعدم تحقيق نتائج مرضية</div>
               </div>
               <div style="padding:16px 18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
-                <div style="font-size:24px;font-weight:900;color:#7b90ff;letter-spacing:-.02em;margin-bottom:4px">12 شهر</div>
+                <div style="font-size:24px;font-weight:900;color:#91A6F4;letter-spacing:-.02em;margin-bottom:4px">12 شهر</div>
                 <div style="font-size:12.5px;color:rgba(255,255,255,.55);line-height:1.6">متوسط الوقت الضائع قبل اكتشاف أن الاستراتيجية خاطئة</div>
               </div>
               <div style="padding:16px 18px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2);border-radius:var(--r2)">
@@ -443,10 +453,10 @@ $seo_url     = sh_page_url( 'services/seo' );
             <div style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:18px;position:relative;z-index:1">رحلة عميل المتجر في جوجل</div>
             <div style="display:flex;flex-direction:column;gap:10px;position:relative;z-index:1">
               <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
-                <div style="width:26px;height:26px;border-radius:6px;background:rgba(30,46,245,.2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#7b90ff;flex-shrink:0">1</div>
+                <div style="width:26px;height:26px;border-radius:6px;background:rgba(38,71,199,.2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#91A6F4;flex-shrink:0">1</div>
                 <div style="font-size:13px;color:rgba(255,255,255,.72)">يبحث: "شراء منتج في الرياض"</div>
               </div>
-              <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(30,46,245,.14);border:1px solid rgba(30,46,245,.28);border-radius:var(--r2)">
+              <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(38,71,199,.14);border:1px solid rgba(38,71,199,.28);border-radius:var(--r2)">
                 <div style="width:26px;height:26px;border-radius:6px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;color:#fff;flex-shrink:0">2</div>
                 <div style="font-size:13px;color:rgba(255,255,255,.85)">يجد متجرك في المرتبة الأولى</div>
               </div>
@@ -464,7 +474,7 @@ $seo_url     = sh_page_url( 'services/seo' );
                   $is_green = ! empty( $st['g'] );
                   $bg  = $is_green ? 'rgba(16,185,129,.1)' : 'rgba(255,255,255,.04)';
                   $brd = $is_green ? 'rgba(16,185,129,.2)' : 'rgba(255,255,255,.07)';
-                  $vc  = $is_green ? 'var(--green)' : '#7b90ff';
+                  $vc  = $is_green ? 'var(--green)' : '#91A6F4';
               ?>
               <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:<?php echo $bg; ?>;border:1px solid <?php echo $brd; ?>;border-radius:var(--r2)">
                 <div style="font-size:13px;color:<?php echo $is_green ? 'rgba(255,255,255,.85)' : 'rgba(255,255,255,.72)'; ?>;<?php echo $is_green ? 'font-weight:700' : ''; ?>"><?php echo esc_html( $st['l'] ); ?></div>
@@ -877,5 +887,7 @@ get_template_part( 'template-parts/layout/cta-banner', null, [
 	],
 ] );
 ?>
+
+</main><!-- /.svc-seo-sub -->
 
 <?php get_footer(); ?>

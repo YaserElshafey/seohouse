@@ -1,0 +1,185 @@
+/* ═══════════════════════════════════════════════════════════════════
+   SEO House — service-seo-landing.css
+   Scope: .svc-seo-country  and  .svc-seo-sub
+   Extends shared.css + theme.css; replaces old #1e2ef5 blue with
+   brand blue #2647C7 (RGB 38,71,199) inside each scope.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Brand-blue token overrides ─────────────────────────────────── */
+.svc-seo-country,
+.svc-seo-sub {
+  --blue:       #2647C7;
+  --blue-d:     #1F3FB2;
+  --blue-light: #91A6F4;
+  --blue-50:    #EEF2FF;
+  --blue-100:   #DCE4FF;
+  --sh-b:       0 8px 28px rgba(38,71,199,.32);
+}
+
+/* ── Scope wrapper ─────────────────────────────────────────────────
+   Prevents horizontal bleed from any animated or absolute elements. */
+.svc-seo-country,
+.svc-seo-sub {
+  overflow-x: clip;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   HERO — brand-blue gradient instead of navy
+   ═══════════════════════════════════════════════════════════════════ */
+.svc-seo-country .svc-hero,
+.svc-seo-sub .svc-hero {
+  background: linear-gradient(135deg, #2647C7 0%, #193494 100%);
+}
+
+/* em highlight inside h1 — brand-blue light shimmer */
+.svc-seo-country .svc-hero-h1 em,
+.svc-seo-sub .svc-hero-h1 em {
+  background: linear-gradient(110deg, #91A6F4, #DCE4FF 50%, #91A6F4);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Live badge — brand blue tones */
+.svc-seo-country .h-badge,
+.svc-seo-sub .h-badge {
+  background: rgba(38,71,199,.28);
+  border-color: rgba(38,71,199,.45);
+  color: #DCE4FF;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   DARK SIDE CARD (cta-side-card) glow
+   ═══════════════════════════════════════════════════════════════════ */
+.svc-seo-country .cta-side-card::before,
+.svc-seo-sub .cta-side-card::before {
+  background: radial-gradient(circle, rgba(38,71,199,.28), transparent 70%);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   PROCESS LIST connector line + number circle
+   ═══════════════════════════════════════════════════════════════════ */
+.svc-seo-country .proc-list::before,
+.svc-seo-sub .proc-list::before {
+  background: linear-gradient(90deg, transparent, rgba(38,71,199,.3), transparent);
+}
+.svc-seo-country .proc-grid .proc-num,
+.svc-seo-sub .proc-grid .proc-num {
+  background: rgba(38,71,199,.18);
+  border-color: rgba(38,71,199,.35);
+  color: #91A6F4;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   WWD CARD — numbered prefix colour
+   ═══════════════════════════════════════════════════════════════════ */
+.svc-seo-country .wwd-n,
+.svc-seo-sub .wwd-n {
+  color: rgba(38,71,199,.18);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   PILLAR card numbered prefix
+   ═══════════════════════════════════════════════════════════════════ */
+.svc-seo-country .pillar-n,
+.svc-seo-sub .pillar-n {
+  color: rgba(38,71,199,.14);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   IND CARD (fit/sectors grid) hover
+   ═══════════════════════════════════════════════════════════════════ */
+.svc-seo-country .ind-card:hover,
+.svc-seo-sub .ind-card:hover {
+  border-color: rgba(38,71,199,.18);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   CRIT (link quality criteria) icon bg + stroke
+   ═══════════════════════════════════════════════════════════════════ */
+.svc-seo-country .crit-ico,
+.svc-seo-sub .crit-ico {
+  background: rgba(38,71,199,.22);
+}
+.svc-seo-country .crit-ico svg,
+.svc-seo-sub .crit-ico svg {
+  stroke: #91A6F4;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   DEL (deliverables) numbered circle
+   ═══════════════════════════════════════════════════════════════════ */
+.svc-seo-country .del-num,
+.svc-seo-sub .del-num {
+  background: rgba(38,71,199,.25);
+  color: #91A6F4;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   WHO NEEDS THIS card (consulting page)
+   ═══════════════════════════════════════════════════════════════════ */
+.svc-seo-country .who-card:hover,
+.svc-seo-sub .who-card:hover {
+  border-color: rgba(38,71,199,.30);
+}
+.svc-seo-country .who-ico,
+.svc-seo-sub .who-ico {
+  background: rgba(38,71,199,.18);
+}
+.svc-seo-country .who-ico svg,
+.svc-seo-sub .who-ico svg {
+  stroke: #91A6F4;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   CONS CARD (consulting types) hover + featured head
+   ═══════════════════════════════════════════════════════════════════ */
+.svc-seo-country .cons-card:hover,
+.svc-seo-sub .cons-card:hover {
+  border-color: rgba(38,71,199,.18);
+}
+.svc-seo-country .cons-card.featured .cons-head,
+.svc-seo-sub .cons-card.featured .cons-head {
+  border-color: rgba(38,71,199,.18);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   COUNTRY INTRO / WHY SECTION inline dark card
+   Matches theme.css .why-com-grid layout with brand-blue glow
+   ═══════════════════════════════════════════════════════════════════ */
+.svc-seo-country .why-com-grid .dk-glow,
+.svc-seo-sub .why-com-grid .dk-glow {
+  background: radial-gradient(circle, rgba(38,71,199,.22), transparent 70%);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   BACK-TO-SEO proof link box — override btn-o border tint
+   ═══════════════════════════════════════════════════════════════════ */
+.svc-seo-country .btn-o,
+.svc-seo-sub .btn-o {
+  border-color: rgba(38,71,199,.22);
+}
+.svc-seo-country .btn-o:hover,
+.svc-seo-sub .btn-o:hover {
+  border-color: rgba(38,71,199,.38);
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   FAQ — open item heading colour override (--blue now brand blue)
+   Already handled by CSS var, but explicit fallback for older browsers
+   ═══════════════════════════════════════════════════════════════════ */
+.svc-seo-country .faq-item.open .faq-q span,
+.svc-seo-sub .faq-item.open .faq-q span {
+  color: #2647C7;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE ADJUSTMENTS
+   ═══════════════════════════════════════════════════════════════════ */
+@media (max-width: 860px) {
+  .svc-seo-country .why-com-grid,
+  .svc-seo-sub .why-com-grid {
+    grid-template-columns: 1fr;
+  }
+}

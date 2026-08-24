@@ -345,6 +345,8 @@ $trust_items = [
 ];
 ?>
 
+<main class="svc-seo-country">
+
 <!-- Hero -->
 <section class="svc-hero">
   <div class="wrap">
@@ -393,7 +395,7 @@ $trust_items = [
       </div>
       <div class="sr d2">
         <div style="background:var(--navy-2);border-radius:var(--r4);padding:32px 28px;position:relative;overflow:hidden">
-          <div style="position:absolute;inset-inline-end:-50px;top:-50px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.28),transparent 70%)"></div>
+          <div style="position:absolute;inset-inline-end:-50px;top:-50px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(38,71,199,.28),transparent 70%)"></div>
           <div style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:20px;position:relative;z-index:1">ما الذي نقدمه في <?php echo esc_html( $c['name'] ); ?></div>
           <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:11px">
             <?php
@@ -406,7 +408,7 @@ $trust_items = [
             ] as $svc ) :
             ?>
             <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7b90ff" stroke-width="2.5" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#91A6F4" stroke-width="2.5" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
               <span style="font-size:13.5px;font-weight:600;color:rgba(255,255,255,.82)"><?php echo esc_html( $svc ); ?></span>
             </div>
             <?php endforeach; ?>
@@ -494,12 +496,12 @@ $trust_items = [
       </div>
       <div class="sr d2">
         <div style="background:var(--navy-2);border-radius:var(--r4);padding:32px 28px;position:relative;overflow:hidden">
-          <div style="position:absolute;inset-inline-end:-50px;top:-50px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.22),transparent 70%)"></div>
+          <div style="position:absolute;inset-inline-end:-50px;top:-50px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(38,71,199,.22),transparent 70%)"></div>
           <div style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:20px;position:relative;z-index:1">مبادئ العمل التي نلتزم بها</div>
           <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:11px">
             <?php foreach ( $trust_items as $ti ) : ?>
             <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7b90ff" stroke-width="2.5" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#91A6F4" stroke-width="2.5" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
               <span style="font-size:13.5px;font-weight:600;color:rgba(255,255,255,.82)"><?php echo esc_html( $ti ); ?></span>
             </div>
             <?php endforeach; ?>
@@ -587,5 +589,8 @@ get_template_part( 'template-parts/layout/cta-banner', null, [
     ],
 ] );
 ?>
+
+
+</main><!-- /.svc-seo-country -->
 
 <?php get_footer(); ?>

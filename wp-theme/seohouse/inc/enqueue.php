@@ -84,6 +84,25 @@ add_action( 'wp_enqueue_scripts', function () {
     );
 }, 10 );
 
+// SEO Country + Sub Service Pages — shared brand-blue design system
+add_action( 'wp_enqueue_scripts', function () {
+    $templates = [
+        'templates/template-service-seo-country.php',
+        'templates/template-service-seo-sub.php',
+    ];
+    $on_landing = false;
+    foreach ( $templates as $t ) {
+        if ( is_page_template( $t ) ) { $on_landing = true; break; }
+    }
+    if ( ! $on_landing ) return;
+    wp_enqueue_style(
+        'seohouse-service-seo-landing',
+        get_template_directory_uri() . '/assets/css/service-seo-landing.css',
+        [ 'seohouse-theme' ],
+        (string) filemtime( get_template_directory() . '/assets/css/service-seo-landing.css' )
+    );
+}, 10 );
+
 // Remove WordPress block/global styles — this is a custom theme that does not use the block editor
 add_action( 'wp_enqueue_scripts', function () {
     wp_dequeue_style( 'wp-block-library' );
