@@ -295,8 +295,8 @@ function sf_strip_col( array $items ): void {
         </div>
         <span class="pil-row-chevron" aria-hidden="true">
           <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="15" cy="15" r="14" stroke="#1e2ef5" stroke-width="1.5"/>
-            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#1e2ef5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="15" cy="15" r="14" stroke="#2647C7" stroke-width="1.5"/>
+            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#2647C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
       </a>
@@ -309,8 +309,8 @@ function sf_strip_col( array $items ): void {
         </div>
         <span class="pil-row-chevron" aria-hidden="true">
           <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="15" cy="15" r="14" stroke="#1e2ef5" stroke-width="1.5"/>
-            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#1e2ef5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="15" cy="15" r="14" stroke="#2647C7" stroke-width="1.5"/>
+            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#2647C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
       </a>
@@ -323,8 +323,8 @@ function sf_strip_col( array $items ): void {
         </div>
         <span class="pil-row-chevron" aria-hidden="true">
           <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="15" cy="15" r="14" stroke="#1e2ef5" stroke-width="1.5"/>
-            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#1e2ef5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="15" cy="15" r="14" stroke="#2647C7" stroke-width="1.5"/>
+            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#2647C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
       </a>
@@ -337,8 +337,8 @@ function sf_strip_col( array $items ): void {
         </div>
         <span class="pil-row-chevron" aria-hidden="true">
           <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="15" cy="15" r="14" stroke="#1e2ef5" stroke-width="1.5"/>
-            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#1e2ef5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="15" cy="15" r="14" stroke="#2647C7" stroke-width="1.5"/>
+            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#2647C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
       </a>
@@ -351,8 +351,8 @@ function sf_strip_col( array $items ): void {
         </div>
         <span class="pil-row-chevron" aria-hidden="true">
           <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="15" cy="15" r="14" stroke="#1e2ef5" stroke-width="1.5"/>
-            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#1e2ef5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="15" cy="15" r="14" stroke="#2647C7" stroke-width="1.5"/>
+            <path d="M17 15H9M12 11l-4 4 4 4" stroke="#2647C7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </span>
       </a>
