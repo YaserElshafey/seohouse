@@ -115,9 +115,9 @@
 .svc-seo-final .sf-btn-w { background: #fff; color: var(--blue); box-shadow: var(--sh-lg); }
 .svc-seo-final .sf-btn-w:hover { transform: translateY(-2px); color: var(--brand-blue-deep); box-shadow: 0 14px 40px rgba(0,0,0,.18); }
 .svc-seo-final .sf-btn-w:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
-/* Ghost button — for use on blue/dark backgrounds */
+/* Ghost button — for use on blue/dark backgrounds; hover flips to solid white (dramatic contrast) */
 .svc-seo-final .sf-btn-gh { background: rgba(255,255,255,.08); color: #fff; border: 1.5px solid rgba(255,255,255,.28); }
-.svc-seo-final .sf-btn-gh:hover { background: rgba(255,255,255,.16); border-color: rgba(255,255,255,.55); transform: translateY(-1px); }
+.svc-seo-final .sf-btn-gh:hover { background: #fff; color: var(--blue); border-color: #fff; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,0,0,.16); }
 .svc-seo-final .sf-btn-gh:focus-visible { outline: 2px solid rgba(255,255,255,.7); outline-offset: 3px; }
 
 /* ══ SCROLL REVEAL ══ */
@@ -226,7 +226,7 @@
 }
 @keyframes sf-fade { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:none; } }
 
-/* Primary button placed on a blue background → switch to white */
+/* Primary button on blue sections → white default, deep-blue hover (high-contrast flip) */
 .svc-seo-final #hero .sf-btn-p,
 .svc-seo-final #results .sf-btn-p,
 .svc-seo-final #markets .sf-btn-p {
@@ -237,10 +237,10 @@
 .svc-seo-final #hero .sf-btn-p:hover,
 .svc-seo-final #results .sf-btn-p:hover,
 .svc-seo-final #markets .sf-btn-p:hover {
-  background: var(--blue-50);
-  color: var(--brand-blue-deep);
+  background: var(--brand-blue-deep);
+  color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(0,0,0,.20);
+  box-shadow: 0 10px 28px rgba(0,0,0,.28);
 }
 .svc-seo-final #hero .sf-btn-p:focus-visible,
 .svc-seo-final #results .sf-btn-p:focus-visible,
