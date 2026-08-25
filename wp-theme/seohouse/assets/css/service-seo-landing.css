@@ -1,8 +1,8 @@
 /* ═══════════════════════════════════════════════════════════════════
    SEO House — service-seo-landing.css
    Scope: .svc-seo-country  and  .svc-seo-sub
-   Extends shared.css + theme.css; replaces old #1e2ef5 blue with
-   brand blue #2647C7 (RGB 38,71,199) inside each scope.
+   Component system for country and specialist SEO service pages.
+   Extends shared.css + theme.css; never modifies those files.
    ═══════════════════════════════════════════════════════════════════ */
 
 /* ── Brand-blue token overrides ─────────────────────────────────── */
@@ -10,28 +10,30 @@
 .svc-seo-sub {
   --blue:       #2647C7;
   --blue-d:     #1F3FB2;
+  --blue-deep:  #193494;
   --blue-light: #91A6F4;
   --blue-50:    #EEF2FF;
   --blue-100:   #DCE4FF;
   --sh-b:       0 8px 28px rgba(38,71,199,.32);
+  /* Neutral section backgrounds — override shared.css purple-tinted values */
+  --surface:    #F5F7FA;
+  --off:        #F7F9FC;
 }
 
-/* ── Scope wrapper ─────────────────────────────────────────────────
-   Prevents horizontal bleed from any animated or absolute elements. */
+/* ── Scope wrapper ─────────────────────────────────────────────── */
 .svc-seo-country,
 .svc-seo-sub {
   overflow-x: clip;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   HERO — brand-blue gradient instead of navy
+   HERO — brand-blue gradient
    ═══════════════════════════════════════════════════════════════════ */
 .svc-seo-country .svc-hero,
 .svc-seo-sub .svc-hero {
   background: linear-gradient(135deg, #2647C7 0%, #193494 100%);
 }
 
-/* em highlight inside h1 — brand-blue light shimmer */
 .svc-seo-country .svc-hero-h1 em,
 .svc-seo-sub .svc-hero-h1 em {
   background: linear-gradient(110deg, #91A6F4, #DCE4FF 50%, #91A6F4);
@@ -41,7 +43,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Live badge — brand blue tones */
 .svc-seo-country .h-badge,
 .svc-seo-sub .h-badge {
   background: rgba(38,71,199,.28);
@@ -50,20 +51,172 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   DARK SIDE CARD (cta-side-card) glow
+   SECTOR GRID — full brand-blue hover (country page)
+   Card turns completely brand-blue on hover; all children go white.
+   ═══════════════════════════════════════════════════════════════════ */
+.lp-sct-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.lp-sct-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r3);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, color 0.22s ease;
+}
+
+.lp-sct-card:hover {
+  background: #2647C7;
+  border-color: #2647C7;
+  box-shadow: 0 6px 24px rgba(38,71,199,.30);
+  color: #fff;
+}
+
+.lp-sct-ico {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r2);
+  background: var(--blue-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.22s ease;
+  flex-shrink: 0;
+}
+
+.lp-sct-ico svg {
+  width: 18px;
+  height: 18px;
+  stroke: #2647C7;
+  transition: stroke 0.22s ease;
+}
+
+.lp-sct-card:hover .lp-sct-ico {
+  background: rgba(255,255,255,.18);
+}
+
+.lp-sct-card:hover .lp-sct-ico svg {
+  stroke: #fff;
+}
+
+.lp-sct-card h3 {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.3;
+  transition: color 0.22s ease;
+}
+
+.lp-sct-card:hover h3 {
+  color: #fff;
+}
+
+.lp-sct-card p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  transition: color 0.22s ease;
+  margin: 0;
+}
+
+.lp-sct-card:hover p {
+  color: rgba(255,255,255,.75);
+}
+
+@media (max-width: 640px) {
+  .lp-sct-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   TEAM GRID — country page team section
+   ═══════════════════════════════════════════════════════════════════ */
+.lp-team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 36px;
+}
+
+.lp-team-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r3);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.lp-team-card:hover {
+  box-shadow: 0 4px 18px rgba(38,71,199,.12);
+}
+
+.lp-team-img {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.lp-team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.lp-team-info {
+  padding: 14px 16px;
+}
+
+.lp-team-info h3 {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.lp-team-info p {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .lp-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   DARK CARD glow — cta-side-card and why-com-grid dark card
    ═══════════════════════════════════════════════════════════════════ */
 .svc-seo-country .cta-side-card::before,
 .svc-seo-sub .cta-side-card::before {
   background: radial-gradient(circle, rgba(38,71,199,.28), transparent 70%);
 }
 
+.svc-seo-country .why-com-grid .dk-glow,
+.svc-seo-sub .why-com-grid .dk-glow {
+  background: radial-gradient(circle, rgba(38,71,199,.22), transparent 70%);
+}
+
 /* ═══════════════════════════════════════════════════════════════════
-   PROCESS LIST connector line + number circle
+   PROCESS LIST connector + number circle
    ═══════════════════════════════════════════════════════════════════ */
 .svc-seo-country .proc-list::before,
 .svc-seo-sub .proc-list::before {
   background: linear-gradient(90deg, transparent, rgba(38,71,199,.3), transparent);
 }
+
 .svc-seo-country .proc-grid .proc-num,
 .svc-seo-sub .proc-grid .proc-num {
   background: rgba(38,71,199,.18);
@@ -72,7 +225,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   WWD CARD — numbered prefix colour
+   WWD CARD — numbered prefix
    ═══════════════════════════════════════════════════════════════════ */
 .svc-seo-country .wwd-n,
 .svc-seo-sub .wwd-n {
@@ -88,7 +241,7 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   IND CARD (fit/sectors grid) hover
+   IND CARD hover (legacy — kept for backward compat)
    ═══════════════════════════════════════════════════════════════════ */
 .svc-seo-country .ind-card:hover,
 .svc-seo-sub .ind-card:hover {
@@ -96,19 +249,20 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   CRIT (link quality criteria) icon bg + stroke
+   CRIT — link quality criteria
    ═══════════════════════════════════════════════════════════════════ */
 .svc-seo-country .crit-ico,
 .svc-seo-sub .crit-ico {
   background: rgba(38,71,199,.22);
 }
+
 .svc-seo-country .crit-ico svg,
 .svc-seo-sub .crit-ico svg {
   stroke: #91A6F4;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   DEL (deliverables) numbered circle
+   DEL — deliverables numbered circle
    ═══════════════════════════════════════════════════════════════════ */
 .svc-seo-country .del-num,
 .svc-seo-sub .del-num {
@@ -117,57 +271,51 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   WHO NEEDS THIS card (consulting page)
+   WHO NEEDS THIS card
    ═══════════════════════════════════════════════════════════════════ */
 .svc-seo-country .who-card:hover,
 .svc-seo-sub .who-card:hover {
   border-color: rgba(38,71,199,.30);
 }
+
 .svc-seo-country .who-ico,
 .svc-seo-sub .who-ico {
   background: rgba(38,71,199,.18);
 }
+
 .svc-seo-country .who-ico svg,
 .svc-seo-sub .who-ico svg {
   stroke: #91A6F4;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   CONS CARD (consulting types) hover + featured head
+   CONS CARD (consulting types)
    ═══════════════════════════════════════════════════════════════════ */
 .svc-seo-country .cons-card:hover,
 .svc-seo-sub .cons-card:hover {
   border-color: rgba(38,71,199,.18);
 }
+
 .svc-seo-country .cons-card.featured .cons-head,
 .svc-seo-sub .cons-card.featured .cons-head {
   border-color: rgba(38,71,199,.18);
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   COUNTRY INTRO / WHY SECTION inline dark card
-   Matches theme.css .why-com-grid layout with brand-blue glow
-   ═══════════════════════════════════════════════════════════════════ */
-.svc-seo-country .why-com-grid .dk-glow,
-.svc-seo-sub .why-com-grid .dk-glow {
-  background: radial-gradient(circle, rgba(38,71,199,.22), transparent 70%);
-}
-
-/* ═══════════════════════════════════════════════════════════════════
-   BACK-TO-SEO proof link box — override btn-o border tint
+   BTN-O border tint override
    ═══════════════════════════════════════════════════════════════════ */
 .svc-seo-country .btn-o,
 .svc-seo-sub .btn-o {
   border-color: rgba(38,71,199,.22);
 }
+
 .svc-seo-country .btn-o:hover,
 .svc-seo-sub .btn-o:hover {
   border-color: rgba(38,71,199,.38);
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   FAQ — open item heading colour override (--blue now brand blue)
-   Already handled by CSS var, but explicit fallback for older browsers
+   FAQ — open item heading colour
    ═══════════════════════════════════════════════════════════════════ */
 .svc-seo-country .faq-item.open .faq-q span,
 .svc-seo-sub .faq-item.open .faq-q span {
@@ -175,11 +323,209 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   RESPONSIVE ADJUSTMENTS
+   RESPONSIVE
    ═══════════════════════════════════════════════════════════════════ */
 @media (max-width: 860px) {
   .svc-seo-country .why-com-grid,
   .svc-seo-sub .why-com-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   FIVE SERVICES GRID
+   ═══════════════════════════════════════════════════════════════════ */
+.lp-five-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.lp-five-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 18px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r3);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lp-five-card.lp-five-link:hover {
+  border-color: rgba(38,71,199,.30);
+  box-shadow: 0 4px 18px rgba(38,71,199,.10);
+}
+
+.lp-five-ico {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r2);
+  background: var(--blue-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lp-five-ico svg {
+  stroke: #2647C7;
+}
+
+.lp-five-card h3 {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.lp-five-card p {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+
+.lp-five-arrow {
+  display: flex;
+  align-items: center;
+  color: #2647C7;
+  margin-top: 4px;
+}
+
+@media (max-width: 1080px) {
+  .lp-five-grid:not(.lp-related-grid) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .lp-five-grid:not(.lp-related-grid) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Related Services Grid (4-card, Technical sub-page) ──────────── */
+.lp-related-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Text area wrapper — allows horizontal mobile layout */
+.lp-five-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Tablet: 2×2 */
+@media (max-width: 1099px) {
+  .lp-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: single column, horizontal card */
+@media (max-width: 699px) {
+  .lp-related-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .lp-related-grid .lp-five-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 14px 16px;
+    gap: 12px;
+    min-height: 90px;
+  }
+  .lp-related-grid .lp-five-card .lp-five-ico {
+    flex-shrink: 0;
+  }
+  .lp-related-grid .lp-five-card h3 {
+    font-size: 13.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .lp-related-grid .lp-five-card p {
+    font-size: 11.5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: unset;
+  }
+  .lp-related-grid .lp-five-arrow {
+    flex-shrink: 0;
+    margin-top: 0;
+  }
+}
+
+/* Full-width FAQ (no sticky CTA column) */
+.faq-full {
+  max-width: 800px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   EVIDENCE GRID — verified results section
+   Desktop: featured card full-width top, two supports side-by-side.
+   Mobile: all stacked.
+   ═══════════════════════════════════════════════════════════════════ */
+.lp-ev-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.lp-ev-featured {
+  grid-column: 1 / -1;
+}
+
+.lp-ev-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r3);
+  overflow: hidden;
+}
+
+.lp-ev-img {
+  width: 100%;
+  overflow: hidden;
+  background: var(--surface);
+  line-height: 0;
+}
+
+.lp-ev-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.lp-ev-caption {
+  padding: 14px 18px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .lp-ev-grid {
+    grid-template-columns: 1fr;
+  }
+  .lp-ev-featured {
+    grid-column: 1;
+  }
+  .lp-ev-img img {
+    object-fit: contain;
   }
 }
