@@ -345,7 +345,55 @@ $trust_items = [
 ];
 ?>
 
-<!-- Hero -->
+<?php
+$five_services = [
+    [
+        'title' => 'السيو التقني',
+        'desc'  => 'تشخيص مشكلات الزحف والفهرسة وسرعة الموقع وبنية الروابط الداخلية — الأساس الذي يُمكّن بقية جهود السيو.',
+        'url'   => '',
+        'svg'   => '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+    ],
+    [
+        'title' => 'سيو داخل الصفحة',
+        'desc'  => 'تحسين العناوين والمحتوى وبنية الصفحات لتتوافق مع نية المستخدم وتعزز فرص الظهور في نتائج البحث.',
+        'url'   => '',
+        'svg'   => '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>',
+    ],
+    [
+        'title' => 'محتوى السيو',
+        'desc'  => 'كتابة صفحات ومقالات مبنية على بيانات الكلمات — محتوى يستهدف نية البحث بدقة.',
+        'url'   => sh_safe_url( 'services/seo/content' ),
+        'svg'   => '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>',
+    ],
+    [
+        'title' => 'بناء الروابط الخارجية',
+        'desc'  => 'روابط من مصادر ذات صلة وسلطة — لتعزيز مكانة الموقع في نتائج البحث.',
+        'url'   => sh_safe_url( 'services/seo/backlinks' ),
+        'svg'   => '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>',
+    ],
+    [
+        'title' => 'استشارة السيو',
+        'desc'  => 'جلسة تحليل لفريقك — تشخيص الوضع الحالي وخارطة أولويات قابلة للتنفيذ.',
+        'url'   => sh_safe_url( 'services/seo/consulting' ),
+        'svg'   => '<rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+    ],
+];
+
+$team_members = get_posts( [
+    'post_type'      => 'team_member',
+    'posts_per_page' => 4,
+    'orderby'        => 'menu_order',
+    'order'          => 'ASC',
+    'post_status'    => 'publish',
+] );
+
+$reviews_sc = sh_option( 'reviews_shortcode' );
+$ev_base    = get_template_directory_uri() . '/assets/images/seo-service/';
+?>
+
+<main class="svc-seo-country">
+
+<!-- ① Hero -->
 <section class="svc-hero">
   <div class="wrap">
     <div class="svc-hero-inner">
@@ -372,7 +420,9 @@ $trust_items = [
   </div>
 </section>
 
-<!-- Intro: Why this market -->
+<?php get_template_part( 'template-parts/sections/clients' ); ?>
+
+<!-- ③ Saudi market context — intro -->
 <section class="sec sec-white">
   <div class="wrap">
     <div class="why-com-grid">
@@ -393,7 +443,7 @@ $trust_items = [
       </div>
       <div class="sr d2">
         <div style="background:var(--navy-2);border-radius:var(--r4);padding:32px 28px;position:relative;overflow:hidden">
-          <div style="position:absolute;inset-inline-end:-50px;top:-50px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.28),transparent 70%)"></div>
+          <div style="position:absolute;inset-inline-end:-50px;top:-50px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(38,71,199,.28),transparent 70%)"></div>
           <div style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:20px;position:relative;z-index:1">ما الذي نقدمه في <?php echo esc_html( $c['name'] ); ?></div>
           <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:11px">
             <?php
@@ -406,7 +456,7 @@ $trust_items = [
             ] as $svc ) :
             ?>
             <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7b90ff" stroke-width="2.5" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#91A6F4" stroke-width="2.5" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
               <span style="font-size:13.5px;font-weight:600;color:rgba(255,255,255,.82)"><?php echo esc_html( $svc ); ?></span>
             </div>
             <?php endforeach; ?>
@@ -417,7 +467,7 @@ $trust_items = [
   </div>
 </section>
 
-<!-- Why / How we serve this market -->
+<!-- ③ Saudi market context — approach -->
 <section class="sec sec-surface">
   <div class="wrap">
     <div class="sh c sr"><span class="tag"><?php echo esc_html( $c['why_tag'] ); ?></span><h2 class="h2"><?php echo esc_html( $c['why_title'] ); ?></h2></div>
@@ -433,28 +483,57 @@ $trust_items = [
   </div>
 </section>
 
-<!-- Full service scope -->
+<!-- ④ Five SEO services -->
 <section class="sec sec-off">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag"><?php echo esc_html( $c['scope_tag'] ); ?></span><h2 class="h2"><?php echo esc_html( $c['scope_title'] ); ?></h2></div>
-    <?php if ( ! empty( $c['scope_desc'] ) ) : ?>
-    <p class="bod c sr" style="margin-top:12px;max-width:720px;margin-inline:auto"><?php echo esc_html( $c['scope_desc'] ); ?></p>
-    <?php endif; ?>
-    <div class="wwd-grid sr d1" style="margin-top:36px">
-      <?php foreach ( $c['scope_items'] as $idx => $si ) : ?>
-      <div class="wwd-card sr<?php echo esc_attr( $delays[ $idx % 6 ] ); ?>">
-        <div class="wwd-n" aria-hidden="true"><?php echo esc_html( $si['n'] ); ?></div>
-        <div class="wwd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="21" height="21"><?php echo $scope_svgs[ $idx ]; ?></svg></div>
-        <h3><?php echo esc_html( $si['label'] ); ?></h3>
-        <p><?php echo esc_html( $si['desc'] ); ?></p>
-      </div>
+    <div class="sh c sr">
+      <span class="tag">خدمات السيو المتخصصة</span>
+      <h2 class="h2">خمس خدمات سيو متخصصة تحت مظلة واحدة</h2>
+      <p class="bod" style="margin-top:12px;max-width:640px;margin-inline:auto">كل خدمة تُعالج جانباً محدداً من معادلة الظهور في البحث — من البنية التقنية إلى المحتوى والروابط.</p>
+    </div>
+    <div class="lp-five-grid sr d1">
+      <?php foreach ( $five_services as $svc ) :
+          $is_link = ! empty( $svc['url'] );
+          $ftag    = $is_link ? 'a' : 'div';
+          $fhref   = $is_link ? ' href="' . esc_url( $svc['url'] ) . '"' : '';
+      ?>
+      <<?php echo $ftag; ?><?php echo $fhref; ?> class="lp-five-card<?php echo $is_link ? ' lp-five-link' : ''; ?>">
+        <div class="lp-five-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="20" height="20"><?php echo $svc['svg']; ?></svg>
+        </div>
+        <h3><?php echo esc_html( $svc['title'] ); ?></h3>
+        <p><?php echo esc_html( $svc['desc'] ); ?></p>
+        <?php if ( $is_link ) : ?>
+        <span class="lp-five-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        <?php endif; ?>
+      </<?php echo $ftag; ?>>
       <?php endforeach; ?>
     </div>
   </div>
 </section>
 
-<!-- Process steps -->
+<!-- ⑤ Sectors -->
 <section class="sec sec-white">
+  <div class="wrap">
+    <div class="sh c sr"><span class="tag"><?php echo esc_html( $c['fit_tag'] ); ?></span><h2 class="h2"><?php echo esc_html( $c['fit_title'] ); ?></h2></div>
+    <div class="lp-sct-grid sr d1">
+      <?php foreach ( $c['fit_sectors'] as $fs ) :
+          $sector_url = ! empty( $fs['url'] ) ? $fs['url'] : '';
+          $stag       = $sector_url ? 'a' : 'div';
+          $shref      = $sector_url ? ' href="' . esc_url( $sector_url ) . '"' : '';
+      ?>
+      <<?php echo $stag; ?><?php echo $shref; ?> class="lp-sct-card">
+        <div class="lp-sct-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $fs['svg']; ?></svg></div>
+        <h3><?php echo esc_html( $fs['label'] ); ?></h3>
+        <p><?php echo esc_html( $fs['sub'] ); ?></p>
+      </<?php echo $stag; ?>>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ Saudi execution approach -->
+<section class="sec sec-surface">
   <div class="wrap">
     <div class="sh c sr"><span class="tag"><?php echo esc_html( $c['process_tag'] ); ?></span><h2 class="h2"><?php echo esc_html( $c['process_title'] ); ?></h2></div>
     <div class="steps-list sr d1" style="margin-top:32px;max-width:800px;margin-inline:auto">
@@ -474,108 +553,99 @@ $trust_items = [
   </div>
 </section>
 
-<!-- Reporting & trust -->
-<section class="sec sec-surface">
-  <div class="wrap">
-    <div class="why-com-grid">
-      <div class="sr">
-        <div class="sh sr">
-          <span class="tag"><?php echo esc_html( $c['report_tag'] ); ?></span>
-          <h2 class="h2"><?php echo esc_html( $c['report_title'] ); ?></h2>
-        </div>
-        <div class="chklist sr d1" style="margin-top:20px">
-          <?php foreach ( $report_checklist as $ri ) : ?>
-          <div class="chk-item">
-            <div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <span><?php echo esc_html( $ri ); ?></span>
-          </div>
-          <?php endforeach; ?>
-        </div>
-      </div>
-      <div class="sr d2">
-        <div style="background:var(--navy-2);border-radius:var(--r4);padding:32px 28px;position:relative;overflow:hidden">
-          <div style="position:absolute;inset-inline-end:-50px;top:-50px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(30,46,245,.22),transparent 70%)"></div>
-          <div style="font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:20px;position:relative;z-index:1">مبادئ العمل التي نلتزم بها</div>
-          <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:11px">
-            <?php foreach ( $trust_items as $ti ) : ?>
-            <div style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r2)">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7b90ff" stroke-width="2.5" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
-              <span style="font-size:13.5px;font-weight:600;color:rgba(255,255,255,.82)"><?php echo esc_html( $ti ); ?></span>
-            </div>
-            <?php endforeach; ?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Suitable sectors + proof link -->
+<!-- ⑦ Verified evidence -->
 <section class="sec sec-off">
   <div class="wrap">
-    <div class="sh c sr"><span class="tag"><?php echo esc_html( $c['fit_tag'] ); ?></span><h2 class="h2"><?php echo esc_html( $c['fit_title'] ); ?></h2></div>
-    <div class="ind-grid sr d1" style="margin-top:32px">
-      <?php foreach ( $c['fit_sectors'] as $fs ) :
-          $sector_url = ! empty( $fs['url'] ) ? $fs['url'] : '';
+    <div class="sh c sr">
+      <span class="tag">نتائج موثقة</span>
+      <h2 class="h2">نماذج من نتائج أعمالنا</h2>
+      <p class="bod" style="margin-top:12px;max-width:640px;margin-inline:auto">نتائج من حسابات عملاء SEO House — موثقة من لوحات البيانات ونتائج البحث الفعلية.</p>
+    </div>
+    <div class="lp-ev-grid sr d1">
+      <div class="lp-ev-card lp-ev-featured">
+        <div class="lp-ev-img">
+          <img src="<?php echo esc_url( $ev_base . 'case-revenue.png' ); ?>" alt="ارتفاع مبيعات متجر إلكتروني من محركات البحث" loading="lazy">
+        </div>
+        <p class="lp-ev-caption">متجر إلكتروني ارتفعت مبيعاته من محركات البحث من <bdi dir="ltr">19,956</bdi> إلى <bdi dir="ltr">106,274</bdi> ريال.</p>
+      </div>
+      <div class="lp-ev-card lp-ev-support">
+        <div class="lp-ev-img">
+          <img src="<?php echo esc_url( $ev_base . 'case-clicks.png' ); ?>" alt="ارتفاع زيارات موقع من نتائج Google" loading="lazy">
+        </div>
+        <p class="lp-ev-caption">أحد المواقع ارتفعت زياراته من نتائج Google من <bdi dir="ltr">825</bdi> إلى <bdi dir="ltr">12,900</bdi> نقرة.</p>
+      </div>
+      <div class="lp-ev-card lp-ev-support">
+        <div class="lp-ev-img">
+          <img src="<?php echo esc_url( $ev_base . 'case-law-firm.png' ); ?>" alt="موقع سهل للمحاماة في النتيجة الأولى" loading="lazy">
+        </div>
+        <p class="lp-ev-caption">موقع سهل للمحاماة وصل إلى النتيجة العضوية الأولى عند البحث عن «مكتب محاماة».</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑧ SEO House / team -->
+<?php if ( ! empty( $team_members ) ) : ?>
+<section class="sec sec-white">
+  <div class="wrap">
+    <div class="sh c sr">
+      <span class="tag">الفريق</span>
+      <h2 class="h2">فريق SEO House</h2>
+      <p class="bod">متخصّصون في تحسين محركات البحث للسوق العربي — بخبرة عملية وأدوات موثوقة.</p>
+    </div>
+    <div class="lp-team-grid sr d1">
+      <?php foreach ( $team_members as $member ) :
+          $img_id = get_post_thumbnail_id( $member->ID );
+          $img    = $img_id ? wp_get_attachment_image( $img_id, 'seohouse-team', false, [ 'loading' => 'lazy' ] ) : '';
+          $role   = get_post_meta( $member->ID, 'team_role', true );
       ?>
-      <?php if ( $sector_url ) : ?><a href="<?php echo esc_url( $sector_url ); ?>" class="ind-card"><?php else : ?><div class="ind-card"><?php endif; ?>
-        <div class="ind-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><?php echo $fs['svg']; ?></svg></div>
-        <div class="ind-card-body"><h3><?php echo esc_html( $fs['label'] ); ?></h3><p><?php echo esc_html( $fs['sub'] ); ?></p></div>
-      <?php if ( $sector_url ) : ?></a><?php else : ?></div><?php endif; ?>
+      <div class="lp-team-card">
+        <?php if ( $img ) : ?>
+        <div class="lp-team-img"><?php echo $img; ?></div>
+        <?php endif; ?>
+        <div class="lp-team-info">
+          <h3><?php echo esc_html( $member->post_title ); ?></h3>
+          <?php if ( $role ) : ?><p><?php echo esc_html( $role ); ?></p><?php endif; ?>
+        </div>
+      </div>
       <?php endforeach; ?>
     </div>
-    <?php if ( $results_url ) : ?>
-    <div style="margin-top:40px;padding:28px 32px;background:#fff;border:1px solid var(--line);border-radius:var(--r3);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
-      <div>
-        <div style="font-size:11.5px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px">نتائج من أعمالنا</div>
-        <p style="font-size:14.5px;font-weight:700;color:var(--ink);margin:0"><?php echo esc_html( $c['proof_desc'] ); ?></p>
-      </div>
-      <a href="<?php echo esc_url( $results_url ); ?>" class="btn btn-o">اطّلع على نماذج من نتائج أعمالنا <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    </div>
-    <?php endif; ?>
   </div>
 </section>
+<?php endif; ?>
 
-<!-- FAQ -->
+<!-- ⑨ Reviews -->
+<?php if ( ! empty( $reviews_sc ) ) : ?>
+<section class="sec sec-surface">
+  <div class="wrap">
+    <?php echo do_shortcode( $reviews_sc ); ?>
+  </div>
+</section>
+<?php endif; ?>
+
+<!-- ⑩ FAQ -->
 <section id="country-faq" class="sec sec-white">
   <div class="wrap">
-    <div class="faq-cta-layout">
+    <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2">أسئلة عن السيو <?php echo esc_html( $c['name'] === 'مصر' ? 'في مصر' : ( $c['name'] === 'السعودية' ? 'في السعودية' : 'في الإمارات' ) ); ?></h2></div>
+    <div class="faq-list sr d1">
+      <?php foreach ( $faq_data as $faq ) : ?>
+      <div class="faq-item">
+        <div class="faq-q"><span><?php echo esc_html( $faq['question'] ?? '' ); ?></span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
+        <div class="faq-a"><div class="faq-a-inner"><?php echo esc_html( $faq['answer'] ?? '' ); ?></div></div>
+      </div>
+      <?php endforeach; ?>
+    </div>
+    <div style="margin-top:28px;padding:20px 22px;background:var(--off);border:1px solid var(--line);border-radius:var(--r2);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
       <div>
-        <div class="sh sr"><span class="tag">الأسئلة الشائعة</span><h2 class="h2">أسئلة عن السيو <?php echo esc_html( $c['name'] === 'مصر' ? 'في مصر' : ( $c['name'] === 'السعودية' ? 'في السعودية' : 'في الإمارات' ) ); ?></h2></div>
-        <div class="faq-list sr d1">
-          <?php foreach ( $faq_data as $faq ) : ?>
-          <div class="faq-item">
-            <div class="faq-q"><span><?php echo esc_html( $faq['question'] ?? '' ); ?></span><div class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></div>
-            <div class="faq-a"><div class="faq-a-inner"><?php echo esc_html( $faq['answer'] ?? '' ); ?></div></div>
-          </div>
-          <?php endforeach; ?>
-        </div>
-        <!-- Back to main SEO service -->
-        <div style="margin-top:28px;padding:20px 22px;background:var(--off);border:1px solid var(--line);border-radius:var(--r2);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-          <div>
-            <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">الخدمة الرئيسية</div>
-            <div style="font-size:14.5px;font-weight:800;color:var(--ink)">تحسين محركات البحث — الصفحة الرئيسية</div>
-          </div>
-          <a href="<?php echo esc_url( $seo_url ); ?>" class="btn btn-o">عرض الخدمة الرئيسية <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
+        <div style="font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px">الخدمة الرئيسية</div>
+        <div style="font-size:14.5px;font-weight:800;color:var(--ink)">تحسين محركات البحث — الصفحة الرئيسية</div>
       </div>
-      <div class="cta-sticky">
-        <div class="cta-side-card sr d1">
-          <span class="tag d" style="position:relative;z-index:1;margin-bottom:10px">ابدأ الآن</span>
-          <h3 style="font-size:clamp(20px,2.5vw,26px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;z-index:1"><?php echo esc_html( $c['cta_title'] ); ?></h3>
-          <p style="font-size:13.5px;color:rgba(255,255,255,.44);line-height:1.8;margin-bottom:22px;position:relative;z-index:1">احجز استشارة أولية لمناقشة وضع الموقع وأولويات التحسين والخطوات الممكنة وفق نطاق العمل.</p>
-          <div class="chklist" style="margin-bottom:22px">
-            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>مناقشة وضع الموقع الحالي</div>
-            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>أولويات التحسين الممكنة</div>
-            <div class="chk-item d"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>الخطوات الأولى وفق نطاق العمل</div>
-          </div>
-          <a href="<?php echo esc_url( sh_page_url( 'contact' ) ); ?>" class="btn btn-p" style="width:100%;justify-content:center;position:relative;z-index:1">احجز استشارة</a>
-        </div>
-      </div>
+      <a href="<?php echo esc_url( $seo_url ); ?>" class="btn btn-o">عرض الخدمة الرئيسية <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 
+<!-- ⑪ CTA Banner -->
 <?php
 get_template_part( 'template-parts/layout/cta-banner', null, [
     'tag'         => 'ابدأ الآن',
@@ -587,5 +657,7 @@ get_template_part( 'template-parts/layout/cta-banner', null, [
     ],
 ] );
 ?>
+
+</main><!-- /.svc-seo-country -->
 
 <?php get_footer(); ?>

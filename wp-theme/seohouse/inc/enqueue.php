@@ -55,6 +55,54 @@ add_action( 'wp_enqueue_scripts', function () {
     );
 }, 10 );
 
+// SEO Service V2 Preview — page-specific stylesheet (V2 template only)
+add_action( 'wp_enqueue_scripts', function () {
+    if ( ! is_page_template( 'templates/template-service-seo-v2.php' ) ) return;
+    wp_enqueue_style(
+        'seohouse-service-seo',
+        get_template_directory_uri() . '/assets/css/service-seo.css',
+        [ 'seohouse-theme' ],
+        (string) filemtime( get_template_directory() . '/assets/css/service-seo.css' )
+    );
+}, 10 );
+
+// SEO Service Final Preview — page-specific CSS and JS (preview template only)
+add_action( 'wp_enqueue_scripts', function () {
+    if ( ! is_page_template( 'templates/template-service-seo-final-preview.php' ) ) return;
+    wp_enqueue_style(
+        'seohouse-service-seo-final',
+        get_template_directory_uri() . '/assets/css/service-seo-final.css',
+        [ 'seohouse-theme' ],
+        (string) filemtime( get_template_directory() . '/assets/css/service-seo-final.css' )
+    );
+    wp_enqueue_script(
+        'seohouse-service-seo-final',
+        get_template_directory_uri() . '/assets/js/service-seo-final.js',
+        [ 'seohouse-main' ],
+        (string) filemtime( get_template_directory() . '/assets/js/service-seo-final.js' ),
+        true
+    );
+}, 10 );
+
+// SEO Country + Sub Service Pages — shared brand-blue design system
+add_action( 'wp_enqueue_scripts', function () {
+    $templates = [
+        'templates/template-service-seo-country.php',
+        'templates/template-service-seo-sub.php',
+    ];
+    $on_landing = false;
+    foreach ( $templates as $t ) {
+        if ( is_page_template( $t ) ) { $on_landing = true; break; }
+    }
+    if ( ! $on_landing ) return;
+    wp_enqueue_style(
+        'seohouse-service-seo-landing',
+        get_template_directory_uri() . '/assets/css/service-seo-landing.css',
+        [ 'seohouse-theme' ],
+        (string) filemtime( get_template_directory() . '/assets/css/service-seo-landing.css' )
+    );
+}, 10 );
+
 // Remove WordPress block/global styles — this is a custom theme that does not use the block editor
 add_action( 'wp_enqueue_scripts', function () {
     wp_dequeue_style( 'wp-block-library' );
