@@ -529,3 +529,75 @@
     object-fit: contain;
   }
 }
+
+/* ── Single-evidence layout (one image + text metrics, no repeated grid) ── */
+.lp-ev-single-wrap {
+  margin-top: 36px;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lp-ev-src {
+  padding: 0 18px 14px;
+  font-size: 11px;
+  color: var(--muted);
+  opacity: 0.65;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+.lp-ev-metrics {
+  display: flex;
+  border-top: 1px solid var(--line);
+}
+.lp-ev-m {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 14px 14px;
+  gap: 5px;
+  border-inline-start: 1px solid var(--line);
+}
+.lp-ev-m:last-child {
+  border-inline-start: none;
+}
+.lp-ev-m-val {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--blue);
+  line-height: 1;
+  direction: ltr;
+  display: block;
+}
+.lp-ev-m-lbl {
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ── Light deliverables theme (consulting) ───────────────────────── */
+.svc-seo-sub .del-light .del-item {
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.svc-seo-sub .del-light .del-item:hover {
+  background: var(--blue-50);
+  border-color: rgba(38, 71, 199, 0.18);
+}
+.svc-seo-sub .del-light .del-num {
+  background: var(--blue-50);
+  color: var(--blue);
+}
+.svc-seo-sub .del-light .del-body h3 {
+  color: var(--ink);
+}
+.svc-seo-sub .del-light .del-body p {
+  color: var(--muted);
+}
+
+/* ── Non-interactive related-service cards ────────────────────────── */
+.lp-five-card:not(.lp-five-link) {
+  cursor: default;
+  transition: none;
+}
