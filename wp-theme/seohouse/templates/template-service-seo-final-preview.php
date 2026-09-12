@@ -16,7 +16,9 @@ $contact_url  = sh_page_url( 'contact' );
 $seo_url        = home_url( '/services/seo/' );
 $content_url    = home_url( '/services/seo/content/' );
 $backlinks_url  = home_url( '/services/seo/backlinks/' );
-$consulting_url = home_url( '/services/seo/consulting/' );
+$consulting_url  = home_url( '/services/seo/consulting/' );
+$technical_url   = sh_page_url( 'services/seo/technical' );
+$on_page_url     = sh_page_url( 'services/seo/on-page' );
 $stores_url   = sh_safe_url( 'services/seo/stores-seo' );
 $results_url  = sh_page_url( 'results' );
 $sec_ecom     = sh_safe_url( 'sectors/ecommerce' ) ?: home_url( '/sectors/ecommerce/' );
@@ -191,7 +193,7 @@ function sf_strip_col( array $items ): void {
     <div class="pil-grid sr">
 
       <!-- 1: السيو التقني — white -->
-      <a class="pil-card pil-card--w" href="<?php echo esc_url( $seo_url ); ?>">
+      <a class="pil-card pil-card--w" href="<?php echo esc_url( $technical_url ); ?>">
         <div class="pil-card-top">
           <span class="pil-num">٠١</span>
           <div class="pil-ico" aria-hidden="true">
@@ -209,7 +211,7 @@ function sf_strip_col( array $items ): void {
       </a>
 
       <!-- 2: السيو الداخلي — navy -->
-      <a class="pil-card pil-card--dk" href="<?php echo esc_url( $seo_url ); ?>">
+      <a class="pil-card pil-card--dk" href="<?php echo esc_url( $on_page_url ); ?>">
         <div class="pil-card-top">
           <span class="pil-num">٠٢</span>
           <div class="pil-ico" aria-hidden="true">
@@ -287,7 +289,7 @@ function sf_strip_col( array $items ): void {
     <!-- Mobile: clean vertical list -->
     <div class="pil-list sr">
 
-      <a class="pil-row" href="<?php echo esc_url( $seo_url ); ?>">
+      <a class="pil-row" href="<?php echo esc_url( $technical_url ); ?>">
         <span class="pil-dot">٠١</span>
         <div class="pil-row-body">
           <div class="pil-row-name">السيو التقني</div>
@@ -301,7 +303,7 @@ function sf_strip_col( array $items ): void {
         </span>
       </a>
 
-      <a class="pil-row" href="<?php echo esc_url( $seo_url ); ?>">
+      <a class="pil-row" href="<?php echo esc_url( $on_page_url ); ?>">
         <span class="pil-dot">٠٢</span>
         <div class="pil-row-body">
           <div class="pil-row-name">السيو الداخلي</div>
