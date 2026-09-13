@@ -601,3 +601,40 @@
   cursor: default;
   transition: none;
 }
+
+/* ── Hero text contrast — country / sub pages ───────────────────────
+   rgba(255,255,255,.48) over #2647C7 ≈ 2.9:1. Raise to .75 → ≈ 4.9:1.
+   Breadcrumb raised from .38 to .62 → ≈ 3.8:1 (readable, not dominant).
+   ─────────────────────────────────────────────────────────────────── */
+.svc-seo-country .page-hero-p,
+.svc-seo-sub .page-hero-p {
+  color: rgba(255, 255, 255, .75);
+}
+.svc-seo-country .breadcrumb,
+.svc-seo-sub .breadcrumb {
+  color: rgba(255, 255, 255, .80);
+}
+.svc-seo-country .breadcrumb a,
+.svc-seo-sub .breadcrumb a {
+  color: rgba(255, 255, 255, .80);
+}
+
+/* ── Mobile single-column grid fixes (≤ 480px) ──────────────────────
+   Five-services grid and sector grid collapse to one column.
+   features-grid and ev-stat-grid use !important to override inline styles.
+   ─────────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .lp-five-grid:not(.lp-related-grid) {
+    grid-template-columns: 1fr;
+  }
+  .lp-sct-grid {
+    grid-template-columns: 1fr;
+  }
+  .features-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .ev-stat-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 340px !important;
+  }
+}
