@@ -125,12 +125,25 @@
       if (!q) return;
       q.addEventListener('click', function () {
         var isOpen = item.classList.contains('open');
-        items.forEach(function (i) { i.classList.remove('open'); });
-        if (!isOpen) item.classList.add('open');
+        items.forEach(function (i) {
+          i.classList.remove('open');
+          var qi = i.querySelector('.faq-q');
+          if (qi) qi.setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          q.setAttribute('aria-expanded', 'true');
+        }
       });
     });
     var first = document.querySelector('.faq-item');
-    if (first) first.classList.add('open');
+    if (first) {
+      var firstQ = first.querySelector('.faq-q');
+      if (!firstQ || firstQ.getAttribute('aria-expanded') !== 'false') {
+        first.classList.add('open');
+        if (firstQ) firstQ.setAttribute('aria-expanded', 'true');
+      }
+    }
   }
 
   /* ── Contact form ── */
