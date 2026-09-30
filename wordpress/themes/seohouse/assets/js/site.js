@@ -142,21 +142,34 @@
 		});
 	});
 
-	/* ---------------------------------------------------------------- shuffle once per visit (home team columns) */
-	$$('[data-sh-shuffle]').forEach(function (root) {
-		var groups = $$('[data-sh-shuffle-group]', root);
+	/* ---------------------------------------------------------------- shuffle once per page load (home team columns, as in the design) */
+	var shuffleRoots = [];
+	$$('[data-sh-shuffle-group]').forEach(function (g) { if (shuffleRoots.indexOf(g.parentNode) < 0) shuffleRoots.push(g.parentNode); });
+	shuffleRoots.forEach(function (root) {
+		var groups = $$(':scope > [data-sh-shuffle-group]', root);
+		var ATTR = ['src', 'srcset', 'width', 'height'];
 		var faces = [];
-		groups.forEach(function (g) { $$('[data-sh-face]:not([aria-hidden="true"] [data-sh-face])', g).forEach(function (f) { faces.push(f.innerHTML); }); });
+		groups.forEach(function (g) {
+			$$('img[data-sh-face]:not([aria-hidden="true"])', g).forEach(function (img) {
+				var f = { alt: img.getAttribute('alt') || '' };
+				ATTR.forEach(function (n) { f[n] = img.getAttribute(n); });
+				faces.push(f);
+			});
+		});
 		if (faces.length < 2) return;
 		for (var i = faces.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = faces[i]; faces[i] = faces[j]; faces[j] = t; }
-		// every column keeps two identical copies so the loop has no gap
-		var per = Math.ceil(faces.length / groups.length), k = 0;
+		// each column holds its photos twice (seamless loop); the second copy stays hidden and alt-less
+		var k = 0;
 		groups.forEach(function (g) {
-			var slots = $$('[data-sh-face]', g), n = slots.length / 2, mine = faces.slice(k, k + n); k += n;
-			if (mine.length < n) mine = mine.concat(faces.slice(0, n - mine.length));
-			slots.forEach(function (s, idx) { s.innerHTML = mine[idx % n]; });
+			var slots = $$('img[data-sh-face]', g), n = slots.length / 2, mine = faces.slice(k, k + n);
+			k += n;
+			slots.forEach(function (img, idx) {
+				var f = mine[idx % n];
+				if (!f) return;
+				ATTR.forEach(function (a) { if (f[a] === null) img.removeAttribute(a); else img.setAttribute(a, f[a]); });
+				img.setAttribute('alt', idx < n ? f.alt : '');
+			});
 		});
-		void per;
 	});
 
 	/* ---------------------------------------------------------------- contact page form (same endpoint as booking, source "contact") */
