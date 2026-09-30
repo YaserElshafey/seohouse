@@ -57,6 +57,31 @@ function sh_lead_handle( array $in ): array {
 	$page_id  = absint( $in['page_id'] ?? 0 );
 	$source   = sanitize_key( (string) ( $in['source'] ?? 'booking' ) );
 
+	// contact page form: name, company, email, phone, site, market, service, goal
+	$extra = array();
+	if ( 'contact' === $source ) {
+		$extra = array(
+			'company' => sanitize_text_field( (string) ( $in['company'] ?? '' ) ),
+			'email'   => sanitize_email( (string) ( $in['email'] ?? '' ) ),
+			'phone'   => sanitize_text_field( (string) ( $in['phone'] ?? '' ) ),
+			'market'  => sanitize_text_field( (string) ( $in['market'] ?? '' ) ),
+			'goal'    => sanitize_textarea_field( (string) ( $in['goal'] ?? '' ) ),
+		);
+		if ( '' === $name || '' === $extra['company'] || mb_strlen( $name ) > 120 || mb_strlen( $extra['company'] ) > 160 ) {
+			return $fail( 'name', __( 'أدخل الاسم واسم الشركة للمتابعة.', 'seohouse-core' ) );
+		}
+		if ( ! is_email( $extra['email'] ) ) {
+			return $fail( 'email', __( 'أدخل بريدًا إلكترونيًا صحيحًا.', 'seohouse-core' ) );
+		}
+		if ( ! preg_match( '/^\+?[0-9\s()-]{7,20}$/', $extra['phone'] ) ) {
+			return $fail( 'phone', __( 'أدخل رقم الهاتف أو واتساب.', 'seohouse-core' ) );
+		}
+		if ( '' === trim( $extra['goal'] ) || mb_strlen( $extra['goal'] ) > 3000 ) {
+			return $fail( 'goal', __( 'اكتب الهدف أو التحدي الأساسي.', 'seohouse-core' ) );
+		}
+		$contact = $extra['email'];
+	}
+
 	if ( ! isset( $services[ $service ] ) ) {
 		return $fail( 'service', __( 'اختر الخدمة المطلوبة.', 'seohouse-core' ) );
 	}
@@ -112,7 +137,12 @@ function sh_lead_handle( array $in ): array {
 				'_sh_page'    => $page_id,
 				'_sh_source'  => $source,
 				'_sh_status'  => 'new',
-			),
+			) + ( $extra ? array(
+				'_sh_company' => $extra['company'],
+				'_sh_phone'   => $extra['phone'],
+				'_sh_market'  => $extra['market'],
+				'_sh_goal'    => $extra['goal'],
+			) : array() ),
 		),
 		true
 	);
@@ -126,6 +156,9 @@ function sh_lead_handle( array $in ): array {
 	}
 	$body  = "طلب استشارة جديد\n\n";
 	$body .= "الاسم: {$name}\nالتواصل: {$contact}\nالخدمة: {$services[ $service ]}\n";
+	if ( $extra ) {
+		$body .= "الشركة: {$extra['company']}\nالهاتف: {$extra['phone']}\nالسوق: {$extra['market']}\nالهدف: {$extra['goal']}\n";
+	}
 	$body .= 'الموقع: ' . ( $site ? $site : '—' ) . "\n";
 	$body .= 'الصفحة: ' . ( $page_id ? get_permalink( $page_id ) : '—' ) . "\n";
 	$body .= 'في لوحة التحكم: ' . admin_url( 'post.php?post=' . $id . '&action=edit' ) . "\n";
@@ -216,11 +249,15 @@ add_action(
 					'التواصل' => get_post_meta( $post->ID, '_sh_contact', true ),
 					'الخدمة'  => sh_lead_services()[ get_post_meta( $post->ID, '_sh_service', true ) ] ?? '',
 					'الموقع'  => get_post_meta( $post->ID, '_sh_site', true ),
+					'الشركة'  => get_post_meta( $post->ID, '_sh_company', true ),
+					'الهاتف'  => get_post_meta( $post->ID, '_sh_phone', true ),
+					'السوق'   => get_post_meta( $post->ID, '_sh_market', true ),
+					'الهدف'   => get_post_meta( $post->ID, '_sh_goal', true ),
 					'الصفحة'  => ( $p = (int) get_post_meta( $post->ID, '_sh_page', true ) ) ? get_permalink( $p ) : '',
 					'الإشعار' => get_post_meta( $post->ID, '_sh_mail', true ),
 				);
 				echo '<table class="widefat striped"><tbody>';
-				foreach ( $rows as $k => $v ) {
+				foreach ( array_filter( $rows, static fn( $v ) => '' !== (string) $v ) as $k => $v ) {
 					echo '<tr><th style="width:120px">' . esc_html( $k ) . '</th><td>' . esc_html( (string) $v ) . '</td></tr>';
 				}
 				echo '</tbody></table>';

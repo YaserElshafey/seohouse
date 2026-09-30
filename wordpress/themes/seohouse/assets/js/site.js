@@ -159,6 +159,53 @@
 		void per;
 	});
 
+	/* ---------------------------------------------------------------- contact page form (same endpoint as booking, source "contact") */
+	$$('[data-sh-contact]').forEach(function (box) {
+		var form = box.querySelector('[data-ct-form]'), sent = box.querySelector('[data-ct-sent]');
+		var err = box.querySelector('[data-ct-error]'), errText = box.querySelector('[data-ct-error-text]');
+		if (!form || !sent) return;
+		function showErr(m) { errText.textContent = m || ''; err.hidden = false; }
+		function hideErr() { err.hidden = true; errText.textContent = ''; }
+		$$('input,textarea,select', form).forEach(function (i) { i.addEventListener('input', hideErr); });
+		function val(n) { return form[n] ? String(form[n].value || '').trim() : ''; }
+		function optText(n) { var el = form[n]; return el && el.selectedIndex >= 0 ? el.options[el.selectedIndex].text : ''; }
+		form.addEventListener('submit', function (e) {
+			e.preventDefault();
+			if (!val('name') || !val('company')) return showErr('أدخل الاسم واسم الشركة للمتابعة.');
+			if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val('email'))) return showErr('أدخل بريدًا إلكترونيًا صحيحًا.');
+			if (!val('phone')) return showErr('أدخل رقم الهاتف أو واتساب.');
+			if (!val('goal')) return showErr('اكتب الهدف أو التحدي الأساسي.');
+			if (form.getAttribute('aria-busy') === 'true') return;
+			form.setAttribute('aria-busy', 'true');
+			fetch((cfg.rest || '/wp-json/seohouse/v1/') + 'lead', { method: 'POST', body: new FormData(form), credentials: 'same-origin' })
+				.then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+				.then(function (res) {
+					form.removeAttribute('aria-busy');
+					if (!res.ok || !res.j || !res.j.ok) return showErr((res.j && res.j.message) || (cfg.i18n && cfg.i18n.failed));
+					var sum = box.querySelector('[data-ct-summary]');
+					if (sum) sum.textContent = 'السوق: ' + optText('market') + ' · الخدمة: ' + optText('service');
+					var bk = cfg.booking || {}, embed = box.querySelector('[data-bk-embed]'), receipt = box.querySelector('[data-ct-receipt]');
+					if (bk.url && embed) {
+						var u = new URL(bk.url);
+						u.searchParams.set('name', val('name')); u.searchParams.set('email', val('email'));
+						var f = d.createElement('iframe');
+						f.src = u.toString(); f.title = 'اختيار الموعد'; f.loading = 'lazy';
+						embed.innerHTML = ''; embed.appendChild(f); embed.hidden = false;
+						if (receipt) receipt.hidden = true;
+					}
+					form.hidden = true; sent.hidden = false;
+					var t = sent.querySelector('[data-ct-sent-title]'); if (t) t.focus();
+					if (window.dataLayer) window.dataLayer.push({ event: 'sh_lead_submitted', sh_source: 'contact', sh_service: val('service') });
+				})
+				.catch(function () { form.removeAttribute('aria-busy'); showErr(cfg.i18n && cfg.i18n.failed); });
+		});
+		var reset = box.querySelector('[data-ct-reset]');
+		if (reset) reset.addEventListener('click', function () {
+			form.reset(); hideErr(); sent.hidden = true; form.hidden = false;
+			if (form.ts) form.ts.value = String(Math.floor(Date.now() / 1000));
+		});
+	});
+
 	/* ---------------------------------------------------------------- review cards carousel (design data-rev) */
 	$$('section[data-screen-label="Reviews"]').forEach(function (sec) {
 		var grid = sec.querySelector('[data-rev]') && sec.querySelector('[data-rev]').parentNode;
