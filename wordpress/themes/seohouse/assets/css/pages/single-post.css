@@ -18,8 +18,8 @@
 [data-art-body] img { max-width:100%; height:auto; border-radius:12px; }
 [data-art-body] figcaption { font-size:13.5px; color:var(--sh-slate); margin-top:8px; }
 [data-art-body] hr { border:0; height:1px; background:rgba(var(--sh-ink-rgb), .1); margin:32px 0 0; }
-[data-art-body] > * + * { margin-top:18px; }
 [data-art-body] > * { margin-block:0; }
+[data-art-body] > * + * { margin-top:18px; }
 [data-art-body] h2 { font-family:'Alexandria',sans-serif; font-weight:700; font-size:clamp(21px,2vw,25px); line-height:1.5; color:var(--sh-ink); margin:40px 0 0; scroll-margin-top:96px; }
 [data-art-body] h3 { font-family:'Alexandria',sans-serif; font-weight:700; font-size:18.5px; line-height:1.55; color:var(--sh-ink); margin:28px 0 0; }
 [data-art-body] ul { margin:0; padding:0 22px 0 0; display:flex; flex-direction:column; gap:6px; }

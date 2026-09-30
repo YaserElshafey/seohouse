@@ -63,8 +63,9 @@ function sh_anchor( array $f, string $default ): string {
  * @param int|array $id       Attachment ID (or ACF image array).
  * @param array     $attrs    Attributes from the design (style, class, loading, data-*).
  * @param string    $alt_fallback Alt text from the design when the attachment has none.
+ * @param string    $size     Registered image size (srcset still lists the other sizes).
  */
-function sh_image( $id, array $attrs = array(), string $alt_fallback = '' ): string {
+function sh_image( $id, array $attrs = array(), string $alt_fallback = '', string $size = 'full' ): string {
 	if ( is_array( $id ) ) {
 		$id = $id['ID'] ?? ( $id['id'] ?? 0 );
 	}
@@ -80,7 +81,7 @@ function sh_image( $id, array $attrs = array(), string $alt_fallback = '' ): str
 		$attrs['loading'] = 'lazy';
 	}
 	$attrs['decoding'] = 'async';
-	return wp_get_attachment_image( $id, 'full', false, $attrs );
+	return wp_get_attachment_image( $id, $size, false, $attrs );
 }
 
 /** Approved design SVG (platform logos) shipped with the theme. */

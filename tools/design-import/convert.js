@@ -75,7 +75,8 @@ function cssBlocks(css) {
 const blockCount = new Map();
 const pageBlocks = {};
 for (const pg of pages) {
-  const blocks = [...new Set(cssBlocks(pg.x.styles).map(b => tokenizeCss(b)))];
+  // identical blocks: keep the LAST copy so the cascade order of the design is preserved
+  const blocks = [...new Set(cssBlocks(pg.x.styles).map(b => tokenizeCss(b)).reverse())].reverse();
   pageBlocks[pg.key] = blocks;
   blocks.forEach(b => blockCount.set(b, (blockCount.get(b) || 0) + 1));
 }

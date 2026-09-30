@@ -43,8 +43,10 @@ function sh_logo_track( array $style ): void {
 		foreach ( $logos as $l ) {
 			$img = sh_image(
 				$l['logo'],
-				array( 'data-logo-img' => '', 'style' => $style['img'] ?? '', 'loading' => $dup ? 'lazy' : 'eager' ),
-				(string) ( $l['name'] ?? '' )
+				// displayed at most 180×32 px (130×24 on small screens); below the hero, so low priority
+				array( 'data-logo-img' => '', 'style' => $style['img'] ?? '', 'loading' => 'lazy', 'fetchpriority' => 'low', 'sizes' => '(max-width: 859px) 130px, 180px' ),
+				(string) ( $l['name'] ?? '' ),
+				'medium'
 			);
 			if ( $dup ) {
 				$img = preg_replace( '/alt="[^"]*"/', 'alt=""', $img );

@@ -29,7 +29,7 @@ function sh_core_register_post_types(): void {
 			'rewrite'             => array( 'slug' => 'results', 'with_front' => false ),
 			'menu_icon'           => 'dashicons-chart-line',
 			'menu_position'       => 21,
-			'supports'            => array( 'title', 'thumbnail', 'revisions', 'custom-fields' ),
+			'supports'            => array( 'title', 'thumbnail', 'page-attributes', 'revisions', 'custom-fields' ),
 			'show_in_rest'        => true,
 			'exclude_from_search' => false,
 		)
