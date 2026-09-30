@@ -28,6 +28,7 @@ require SH_CORE_DIR . 'inc/schema.php';
 require SH_CORE_DIR . 'inc/leads.php';
 require SH_CORE_DIR . 'inc/tracking.php';
 require SH_CORE_DIR . 'inc/search.php';
+require SH_CORE_DIR . 'inc/media.php';
 require SH_CORE_DIR . 'inc/settings-tools.php';
 require SH_CORE_DIR . 'inc/importer/class-importer.php';
 require SH_CORE_DIR . 'inc/importer/admin.php';

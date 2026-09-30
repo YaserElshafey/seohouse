@@ -28,7 +28,7 @@ $title_style     = $is_home_variant
 	<?php endif; ?>
 	<div data-grid="footer" style="position: relative; max-width: 1200px; margin: 0px auto; padding: clamp(40px, 4.4vw, 56px) 20px clamp(28px, 3vw, 40px); display: grid; gap: 32px 40px;">
 		<div>
-			<img src="<?php echo esc_url( sh_logo_url() ); ?>" alt="<?php echo esc_attr( sh_site_name() ); ?>" width="144" height="36" loading="lazy" style="height: 36px; width: auto; display: block;">
+			<img src="<?php echo esc_url( sh_logo_url() ); ?>" alt="<?php echo esc_attr( sh_site_name() ); ?>" width="154" height="36" loading="lazy" style="height: 36px; width: auto; display: block;">
 			<?php if ( $about ) : ?>
 			<p style="color: var(--sh-muted); font-size: 15px; line-height: 1.85; margin: 16px 0px 0px; max-width: 26em; text-wrap: pretty;"><?php echo esc_html( $about ); ?></p>
 			<?php endif; ?>

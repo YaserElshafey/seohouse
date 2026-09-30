@@ -46,12 +46,28 @@ function sh_asset_version( string $rel ): string {
 add_action(
 	'wp_enqueue_scripts',
 	static function () {
-		wp_enqueue_style( 'sh-fonts', sh_asset( 'css/fonts.css' ), array(), sh_asset_version( 'css/fonts.css' ) );
-		wp_enqueue_style( 'sh-base', sh_asset( 'css/design-base.css' ), array( 'sh-fonts' ), sh_asset_version( 'css/design-base.css' ) );
-		wp_enqueue_style( 'sh-theme', sh_asset( 'css/theme.css' ), array( 'sh-base' ), sh_asset_version( 'css/theme.css' ) );
-		$key = sh_view_key();
+		$files = array( 'css/fonts.css', 'css/design-base.css', 'css/theme.css' );
+		$key   = sh_view_key();
 		if ( $key && file_exists( SH_THEME_DIR . "/assets/css/pages/{$key}.css" ) ) {
-			wp_enqueue_style( 'sh-page', sh_asset( "css/pages/{$key}.css" ), array( 'sh-theme' ), sh_asset_version( "css/pages/{$key}.css" ) );
+			$files[] = "css/pages/{$key}.css";
+		}
+		/*
+		 * The whole stylesheet for a view is ~25–35 KB (≈6 KB compressed), so it is printed inline:
+		 * no render-blocking requests. Filter "sh_inline_css" → false loads the files instead.
+		 */
+		if ( apply_filters( 'sh_inline_css', true ) ) {
+			wp_register_style( 'sh-theme', false, array(), SH_THEME_VERSION );
+			wp_enqueue_style( 'sh-theme' );
+			wp_add_inline_style( 'sh-theme', sh_inline_css( $files ) );
+		} else {
+			$dep = array();
+			foreach ( $files as $i => $rel ) {
+				$handle = 'sh-css-' . $i;
+				wp_enqueue_style( $handle, sh_asset( $rel ), $dep, sh_asset_version( $rel ) );
+				$dep = array( $handle );
+			}
+			wp_register_style( 'sh-theme', false, $dep, SH_THEME_VERSION );
+			wp_enqueue_style( 'sh-theme' );
 		}
 		$tokens = sh_design_token_css();
 		if ( $tokens ) {
@@ -74,6 +90,34 @@ add_action(
 		);
 	}
 );
+
+/** Concatenated, lightly minified CSS (cached per file set and modification time). */
+function sh_inline_css( array $files ): string {
+	$sig = '';
+	foreach ( $files as $rel ) {
+		$sig .= $rel . sh_asset_version( $rel );
+	}
+	$cache_key = 'sh_css_' . md5( $sig . SH_THEME_URI );
+	$css       = wp_cache_get( $cache_key, 'seohouse' );
+	if ( false === $css ) {
+		$css = get_transient( $cache_key );
+	}
+	if ( false !== $css ) {
+		return (string) $css;
+	}
+	$css = '';
+	foreach ( $files as $rel ) {
+		$css .= (string) file_get_contents( SH_THEME_DIR . '/assets/' . $rel ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	}
+	$css = str_replace( "url('../fonts/", "url('" . SH_THEME_URI . '/assets/fonts/', $css );
+	$css = preg_replace( '#/\*.*?\*/#s', '', $css );
+	$css = preg_replace( '/\s+/', ' ', $css );
+	$css = preg_replace( '/\s*([{};,>])\s*/', '$1', $css );
+	$css = str_replace( ';}', '}', trim( $css ) );
+	wp_cache_set( $cache_key, $css, 'seohouse' );
+	set_transient( $cache_key, $css, WEEK_IN_SECONDS );
+	return $css;
+}
 
 /** Preload the two Arabic fonts used above the fold. */
 add_action(

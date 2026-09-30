@@ -11,7 +11,7 @@ $nav = sh_nav_primary();
 ?>
 <div id="sh-drawer" role="dialog" aria-modal="true" aria-label="<?php esc_attr_e( 'القائمة', 'seohouse' ); ?>" hidden style="position: fixed; inset: 0px; z-index: 80; background: rgba(var(--sh-ink-rgb), 0.98); overflow-y: auto; padding: 18px 20px 40px;">
 	<div style="display: flex; align-items: center; justify-content: space-between; height: 58px;">
-		<img src="<?php echo esc_url( sh_logo_url() ); ?>" alt="<?php echo esc_attr( sh_site_name() ); ?>" width="120" height="30" style="height: 30px; width: auto;">
+		<img src="<?php echo esc_url( sh_logo_url() ); ?>" alt="<?php echo esc_attr( sh_site_name() ); ?>" width="128" height="30" loading="lazy" style="height: 30px; width: auto;">
 		<button type="button" data-sh-drawer-close aria-label="<?php esc_attr_e( 'إغلاق القائمة', 'seohouse' ); ?>" style="background: none; border: 1px solid rgba(255, 255, 255, 0.22); color: var(--sh-text); width: 44px; height: 44px; border-radius: 10px; font-size: 20px; cursor: pointer;">✕</button>
 	</div>
 	<nav aria-label="<?php esc_attr_e( 'قائمة الجوال', 'seohouse' ); ?>" style="margin-top: 18px; border-top: 1px solid rgba(255, 255, 255, 0.12);">

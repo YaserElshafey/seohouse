@@ -122,7 +122,7 @@ function sh_logo_url(): string {
 			return $src;
 		}
 	}
-	return SH_THEME_URI . '/assets/img/logo-white.png';
+	return SH_THEME_URI . '/assets/img/logo-white.webp';
 }
 
 function sh_site_name(): string {

@@ -64,6 +64,6 @@ $chev  = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="cu
 			endforeach;
 			?>
 		</nav>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php echo esc_attr( sh_site_name() . ' — ' . __( 'الرئيسية', 'seohouse' ) ); ?>" style="display: flex; align-items: center; flex: 0 0 auto; margin-inline-start: auto;"><img src="<?php echo esc_url( sh_logo_url() ); ?>" alt="<?php echo esc_attr( sh_site_name() ); ?>" width="136" height="34" style="height: 34px; width: auto; display: block;"></a>
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php echo esc_attr( sh_site_name() . ' — ' . __( 'الرئيسية', 'seohouse' ) ); ?>" style="display: flex; align-items: center; flex: 0 0 auto; margin-inline-start: auto;"><img src="<?php echo esc_url( sh_logo_url() ); ?>" alt="<?php echo esc_attr( sh_site_name() ); ?>" width="145" height="34" fetchpriority="high" style="height: 34px; width: auto; display: block;"></a>
 	</div>
 </header>
