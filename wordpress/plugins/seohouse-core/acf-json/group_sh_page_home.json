@@ -884,7 +884,7 @@
                   "label": "العناصر: ووردبريس",
                   "name": "items",
                   "type": "repeater",
-                  "instructions": "العدد المعتمد في التصميم: 14. يمكن الإضافة والحذف وإعادة الترتيب.",
+                  "instructions": "العدد المعتمد في التصميم: 7. يمكن الإضافة والحذف وإعادة الترتيب.",
                   "required": 0,
                   "layout": "block",
                   "button_label": "إضافة عنصر",
@@ -916,22 +916,6 @@
                       "type": "text",
                       "instructions": "",
                       "required": 0
-                    },
-                    {
-                      "key": "field_f6711d1e068e2",
-                      "label": "نمط العرض",
-                      "name": "variant",
-                      "type": "select",
-                      "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
-                      "required": 0,
-                      "choices": {
-                        "v1": "النمط 1",
-                        "v2": "النمط 2"
-                      },
-                      "default_value": "v1",
-                      "allow_null": 0,
-                      "ui": 0,
-                      "return_format": "value"
                     }
                   ],
                   "min": 0,
@@ -1042,14 +1026,15 @@
               "label": "الخدمة المختارة مسبقًا",
               "type": "select",
               "choices": {
+                "": "بدون اختيار مسبق",
                 "seo": "تحسين محركات البحث",
                 "web": "تصميم وتطوير موقع",
                 "stores": "تصميم متجر إلكتروني",
                 "products": "إضافة المنتجات",
                 "unsure": "لم أحدد بعد"
               },
-              "default_value": "seo",
-              "allow_null": 0,
+              "default_value": "",
+              "allow_null": 1,
               "return_format": "value",
               "required": 0
             },

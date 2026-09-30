@@ -405,73 +405,31 @@
      "items": [
       {
        "logo": "assets/platforms/official/wordpress.svg",
-       "label": "ووردبريس",
-       "variant": "v1"
+       "label": "ووردبريس"
       },
       {
        "logo": "assets/platforms/official/shopify.svg",
-       "label": "شوبيفاي",
-       "variant": "v1"
+       "label": "شوبيفاي"
       },
       {
        "logo": "assets/platforms/official/salla.svg",
-       "label": "سلة",
-       "variant": "v1"
+       "label": "سلة"
       },
       {
        "logo": "assets/platforms/official/gsc.svg",
-       "label": "سيرش كونسول",
-       "variant": "v1"
+       "label": "سيرش كونسول"
       },
       {
        "logo": "assets/platforms/official/webflow.svg",
-       "label": "ويب فلو",
-       "variant": "v1"
+       "label": "ويب فلو"
       },
       {
        "logo": "assets/platforms/official/woocommerce.svg",
-       "label": "ووكومرس",
-       "variant": "v1"
+       "label": "ووكومرس"
       },
       {
        "logo": "assets/platforms/official/ga4.svg",
-       "label": "جوجل أناليتكس",
-       "variant": "v1"
-      },
-      {
-       "logo": "assets/platforms/official/wordpress.svg",
-       "label": "ووردبريس",
-       "variant": "v2"
-      },
-      {
-       "logo": "assets/platforms/official/shopify.svg",
-       "label": "شوبيفاي",
-       "variant": "v2"
-      },
-      {
-       "logo": "assets/platforms/official/salla.svg",
-       "label": "سلة",
-       "variant": "v2"
-      },
-      {
-       "logo": "assets/platforms/official/gsc.svg",
-       "label": "سيرش كونسول",
-       "variant": "v2"
-      },
-      {
-       "logo": "assets/platforms/official/webflow.svg",
-       "label": "ويب فلو",
-       "variant": "v2"
-      },
-      {
-       "logo": "assets/platforms/official/woocommerce.svg",
-       "label": "ووكومرس",
-       "variant": "v2"
-      },
-      {
-       "logo": "assets/platforms/official/ga4.svg",
-       "label": "جوجل أناليتكس",
-       "variant": "v2"
+       "label": "جوجل أناليتكس"
       }
      ]
     },
@@ -479,73 +437,31 @@
      "items": [
       {
        "logo": "assets/platforms/official/ga4.svg",
-       "label": "جوجل أناليتكس",
-       "variant": "v1"
+       "label": "جوجل أناليتكس"
       },
       {
        "logo": "assets/platforms/official/woocommerce.svg",
-       "label": "ووكومرس",
-       "variant": "v1"
+       "label": "ووكومرس"
       },
       {
        "logo": "assets/platforms/official/webflow.svg",
-       "label": "ويب فلو",
-       "variant": "v1"
+       "label": "ويب فلو"
       },
       {
        "logo": "assets/platforms/official/gsc.svg",
-       "label": "سيرش كونسول",
-       "variant": "v1"
+       "label": "سيرش كونسول"
       },
       {
        "logo": "assets/platforms/official/salla.svg",
-       "label": "سلة",
-       "variant": "v1"
+       "label": "سلة"
       },
       {
        "logo": "assets/platforms/official/shopify.svg",
-       "label": "شوبيفاي",
-       "variant": "v1"
+       "label": "شوبيفاي"
       },
       {
        "logo": "assets/platforms/official/wordpress.svg",
-       "label": "ووردبريس",
-       "variant": "v1"
-      },
-      {
-       "logo": "assets/platforms/official/ga4.svg",
-       "label": "جوجل أناليتكس",
-       "variant": "v2"
-      },
-      {
-       "logo": "assets/platforms/official/woocommerce.svg",
-       "label": "ووكومرس",
-       "variant": "v2"
-      },
-      {
-       "logo": "assets/platforms/official/webflow.svg",
-       "label": "ويب فلو",
-       "variant": "v2"
-      },
-      {
-       "logo": "assets/platforms/official/gsc.svg",
-       "label": "سيرش كونسول",
-       "variant": "v2"
-      },
-      {
-       "logo": "assets/platforms/official/salla.svg",
-       "label": "سلة",
-       "variant": "v2"
-      },
-      {
-       "logo": "assets/platforms/official/shopify.svg",
-       "label": "شوبيفاي",
-       "variant": "v2"
-      },
-      {
-       "logo": "assets/platforms/official/wordpress.svg",
-       "label": "ووردبريس",
-       "variant": "v2"
+       "label": "ووردبريس"
       }
      ]
     }
@@ -562,7 +478,7 @@
   },
   {
    "acf_fc_layout": "booking",
-   "service": "seo",
+   "service": "",
    "eyebrow": "",
    "title": "",
    "text": "",

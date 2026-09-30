@@ -34,7 +34,8 @@ function wpUrl(pg) {
 }
 
 (async () => {
-  const srv = http.createServer((q, r) => { const p = path.join(designDir, decodeURIComponent(q.url.split('?')[0])); if (!fs.existsSync(p) || fs.statSync(p).isDirectory()) { r.writeHead(404); return r.end(); } r.end(fs.readFileSync(p)); });
+  const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.json': 'application/json' };
+  const srv = http.createServer((q, r) => { const p = path.join(designDir, decodeURIComponent(q.url.split('?')[0])); if (!fs.existsSync(p) || fs.statSync(p).isDirectory()) { r.writeHead(404); return r.end(); } r.writeHead(200, { 'content-type': MIME[path.extname(p)] || 'application/octet-stream' }); r.end(fs.readFileSync(p)); });
   await new Promise(res => srv.listen(0, res));
   const base = `http://127.0.0.1:${srv.address().port}/`;
   const browser = await chromium.launch();

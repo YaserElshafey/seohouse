@@ -68,7 +68,7 @@ function sharedFor(pg, label, $s, $) {
     return {
       type: 'booking',
       fields: [
-        { key: key(k, 'booking', 'service'), name: 'service', label: 'الخدمة المختارة مسبقًا', type: 'select', choices: { seo: 'تحسين محركات البحث', web: 'تصميم وتطوير موقع', stores: 'تصميم متجر إلكتروني', products: 'إضافة المنتجات', unsure: 'لم أحدد بعد' }, default_value: 'seo', allow_null: 0, return_format: 'value' },
+        { key: key(k, 'booking', 'service'), name: 'service', label: 'الخدمة المختارة مسبقًا', type: 'select', choices: { '': 'بدون اختيار مسبق', seo: 'تحسين محركات البحث', web: 'تصميم وتطوير موقع', stores: 'تصميم متجر إلكتروني', products: 'إضافة المنتجات', unsure: 'لم أحدد بعد' }, default_value: '', allow_null: 1, return_format: 'value' },
         { key: key(k, 'booking', 'eyebrow'), name: 'eyebrow', label: 'الوسم (اتركه فارغًا لاستخدام النص العام)', type: 'text' },
         { key: key(k, 'booking', 'title'), name: 'title', label: 'العنوان (اتركه فارغًا لاستخدام النص العام)', type: 'text' },
         { key: key(k, 'booking', 'text'), name: 'text', label: 'الوصف (اتركه فارغًا لاستخدام النص العام)', type: 'textarea', rows: 2, new_lines: '' },
@@ -76,7 +76,7 @@ function sharedFor(pg, label, $s, $) {
           { key: key(k, 'booking', 'points', 't'), name: 'text', label: 'النقطة', type: 'text' }
         ] }
       ],
-      value: { service: BOOKING_SERVICES[pressed] || 'seo', eyebrow, title, text, points }
+      value: { service: pressed ? (BOOKING_SERVICES[pressed] || '') : '', eyebrow, title, text, points }
     };
   }
   if (label === 'Related' && $s.find('a').length && /صفحات مرتبطة/.test($s.text())) {
@@ -123,7 +123,7 @@ function dynamicFor(pg, label, $) {
   if (label === 'Reviews') {
     out.push({
       name: 'reviews-slot', required: true,
-      match: n => !!(n.attribs && (n.attribs['data-grid'] === 'reviews' || 'data-rev-grid' in n.attribs)),
+      match: n => !!(n.attribs && (n.attribs['data-grid'] === 'reviews' || 'data-rev-grid' in n.attribs || 'data-trustindex-mount' in n.attribs)),
       wrap: true
     });
   }

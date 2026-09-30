@@ -20,9 +20,9 @@ $f = $args['f'] ?? array();
         <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><div data-plat-row>
           <div data-plat-track>
             
-              <?php $r2_list = $r1['items'] ?? []; $i2_n = is_array($r2_list) ? count($r2_list) : 0; foreach ((array) $r2_list as $i2 => $r2) : ?><?php $vt_f6711d1e = ['v1' => ['false'], 'v2' => ['true']]; $vk_f6711d1e = $vt_f6711d1e[$r2['variant'] ?? 'v1'] ?? $vt_f6711d1e['v1']; ?><div data-plat aria-hidden="<?= esc_attr($vk_f6711d1e[0] ?? '') ?>">
+              <?php foreach ( array( false, true ) as $dup2 ) : ?><?php $r2_list = $r1['items'] ?? []; $i2_n = is_array($r2_list) ? count($r2_list) : 0; foreach ((array) $r2_list as $i2 => $r2) : ?><div data-plat aria-hidden="<?= $dup2 ? 'true' : 'false' ?>">
                 <span data-plat-chip><?= sh_svg_img($r2['logo'] ?? '', '', ['data-wide' => 'false']) ?><?php if (!empty($r2['label'])) : ?><span><?= esc_html($r2['label'] ?? '') ?></span><?php endif; ?></span>
-              </div><?php endforeach; ?>
+              </div><?php endforeach; ?><?php endforeach; ?>
             
           </div>
         </div><?php endforeach; ?>

@@ -415,7 +415,28 @@ class SectionCompiler {
     return { php: `${lead}<?= ${fn}(${expr} ?? '') ?>${trail}`, field: f, expr };
   }
 
+  /** Marquee tracks repeat their items (second copy aria-hidden) so the loop is seamless. */
+  marqueeHalf(nodes) {
+    const n = nodes.length;
+    if (n < 4 || n % 2) return 0;
+    const h = n / 2;
+    const norm = x => serialize(x, this).replace(/\saria-hidden="(true|false)"/g, '').replace(/\stabindex="-1"/g, '');
+    for (let i = 0; i < h; i++) if (norm(nodes[i]) !== norm(nodes[i + h])) return 0;
+    const ah = x => (x.attribs || {})['aria-hidden'];
+    if (!(ah(nodes[0]) !== 'true' && ah(nodes[h]) === 'true')) return 0;
+    return h;
+  }
+
   repeater(units, scope, parent) {
+    // marquee: keep one copy of the items as data, print it twice
+    const halves = units.map(u => this.marqueeHalf(u.nodes));
+    if (halves.every(h => h > 0)) {
+      const halved = units.map((u, k) => ({ ...u, nodes: u.nodes.slice(0, halves[k]) }));
+      const inner = this.repeater(halved, scope, parent);
+      const dv = `$dup${this.varDepth + 1}`;
+      const body = inner.replace(/aria-hidden="false"/, `aria-hidden="<?= ${dv} ? 'true' : 'false' ?>"`);
+      return `<?php foreach ( array( false, true ) as ${dv} ) : ?>${body}<?php endforeach; ?>`;
+    }
     // all rows of all instances, aligned
     const d = ++this.varDepth;
     const rv = `$r${d}`, ri = `$i${d}`;

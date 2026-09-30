@@ -93,10 +93,7 @@ function sh_svg_img( $file, string $alt = '', array $attrs = array() ): string {
 	foreach ( $attrs as $k => $v ) {
 		$out .= ' ' . esc_attr( $k ) . ( '' === $v ? '' : '="' . esc_attr( $v ) . '"' );
 	}
-	if ( ! isset( $attrs['loading'] ) ) {
-		$out .= ' loading="lazy"';
-	}
-	return $out . '>';
+	return $out . ' decoding="async">';
 }
 
 /** Inline SVG icon from the design icon library (inc/generated/icons.php). */
@@ -147,4 +144,12 @@ function sh_attrs( array $attrs ): string {
 		$out .= ' ' . esc_attr( $k ) . ( true === $v || '' === $v ? '' : '="' . esc_attr( (string) $v ) . '"' );
 	}
 	return $out;
+}
+
+/**
+ * Style attributes for a tab element that switches between the design's selected/unselected styles
+ * (site.js swaps data-style-on / data-style-off).
+ */
+function sh_tab_style( bool $on, string $style_on, string $style_off ): string {
+	return sprintf( ' style="%s" data-style-on="%s" data-style-off="%s"', esc_attr( $on ? $style_on : $style_off ), esc_attr( $style_on ), esc_attr( $style_off ) );
 }

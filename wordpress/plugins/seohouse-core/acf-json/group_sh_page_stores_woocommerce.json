@@ -566,14 +566,15 @@
               "label": "الخدمة المختارة مسبقًا",
               "type": "select",
               "choices": {
+                "": "بدون اختيار مسبق",
                 "seo": "تحسين محركات البحث",
                 "web": "تصميم وتطوير موقع",
                 "stores": "تصميم متجر إلكتروني",
                 "products": "إضافة المنتجات",
                 "unsure": "لم أحدد بعد"
               },
-              "default_value": "seo",
-              "allow_null": 0,
+              "default_value": "",
+              "allow_null": 1,
               "return_format": "value",
               "required": 0
             },

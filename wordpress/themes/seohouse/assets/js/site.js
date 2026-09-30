@@ -100,13 +100,16 @@
 		var p = d.getElementById(b.getAttribute('aria-controls'));
 		if (p) p.hidden = !open;
 		var s = b.querySelector('[data-sign]'); if (s) s.textContent = open ? (s.getAttribute('data-on') || '−') : (s.getAttribute('data-off') || '+');
+		$$('[data-style-on]', b).forEach(function (x) { x.setAttribute('style', open ? x.getAttribute('data-style-on') : x.getAttribute('data-style-off')); });
 	}
 
 	/* ---------------------------------------------------------------- tabs (design tab groups) */
 	$$('[data-sh-tabs]').forEach(function (root) {
 		var tabs = $$('[data-sh-tab]', root);
+		var hover = root.getAttribute('data-sh-tabs') === 'hover';
 		tabs.forEach(function (t, i) {
 			t.addEventListener('click', function () { select(i); });
+			if (hover) { t.addEventListener('mouseenter', function () { select(i); }); t.addEventListener('focus', function () { select(i); }); }
 			t.addEventListener('keydown', function (e) {
 				if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { e.preventDefault(); select((i + 1) % tabs.length, true); }
 				if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { e.preventDefault(); select((i - 1 + tabs.length) % tabs.length, true); }
@@ -115,7 +118,7 @@
 		function select(i, focus) {
 			tabs.forEach(function (t, k) {
 				var on = k === i;
-				t.setAttribute('aria-selected', on ? 'true' : 'false');
+				t.setAttribute(t.hasAttribute('aria-pressed') ? 'aria-pressed' : 'aria-selected', on ? 'true' : 'false');
 				t.setAttribute('tabindex', on ? '0' : '-1');
 				var onS = t.getAttribute('data-style-on'), offS = t.getAttribute('data-style-off');
 				if (onS && offS) t.setAttribute('style', on ? onS : offS);
@@ -154,6 +157,44 @@
 			slots.forEach(function (s, idx) { s.innerHTML = mine[idx % n]; });
 		});
 		void per;
+	});
+
+	/* ---------------------------------------------------------------- review cards carousel (design data-rev) */
+	$$('section[data-screen-label="Reviews"]').forEach(function (sec) {
+		var grid = sec.querySelector('[data-rev]') && sec.querySelector('[data-rev]').parentNode;
+		if (!grid) return;
+		var cards = $$(':scope > [data-rev]', grid);
+		var n = cards.length, start = 0;
+		var dots = $$('button[aria-label^="التقييم "]', sec).filter(function (b) { return !/السابق|التالي/.test(b.getAttribute('aria-label')); });
+		var onDot = dots[0] ? dots[0].getAttribute('style') : '', offDot = dots[1] ? dots[1].getAttribute('style') : '';
+		function show(k) {
+			start = (k + n) % n;
+			for (var i = 0; i < n; i++) { var c = cards[(start + i) % n]; c.setAttribute('data-rev', String(i)); grid.appendChild(c); }
+			dots.forEach(function (d, i) { d.setAttribute('style', i % n === start ? onDot : offDot); d.setAttribute('aria-current', i % n === start ? 'true' : 'false'); });
+		}
+		$$('button', sec).forEach(function (b) {
+			var l = b.getAttribute('aria-label') || '';
+			if (/السابق/.test(l)) b.addEventListener('click', function () { show(start - 1); });
+			else if (/التالي/.test(l)) b.addEventListener('click', function () { show(start + 1); });
+		});
+		dots.forEach(function (d, i) { d.addEventListener('click', function () { show(i % n); }); });
+		// swipe on touch screens
+		var x0 = null;
+		grid.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+		grid.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) show(start + (dx > 0 ? 1 : -1)); x0 = null; });
+	});
+
+	/* ---------------------------------------------------------------- list filters (results index) */
+	$$('[data-sh-filter]').forEach(function (b) {
+		b.addEventListener('click', function () {
+			var k = b.getAttribute('data-sh-filter');
+			var group = b.parentNode;
+			$$('[data-sh-filter]', group).forEach(function (o) { o.setAttribute('aria-pressed', o === b ? 'true' : 'false'); });
+			var scope = group.parentNode;
+			$$('[data-sh-filter-item]', scope).forEach(function (it) {
+				it.hidden = !(k === 'all' || (' ' + it.getAttribute('data-sh-filter-item') + ' ').indexOf(' ' + k + ' ') >= 0);
+			});
+		});
 	});
 
 	/* ---------------------------------------------------------------- lightbox */

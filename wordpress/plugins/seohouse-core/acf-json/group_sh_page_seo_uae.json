@@ -287,148 +287,104 @@
               }
             },
             {
-              "key": "field_321ae3a1786a8",
-              "label": "الوسم: تحديد الفرص",
+              "key": "field_20964b10aa74a",
               "name": "eyebrow",
+              "label": "الوسم",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
-              "key": "field_d0be40bcdab99",
-              "label": "العنوان: أين يمكن أن ينمو ظهور موقعك؟",
+              "key": "field_54150a5e10fb6",
               "name": "title",
+              "label": "العنوان",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
-              "key": "field_614c3112e2214",
-              "label": "العناصر: 01 صفحات الخدمات والمنتجات ←",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_d2af2e7fa923f",
-                  "label": "عنوان فرعي: صفحات الخدمات والمنتجات",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_d2af2e7fa923f"
-            },
-            {
-              "key": "field_9f998d3084417",
-              "label": "عنوان فرعي: صفحات الخدمات والمنتجات",
-              "name": "heading",
+              "key": "field_b6c94a94d99cd",
+              "name": "review_label",
+              "label": "عنوان «ما الذي نراجعه»",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
-              "key": "field_8f40c4e8fa6db",
-              "label": "العناصر: ما الذي نراجعه؟ نراجع تغطية الصفحات …",
-              "name": "items_2",
+              "key": "field_811a5944848fd",
+              "name": "improve_label",
+              "label": "عنوان «ما الذي يمكن تحسينه»",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_6c2092ddc81a5",
+              "name": "outcome_label",
+              "label": "عنوان «النتيجة التجارية»",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_26ba9646255db",
+              "name": "opps",
+              "label": "الفرص",
               "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "instructions": "",
               "required": 0,
               "layout": "block",
-              "button_label": "إضافة عنصر",
+              "button_label": "إضافة فرصة",
+              "collapsed": "field_d95da83581ed7",
+              "max": 8,
               "sub_fields": [
                 {
-                  "key": "field_f35c273abb1ca",
-                  "label": "الوسم: ما الذي نراجعه؟",
-                  "name": "eyebrow",
+                  "key": "field_5b4308de8f309",
+                  "name": "num",
+                  "label": "الرقم",
                   "type": "text",
                   "instructions": "",
                   "required": 0
                 },
                 {
-                  "key": "field_cd7321ed5c2b3",
-                  "label": "النص: نراجع تغطية الصفحات للعبارات التجاري…",
-                  "name": "text",
+                  "key": "field_d95da83581ed7",
+                  "name": "label",
+                  "label": "الفرصة",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_04b6db5c302c9",
+                  "name": "review",
+                  "label": "ما الذي نراجعه",
                   "type": "textarea",
                   "instructions": "",
                   "required": 0,
-                  "rows": 3,
+                  "rows": 2,
+                  "new_lines": ""
+                },
+                {
+                  "key": "field_b0c7a5b89a868",
+                  "name": "improve",
+                  "label": "ما الذي يمكن تحسينه",
+                  "type": "textarea",
+                  "instructions": "",
+                  "required": 0,
+                  "rows": 2,
+                  "new_lines": ""
+                },
+                {
+                  "key": "field_6e57fc6ac2948",
+                  "name": "outcome",
+                  "label": "النتيجة التجارية",
+                  "type": "textarea",
+                  "instructions": "",
+                  "required": 0,
+                  "rows": 2,
                   "new_lines": ""
                 }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_f35c273abb1ca"
-            },
-            {
-              "key": "field_1eddce92e28d6",
-              "label": "العناصر: 01 صفحات الخدمات والمنتجات − ما الذي…",
-              "name": "items_3",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_39e504deacd5f",
-                  "label": "عنوان فرعي: صفحات الخدمات والمنتجات",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_d248f5b1626db",
-                  "label": "الرمز: −",
-                  "name": "symbol",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_b17be9611bf90",
-                  "label": "العناصر: ما الذي نراجعه؟ نراجع تغطية الصفحات …",
-                  "name": "items",
-                  "type": "repeater",
-                  "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
-                  "required": 0,
-                  "layout": "block",
-                  "button_label": "إضافة عنصر",
-                  "sub_fields": [
-                    {
-                      "key": "field_508c3da6283d8",
-                      "label": "الوسم: ما الذي نراجعه؟",
-                      "name": "eyebrow",
-                      "type": "text",
-                      "instructions": "",
-                      "required": 0
-                    },
-                    {
-                      "key": "field_60f808d4481d5",
-                      "label": "النص: نراجع تغطية الصفحات للعبارات التجاري…",
-                      "name": "text",
-                      "type": "textarea",
-                      "instructions": "",
-                      "required": 0,
-                      "rows": 3,
-                      "new_lines": ""
-                    }
-                  ],
-                  "min": 0,
-                  "max": 0,
-                  "collapsed": "field_508c3da6283d8"
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_39e504deacd5f"
+              ]
             }
           ],
           "min": "",
@@ -1215,14 +1171,15 @@
               "label": "الخدمة المختارة مسبقًا",
               "type": "select",
               "choices": {
+                "": "بدون اختيار مسبق",
                 "seo": "تحسين محركات البحث",
                 "web": "تصميم وتطوير موقع",
                 "stores": "تصميم متجر إلكتروني",
                 "products": "إضافة المنتجات",
                 "unsure": "لم أحدد بعد"
               },
-              "default_value": "seo",
-              "allow_null": 0,
+              "default_value": "",
+              "allow_null": 1,
               "return_format": "value",
               "required": 0
             },

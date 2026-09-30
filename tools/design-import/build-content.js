@@ -77,7 +77,7 @@ async function cases() {
         results_text: c.resultsText || '',
         metrics: (c.metrics || []).map(m => ({ label: m.label, unit: '', before: m.before || '', after: m.after || '', change: m.change || '', source: '', screenshot: null })),
         period_before: c.periodBefore || '', period_after: c.periodAfter || '',
-        gallery: (c.gallery || []).map(g => ({ image: { __asset: addAsset(g.src), alt: g.alt || '' }, alt: g.alt || '', caption: g.caption || '', source: g.source || '', verified: g.verified ? 1 : 0 })),
+        gallery: (c.gallery || []).map(g => ({ image: { __asset: addAsset(g.src), alt: g.alt || '' }, alt: g.alt || '', caption: g.caption || '', source: g.source || '', verified: g.verified === false ? 0 : 1 })),
         service_label: c.service?.label || '', service_page: c.service?.href ? { __route: c.service.href } : null,
         review_notes: (c.reviewNotes || []).join('\n')
       }
@@ -136,10 +136,14 @@ function posts() {
   const $c = cheerio.load(catX.html, null, false);
   const catH1 = $c('h1').first().text().trim();
   const catP = $c('h1').first().nextAll('p').first().text().trim();
+  // only categories that hold an article; the category template's chips and description are preview text
   write('categories.json', [
-    { key: 'cat:' + post.category.slug, name: post.category.name, slug: post.category.slug, description: '' },
-    { key: 'cat:seo', name: catH1, slug: 'seo', description: catP }
+    { key: 'cat:' + post.category.slug, name: post.category.name, slug: post.category.slug, description: '' }
   ]);
+  void catH1; void catP;
+  const blogX = JSON.parse(fs.readFileSync(path.join(__dirname, 'extract', 'blog.json'), 'utf8'));
+  const $b = cheerio.load(blogX.html, null, false);
+  write('extra.json', { 'page:blog': { sh_blog_intro: $b('h1').first().nextAll('p').first().text().trim() } });
   log.push('posts: 1 article body present in the design; the other listed articles have titles only and are not created (see implementation-status.md).');
 }
 
@@ -191,6 +195,7 @@ function options() {
       step2: { title: 'وصلنا طلبك', text: 'سجّلنا طلب الاستشارة. نراجع موقعك ونتواصل معك لتحديد موعد المكالمة.' }
     },
     sh_booking_provider: 'none',
+    sh_article_cta: { title: 'تريد معرفة وضع موقعك؟', text: 'مكالمة مجانية مدتها 30 دقيقة نراجع فيها موقعك ونحدد الأولوية.', label: 'احجز استشارة', link: { __route: '/contact/' } },
     sh_client_logos: logos,
     sh_reviews_show_examples: 1
   });

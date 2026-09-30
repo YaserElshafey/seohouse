@@ -109,6 +109,9 @@ class SH_Importer {
 		$this->index_existing();
 		if ( $this->want( 'settings' ) ) {
 			$this->step_settings();
+			if ( ! get_option( 'sh_content_last_import' ) ) {
+				$this->step_defaults();
+			}
 		}
 
 		// Phase 1: records (so every route and author exists before relations are resolved).
@@ -209,15 +212,15 @@ class SH_Importer {
 
 	private function index_routes(): void {
 		foreach ( $this->keys as $key => $id ) {
-			if ( $id <= 0 ) {
-				continue;
+			if ( $id <= 0 || 'publish' !== get_post_status( $id ) ) {
+				continue; // drafts have query-string permalinks; they are not routes yet
 			}
 			$link = get_permalink( $id );
 			if ( $link ) {
 				$this->routes[ $this->path_of( $link ) ] = $id;
 			}
 		}
-		$front = (int) get_option( 'page_on_front' );
+		$front = $this->keys['page:home'] ?? (int) get_option( 'page_on_front' );
 		if ( $front ) {
 			$this->routes['/'] = $front;
 		}
@@ -245,7 +248,9 @@ class SH_Importer {
 			$this->note( 'skipped', 'permalinks', 'بنية الروابط مضبوطة مسبقًا' );
 			return;
 		}
-		if ( $struct && '/blog/%postname%/' !== $struct && ! $this->force ) {
+		// WordPress install defaults are replaced on the first setup; anything else was chosen by someone.
+		$install_default = in_array( $struct, array( '', '/%year%/%monthnum%/%day%/%postname%/', '/index.php/%year%/%monthnum%/%day%/%postname%/' ), true ) && ! get_option( 'sh_content_last_import' );
+		if ( $struct && '/blog/%postname%/' !== $struct && ! $install_default && ! $this->force ) {
 			$this->note( 'protected', 'permalinks', 'بنية روابط مختلفة مضبوطة يدويًا (' . $struct . '). استخدم --force لتطبيق /blog/%postname%/.' );
 			return;
 		}
@@ -253,6 +258,24 @@ class SH_Importer {
 			sh_core_apply_permalinks();
 		}
 		$this->note( 'updated', 'permalinks', '/blog/%postname%/ و /blog/category/{slug}/' );
+	}
+
+	/** WordPress install samples ("Hello world!", "Sample Page", sample comment) are removed only if untouched. */
+	private function step_defaults(): void {
+		foreach ( array( 1 => 'post', 2 => 'page' ) as $id => $type ) {
+			$p = get_post( $id );
+			if ( ! $p || $p->post_type !== $type || get_post_meta( $id, self::META_KEY, true ) || 'trash' === $p->post_status ) {
+				continue;
+			}
+			if ( $p->post_modified_gmt !== $p->post_date_gmt ) {
+				$this->note( 'protected', 'default:' . $p->post_name, 'محتوى افتراضي عُدّل؛ لم يُحذف' );
+				continue;
+			}
+			if ( ! $this->dry ) {
+				wp_trash_post( $id );
+			}
+			$this->note( 'updated', 'default:' . $p->post_name, 'نُقل محتوى ووردبريس الافتراضي إلى سلة المهملات' );
+		}
 	}
 
 	private function step_reading(): void {
@@ -526,6 +549,9 @@ class SH_Importer {
 			update_field( $keys_by_name[ $name ] ?? $name, $value, $id );
 		}
 		update_post_meta( $id, self::META_HASH, $this->state_hash( $id, array_keys( $fields ) ) );
+		if ( function_exists( 'sh_search_index' ) ) {
+			sh_search_index( $id );
+		}
 		if ( ! $first ) {
 			$this->note( 'updated', $key, 'حقول' );
 		}
@@ -555,6 +581,11 @@ class SH_Importer {
 		$crumbs                       = (array) ( $seed['crumbs'] ?? array() );
 		$last                         = $crumbs ? end( $crumbs ) : null;
 		$fields['sh_crumb']           = $last && $last['label'] !== $seed['title'] ? $last['label'] : '';
+		static $extra = null;
+		if ( null === $extra ) {
+			$extra = (array) $this->json( 'data/extra.json' );
+		}
+		$fields = array_merge( $fields, (array) ( $extra[ $key ] ?? array() ) );
 		$this->write_fields( $id, 'pages', $key, $fields, $keys );
 	}
 

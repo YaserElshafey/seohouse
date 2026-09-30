@@ -824,231 +824,124 @@
               }
             },
             {
-              "key": "field_9fd30dfeb1326",
-              "label": "الوسم: القطاعات",
+              "key": "field_c07574bd210b3",
               "name": "eyebrow",
+              "label": "الوسم",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
-              "key": "field_2be090210e388",
-              "label": "العنوان: السيو حسب قطاعك",
+              "key": "field_b44161d01cda9",
               "name": "title",
+              "label": "العنوان",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
-              "key": "field_9d801f91ed82a",
-              "label": "الرابط: جميع القطاعات ←",
-              "name": "link",
+              "key": "field_378c3419a383f",
+              "name": "all_label",
+              "label": "نص رابط كل القطاعات",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_5a6ffb88fa716",
+              "name": "all_link",
+              "label": "رابط كل القطاعات",
               "type": "page_link",
               "instructions": "",
               "required": 0,
               "post_type": [
                 "page",
                 "case_study",
-                "team_member",
                 "post"
               ],
-              "allow_null": 1,
               "allow_archives": 1,
-              "multiple": 0
+              "allow_null": 1
             },
             {
-              "key": "field_3ac26c4bcdd99",
-              "label": "نص الرابط: جميع القطاعات ←",
+              "key": "field_12c588f2f6a7c",
+              "name": "path_label",
+              "label": "عنوان مسار البحث",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_6a1cac8d2f61a",
               "name": "link_label",
+              "label": "نص رابط صفحة القطاع",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
-              "key": "field_3204c7f6f7f8d",
-              "label": "العناصر: التجارة الإلكترونية ←",
-              "name": "items",
+              "key": "field_cea868e0264f5",
+              "name": "sectors",
+              "label": "القطاعات",
               "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 8. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "instructions": "",
               "required": 0,
               "layout": "block",
-              "button_label": "إضافة عنصر",
+              "button_label": "إضافة قطاع",
+              "collapsed": "field_4a5032d32ac13",
+              "max": 10,
               "sub_fields": [
                 {
-                  "key": "field_91ff68d1c3847",
-                  "label": "عنوان فرعي: التجارة الإلكترونية",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_91ff68d1c3847"
-            },
-            {
-              "key": "field_0c362f11e1b8b",
-              "label": "عنوان فرعي: التجارة الإلكترونية",
-              "name": "heading",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_54c2a1baeaea1",
-              "label": "النص: صفحات الفئات والمنتجات هي مصدر الظهو…",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
-              "required": 0,
-              "rows": 3,
-              "new_lines": ""
-            },
-            {
-              "key": "field_8d1b2a27fd0b7",
-              "label": "الوسم: مسار البحث حتى القرار",
-              "name": "eyebrow_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_ef862bf0d4eb5",
-              "label": "العناصر: البحث عن المنتج",
-              "name": "items_2",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_470eedb2dd114",
-                  "label": "نص: البحث عن المنتج",
+                  "key": "field_4a5032d32ac13",
                   "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_470eedb2dd114"
-            },
-            {
-              "key": "field_279b422867da1",
-              "label": "الرابط: صفحة القطاع ←",
-              "name": "link_2",
-              "type": "page_link",
-              "instructions": "",
-              "required": 0,
-              "post_type": [
-                "page",
-                "case_study",
-                "team_member",
-                "post"
-              ],
-              "allow_null": 1,
-              "allow_archives": 1,
-              "multiple": 0
-            },
-            {
-              "key": "field_4b1040ec63dce",
-              "label": "نص الرابط: صفحة القطاع ←",
-              "name": "link_label_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_91f330c7238da",
-              "label": "العناصر: التجارة الإلكترونية − صفحات الفئات و…",
-              "name": "items_3",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 8. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_90bd0c184567b",
-                  "label": "عنوان فرعي: التجارة الإلكترونية",
-                  "name": "heading",
+                  "label": "القطاع",
                   "type": "text",
                   "instructions": "",
                   "required": 0
                 },
                 {
-                  "key": "field_f30f32522e797",
-                  "label": "الرمز: −",
-                  "name": "symbol",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_ac601f9b95ab1",
-                  "label": "النص: صفحات الفئات والمنتجات هي مصدر الظهو…",
-                  "name": "text",
+                  "key": "field_749ceb1771940",
+                  "name": "desc",
+                  "label": "الوصف",
                   "type": "textarea",
                   "instructions": "",
                   "required": 0,
-                  "rows": 3,
+                  "rows": 2,
                   "new_lines": ""
                 },
                 {
-                  "key": "field_f46c595a5db3b",
-                  "label": "العناصر: البحث عن المنتج",
-                  "name": "items",
-                  "type": "repeater",
-                  "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
-                  "required": 0,
-                  "layout": "block",
-                  "button_label": "إضافة عنصر",
-                  "sub_fields": [
-                    {
-                      "key": "field_e351ad0cef1f5",
-                      "label": "نص: البحث عن المنتج",
-                      "name": "label",
-                      "type": "text",
-                      "instructions": "",
-                      "required": 0
-                    }
-                  ],
-                  "min": 0,
-                  "max": 0,
-                  "collapsed": "field_e351ad0cef1f5"
-                },
-                {
-                  "key": "field_ebdd524d7bc15",
-                  "label": "الرابط: صفحة القطاع ←",
+                  "key": "field_a27d7d6bde6e9",
                   "name": "link",
+                  "label": "صفحة القطاع",
                   "type": "page_link",
                   "instructions": "",
                   "required": 0,
                   "post_type": [
-                    "page",
-                    "case_study",
-                    "team_member",
-                    "post"
+                    "page"
                   ],
-                  "allow_null": 1,
-                  "allow_archives": 1,
-                  "multiple": 0
+                  "allow_null": 1
                 },
                 {
-                  "key": "field_fd893eb40bc66",
-                  "label": "نص الرابط: صفحة القطاع",
-                  "name": "link_label",
-                  "type": "text",
+                  "key": "field_5a65c10c9a39e",
+                  "name": "path",
+                  "label": "مسار البحث",
+                  "type": "repeater",
                   "instructions": "",
-                  "required": 0
+                  "required": 0,
+                  "layout": "table",
+                  "button_label": "إضافة خطوة",
+                  "max": 5,
+                  "sub_fields": [
+                    {
+                      "key": "field_bae0a89e3a29e",
+                      "name": "step",
+                      "label": "الخطوة",
+                      "type": "text",
+                      "instructions": "",
+                      "required": 0
+                    }
+                  ]
                 }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_90bd0c184567b"
+              ]
             }
           ],
           "min": "",
@@ -1272,14 +1165,15 @@
               "label": "الخدمة المختارة مسبقًا",
               "type": "select",
               "choices": {
+                "": "بدون اختيار مسبق",
                 "seo": "تحسين محركات البحث",
                 "web": "تصميم وتطوير موقع",
                 "stores": "تصميم متجر إلكتروني",
                 "products": "إضافة المنتجات",
                 "unsure": "لم أحدد بعد"
               },
-              "default_value": "seo",
-              "allow_null": 0,
+              "default_value": "",
+              "allow_null": 1,
               "return_format": "value",
               "required": 0
             },

@@ -147,49 +147,69 @@
    "acf_fc_layout": "results",
    "eyebrow": "نتائج موثقة",
    "title": "نتائج موثقة من مشاريع السيو",
-   "link": {
+   "all_label": "كل النتائج",
+   "all_link": {
     "__route": "/results/"
    },
-   "link_label": "كل النتائج ←",
-   "items": [
+   "cases": [
     {
-     "button": "متجر إلكتروني"
+     "tab": "متجر إلكتروني",
+     "sector": "تجارة إلكترونية",
+     "market": "السعودية",
+     "figure": "+432%",
+     "headline": "نمو الإيرادات من البحث العضوي",
+     "desc": "ارتفعت إيرادات البحث العضوي من 19,956 إلى 106,274 ريالًا سعوديًا بعد معالجة الجانب التقني وإعادة بناء صفحات الفئات والمنتجات.",
+     "period": "90 يومًا",
+     "source": "Google Analytics 4",
+     "link_label": "دراسة الحالة",
+     "link": {
+      "__route": "/results/"
+     },
+     "proof": {
+      "__asset": "uploads/02-case-organic-revenue-106274.png.png",
+      "alt": "تقرير جوجل أناليتكس يوضح إيرادات البحث العضوي 106,274 ريالًا مقابل 19,956 ريالًا"
+     },
+     "alt": "تقرير جوجل أناليتكس يوضح إيرادات البحث العضوي 106,274 ريالًا مقابل 19,956 ريالًا"
     },
     {
-     "button": "خدمات طبية"
+     "tab": "خدمات طبية",
+     "sector": "صحة وطب",
+     "market": "السعودية",
+     "figure": "12.9 ألف نقرة",
+     "headline": "نقرات عضوية خلال 28 يومًا",
+     "desc": "ارتفعت النقرات العضوية من 825 إلى 12.9 ألف نقرة بعد توسيع تغطية الصفحات وتحسين العناوين حسب نية البحث.",
+     "period": "28 يومًا مقابل الـ28 يومًا السابقة",
+     "source": "Google Search Console",
+     "link_label": "دراسة الحالة",
+     "link": {
+      "__route": "/results/"
+     },
+     "proof": {
+      "__asset": "uploads/03-case-gsc-clicks-12900.png.png",
+      "alt": "لوحة سيرش كونسول تظهر 12.9 ألف نقرة مقابل 825 نقرة في الفترة السابقة"
+     },
+     "alt": "لوحة سيرش كونسول تظهر 12.9 ألف نقرة مقابل 825 نقرة في الفترة السابقة"
     },
     {
-     "button": "مكتب محاماة"
+     "tab": "مكتب محاماة",
+     "sector": "قانون واستشارات",
+     "market": "السعودية",
+     "figure": "المركز الأول",
+     "headline": "النتيجة العضوية الأولى لعبارة «مكتب محاماة»",
+     "desc": "نتيجة عضوية في صفحة البحث وليست نتيجة خرائط، بعد العمل على بنية صفحات الخدمات ومصادر الثقة.",
+     "period": "نتيجة مستمرة",
+     "source": "صفحة نتائج Google",
+     "link_label": "دراسة الحالة",
+     "link": {
+      "__route": "/results/"
+     },
+     "proof": {
+      "__asset": "uploads/05-case-organic-ranking-law-firm-number-1.png",
+      "alt": "صفحة نتائج Google تظهر سهل للمحاماة في النتيجة العضوية الأولى لعبارة مكتب محاماة"
+     },
+     "alt": "صفحة نتائج Google تظهر سهل للمحاماة في النتيجة العضوية الأولى لعبارة مكتب محاماة"
     }
-   ],
-   "items_2": [
-    {
-     "label": "تجارة إلكترونية"
-    },
-    {
-     "label": "السعودية"
-    }
-   ],
-   "heading": "+432%",
-   "heading_2": "نمو الإيرادات من البحث العضوي",
-   "text": "ارتفعت إيرادات البحث العضوي من 19,956 إلى 106,274 ريالًا سعوديًا بعد معالجة الجانب التقني وإعادة بناء صفحات الفئات والمنتجات.",
-   "items_3": [
-    {
-     "label": "الفترة: 90 يومًا"
-    },
-    {
-     "label": "المصدر: Google Analytics 4"
-    }
-   ],
-   "link_2": {
-    "__route": "/results/"
-   },
-   "link_label_2": "دراسة الحالة",
-   "label": "Google Analytics 4",
-   "image": {
-    "__asset": "uploads/02-case-organic-revenue-106274.png.png",
-    "alt": "تقرير جوجل أناليتكس يوضح إيرادات البحث العضوي 106,274 ريالًا مقابل 19,956 ريالًا"
-   }
+   ]
   },
   {
    "acf_fc_layout": "sectors",
@@ -301,349 +321,143 @@
    "acf_fc_layout": "process",
    "eyebrow": "خطوات العمل والتسليمات",
    "title": "تعرف ماذا ننفّذ وما الذي تستلمه",
-   "items": [
+   "deliverables_label": "التسليمات",
+   "phases": [
     {
-     "heading": "نفهم الموقع والهدف",
-     "label": "مراجعة النشاط، السوق، القياس والوضع الحالي."
-    },
-    {
-     "heading": "نحلّل ونرتّب الأولويات",
-     "label": "تدقيق تقني، منافسون، كلمات وصفحات."
-    },
-    {
-     "heading": "ننفّذ التحسينات",
-     "label": "تقني، صفحات، محتوى، روابط داخلية وخارجية حسب النطاق."
-    },
-    {
-     "heading": "نقيس ونطوّر",
-     "label": "لوحة أداء، مراجعة شهرية وأولويات المرحلة التالية."
-    }
-   ],
-   "eyebrow_2": "01",
-   "heading": "نفهم الموقع والهدف",
-   "text": "مراجعة النشاط، السوق، القياس والوضع الحالي.",
-   "label": "نتفق على الهدف الذي يُقاس عليه العمل.",
-   "eyebrow_3": "التسليمات",
-   "items_2": [
-    {
-     "label": "ملخص الوضع الحالي"
-    },
-    {
-     "label": "أهداف قابلة للقياس"
-    },
-    {
-     "label": "ضبط القياس في GA4 وSearch Console"
-    }
-   ],
-   "label_2": "ملخص البداية",
-   "items_3": [
-    {
-     "label": "النشاط والسوق",
-     "variant": "v1"
-    },
-    {
-     "label": "الأهداف",
-     "variant": "v2"
-    },
-    {
-     "label": "حالة القياس",
-     "variant": "v3"
-    }
-   ],
-   "items_4": [
-    {
-     "heading": "نفهم الموقع والهدف",
-     "symbol": "−",
-     "text": "مراجعة النشاط، السوق، القياس والوضع الحالي.",
-     "label": "نتفق على الهدف الذي يُقاس عليه العمل.",
+     "num": "01",
+     "label": "نفهم الموقع والهدف",
+     "desc": "مراجعة النشاط، السوق، القياس والوضع الحالي.",
+     "out": "نتفق على الهدف الذي يُقاس عليه العمل.",
      "items": [
       {
-       "label": "ملخص الوضع الحالي"
+       "text": "ملخص الوضع الحالي"
       },
       {
-       "label": "أهداف قابلة للقياس"
+       "text": "أهداف قابلة للقياس"
       },
       {
-       "label": "ضبط القياس في GA4 وSearch Console"
+       "text": "ضبط القياس في GA4 وSearch Console"
+      }
+     ],
+     "viz_title": "ملخص البداية",
+     "viz_rows": [
+      {
+       "label": "النشاط والسوق",
+       "pct": "78%"
+      },
+      {
+       "label": "الأهداف",
+       "pct": "62%"
+      },
+      {
+       "label": "حالة القياس",
+       "pct": "48%"
       }
      ]
     },
     {
-     "heading": "نحلّل ونرتّب الأولويات",
-     "symbol": "+",
-     "text": "تدقيق تقني، منافسون، كلمات وصفحات.",
-     "label": "نحدد ما يُنفّذ أولًا وما يمكن تأجيله.",
+     "num": "02",
+     "label": "نحلّل ونرتّب الأولويات",
+     "desc": "تدقيق تقني، منافسون، كلمات وصفحات.",
+     "out": "نحدد ما يُنفّذ أولًا وما يمكن تأجيله.",
      "items": [
       {
-       "label": "تقرير تدقيق تقني"
+       "text": "تقرير تدقيق تقني"
       },
       {
-       "label": "خريطة كلمات وصفحات"
+       "text": "خريطة كلمات وصفحات"
       },
       {
-       "label": "قائمة أولويات مرتبة"
+       "text": "قائمة أولويات مرتبة"
+      }
+     ],
+     "viz_title": "قائمة الأولويات",
+     "viz_rows": [
+      {
+       "label": "مشكلات تقنية",
+       "pct": "86%"
+      },
+      {
+       "label": "صفحات بحاجة تحسين",
+       "pct": "64%"
+      },
+      {
+       "label": "فرص محتوى",
+       "pct": "44%"
       }
      ]
     },
     {
-     "heading": "ننفّذ التحسينات",
-     "symbol": "+",
-     "text": "تقني، صفحات، محتوى، روابط داخلية وخارجية حسب النطاق.",
-     "label": "تصبح الصفحات جاهزة للظهور والمنافسة.",
+     "num": "03",
+     "label": "ننفّذ التحسينات",
+     "desc": "تقني، صفحات، محتوى، روابط داخلية وخارجية حسب النطاق.",
+     "out": "تصبح الصفحات جاهزة للظهور والمنافسة.",
      "items": [
       {
-       "label": "سجل تنفيذ شهري"
+       "text": "سجل تنفيذ شهري"
       },
       {
-       "label": "صفحات ومحتوى منشور"
+       "text": "صفحات ومحتوى منشور"
       },
       {
-       "label": "تحسينات تقنية مطبقة"
+       "text": "تحسينات تقنية مطبقة"
+      }
+     ],
+     "viz_title": "سجل التنفيذ",
+     "viz_rows": [
+      {
+       "label": "تعديلات تقنية",
+       "pct": "70%"
+      },
+      {
+       "label": "صفحات منشورة",
+       "pct": "58%"
+      },
+      {
+       "label": "روابط داخلية",
+       "pct": "50%"
       }
      ]
     },
     {
-     "heading": "نقيس ونطوّر",
-     "symbol": "+",
-     "text": "لوحة أداء، مراجعة شهرية وأولويات المرحلة التالية.",
-     "label": "نقرر أولويات الشهر التالي على أساس البيانات.",
+     "num": "04",
+     "label": "نقيس ونطوّر",
+     "desc": "لوحة أداء، مراجعة شهرية وأولويات المرحلة التالية.",
+     "out": "نقرر أولويات الشهر التالي على أساس البيانات.",
      "items": [
       {
-       "label": "لوحة أداء مباشرة"
+       "text": "لوحة أداء مباشرة"
       },
       {
-       "label": "تقرير ومراجعة شهرية"
+       "text": "تقرير ومراجعة شهرية"
       },
       {
-       "label": "خطة المرحلة التالية"
+       "text": "خطة المرحلة التالية"
+      }
+     ],
+     "viz_title": "مراجعة الأداء",
+     "viz_rows": [
+      {
+       "label": "الظهور",
+       "pct": "72%"
+      },
+      {
+       "label": "الزيارات",
+       "pct": "60%"
+      },
+      {
+       "label": "الطلبات",
+       "pct": "46%"
       }
      ]
     }
    ],
-   "heading_2": "فريق متخصص يعمل على مشروعك",
-   "label_3": "سيو · محتوى · تطوير · تحليل أداء",
-   "link": {
+   "team_title": "فريق متخصص يعمل على مشروعك",
+   "team_sub": "سيو · محتوى · تطوير · تحليل أداء",
+   "team_link_label": "تعرّف على فريق سيو هاوس",
+   "team_link": {
     "__route": "/team/"
-   },
-   "link_label": "تعرّف على فريق سيو هاوس ←",
-   "items_5": [
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463309884-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463327303-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463290373-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463337592-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463270111-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463278866-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463282905-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463286768-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463294080-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463297756-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463301137-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463304330-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463312814-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463316318-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463320135-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463324129-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463331172-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463334083-0.png",
-      "alt": "عضو من فريق سيو هاوس"
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463309884-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463327303-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463290373-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463337592-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463270111-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463278866-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463282905-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463286768-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463294080-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463297756-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463301137-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463304330-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463312814-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463316318-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463320135-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463324129-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463331172-0.png",
-      "alt": ""
-     }
-    },
-    {
-     "image": {
-      "__asset": "uploads/pasted-1789463334083-0.png",
-      "alt": ""
-     }
-    }
-   ]
+   }
   },
   {
    "acf_fc_layout": "tools",
@@ -671,83 +485,35 @@
    "items_2": [
     {
      "logo": "assets/platforms/official/wordpress.svg",
-     "label": "ووردبريس",
-     "variant": "v1"
+     "label": "ووردبريس"
     },
     {
      "logo": "assets/platforms/official/shopify.svg",
-     "label": "شوبيفاي",
-     "variant": "v1"
+     "label": "شوبيفاي"
     },
     {
      "logo": "assets/platforms/official/salla.svg",
-     "label": "سلة",
-     "variant": "v1"
+     "label": "سلة"
     },
     {
      "logo": "assets/platforms/official/gsc.svg",
-     "label": "سيرش كونسول",
-     "variant": "v1"
+     "label": "سيرش كونسول"
     },
     {
      "logo": "assets/platforms/official/webflow.svg",
-     "label": "ويب فلو",
-     "variant": "v1"
+     "label": "ويب فلو"
     },
     {
      "logo": "assets/platforms/official/woocommerce.svg",
-     "label": "ووكومرس",
-     "variant": "v1"
+     "label": "ووكومرس"
     },
     {
      "logo": "assets/platforms/official/ga4.svg",
-     "label": "جوجل أناليتكس",
-     "variant": "v1"
+     "label": "جوجل أناليتكس"
     },
     {
      "logo": "assets/platforms/official/looker.svg",
-     "label": "لوكر ستوديو",
-     "variant": "v1"
-    },
-    {
-     "logo": "assets/platforms/official/wordpress.svg",
-     "label": "ووردبريس",
-     "variant": "v2"
-    },
-    {
-     "logo": "assets/platforms/official/shopify.svg",
-     "label": "شوبيفاي",
-     "variant": "v2"
-    },
-    {
-     "logo": "assets/platforms/official/salla.svg",
-     "label": "سلة",
-     "variant": "v2"
-    },
-    {
-     "logo": "assets/platforms/official/gsc.svg",
-     "label": "سيرش كونسول",
-     "variant": "v2"
-    },
-    {
-     "logo": "assets/platforms/official/webflow.svg",
-     "label": "ويب فلو",
-     "variant": "v2"
-    },
-    {
-     "logo": "assets/platforms/official/woocommerce.svg",
-     "label": "ووكومرس",
-     "variant": "v2"
-    },
-    {
-     "logo": "assets/platforms/official/ga4.svg",
-     "label": "جوجل أناليتكس",
-     "variant": "v2"
-    },
-    {
-     "logo": "assets/platforms/official/looker.svg",
-     "label": "لوكر ستوديو",
-     "variant": "v2"
+     "label": "لوكر ستوديو"
     }
    ]
   },

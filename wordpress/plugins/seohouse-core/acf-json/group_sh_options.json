@@ -503,6 +503,58 @@
       ]
     },
     {
+      "key": "field_sh_opt_article_cta",
+      "label": "دعوة الاستشارة بجانب المقالات",
+      "name": "sh_article_cta",
+      "type": "group",
+      "instructions": "",
+      "required": 0,
+      "layout": "block",
+      "sub_fields": [
+        {
+          "name": "title",
+          "label": "العنوان",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "default_value": "تريد معرفة وضع موقعك؟",
+          "key": "field_sh_opt_article_cta__title"
+        },
+        {
+          "name": "text",
+          "label": "النص",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 2,
+          "new_lines": "",
+          "default_value": "مكالمة مجانية مدتها 30 دقيقة نراجع فيها موقعك ونحدد الأولوية.",
+          "key": "field_sh_opt_article_cta__text"
+        },
+        {
+          "name": "label",
+          "label": "نص الزر",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "default_value": "احجز استشارة",
+          "key": "field_sh_opt_article_cta__label"
+        },
+        {
+          "name": "link",
+          "label": "وجهة الزر",
+          "type": "page_link",
+          "instructions": "",
+          "required": 0,
+          "post_type": [
+            "page"
+          ],
+          "allow_null": 1,
+          "key": "field_sh_opt_article_cta__link"
+        }
+      ]
+    },
+    {
       "key": "field_sh_opt_home_cases",
       "label": "دراسات الحالة المختارة للأقسام المشتركة",
       "name": "sh_featured_cases",

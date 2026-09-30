@@ -4,11 +4,5 @@
   "name": "سيو تقني",
   "slug": "technical-seo",
   "description": ""
- },
- {
-  "key": "cat:seo",
-  "name": "تحسين محركات البحث",
-  "slug": "seo",
-  "description": "وصف التصنيف يُكتب في ووردبريس ويظهر هنا في سطر أو سطرين."
  }
 ]

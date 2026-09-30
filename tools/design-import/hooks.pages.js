@@ -30,6 +30,12 @@ module.exports = ({ openTag, attrStyle, phpStr, hasStyle, firstTag }) => {
       Results: () => [inner('case-list', n => n.name === 'ul' && !!firstTag(n, 'a') && /data-res-card/.test(JSON.stringify(firstTag(n, 'a').attribs)), 'case-list', () => ({ context: 'home', limit: 3 }))],
       Articles: () => [inner('posts-home', n => attr(n, 'data-grid') && n.attribs['data-grid'] === 'blog2', 'posts-home', () => ({}))]
     },
+    results: {
+      Cases: () => [
+        inner('case-filters', n => n.attribs && n.attribs.role === 'group', 'case-filters', () => ({})),
+        inner('case-list', n => n.name === 'ul', 'case-list', () => ({ context: 'results', limit: 0 }))
+      ]
+    },
     team: {
       Directory: () => [inner('team-directory', n => attr(n, 'data-tm-grid'), 'team-directory', () => ({}))]
     }

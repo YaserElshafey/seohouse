@@ -18,12 +18,12 @@ $f = $args['f'] ?? array();
       </div>
 
       
-      <div data-trustindex-mount style="margin-top: 22px; border-radius: 18px; background: rgb(255, 255, 255); border: 1px dashed rgba(var(--sh-blue-rgb), 0.28); padding: clamp(22px, 2.6vw, 34px); display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px;">
+      <?php if ( ! sh_dynamic_slot( 'reviews-slot' ) ) : ?><div data-trustindex-mount style="margin-top: 22px; border-radius: 18px; background: rgb(255, 255, 255); border: 1px dashed rgba(var(--sh-blue-rgb), 0.28); padding: clamp(22px, 2.6vw, 34px); display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px;">
         <div style="flex: 1 1 320px; min-width: 0px;">
           <?php if (!empty($f['heading'])) : ?><div style="font-size: 15.5px; font-weight: 700; color: var(--sh-ink);"><?= esc_html($f['heading'] ?? '') ?></div><?php endif; ?>
           <?php if (!empty($f['text_2'])) : ?><div style="font-size: 15px; color: var(--sh-ink-soft); margin-top: 8px; max-width: 44em; text-wrap: pretty;"><?= esc_html($f['text_2'] ?? '') ?></div><?php endif; ?>
         </div>
         <?php if (!empty($f['label'])) : ?><div style="font-size: 12.5px; color: var(--sh-slate); background: rgba(var(--sh-blue-rgb), 0.06); border-radius: 999px; padding: 8px 14px;"><?= esc_html($f['label'] ?? '') ?></div><?php endif; ?>
-      </div>
+      </div><?php endif; ?>
     </div>
   </section>

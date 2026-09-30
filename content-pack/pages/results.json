@@ -29,76 +29,6 @@
   },
   {
    "acf_fc_layout": "cases",
-   "items": [
-    {
-     "button": "كل النتائج"
-    },
-    {
-     "button": "التجارة الإلكترونية"
-    },
-    {
-     "button": "الصحة والطب"
-    },
-    {
-     "button": "التعليم والتدريب"
-    },
-    {
-     "button": "مسودات للمراجعة"
-    }
-   ],
-   "items_2": [
-    {
-     "link": {
-      "__route": "/results/قطاع-التجارة-الإلكترونية/"
-     },
-     "heading": "<bdi>+234%</bdi>",
-     "eyebrow": "نمو الزيارات",
-     "heading_2": "قطاع التجارة الإلكترونية",
-     "items": [
-      {
-       "label": "العميل: <b style=\"font-weight: 600; color: var(--sh-surface-3);\">جلستك</b>"
-      },
-      {
-       "label": "القطاع: <b style=\"font-weight: 600; color: var(--sh-surface-3);\">التجارة الإلكترونية</b>"
-      }
-     ],
-     "label": "دراسة الحالة ←"
-    },
-    {
-     "link": {
-      "__route": "/results/قطاع-الصحة-والطب/"
-     },
-     "heading": "<bdi>+254%</bdi>",
-     "eyebrow": "نمو الزيارات",
-     "heading_2": "قطاع الصحة والطب",
-     "items": [
-      {
-       "label": "العميل: <b style=\"font-weight: 600; color: var(--sh-surface-3);\">عيادات لافيزون</b>"
-      },
-      {
-       "label": "القطاع: <b style=\"font-weight: 600; color: var(--sh-surface-3);\">الصحة والطب</b>"
-      }
-     ],
-     "label": "دراسة الحالة ←"
-    },
-    {
-     "link": {
-      "__route": "/results/تستتست/"
-     },
-     "heading": "<bdi>+141%</bdi>",
-     "eyebrow": "نمو الزيارات",
-     "heading_2": "قطاع التعليم والتدريب",
-     "items": [
-      {
-       "label": "العميل: <b style=\"font-weight: 600; color: var(--sh-surface-3);\">مبهر</b>"
-      },
-      {
-       "label": "القطاع: <b style=\"font-weight: 600; color: var(--sh-surface-3);\">التعليم والتدريب</b>"
-      }
-     ],
-     "label": "دراسة الحالة ←"
-    }
-   ],
    "text": "كل نتيجة معروضة بمصدرها وفترتها كما تظهر في حساب العميل."
   },
   {
@@ -134,7 +64,7 @@
   },
   {
    "acf_fc_layout": "booking",
-   "service": "seo",
+   "service": "",
    "eyebrow": "",
    "title": "",
    "text": "",

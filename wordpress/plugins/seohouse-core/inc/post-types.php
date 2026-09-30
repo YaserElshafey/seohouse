@@ -92,7 +92,8 @@ function sh_core_apply_permalinks(): void {
 	update_option( 'tag_base', 'blog/tag' );
 	$wp_rewrite->set_category_base( 'blog/category' );
 	$wp_rewrite->set_tag_base( 'blog/tag' );
-	// re-register so CPT permastructs follow the new structure within this same request
+	// re-register so taxonomy and CPT permastructs follow the new bases within this same request
+	create_initial_taxonomies();
 	sh_core_register_post_types();
 	flush_rewrite_rules( false );
 }

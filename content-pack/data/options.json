@@ -49,6 +49,14 @@
   }
  },
  "sh_booking_provider": "none",
+ "sh_article_cta": {
+  "title": "تريد معرفة وضع موقعك؟",
+  "text": "مكالمة مجانية مدتها 30 دقيقة نراجع فيها موقعك ونحدد الأولوية.",
+  "label": "احجز استشارة",
+  "link": {
+   "__route": "/contact/"
+  }
+ },
  "sh_client_logos": [
   {
    "name": "المربعت",

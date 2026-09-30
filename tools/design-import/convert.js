@@ -16,6 +16,7 @@ const cheerio = require('cheerio');
 const { SectionCompiler, textOf } = require('./lib/section-compiler');
 const { tokenize, rootCss } = require('./lib/tokens');
 const hooks = require('./hooks');
+const MANUAL = require('./manual');
 
 const designDir = path.resolve(process.argv[2] || '');
 const repo = path.resolve(process.argv[3] || path.join(__dirname, '..', '..'));
@@ -39,6 +40,7 @@ const pages = cfg.pages.map(p => ({ ...p, x: JSON.parse(fs.readFileSync(path.joi
 const routeSet = new Set(pages.map(p => p.route).filter(r => r.startsWith('/')));
 ['/blog/', '/team/'].forEach(r => routeSet.add(r));
 const teamData = hooks.loadTeam(designDir);
+const manual = MANUAL(designDir);
 teamData.forEach(m => routeSet.add(`/team/${m.slug}/`));
 const routeResolvable = h => {
   let p = h.split('#')[0].split('?')[0];
@@ -116,6 +118,16 @@ for (const pg of pages) {
       continue;
     }
     if (pg.kind !== 'page') continue;
+    const man = manual[pg.key] && manual[pg.key][label];
+    if (man) {
+      const tpl = path.join(THEME, 'sections', pg.key, `${layout}.php`);
+      if (!fs.existsSync(tpl)) report.push(`WARN ${pg.key}/${layout}: manual section template missing (${path.relative(repo, tpl)})`);
+      pageLayouts.push({ layout, label, fields: man.fields(pg.key, layout), anchor: $(el).attr('id') || null });
+      const mv = man.value($(el), $);
+      JSON.stringify(mv, (k, v) => { if (k === '__asset' && v) assets.add(v); return v; });
+      seedSections.push({ acf_fc_layout: layout, ...mv });
+      continue;
+    }
     const dyn = hooks.dynamicFor(pg, label, $);
     const comp = new SectionCompiler({ pageKey: pg.key, layout, hoverMap, assets, icons, dynamic: dyn, svgChoices, routes: routeResolvable });
     const res = comp.compile(el);

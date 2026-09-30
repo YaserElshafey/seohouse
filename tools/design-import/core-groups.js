@@ -74,6 +74,12 @@ const options = group('options', 'إعدادات سيو هاوس', [
 
   tab(O, 'shared', 'المحتوى المشترك'),
   F(O, 'client_logos', 'شعارات العملاء', 'repeater', { name: 'sh_client_logos', layout: 'table', button_label: 'إضافة شعار', collapsed: 'name', instructions: 'الشعارات المعتمدة فقط. تظهر في الشريط المتحرك بنفس الترتيب.', sub_fields: [S('name', 'اسم العميل', 'text', { required: 1 }), S('logo', 'الشعار', 'image', { return_format: 'id', preview_size: 'thumbnail', required: 1 }), S('url', 'رابط (اختياري)', 'url')] }),
+  F(O, 'article_cta', 'دعوة الاستشارة بجانب المقالات', 'group', { name: 'sh_article_cta', layout: 'block', sub_fields: [
+    S('title', 'العنوان', 'text', { default_value: 'تريد معرفة وضع موقعك؟' }),
+    S('text', 'النص', 'textarea', { rows: 2, new_lines: '', default_value: 'مكالمة مجانية مدتها 30 دقيقة نراجع فيها موقعك ونحدد الأولوية.' }),
+    S('label', 'نص الزر', 'text', { default_value: 'احجز استشارة' }),
+    S('link', 'وجهة الزر', 'page_link', { post_type: ['page'], allow_null: 1 })
+  ] }),
   F(O, 'home_cases', 'دراسات الحالة المختارة للأقسام المشتركة', 'relationship', { name: 'sh_featured_cases', post_type: ['case_study'], filters: ['search'], return_format: 'id', max: 6, instructions: 'فارغة = أحدث الحالات المنشورة.' }),
 
   tab(O, 'integrations', 'التكاملات'),
@@ -184,7 +190,13 @@ const menu = group('menu_item', 'خيارات عنصر القائمة', [
   F(M, 'layout', 'شكل اللوحة', 'select', { name: 'sh_menu_layout', choices: { '': 'تلقائي', list: 'قائمة بعمود واحد', grid2: 'عمودان' }, allow_null: 1, return_format: 'value' })
 ], [[{ param: 'nav_menu_item', operator: '==', value: 'all' }]]);
 
-for (const g of [options, caseStudy, team, post, seo, menu]) {
+// ------------------------------------------------------------------ posts page (/blog/)
+const B = 'blog';
+const blogPage = group('blog_page', 'صفحة المدونة', [
+  F(B, 'intro', 'وصف المدونة تحت العنوان', 'textarea', { name: 'sh_blog_intro', rows: 2, new_lines: '' })
+], [[{ param: 'page_type', operator: '==', value: 'posts_page' }]], { position: 'acf_after_title', hide_on_screen: ['the_content', 'excerpt', 'discussion', 'comments'] });
+
+for (const g of [options, caseStudy, team, post, seo, menu, blogPage]) {
   fs.writeFileSync(path.join(OUT, `${g.key}.json`), JSON.stringify(g, null, 2) + '\n');
 }
 console.log('wrote', 6, 'groups,', counter, 'fields');

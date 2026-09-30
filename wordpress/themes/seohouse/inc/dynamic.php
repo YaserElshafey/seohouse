@@ -150,3 +150,6 @@ function sh_primary_category( $post = null ): ?WP_Term {
 	$cats = get_the_category( get_post( $post )->ID );
 	return $cats ? $cats[0] : null;
 }
+
+/** Templates that print the booking section themselves (header CTA → #booking). */
+add_filter( 'sh_page_has_booking', static fn( $has ) => $has || is_singular( array( 'team_member', 'post' ) ) );

@@ -64,120 +64,6 @@
               }
             },
             {
-              "key": "field_d7c16b70fe94e",
-              "label": "العناصر: كل النتائج",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 5. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_877c6957e317b",
-                  "label": "نص الزر: كل النتائج",
-                  "name": "button",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_877c6957e317b"
-            },
-            {
-              "key": "field_ef8d9dd08a3da",
-              "label": "العناصر: +234% نمو الزيارات قطاع التجارة الإل…",
-              "name": "items_2",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_0e7f8f2b63b3b",
-                  "label": "الرابط: +234% نمو الزيارات قطاع التجارة الإل…",
-                  "name": "link",
-                  "type": "page_link",
-                  "instructions": "",
-                  "required": 0,
-                  "post_type": [
-                    "page",
-                    "case_study",
-                    "team_member",
-                    "post"
-                  ],
-                  "allow_null": 1,
-                  "allow_archives": 1,
-                  "multiple": 0
-                },
-                {
-                  "key": "field_11d60b3e3ada6",
-                  "label": "عنوان فرعي: +234%",
-                  "name": "heading",
-                  "type": "textarea",
-                  "instructions": "يمكن استخدام وسوم نصية بسيطة مثل <bdi> و<strong> و<br>.",
-                  "required": 0,
-                  "rows": 3,
-                  "new_lines": ""
-                },
-                {
-                  "key": "field_aac38dd71116d",
-                  "label": "الوسم: نمو الزيارات",
-                  "name": "eyebrow",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_d5b48d6f8b7ca",
-                  "label": "عنوان فرعي: قطاع التجارة الإلكترونية",
-                  "name": "heading_2",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_05449476d6aff",
-                  "label": "العناصر: العميل: جلستك",
-                  "name": "items",
-                  "type": "repeater",
-                  "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
-                  "required": 0,
-                  "layout": "block",
-                  "button_label": "إضافة عنصر",
-                  "sub_fields": [
-                    {
-                      "key": "field_48564aff53bc4",
-                      "label": "نص: العميل: جلستك",
-                      "name": "label",
-                      "type": "textarea",
-                      "instructions": "يمكن استخدام وسوم نصية بسيطة مثل <bdi> و<strong> و<br>.",
-                      "required": 0,
-                      "rows": 3,
-                      "new_lines": ""
-                    }
-                  ],
-                  "min": 0,
-                  "max": 0,
-                  "collapsed": "field_48564aff53bc4"
-                },
-                {
-                  "key": "field_6fc0d2274ec42",
-                  "label": "نص: دراسة الحالة ←",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_11d60b3e3ada6"
-            },
-            {
               "key": "field_7480c4018587f",
               "label": "النص: كل نتيجة معروضة بمصدرها وفترتها كما …",
               "name": "text",
@@ -274,14 +160,15 @@
               "label": "الخدمة المختارة مسبقًا",
               "type": "select",
               "choices": {
+                "": "بدون اختيار مسبق",
                 "seo": "تحسين محركات البحث",
                 "web": "تصميم وتطوير موقع",
                 "stores": "تصميم متجر إلكتروني",
                 "products": "إضافة المنتجات",
                 "unsure": "لم أحدد بعد"
               },
-              "default_value": "seo",
-              "allow_null": 0,
+              "default_value": "",
+              "allow_null": 1,
               "return_format": "value",
               "required": 0
             },
