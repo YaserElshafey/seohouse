@@ -1,0 +1,872 @@
+{
+  "key": "group_sh_page_sector_tourism",
+  "title": "أقسام الصفحة — قطاع السياحة والسفر",
+  "fields": [
+    {
+      "key": "field_d43f6d6038760",
+      "label": "أقسام الصفحة",
+      "name": "sh_sections",
+      "type": "flexible_content",
+      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
+      "layouts": {
+        "layout_40522cc425aec": {
+          "key": "layout_40522cc425aec",
+          "name": "hero",
+          "label": "الواجهة (Hero)",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_029044e13cb00",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_a7df8b21fbc5a",
+              "label": "الوسم: السياحة والسفر",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_c315201a7327b",
+              "label": "العنوان: تحسين محركات البحث لقطاع السياحة وال…",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_a5074007f3257",
+              "label": "النص: يبدأ التخطيط للسفر غالبًا بالوجهة وا…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_06dcec3a41b1d",
+              "label": "نص الرابط: احجز مكالمة استشارية",
+              "name": "link_label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_b61d384443e7b",
+              "label": "نص الرابط: مسار المسافر",
+              "name": "link_label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_66fde9a1c8011",
+              "label": "الوسم: مسار بحث العميل",
+              "name": "eyebrow_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_526876ecdd20a",
+              "label": "نص: مثال توضيحي",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_d8cc6fdcb9d21",
+              "label": "نص: رحلة عائلية خمسة أيام",
+              "name": "label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_93d2d18fdeb53",
+              "label": "العناصر: الوجهةأفضل وقت للزيارة والأنشطة",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_bcbb7fbe93d2b",
+                  "label": "الأيقونة",
+                  "name": "icon",
+                  "type": "select",
+                  "instructions": "أيقونات التصميم المعتمد.",
+                  "required": 0,
+                  "choices": {
+                    "i45b9798e": "أيقونة 90",
+                    "i97b2a537": "أيقونة 91",
+                    "i4c9d7476": "أيقونة 92"
+                  },
+                  "default_value": "i45b9798e",
+                  "allow_null": 0,
+                  "return_format": "value"
+                },
+                {
+                  "key": "field_253ce04ed0be0",
+                  "label": "عنوان فرعي: الوجهة",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_f8968e2d1b59e",
+                  "label": "نص: أفضل وقت للزيارة والأنشطة",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_253ce04ed0be0"
+            },
+            {
+              "key": "field_6528d7841dae1",
+              "label": "نص: الإجراء الذي نقيسه",
+              "name": "label_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_e098aff7bcbd1",
+              "label": "عنوان فرعي: الحجز أو الاستفسار",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_f5f6369926f4f": {
+          "key": "layout_f5f6369926f4f",
+          "name": "sector_journey",
+          "label": "قسم: Sector journey",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_961ae0e46edd6",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_85f9bc7409330",
+              "label": "الوسم: مثال توضيحي لشركة سياحة",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_ffabf312ac64c",
+              "label": "العنوان: الوجهة والخيارات ثم البرنامج ثم الحجز",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_cd54f67f100b4",
+              "label": "الوسم: 1",
+              "name": "eyebrow_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_38252d00b0cb3",
+              "label": "عنوان فرعي: الوجهة",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_f4a8ac789cd93",
+              "label": "نص: رحلة عائلية في الصيف",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_086e73ff45d0f",
+              "label": "الوسم: عائلية",
+              "name": "eyebrow_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_5f050a3bcf865",
+              "label": "العناصر: شهر عسل",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_8bd44c2ad6f10",
+                  "label": "الوسم: شهر عسل",
+                  "name": "eyebrow",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_8bd44c2ad6f10"
+            },
+            {
+              "key": "field_c33b1a2afb2f9",
+              "label": "الوسم: 2",
+              "name": "eyebrow_4",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_61a7c835670a2",
+              "label": "عنوان فرعي: البرنامج",
+              "name": "heading_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_f05ccd5f127d3",
+              "label": "العناصر: اليوم الأول: الوصول والاستقرار",
+              "name": "items_2",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_b37291550c5c0",
+                  "label": "نص: اليوم الأول: الوصول والاستقرار",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_b37291550c5c0"
+            },
+            {
+              "key": "field_9614113728f9c",
+              "label": "نص: ما يشمله السعر وما لا يشمله · شروط ا…",
+              "name": "label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_6bca0c6d63148",
+              "label": "الوسم: 3",
+              "name": "eyebrow_5",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_86c1afca1347b",
+              "label": "عنوان فرعي: الحجز",
+              "name": "heading_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_700db1a90968f",
+              "label": "العناصر: عدد المسافرين",
+              "name": "items_3",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_82b900fcc8eec",
+                  "label": "نص: عدد المسافرين",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_82b900fcc8eec"
+            },
+            {
+              "key": "field_67daec7d7766f",
+              "label": "الوسم: اطلب الحجز",
+              "name": "eyebrow_6",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_35177cfffe5b5": {
+          "key": "layout_35177cfffe5b5",
+          "name": "choose",
+          "label": "قسم: Choose",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_8f1916b01ae83",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_d23e99d3b5d67",
+              "name": "sh_anchor",
+              "label": "معرّف الرابط الداخلي (anchor)",
+              "type": "text",
+              "placeholder": "tr-choose",
+              "instructions": "الافتراضي: #tr-choose — الأزرار داخل الصفحة تشير إليه.",
+              "wrapper": {
+                "width": "70"
+              }
+            },
+            {
+              "key": "field_1a53db67355c9",
+              "label": "نص: اكتشاف الوجهة ومقارنة البرامج",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_1e8281c3434c2",
+              "label": "العنوان: ساعد المسافر على الاختيار قبل عرض ال…",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_caa371f8c03bc",
+              "label": "النص: من يبحث عن وجهة لا يحتاج أولًا إلى إ…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_2ba9199b3c52f",
+              "label": "الوسم: صفحة الوجهة",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_65e3a5f43a56e",
+              "label": "عنوان فرعي: تجيب عن الأسئلة الأولى",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_5fdd559c0a6f3",
+              "label": "نص: متى أسافر؟ ماذا أفعل هناك؟ ما البرام…",
+              "name": "label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_fceeccaa33e3d",
+              "label": "الوسم: صفحة البرنامج",
+              "name": "eyebrow_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_020e85e6d8169",
+              "label": "عنوان فرعي: توضح ما يمكن حجزه فعلًا",
+              "name": "heading_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_df5ebe1fd4fdb",
+              "label": "نص: المدة، المشمول وغير المشمول، الشروط،…",
+              "name": "label_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_a7aeab8509ced": {
+          "key": "layout_a7aeab8509ced",
+          "name": "season",
+          "label": "قسم: Season",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_d555460a70796",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_f923324041c1f",
+              "name": "sh_anchor",
+              "label": "معرّف الرابط الداخلي (anchor)",
+              "type": "text",
+              "placeholder": "tr-season",
+              "instructions": "الافتراضي: #tr-season — الأزرار داخل الصفحة تشير إليه.",
+              "wrapper": {
+                "width": "70"
+              }
+            },
+            {
+              "key": "field_1c9511b9e3163",
+              "label": "نص: المواسم والتوفر",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_91580574d3638",
+              "label": "العنوان: المحتوى الموسمي يحتاج تحديثًا",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_99b7f187d31f1",
+              "label": "النص: تختلف الرحلات ومواعيدها والأسعار بحس…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_74acbb1da67a4",
+              "label": "العناصر: قبل الموسمتحديث البرامج والمعلومات ا…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_ac7062d633e29",
+                  "label": "الوسم: قبل الموسم",
+                  "name": "eyebrow",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_f5c1f7aecd6be",
+                  "label": "النص: تحديث البرامج والمعلومات العملية",
+                  "name": "text",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_ac7062d633e29"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_9e9a765751004": {
+          "key": "layout_9e9a765751004",
+          "name": "inquiry",
+          "label": "قسم: Inquiry",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_fb03f070a66a1",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_9c84a609964ed",
+              "name": "sh_anchor",
+              "label": "معرّف الرابط الداخلي (anchor)",
+              "type": "text",
+              "placeholder": "tr-inquiry",
+              "instructions": "الافتراضي: #tr-inquiry — الأزرار داخل الصفحة تشير إليه.",
+              "wrapper": {
+                "width": "70"
+              }
+            },
+            {
+              "key": "field_52983d268504d",
+              "label": "نص: من الاستفسار إلى الحجز",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_28f5432013451",
+              "label": "العنوان: اجعل الاستفسار خطوة طبيعية",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_35ea457c37b28",
+              "label": "النص: بعد قراءة التفاصيل يجب أن يعرف المسا…",
+              "name": "text",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_6dd49dca4df87",
+              "label": "العناصر: نراجع مواضع الأزرار والنموذج على اله…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_691a5b5305ee8",
+                  "label": "النص: نراجع مواضع الأزرار والنموذج على اله…",
+                  "name": "text",
+                  "type": "textarea",
+                  "instructions": "",
+                  "required": 0,
+                  "rows": 3,
+                  "new_lines": ""
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_691a5b5305ee8"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_98b62741e9b6d": {
+          "key": "layout_98b62741e9b6d",
+          "name": "related",
+          "label": "صفحات مرتبطة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_9dc67c3e4a4f5",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_655d258a727ca",
+              "name": "lead",
+              "label": "العنوان التمهيدي",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_5728bc5df7fe7",
+              "name": "links",
+              "label": "الصفحات المرتبطة",
+              "type": "repeater",
+              "layout": "table",
+              "button_label": "إضافة رابط",
+              "max": 8,
+              "sub_fields": [
+                {
+                  "key": "field_6a47b2a3b3b71",
+                  "name": "label",
+                  "label": "النص",
+                  "type": "text",
+                  "required": 1
+                },
+                {
+                  "key": "field_12d12a266cee1",
+                  "name": "link",
+                  "label": "الصفحة",
+                  "type": "page_link",
+                  "post_type": [
+                    "page",
+                    "case_study",
+                    "post",
+                    "team_member"
+                  ],
+                  "allow_archives": 1,
+                  "allow_null": 0,
+                  "required": 1
+                }
+              ],
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_a7c9c54669308": {
+          "key": "layout_a7c9c54669308",
+          "name": "faq",
+          "label": "الأسئلة الشائعة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_7614fa2382765",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_8e4e32d3acf99",
+              "name": "eyebrow",
+              "label": "الوسم",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_787ef0740edff",
+              "name": "title",
+              "label": "عنوان القسم",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_c4e350193cd76",
+              "name": "items",
+              "label": "الأسئلة",
+              "type": "repeater",
+              "layout": "block",
+              "button_label": "إضافة سؤال",
+              "collapsed": "field_c5cc72ec16136",
+              "instructions": "نفس الأسئلة تُستخدم في FAQPage Schema. لا تضف سؤالًا غير ظاهر في الصفحة.",
+              "sub_fields": [
+                {
+                  "key": "field_c5cc72ec16136",
+                  "name": "question",
+                  "label": "السؤال",
+                  "type": "text",
+                  "required": 1
+                },
+                {
+                  "key": "field_ecd197711f781",
+                  "name": "answer",
+                  "label": "الإجابة",
+                  "type": "textarea",
+                  "rows": 3,
+                  "new_lines": "br",
+                  "required": 1
+                }
+              ],
+              "required": 0
+            },
+            {
+              "key": "field_2f65b87f1121d",
+              "name": "schema",
+              "label": "إخراج FAQPage Schema",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 1,
+              "instructions": "يُخرج من نفس الأسئلة الظاهرة فقط.",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_dd86d38e8d757": {
+          "key": "layout_dd86d38e8d757",
+          "name": "booking",
+          "label": "حجز الاستشارة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_3eb29012da17a",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_583f70b75df96",
+              "name": "service",
+              "label": "الخدمة المختارة مسبقًا",
+              "type": "select",
+              "choices": {
+                "seo": "تحسين محركات البحث",
+                "web": "تصميم وتطوير موقع",
+                "stores": "تصميم متجر إلكتروني",
+                "products": "إضافة المنتجات",
+                "unsure": "لم أحدد بعد"
+              },
+              "default_value": "seo",
+              "allow_null": 0,
+              "return_format": "value",
+              "required": 0
+            },
+            {
+              "key": "field_caa4c0eed62cd",
+              "name": "eyebrow",
+              "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_4ea802c4d576a",
+              "name": "title",
+              "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_7de4d238df2af",
+              "name": "text",
+              "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
+              "type": "textarea",
+              "rows": 2,
+              "new_lines": "",
+              "required": 0
+            },
+            {
+              "key": "field_61f186fe964c9",
+              "name": "points",
+              "label": "نقاط الفائدة (فارغة = النقاط العامة)",
+              "type": "repeater",
+              "layout": "table",
+              "button_label": "إضافة نقطة",
+              "max": 4,
+              "sub_fields": [
+                {
+                  "key": "field_db010e4e8709d",
+                  "name": "text",
+                  "label": "النقطة",
+                  "type": "text",
+                  "required": 0
+                }
+              ],
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        }
+      },
+      "button_label": "إضافة قسم",
+      "min": "",
+      "max": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/sector-tourism.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments",
+    "format",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "حقول قالب قطاع السياحة والسفر — مولدة من SEO House - Sector Tourism.dc.html",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

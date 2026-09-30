@@ -1,0 +1,125 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "الشروط والأحكام",
+   "href": null
+  }
+ ],
+ "key": "terms",
+ "route": "/terms/",
+ "kind": "page",
+ "title": "الشروط والأحكام",
+ "file": "SEO House - Terms.dc.html",
+ "status": "draft",
+ "seo": {
+  "title": "الشروط والأحكام | سيو هاوس",
+  "description": "الشروط والأحكام لاستخدام موقع سيو هاوس.",
+  "robots": "noindex, follow"
+ },
+ "template": "page-templates/terms.php",
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "title": "الشروط والأحكام",
+   "text": "شروط استخدام الموقع وطلب الخدمات. النص قيد المراجعة القانونية قبل النشر.",
+   "link": {
+    "__route": "/privacy-policy/"
+   },
+   "link_label": "سياسة الخصوصية ←"
+  },
+  {
+   "acf_fc_layout": "document",
+   "eyebrow": "المحتويات",
+   "items": [
+    {
+     "label": "استخدام الموقع",
+     "variant": "v1"
+    },
+    {
+     "label": "المعلومات والمحتوى",
+     "variant": "v2"
+    },
+    {
+     "label": "طلب الخدمات والعروض",
+     "variant": "v3"
+    },
+    {
+     "label": "الملكية الفكرية",
+     "variant": "v4"
+    },
+    {
+     "label": "الروابط الخارجية",
+     "variant": "v5"
+    },
+    {
+     "label": "حدود المسؤولية",
+     "variant": "v6"
+    },
+    {
+     "label": "التعديلات",
+     "variant": "v7"
+    },
+    {
+     "label": "القانون المطبق",
+     "variant": "v8"
+    },
+    {
+     "label": "التواصل",
+     "variant": "v9"
+    }
+   ],
+   "label": "آخر تحديث:",
+   "items_2": [
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">1.</span> استخدام الموقع",
+     "label": "[يُضاف النص القانوني المعتمد قبل النشر]",
+     "variant": "v1"
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">2.</span> المعلومات والمحتوى",
+     "label": "[يُضاف النص القانوني المعتمد قبل النشر]",
+     "variant": "v2"
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">3.</span> طلب الخدمات والعروض",
+     "label": "[يُضاف النص القانوني المعتمد قبل النشر]",
+     "variant": "v3"
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">4.</span> الملكية الفكرية",
+     "label": "[يُضاف النص القانوني المعتمد قبل النشر]",
+     "variant": "v4"
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">5.</span> الروابط الخارجية",
+     "label": "[يُضاف النص القانوني المعتمد قبل النشر]",
+     "variant": "v5"
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">6.</span> حدود المسؤولية",
+     "label": "[يُضاف النص القانوني المعتمد قبل النشر]",
+     "variant": "v6"
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">7.</span> التعديلات",
+     "label": "[يُضاف النص القانوني المعتمد قبل النشر]",
+     "variant": "v7"
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">8.</span> القانون المطبق",
+     "label": "[يُضاف النص القانوني المعتمد قبل النشر]",
+     "variant": "v8"
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">9.</span> التواصل",
+     "label": "[يُضاف النص القانوني المعتمد قبل النشر]",
+     "variant": "v9"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+/* SEO House - Privacy Policy.dc.html — page-specific rules from the approved design (generated). */
+[data-sc-row] { grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) minmax(0,.7fr); }
+@media (max-width:899px) { [data-sc-row] { grid-template-columns:1fr; } }
+[data-sc-pick] { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:719px) { [data-sc-pick] { grid-template-columns:1fr; } }
+[data-lg-grid] { grid-template-columns:240px minmax(0,1fr); }
+[data-lg-nav] { position:sticky; top:96px; }
+@media (max-width:899px) { [data-lg-grid] { grid-template-columns:1fr; } [data-lg-nav] { position:static; } }
+[data-screen-label="Hero"] { position:relative; overflow:hidden; }
+[data-hero-grid] ~ *:not([aria-hidden="true"]) { position:relative; }

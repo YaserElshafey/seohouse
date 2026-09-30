@@ -1,0 +1,622 @@
+{
+  "key": "group_sh_page_web_react_next",
+  "title": "أقسام الصفحة — رياكت ونكست",
+  "fields": [
+    {
+      "key": "field_83dd049231dd8",
+      "label": "أقسام الصفحة",
+      "name": "sh_sections",
+      "type": "flexible_content",
+      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
+      "layouts": {
+        "layout_44d02f69b27a1": {
+          "key": "layout_44d02f69b27a1",
+          "name": "hero",
+          "label": "الواجهة (Hero)",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_7a86ebbf31092",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_752a65e43648b",
+              "label": "الوسم: رياكت ونكست",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_792f15efdb5ad",
+              "label": "العنوان: تطوير مواقع رياكت ونكست",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_72a830ffe4e41",
+              "label": "النص: نبني واجهات على رياكت ونكست مع اختيا…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_75cff202ebc18",
+              "label": "نص الرابط: احجز مكالمة استشارية",
+              "name": "link_label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_5557507815ede",
+              "label": "نص الرابط: متى تحتاجها",
+              "name": "link_label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_57c9a1ecc4ff0",
+              "label": "العناصر: طبقة العرض مكونات واجهة قابلة لإعادة…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_ea74cb6c3079a",
+                  "label": "عنوان فرعي: طبقة العرض",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_f413a34dd80c4",
+                  "label": "نص: مكونات واجهة قابلة لإعادة الاستخدام",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_f40a4dc6869a0",
+                  "label": "نمط العرض",
+                  "name": "variant",
+                  "type": "select",
+                  "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
+                  "required": 0,
+                  "choices": {
+                    "v1": "النمط 1 — فسفوري",
+                    "v2": "النمط 2 — سماوي",
+                    "v3": "النمط 3 — سماوي",
+                    "v4": "النمط 4 — سماوي"
+                  },
+                  "default_value": "v1",
+                  "allow_null": 0,
+                  "ui": 0,
+                  "return_format": "value"
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_ea74cb6c3079a"
+            },
+            {
+              "key": "field_36014730351c4",
+              "label": "نص: الطلب يمر من الأعلى إلى الأسفل ثم يع…",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_a9b7fc2e78b16": {
+          "key": "layout_a9b7fc2e78b16",
+          "name": "when",
+          "label": "قسم: When",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_38a4c9dc77ecd",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_cc2adb1f9425e",
+              "name": "sh_anchor",
+              "label": "معرّف الرابط الداخلي (anchor)",
+              "type": "text",
+              "placeholder": "when",
+              "instructions": "الافتراضي: #when — الأزرار داخل الصفحة تشير إليه.",
+              "wrapper": {
+                "width": "70"
+              }
+            },
+            {
+              "key": "field_b91e481bf22b7",
+              "label": "الوسم: متى تحتاجها",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_0b566f1bde76a",
+              "label": "العنوان: حالات تفوق فيها الواجهة المخصصة المن…",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_05553efa864c3",
+              "label": "العناصر: واجهات تفاعلية حاسبات، لوحات، فلاتر …",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 6. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_141f3719245b1",
+                  "label": "عنوان فرعي: واجهات تفاعلية",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_845c4c00e73a5",
+                  "label": "نص: حاسبات، لوحات، فلاتر معقدة، تجارب تع…",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_141f3719245b1"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_4ae1f509e1fb5": {
+          "key": "layout_4ae1f509e1fb5",
+          "name": "render",
+          "label": "قسم: Render",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_13fa0622c795c",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_df963728169cc",
+              "label": "الوسم: طريقة العرض",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_6697583764a85",
+              "label": "العنوان: نختار العرض بحسب طبيعة الصفحة",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_cb0c16f19a147",
+              "label": "النص: ليست كل صفحة تحتاج المعالجة نفسها. ص…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_2d581578215f8",
+              "label": "العناصر: 01 توليد ثابتصفحات المحتوى والخدمات:…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_311037897a810",
+                  "label": "عنوان فرعي: توليد ثابت",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_f690d73fee6e3",
+                  "label": "النص: صفحات المحتوى والخدمات: أسرع فتح وأف…",
+                  "name": "text",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_311037897a810"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_b7f616e1cae8a": {
+          "key": "layout_b7f616e1cae8a",
+          "name": "deliver",
+          "label": "قسم: Deliver",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_7ffa55696c7f0",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_47e4fdbc6188e",
+              "label": "الوسم: التسليمات",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_b2d37d1cbe40e",
+              "label": "العنوان: ما يخرج به المشروع",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_f5128de7f0af8",
+              "label": "العناصر: واجهة مبنية على مكونات موثقة وقابلة …",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 6. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_0500b473bed3c",
+                  "label": "نص: واجهة مبنية على مكونات موثقة وقابلة …",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_0500b473bed3c"
+            },
+            {
+              "key": "field_f309c8d94e2f3",
+              "label": "الرابط: راجع نطاقات الأسعار ←",
+              "name": "link",
+              "type": "page_link",
+              "instructions": "",
+              "required": 0,
+              "post_type": [
+                "page",
+                "case_study",
+                "team_member",
+                "post"
+              ],
+              "allow_null": 1,
+              "allow_archives": 1,
+              "multiple": 0
+            },
+            {
+              "key": "field_9bf2ea909678d",
+              "label": "نص الرابط: راجع نطاقات الأسعار",
+              "name": "link_label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_3b669c48ea322": {
+          "key": "layout_3b669c48ea322",
+          "name": "related",
+          "label": "صفحات مرتبطة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_74cdfa657dcbd",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_3cae1924988d5",
+              "name": "lead",
+              "label": "العنوان التمهيدي",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_53ff2f43caa9e",
+              "name": "links",
+              "label": "الصفحات المرتبطة",
+              "type": "repeater",
+              "layout": "table",
+              "button_label": "إضافة رابط",
+              "max": 8,
+              "sub_fields": [
+                {
+                  "key": "field_a19b9532334b3",
+                  "name": "label",
+                  "label": "النص",
+                  "type": "text",
+                  "required": 1
+                },
+                {
+                  "key": "field_431f30d6d5587",
+                  "name": "link",
+                  "label": "الصفحة",
+                  "type": "page_link",
+                  "post_type": [
+                    "page",
+                    "case_study",
+                    "post",
+                    "team_member"
+                  ],
+                  "allow_archives": 1,
+                  "allow_null": 0,
+                  "required": 1
+                }
+              ],
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_294fd8fcf53fb": {
+          "key": "layout_294fd8fcf53fb",
+          "name": "faq",
+          "label": "الأسئلة الشائعة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_f0daaa4c5ffe5",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_bb562a37d1839",
+              "name": "eyebrow",
+              "label": "الوسم",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_a13f76f289edf",
+              "name": "title",
+              "label": "عنوان القسم",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_7dc572f22675e",
+              "name": "items",
+              "label": "الأسئلة",
+              "type": "repeater",
+              "layout": "block",
+              "button_label": "إضافة سؤال",
+              "collapsed": "field_9cc9bcca55852",
+              "instructions": "نفس الأسئلة تُستخدم في FAQPage Schema. لا تضف سؤالًا غير ظاهر في الصفحة.",
+              "sub_fields": [
+                {
+                  "key": "field_9cc9bcca55852",
+                  "name": "question",
+                  "label": "السؤال",
+                  "type": "text",
+                  "required": 1
+                },
+                {
+                  "key": "field_6a2d0460c3723",
+                  "name": "answer",
+                  "label": "الإجابة",
+                  "type": "textarea",
+                  "rows": 3,
+                  "new_lines": "br",
+                  "required": 1
+                }
+              ],
+              "required": 0
+            },
+            {
+              "key": "field_fd962e5f94ae4",
+              "name": "schema",
+              "label": "إخراج FAQPage Schema",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 1,
+              "instructions": "يُخرج من نفس الأسئلة الظاهرة فقط.",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_cba8b97f205d1": {
+          "key": "layout_cba8b97f205d1",
+          "name": "booking",
+          "label": "حجز الاستشارة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_ea569e4894c69",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_7a54cb59ab4f0",
+              "name": "service",
+              "label": "الخدمة المختارة مسبقًا",
+              "type": "select",
+              "choices": {
+                "seo": "تحسين محركات البحث",
+                "web": "تصميم وتطوير موقع",
+                "stores": "تصميم متجر إلكتروني",
+                "products": "إضافة المنتجات",
+                "unsure": "لم أحدد بعد"
+              },
+              "default_value": "seo",
+              "allow_null": 0,
+              "return_format": "value",
+              "required": 0
+            },
+            {
+              "key": "field_34daddc0c54a9",
+              "name": "eyebrow",
+              "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_df62716f89862",
+              "name": "title",
+              "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_42405995179ad",
+              "name": "text",
+              "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
+              "type": "textarea",
+              "rows": 2,
+              "new_lines": "",
+              "required": 0
+            },
+            {
+              "key": "field_1ddb312b41182",
+              "name": "points",
+              "label": "نقاط الفائدة (فارغة = النقاط العامة)",
+              "type": "repeater",
+              "layout": "table",
+              "button_label": "إضافة نقطة",
+              "max": 4,
+              "sub_fields": [
+                {
+                  "key": "field_8ea92732868a4",
+                  "name": "text",
+                  "label": "النقطة",
+                  "type": "text",
+                  "required": 0
+                }
+              ],
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        }
+      },
+      "button_label": "إضافة قسم",
+      "min": "",
+      "max": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/web-react-next.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments",
+    "format",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "حقول قالب رياكت ونكست — مولدة من SEO House - React Next.dc.html",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

@@ -1,0 +1,13 @@
+/* SEO House - Case Ecommerce Salla.dc.html — page-specific rules from the approved design (generated). */
+[data-sc-row] { grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) minmax(0,.7fr); }
+@media (max-width:899px) { [data-sc-row] { grid-template-columns:1fr; } }
+[data-sc-pick] { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:719px) { [data-sc-pick] { grid-template-columns:1fr; } }
+[data-cs-top] { grid-template-columns:auto minmax(0,1fr); }
+[data-cs-meta] { grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); }
+@media (max-width:599px) { [data-cs-top] { grid-template-columns:1fr; } [data-cs-meta] { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+[data-cs-steps]::before { content:""; position:absolute; top:16px; bottom:36px; inset-inline-start:15.5px; width:1px; background:rgba(var(--sh-blue-rgb), .28); }
+[data-cs-metrics] { grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+[data-cs-gallery] { grid-template-columns:1fr; }
+[data-cs-gallery]:not([data-count="1"]) { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:719px) { [data-cs-gallery]:not([data-count="1"]) { grid-template-columns:1fr; } }

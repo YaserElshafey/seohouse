@@ -1,0 +1,143 @@
+{
+  "key": "group_sh_team_member",
+  "title": "بيانات عضو الفريق",
+  "fields": [
+    {
+      "key": "field_sh_tm_role",
+      "label": "المسمى الوظيفي",
+      "name": "role",
+      "type": "text",
+      "instructions": "",
+      "required": 1
+    },
+    {
+      "key": "field_sh_tm_experience",
+      "label": "الخبرة المعتمدة",
+      "name": "experience",
+      "type": "text",
+      "instructions": "كما هي معتمدة، مثل +6 سنوات خبرة.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_tm_specialties",
+      "label": "التخصصات",
+      "name": "specialties",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "layout": "table",
+      "button_label": "إضافة تخصص",
+      "max": 8,
+      "sub_fields": [
+        {
+          "name": "label",
+          "label": "التخصص",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_tm_specialties__label"
+        }
+      ]
+    },
+    {
+      "key": "field_sh_tm_bio",
+      "label": "النبذة",
+      "name": "bio",
+      "type": "textarea",
+      "instructions": "نبذة حقيقية للشخص. تُخفى إذا كانت فارغة.",
+      "required": 0,
+      "rows": 4,
+      "new_lines": "wpautop"
+    },
+    {
+      "key": "field_sh_tm_links",
+      "label": "روابط خارجية",
+      "name": "links",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "layout": "table",
+      "button_label": "إضافة رابط",
+      "max": 5,
+      "sub_fields": [
+        {
+          "name": "label",
+          "label": "الاسم",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_tm_links__label"
+        },
+        {
+          "name": "url",
+          "label": "الرابط",
+          "type": "url",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_tm_links__url"
+        }
+      ]
+    },
+    {
+      "key": "field_sh_tm_linkedin",
+      "label": "لينكدإن",
+      "name": "linkedin",
+      "type": "url",
+      "instructions": "",
+      "required": 0
+    },
+    {
+      "key": "field_sh_tm_author",
+      "label": "حساب الكاتب في ووردبريس",
+      "name": "author",
+      "type": "user",
+      "instructions": "اربطه عندما يكتب العضو مقالات؛ يقود اسم الكاتب في المقال إلى هذا الملف.",
+      "required": 0,
+      "role": [
+        "author",
+        "editor",
+        "administrator",
+        "contributor"
+      ],
+      "allow_null": 1,
+      "return_format": "id"
+    },
+    {
+      "key": "field_sh_tm_home_photo",
+      "label": "الظهور في صور الرئيسية",
+      "name": "home_photo",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "ui": 1,
+      "default_value": 1
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "team_member"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "excerpt",
+    "discussion",
+    "comments",
+    "format",
+    "categories",
+    "tags",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

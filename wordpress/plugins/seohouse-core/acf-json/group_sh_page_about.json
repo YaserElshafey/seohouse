@@ -1,0 +1,579 @@
+{
+  "key": "group_sh_page_about",
+  "title": "أقسام الصفحة — عن الشركة",
+  "fields": [
+    {
+      "key": "field_c611da0b46012",
+      "label": "أقسام الصفحة",
+      "name": "sh_sections",
+      "type": "flexible_content",
+      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
+      "layouts": {
+        "layout_85ab7024a7dbc": {
+          "key": "layout_85ab7024a7dbc",
+          "name": "hero",
+          "label": "الواجهة (Hero)",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_6d48dfcad76aa",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_9b0a83bd7469a",
+              "label": "الوسم: قصتنا",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_08e2fdf8369f4",
+              "label": "العنوان: عن سيو هاوس",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_73771a70c0a9a",
+              "label": "النص: منذ 2017، نساعد الشركات على تحسين ظه…",
+              "name": "text",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_7bc446cbe9f14",
+              "label": "نص الرابط: احجز مكالمة استشارية",
+              "name": "link_label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_1143ffa808f41",
+              "label": "نص الرابط: مبادئ العمل",
+              "name": "link_label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_236f1a64b6e0c": {
+          "key": "layout_236f1a64b6e0c",
+          "name": "now",
+          "label": "قسم: Now",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_7d556927795d6",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_1ca35c16335de",
+              "label": "الوسم: اليوم",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_5f380e5cb21b7",
+              "label": "العنوان: تعرّف على فريقنا",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_cf5b1e390aedc",
+              "label": "النص: لا يعمل السيو وحده. الفريق يضم تخصص …",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_0eb68ef8317b7",
+              "label": "الرابط: تعرّف على الفريق ←",
+              "name": "link",
+              "type": "page_link",
+              "instructions": "",
+              "required": 0,
+              "post_type": [
+                "page",
+                "case_study",
+                "team_member",
+                "post"
+              ],
+              "allow_null": 1,
+              "allow_archives": 1,
+              "multiple": 0
+            },
+            {
+              "key": "field_ea8945ebd3e2e",
+              "label": "نص الرابط: تعرّف على الفريق",
+              "name": "link_label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_fe1421a77c917",
+              "label": "العناصر: 2017 البداية. شركة متخصصة في تحسين م…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_9d5a092d41b56",
+                  "label": "الوسم: 2017",
+                  "name": "eyebrow",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_a9998493ec1b7",
+                  "label": "النص: البداية. شركة متخصصة في تحسين محركات…",
+                  "name": "text",
+                  "type": "textarea",
+                  "instructions": "",
+                  "required": 0,
+                  "rows": 3,
+                  "new_lines": ""
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_9d5a092d41b56"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_ac53dcbc12052": {
+          "key": "layout_ac53dcbc12052",
+          "name": "principles",
+          "label": "قسم: Principles",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_c5e2561306ab1",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_1ab508a717314",
+              "name": "sh_anchor",
+              "label": "معرّف الرابط الداخلي (anchor)",
+              "type": "text",
+              "placeholder": "principles",
+              "instructions": "الافتراضي: #principles — الأزرار داخل الصفحة تشير إليه.",
+              "wrapper": {
+                "width": "70"
+              }
+            },
+            {
+              "key": "field_7f29061b14b5c",
+              "label": "الوسم: المبادئ",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_c7c097579d841",
+              "label": "العنوان: أربعة مبادئ تحكم كل مشروع",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_4dc5c5295dd03",
+              "label": "العناصر: نبدأ من البيانات لا من قائمة جاهزةنق…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_847c3d5caa5db",
+                  "label": "عنوان فرعي: نبدأ من البيانات لا من قائمة جاهزة",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_e94ca6c5da06c",
+                  "label": "النص: نقرأ حالة الموقع وطريقة بحث عملائه ق…",
+                  "name": "text",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_07b63cb42a822",
+                  "label": "نمط العرض",
+                  "name": "variant",
+                  "type": "select",
+                  "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
+                  "required": 0,
+                  "choices": {
+                    "v1": "النمط 1 — أزرق",
+                    "v2": "النمط 2 — blue-rgb"
+                  },
+                  "default_value": "v1",
+                  "allow_null": 0,
+                  "ui": 0,
+                  "return_format": "value"
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_847c3d5caa5db"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_f6715290bb124": {
+          "key": "layout_f6715290bb124",
+          "name": "nopromise",
+          "label": "قسم: NoPromise",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_73e552817f742",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_8695f33551752",
+              "label": "الوسم: ما لا نعد به",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_fc3159206251d",
+              "label": "العنوان: حدود واضحة قبل البدء",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_325bef186353b",
+              "label": "العناصر: لا نعد بمركز معيّن في نتائج البحث ول…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_1e422917e2785",
+                  "label": "نص: لا نعد بمركز معيّن في نتائج البحث ول…",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_1e422917e2785"
+            },
+            {
+              "key": "field_d48406fba3f62",
+              "label": "عنوان فرعي: كيف نعرض النتائج",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_b2d80418f5ce5",
+              "label": "النص: نعرض كل نتيجة بمصدرها وفترتها كما تظ…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_b3e5e88bcda91",
+              "label": "الرابط: استعرض النتائج ←",
+              "name": "link",
+              "type": "page_link",
+              "instructions": "",
+              "required": 0,
+              "post_type": [
+                "page",
+                "case_study",
+                "team_member",
+                "post"
+              ],
+              "allow_null": 1,
+              "allow_archives": 1,
+              "multiple": 0
+            },
+            {
+              "key": "field_9dc913fe40bc1",
+              "label": "نص الرابط: استعرض النتائج",
+              "name": "link_label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_10c13336f92bb": {
+          "key": "layout_10c13336f92bb",
+          "name": "client_logos",
+          "label": "شعارات العملاء",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_f77ddbec9a86f",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_a81b7bf91e511",
+              "label": "النص: شركات تثق بنا",
+              "name": "text",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_faa6d6e1c3c66": {
+          "key": "layout_faa6d6e1c3c66",
+          "name": "related",
+          "label": "صفحات مرتبطة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_af91e2eddc218",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_417b51f110fd2",
+              "name": "lead",
+              "label": "العنوان التمهيدي",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_654ad2ee9a991",
+              "name": "links",
+              "label": "الصفحات المرتبطة",
+              "type": "repeater",
+              "layout": "table",
+              "button_label": "إضافة رابط",
+              "max": 8,
+              "sub_fields": [
+                {
+                  "key": "field_558ad3875df54",
+                  "name": "label",
+                  "label": "النص",
+                  "type": "text",
+                  "required": 1
+                },
+                {
+                  "key": "field_a6a7dce06a8d6",
+                  "name": "link",
+                  "label": "الصفحة",
+                  "type": "page_link",
+                  "post_type": [
+                    "page",
+                    "case_study",
+                    "post",
+                    "team_member"
+                  ],
+                  "allow_archives": 1,
+                  "allow_null": 0,
+                  "required": 1
+                }
+              ],
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_305f2686ed421": {
+          "key": "layout_305f2686ed421",
+          "name": "booking",
+          "label": "حجز الاستشارة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_4c3c0e9f80a65",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_474691e6375d3",
+              "name": "service",
+              "label": "الخدمة المختارة مسبقًا",
+              "type": "select",
+              "choices": {
+                "seo": "تحسين محركات البحث",
+                "web": "تصميم وتطوير موقع",
+                "stores": "تصميم متجر إلكتروني",
+                "products": "إضافة المنتجات",
+                "unsure": "لم أحدد بعد"
+              },
+              "default_value": "seo",
+              "allow_null": 0,
+              "return_format": "value",
+              "required": 0
+            },
+            {
+              "key": "field_9ae75810d1899",
+              "name": "eyebrow",
+              "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_c37ba0757380d",
+              "name": "title",
+              "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_d6cbab96922a2",
+              "name": "text",
+              "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
+              "type": "textarea",
+              "rows": 2,
+              "new_lines": "",
+              "required": 0
+            },
+            {
+              "key": "field_e02cea9eab50f",
+              "name": "points",
+              "label": "نقاط الفائدة (فارغة = النقاط العامة)",
+              "type": "repeater",
+              "layout": "table",
+              "button_label": "إضافة نقطة",
+              "max": 4,
+              "sub_fields": [
+                {
+                  "key": "field_c6f031a535bac",
+                  "name": "text",
+                  "label": "النقطة",
+                  "type": "text",
+                  "required": 0
+                }
+              ],
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        }
+      },
+      "button_label": "إضافة قسم",
+      "min": "",
+      "max": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/about.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments",
+    "format",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "حقول قالب عن الشركة — مولدة من SEO House - About.dc.html",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

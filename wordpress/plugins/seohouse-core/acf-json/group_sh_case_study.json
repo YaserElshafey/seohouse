@@ -1,0 +1,569 @@
+{
+  "key": "group_sh_case_study",
+  "title": "بيانات دراسة الحالة",
+  "fields": [
+    {
+      "key": "field_sh_cs_tab_intro",
+      "label": "المقدمة والبيانات",
+      "name": "tab_intro",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_cs_summary",
+      "label": "الملخص",
+      "name": "summary",
+      "type": "textarea",
+      "instructions": "",
+      "required": 1,
+      "rows": 3,
+      "new_lines": ""
+    },
+    {
+      "key": "field_sh_cs_crumb",
+      "label": "اسم مختصر لمسار التنقل",
+      "name": "crumb",
+      "type": "text",
+      "instructions": "فارغ = عنوان الحالة.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_cs_result",
+      "label": "الرقم الرئيسي",
+      "name": "result",
+      "type": "text",
+      "instructions": "كما في التقرير، مثل +432.54% أو 12.9 ألف. لا تكتب رقمًا غير موثق.",
+      "required": 1,
+      "wrapper": {
+        "width": "40"
+      }
+    },
+    {
+      "key": "field_sh_cs_result_label",
+      "label": "اسم المؤشر الرئيسي",
+      "name": "result_label",
+      "type": "text",
+      "instructions": "",
+      "required": 1,
+      "wrapper": {
+        "width": "60"
+      }
+    },
+    {
+      "key": "field_sh_cs_sector",
+      "label": "القطاع",
+      "name": "sector",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "wrapper": {
+        "width": "50"
+      }
+    },
+    {
+      "key": "field_sh_cs_market",
+      "label": "السوق",
+      "name": "market",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "wrapper": {
+        "width": "50"
+      }
+    },
+    {
+      "key": "field_sh_cs_filter",
+      "label": "تصنيف الفهرس",
+      "name": "filter",
+      "type": "select",
+      "instructions": "",
+      "required": 0,
+      "choices": {
+        "ecommerce": "التجارة الإلكترونية",
+        "health": "الصحة والطب",
+        "education": "التعليم والتدريب",
+        "real-estate": "العقارات",
+        "tourism": "السياحة",
+        "tech": "التقنية",
+        "legal": "القانون",
+        "food": "الأغذية والمطاعم",
+        "other": "أخرى"
+      },
+      "multiple": 1,
+      "ui": 1,
+      "return_format": "value"
+    },
+    {
+      "key": "field_sh_cs_client",
+      "label": "اسم العميل",
+      "name": "client",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "wrapper": {
+        "width": "40"
+      }
+    },
+    {
+      "key": "field_sh_cs_client_public",
+      "label": "إظهار اسم العميل",
+      "name": "client_public",
+      "type": "true_false",
+      "instructions": "يظهر الاسم فقط بموافقة العميل. عند الإخفاء لا يظهر في الصفحة أو Schema أو نص الصور البديل.",
+      "required": 0,
+      "ui": 1,
+      "default_value": 0,
+      "wrapper": {
+        "width": "30"
+      }
+    },
+    {
+      "key": "field_sh_cs_client_url",
+      "label": "موقع العميل",
+      "name": "client_url",
+      "type": "url",
+      "instructions": "",
+      "required": 0,
+      "wrapper": {
+        "width": "30"
+      },
+      "conditional_logic": [
+        [
+          {
+            "field": "field_sh_cs_client_public",
+            "operator": "==",
+            "value": "1"
+          }
+        ]
+      ]
+    },
+    {
+      "key": "field_sh_cs_client_logo",
+      "label": "شعار العميل (إن كان معتمدًا)",
+      "name": "client_logo",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "return_format": "id",
+      "preview_size": "thumbnail",
+      "conditional_logic": [
+        [
+          {
+            "field": "field_sh_cs_client_public",
+            "operator": "==",
+            "value": "1"
+          }
+        ]
+      ]
+    },
+    {
+      "key": "field_sh_cs_duration",
+      "label": "مدة التعاون",
+      "name": "duration",
+      "type": "text",
+      "instructions": "",
+      "required": 0
+    },
+    {
+      "key": "field_sh_cs_source",
+      "label": "مصدر البيانات",
+      "name": "source",
+      "type": "text",
+      "instructions": "مثل: جوجل أناليتكس 4، سيرش كونسول.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_cs_period",
+      "label": "فترة القياس",
+      "name": "period",
+      "type": "text",
+      "instructions": "",
+      "required": 0
+    },
+    {
+      "key": "field_sh_cs_tab_challenge",
+      "label": "التحدي والحل",
+      "name": "tab_challenge",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_cs_challenge_title",
+      "label": "عنوان التحدي",
+      "name": "challenge_title",
+      "type": "text",
+      "instructions": "",
+      "required": 0
+    },
+    {
+      "key": "field_sh_cs_challenge_text",
+      "label": "وصف التحدي",
+      "name": "challenge_text",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "rows": 5,
+      "new_lines": "wpautop"
+    },
+    {
+      "key": "field_sh_cs_solution_title",
+      "label": "عنوان الحل",
+      "name": "solution_title",
+      "type": "text",
+      "instructions": "",
+      "required": 0
+    },
+    {
+      "key": "field_sh_cs_solution_intro",
+      "label": "مقدمة الحل",
+      "name": "solution_intro",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "rows": 3,
+      "new_lines": ""
+    },
+    {
+      "key": "field_sh_cs_steps",
+      "label": "خطوات الحل",
+      "name": "steps",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "layout": "block",
+      "button_label": "إضافة خطوة",
+      "collapsed": "field_sh_cs_steps__title",
+      "max": 10,
+      "sub_fields": [
+        {
+          "name": "title",
+          "label": "الخطوة",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "key": "field_sh_cs_steps__title"
+        },
+        {
+          "name": "text",
+          "label": "الشرح",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 2,
+          "new_lines": "",
+          "key": "field_sh_cs_steps__text"
+        }
+      ]
+    },
+    {
+      "key": "field_sh_cs_tab_results",
+      "label": "النتائج",
+      "name": "tab_results",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_cs_results_text",
+      "label": "قراءة النتائج",
+      "name": "results_text",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "rows": 4,
+      "new_lines": "wpautop"
+    },
+    {
+      "key": "field_sh_cs_metrics",
+      "label": "مؤشرات القياس",
+      "name": "metrics",
+      "type": "repeater",
+      "instructions": "انسخ القيم كما في التقرير. أي نسبة مشتقة تُراجع حسابيًا قبل النشر.",
+      "required": 0,
+      "layout": "block",
+      "button_label": "إضافة مؤشر",
+      "collapsed": "field_sh_cs_metrics__label",
+      "max": 8,
+      "sub_fields": [
+        {
+          "name": "label",
+          "label": "اسم المؤشر",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "wrapper": {
+            "width": "30"
+          },
+          "key": "field_sh_cs_metrics__label"
+        },
+        {
+          "name": "unit",
+          "label": "الوحدة",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "wrapper": {
+            "width": "14"
+          },
+          "key": "field_sh_cs_metrics__unit"
+        },
+        {
+          "name": "before",
+          "label": "القيمة السابقة",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "wrapper": {
+            "width": "18"
+          },
+          "key": "field_sh_cs_metrics__before"
+        },
+        {
+          "name": "after",
+          "label": "القيمة اللاحقة",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "wrapper": {
+            "width": "18"
+          },
+          "key": "field_sh_cs_metrics__after"
+        },
+        {
+          "name": "change",
+          "label": "التغيّر",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "wrapper": {
+            "width": "20"
+          },
+          "key": "field_sh_cs_metrics__change"
+        },
+        {
+          "name": "source",
+          "label": "المصدر",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "wrapper": {
+            "width": "50"
+          },
+          "key": "field_sh_cs_metrics__source"
+        },
+        {
+          "name": "screenshot",
+          "label": "اللقطة المرجعية",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "return_format": "id",
+          "preview_size": "thumbnail",
+          "wrapper": {
+            "width": "50"
+          },
+          "key": "field_sh_cs_metrics__screenshot"
+        }
+      ]
+    },
+    {
+      "key": "field_sh_cs_period_before",
+      "label": "الفترة الأولى",
+      "name": "period_before",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "wrapper": {
+        "width": "50"
+      }
+    },
+    {
+      "key": "field_sh_cs_period_after",
+      "label": "الفترة الثانية",
+      "name": "period_after",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "wrapper": {
+        "width": "50"
+      }
+    },
+    {
+      "key": "field_sh_cs_tab_gallery",
+      "label": "نظرة على النتائج",
+      "name": "tab_gallery",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_cs_gallery",
+      "label": "لقطات التقارير",
+      "name": "gallery",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "layout": "block",
+      "button_label": "إضافة لقطة",
+      "max": 12,
+      "sub_fields": [
+        {
+          "name": "image",
+          "label": "الصورة",
+          "type": "image",
+          "instructions": "",
+          "required": 1,
+          "return_format": "id",
+          "preview_size": "medium",
+          "key": "field_sh_cs_gallery__image"
+        },
+        {
+          "name": "alt",
+          "label": "نص بديل",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_cs_gallery__alt"
+        },
+        {
+          "name": "caption",
+          "label": "التعليق",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_cs_gallery__caption"
+        },
+        {
+          "name": "source",
+          "label": "المصدر",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_cs_gallery__source"
+        },
+        {
+          "name": "verified",
+          "label": "لقطة موثقة لهذه الحالة",
+          "type": "true_false",
+          "instructions": "",
+          "required": 0,
+          "ui": 1,
+          "default_value": 0,
+          "key": "field_sh_cs_gallery__verified"
+        }
+      ]
+    },
+    {
+      "key": "field_sh_cs_tab_links",
+      "label": "الروابط والتواصل",
+      "name": "tab_links",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_cs_service_label",
+      "label": "اسم الخدمة المرتبطة",
+      "name": "service_label",
+      "type": "text",
+      "instructions": "",
+      "required": 0
+    },
+    {
+      "key": "field_sh_cs_service_page",
+      "label": "صفحة الخدمة المرتبطة",
+      "name": "service_page",
+      "type": "page_link",
+      "instructions": "",
+      "required": 0,
+      "post_type": [
+        "page"
+      ],
+      "allow_null": 1
+    },
+    {
+      "key": "field_sh_cs_related_pages",
+      "label": "صفحات أخرى مرتبطة",
+      "name": "related_pages",
+      "type": "relationship",
+      "instructions": "",
+      "required": 0,
+      "post_type": [
+        "page"
+      ],
+      "return_format": "id",
+      "max": 4,
+      "filters": [
+        "search"
+      ]
+    },
+    {
+      "key": "field_sh_cs_cta_title",
+      "label": "عنوان دعوة التواصل",
+      "name": "cta_title",
+      "type": "text",
+      "instructions": "",
+      "required": 0
+    },
+    {
+      "key": "field_sh_cs_cta_text",
+      "label": "نص دعوة التواصل",
+      "name": "cta_text",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "rows": 2,
+      "new_lines": ""
+    },
+    {
+      "key": "field_sh_cs_review_notes",
+      "label": "ملاحظات مراجعة داخلية",
+      "name": "review_notes",
+      "type": "textarea",
+      "instructions": "لا تظهر للزائر أبدًا.",
+      "required": 0,
+      "rows": 4,
+      "new_lines": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "case_study"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments",
+    "format",
+    "categories",
+    "tags",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

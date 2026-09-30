@@ -1,0 +1,25 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "المدونة",
+   "href": null
+  }
+ ],
+ "key": "blog",
+ "route": "/blog/",
+ "kind": "system",
+ "title": "المدونة",
+ "file": "SEO House - Blog.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "مدونة سيو هاوس | سيو هاوس",
+  "description": "مقالات عن تحسين محركات البحث والسيو التقني والمحتوى والتجارة الإلكترونية والقياس.",
+  "robots": ""
+ },
+ "template": null,
+ "sections": []
+}

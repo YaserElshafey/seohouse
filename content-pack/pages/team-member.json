@@ -1,0 +1,38 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "فريق العمل",
+   "href": "/team/"
+  },
+  {
+   "label": "ياسر يوسف",
+   "href": null
+  }
+ ],
+ "key": "team-member",
+ "route": "/team/{slug}/",
+ "kind": "system",
+ "title": "ملف عضو الفريق",
+ "file": "SEO House - Team Member.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "{{member_name}} | فريق سيو هاوس",
+  "description": "{{member_name}} — {{member_title}} في سيو هاوس.",
+  "robots": ""
+ },
+ "template": null,
+ "sections": [
+  {
+   "acf_fc_layout": "booking",
+   "service": "seo",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

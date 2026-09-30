@@ -1,0 +1,25 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "نتائج البحث",
+   "href": null
+  }
+ ],
+ "key": "search",
+ "route": "/?s=",
+ "kind": "system",
+ "title": "نتائج البحث",
+ "file": "SEO House - Search Results.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "نتائج البحث | سيو هاوس",
+  "description": "نتائج البحث داخل موقع سيو هاوس.",
+  "robots": "noindex, follow"
+ },
+ "template": null,
+ "sections": []
+}

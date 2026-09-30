@@ -1,0 +1,216 @@
+{
+  "key": "group_sh_page_privacy_policy",
+  "title": "أقسام الصفحة — سياسة الخصوصية",
+  "fields": [
+    {
+      "key": "field_609eb2ef6499d",
+      "label": "أقسام الصفحة",
+      "name": "sh_sections",
+      "type": "flexible_content",
+      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
+      "layouts": {
+        "layout_b460a9f220936": {
+          "key": "layout_b460a9f220936",
+          "name": "hero",
+          "label": "الواجهة (Hero)",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_3881ee5d50562",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_2253668d56d6d",
+              "label": "العنوان: سياسة الخصوصية",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_4258fd1bd08fc",
+              "label": "النص: توضح هذه الصفحة كيف يتعامل الموقع مع…",
+              "name": "text",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_68634de6b0df8": {
+          "key": "layout_68634de6b0df8",
+          "name": "document",
+          "label": "قسم: Document",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_4810060714d77",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_f0c15ab587758",
+              "label": "الوسم: المحتويات",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_bf5091333e8bf",
+              "label": "العناصر: البيانات التي يجمعها الموقع",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 8. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_2e787b43b428d",
+                  "label": "نص: البيانات التي يجمعها الموقع",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_6155100fb43f6",
+                  "label": "نمط العرض",
+                  "name": "variant",
+                  "type": "select",
+                  "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
+                  "required": 0,
+                  "choices": {
+                    "v1": "النمط 1",
+                    "v2": "النمط 2",
+                    "v3": "النمط 3",
+                    "v4": "النمط 4",
+                    "v5": "النمط 5",
+                    "v6": "النمط 6",
+                    "v7": "النمط 7",
+                    "v8": "النمط 8"
+                  },
+                  "default_value": "v1",
+                  "allow_null": 0,
+                  "ui": 0,
+                  "return_format": "value"
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_2e787b43b428d"
+            },
+            {
+              "key": "field_1addeb5066769",
+              "label": "نص: آخر تحديث:",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_22c535cfeec88",
+              "label": "العناصر: البيانات التي يجمعها الموقع [يُضاف ا…",
+              "name": "items_2",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 8. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_d0f66908aa747",
+                  "label": "العنوان: البيانات التي يجمعها الموقع",
+                  "name": "title",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_af3223de6e3f9",
+                  "label": "نص: [يُضاف النص القانوني المعتمد قبل الن…",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_84b96cf16b989",
+                  "label": "نمط العرض",
+                  "name": "variant",
+                  "type": "select",
+                  "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
+                  "required": 0,
+                  "choices": {
+                    "v1": "النمط 1",
+                    "v2": "النمط 2",
+                    "v3": "النمط 3",
+                    "v4": "النمط 4",
+                    "v5": "النمط 5",
+                    "v6": "النمط 6",
+                    "v7": "النمط 7",
+                    "v8": "النمط 8"
+                  },
+                  "default_value": "v1",
+                  "allow_null": 0,
+                  "ui": 0,
+                  "return_format": "value"
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_d0f66908aa747"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        }
+      },
+      "button_label": "إضافة قسم",
+      "min": "",
+      "max": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/privacy-policy.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments",
+    "format",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "حقول قالب سياسة الخصوصية — مولدة من SEO House - Privacy Policy.dc.html",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

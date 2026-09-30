@@ -1,0 +1,144 @@
+{
+  "key": "group_sh_page_thank_you",
+  "title": "أقسام الصفحة — تأكيد الحجز",
+  "fields": [
+    {
+      "key": "field_2035d0ed121c2",
+      "label": "أقسام الصفحة",
+      "name": "sh_sections",
+      "type": "flexible_content",
+      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
+      "layouts": {
+        "layout_805895ac41db9": {
+          "key": "layout_805895ac41db9",
+          "name": "hero",
+          "label": "الواجهة (Hero)",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_a161c85a56c9c",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_574b903f4e72a",
+              "label": "العنوان: تم تأكيد موعدك",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_8935587eff79f",
+              "label": "العناصر: 1 تأكيد الموعديصل تأكيد الموعد من أد…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_1a04f151a2058",
+                  "label": "عنوان فرعي: تأكيد الموعد",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_139f086551c83",
+                  "label": "النص: يصل تأكيد الموعد من أداة الحجز بعد ر…",
+                  "name": "text",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_1a04f151a2058"
+            },
+            {
+              "key": "field_e921c06836f19",
+              "label": "العناصر: النتائج ←",
+              "name": "items_2",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_98535450681d3",
+                  "label": "الرابط: النتائج ←",
+                  "name": "link",
+                  "type": "page_link",
+                  "instructions": "",
+                  "required": 0,
+                  "post_type": [
+                    "page",
+                    "case_study",
+                    "team_member",
+                    "post"
+                  ],
+                  "allow_null": 1,
+                  "allow_archives": 1,
+                  "multiple": 0
+                },
+                {
+                  "key": "field_ad61c327c97de",
+                  "label": "نص الرابط: النتائج ←",
+                  "name": "link_label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_ad61c327c97de"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        }
+      },
+      "button_label": "إضافة قسم",
+      "min": "",
+      "max": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/thank-you.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments",
+    "format",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "حقول قالب تأكيد الحجز — مولدة من SEO House - Thank You.dc.html",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

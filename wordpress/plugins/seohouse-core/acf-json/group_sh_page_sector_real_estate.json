@@ -1,0 +1,852 @@
+{
+  "key": "group_sh_page_sector_real_estate",
+  "title": "أقسام الصفحة — قطاع العقارات والبناء",
+  "fields": [
+    {
+      "key": "field_22e7e3d67b28d",
+      "label": "أقسام الصفحة",
+      "name": "sh_sections",
+      "type": "flexible_content",
+      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
+      "layouts": {
+        "layout_83e1ce9877247": {
+          "key": "layout_83e1ce9877247",
+          "name": "hero",
+          "label": "الواجهة (Hero)",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_b99ab1ee9e5a1",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_56f3590071659",
+              "label": "الوسم: العقارات والبناء",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_cbc211bfcae82",
+              "label": "العنوان: تحسين محركات البحث لقطاع العقارات",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_25cd047603727",
+              "label": "النص: يختلف البحث عن شقة في حي محدد عن الب…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_982a78da85cdf",
+              "label": "نص الرابط: احجز مكالمة استشارية",
+              "name": "link_label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_7c2293b9500e9",
+              "label": "نص الرابط: بنية الصفحات",
+              "name": "link_label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_418e63318dc0d",
+              "label": "الوسم: مسار بحث العميل",
+              "name": "eyebrow_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_cc0a2ed81190d",
+              "label": "نص: مثال توضيحي",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_90d3e2a99164e",
+              "label": "نص: شقق للبيع قرب المدارس",
+              "name": "label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_e51abf46b6ef5",
+              "label": "العناصر: المنطقةالخدمات والطرق والمشروعات",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_e50d4e4335750",
+                  "label": "الأيقونة",
+                  "name": "icon",
+                  "type": "select",
+                  "instructions": "أيقونات التصميم المعتمد.",
+                  "required": 0,
+                  "choices": {
+                    "ie59b5e34": "أيقونة 84",
+                    "i9bb6d855": "أيقونة 85",
+                    "ifee58417": "أيقونة 86"
+                  },
+                  "default_value": "ie59b5e34",
+                  "allow_null": 0,
+                  "return_format": "value"
+                },
+                {
+                  "key": "field_f7931fa099947",
+                  "label": "عنوان فرعي: المنطقة",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_0332972b71af8",
+                  "label": "نص: الخدمات والطرق والمشروعات",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_f7931fa099947"
+            },
+            {
+              "key": "field_f51446bc0a10f",
+              "label": "نص: الإجراء الذي نقيسه",
+              "name": "label_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_38e3803842398",
+              "label": "عنوان فرعي: طلب معاينة أو استفسار",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_40928c7a87514": {
+          "key": "layout_40928c7a87514",
+          "name": "sector_journey",
+          "label": "قسم: Sector journey",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_6c88813b9ee0d",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_1fbb271e23046",
+              "label": "الوسم: مثال توضيحي لموقع عقاري",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_40a9c033e332d",
+              "label": "العنوان: المنطقة ثم المشروع ثم الوحدة",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_e65ff32f8b348",
+              "label": "الوسم: 1",
+              "name": "eyebrow_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_38c667c60d4eb",
+              "label": "عنوان فرعي: المنطقة",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_8d6035b7ec6a4",
+              "label": "نص: صفحة تشرح المنطقة وتوزّع الزائر على …",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_2e0447f01e20b",
+              "label": "الوسم: 2",
+              "name": "eyebrow_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_238d6fbaf57b7",
+              "label": "عنوان فرعي: المشروع",
+              "name": "heading_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_6bb728ae5f25b",
+              "label": "الوسم: مشروع سكني",
+              "name": "eyebrow_4",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_a5f2f31706cf5",
+              "label": "نص: المخطط · المرافق · مراحل التسليم",
+              "name": "label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_cae59e981505a",
+              "label": "الوسم: 3",
+              "name": "eyebrow_5",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_693592709533b",
+              "label": "عنوان فرعي: الوحدة والاستفسار",
+              "name": "heading_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_3191487f908f9",
+              "label": "العناصر: شقة غرفتينمتاحة",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_9094dabe01139",
+                  "label": "نص: شقة غرفتين",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_fd3db5095db45",
+                  "label": "الوسم: متاحة",
+                  "name": "eyebrow",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_9094dabe01139"
+            },
+            {
+              "key": "field_6b19a79a99757",
+              "label": "الوسم: طلب معاينة",
+              "name": "eyebrow_6",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_7fd0d39e0c8a9": {
+          "key": "layout_7fd0d39e0c8a9",
+          "name": "structure",
+          "label": "قسم: Structure",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_6535be20b15f6",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_e75cb8113fb7a",
+              "name": "sh_anchor",
+              "label": "معرّف الرابط الداخلي (anchor)",
+              "type": "text",
+              "placeholder": "re-structure",
+              "instructions": "الافتراضي: #re-structure — الأزرار داخل الصفحة تشير إليه.",
+              "wrapper": {
+                "width": "70"
+              }
+            },
+            {
+              "key": "field_6376022a69cae",
+              "label": "نص: كيف يصل الباحث إلى العقار المناسب؟",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_4d4fa451b9f07",
+              "label": "العنوان: رتّب الموقع كما يختار العميل العقار",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_8f2766faa0e3b",
+              "label": "النص: غالبًا ما يحدد المشتري المنطقة ونوع …",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_1643e41b40b6a",
+              "label": "العناصر: المنطقةالخيارات المتاحة في المكان",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_51ef1b390ac0f",
+                  "label": "عنوان فرعي: المنطقة",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_6c99602ca0012",
+                  "label": "نص: الخيارات المتاحة في المكان",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_38d0e4ffc434f",
+                  "label": "نمط العرض",
+                  "name": "variant",
+                  "type": "select",
+                  "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
+                  "required": 0,
+                  "choices": {
+                    "v1": "النمط 1 — blue-rgb",
+                    "v2": "النمط 2 — blue-rgb",
+                    "v3": "النمط 3 — lime-rgb"
+                  },
+                  "default_value": "v1",
+                  "allow_null": 0,
+                  "ui": 0,
+                  "return_format": "value"
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_51ef1b390ac0f"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_acb8580d6fc52": {
+          "key": "layout_acb8580d6fc52",
+          "name": "lifecycle",
+          "label": "قسم: Lifecycle",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_46ae51d945736",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_5409d605a516a",
+              "name": "sh_anchor",
+              "label": "معرّف الرابط الداخلي (anchor)",
+              "type": "text",
+              "placeholder": "re-lifecycle",
+              "instructions": "الافتراضي: #re-lifecycle — الأزرار داخل الصفحة تشير إليه.",
+              "wrapper": {
+                "width": "70"
+              }
+            },
+            {
+              "key": "field_c4f8bc02009b1",
+              "label": "نص: إدارة الصفحات عندما يتغير المعروض",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_1db5d125e323c",
+              "label": "العنوان: المعروض يتغير والصفحات يجب أن تواكبه",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_6956ce0c59e10",
+              "label": "النص: من أكبر مشكلات المواقع العقارية بقاء…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_f463b94b2c3fb",
+              "label": "العناصر: وحدة متاحة تبقى الصفحة محدثة بالمواص…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_c046f199402e1",
+                  "label": "عنوان فرعي: وحدة متاحة",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_6148c0ca270fb",
+                  "label": "النص: تبقى الصفحة محدثة بالمواصفات وحالة ا…",
+                  "name": "text",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_c5e2a2d6eaf5a",
+                  "label": "نمط العرض",
+                  "name": "variant",
+                  "type": "select",
+                  "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
+                  "required": 0,
+                  "choices": {
+                    "v1": "النمط 1 — داكن",
+                    "v2": "النمط 2 — أزرق"
+                  },
+                  "default_value": "v1",
+                  "allow_null": 0,
+                  "ui": 0,
+                  "return_format": "value"
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_c046f199402e1"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_96162a2abcd1b": {
+          "key": "layout_96162a2abcd1b",
+          "name": "measure",
+          "label": "قسم: Measure",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_4a7fb370d3b7c",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_123eaa54882df",
+              "name": "sh_anchor",
+              "label": "معرّف الرابط الداخلي (anchor)",
+              "type": "text",
+              "placeholder": "re-measure",
+              "instructions": "الافتراضي: #re-measure — الأزرار داخل الصفحة تشير إليه.",
+              "wrapper": {
+                "width": "70"
+              }
+            },
+            {
+              "key": "field_d9db87c78ffa6",
+              "label": "نص: قياس الاستفسارات ذات الصلة",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_33490f7c06bd3",
+              "label": "العنوان: قِس جودة الاستفسار",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_c110423799bff",
+              "label": "النص: نربط بين ظهور الصفحات والنقرات ثم ال…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_383b6689a5c02",
+              "label": "العناصر: يساعد هذا الفريق على معرفة المناطق و…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_c3b3266c82e9a",
+                  "label": "النص: يساعد هذا الفريق على معرفة المناطق و…",
+                  "name": "text",
+                  "type": "textarea",
+                  "instructions": "",
+                  "required": 0,
+                  "rows": 3,
+                  "new_lines": ""
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_c3b3266c82e9a"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_d3c05f5489bb7": {
+          "key": "layout_d3c05f5489bb7",
+          "name": "related",
+          "label": "صفحات مرتبطة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_fe45e7a9ffd93",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_6ddada0cc7431",
+              "name": "lead",
+              "label": "العنوان التمهيدي",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_cae96e7e61d37",
+              "name": "links",
+              "label": "الصفحات المرتبطة",
+              "type": "repeater",
+              "layout": "table",
+              "button_label": "إضافة رابط",
+              "max": 8,
+              "sub_fields": [
+                {
+                  "key": "field_b58a713307416",
+                  "name": "label",
+                  "label": "النص",
+                  "type": "text",
+                  "required": 1
+                },
+                {
+                  "key": "field_9050dddf33a7b",
+                  "name": "link",
+                  "label": "الصفحة",
+                  "type": "page_link",
+                  "post_type": [
+                    "page",
+                    "case_study",
+                    "post",
+                    "team_member"
+                  ],
+                  "allow_archives": 1,
+                  "allow_null": 0,
+                  "required": 1
+                }
+              ],
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_5113340483293": {
+          "key": "layout_5113340483293",
+          "name": "faq",
+          "label": "الأسئلة الشائعة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_aef997d2048e9",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_84f922d1a7664",
+              "name": "eyebrow",
+              "label": "الوسم",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_cd5e064737c27",
+              "name": "title",
+              "label": "عنوان القسم",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_6be8db046f334",
+              "name": "items",
+              "label": "الأسئلة",
+              "type": "repeater",
+              "layout": "block",
+              "button_label": "إضافة سؤال",
+              "collapsed": "field_58df772e4bbd8",
+              "instructions": "نفس الأسئلة تُستخدم في FAQPage Schema. لا تضف سؤالًا غير ظاهر في الصفحة.",
+              "sub_fields": [
+                {
+                  "key": "field_58df772e4bbd8",
+                  "name": "question",
+                  "label": "السؤال",
+                  "type": "text",
+                  "required": 1
+                },
+                {
+                  "key": "field_df88944e53b7a",
+                  "name": "answer",
+                  "label": "الإجابة",
+                  "type": "textarea",
+                  "rows": 3,
+                  "new_lines": "br",
+                  "required": 1
+                }
+              ],
+              "required": 0
+            },
+            {
+              "key": "field_97f9ff871d4f5",
+              "name": "schema",
+              "label": "إخراج FAQPage Schema",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 1,
+              "instructions": "يُخرج من نفس الأسئلة الظاهرة فقط.",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_e7bcf4dd5f7fa": {
+          "key": "layout_e7bcf4dd5f7fa",
+          "name": "booking",
+          "label": "حجز الاستشارة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_d13b2d69dc7c5",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_3e0dd58ad9cfa",
+              "name": "service",
+              "label": "الخدمة المختارة مسبقًا",
+              "type": "select",
+              "choices": {
+                "seo": "تحسين محركات البحث",
+                "web": "تصميم وتطوير موقع",
+                "stores": "تصميم متجر إلكتروني",
+                "products": "إضافة المنتجات",
+                "unsure": "لم أحدد بعد"
+              },
+              "default_value": "seo",
+              "allow_null": 0,
+              "return_format": "value",
+              "required": 0
+            },
+            {
+              "key": "field_06bf095f77d2f",
+              "name": "eyebrow",
+              "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_38302e1f53b56",
+              "name": "title",
+              "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_eabddcdc7d3fe",
+              "name": "text",
+              "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
+              "type": "textarea",
+              "rows": 2,
+              "new_lines": "",
+              "required": 0
+            },
+            {
+              "key": "field_c07e34aa6cd72",
+              "name": "points",
+              "label": "نقاط الفائدة (فارغة = النقاط العامة)",
+              "type": "repeater",
+              "layout": "table",
+              "button_label": "إضافة نقطة",
+              "max": 4,
+              "sub_fields": [
+                {
+                  "key": "field_d6d5d8b69cadf",
+                  "name": "text",
+                  "label": "النقطة",
+                  "type": "text",
+                  "required": 0
+                }
+              ],
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        }
+      },
+      "button_label": "إضافة قسم",
+      "min": "",
+      "max": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/sector-real-estate.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments",
+    "format",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "حقول قالب قطاع العقارات والبناء — مولدة من SEO House - Sector Real Estate.dc.html",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

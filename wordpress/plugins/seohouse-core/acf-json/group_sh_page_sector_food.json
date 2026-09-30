@@ -1,0 +1,919 @@
+{
+  "key": "group_sh_page_sector_food",
+  "title": "أقسام الصفحة — قطاع الأغذية والمطاعم",
+  "fields": [
+    {
+      "key": "field_7fdaee5a804f2",
+      "label": "أقسام الصفحة",
+      "name": "sh_sections",
+      "type": "flexible_content",
+      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
+      "layouts": {
+        "layout_6895433bcdca9": {
+          "key": "layout_6895433bcdca9",
+          "name": "hero",
+          "label": "الواجهة (Hero)",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_891325de7d002",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_38a28e12109b1",
+              "label": "الوسم: الأغذية والمطاعم",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_3d0af391c3e76",
+              "label": "العنوان: تحسين محركات البحث للمطاعم وعلامات ا…",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_7a7b9841a9060",
+              "label": "النص: الباحث عن مطعم قد يريد أقرب فرع مفتو…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_896c87d3de79a",
+              "label": "نص الرابط: احجز مكالمة استشارية",
+              "name": "link_label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_a204405c1d9b8",
+              "label": "نص الرابط: ما نعمل عليه",
+              "name": "link_label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_61c830e7825fb",
+              "label": "الوسم: مسار بحث العميل",
+              "name": "eyebrow_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_d0e11c4230986",
+              "label": "نص: مثال توضيحي",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_776b657b6599b",
+              "label": "نص: مطعم مفتوح الآن قريب مني",
+              "name": "label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_43a89b7e4d0c9",
+              "label": "العناصر: الفرعالعنوان وساعات العمل الحالية",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_d18cd65b83bfa",
+                  "label": "الأيقونة",
+                  "name": "icon",
+                  "type": "select",
+                  "instructions": "أيقونات التصميم المعتمد.",
+                  "required": 0,
+                  "choices": {
+                    "ie59b5e34": "أيقونة 84",
+                    "ib848b72b": "أيقونة 96",
+                    "i5b10b0a6": "أيقونة 97"
+                  },
+                  "default_value": "ie59b5e34",
+                  "allow_null": 0,
+                  "return_format": "value"
+                },
+                {
+                  "key": "field_3c39a1b44e9c9",
+                  "label": "عنوان فرعي: الفرع",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_6c8c1537f1b93",
+                  "label": "نص: العنوان وساعات العمل الحالية",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_3c39a1b44e9c9"
+            },
+            {
+              "key": "field_b8ec600ecf5a4",
+              "label": "نص: الإجراء الذي نقيسه",
+              "name": "label_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_c3b8ac93deb91",
+              "label": "عنوان فرعي: حجز أو طلب",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_1b0f3c4f7640a": {
+          "key": "layout_1b0f3c4f7640a",
+          "name": "sector_journey",
+          "label": "قسم: Sector journey",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_88a9e3c41395d",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_9725de432ab8d",
+              "label": "الوسم: مثال توضيحي لمطعم",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_3c5fdf203c5fe",
+              "label": "العنوان: من الفرع والقائمة إلى الطلب أو الحجز",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_d492fc4dbdefa",
+              "label": "الوسم: 1",
+              "name": "eyebrow_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_4eb2b93aca6d9",
+              "label": "عنوان فرعي: الفرع",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_704eafc652817",
+              "label": "نص: مطعم قريب مني",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_24ea35b598514",
+              "label": "العناصر: الفرع الشمالي · مفتوح الآن",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_e9c2a8c7626ba",
+                  "label": "الأيقونة",
+                  "name": "icon",
+                  "type": "select",
+                  "instructions": "أيقونات التصميم المعتمد.",
+                  "required": 0,
+                  "choices": {
+                    "i786c2038": "أيقونة 98",
+                    "i0e5766d8": "أيقونة 99"
+                  },
+                  "default_value": "i786c2038",
+                  "allow_null": 0,
+                  "return_format": "value"
+                },
+                {
+                  "key": "field_5b8ea1e0b4c12",
+                  "label": "نص: الفرع الشمالي · مفتوح الآن",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_5b8ea1e0b4c12"
+            },
+            {
+              "key": "field_5e35ad20f9785",
+              "label": "الوسم: 2",
+              "name": "eyebrow_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_79c3722333066",
+              "label": "عنوان فرعي: القائمة",
+              "name": "heading_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_8a8a09807b28e",
+              "label": "العناصر: أطباق رئيسيةعرض ←",
+              "name": "items_2",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_c58299fdbdbcc",
+                  "label": "نص: أطباق رئيسية",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_71c09331be5e3",
+                  "label": "نص: عرض ←",
+                  "name": "label_2",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_c58299fdbdbcc"
+            },
+            {
+              "key": "field_2475aeda29e9e",
+              "label": "نص: قائمة نصية قابلة للبحث، لا صورة أو م…",
+              "name": "label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_b90f02caa1365",
+              "label": "الوسم: 3",
+              "name": "eyebrow_4",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_fdfbde0bce5ca",
+              "label": "عنوان فرعي: الطلب أو الحجز",
+              "name": "heading_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_fc1af32812835",
+              "label": "الوسم: توصيل",
+              "name": "eyebrow_5",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_88f9115b9949e",
+              "label": "العناصر: استلام",
+              "name": "items_3",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_65ed3070e5595",
+                  "label": "الوسم: استلام",
+                  "name": "eyebrow",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_65ed3070e5595"
+            },
+            {
+              "key": "field_e52d0d5c6cfc4",
+              "label": "نص: العنوان أو الفرع",
+              "name": "label_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_dfd19691ec1f3",
+              "label": "الوسم: اطلب الآن",
+              "name": "eyebrow_6",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_f31680b33bfdd": {
+          "key": "layout_f31680b33bfdd",
+          "name": "branch",
+          "label": "قسم: Branch",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_d72361548f356",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_a5679e69698b2",
+              "name": "sh_anchor",
+              "label": "معرّف الرابط الداخلي (anchor)",
+              "type": "text",
+              "placeholder": "fd-branch",
+              "instructions": "الافتراضي: #fd-branch — الأزرار داخل الصفحة تشير إليه.",
+              "wrapper": {
+                "width": "70"
+              }
+            },
+            {
+              "key": "field_93737ec0d501e",
+              "label": "نص: العثور على الفرع المناسب",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_a47ad05d0bb3b",
+              "label": "العنوان: الزائر يريد معلومة يمكنه استخدامها ا…",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_693b7df320977",
+              "label": "النص: عندما يبحث عن مطعم، قد يكون أهم ما ي…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_54b73cbde1d56",
+              "label": "الوسم: صفحة الفرع تحتوي",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_0594742759bd6",
+              "label": "العناصر: العنوان",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 6. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_b0af81a2f0977",
+                  "label": "نص: العنوان",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_8808ba4fba648",
+                  "label": "نمط العرض",
+                  "name": "variant",
+                  "type": "select",
+                  "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
+                  "required": 0,
+                  "choices": {
+                    "v1": "النمط 1 — أزرق",
+                    "v2": "النمط 2 — فسفوري"
+                  },
+                  "default_value": "v1",
+                  "allow_null": 0,
+                  "ui": 0,
+                  "return_format": "value"
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_b0af81a2f0977"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_61e1239724069": {
+          "key": "layout_61e1239724069",
+          "name": "menu",
+          "label": "قسم: Menu",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_6f9228be11ee3",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_c8dc73ded86fd",
+              "name": "sh_anchor",
+              "label": "معرّف الرابط الداخلي (anchor)",
+              "type": "text",
+              "placeholder": "fd-menu",
+              "instructions": "الافتراضي: #fd-menu — الأزرار داخل الصفحة تشير إليه.",
+              "wrapper": {
+                "width": "70"
+              }
+            },
+            {
+              "key": "field_bd0ce080c773d",
+              "label": "الوسم: القائمة قبل القرار",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_aaf224a1155fa",
+              "label": "العنوان: اجعل القائمة قابلة للتصفح والبحث",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_a5eb42826c7b5",
+              "label": "النص: إذا كانت القائمة منشورة كصورة واحدة …",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_0303ba3d9fa52",
+              "label": "العناصر: حجز طاولةيذهب الزر إلى أداة الحجز ال…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_708c166ac5084",
+                  "label": "الأيقونة",
+                  "name": "icon",
+                  "type": "select",
+                  "instructions": "أيقونات التصميم المعتمد.",
+                  "required": 0,
+                  "choices": {
+                    "if0120d7d": "أيقونة 83",
+                    "id2d78dc7": "أيقونة 100"
+                  },
+                  "default_value": "if0120d7d",
+                  "allow_null": 0,
+                  "return_format": "value"
+                },
+                {
+                  "key": "field_af1143d3cf04c",
+                  "label": "عنوان فرعي: حجز طاولة",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_ee97d9bc0bfa9",
+                  "label": "النص: يذهب الزر إلى أداة الحجز الخاصة بالف…",
+                  "name": "text",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_af1143d3cf04c"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_17c7f802b5fd3": {
+          "key": "layout_17c7f802b5fd3",
+          "name": "measure",
+          "label": "قسم: Measure",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_b51b2ac9d702a",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_9f3a68aa247a6",
+              "name": "sh_anchor",
+              "label": "معرّف الرابط الداخلي (anchor)",
+              "type": "text",
+              "placeholder": "fd-measure",
+              "instructions": "الافتراضي: #fd-measure — الأزرار داخل الصفحة تشير إليه.",
+              "wrapper": {
+                "width": "70"
+              }
+            },
+            {
+              "key": "field_0dff40c0e22c8",
+              "label": "نص: القياس بحسب الفرع",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_0358ff94f15db",
+              "label": "العنوان: قِس أفعال الزوار بحسب الفرع",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_3dde8506843c4",
+              "label": "النص: نراجع أداء البحث المحلي وصفحات الفرو…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_3ea2168d392c4",
+              "label": "العناصر: هذه الإشارات تساعد على تحسين المعلوم…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_0447bd4e67902",
+                  "label": "النص: هذه الإشارات تساعد على تحسين المعلوم…",
+                  "name": "text",
+                  "type": "textarea",
+                  "instructions": "",
+                  "required": 0,
+                  "rows": 3,
+                  "new_lines": ""
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_0447bd4e67902"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_f2b84b42ec835": {
+          "key": "layout_f2b84b42ec835",
+          "name": "related",
+          "label": "صفحات مرتبطة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_e7fae458ffa24",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_58b1bffbf3f18",
+              "name": "lead",
+              "label": "العنوان التمهيدي",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_1272a9d53157a",
+              "name": "links",
+              "label": "الصفحات المرتبطة",
+              "type": "repeater",
+              "layout": "table",
+              "button_label": "إضافة رابط",
+              "max": 8,
+              "sub_fields": [
+                {
+                  "key": "field_6fa689e00dfad",
+                  "name": "label",
+                  "label": "النص",
+                  "type": "text",
+                  "required": 1
+                },
+                {
+                  "key": "field_6f945b03221a8",
+                  "name": "link",
+                  "label": "الصفحة",
+                  "type": "page_link",
+                  "post_type": [
+                    "page",
+                    "case_study",
+                    "post",
+                    "team_member"
+                  ],
+                  "allow_archives": 1,
+                  "allow_null": 0,
+                  "required": 1
+                }
+              ],
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_7674503d24f05": {
+          "key": "layout_7674503d24f05",
+          "name": "faq",
+          "label": "الأسئلة الشائعة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_56b51bacfb097",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_cc974d9224fc6",
+              "name": "eyebrow",
+              "label": "الوسم",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_ff5a90924c8e0",
+              "name": "title",
+              "label": "عنوان القسم",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_d8b9ed1a528d8",
+              "name": "items",
+              "label": "الأسئلة",
+              "type": "repeater",
+              "layout": "block",
+              "button_label": "إضافة سؤال",
+              "collapsed": "field_67f6a3bb52334",
+              "instructions": "نفس الأسئلة تُستخدم في FAQPage Schema. لا تضف سؤالًا غير ظاهر في الصفحة.",
+              "sub_fields": [
+                {
+                  "key": "field_67f6a3bb52334",
+                  "name": "question",
+                  "label": "السؤال",
+                  "type": "text",
+                  "required": 1
+                },
+                {
+                  "key": "field_d548337d2f4af",
+                  "name": "answer",
+                  "label": "الإجابة",
+                  "type": "textarea",
+                  "rows": 3,
+                  "new_lines": "br",
+                  "required": 1
+                }
+              ],
+              "required": 0
+            },
+            {
+              "key": "field_7d028a95a0d61",
+              "name": "schema",
+              "label": "إخراج FAQPage Schema",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 1,
+              "instructions": "يُخرج من نفس الأسئلة الظاهرة فقط.",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_91ec7d118bc9c": {
+          "key": "layout_91ec7d118bc9c",
+          "name": "booking",
+          "label": "حجز الاستشارة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_ab65c4176d0b3",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_84d44be449a9e",
+              "name": "service",
+              "label": "الخدمة المختارة مسبقًا",
+              "type": "select",
+              "choices": {
+                "seo": "تحسين محركات البحث",
+                "web": "تصميم وتطوير موقع",
+                "stores": "تصميم متجر إلكتروني",
+                "products": "إضافة المنتجات",
+                "unsure": "لم أحدد بعد"
+              },
+              "default_value": "seo",
+              "allow_null": 0,
+              "return_format": "value",
+              "required": 0
+            },
+            {
+              "key": "field_eb67b0f45f7a9",
+              "name": "eyebrow",
+              "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_c679896a6ab3b",
+              "name": "title",
+              "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_397ae2ca6b74b",
+              "name": "text",
+              "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
+              "type": "textarea",
+              "rows": 2,
+              "new_lines": "",
+              "required": 0
+            },
+            {
+              "key": "field_88fc945927692",
+              "name": "points",
+              "label": "نقاط الفائدة (فارغة = النقاط العامة)",
+              "type": "repeater",
+              "layout": "table",
+              "button_label": "إضافة نقطة",
+              "max": 4,
+              "sub_fields": [
+                {
+                  "key": "field_909266797ef00",
+                  "name": "text",
+                  "label": "النقطة",
+                  "type": "text",
+                  "required": 0
+                }
+              ],
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        }
+      },
+      "button_label": "إضافة قسم",
+      "min": "",
+      "max": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/sector-food.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments",
+    "format",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "حقول قالب قطاع الأغذية والمطاعم — مولدة من SEO House - Sector Food.dc.html",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

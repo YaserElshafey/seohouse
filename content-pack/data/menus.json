@@ -1,0 +1,229 @@
+{
+ "primary": {
+  "name": "القائمة الرئيسية",
+  "items": [
+   {
+    "label": "الرئيسية",
+    "route": "/"
+   },
+   {
+    "label": "الخدمات",
+    "route": "/services/",
+    "all_label": "جميع الخدمات",
+    "layout": "list",
+    "children": [
+     {
+      "label": "تحسين محركات البحث",
+      "route": "/services/seo/",
+      "desc": "ظهور صفحات موقعك في نتائج البحث",
+      "icon": "search"
+     },
+     {
+      "label": "تصميم المواقع",
+      "route": "/services/web-design/",
+      "desc": "مواقع شركات سريعة وسهلة الإدارة",
+      "icon": "window"
+     },
+     {
+      "label": "تصميم المتاجر",
+      "route": "/services/stores/",
+      "desc": "متاجر على سلة وزد وشوبيفاي وووكومرس",
+      "icon": "bag"
+     },
+     {
+      "label": "رفع المنتجات",
+      "route": "/services/products/",
+      "desc": "إدخال المنتجات وتنظيم بياناتها",
+      "icon": "upload"
+     }
+    ]
+   },
+   {
+    "label": "نتائج الأعمال",
+    "route": "/results/"
+   },
+   {
+    "label": "عن الشركة",
+    "route": "/about/"
+   },
+   {
+    "label": "فريق العمل",
+    "route": "/team/"
+   },
+   {
+    "label": "القطاعات",
+    "route": "/sectors/",
+    "all_label": "جميع القطاعات",
+    "layout": "grid2",
+    "children": [
+     {
+      "label": "التجارة الإلكترونية",
+      "route": "/sectors/ecommerce/"
+     },
+     {
+      "label": "الصحة والطب",
+      "route": "/sectors/health/"
+     },
+     {
+      "label": "العقارات والبناء",
+      "route": "/sectors/real-estate/"
+     },
+     {
+      "label": "التعليم والتدريب",
+      "route": "/sectors/education/"
+     },
+     {
+      "label": "السياحة والسفر",
+      "route": "/sectors/tourism/"
+     },
+     {
+      "label": "التقنية والبرمجيات",
+      "route": "/sectors/tech/"
+     },
+     {
+      "label": "القانون والاستشارات",
+      "route": "/sectors/legal/"
+     },
+     {
+      "label": "الأغذية والمطاعم",
+      "route": "/sectors/food/"
+     }
+    ]
+   },
+   {
+    "label": "المدونة",
+    "route": "/blog/"
+   },
+   {
+    "label": "الأسعار",
+    "route": "/pricing/"
+   },
+   {
+    "label": "اتصل بنا",
+    "route": "/contact/"
+   }
+  ]
+ },
+ "footer": {
+  "name": "أعمدة الفوتر",
+  "items": [
+   {
+    "label": "السيو",
+    "route": null,
+    "children": [
+     {
+      "label": "تحسين محركات البحث",
+      "route": "/services/seo/"
+     },
+     {
+      "label": "السيو التقني",
+      "route": "/services/seo/technical/"
+     },
+     {
+      "label": "السيو الداخلي",
+      "route": "/services/seo/on-page/"
+     },
+     {
+      "label": "كتابة المحتوى",
+      "route": "/services/seo/content/"
+     },
+     {
+      "label": "السيو الخارجي",
+      "route": "/services/seo/backlinks/"
+     },
+     {
+      "label": "الاستشارات وتحليل الأداء",
+      "route": "/services/seo/consulting/"
+     }
+    ]
+   },
+   {
+    "label": "المواقع والمتاجر",
+    "route": null,
+    "children": [
+     {
+      "label": "تصميم المواقع",
+      "route": "/services/web-design/"
+     },
+     {
+      "label": "تصميم المتاجر",
+      "route": "/services/stores/"
+     },
+     {
+      "label": "رفع وإدارة المنتجات",
+      "route": "/services/products/"
+     },
+     {
+      "label": "كل الخدمات",
+      "route": "/services/"
+     }
+    ]
+   },
+   {
+    "label": "الأسواق والقطاعات",
+    "route": null,
+    "children": [
+     {
+      "label": "السعودية",
+      "route": "/services/seo/ksa/"
+     },
+     {
+      "label": "مصر",
+      "route": "/services/seo/egypt/"
+     },
+     {
+      "label": "الإمارات",
+      "route": "/services/seo/uae/"
+     },
+     {
+      "label": "القطاعات",
+      "route": "/sectors/"
+     }
+    ]
+   },
+   {
+    "label": "الشركة",
+    "route": null,
+    "children": [
+     {
+      "label": "عن سيو هاوس",
+      "route": "/about/"
+     },
+     {
+      "label": "فريق العمل",
+      "route": "/team/"
+     },
+     {
+      "label": "النتائج",
+      "route": "/results/"
+     },
+     {
+      "label": "المدونة",
+      "route": "/blog/"
+     },
+     {
+      "label": "الأسعار",
+      "route": "/pricing/"
+     },
+     {
+      "label": "اتصل بنا",
+      "route": "/contact/"
+     }
+    ]
+   }
+  ]
+ },
+ "legal": {
+  "name": "روابط أسفل الفوتر",
+  "items": [
+   {
+    "label": "سياسة الخصوصية",
+    "route": "/privacy-policy/"
+   },
+   {
+    "label": "الشروط والأحكام",
+    "route": "/terms/"
+   }
+  ]
+ }
+}

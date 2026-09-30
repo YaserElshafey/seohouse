@@ -1,0 +1,29 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "المدونة",
+   "href": "/blog/"
+  },
+  {
+   "label": "تحسين محركات البحث",
+   "href": null
+  }
+ ],
+ "key": "blog-category",
+ "route": "/blog/category/seo/",
+ "kind": "system",
+ "title": "تصنيف المدونة",
+ "file": "SEO House - Blog Category Template.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "مقالات تحسين محركات البحث | مدونة سيو هاوس",
+  "description": "مقالات مدونة سيو هاوس ضمن تصنيف تحسين محركات البحث.",
+  "robots": ""
+ },
+ "template": null,
+ "sections": []
+}

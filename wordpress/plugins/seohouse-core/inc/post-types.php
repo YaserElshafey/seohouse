@@ -1,0 +1,122 @@
+<?php
+/**
+ * Post types. Each URL has one owner:
+ *   /results/          → Page "نتائج الأعمال" (case_study has no archive)
+ *   /results/{slug}/   → case_study
+ *   /team/             → Page "فريق العمل" (team_member has no archive)
+ *   /team/{slug}/      → team_member
+ *   sh_lead            → private consultation requests (never public, not in REST)
+ *
+ * @package SEOHouseCore
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+function sh_core_register_post_types(): void {
+	register_post_type(
+		'case_study',
+		array(
+			'labels'              => array(
+				'name'          => __( 'دراسات الحالة', 'seohouse-core' ),
+				'singular_name' => __( 'دراسة حالة', 'seohouse-core' ),
+				'add_new_item'  => __( 'إضافة دراسة حالة', 'seohouse-core' ),
+				'edit_item'     => __( 'تعديل دراسة الحالة', 'seohouse-core' ),
+				'all_items'     => __( 'كل الحالات', 'seohouse-core' ),
+				'menu_name'     => __( 'نتائج الأعمال', 'seohouse-core' ),
+			),
+			'public'              => true,
+			'has_archive'         => false,
+			'rewrite'             => array( 'slug' => 'results', 'with_front' => false ),
+			'menu_icon'           => 'dashicons-chart-line',
+			'menu_position'       => 21,
+			'supports'            => array( 'title', 'thumbnail', 'revisions', 'custom-fields' ),
+			'show_in_rest'        => true,
+			'exclude_from_search' => false,
+		)
+	);
+
+	register_post_type(
+		'team_member',
+		array(
+			'labels'        => array(
+				'name'          => __( 'فريق العمل', 'seohouse-core' ),
+				'singular_name' => __( 'عضو الفريق', 'seohouse-core' ),
+				'add_new_item'  => __( 'إضافة عضو', 'seohouse-core' ),
+				'edit_item'     => __( 'تعديل بيانات العضو', 'seohouse-core' ),
+				'all_items'     => __( 'كل الأعضاء', 'seohouse-core' ),
+			),
+			'public'        => true,
+			'has_archive'   => false,
+			'rewrite'       => array( 'slug' => 'team', 'with_front' => false ),
+			'menu_icon'     => 'dashicons-groups',
+			'menu_position' => 22,
+			'supports'      => array( 'title', 'thumbnail', 'page-attributes', 'revisions', 'custom-fields' ),
+			'show_in_rest'  => true,
+		)
+	);
+
+	register_post_type(
+		'sh_lead',
+		array(
+			'labels'              => array(
+				'name'          => __( 'طلبات الاستشارة', 'seohouse-core' ),
+				'singular_name' => __( 'طلب استشارة', 'seohouse-core' ),
+			),
+			'public'              => false,
+			'publicly_queryable'  => false,
+			'exclude_from_search' => true,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'show_in_rest'        => false,
+			'menu_icon'           => 'dashicons-email-alt',
+			'menu_position'       => 23,
+			'supports'            => array( 'title' ),
+			'capability_type'     => 'post',
+			'capabilities'        => array( 'create_posts' => 'do_not_allow' ),
+			'map_meta_cap'        => true,
+			'rewrite'             => false,
+			'query_var'           => false,
+		)
+	);
+}
+add_action( 'init', 'sh_core_register_post_types', 5 );
+
+/**
+ * Permalink structure and blog/category bases the project map requires.
+ * Applied once by the setup tool (never on every request).
+ */
+function sh_core_apply_permalinks(): void {
+	global $wp_rewrite;
+	$wp_rewrite->set_permalink_structure( '/blog/%postname%/' );
+	update_option( 'category_base', 'blog/category' );
+	update_option( 'tag_base', 'blog/tag' );
+	$wp_rewrite->set_category_base( 'blog/category' );
+	$wp_rewrite->set_tag_base( 'blog/tag' );
+	// re-register so CPT permastructs follow the new structure within this same request
+	sh_core_register_post_types();
+	flush_rewrite_rules( false );
+}
+
+/** CPT singles must not inherit the /blog/ prefix of posts. (with_front=false above.) */
+
+/** Sitemap: public content only; leads never; noindex pages removed. */
+add_filter(
+	'wp_sitemaps_post_types',
+	static function ( $types ) {
+		unset( $types['sh_lead'], $types['attachment'] );
+		return $types;
+	}
+);
+add_filter( 'wp_sitemaps_add_provider', static fn( $provider, $name ) => 'users' === $name ? false : $provider, 10, 2 );
+add_filter( 'wp_sitemaps_taxonomies', static fn( $t ) => array_intersect_key( $t, array( 'category' => 1 ) ) );
+add_filter(
+	'wp_sitemaps_posts_query_args',
+	static function ( $args ) {
+		$args['meta_query'] = array(
+			'relation' => 'OR',
+			array( 'key' => 'sh_seo_noindex', 'compare' => 'NOT EXISTS' ),
+			array( 'key' => 'sh_seo_noindex', 'value' => '1', 'compare' => '!=' ),
+		);
+		return $args;
+	}
+);

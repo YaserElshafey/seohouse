@@ -1,0 +1,853 @@
+{
+  "key": "group_sh_page_stores",
+  "title": "أقسام الصفحة — تصميم المتاجر",
+  "fields": [
+    {
+      "key": "field_78884125a5504",
+      "label": "أقسام الصفحة",
+      "name": "sh_sections",
+      "type": "flexible_content",
+      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
+      "layouts": {
+        "layout_b7fcbbee75c40": {
+          "key": "layout_b7fcbbee75c40",
+          "name": "hero",
+          "label": "الواجهة (Hero)",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_304b2315dcd43",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_1167b4b660249",
+              "label": "الوسم: المتاجر الإلكترونية",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_236cab6a96e4c",
+              "label": "العنوان: تصميم المتاجر الإلكترونية",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_21a0e97cc5cdf",
+              "label": "النص: نصمم الكتالوج وصفحات المنتج ومسار ال…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_5648b57bd551b",
+              "label": "نص الرابط: احجز مكالمة استشارية",
+              "name": "link_label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_18ad0e17ea249",
+              "label": "نص الرابط: رحلة الشراء",
+              "name": "link_label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_26b2ec4746fab",
+              "label": "نص: رحلة الشراء داخل المتجر",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_626dbfd6542fb",
+              "label": "العناصر: الدخول 100%",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 6. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_e0b4d1bdcc4c1",
+                  "label": "نص: الدخول",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_bc53c9a26c1b9",
+                  "label": "نص: 100%",
+                  "name": "label_2",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_f8cbc87666cb8",
+                  "label": "نمط العرض",
+                  "name": "variant",
+                  "type": "select",
+                  "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
+                  "required": 0,
+                  "choices": {
+                    "v1": "النمط 1",
+                    "v2": "النمط 2",
+                    "v3": "النمط 3",
+                    "v4": "النمط 4",
+                    "v5": "النمط 5",
+                    "v6": "النمط 6 — lime-rgb"
+                  },
+                  "default_value": "v1",
+                  "allow_null": 0,
+                  "ui": 0,
+                  "return_format": "value"
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_e0b4d1bdcc4c1"
+            },
+            {
+              "key": "field_2d6b2bf1fbbfa",
+              "label": "نص: كل خطوة زائدة تفقد جزءًا من المشترين.",
+              "name": "label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_3d9fb6ba3b49e": {
+          "key": "layout_3d9fb6ba3b49e",
+          "name": "journey",
+          "label": "قسم: Journey",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_6a0c1ef5a0615",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_a66d52c61575b",
+              "name": "sh_anchor",
+              "label": "معرّف الرابط الداخلي (anchor)",
+              "type": "text",
+              "placeholder": "journey",
+              "instructions": "الافتراضي: #journey — الأزرار داخل الصفحة تشير إليه.",
+              "wrapper": {
+                "width": "70"
+              }
+            },
+            {
+              "key": "field_dd4092ada24f0",
+              "label": "الوسم: تجربة الشراء",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_59e2d5c823d32",
+              "label": "العنوان: خمس محطات يمر بها كل مشترٍ",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_07e4572e1aa50",
+              "label": "العناصر: 1 الفئات والبحثتصنيف يطابق طريقة تفك…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 5. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_172693cab99a2",
+                  "label": "عنوان فرعي: الفئات والبحث",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_97c30a4d052d9",
+                  "label": "نص: تصنيف يطابق طريقة تفكير المشتري، وبح…",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_172693cab99a2"
+            },
+            {
+              "key": "field_2ca487f11f4d1",
+              "label": "نص: ابحث عن منتج",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_bc9ca04ef4a76",
+              "label": "نص: عطور",
+              "name": "label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_40386de1b67d3",
+              "label": "العناصر: هدايا",
+              "name": "items_2",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_f3493232cf6ce",
+                  "label": "نص: هدايا",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_f3493232cf6ce"
+            },
+            {
+              "key": "field_5abff0f07eea0",
+              "label": "العناصر: السلة",
+              "name": "items_3",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_bd3fa838d6a2a",
+                  "label": "نص: السلة",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_bd3fa838d6a2a"
+            },
+            {
+              "key": "field_42b04215fb323",
+              "label": "نص: الدفع والشحن",
+              "name": "label_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_ef25b8ecaab8b": {
+          "key": "layout_ef25b8ecaab8b",
+          "name": "platforms",
+          "label": "المنصات",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_779a2fe9fa1bc",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_f1d09adeab1fb",
+              "label": "الوسم: المنصات التي نبني عليها",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_059941bc3425b",
+              "label": "العنوان: ننفّذ داخل المنصة التي تناسب تشغيلك",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_394bdc5f40b74",
+              "label": "النص: نختار طريقة بناء المتجر حسب ما تبيعه…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_2b582627aad96",
+              "label": "العناصر: متاجر متعددة الأسواق شوبيفاي للمتاجر…",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_716330773dbeb",
+                  "label": "الرابط: متاجر متعددة الأسواق شوبيفاي للمتاجر…",
+                  "name": "link",
+                  "type": "page_link",
+                  "instructions": "",
+                  "required": 0,
+                  "post_type": [
+                    "page",
+                    "case_study",
+                    "team_member",
+                    "post"
+                  ],
+                  "allow_null": 1,
+                  "allow_archives": 1,
+                  "multiple": 0
+                },
+                {
+                  "key": "field_b337b60e74d44",
+                  "label": "الشعار: shopify.svg",
+                  "name": "logo",
+                  "type": "select",
+                  "instructions": "شعارات المنصات المعتمدة في التصميم.",
+                  "required": 0,
+                  "choices": {
+                    "assets/platforms/official/shopify.svg": "shopify",
+                    "assets/platforms/official/salla.svg": "salla"
+                  },
+                  "default_value": "assets/platforms/official/shopify.svg",
+                  "allow_null": 1,
+                  "return_format": "value"
+                },
+                {
+                  "key": "field_f6ea1133f7d9f",
+                  "label": "الوسم: متاجر متعددة الأسواق",
+                  "name": "eyebrow",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_fc556b17eb07c",
+                  "label": "عنوان فرعي: شوبيفاي",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_5d85cec03403c",
+                  "label": "النص: للمتاجر التي تبيع لأكثر من سوق وتحتا…",
+                  "name": "text",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_c25262067d1f2",
+                  "label": "نص: خدمة شوبيفاي ←",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_f6ea1133f7d9f"
+            },
+            {
+              "key": "field_15a748da01736",
+              "label": "الرابط: زد لوحة عمليات زد لمن يدير الكتالوج …",
+              "name": "link",
+              "type": "page_link",
+              "instructions": "",
+              "required": 0,
+              "post_type": [
+                "page",
+                "case_study",
+                "team_member",
+                "post"
+              ],
+              "allow_null": 1,
+              "allow_archives": 1,
+              "multiple": 0
+            },
+            {
+              "key": "field_d86a7931303fb",
+              "label": "عنوان فرعي: زد",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_ed0171c2cd313",
+              "label": "الوسم: لوحة عمليات",
+              "name": "eyebrow_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_10035ff1305ec",
+              "label": "عنوان فرعي: زد",
+              "name": "heading_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_474b618b0dbbd",
+              "label": "النص: لمن يدير الكتالوج والطلبات والعملاء …",
+              "name": "text_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_0bd3d03aa3322",
+              "label": "نص: خدمة زد ←",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_c42939504df10",
+              "label": "الرابط: متجر ومحتوى معًا ووكومرس لمن يريد ال…",
+              "name": "link_2",
+              "type": "page_link",
+              "instructions": "",
+              "required": 0,
+              "post_type": [
+                "page",
+                "case_study",
+                "team_member",
+                "post"
+              ],
+              "allow_null": 1,
+              "allow_archives": 1,
+              "multiple": 0
+            },
+            {
+              "key": "field_b03c05d8998a7",
+              "label": "الشعار: woocommerce.svg",
+              "name": "logo",
+              "type": "select",
+              "instructions": "شعارات المنصات المعتمدة في التصميم.",
+              "required": 0,
+              "choices": {
+                "assets/platforms/official/woocommerce.svg": "woocommerce"
+              },
+              "default_value": "assets/platforms/official/woocommerce.svg",
+              "allow_null": 1,
+              "return_format": "value"
+            },
+            {
+              "key": "field_3a4eea5742841",
+              "label": "الوسم: متجر ومحتوى معًا",
+              "name": "eyebrow_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_57fee3ae57bb6",
+              "label": "عنوان فرعي: ووكومرس",
+              "name": "heading_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_1deebd3059dbb",
+              "label": "النص: لمن يريد المتجر والمحتوى في موقع واح…",
+              "name": "text_3",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_9e20b03626e35",
+              "label": "نص: خدمة ووكومرس ←",
+              "name": "label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_ca30b848b70c6": {
+          "key": "layout_ca30b848b70c6",
+          "name": "phases",
+          "label": "المراحل",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_7b537c15cf16f",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_9b73b8aad708b",
+              "label": "الوسم: مراحل المشروع",
+              "name": "eyebrow",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_154f31035607a",
+              "label": "العنوان: من الكتالوج إلى أول طلب",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_6b4a61390ef3b",
+              "label": "العناصر: 01 الكتالوج مراجعة المنتجات والفئات …",
+              "name": "items",
+              "type": "repeater",
+              "instructions": "العدد المعتمد في التصميم: 5. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "required": 0,
+              "layout": "block",
+              "button_label": "إضافة عنصر",
+              "sub_fields": [
+                {
+                  "key": "field_b37a470a598ad",
+                  "label": "عنوان فرعي: الكتالوج",
+                  "name": "heading",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                },
+                {
+                  "key": "field_5b9b74470e3a9",
+                  "label": "نص: مراجعة المنتجات والفئات والخيارات قب…",
+                  "name": "label",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0
+                }
+              ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_b37a470a598ad"
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_ca0d362833cea": {
+          "key": "layout_ca0d362833cea",
+          "name": "related",
+          "label": "صفحات مرتبطة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_f298b1973e49a",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_f28c3343b9bc3",
+              "name": "lead",
+              "label": "العنوان التمهيدي",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_bce4e2690998e",
+              "name": "links",
+              "label": "الصفحات المرتبطة",
+              "type": "repeater",
+              "layout": "table",
+              "button_label": "إضافة رابط",
+              "max": 8,
+              "sub_fields": [
+                {
+                  "key": "field_08b6dccf717f7",
+                  "name": "label",
+                  "label": "النص",
+                  "type": "text",
+                  "required": 1
+                },
+                {
+                  "key": "field_ae61956b748e7",
+                  "name": "link",
+                  "label": "الصفحة",
+                  "type": "page_link",
+                  "post_type": [
+                    "page",
+                    "case_study",
+                    "post",
+                    "team_member"
+                  ],
+                  "allow_archives": 1,
+                  "allow_null": 0,
+                  "required": 1
+                }
+              ],
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_a5a36b8bd1d6a": {
+          "key": "layout_a5a36b8bd1d6a",
+          "name": "faq",
+          "label": "الأسئلة الشائعة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_3eaa932ab43d1",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_c63c1e0b90f2e",
+              "name": "eyebrow",
+              "label": "الوسم",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_a23c6ebf3fed0",
+              "name": "title",
+              "label": "عنوان القسم",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_b996ba5abba1d",
+              "name": "items",
+              "label": "الأسئلة",
+              "type": "repeater",
+              "layout": "block",
+              "button_label": "إضافة سؤال",
+              "collapsed": "field_faf36a8c59b50",
+              "instructions": "نفس الأسئلة تُستخدم في FAQPage Schema. لا تضف سؤالًا غير ظاهر في الصفحة.",
+              "sub_fields": [
+                {
+                  "key": "field_faf36a8c59b50",
+                  "name": "question",
+                  "label": "السؤال",
+                  "type": "text",
+                  "required": 1
+                },
+                {
+                  "key": "field_ca99ce42a1597",
+                  "name": "answer",
+                  "label": "الإجابة",
+                  "type": "textarea",
+                  "rows": 3,
+                  "new_lines": "br",
+                  "required": 1
+                }
+              ],
+              "required": 0
+            },
+            {
+              "key": "field_b1e6b2a4b15fc",
+              "name": "schema",
+              "label": "إخراج FAQPage Schema",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 1,
+              "instructions": "يُخرج من نفس الأسئلة الظاهرة فقط.",
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        },
+        "layout_509c0b692ace9": {
+          "key": "layout_509c0b692ace9",
+          "name": "booking",
+          "label": "حجز الاستشارة — مكوّن مشترك",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_c03e176558880",
+              "name": "sh_hide",
+              "label": "إخفاء القسم",
+              "type": "true_false",
+              "ui": 1,
+              "default_value": 0,
+              "wrapper": {
+                "width": "30"
+              }
+            },
+            {
+              "key": "field_513df09134a74",
+              "name": "service",
+              "label": "الخدمة المختارة مسبقًا",
+              "type": "select",
+              "choices": {
+                "seo": "تحسين محركات البحث",
+                "web": "تصميم وتطوير موقع",
+                "stores": "تصميم متجر إلكتروني",
+                "products": "إضافة المنتجات",
+                "unsure": "لم أحدد بعد"
+              },
+              "default_value": "seo",
+              "allow_null": 0,
+              "return_format": "value",
+              "required": 0
+            },
+            {
+              "key": "field_701ef2e25c8cd",
+              "name": "eyebrow",
+              "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_b3fbaf7004505",
+              "name": "title",
+              "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
+              "type": "text",
+              "required": 0
+            },
+            {
+              "key": "field_d523841999974",
+              "name": "text",
+              "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
+              "type": "textarea",
+              "rows": 2,
+              "new_lines": "",
+              "required": 0
+            },
+            {
+              "key": "field_9b6bc78d9f43e",
+              "name": "points",
+              "label": "نقاط الفائدة (فارغة = النقاط العامة)",
+              "type": "repeater",
+              "layout": "table",
+              "button_label": "إضافة نقطة",
+              "max": 4,
+              "sub_fields": [
+                {
+                  "key": "field_7be38423b595f",
+                  "name": "text",
+                  "label": "النقطة",
+                  "type": "text",
+                  "required": 0
+                }
+              ],
+              "required": 0
+            }
+          ],
+          "min": "",
+          "max": "1"
+        }
+      },
+      "button_label": "إضافة قسم",
+      "min": "",
+      "max": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/stores.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments",
+    "format",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "حقول قالب تصميم المتاجر — مولدة من SEO House - Online Stores.dc.html",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

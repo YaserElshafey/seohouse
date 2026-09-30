@@ -1,0 +1,1 @@
+posts: 1 article body present in the design; the other listed articles have titles only and are not created (see implementation-status.md).

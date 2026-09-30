@@ -1,0 +1,70 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "تأكيد الحجز",
+   "href": null
+  }
+ ],
+ "key": "thank-you",
+ "route": "/thank-you/",
+ "kind": "page",
+ "title": "تأكيد الحجز",
+ "file": "SEO House - Thank You.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "تم حجز مكالمتك | سيو هاوس",
+  "description": "تأكيد حجز المكالمة الاستشارية.",
+  "robots": "noindex, follow"
+ },
+ "template": "page-templates/thank-you.php",
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "title": "تم تأكيد موعدك",
+   "items": [
+    {
+     "heading": "تأكيد الموعد",
+     "text": "يصل تأكيد الموعد من أداة الحجز بعد ربطها."
+    },
+    {
+     "heading": "مراجعة قبل المكالمة",
+     "text": "نراجع بيانات موقعك قبل الموعد حتى تكون المكالمة مفيدة من أول دقيقة."
+    },
+    {
+     "heading": "المكالمة",
+     "text": "مجانية ومدتها 30 دقيقة."
+    }
+   ],
+   "items_2": [
+    {
+     "link": {
+      "__route": "/results/"
+     },
+     "link_label": "النتائج ←"
+    },
+    {
+     "link": {
+      "__route": "/services/"
+     },
+     "link_label": "الخدمات ←"
+    },
+    {
+     "link": {
+      "__route": "/blog/"
+     },
+     "link_label": "المدونة ←"
+    },
+    {
+     "link": {
+      "__route": "/"
+     },
+     "link_label": "الرئيسية ←"
+    }
+   ]
+  }
+ ]
+}

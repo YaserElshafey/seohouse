@@ -1,0 +1,29 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "نتائج الأعمال",
+   "href": "/results/"
+  },
+  {
+   "label": "قطاع التجارة الإلكترونية",
+   "href": null
+  }
+ ],
+ "key": "case-ecommerce",
+ "route": "/results/قطاع-التجارة-الإلكترونية/",
+ "kind": "cpt",
+ "title": "دراسة حالة: التجارة الإلكترونية",
+ "file": "SEO House - Case Ecommerce Salla.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "قطاع التجارة الإلكترونية - سيو هاوس",
+  "description": "زيادة في المبيعات العضوية لمتجر سلة مع خفض الاعتماد على Google Ads بنسبة 45%.",
+  "robots": ""
+ },
+ "template": null,
+ "sections": []
+}

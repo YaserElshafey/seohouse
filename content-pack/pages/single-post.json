@@ -1,0 +1,38 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "المدونة",
+   "href": "/blog/"
+  },
+  {
+   "label": "سيو تقني",
+   "href": "/blog/category/technical-seo/"
+  }
+ ],
+ "key": "single-post",
+ "route": "/blog/sample-article/",
+ "kind": "system",
+ "title": "المقال",
+ "file": "SEO House - Single Article Template.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "عنوان المقال | مدونة سيو هاوس",
+  "description": "وصف المقال يُملأ من WordPress.",
+  "robots": ""
+ },
+ "template": null,
+ "sections": [
+  {
+   "acf_fc_layout": "booking",
+   "service": "seo",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

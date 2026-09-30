@@ -1,0 +1,724 @@
+{
+ "generated": "2026-09-30",
+ "designFingerprint": "sha256:8b521594e8dc8695",
+ "pages": [
+  {
+   "key": "home",
+   "route": "/",
+   "kind": "page",
+   "file": "SEO House - Homepage.dc.html",
+   "layouts": [
+    "hero",
+    "client_logos",
+    "services",
+    "sectors",
+    "about",
+    "markets",
+    "reviews",
+    "articles",
+    "platforms",
+    "results",
+    "booking"
+   ]
+  },
+  {
+   "key": "services",
+   "route": "/services/",
+   "kind": "page",
+   "file": "SEO House - All Services.dc.html",
+   "layouts": [
+    "hero",
+    "families",
+    "path",
+    "sectors",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "seo",
+   "route": "/services/seo/",
+   "kind": "page",
+   "file": "SEO House - SEO Service Page.dc.html",
+   "layouts": [
+    "hero",
+    "client_logos",
+    "seo_system",
+    "layers",
+    "results",
+    "sectors",
+    "markets",
+    "process",
+    "tools",
+    "reviews",
+    "faq",
+    "pricing_strip",
+    "booking"
+   ]
+  },
+  {
+   "key": "seo-technical",
+   "route": "/services/seo/technical/",
+   "kind": "page",
+   "file": "SEO House - Technical SEO.dc.html",
+   "layouts": [
+    "hero",
+    "issues",
+    "scope",
+    "levels",
+    "tools",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "seo-on-page",
+   "route": "/services/seo/on-page/",
+   "kind": "page",
+   "file": "SEO House - On-Page SEO.dc.html",
+   "layouts": [
+    "hero",
+    "layers",
+    "flow",
+    "deliverables",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "seo-content",
+   "route": "/services/seo/content/",
+   "kind": "page",
+   "file": "SEO House - SEO Content.dc.html",
+   "layouts": [
+    "hero",
+    "types",
+    "flow",
+    "human",
+    "proof",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "seo-backlinks",
+   "route": "/services/seo/backlinks/",
+   "kind": "page",
+   "file": "SEO House - Backlinks.dc.html",
+   "layouts": [
+    "hero",
+    "quality",
+    "compare",
+    "flow",
+    "honest",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "seo-consulting",
+   "route": "/services/seo/consulting/",
+   "kind": "page",
+   "file": "SEO House - SEO Consulting.dc.html",
+   "layouts": [
+    "hero",
+    "when",
+    "chain",
+    "deliver",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "seo-ksa",
+   "route": "/services/seo/ksa/",
+   "kind": "page",
+   "file": "SEO House - Saudi SEO Page.dc.html",
+   "layouts": [
+    "hero",
+    "client_logos",
+    "market",
+    "saudi_case",
+    "scope",
+    "first_month",
+    "sectors",
+    "why",
+    "reviews",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "seo-egypt",
+   "route": "/services/seo/egypt/",
+   "kind": "page",
+   "file": "SEO House - Egypt SEO Page.dc.html",
+   "layouts": [
+    "hero",
+    "client_logos",
+    "market",
+    "egypt_case",
+    "method",
+    "scope",
+    "first_month",
+    "sectors",
+    "why",
+    "reviews",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "seo-uae",
+   "route": "/services/seo/uae/",
+   "kind": "page",
+   "file": "SEO House - UAE SEO Page.dc.html",
+   "layouts": [
+    "hero",
+    "client_logos",
+    "market",
+    "opportunities",
+    "gulf_case",
+    "needs",
+    "first_month",
+    "sectors",
+    "measure",
+    "why",
+    "reviews",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "web-design",
+   "route": "/services/web-design/",
+   "kind": "page",
+   "file": "SEO House - Web Design.dc.html",
+   "layouts": [
+    "hero",
+    "deliverables",
+    "phases",
+    "platforms",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "web-wordpress",
+   "route": "/services/web-design/wordpress/",
+   "kind": "page",
+   "file": "SEO House - WordPress.dc.html",
+   "layouts": [
+    "hero",
+    "system",
+    "ops",
+    "fit",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "web-webflow",
+   "route": "/services/web-design/webflow/",
+   "kind": "page",
+   "file": "SEO House - Webflow.dc.html",
+   "layouts": [
+    "hero",
+    "build",
+    "launch",
+    "care",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "web-react-next",
+   "route": "/services/web-design/react-next/",
+   "kind": "page",
+   "file": "SEO House - React Next.dc.html",
+   "layouts": [
+    "hero",
+    "when",
+    "render",
+    "deliver",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "web-custom-dev",
+   "route": "/services/web-design/custom-dev/",
+   "kind": "page",
+   "file": "SEO House - Custom Development.dc.html",
+   "layouts": [
+    "hero",
+    "fit",
+    "phases",
+    "cases",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "stores",
+   "route": "/services/stores/",
+   "kind": "page",
+   "file": "SEO House - Online Stores.dc.html",
+   "layouts": [
+    "hero",
+    "journey",
+    "platforms",
+    "phases",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "stores-shopify",
+   "route": "/services/stores/shopify/",
+   "kind": "page",
+   "file": "SEO House - Shopify.dc.html",
+   "layouts": [
+    "hero",
+    "build",
+    "apps",
+    "care",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "stores-salla",
+   "route": "/services/stores/salla/",
+   "kind": "page",
+   "file": "SEO House - Salla.dc.html",
+   "layouts": [
+    "hero",
+    "setup",
+    "phases",
+    "limits",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "stores-zid",
+   "route": "/services/stores/zid/",
+   "kind": "page",
+   "file": "SEO House - Zid.dc.html",
+   "layouts": [
+    "hero",
+    "ops",
+    "phases",
+    "fit",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "stores-woocommerce",
+   "route": "/services/stores/woocommerce/",
+   "kind": "page",
+   "file": "SEO House - WooCommerce.dc.html",
+   "layouts": [
+    "hero",
+    "build",
+    "phases",
+    "fit",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "products",
+   "route": "/services/products/",
+   "kind": "page",
+   "file": "SEO House - Product Upload.dc.html",
+   "layouts": [
+    "hero",
+    "flow",
+    "fields",
+    "process",
+    "platforms",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "sectors",
+   "route": "/sectors/",
+   "kind": "page",
+   "file": "SEO House - Sectors.dc.html",
+   "layouts": [
+    "hero",
+    "list",
+    "pick",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "sector-ecommerce",
+   "route": "/sectors/ecommerce/",
+   "kind": "page",
+   "file": "SEO House - Sector Ecommerce.dc.html",
+   "layouts": [
+    "hero",
+    "sector_journey",
+    "path",
+    "visibility",
+    "measure",
+    "case",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "sector-health",
+   "route": "/sectors/health/",
+   "kind": "page",
+   "file": "SEO House - Sector Health.dc.html",
+   "layouts": [
+    "hero",
+    "sector_journey",
+    "journey",
+    "pages",
+    "measure",
+    "case",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "sector-real-estate",
+   "route": "/sectors/real-estate/",
+   "kind": "page",
+   "file": "SEO House - Sector Real Estate.dc.html",
+   "layouts": [
+    "hero",
+    "sector_journey",
+    "structure",
+    "lifecycle",
+    "measure",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "sector-education",
+   "route": "/sectors/education/",
+   "kind": "page",
+   "file": "SEO House - Sector Education.dc.html",
+   "layouts": [
+    "hero",
+    "sector_journey",
+    "levels",
+    "info",
+    "measure",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "sector-tourism",
+   "route": "/sectors/tourism/",
+   "kind": "page",
+   "file": "SEO House - Sector Tourism.dc.html",
+   "layouts": [
+    "hero",
+    "sector_journey",
+    "choose",
+    "season",
+    "inquiry",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "sector-tech",
+   "route": "/sectors/tech/",
+   "kind": "page",
+   "file": "SEO House - Sector Tech.dc.html",
+   "layouts": [
+    "hero",
+    "sector_journey",
+    "problem",
+    "verify",
+    "measure",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "sector-legal",
+   "route": "/sectors/legal/",
+   "kind": "page",
+   "file": "SEO House - Sector Legal.dc.html",
+   "layouts": [
+    "hero",
+    "sector_journey",
+    "practice",
+    "expertise",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "sector-food",
+   "route": "/sectors/food/",
+   "kind": "page",
+   "file": "SEO House - Sector Food.dc.html",
+   "layouts": [
+    "hero",
+    "sector_journey",
+    "branch",
+    "menu",
+    "measure",
+    "related",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "results",
+   "route": "/results/",
+   "kind": "page",
+   "file": "SEO House - Results.dc.html",
+   "layouts": [
+    "hero",
+    "cases",
+    "related",
+    "booking"
+   ]
+  },
+  {
+   "key": "about",
+   "route": "/about/",
+   "kind": "page",
+   "file": "SEO House - About.dc.html",
+   "layouts": [
+    "hero",
+    "now",
+    "principles",
+    "nopromise",
+    "client_logos",
+    "related",
+    "booking"
+   ]
+  },
+  {
+   "key": "team",
+   "route": "/team/",
+   "kind": "page",
+   "file": "SEO House - Team.dc.html",
+   "layouts": [
+    "hero",
+    "directory",
+    "collab",
+    "remote",
+    "related",
+    "booking"
+   ]
+  },
+  {
+   "key": "pricing",
+   "route": "/pricing/",
+   "kind": "page",
+   "file": "SEO House - Pricing.dc.html",
+   "layouts": [
+    "hero",
+    "factors",
+    "direction",
+    "before",
+    "groups",
+    "faq",
+    "booking"
+   ]
+  },
+  {
+   "key": "contact",
+   "route": "/contact/",
+   "kind": "page",
+   "file": "SEO House - Contact.dc.html",
+   "layouts": [
+    "hero",
+    "flow",
+    "related"
+   ]
+  },
+  {
+   "key": "thank-you",
+   "route": "/thank-you/",
+   "kind": "page",
+   "file": "SEO House - Thank You.dc.html",
+   "layouts": [
+    "hero"
+   ]
+  },
+  {
+   "key": "privacy-policy",
+   "route": "/privacy-policy/",
+   "kind": "page",
+   "file": "SEO House - Privacy Policy.dc.html",
+   "layouts": [
+    "hero",
+    "document"
+   ]
+  },
+  {
+   "key": "terms",
+   "route": "/terms/",
+   "kind": "page",
+   "file": "SEO House - Terms.dc.html",
+   "layouts": [
+    "hero",
+    "document"
+   ]
+  },
+  {
+   "key": "blog",
+   "route": "/blog/",
+   "kind": "system",
+   "file": "SEO House - Blog.dc.html",
+   "layouts": []
+  },
+  {
+   "key": "blog-category",
+   "route": "/blog/category/seo/",
+   "kind": "system",
+   "file": "SEO House - Blog Category Template.dc.html",
+   "layouts": []
+  },
+  {
+   "key": "single-post",
+   "route": "/blog/sample-article/",
+   "kind": "system",
+   "file": "SEO House - Single Article Template.dc.html",
+   "layouts": [
+    "booking"
+   ]
+  },
+  {
+   "key": "case-template",
+   "route": "/results/case-study-template/",
+   "kind": "system",
+   "file": "SEO House - Case Study Template.dc.html",
+   "layouts": []
+  },
+  {
+   "key": "case-health",
+   "route": "/results/قطاع-الصحة-والطب/",
+   "kind": "cpt",
+   "file": "SEO House - Case Health Clinic.dc.html",
+   "layouts": []
+  },
+  {
+   "key": "case-ecommerce",
+   "route": "/results/قطاع-التجارة-الإلكترونية/",
+   "kind": "cpt",
+   "file": "SEO House - Case Ecommerce Salla.dc.html",
+   "layouts": []
+  },
+  {
+   "key": "case-education",
+   "route": "/results/تستتست/",
+   "kind": "cpt",
+   "file": "SEO House - Case Education Platform.dc.html",
+   "layouts": []
+  },
+  {
+   "key": "case-organic-revenue",
+   "route": "/results/organic-revenue-growth/",
+   "kind": "cpt",
+   "file": "SEO House - Organic Revenue Growth Case Study.dc.html",
+   "layouts": []
+  },
+  {
+   "key": "case-medical-search",
+   "route": "/results/medical-search-growth/",
+   "kind": "cpt",
+   "file": "SEO House - Medical Search Growth Case Study.dc.html",
+   "layouts": []
+  },
+  {
+   "key": "team-member",
+   "route": "/team/{slug}/",
+   "kind": "system",
+   "file": "SEO House - Team Member.dc.html",
+   "layouts": [
+    "booking"
+   ]
+  },
+  {
+   "key": "search",
+   "route": "/?s=",
+   "kind": "system",
+   "file": "SEO House - Search Results.dc.html",
+   "layouts": []
+  },
+  {
+   "key": "404",
+   "route": "(404)",
+   "kind": "system",
+   "file": "SEO House - 404.dc.html",
+   "layouts": []
+  }
+ ],
+ "assets": [
+  "assets/platforms/official/ga4.svg",
+  "assets/platforms/official/gsc.svg",
+  "assets/platforms/official/looker.svg",
+  "assets/platforms/official/nextjs.svg",
+  "assets/platforms/official/react.svg",
+  "assets/platforms/official/salla.svg",
+  "assets/platforms/official/shopify.svg",
+  "assets/platforms/official/webflow.svg",
+  "assets/platforms/official/woocommerce.svg",
+  "assets/platforms/official/wordpress.svg",
+  "uploads/02-case-organic-revenue-106274.png.png",
+  "uploads/03-case-gsc-clicks-12900.png.png",
+  "uploads/04-case-ga4-revenue-growth-253.png",
+  "uploads/pasted-1789463270111-0.png",
+  "uploads/pasted-1789463278866-0.png",
+  "uploads/pasted-1789463282905-0.png",
+  "uploads/pasted-1789463286768-0.png",
+  "uploads/pasted-1789463290373-0.png",
+  "uploads/pasted-1789463294080-0.png",
+  "uploads/pasted-1789463297756-0.png",
+  "uploads/pasted-1789463301137-0.png",
+  "uploads/pasted-1789463304330-0.png",
+  "uploads/pasted-1789463309884-0.png",
+  "uploads/pasted-1789463312814-0.png",
+  "uploads/pasted-1789463316318-0.png",
+  "uploads/pasted-1789463320135-0.png",
+  "uploads/pasted-1789463324129-0.png",
+  "uploads/pasted-1789463327303-0.png",
+  "uploads/pasted-1789463331172-0.png",
+  "uploads/pasted-1789463334083-0.png",
+  "uploads/pasted-1789463337592-0.png"
+ ]
+}

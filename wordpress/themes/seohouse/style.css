@@ -1,0 +1,15 @@
+/*
+Theme Name: SEO House
+Theme URI: https://seohouse.agency/
+Author: SEO House
+Description: الثيم المخصص لموقع سيو هاوس، مبني من آخر تصميم معتمد. يعتمد على إضافة SEO House Core وحقول ACF (ACF PRO أو Secure Custom Fields) لإدارة المحتوى.
+Version: 2.0.0
+Requires at least: 6.5
+Tested up to: 7.1
+Requires PHP: 8.1
+License: Proprietary
+Text Domain: seohouse
+Domain Path: /languages
+*/
+
+/* Styles are loaded from assets/css (see inc/enqueue.php). */

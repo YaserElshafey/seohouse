@@ -1,0 +1,6 @@
+node_modules/
+tools/design-import/extract/
+tools/design-import/vendor/
+tools/qa/out/
+dist/
+.DS_Store

@@ -1,0 +1,29 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "نتائج الأعمال",
+   "href": "/results/"
+  },
+  {
+   "label": "نمو النقرات العضوية",
+   "href": null
+  }
+ ],
+ "key": "case-medical-search",
+ "route": "/results/medical-search-growth/",
+ "kind": "cpt",
+ "title": "دراسة حالة: نمو النقرات العضوية",
+ "file": "SEO House - Medical Search Growth Case Study.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "نمو النقرات العضوية لموقع خدمات طبية — مسودة - سيو هاوس",
+  "description": "مسودة دراسة حالة للمراجعة، غير منشورة.",
+  "robots": "noindex, nofollow"
+ },
+ "template": null,
+ "sections": []
+}
