@@ -26,6 +26,15 @@ const CONTENT = path.join(repo, 'content-pack');
 const cfg = JSON.parse(fs.readFileSync(path.join(__dirname, 'pages.config.json'), 'utf8'));
 const md5 = s => crypto.createHash('md5').update(s).digest('hex');
 
+/**
+ * Step numbers generated from the row index and drawn in a faded colour (alpha ≤ 0.5) are decorative
+ * (the list order already conveys them): hidden from assistive tech, and lifted to the 3:1 contrast floor.
+ */
+function decorativeCounters(php) {
+  return php.replace(/<(span|div)( style="[^"]*color: rgba\(var\(--sh-[a-z-]+-rgb\), 0?\.(?:[0-4]\d*|50*)\);?[^"]*")>(\s*<\?= esc_html\(sprintf\('%02d', \$i\d+ \+ \d+\)\) \?>\s*<\/\1>)/g,
+    // alpha raised to 0.56 so the large numbers still meet the 3:1 contrast floor (visually the same step colour)
+    (m, tag, attrs, rest) => `<${tag} aria-hidden="true"${attrs.replace(/(color: rgba\(var\(--sh-[a-z-]+-rgb\), )0?\.(?:[0-4]\d*|50*)\)/g, '$10.56)')}>${rest}`);
+}
 function writeGen(file, content) {
   if (fs.existsSync(file) && /^\s*\*\s*@sh-manual\b/m.test(fs.readFileSync(file, 'utf8'))) return false;
   fs.mkdirSync(path.dirname(file), { recursive: true });
@@ -134,7 +143,7 @@ for (const pg of pages) {
     const res = comp.compile(el);
     for (const d of dyn) if (d.required && !d.used) report.push(`WARN ${pg.key}/${layout}: dynamic hook "${d.name}" did not match`);
     const header = `<?php\n/**\n * Section "${label}" — ${pg.file.replace('.dc.html', '')}.\n * Generated from the approved design by tools/design-import/convert.js.\n * To maintain this file by hand add the tag sh-manual (prefixed with @) as its own line here.\n *\n * @var array $args { f: layout values }\n */\ndefined( 'ABSPATH' ) || exit;\n$f = $args['f'] ?? array();\n?>\n`;
-    writeGen(path.join(THEME, 'sections', pg.key, `${layout}.php`), header + res.php.trim() + '\n');
+    writeGen(path.join(THEME, 'sections', pg.key, `${layout}.php`), header + decorativeCounters(res.php.trim()) + '\n');
     pageLayouts.push({ layout, label, fields: res.fields, anchor: comp.anchorDefault });
     seedSections.push({ acf_fc_layout: layout, ...res.value });
     fieldMap.push({ page: pg.key, layout, label, fields: res.fields });

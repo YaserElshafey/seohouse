@@ -17,7 +17,7 @@ $f = $args['f'] ?? array();
       </div>
       <div data-sa-steps style="margin-top: clamp(24px, 2.8vw, 36px); display: grid; gap: 0px clamp(28px, 3.4vw, 60px);">
         <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><div style="display: flex; align-items: flex-start; gap: 16px; padding: 18px 0px; border-top: 1px solid rgba(255, 255, 255, 0.12);">
-          <span style="<?= esc_attr($i1 === 0 ? 'flex: 0 0 auto; font-family: Alexandria, sans-serif; font-weight: 800; font-size: 26px; line-height: 1; color: var(--sh-lime);' : 'flex: 0 0 auto; font-family: Alexandria, sans-serif; font-weight: 800; font-size: 26px; line-height: 1; color: rgba(var(--sh-sky-rgb), 0.5);') ?>"><?= esc_html(sprintf('%02d', $i1 + 1)) ?></span>
+          <span aria-hidden="true" style="<?= esc_attr($i1 === 0 ? 'flex: 0 0 auto; font-family: Alexandria, sans-serif; font-weight: 800; font-size: 26px; line-height: 1; color: var(--sh-lime);' : 'flex: 0 0 auto; font-family: Alexandria, sans-serif; font-weight: 800; font-size: 26px; line-height: 1; color: rgba(var(--sh-sky-rgb), 0.56);') ?>"><?= esc_html(sprintf('%02d', $i1 + 1)) ?></span>
           <span style="min-width: 0px;"><?php if (!empty($r1['heading'])) : ?><span style="display: block; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 17.5px;"><?= esc_html($r1['heading'] ?? '') ?></span><?php endif; ?><?php if (!empty($r1['text'])) : ?><span style="display: block; font-size: 15px; color: var(--sh-muted); margin-top: 6px;"><?= esc_html($r1['text'] ?? '') ?></span><?php endif; ?></span>
         </div><?php endforeach; ?>
       </div>
