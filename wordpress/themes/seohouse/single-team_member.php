@@ -26,7 +26,13 @@ while ( have_posts() ) :
 		$posts = array_merge( $posts, get_posts( $q_args + array( 'author' => (int) $f['author'] ) ) );
 		$posts = array_values( array_unique( $posts, SORT_REGULAR ) );
 	}
-	$mates = array_values( array_filter( sh_team_members(), static fn( $m ) => $m->ID !== $id ) );
+	// design: the next three members in team order (wrapping around)
+	$all   = array_values( sh_team_members() );
+	$pos   = (int) array_search( $id, wp_list_pluck( $all, 'ID' ), true );
+	$mates = array();
+	for ( $k = 1; $k <= min( 3, count( $all ) - 1 ); $k++ ) {
+		$mates[] = $all[ ( $pos + $k ) % count( $all ) ];
+	}
 	?>
 <main id="main" class="sh-main">
 	<section data-screen-label="Profile" style="position: relative; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">

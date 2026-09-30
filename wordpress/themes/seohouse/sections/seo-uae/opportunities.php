@@ -35,7 +35,7 @@ $rows = static function ( $o ) use ( $f ) {
 				<?php
 				foreach ( $opps as $i => $o ) :
 					$on = 0 === $i;
-					$base = 'text-align: start; cursor: pointer; width: 100%; min-height: 62px; border-width: 1px 0px 0px 0px; border-style: solid; border-color: rgba(255, 255, 255, 0.12); border-inline-start: 2px solid %1$s; background: %2$s; color: %3$s; display: flex; align-items: center; gap: 14px; padding: 14px; transition: background 0.22s, border-color 0.22s, color 0.22s;';
+					$base = 'text-align: start; cursor: pointer; width: 100%%; min-height: 62px; border-width: 1px 0px 0px 0px; border-style: solid; border-color: rgba(255, 255, 255, 0.12); border-inline-start: 2px solid %1$s; background: %2$s; color: %3$s; display: flex; align-items: center; gap: 14px; padding: 14px; transition: background 0.22s, border-color 0.22s, color 0.22s;';
 					?>
 				<button type="button" role="tab" id="<?php echo esc_attr( "$uid-t$i" ); ?>" aria-controls="<?php echo esc_attr( "$uid-p$i" ); ?>" aria-selected="<?php echo $on ? 'true' : 'false'; ?>" tabindex="<?php echo $on ? '0' : '-1'; ?>" data-sh-tab<?php echo sh_tab_style( $on, sprintf( $base, 'var(--sh-lime)', 'rgba(var(--sh-lime-rgb), 0.07)', 'rgb(255, 255, 255)' ), sprintf( $base, 'transparent', 'transparent', 'var(--sh-text)' ) ); // phpcs:ignore ?>>
 					<span<?php echo sh_tab_style( $on, 'flex: 0 0 auto; font-family: Alexandria, sans-serif; font-weight: 800; font-size: 12.5px; color: var(--sh-lime);', 'flex: 0 0 auto; font-family: Alexandria, sans-serif; font-weight: 800; font-size: 12.5px; color: var(--sh-sky);' ); // phpcs:ignore ?>><?php echo esc_html( $o['num'] ?? '' ); ?></span>
