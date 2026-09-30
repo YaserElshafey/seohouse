@@ -119,11 +119,11 @@ function sh_inline_css( array $files ): string {
 	return $css;
 }
 
-/** Preload the two Arabic fonts used above the fold. */
+/** Preload the Arabic faces used above the fold (heading + the three body weights), so text does not reflow late. */
 add_action(
 	'wp_head',
 	static function () {
-		foreach ( (array) apply_filters( 'sh_preload_fonts', array( 'alexandria-arabic.woff2', 'ibm-plex-sans-arabic-400-arabic.woff2' ) ) as $f ) {
+		foreach ( (array) apply_filters( 'sh_preload_fonts', array( 'alexandria-arabic.woff2', 'ibm-plex-sans-arabic-400-arabic.woff2', 'ibm-plex-sans-arabic-600-arabic.woff2', 'ibm-plex-sans-arabic-700-arabic.woff2' ) ) as $f ) {
 			printf( '<link rel="preload" href="%s" as="font" type="font/woff2" crossorigin>' . "\n", esc_url( sh_asset( 'fonts/' . $f ) ) );
 		}
 	},

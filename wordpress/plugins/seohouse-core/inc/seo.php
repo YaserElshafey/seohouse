@@ -35,6 +35,14 @@ function sh_seo_description(): string {
 		if ( $p && 'case_study' === $p->post_type ) {
 			return sh_core_plain( sh_core_field( 'summary', $id, '' ) );
 		}
+		if ( $p && 'team_member' === $p->post_type ) {
+			$bio = sh_core_plain( sh_core_field( 'bio', $id, '' ) );
+			if ( $bio ) {
+				return wp_html_excerpt( $bio, 160, '…' );
+			}
+			$role = sh_core_plain( sh_core_field( 'role', $id, '' ) );
+			return $role ? sprintf( '%s — %s، %s', get_the_title( $p ), $role, sh_core_option( 'sh_company_name', get_bloginfo( 'name' ) ) ) : '';
+		}
 		if ( $p && 'post' === $p->post_type ) {
 			$intro = sh_core_field( 'intro', $id, '' );
 			return sh_core_plain( $intro ? $intro : get_the_excerpt( $p ) );
