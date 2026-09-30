@@ -22,7 +22,9 @@
  "seo": {
   "title": "تصميم وتطوير متاجر سلة | سيو هاوس",
   "description": "متاجر سلة جاهزة للتشغيل في السوق السعودي: هوية وصفحات وتصنيفات منظمة، دفع وشحن محليان، وإعداد يدعم ظهور صفحات الفئات والمنتجات.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "تطوير متاجر سلة"
  },
  "template": "page-templates/stores-salla.php",
  "sections": [

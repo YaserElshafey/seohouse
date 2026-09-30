@@ -22,7 +22,9 @@
  "seo": {
   "title": "تصميم مواقع ووردبريس للشركات | سيو هاوس",
   "description": "مواقع WordPress مبنية بوحدات قابلة للتحرير: إدارة محتوى سهلة، أداء مضبوط، حماية وتحديثات، تعدد لغات، وأساس جاهز للعمل على الظهور.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "تصميم وتطوير مواقع ووردبريس"
  },
  "template": "page-templates/web-wordpress.php",
  "sections": [

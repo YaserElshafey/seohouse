@@ -22,7 +22,9 @@
  "seo": {
   "title": "استشارات السيو وتحليل الأداء | سيو هاوس",
   "description": "تدقيق وخارطة طريق وأولويات تنفيذ لفريقك: نقرأ بيانات الموقع، ونحدد ما الذي تغيّر ولماذا، ثم نحوّل ذلك إلى قرارات قابلة للتنفيذ والقياس.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "استشارات السيو وتحليل الأداء"
  },
  "template": "page-templates/seo-consulting.php",
  "sections": [

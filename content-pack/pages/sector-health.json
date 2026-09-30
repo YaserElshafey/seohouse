@@ -22,7 +22,9 @@
  "seo": {
   "title": "تحسين محركات البحث للقطاع الطبي | سيو هاوس",
   "description": "بنية تخصصات وخدمات وأطباء، ومحتوى يجيب عن أسئلة المريض قبل الحجز، مع البحث المحلي وإشارات الثقة ومسار حجز قصير على الجوال.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "تحسين محركات البحث للقطاع الصحي"
  },
  "template": "page-templates/sector-health.php",
  "sections": [

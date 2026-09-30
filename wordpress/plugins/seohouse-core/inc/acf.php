@@ -82,10 +82,3 @@ add_filter(
 	4
 );
 
-/** Allow the approved SVG icon select to list the design icon library (labels from the theme). */
-add_filter(
-	'acf/prepare_field/type=select',
-	static function ( $field ) {
-		return $field;
-	}
-);

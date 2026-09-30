@@ -578,6 +578,8 @@ class SH_Importer {
 		$fields['sh_seo_title']       = $seo_title;
 		$fields['sh_seo_description'] = $seed['seo']['description'] ?? '';
 		$fields['sh_seo_noindex']     = str_contains( (string) ( $seed['seo']['robots'] ?? '' ), 'noindex' ) ? 1 : 0;
+		$fields['sh_schema_type']     = $seed['seo']['schema_type'] ?? 'auto';
+		$fields['sh_schema_service']  = $seed['seo']['schema_service'] ?? '';
 		$crumbs                       = (array) ( $seed['crumbs'] ?? array() );
 		$last                         = $crumbs ? end( $crumbs ) : null;
 		$fields['sh_crumb']           = $last && $last['label'] !== $seed['title'] ? $last['label'] : '';

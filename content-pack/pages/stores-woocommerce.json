@@ -22,7 +22,9 @@
  "seo": {
   "title": "تصميم وتطوير متاجر ووكومرس | سيو هاوس",
   "description": "متاجر WooCommerce تجمع المحتوى والتجارة في نظام واحد: تحكم كامل في المنتجات والصفحات، إضافات مختارة، أداء مضبوط وصيانة واضحة.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "تطوير متاجر ووكومرس"
  },
  "template": "page-templates/stores-woocommerce.php",
  "sections": [

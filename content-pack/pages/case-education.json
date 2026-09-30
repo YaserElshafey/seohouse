@@ -22,7 +22,9 @@
  "seo": {
   "title": "قطاع التعليم والتدريب - سيو هاوس",
   "description": "نمو في عدد الليدز الشهرية لمنصة تدريب — 14 كلمة مفتاحية تنافسية في الصفحة الأولى.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "auto",
+  "schema_service": ""
  },
  "template": null,
  "sections": []

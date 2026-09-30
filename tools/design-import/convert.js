@@ -169,13 +169,22 @@ get_footer();
     key: pg.key, route: pg.route, kind: pg.kind, title: pg.admin, file: pg.file,
     // pages whose approved text is still a placeholder are created as drafts (never published automatically)
     status: /\[يُضاف النص القانوني المعتمد قبل النشر\]/.test(pg.x.html) ? 'draft' : 'publish',
-    seo: { title: pg.x.head.title, description: pg.x.head.description, robots: pg.x.head.robots },
+    seo: { title: pg.x.head.title, description: pg.x.head.description, robots: pg.x.head.robots, ...schemaFromDesign(pg.x.head.jsonld) },
     template: pg.kind === 'page' ? `page-templates/${pg.key}.php` : null,
     sections: seedSections
   };
   seeds.push(seed);
   manifest.pages.push({ key: pg.key, route: pg.route, kind: pg.kind, file: pg.file, layouts: pageLayouts.map(l => l.layout) });
   report.push(`${pg.key.padEnd(22)} ${pageLayouts.map(l => l.layout + (l.shared ? '*' : '') + ':' + countFields(l.fields)).join(' ')}`);
+}
+// page schema type / service name taken from the design's own JSON-LD (the output itself is built by Core from fields)
+function schemaFromDesign(ld) {
+  const nodes = (ld || []).flatMap(x => { try { const o = typeof x === 'string' ? JSON.parse(x) : x; return o['@graph'] || [o]; } catch (e) { return []; } });
+  const types = nodes.map(n => n['@type']);
+  const svc = nodes.find(n => n['@type'] === 'Service');
+  const map = { AboutPage: 'about', ContactPage: 'contact', CollectionPage: 'collection', WebPage: 'webpage' };
+  const t = svc ? 'service' : (types.map(x => map[x]).find(Boolean) || 'auto');
+  return { schema_type: t, schema_service: svc ? String(svc.serviceType || '') : '' };
 }
 function countFields(fs) { let n = 0; for (const f of fs || []) { n++; if (f.sub_fields) n += countFields(f.sub_fields); } return n; }
 

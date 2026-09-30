@@ -22,7 +22,9 @@
  "seo": {
   "title": "تحسين محركات البحث للمتاجر الإلكترونية | سيو هاوس",
   "description": "نعمل على صفحات الفئات والمنتجات وبيانات الكتالوج والجانب التقني للمتاجر، ونتابع أثر ذلك على السلة والطلب في سلة وزد وShopify وWooCommerce.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "تحسين محركات البحث للمتاجر الإلكترونية"
  },
  "template": "page-templates/sector-ecommerce.php",
  "sections": [

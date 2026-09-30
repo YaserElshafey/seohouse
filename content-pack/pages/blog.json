@@ -18,7 +18,9 @@
  "seo": {
   "title": "مدونة سيو هاوس | سيو هاوس",
   "description": "مقالات عن تحسين محركات البحث والسيو التقني والمحتوى والتجارة الإلكترونية والقياس.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "collection",
+  "schema_service": ""
  },
  "template": null,
  "sections": []

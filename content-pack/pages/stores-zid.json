@@ -22,7 +22,9 @@
  "seo": {
   "title": "تصميم وتطوير متاجر زد | سيو هاوس",
   "description": "متاجر زد من زاوية التشغيل: كتالوج وطلبات وعملاء وتكاملات في لوحة واحدة، مع إعداد صفحات وتصنيفات يدعم الظهور وسهولة الشراء.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "تطوير متاجر زد"
  },
  "template": "page-templates/stores-zid.php",
  "sections": [

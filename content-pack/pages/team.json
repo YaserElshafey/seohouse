@@ -18,7 +18,9 @@
  "seo": {
   "title": "فريق سيو هاوس | سيو هاوس",
   "description": "فريق يجمع تخصص البحث والمحتوى والتقنية وتحليل الأداء، يعمل على المشروع نفسه بمسؤول محدد وتقرير منتظم بما تغيّر للشركات في السعودية ومصر والإمارات.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "collection",
+  "schema_service": ""
  },
  "template": "page-templates/team.php",
  "sections": [

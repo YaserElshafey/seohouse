@@ -22,7 +22,9 @@
  "seo": {
   "title": "تطوير مواقع وتطبيقات رياكت ونكست | سيو هاوس",
   "description": "واجهات مبنية على React وNext.js: أداء عالٍ، عرض من الخادم أو توليد ثابت، تكاملات مع أنظمة قائمة، وبنية تتحمل التوسع.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "تطوير واجهات رياكت ونكست"
  },
  "template": "page-templates/web-react-next.php",
  "sections": [

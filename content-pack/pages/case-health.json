@@ -22,7 +22,9 @@
  "seo": {
   "title": "قطاع الصحة والطب - سيو هاوس",
   "description": "نمو في الزيارات العضوية لعيادة طبية متخصصة، وانتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "auto",
+  "schema_service": ""
  },
  "template": null,
  "sections": []

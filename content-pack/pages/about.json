@@ -18,7 +18,9 @@
  "seo": {
   "title": "عن سيو هاوس ومبادئ عملنا | سيو هاوس",
   "description": "تأسست سيو هاوس عام 2017 لتقديم عمل يمكن قياسه: تنفيذ داخل الموقع لا توصيات فقط، ونتائج تُعرض بمصدرها. نخدم الشركات في السعودية ومصر والإمارات.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "about",
+  "schema_service": ""
  },
  "template": "page-templates/about.php",
  "sections": [

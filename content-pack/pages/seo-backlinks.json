@@ -22,7 +22,9 @@
  "seo": {
   "title": "خدمة بناء الروابط الخارجية للمواقع | سيو هاوس",
   "description": "نبني سلطة الموقع بروابط من مصادر ذات صلة وجمهور حقيقي، ونقيّم كل مصدر قبل التنفيذ، ونوثّق كل رابط ونتابع أثره على الصفحة.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "بناء الروابط الخارجية"
  },
  "template": "page-templates/seo-backlinks.php",
  "sections": [

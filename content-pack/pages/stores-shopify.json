@@ -22,7 +22,9 @@
  "seo": {
   "title": "تصميم وتطوير متاجر شوبيفاي | سيو هاوس",
   "description": "متاجر Shopify مبنية بأقسام قابلة للتحرير: كتالوج ومتغيرات منظمة، تطبيقات مختارة بعناية، دفع وشحن وتتبع مضبوط، وأساس جاهز للظهور.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "تطوير متاجر شوبيفاي"
  },
  "template": "page-templates/stores-shopify.php",
  "sections": [

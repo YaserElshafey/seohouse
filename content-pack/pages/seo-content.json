@@ -22,7 +22,9 @@
  "seo": {
   "title": "خدمة كتابة محتوى السيو للمواقع والمتاجر | سيو هاوس",
   "description": "نبني محتوى يجيب عن أسئلة عملائك ويقودهم إلى الخطوة التالية: بحث ونية، ثم Brief، ثم كتابة ومراجعة بشرية، ثم نشر وقياس.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "كتابة محتوى السيو"
  },
  "template": "page-templates/seo-content.php",
  "sections": [

@@ -18,7 +18,9 @@
  "seo": {
   "title": "سياسة الخصوصية | سيو هاوس",
   "description": "سياسة الخصوصية لموقع سيو هاوس.",
-  "robots": "noindex, follow"
+  "robots": "noindex, follow",
+  "schema_type": "webpage",
+  "schema_service": ""
  },
  "template": "page-templates/privacy-policy.php",
  "sections": [

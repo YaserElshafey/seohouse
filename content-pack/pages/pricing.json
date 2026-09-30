@@ -18,7 +18,9 @@
  "seo": {
   "title": "أسعار خدمات سيو هاوس ونطاق العمل | سيو هاوس",
   "description": "نعمل داخل نطاق 1,500 إلى 7,000 ريال، ويتحدد السعر النهائي بحسب حالة الموقع وحجم الصفحات والسوق والمنافسة ونطاق التنفيذ والمنصة المستخدمة.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "webpage",
+  "schema_service": ""
  },
  "template": "page-templates/pricing.php",
  "sections": [

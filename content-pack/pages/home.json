@@ -9,7 +9,9 @@
  "seo": {
   "title": "سيو هاوس | تحسين الظهور وتصميم المواقع والمتاجر",
   "description": "",
-  "robots": ""
+  "robots": "",
+  "schema_type": "auto",
+  "schema_service": ""
  },
  "template": "page-templates/home.php",
  "sections": [

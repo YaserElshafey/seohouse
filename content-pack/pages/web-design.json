@@ -22,7 +22,9 @@
  "seo": {
   "title": "تصميم وتطوير مواقع الشركات | سيو هاوس",
   "description": "نبني مواقع تنطلق من أهداف نشاطك: رسالة واضحة، مسار استخدام قصير، سرعة، إدارة محتوى سهلة، وأساس تقني يسمح بالعمل على الظهور والقياس.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "تصميم وتطوير المواقع"
  },
  "template": "page-templates/web-design.php",
  "sections": [

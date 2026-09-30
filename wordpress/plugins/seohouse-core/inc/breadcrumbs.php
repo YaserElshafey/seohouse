@@ -50,7 +50,9 @@ function sh_breadcrumb_trail(): array {
 		$trail = array();
 	} elseif ( is_singular( 'page' ) ) {
 		$id = get_queried_object_id();
-		foreach ( array_reverse( get_post_ancestors( $id ) ) as $a ) {
+		// The approved design shows the nearest parent only (e.g. خدمات السيو › السيو التقني).
+		$depth = (int) apply_filters( 'sh_breadcrumb_ancestor_depth', 1 );
+		foreach ( array_reverse( array_slice( get_post_ancestors( $id ), 0, max( 0, $depth ) ) ) as $a ) {
 			$trail[] = $page_crumb( $a, true );
 		}
 		$trail[] = $page_crumb( $id, false );

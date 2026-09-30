@@ -22,7 +22,9 @@
  "seo": {
   "title": "تصميم مواقع ويب فلو للشركات | سيو هاوس",
   "description": "مواقع Webflow بتحكم بصري دقيق وحركة خفيفة وCMS مرن: إطلاق أسرع، مكونات قابلة لإعادة الاستخدام، وإدارة محتوى بلا صيانة خوادم.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "تصميم وتطوير مواقع ويب فلو"
  },
  "template": "page-templates/web-webflow.php",
  "sections": [

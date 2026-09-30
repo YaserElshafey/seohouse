@@ -18,7 +18,9 @@
  "seo": {
   "title": "اتصل بنا واحجز مكالمة استشارية | سيو هاوس",
   "description": "أرسل بيانات موقعك وهدفك، ونراجع الحالة قبل مكالمة استشارية مجانية مدتها 30 دقيقة نحدد فيها الخطوة المناسبة دون التزام.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "contact",
+  "schema_service": ""
  },
  "template": "page-templates/contact.php",
  "sections": [

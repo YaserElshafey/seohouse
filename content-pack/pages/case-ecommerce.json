@@ -22,7 +22,9 @@
  "seo": {
   "title": "قطاع التجارة الإلكترونية - سيو هاوس",
   "description": "زيادة في المبيعات العضوية لمتجر سلة مع خفض الاعتماد على Google Ads بنسبة 45%.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "auto",
+  "schema_service": ""
  },
  "template": null,
  "sections": []

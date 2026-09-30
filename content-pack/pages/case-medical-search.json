@@ -22,7 +22,9 @@
  "seo": {
   "title": "نمو النقرات العضوية لموقع خدمات طبية — مسودة - سيو هاوس",
   "description": "مسودة دراسة حالة للمراجعة، غير منشورة.",
-  "robots": "noindex, nofollow"
+  "robots": "noindex, nofollow",
+  "schema_type": "auto",
+  "schema_service": ""
  },
  "template": null,
  "sections": []

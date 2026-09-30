@@ -22,7 +22,9 @@
  "seo": {
   "title": "{{member_name}} | فريق سيو هاوس",
   "description": "{{member_name}} — {{member_title}} في سيو هاوس.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "auto",
+  "schema_service": ""
  },
  "template": null,
  "sections": [

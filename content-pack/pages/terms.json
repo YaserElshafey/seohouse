@@ -18,7 +18,9 @@
  "seo": {
   "title": "الشروط والأحكام | سيو هاوس",
   "description": "الشروط والأحكام لاستخدام موقع سيو هاوس.",
-  "robots": "noindex, follow"
+  "robots": "noindex, follow",
+  "schema_type": "webpage",
+  "schema_service": ""
  },
  "template": "page-templates/terms.php",
  "sections": [

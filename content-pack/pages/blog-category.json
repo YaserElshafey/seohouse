@@ -22,7 +22,9 @@
  "seo": {
   "title": "مقالات تحسين محركات البحث | مدونة سيو هاوس",
   "description": "مقالات مدونة سيو هاوس ضمن تصنيف تحسين محركات البحث.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "collection",
+  "schema_service": ""
  },
  "template": null,
  "sections": []

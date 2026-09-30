@@ -22,7 +22,9 @@
  "seo": {
   "title": "رفع المنتجات وإدارة محتوى المتاجر | سيو هاوس",
   "description": "إدخال المنتجات وبياناتها وصورها وتصنيفاتها بصورة منظمة على سلة وزد وShopify وWooCommerce، مع أوصاف وسمات وبيانات سيو قابلة للفهرسة.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "رفع المنتجات وإدارة محتوى المتاجر"
  },
  "template": "page-templates/products.php",
  "sections": [

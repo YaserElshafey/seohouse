@@ -22,7 +22,9 @@
  "seo": {
   "title": "قالب دراسة الحالة — معاينة | سيو هاوس",
   "description": "{{case_excerpt}}",
-  "robots": "noindex, nofollow"
+  "robots": "noindex, nofollow",
+  "schema_type": "auto",
+  "schema_service": ""
  },
  "template": null,
  "sections": []

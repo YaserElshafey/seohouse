@@ -22,7 +22,9 @@
  "seo": {
   "title": "خدمات تحسين محركات البحث SEO | سيو هاوس",
   "description": "",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "تحسين محركات البحث"
  },
  "template": "page-templates/seo.php",
  "sections": [

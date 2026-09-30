@@ -22,7 +22,9 @@
  "seo": {
   "title": "تحسين محركات البحث لقطاع العقارات | سيو هاوس",
   "description": "بنية صفحات للمناطق والمشروعات والوحدات تخدم مقارنة المشتري، مع معالجة الوحدات المنتهية والتكرار والفهرسة ونماذج التواصل.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "تحسين محركات البحث لقطاع العقارات"
  },
  "template": "page-templates/sector-real-estate.php",
  "sections": [

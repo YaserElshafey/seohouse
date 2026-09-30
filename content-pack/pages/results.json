@@ -18,7 +18,9 @@
  "seo": {
   "title": "نتائج ودراسات حالة من مشاريع سيو هاوس | سيو هاوس",
   "description": "نتائج موثقة من حسابات العملاء بمصادرها وفتراتها: نمو إيرادات عضوية، ونمو نقرات في Search Console، مع شرح لطريقة قراءة الأرقام.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "collection",
+  "schema_service": ""
  },
  "template": "page-templates/results.php",
  "sections": [

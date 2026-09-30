@@ -22,7 +22,9 @@
  "seo": {
   "title": "عنوان المقال | مدونة سيو هاوس",
   "description": "وصف المقال يُملأ من WordPress.",
-  "robots": ""
+  "robots": "",
+  "schema_type": "auto",
+  "schema_service": ""
  },
  "template": null,
  "sections": [

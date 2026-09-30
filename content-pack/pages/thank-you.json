@@ -18,7 +18,9 @@
  "seo": {
   "title": "تم حجز مكالمتك | سيو هاوس",
   "description": "تأكيد حجز المكالمة الاستشارية.",
-  "robots": "noindex, follow"
+  "robots": "noindex, follow",
+  "schema_type": "webpage",
+  "schema_service": ""
  },
  "template": "page-templates/thank-you.php",
  "sections": [
