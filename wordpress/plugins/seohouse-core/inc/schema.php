@@ -130,13 +130,13 @@ function sh_schema_breadcrumbs( string $url ): array {
 	);
 }
 
-/** FAQ rows from visible FAQ sections of a page (sh_sections flexible content). */
+/** FAQ rows from the visible FAQ sections of a page. */
 function sh_schema_faq( int $post_id, string $url ): array {
 	if ( ! function_exists( 'get_field' ) ) {
 		return array();
 	}
 	$q = array();
-	foreach ( (array) get_field( 'sh_sections', $post_id ) as $row ) {
+	foreach ( sh_core_sections( $post_id ) as $row ) {
 		if ( ! is_array( $row ) || 'faq' !== ( $row['acf_fc_layout'] ?? '' ) || ! empty( $row['sh_hide'] ) || empty( $row['schema'] ) ) {
 			continue;
 		}

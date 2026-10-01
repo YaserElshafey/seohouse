@@ -3,750 +3,831 @@
   "title": "أقسام الصفحة — قطاع القانون والاستشارات",
   "fields": [
     {
-      "key": "field_2264f953c3042",
-      "label": "أقسام الصفحة",
-      "name": "sh_sections",
-      "type": "flexible_content",
-      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
-      "layouts": {
-        "layout_15e90e1ffbb04": {
-          "key": "layout_15e90e1ffbb04",
-          "name": "hero",
-          "label": "الواجهة (Hero)",
-          "display": "block",
+      "key": "field_f119bc3701ef5",
+      "label": "الواجهة (Hero)",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_1919e0728f2d6",
+      "label": "",
+      "name": "s_hero",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_e796510180707",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_d3b06edc6940b",
+          "label": "الوسم: القانون والاستشارات",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_823402e859e8e",
+          "label": "العنوان: تحسين محركات البحث لمكاتب المحاماة",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_50b5d3110b5c4",
+          "label": "النص: من يبحث عن محامٍ يحتاج إلى معرفة الم…",
+          "name": "text",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_daa9449715d6c",
+          "label": "نص الرابط: احجز مكالمة استشارية",
+          "name": "link_label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_5dde7355680c5",
+          "label": "نص الرابط: ما نبنيه",
+          "name": "link_label_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_d5ba843c0f15c",
+          "label": "الوسم: مسار بحث العميل",
+          "name": "eyebrow_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_6b54c22d4df51",
+          "label": "نص: مثال توضيحي",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_60aad7918ee7d",
+          "label": "نص: محامي قضايا عمالية",
+          "name": "label_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_0f61f5de7ee27",
+          "label": "العناصر: المسألة القانونيةسؤال العميل بلغته",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
           "sub_fields": [
             {
-              "key": "field_e796510180707",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_d3b06edc6940b",
-              "label": "الوسم: القانون والاستشارات",
-              "name": "eyebrow",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_823402e859e8e",
-              "label": "العنوان: تحسين محركات البحث لمكاتب المحاماة",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_50b5d3110b5c4",
-              "label": "النص: من يبحث عن محامٍ يحتاج إلى معرفة الم…",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
+              "key": "field_cd14abc5384d4",
+              "label": "الأيقونة",
+              "name": "icon",
+              "type": "select",
+              "instructions": "أيقونات التصميم المعتمد.",
               "required": 0,
-              "rows": 3,
-              "new_lines": ""
+              "choices": {
+                "ifac340b5": "أيقونة 95",
+                "i715283b5": "أيقونة 87",
+                "i4968b528": "أيقونة 80"
+              },
+              "default_value": "ifac340b5",
+              "allow_null": 0,
+              "return_format": "value"
             },
             {
-              "key": "field_daa9449715d6c",
-              "label": "نص الرابط: احجز مكالمة استشارية",
-              "name": "link_label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_5dde7355680c5",
-              "label": "نص الرابط: ما نبنيه",
-              "name": "link_label_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_d5ba843c0f15c",
-              "label": "الوسم: مسار بحث العميل",
-              "name": "eyebrow_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_6b54c22d4df51",
-              "label": "نص: مثال توضيحي",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_60aad7918ee7d",
-              "label": "نص: محامي قضايا عمالية",
-              "name": "label_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_0f61f5de7ee27",
-              "label": "العناصر: المسألة القانونيةسؤال العميل بلغته",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_cd14abc5384d4",
-                  "label": "الأيقونة",
-                  "name": "icon",
-                  "type": "select",
-                  "instructions": "أيقونات التصميم المعتمد.",
-                  "required": 0,
-                  "choices": {
-                    "ifac340b5": "أيقونة 95",
-                    "i715283b5": "أيقونة 87",
-                    "i4968b528": "أيقونة 80"
-                  },
-                  "default_value": "ifac340b5",
-                  "allow_null": 0,
-                  "return_format": "value"
-                },
-                {
-                  "key": "field_095fe70641e9a",
-                  "label": "عنوان فرعي: المسألة القانونية",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_c041b84165ef2",
-                  "label": "نص: سؤال العميل بلغته",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_095fe70641e9a"
-            },
-            {
-              "key": "field_d682e5ee3c62a",
-              "label": "نص: الإجراء الذي نقيسه",
-              "name": "label_3",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_dc84e634a561d",
-              "label": "عنوان فرعي: طلب استشارة",
+              "key": "field_095fe70641e9a",
+              "label": "عنوان فرعي: المسألة القانونية",
               "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_c041b84165ef2",
+              "label": "نص: سؤال العميل بلغته",
+              "name": "label",
               "type": "text",
               "instructions": "",
               "required": 0
             }
           ],
-          "min": "",
-          "max": "1"
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_095fe70641e9a"
         },
-        "layout_42432df738b25": {
-          "key": "layout_42432df738b25",
-          "name": "sector_journey",
-          "label": "قسم: Sector journey",
-          "display": "block",
+        {
+          "key": "field_d682e5ee3c62a",
+          "label": "نص: الإجراء الذي نقيسه",
+          "name": "label_3",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_dc84e634a561d",
+          "label": "عنوان فرعي: طلب استشارة",
+          "name": "heading",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_4b075e94e6aa4",
+      "label": "قسم: مثال توضيحي لمكتب محاماة",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_9e9951e033424",
+      "label": "",
+      "name": "s_sector_journey",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_8e6fa985d318f",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_c5ae86c48fcfa",
+          "label": "الوسم: مثال توضيحي لمكتب محاماة",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_8ddcb9f2d1dfb",
+          "label": "العنوان: من المسألة القانونية إلى الاستشارة",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_733905e7d44d0",
+          "label": "الوسم: 1",
+          "name": "eyebrow_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_f8fd2e21561c0",
+          "label": "عنوان فرعي: السؤال",
+          "name": "heading",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_39a0df4f5f95d",
+          "label": "نص: إجراءات تسجيل علامة تجارية",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_57c69875fabfb",
+          "label": "نص: إجابة واضحة عن الإجراء والمستندات وا…",
+          "name": "label_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_e994cd11a1488",
+          "label": "الوسم: 2",
+          "name": "eyebrow_3",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_ea31d9adc8396",
+          "label": "عنوان فرعي: الخدمة والخبرة",
+          "name": "heading_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_71e8f475ec599",
+          "label": "الوسم: الملكية الفكرية",
+          "name": "eyebrow_4",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_004fb66937b72",
+          "label": "العناصر: التخصص",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
           "sub_fields": [
             {
-              "key": "field_8e6fa985d318f",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
+              "key": "field_3012130cd5133",
+              "label": "نص: التخصص",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_3012130cd5133"
+        },
+        {
+          "key": "field_eabca2d296369",
+          "label": "الوسم: 3",
+          "name": "eyebrow_5",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_5f154d963015e",
+          "label": "عنوان فرعي: طلب الاستشارة",
+          "name": "heading_3",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_4065b2f514e15",
+          "label": "العناصر: نوع المسألة",
+          "name": "items_2",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
             {
-              "key": "field_c5ae86c48fcfa",
-              "label": "الوسم: مثال توضيحي لمكتب محاماة",
+              "key": "field_4d4f2db739d7b",
+              "label": "نص: نوع المسألة",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_4d4f2db739d7b"
+        },
+        {
+          "key": "field_e7d2ce91614b8",
+          "label": "نص: بياناتك تُستخدم للتواصل بشأن طلبك فقط.",
+          "name": "label_3",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_ad9379224b657",
+          "label": "الوسم: اطلب استشارة",
+          "name": "eyebrow_6",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_af1116deda220",
+      "label": "قسم: المقال",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_a73dbeb23c0c2",
+      "label": "",
+      "name": "s_practice",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_7fdf008e54f31",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_7580732d7f2b9",
+          "name": "sh_anchor",
+          "label": "معرّف الرابط الداخلي (anchor)",
+          "type": "text",
+          "placeholder": "lg-practice",
+          "instructions": "الافتراضي: #lg-practice — الأزرار داخل الصفحة تشير إليه.",
+          "wrapper": {
+            "width": "70"
+          }
+        },
+        {
+          "key": "field_44f3b2d5903a7",
+          "label": "نص: مجال الممارسة قبل المقال",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_f7286674f14b3",
+          "label": "العنوان: صفحة الخدمة تجيب عن سؤال مختلف عن ال…",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_eb61038b0eb04",
+          "label": "الوسم: المقال",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_a9cb9e57154b3",
+          "label": "الوسم: صفحة الخدمة",
+          "name": "eyebrow_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_7431b88cfd7dd",
+          "label": "العناصر: السؤال «ما شروط تأسيس شركة؟» «أحتاج …",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_23507e7a15172",
+              "label": "الوسم: السؤال",
               "name": "eyebrow",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
-              "key": "field_8ddcb9f2d1dfb",
-              "label": "العنوان: من المسألة القانونية إلى الاستشارة",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_733905e7d44d0",
-              "label": "الوسم: 1",
-              "name": "eyebrow_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_f8fd2e21561c0",
-              "label": "عنوان فرعي: السؤال",
-              "name": "heading",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_39a0df4f5f95d",
-              "label": "نص: إجراءات تسجيل علامة تجارية",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_57c69875fabfb",
-              "label": "نص: إجابة واضحة عن الإجراء والمستندات وا…",
-              "name": "label_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_e994cd11a1488",
-              "label": "الوسم: 2",
-              "name": "eyebrow_3",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_ea31d9adc8396",
-              "label": "عنوان فرعي: الخدمة والخبرة",
-              "name": "heading_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_71e8f475ec599",
-              "label": "الوسم: الملكية الفكرية",
-              "name": "eyebrow_4",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_004fb66937b72",
-              "label": "العناصر: التخصص",
+              "key": "field_3377fcac03db0",
+              "label": "العناصر: «ما شروط تأسيس شركة؟»",
               "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_3012130cd5133",
-                  "label": "نص: التخصص",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_3012130cd5133"
-            },
-            {
-              "key": "field_eabca2d296369",
-              "label": "الوسم: 3",
-              "name": "eyebrow_5",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_5f154d963015e",
-              "label": "عنوان فرعي: طلب الاستشارة",
-              "name": "heading_3",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_4065b2f514e15",
-              "label": "العناصر: نوع المسألة",
-              "name": "items_2",
-              "type": "repeater",
+              "type": "sh_rows",
               "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
               "required": 0,
               "layout": "block",
               "button_label": "إضافة عنصر",
               "sub_fields": [
                 {
-                  "key": "field_4d4f2db739d7b",
-                  "label": "نص: نوع المسألة",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_4d4f2db739d7b"
-            },
-            {
-              "key": "field_e7d2ce91614b8",
-              "label": "نص: بياناتك تُستخدم للتواصل بشأن طلبك فقط.",
-              "name": "label_3",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_ad9379224b657",
-              "label": "الوسم: اطلب استشارة",
-              "name": "eyebrow_6",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_27a7bc6d88bdb": {
-          "key": "layout_27a7bc6d88bdb",
-          "name": "practice",
-          "label": "قسم: Practice",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_7fdf008e54f31",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_7580732d7f2b9",
-              "name": "sh_anchor",
-              "label": "معرّف الرابط الداخلي (anchor)",
-              "type": "text",
-              "placeholder": "lg-practice",
-              "instructions": "الافتراضي: #lg-practice — الأزرار داخل الصفحة تشير إليه.",
-              "wrapper": {
-                "width": "70"
-              }
-            },
-            {
-              "key": "field_44f3b2d5903a7",
-              "label": "نص: مجال الممارسة قبل المقال",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_f7286674f14b3",
-              "label": "العنوان: صفحة الخدمة تجيب عن سؤال مختلف عن ال…",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_eb61038b0eb04",
-              "label": "الوسم: المقال",
-              "name": "eyebrow",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_a9cb9e57154b3",
-              "label": "الوسم: صفحة الخدمة",
-              "name": "eyebrow_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_7431b88cfd7dd",
-              "label": "العناصر: السؤال «ما شروط تأسيس شركة؟» «أحتاج …",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_23507e7a15172",
-                  "label": "الوسم: السؤال",
-                  "name": "eyebrow",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_3377fcac03db0",
-                  "label": "العناصر: «ما شروط تأسيس شركة؟»",
-                  "name": "items",
-                  "type": "repeater",
-                  "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
-                  "required": 0,
-                  "layout": "block",
-                  "button_label": "إضافة عنصر",
-                  "sub_fields": [
-                    {
-                      "key": "field_9675541838b83",
-                      "label": "النص: «ما شروط تأسيس شركة؟»",
-                      "name": "text",
-                      "type": "text",
-                      "instructions": "",
-                      "required": 0
-                    }
-                  ],
-                  "min": 0,
-                  "max": 0,
-                  "collapsed": "field_9675541838b83"
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_23507e7a15172"
-            },
-            {
-              "key": "field_67468c184551e",
-              "label": "النص: المقال يشرح المفهوم وحدوده، بينما صف…",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
-              "required": 0,
-              "rows": 3,
-              "new_lines": ""
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_87770d57ed616": {
-          "key": "layout_87770d57ed616",
-          "name": "expertise",
-          "label": "قسم: Expertise",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_9cac24dcb4ec3",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_2e23dd5f10c7c",
-              "name": "sh_anchor",
-              "label": "معرّف الرابط الداخلي (anchor)",
-              "type": "text",
-              "placeholder": "lg-expertise",
-              "instructions": "الافتراضي: #lg-expertise — الأزرار داخل الصفحة تشير إليه.",
-              "wrapper": {
-                "width": "70"
-              }
-            },
-            {
-              "key": "field_ddbb099757448",
-              "label": "نص: خبرة المكتب والأشخاص",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_6394fa54dff16",
-              "label": "العنوان: أظهر خبرة الأشخاص بدقة",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_2373fd2ce68bb",
-              "label": "النص: عندما يكون قرار التواصل قائمًا على ا…",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
-              "required": 0,
-              "rows": 3,
-              "new_lines": ""
-            },
-            {
-              "key": "field_fd8c2b13f97e8",
-              "label": "عنوان فرعي: الاختلاف بحسب الولاية القضائية",
-              "name": "heading",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_be2adb571f0fc",
-              "label": "النص: أي شرح لنظام أو إجراء يجب أن يحدد ال…",
-              "name": "text_2",
-              "type": "textarea",
-              "instructions": "",
-              "required": 0,
-              "rows": 3,
-              "new_lines": ""
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_b1500a2c49a0a": {
-          "key": "layout_b1500a2c49a0a",
-          "name": "related",
-          "label": "صفحات مرتبطة — مكوّن مشترك",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_0a72bbc398963",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_86a0d9ce91a06",
-              "name": "lead",
-              "label": "العنوان التمهيدي",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_bea20c736937f",
-              "name": "links",
-              "label": "الصفحات المرتبطة",
-              "type": "repeater",
-              "layout": "table",
-              "button_label": "إضافة رابط",
-              "max": 8,
-              "sub_fields": [
-                {
-                  "key": "field_95a55fe756ed1",
-                  "name": "label",
-                  "label": "النص",
-                  "type": "text",
-                  "required": 1
-                },
-                {
-                  "key": "field_54f0c3a4053d8",
-                  "name": "link",
-                  "label": "الصفحة",
-                  "type": "page_link",
-                  "post_type": [
-                    "page",
-                    "case_study",
-                    "post",
-                    "team_member"
-                  ],
-                  "allow_archives": 1,
-                  "allow_null": 0,
-                  "required": 1
-                }
-              ],
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_35f1207c80911": {
-          "key": "layout_35f1207c80911",
-          "name": "faq",
-          "label": "الأسئلة الشائعة — مكوّن مشترك",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_a4ab7e0b18659",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_650171cd53776",
-              "name": "eyebrow",
-              "label": "الوسم",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_82ce507a3721f",
-              "name": "title",
-              "label": "عنوان القسم",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_f5dea715a10d2",
-              "name": "items",
-              "label": "الأسئلة",
-              "type": "repeater",
-              "layout": "block",
-              "button_label": "إضافة سؤال",
-              "collapsed": "field_a86d2db9eb006",
-              "instructions": "نفس الأسئلة تُستخدم في FAQPage Schema. لا تضف سؤالًا غير ظاهر في الصفحة.",
-              "sub_fields": [
-                {
-                  "key": "field_a86d2db9eb006",
-                  "name": "question",
-                  "label": "السؤال",
-                  "type": "text",
-                  "required": 1
-                },
-                {
-                  "key": "field_ebbb589702759",
-                  "name": "answer",
-                  "label": "الإجابة",
-                  "type": "textarea",
-                  "rows": 3,
-                  "new_lines": "br",
-                  "required": 1
-                }
-              ],
-              "required": 0
-            },
-            {
-              "key": "field_0c7027699cd1d",
-              "name": "schema",
-              "label": "إخراج FAQPage Schema",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 1,
-              "instructions": "يُخرج من نفس الأسئلة الظاهرة فقط.",
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_86539c8feebb2": {
-          "key": "layout_86539c8feebb2",
-          "name": "booking",
-          "label": "حجز الاستشارة — مكوّن مشترك",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_72ba54c87b038",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_5afd266455a00",
-              "name": "service",
-              "label": "الخدمة المختارة مسبقًا",
-              "type": "select",
-              "choices": {
-                "": "بدون اختيار مسبق",
-                "seo": "تحسين محركات البحث",
-                "web": "تصميم وتطوير موقع",
-                "stores": "تصميم متجر إلكتروني",
-                "products": "إضافة المنتجات",
-                "unsure": "لم أحدد بعد"
-              },
-              "default_value": "",
-              "allow_null": 1,
-              "return_format": "value",
-              "required": 0
-            },
-            {
-              "key": "field_7f71af0741df9",
-              "name": "eyebrow",
-              "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_3055cfe76679e",
-              "name": "title",
-              "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_cc9e0fd85758d",
-              "name": "text",
-              "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
-              "type": "textarea",
-              "rows": 2,
-              "new_lines": "",
-              "required": 0
-            },
-            {
-              "key": "field_0a8c0f3f015ed",
-              "name": "points",
-              "label": "نقاط الفائدة (فارغة = النقاط العامة)",
-              "type": "repeater",
-              "layout": "table",
-              "button_label": "إضافة نقطة",
-              "max": 4,
-              "sub_fields": [
-                {
-                  "key": "field_feb2d81f1839a",
+                  "key": "field_9675541838b83",
+                  "label": "النص: «ما شروط تأسيس شركة؟»",
                   "name": "text",
-                  "label": "النقطة",
                   "type": "text",
+                  "instructions": "",
                   "required": 0
                 }
               ],
+              "min": 0,
+              "max": 0,
+              "collapsed": "field_9675541838b83"
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_23507e7a15172"
+        },
+        {
+          "key": "field_67468c184551e",
+          "label": "النص: المقال يشرح المفهوم وحدوده، بينما صف…",
+          "name": "text",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
+        }
+      ]
+    },
+    {
+      "key": "field_584a9ac58a24a",
+      "label": "قسم: أظهر خبرة الأشخاص بدقة",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_47f1264d523d8",
+      "label": "",
+      "name": "s_expertise",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_9cac24dcb4ec3",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_2e23dd5f10c7c",
+          "name": "sh_anchor",
+          "label": "معرّف الرابط الداخلي (anchor)",
+          "type": "text",
+          "placeholder": "lg-expertise",
+          "instructions": "الافتراضي: #lg-expertise — الأزرار داخل الصفحة تشير إليه.",
+          "wrapper": {
+            "width": "70"
+          }
+        },
+        {
+          "key": "field_ddbb099757448",
+          "label": "نص: خبرة المكتب والأشخاص",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_6394fa54dff16",
+          "label": "العنوان: أظهر خبرة الأشخاص بدقة",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_2373fd2ce68bb",
+          "label": "النص: عندما يكون قرار التواصل قائمًا على ا…",
+          "name": "text",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_fd8c2b13f97e8",
+          "label": "عنوان فرعي: الاختلاف بحسب الولاية القضائية",
+          "name": "heading",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_be2adb571f0fc",
+          "label": "النص: أي شرح لنظام أو إجراء يجب أن يحدد ال…",
+          "name": "text_2",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
+        }
+      ]
+    },
+    {
+      "key": "field_65f03fea7df04",
+      "label": "صفحات مرتبطة — مكوّن مشترك",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_4a13e8c516efd",
+      "label": "",
+      "name": "s_related",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_0a72bbc398963",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_86a0d9ce91a06",
+          "name": "lead",
+          "label": "العنوان التمهيدي",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_bea20c736937f",
+          "name": "links",
+          "label": "الصفحات المرتبطة",
+          "type": "sh_rows",
+          "layout": "table",
+          "button_label": "إضافة رابط",
+          "max": 8,
+          "sub_fields": [
+            {
+              "key": "field_95a55fe756ed1",
+              "name": "label",
+              "label": "النص",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_54f0c3a4053d8",
+              "name": "link",
+              "label": "الصفحة",
+              "type": "page_link",
+              "post_type": [
+                "page",
+                "case_study",
+                "post",
+                "team_member"
+              ],
+              "allow_archives": 1,
+              "allow_null": 0,
+              "required": 1
+            }
+          ],
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_d249a9748d5f4",
+      "label": "الأسئلة الشائعة — مكوّن مشترك",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_f337dc56d19b3",
+      "label": "",
+      "name": "s_faq",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_a4ab7e0b18659",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_650171cd53776",
+          "name": "eyebrow",
+          "label": "الوسم",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_82ce507a3721f",
+          "name": "title",
+          "label": "عنوان القسم",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_f5dea715a10d2",
+          "name": "items",
+          "label": "الأسئلة",
+          "type": "sh_rows",
+          "layout": "block",
+          "button_label": "إضافة سؤال",
+          "collapsed": "field_a86d2db9eb006",
+          "instructions": "نفس الأسئلة تُستخدم في FAQPage Schema. لا تضف سؤالًا غير ظاهر في الصفحة.",
+          "sub_fields": [
+            {
+              "key": "field_a86d2db9eb006",
+              "name": "question",
+              "label": "السؤال",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_ebbb589702759",
+              "name": "answer",
+              "label": "الإجابة",
+              "type": "textarea",
+              "rows": 3,
+              "new_lines": "br",
+              "required": 1
+            }
+          ],
+          "required": 0
+        },
+        {
+          "key": "field_0c7027699cd1d",
+          "name": "schema",
+          "label": "إخراج FAQPage Schema",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 1,
+          "instructions": "يُخرج من نفس الأسئلة الظاهرة فقط.",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_9c91101548945",
+      "label": "حجز الاستشارة — مكوّن مشترك",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_33aec91ea8428",
+      "label": "",
+      "name": "s_booking",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_72ba54c87b038",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_5afd266455a00",
+          "name": "service",
+          "label": "الخدمة المختارة مسبقًا",
+          "type": "select",
+          "choices": {
+            "": "بدون اختيار مسبق",
+            "seo": "تحسين محركات البحث",
+            "web": "تصميم وتطوير موقع",
+            "stores": "تصميم متجر إلكتروني",
+            "products": "إضافة المنتجات",
+            "unsure": "لم أحدد بعد"
+          },
+          "default_value": "",
+          "allow_null": 1,
+          "return_format": "value",
+          "required": 0
+        },
+        {
+          "key": "field_7f71af0741df9",
+          "name": "eyebrow",
+          "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_3055cfe76679e",
+          "name": "title",
+          "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_cc9e0fd85758d",
+          "name": "text",
+          "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
+          "type": "textarea",
+          "rows": 2,
+          "new_lines": "",
+          "required": 0
+        },
+        {
+          "key": "field_0a8c0f3f015ed",
+          "name": "points",
+          "label": "نقاط الفائدة (فارغة = النقاط العامة)",
+          "type": "sh_rows",
+          "layout": "table",
+          "button_label": "إضافة نقطة",
+          "max": 4,
+          "sub_fields": [
+            {
+              "key": "field_feb2d81f1839a",
+              "name": "text",
+              "label": "النقطة",
+              "type": "text",
               "required": 0
             }
           ],
-          "min": "",
-          "max": "1"
+          "required": 0
         }
-      },
-      "button_label": "إضافة قسم",
-      "min": "",
-      "max": ""
+      ]
+    },
+    {
+      "key": "field_a80443e841a34",
+      "label": "",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 1
     }
   ],
   "location": [
@@ -772,7 +853,7 @@
     "send-trackbacks"
   ],
   "active": true,
-  "description": "حقول قالب قطاع القانون والاستشارات — مولدة من SEO House - Sector Legal.dc.html",
+  "description": "حقول قالب قطاع القانون والاستشارات — مولدة من SEO House - Sector Legal.dc.html. الأقسام بترتيب التصميم؛ يمكن إخفاء أي قسم.",
   "show_in_rest": 0,
   "modified": 1790000000
 }

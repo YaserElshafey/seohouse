@@ -29,7 +29,7 @@ function sh_settings_export(): array {
 	$out = array( '_format' => 'seohouse-settings', '_version' => SH_CORE_VERSION, 'values' => array() );
 	foreach ( sh_settings_tabs() as $fields ) {
 		foreach ( $fields as $f ) {
-			$out['values'][ $f['name'] ] = get_field( $f['name'], 'option', false );
+			$out['values'][ $f['name'] ] = get_field( $f['key'], 'option', false );
 		}
 	}
 	return $out;
@@ -67,8 +67,14 @@ function sh_settings_tools_page(): void {
 					}
 				}
 				if ( 'apply' === $action ) {
+					$keys = array();
+					foreach ( sh_settings_tabs() as $fields ) {
+						foreach ( $fields as $f ) {
+							$keys[ $f['name'] ] = $f['key'];
+						}
+					}
 					foreach ( $preview as $k => $v ) {
-						update_field( $k, $v, 'option' );
+						update_field( $keys[ $k ], $v, 'option' );
 					}
 					$notice  = sprintf( __( 'طُبّق %d تغييرًا.', 'seohouse-core' ), count( $preview ) );
 					$preview = null;
@@ -78,9 +84,9 @@ function sh_settings_tools_page(): void {
 			$tab = sanitize_text_field( wp_unslash( $_POST['sh_tab'] ?? '' ) );
 			foreach ( sh_settings_tabs()[ $tab ] ?? array() as $f ) {
 				if ( array_key_exists( 'default_value', $f ) && '' !== $f['default_value'] ) {
-					update_field( $f['name'], $f['default_value'], 'option' );
+					update_field( $f['key'], $f['default_value'], 'option' );
 				} else {
-					delete_field( $f['name'], 'option' );
+					delete_field( $f['key'], 'option' );
 				}
 			}
 			$notice = sprintf( __( 'أُعيدت قيم «%s» إلى الافتراضي المعتمد.', 'seohouse-core' ), $tab );

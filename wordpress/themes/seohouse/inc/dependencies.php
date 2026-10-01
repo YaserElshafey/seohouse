@@ -1,6 +1,6 @@
 <?php
 /**
- * Dependency checks: ACF (PRO or Secure Custom Fields) and SEO House Core.
+ * Dependency checks: Advanced Custom Fields (free 6.x is enough) and SEO House Core.
  * Missing dependencies show an admin notice; the front end degrades without fatal errors
  * and never re-creates demo content.
  *
@@ -9,9 +9,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
-/** ACF with the field types the theme uses (Repeater, Flexible Content, Options). */
+/** ACF is active and SEO House Core has registered its list field (sections and lists need both). */
 function sh_acf_ready(): bool {
-	return function_exists( 'get_field' ) && function_exists( 'acf_get_field_type' ) && acf_get_field_type( 'flexible_content' ) && acf_get_field_type( 'repeater' );
+	return function_exists( 'sh_core_acf_ready' ) && sh_core_acf_ready();
 }
 
 function sh_core_ready(): bool {
@@ -26,9 +26,7 @@ add_action(
 		}
 		$missing = array();
 		if ( ! function_exists( 'get_field' ) ) {
-			$missing[] = 'Advanced Custom Fields PRO (أو Secure Custom Fields)';
-		} elseif ( ! sh_acf_ready() ) {
-			$missing[] = 'نسخة ACF تتضمن Repeater وFlexible Content (ACF PRO أو Secure Custom Fields) — النسخة المجانية من ACF لا تكفي';
+			$missing[] = 'Advanced Custom Fields (الإصدار 6 المجاني يكفي)';
 		}
 		if ( ! sh_core_ready() ) {
 			$missing[] = 'إضافة SEO House Core';

@@ -3,225 +3,270 @@
   "title": "أقسام الصفحة — نتائج الأعمال",
   "fields": [
     {
-      "key": "field_9b8c81752ff88",
-      "label": "أقسام الصفحة",
-      "name": "sh_sections",
-      "type": "flexible_content",
-      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
-      "layouts": {
-        "layout_c57b7e3f77bd8": {
-          "key": "layout_c57b7e3f77bd8",
-          "name": "hero",
-          "label": "الواجهة (Hero)",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_7e994a2017b01",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_99780cff67438",
-              "label": "العنوان: نتائج الأعمال",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_bf9d332038816",
-              "label": "النص: نتائج من مشاريعنا، موثقة بالأرقام وت…",
-              "name": "text",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_66672cde4125c": {
-          "key": "layout_66672cde4125c",
-          "name": "cases",
-          "label": "الحالات",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_a3f118502dc79",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_7480c4018587f",
-              "label": "النص: كل نتيجة معروضة بمصدرها وفترتها كما …",
-              "name": "text",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_42949e889685b": {
-          "key": "layout_42949e889685b",
-          "name": "related",
-          "label": "صفحات مرتبطة — مكوّن مشترك",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_ff986ddc547ad",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_c94934ebab81b",
-              "name": "lead",
-              "label": "العنوان التمهيدي",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_3780376dba8a8",
-              "name": "links",
-              "label": "الصفحات المرتبطة",
-              "type": "repeater",
-              "layout": "table",
-              "button_label": "إضافة رابط",
-              "max": 8,
-              "sub_fields": [
-                {
-                  "key": "field_db5e7ddc92880",
-                  "name": "label",
-                  "label": "النص",
-                  "type": "text",
-                  "required": 1
-                },
-                {
-                  "key": "field_e9bc63ab5767e",
-                  "name": "link",
-                  "label": "الصفحة",
-                  "type": "page_link",
-                  "post_type": [
-                    "page",
-                    "case_study",
-                    "post",
-                    "team_member"
-                  ],
-                  "allow_archives": 1,
-                  "allow_null": 0,
-                  "required": 1
-                }
-              ],
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_b13cf92b51f0f": {
-          "key": "layout_b13cf92b51f0f",
-          "name": "booking",
-          "label": "حجز الاستشارة — مكوّن مشترك",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_957a56b390866",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_db914b14abcd9",
-              "name": "service",
-              "label": "الخدمة المختارة مسبقًا",
-              "type": "select",
-              "choices": {
-                "": "بدون اختيار مسبق",
-                "seo": "تحسين محركات البحث",
-                "web": "تصميم وتطوير موقع",
-                "stores": "تصميم متجر إلكتروني",
-                "products": "إضافة المنتجات",
-                "unsure": "لم أحدد بعد"
-              },
-              "default_value": "",
-              "allow_null": 1,
-              "return_format": "value",
-              "required": 0
-            },
-            {
-              "key": "field_74c21a5919d39",
-              "name": "eyebrow",
-              "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_689cc1903e20f",
-              "name": "title",
-              "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_a90057d77c724",
-              "name": "text",
-              "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
-              "type": "textarea",
-              "rows": 2,
-              "new_lines": "",
-              "required": 0
-            },
-            {
-              "key": "field_2ca4c347df606",
-              "name": "points",
-              "label": "نقاط الفائدة (فارغة = النقاط العامة)",
-              "type": "repeater",
-              "layout": "table",
-              "button_label": "إضافة نقطة",
-              "max": 4,
-              "sub_fields": [
-                {
-                  "key": "field_822910409ebde",
-                  "name": "text",
-                  "label": "النقطة",
-                  "type": "text",
-                  "required": 0
-                }
-              ],
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
-        }
+      "key": "field_89c3e6c43aefb",
+      "label": "الواجهة (Hero)",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_30c8ca2398c42",
+      "label": "",
+      "name": "s_hero",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
       },
-      "button_label": "إضافة قسم",
-      "min": "",
-      "max": ""
+      "sub_fields": [
+        {
+          "key": "field_7e994a2017b01",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_99780cff67438",
+          "label": "العنوان: نتائج الأعمال",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_bf9d332038816",
+          "label": "النص: نتائج من مشاريعنا، موثقة بالأرقام وت…",
+          "name": "text",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_8ccb924fd5fdc",
+      "label": "الحالات",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_84127ecdaa773",
+      "label": "",
+      "name": "s_cases",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_a3f118502dc79",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_7480c4018587f",
+          "label": "النص: كل نتيجة معروضة بمصدرها وفترتها كما …",
+          "name": "text",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_8bd44d6e0fa20",
+      "label": "صفحات مرتبطة — مكوّن مشترك",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_02bf9a1873043",
+      "label": "",
+      "name": "s_related",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_ff986ddc547ad",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_c94934ebab81b",
+          "name": "lead",
+          "label": "العنوان التمهيدي",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_3780376dba8a8",
+          "name": "links",
+          "label": "الصفحات المرتبطة",
+          "type": "sh_rows",
+          "layout": "table",
+          "button_label": "إضافة رابط",
+          "max": 8,
+          "sub_fields": [
+            {
+              "key": "field_db5e7ddc92880",
+              "name": "label",
+              "label": "النص",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_e9bc63ab5767e",
+              "name": "link",
+              "label": "الصفحة",
+              "type": "page_link",
+              "post_type": [
+                "page",
+                "case_study",
+                "post",
+                "team_member"
+              ],
+              "allow_archives": 1,
+              "allow_null": 0,
+              "required": 1
+            }
+          ],
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_67425b90d6559",
+      "label": "حجز الاستشارة — مكوّن مشترك",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_51173134a82cf",
+      "label": "",
+      "name": "s_booking",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_957a56b390866",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_db914b14abcd9",
+          "name": "service",
+          "label": "الخدمة المختارة مسبقًا",
+          "type": "select",
+          "choices": {
+            "": "بدون اختيار مسبق",
+            "seo": "تحسين محركات البحث",
+            "web": "تصميم وتطوير موقع",
+            "stores": "تصميم متجر إلكتروني",
+            "products": "إضافة المنتجات",
+            "unsure": "لم أحدد بعد"
+          },
+          "default_value": "",
+          "allow_null": 1,
+          "return_format": "value",
+          "required": 0
+        },
+        {
+          "key": "field_74c21a5919d39",
+          "name": "eyebrow",
+          "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_689cc1903e20f",
+          "name": "title",
+          "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_a90057d77c724",
+          "name": "text",
+          "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
+          "type": "textarea",
+          "rows": 2,
+          "new_lines": "",
+          "required": 0
+        },
+        {
+          "key": "field_2ca4c347df606",
+          "name": "points",
+          "label": "نقاط الفائدة (فارغة = النقاط العامة)",
+          "type": "sh_rows",
+          "layout": "table",
+          "button_label": "إضافة نقطة",
+          "max": 4,
+          "sub_fields": [
+            {
+              "key": "field_822910409ebde",
+              "name": "text",
+              "label": "النقطة",
+              "type": "text",
+              "required": 0
+            }
+          ],
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_5f742ef58b989",
+      "label": "",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 1
     }
   ],
   "location": [
@@ -247,7 +292,7 @@
     "send-trackbacks"
   ],
   "active": true,
-  "description": "حقول قالب نتائج الأعمال — مولدة من SEO House - Results.dc.html",
+  "description": "حقول قالب نتائج الأعمال — مولدة من SEO House - Results.dc.html. الأقسام بترتيب التصميم؛ يمكن إخفاء أي قسم.",
   "show_in_rest": 0,
   "modified": 1790000000
 }

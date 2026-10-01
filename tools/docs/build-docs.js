@@ -113,27 +113,35 @@ const enc = route => route.split('/').map(s => (s ? encodeURIComponent(decodeURI
     ]
   }, null, 2) + '\n');
 
-  // ---------------------------------------------------------------- acf-field-map.md
-  const fm = readJson('tools/design-import/extract/field-map.json');
-  const md = ['# خريطة حقول ACF', '', 'مولَّدة من `tools/design-import` (مجموعات الصفحات) و`core-groups.js` (المجموعات الثابتة). المفاتيح ثابتة ومشتقة من مسار الحقل، فلا تتغير بإعادة التوليد.', ''];
-  const walk = (fields, depth) => fields.flatMap(f => [
-    `${'  '.repeat(depth)}- \`${f.name}\` — ${String(f.label || '').replace(/\|/g, '/')} (${f.type})`,
-    ...(f.sub_fields ? walk(f.sub_fields, depth + 1) : []),
-    ...(f.layouts ? Object.values(f.layouts).flatMap(l => [`${'  '.repeat(depth + 1)}- تخطيط \`${l.name}\` — ${l.label}`, ...walk(l.sub_fields || [], depth + 2)]) : [])
+  // ---------------------------------------------------------------- acf-field-map.md (from the shipped acf-json)
+  const TYPE_AR = { sh_rows: 'قائمة عناصر', group: 'مجموعة', text: 'نص', textarea: 'نص طويل', image: 'صورة', page_link: 'رابط صفحة', url: 'رابط', select: 'اختيار', true_false: 'نعم/لا', color_picker: 'لون', number: 'رقم', email: 'بريد', relationship: 'علاقة', post_object: 'سجل', user: 'مستخدم', message: 'رسالة' };
+  const md = ['# خريطة حقول ACF', '',
+    'مولَّدة من ملفات `acf-json` التي تُشحن مع SEO House Core. كل الحقول من أنواع **ACF المجانية**، إضافة إلى نوع Core «قائمة عناصر» (`sh_rows`) للعناصر المتكررة. المفاتيح ثابتة ومشتقة من مسار الحقل، فلا تتغير بإعادة التوليد.', '',
+    '| مفهوم في التصميم | الحقل في ACF | مكان التحرير |', '|---|---|---|',
+    '| قسم من الصفحة | مجموعة `s_<layout>` تحت عنوان قابل للطي (Accordion) | تحرير الصفحة ← «أقسام الصفحة — …» |',
+    '| عناصر متكررة (بطاقات، أسئلة، خطوات…) | قائمة عناصر `sh_rows`؛ كل عنصر سجل `sh_row` بحقوله | داخل القسم: إضافة / حذف / سحب للترتيب / ↑↓ |',
+    '| الإعدادات العامة | مجموعة «إعدادات سيو هاوس» على شاشة ووردبريس الإدارية | القائمة الجانبية ← إعدادات سيو هاوس |', ''];
+  const walk = (fields, depth) => fields.filter(f => f.type !== 'tab' && f.type !== 'accordion').flatMap(f => [
+    `${'  '.repeat(depth)}- \`${f.name}\` — ${String(f.label || '').replace(/\|/g, '/')} (${TYPE_AR[f.type] || f.type})`,
+    ...(f.sub_fields ? walk(f.sub_fields, depth + 1) : [])
   ]);
   md.push('## المجموعات الثابتة (SEO House Core)', '');
   for (const f of fs.readdirSync(path.join(ROOT, 'wordpress/plugins/seohouse-core/acf-json')).filter(f => !f.startsWith('group_sh_page_')).sort()) {
     const g = readJson('wordpress/plugins/seohouse-core/acf-json/' + f);
     const loc = (g.location || []).map(or => or.map(a => `${a.param} ${a.operator} ${a.value}`).join(' و ')).join(' أو ');
-    md.push(`### ${g.title}`, '', `الملف: \`acf-json/${f}\` — يظهر عند: ${loc}`, '', ...walk(g.fields.filter(x => x.type !== 'tab'), 0), '');
+    md.push(`### ${g.title}`, '', `الملف: \`acf-json/${f}\` — يظهر عند: ${loc}`, '', ...walk(g.fields, 0), '');
   }
-  md.push('## أقسام الصفحات (Flexible Content: `sh_sections`)', '', 'كل صفحة تصميم لها مجموعة `group_sh_page_<key>.json` مرتبطة بقالبها. كل تخطيط يحمل أيضًا `sh_hide` (إخفاء القسم) و`sh_anchor` (معرّف القسم).', '');
-  const byPage = {};
-  for (const l of fm) (byPage[l.page] = byPage[l.page] || []).push(l);
-  for (const [page, layouts] of Object.entries(byPage)) {
-    const r = cfg.find(c => c.key === page);
-    md.push(`### ${r ? r.admin : page} — \`${page}\` (${r ? r.route : ''})`, '');
-    for (const l of layouts) md.push(`- **${l.layout}** (${l.label})${l.shared ? ' — مكوّن مشترك' : ''}`, ...walk(l.fields || [], 1));
+  md.push('## أقسام الصفحات', '', 'كل صفحة تصميم لها مجموعة `group_sh_page_<key>.json` مرتبطة بقالبها. الأقسام بترتيب التصميم، وكل قسم يحمل `sh_hide` (إخفاء القسم) وأحيانًا `sh_anchor` (معرّف القسم).', '');
+  for (const p of cfg.filter(c => c.kind === 'page')) {
+    const file = `wordpress/plugins/seohouse-core/acf-json/group_sh_page_${p.key.replace(/-/g, '_')}.json`;
+    if (!fs.existsSync(path.join(ROOT, file))) continue;
+    const g = readJson(file);
+    md.push(`### ${p.admin} — \`${p.key}\` (${p.route})`, '');
+    let acc = '';
+    for (const f of g.fields) {
+      if (f.type === 'accordion') { acc = f.label; continue; }
+      if (f.type === 'group') md.push(`- **${acc}** — \`${f.name}\``, ...walk(f.sub_fields || [], 1));
+    }
     md.push('');
   }
   fs.writeFileSync(path.join(DOCS, 'acf-field-map.md'), md.join('\n') + '\n');

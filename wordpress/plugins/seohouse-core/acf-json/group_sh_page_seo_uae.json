@@ -3,656 +3,273 @@
   "title": "أقسام الصفحة — السيو في الإمارات",
   "fields": [
     {
-      "key": "field_cfebbebbe82e4",
-      "label": "أقسام الصفحة",
-      "name": "sh_sections",
-      "type": "flexible_content",
-      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
-      "layouts": {
-        "layout_b79e7f5bea3c0": {
-          "key": "layout_b79e7f5bea3c0",
-          "name": "hero",
-          "label": "الواجهة (Hero)",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_368c7f17248db",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_2469f27560fc9",
-              "label": "الوسم: شركة سيو في الإمارات",
-              "name": "eyebrow",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_526410f513e7a",
-              "label": "العنوان: خدمات السيو في الإمارات",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_edb37e3512483",
-              "label": "النص: نراجع أين يظهر موقعك، وما الذي يبحث …",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
-              "required": 0,
-              "rows": 3,
-              "new_lines": ""
-            },
-            {
-              "key": "field_cc691a7e013be",
-              "label": "نص الرابط: احجز مكالمة استشارية",
-              "name": "link_label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_5b6af25f7328c",
-              "label": "نص الرابط: استكشف فرص النمو",
-              "name": "link_label_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_6a0e8bad6901e",
-              "label": "النص: عبارة بحث تجارية",
-              "name": "text_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_9af0dd3c51fd6",
-              "label": "نص: صفحة منافسة",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_b7d8a3709fd87",
-              "label": "نص: صفحة منافسة",
-              "name": "label_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_7c30b83a260b8",
-              "label": "نص: صفحة من موقعك",
-              "name": "label_3",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_172c83540eee3",
-              "label": "نص: صفحة منافسة",
-              "name": "label_4",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_8da324208bc56",
-              "label": "نص: ظهور",
-              "name": "label_5",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_4f549408349cb",
-              "label": "نص: زيارة مؤهلة",
-              "name": "label_6",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_0d83558bcb164",
-              "label": "نص: استفسار أو طلب",
-              "name": "label_7",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
+      "key": "field_d719fd0ad01e0",
+      "label": "الواجهة (Hero)",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_e177ade0a720b",
+      "label": "",
+      "name": "s_hero",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_368c7f17248db",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
         },
-        "layout_62bb83caffc56": {
-          "key": "layout_62bb83caffc56",
-          "name": "client_logos",
-          "label": "شعارات العملاء",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_cde8814edede8",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_424c181872eaf",
-              "label": "النص: شركات تثق بنا",
-              "name": "text",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
+        {
+          "key": "field_2469f27560fc9",
+          "label": "الوسم: شركة سيو في الإمارات",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
         },
-        "layout_ae112e4898bf5": {
-          "key": "layout_ae112e4898bf5",
-          "name": "market",
-          "label": "قسم: Market",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_5fcc1de87ac71",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_75ae5201951d3",
-              "label": "الوسم: السوق الإماراتي",
-              "name": "eyebrow",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_7a58123064df7",
-              "label": "العنوان: المنافسة العالية تحتاج إلى أولويات أ…",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_d5f449a936d79",
-              "label": "النص: تتنافس الشركات داخل الإمارات على عدد…",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
-              "required": 0,
-              "rows": 3,
-              "new_lines": ""
-            },
-            {
-              "key": "field_259af55767499",
-              "label": "العناصر: نية البحث —ماذا يريد العميل فعلًا؟ —…",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_1898d44f90d21",
-                  "label": "عنوان فرعي: نية البحث",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_165bd2fa66884",
-                  "label": "العناصر: —ماذا يريد العميل فعلًا؟",
-                  "name": "items",
-                  "type": "repeater",
-                  "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
-                  "required": 0,
-                  "layout": "block",
-                  "button_label": "إضافة عنصر",
-                  "sub_fields": [
-                    {
-                      "key": "field_7b62ba33c5aa5",
-                      "label": "نص: ماذا يريد العميل فعلًا؟",
-                      "name": "label",
-                      "type": "text",
-                      "instructions": "",
-                      "required": 0
-                    }
-                  ],
-                  "min": 0,
-                  "max": 0,
-                  "collapsed": "field_7b62ba33c5aa5"
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_1898d44f90d21"
-            }
-          ],
-          "min": "",
-          "max": "1"
+        {
+          "key": "field_526410f513e7a",
+          "label": "العنوان: خدمات السيو في الإمارات",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
         },
-        "layout_752ee229c8f8f": {
-          "key": "layout_752ee229c8f8f",
-          "name": "opportunities",
-          "label": "قسم: Opportunities",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_60d831b48136e",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_f32f10c89b1cc",
-              "name": "sh_anchor",
-              "label": "معرّف الرابط الداخلي (anchor)",
-              "type": "text",
-              "placeholder": "uae-opportunities",
-              "instructions": "الافتراضي: #uae-opportunities — الأزرار داخل الصفحة تشير إليه.",
-              "wrapper": {
-                "width": "70"
-              }
-            },
-            {
-              "key": "field_20964b10aa74a",
-              "name": "eyebrow",
-              "label": "الوسم",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_54150a5e10fb6",
-              "name": "title",
-              "label": "العنوان",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_b6c94a94d99cd",
-              "name": "review_label",
-              "label": "عنوان «ما الذي نراجعه»",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_811a5944848fd",
-              "name": "improve_label",
-              "label": "عنوان «ما الذي يمكن تحسينه»",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_6c2092ddc81a5",
-              "name": "outcome_label",
-              "label": "عنوان «النتيجة التجارية»",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_26ba9646255db",
-              "name": "opps",
-              "label": "الفرص",
-              "type": "repeater",
-              "instructions": "",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة فرصة",
-              "collapsed": "field_d95da83581ed7",
-              "max": 8,
-              "sub_fields": [
-                {
-                  "key": "field_5b4308de8f309",
-                  "name": "num",
-                  "label": "الرقم",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_d95da83581ed7",
-                  "name": "label",
-                  "label": "الفرصة",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_04b6db5c302c9",
-                  "name": "review",
-                  "label": "ما الذي نراجعه",
-                  "type": "textarea",
-                  "instructions": "",
-                  "required": 0,
-                  "rows": 2,
-                  "new_lines": ""
-                },
-                {
-                  "key": "field_b0c7a5b89a868",
-                  "name": "improve",
-                  "label": "ما الذي يمكن تحسينه",
-                  "type": "textarea",
-                  "instructions": "",
-                  "required": 0,
-                  "rows": 2,
-                  "new_lines": ""
-                },
-                {
-                  "key": "field_6e57fc6ac2948",
-                  "name": "outcome",
-                  "label": "النتيجة التجارية",
-                  "type": "textarea",
-                  "instructions": "",
-                  "required": 0,
-                  "rows": 2,
-                  "new_lines": ""
-                }
-              ]
-            }
-          ],
-          "min": "",
-          "max": "1"
+        {
+          "key": "field_edb37e3512483",
+          "label": "النص: نراجع أين يظهر موقعك، وما الذي يبحث …",
+          "name": "text",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
         },
-        "layout_41559066f455a": {
-          "key": "layout_41559066f455a",
-          "name": "gulf_case",
-          "label": "قسم: Gulf case",
-          "display": "block",
+        {
+          "key": "field_cc691a7e013be",
+          "label": "نص الرابط: احجز مكالمة استشارية",
+          "name": "link_label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_5b6af25f7328c",
+          "label": "نص الرابط: استكشف فرص النمو",
+          "name": "link_label_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_6a0e8bad6901e",
+          "label": "النص: عبارة بحث تجارية",
+          "name": "text_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_9af0dd3c51fd6",
+          "label": "نص: صفحة منافسة",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_b7d8a3709fd87",
+          "label": "نص: صفحة منافسة",
+          "name": "label_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_7c30b83a260b8",
+          "label": "نص: صفحة من موقعك",
+          "name": "label_3",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_172c83540eee3",
+          "label": "نص: صفحة منافسة",
+          "name": "label_4",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_8da324208bc56",
+          "label": "نص: ظهور",
+          "name": "label_5",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_4f549408349cb",
+          "label": "نص: زيارة مؤهلة",
+          "name": "label_6",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_0d83558bcb164",
+          "label": "نص: استفسار أو طلب",
+          "name": "label_7",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_e9b484e777fbb",
+      "label": "شعارات العملاء",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_71939745d42fb",
+      "label": "",
+      "name": "s_client_logos",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_cde8814edede8",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_424c181872eaf",
+          "label": "النص: شركات تثق بنا",
+          "name": "text",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_89b9e824632f3",
+      "label": "قسم: السوق الإماراتي",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_5f49bb4ff9455",
+      "label": "",
+      "name": "s_market",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_5fcc1de87ac71",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_75ae5201951d3",
+          "label": "الوسم: السوق الإماراتي",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_7a58123064df7",
+          "label": "العنوان: المنافسة العالية تحتاج إلى أولويات أ…",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_d5f449a936d79",
+          "label": "النص: تتنافس الشركات داخل الإمارات على عدد…",
+          "name": "text",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_259af55767499",
+          "label": "العناصر: نية البحث —ماذا يريد العميل فعلًا؟ —…",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
           "sub_fields": [
             {
-              "key": "field_949a19e29f640",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_ff2076bf8bcdb",
-              "name": "sh_anchor",
-              "label": "معرّف الرابط الداخلي (anchor)",
-              "type": "text",
-              "placeholder": "uae-case",
-              "instructions": "الافتراضي: #uae-case — الأزرار داخل الصفحة تشير إليه.",
-              "wrapper": {
-                "width": "70"
-              }
-            },
-            {
-              "key": "field_8ee0a5c52cfb7",
-              "label": "الوسم: دليل موثق",
-              "name": "eyebrow",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_26e1a5cac903e",
-              "label": "العنوان: نتيجة موثقة من مشروع في سوق خليجي",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_a241332f56aaf",
-              "label": "النص: نعرض النتيجة بسوقها ومصدرها الحقيقيي…",
-              "name": "text",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_21c8ce9703fa9",
-              "label": "عنوان فرعي: نمو الإيرادات العضوية 253.05%",
+              "key": "field_1898d44f90d21",
+              "label": "عنوان فرعي: نية البحث",
               "name": "heading",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
-              "key": "field_371441a9779e5",
-              "label": "العناصر: السوق السعودية",
+              "key": "field_165bd2fa66884",
+              "label": "العناصر: —ماذا يريد العميل فعلًا؟",
               "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_dacb3bfae60da",
-                  "label": "نص: السوق",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_c4bd66ea8f789",
-                  "label": "عنوان فرعي: السعودية",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_dacb3bfae60da"
-            },
-            {
-              "key": "field_3dbee1bfd7a79",
-              "label": "نص: جوجل أناليتكس",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_df11a926fb844",
-              "label": "الرابط: ",
-              "name": "link",
-              "type": "text",
-              "instructions": "رابط داخلي يبدأ بـ / أو رابط كامل أو #قسم",
-              "required": 0
-            },
-            {
-              "key": "field_74ab1bc841241",
-              "label": "الصورة: تقرير جوجل أناليتكس يوضح نمو الإيراد…",
-              "name": "image",
-              "type": "image",
-              "instructions": "",
-              "required": 0,
-              "return_format": "id",
-              "preview_size": "medium",
-              "library": "all"
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_ad273851b16c4": {
-          "key": "layout_ad273851b16c4",
-          "name": "needs",
-          "label": "قسم: Needs",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_df59956a963a5",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_48ae401fa809f",
-              "label": "العنوان: متى تحتاج إلى خطة سيو مخصصة للسوق ال…",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_eeae89df155d8",
-              "label": "العناصر: 01 موقع يظهر ولا يجلب استفسارات كافي…",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_2328ef87c6fd4",
-                  "label": "عنوان فرعي: موقع يظهر ولا يجلب استفسارات كافية",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_c1182e5587517",
-                  "label": "النص: الظهور موجود، لكن الصفحات لا تقود ال…",
-                  "name": "text",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_72b8f2a642825",
-                  "label": "الرابط: السيو الداخلي ←",
-                  "name": "link",
-                  "type": "page_link",
-                  "instructions": "",
-                  "required": 0,
-                  "post_type": [
-                    "page",
-                    "case_study",
-                    "team_member",
-                    "post"
-                  ],
-                  "allow_null": 1,
-                  "allow_archives": 1,
-                  "multiple": 0
-                },
-                {
-                  "key": "field_3158fba9f59fe",
-                  "label": "نص الرابط: السيو الداخلي",
-                  "name": "link_label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_2328ef87c6fd4"
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_4c85ec9e4ffa5": {
-          "key": "layout_4c85ec9e4ffa5",
-          "name": "first_month",
-          "label": "قسم: First month",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_2a3707141180f",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_101b3f392e4c8",
-              "label": "الوسم: الشهر الأول",
-              "name": "eyebrow",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_270c130b55ddb",
-              "label": "العنوان: أولويات واضحة قبل توسيع نطاق العمل",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_161205b29f90e",
-              "label": "النص: نبدأ بتحديد المواقع والصفحات التي تس…",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
-              "required": 0,
-              "rows": 3,
-              "new_lines": ""
-            },
-            {
-              "key": "field_8bb0ffc510879",
-              "label": "العناصر: المخرج",
-              "name": "items",
-              "type": "repeater",
+              "type": "sh_rows",
               "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
               "required": 0,
               "layout": "block",
               "button_label": "إضافة عنصر",
               "sub_fields": [
                 {
-                  "key": "field_b06b8755a6954",
-                  "label": "نص: المخرج",
+                  "key": "field_7b62ba33c5aa5",
+                  "label": "نص: ماذا يريد العميل فعلًا؟",
                   "name": "label",
                   "type": "text",
                   "instructions": "",
@@ -661,114 +278,361 @@
               ],
               "min": 0,
               "max": 0,
-              "collapsed": "field_b06b8755a6954"
+              "collapsed": "field_7b62ba33c5aa5"
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_1898d44f90d21"
+        }
+      ]
+    },
+    {
+      "key": "field_c3b05a82fd343",
+      "label": "الفرص",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_125580e08a768",
+      "label": "",
+      "name": "s_opportunities",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_60d831b48136e",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_f32f10c89b1cc",
+          "name": "sh_anchor",
+          "label": "معرّف الرابط الداخلي (anchor)",
+          "type": "text",
+          "placeholder": "uae-opportunities",
+          "instructions": "الافتراضي: #uae-opportunities — الأزرار داخل الصفحة تشير إليه.",
+          "wrapper": {
+            "width": "70"
+          }
+        },
+        {
+          "key": "field_20964b10aa74a",
+          "name": "eyebrow",
+          "label": "الوسم",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_54150a5e10fb6",
+          "name": "title",
+          "label": "العنوان",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_b6c94a94d99cd",
+          "name": "review_label",
+          "label": "عنوان «ما الذي نراجعه»",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_811a5944848fd",
+          "name": "improve_label",
+          "label": "عنوان «ما الذي يمكن تحسينه»",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_6c2092ddc81a5",
+          "name": "outcome_label",
+          "label": "عنوان «النتيجة التجارية»",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_26ba9646255db",
+          "name": "opps",
+          "label": "الفرص",
+          "type": "sh_rows",
+          "instructions": "",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة فرصة",
+          "collapsed": "field_d95da83581ed7",
+          "max": 8,
+          "sub_fields": [
+            {
+              "key": "field_5b4308de8f309",
+              "name": "num",
+              "label": "الرقم",
+              "type": "text",
+              "instructions": "",
+              "required": 0
             },
             {
-              "key": "field_38b83b8cbc994",
-              "label": "نص: الأولوية",
+              "key": "field_d95da83581ed7",
+              "name": "label",
+              "label": "الفرصة",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_04b6db5c302c9",
+              "name": "review",
+              "label": "ما الذي نراجعه",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 2,
+              "new_lines": ""
+            },
+            {
+              "key": "field_b0c7a5b89a868",
+              "name": "improve",
+              "label": "ما الذي يمكن تحسينه",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 2,
+              "new_lines": ""
+            },
+            {
+              "key": "field_6e57fc6ac2948",
+              "name": "outcome",
+              "label": "النتيجة التجارية",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 2,
+              "new_lines": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "field_9106bdae2277b",
+      "label": "قسم: دليل موثق",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_e449910066933",
+      "label": "",
+      "name": "s_gulf_case",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_949a19e29f640",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_ff2076bf8bcdb",
+          "name": "sh_anchor",
+          "label": "معرّف الرابط الداخلي (anchor)",
+          "type": "text",
+          "placeholder": "uae-case",
+          "instructions": "الافتراضي: #uae-case — الأزرار داخل الصفحة تشير إليه.",
+          "wrapper": {
+            "width": "70"
+          }
+        },
+        {
+          "key": "field_8ee0a5c52cfb7",
+          "label": "الوسم: دليل موثق",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_26e1a5cac903e",
+          "label": "العنوان: نتيجة موثقة من مشروع في سوق خليجي",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_a241332f56aaf",
+          "label": "النص: نعرض النتيجة بسوقها ومصدرها الحقيقيي…",
+          "name": "text",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_21c8ce9703fa9",
+          "label": "عنوان فرعي: نمو الإيرادات العضوية 253.05%",
+          "name": "heading",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_371441a9779e5",
+          "label": "العناصر: السوق السعودية",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_dacb3bfae60da",
+              "label": "نص: السوق",
               "name": "label",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
-              "key": "field_3ca3c2b917341",
-              "label": "العناصر: 01 مراجعة الظهور الحالي والمنافسين ا…",
-              "name": "items_2",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 5. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_7f6a8b025e97b",
-                  "label": "النص: مراجعة الظهور الحالي والمنافسين الفع…",
-                  "name": "text",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_a83947e6f13bd",
-                  "label": "نص: قائمة بالمواقع والصفحات التي تستحوذ …",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_023f2f3b9a129",
-                  "label": "نص: عالية",
-                  "name": "label_2",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_95a7600d392e8",
-                  "label": "نمط العرض",
-                  "name": "variant",
-                  "type": "select",
-                  "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
-                  "required": 0,
-                  "choices": {
-                    "v1": "النمط 1 — فسفوري",
-                    "v2": "النمط 2 — فسفوري",
-                    "v3": "النمط 3 — سماوي",
-                    "v4": "النمط 4 — سماوي",
-                    "v5": "النمط 5 — سماوي"
-                  },
-                  "default_value": "v1",
-                  "allow_null": 0,
-                  "ui": 0,
-                  "return_format": "value"
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_7f6a8b025e97b"
+              "key": "field_c4bd66ea8f789",
+              "label": "عنوان فرعي: السعودية",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
             }
           ],
-          "min": "",
-          "max": "1"
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_dacb3bfae60da"
         },
-        "layout_375f53e99e3e1": {
-          "key": "layout_375f53e99e3e1",
-          "name": "sectors",
-          "label": "القطاعات",
-          "display": "block",
+        {
+          "key": "field_3dbee1bfd7a79",
+          "label": "نص: جوجل أناليتكس",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_df11a926fb844",
+          "label": "الرابط: ",
+          "name": "link",
+          "type": "text",
+          "instructions": "رابط داخلي يبدأ بـ / أو رابط كامل أو #قسم",
+          "required": 0
+        },
+        {
+          "key": "field_74ab1bc841241",
+          "label": "الصورة: تقرير جوجل أناليتكس يوضح نمو الإيراد…",
+          "name": "image",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "return_format": "id",
+          "preview_size": "medium",
+          "library": "all"
+        }
+      ]
+    },
+    {
+      "key": "field_af760826a6ea0",
+      "label": "قسم: متى تحتاج إلى خطة سيو مخصصة للسوق ال…",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_fb7d64ff4c2fe",
+      "label": "",
+      "name": "s_needs",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_df59956a963a5",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_48ae401fa809f",
+          "label": "العنوان: متى تحتاج إلى خطة سيو مخصصة للسوق ال…",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_eeae89df155d8",
+          "label": "العناصر: 01 موقع يظهر ولا يجلب استفسارات كافي…",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
           "sub_fields": [
             {
-              "key": "field_e50df727a456c",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_602de36c38111",
-              "label": "الوسم: القطاعات",
-              "name": "eyebrow",
+              "key": "field_2328ef87c6fd4",
+              "label": "عنوان فرعي: موقع يظهر ولا يجلب استفسارات كافية",
+              "name": "heading",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
-              "key": "field_4aeb5931e334f",
-              "label": "العنوان: تختلف فرصة البحث باختلاف طبيعة النشاط",
-              "name": "title",
+              "key": "field_c1182e5587517",
+              "label": "النص: الظهور موجود، لكن الصفحات لا تقود ال…",
+              "name": "text",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
-              "key": "field_ee4f8eb355a93",
-              "label": "الرابط: جميع القطاعات ←",
+              "key": "field_72b8f2a642825",
+              "label": "الرابط: السيو الداخلي ←",
               "name": "link",
               "type": "page_link",
               "instructions": "",
@@ -784,455 +648,744 @@
               "multiple": 0
             },
             {
-              "key": "field_2b30c8b84821f",
-              "label": "نص الرابط: جميع القطاعات ←",
+              "key": "field_3158fba9f59fe",
+              "label": "نص الرابط: السيو الداخلي",
               "name": "link_label",
               "type": "text",
               "instructions": "",
               "required": 0
-            },
-            {
-              "key": "field_bff911c7d7a87",
-              "label": "العناصر: التجارة الإلكترونية البحث يبدأ من ال…",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 8. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_75550d4feee7e",
-                  "label": "الرابط: التجارة الإلكترونية البحث يبدأ من ال…",
-                  "name": "link",
-                  "type": "page_link",
-                  "instructions": "",
-                  "required": 0,
-                  "post_type": [
-                    "page",
-                    "case_study",
-                    "team_member",
-                    "post"
-                  ],
-                  "allow_null": 1,
-                  "allow_archives": 1,
-                  "multiple": 0
-                },
-                {
-                  "key": "field_43e612fe51b4b",
-                  "label": "عنوان فرعي: التجارة الإلكترونية",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_a483ae5fdeb40",
-                  "label": "نص: البحث يبدأ من المنتج أو الفئة وينتهي…",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_aca0bf6d6796b",
-                  "label": "نمط العرض",
-                  "name": "variant",
-                  "type": "select",
-                  "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
-                  "required": 0,
-                  "choices": {
-                    "v1": "النمط 1 — فسفوري",
-                    "v2": "النمط 2 — sky-rgb"
-                  },
-                  "default_value": "v1",
-                  "allow_null": 0,
-                  "ui": 0,
-                  "return_format": "value"
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_43e612fe51b4b"
             }
           ],
-          "min": "",
-          "max": "1"
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_2328ef87c6fd4"
+        }
+      ]
+    },
+    {
+      "key": "field_31a7bf5b63d2f",
+      "label": "قسم: الشهر الأول",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_11b568faa554d",
+      "label": "",
+      "name": "s_first_month",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_2a3707141180f",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
         },
-        "layout_812d77d6a20b0": {
-          "key": "layout_812d77d6a20b0",
-          "name": "measure",
-          "label": "قسم: Measure",
-          "display": "block",
+        {
+          "key": "field_101b3f392e4c8",
+          "label": "الوسم: الشهر الأول",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_270c130b55ddb",
+          "label": "العنوان: أولويات واضحة قبل توسيع نطاق العمل",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_161205b29f90e",
+          "label": "النص: نبدأ بتحديد المواقع والصفحات التي تس…",
+          "name": "text",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_8bb0ffc510879",
+          "label": "العناصر: المخرج",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
           "sub_fields": [
             {
-              "key": "field_4518304c5473b",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_adc8d24157039",
-              "label": "الوسم: القياس",
-              "name": "eyebrow",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_0cbc2789e037d",
-              "label": "العنوان: نقيس التقدم بما يخدم هدف الشركة",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_ede060406fb44",
-              "label": "النص: النتائج المنشورة في صفحة النتائج تخص…",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
-              "required": 0,
-              "rows": 3,
-              "new_lines": ""
-            },
-            {
-              "key": "field_6055562631f54",
-              "label": "العناصر: تحسن ظهور الصفحات التجارية المهمة نت…",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_a6441624c4e66",
-                  "label": "الأيقونة",
-                  "name": "icon",
-                  "type": "select",
-                  "instructions": "أيقونات التصميم المعتمد.",
-                  "required": 0,
-                  "choices": {
-                    "i74ca11e5": "أيقونة 51",
-                    "i2779bfcf": "أيقونة 52",
-                    "i2cbe0dd3": "أيقونة 53"
-                  },
-                  "default_value": "i74ca11e5",
-                  "allow_null": 0,
-                  "return_format": "value"
-                },
-                {
-                  "key": "field_76981db75fa4a",
-                  "label": "عنوان فرعي: تحسن ظهور الصفحات التجارية المهمة",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_1c17bcfa13295",
-                  "label": "النص: نتابع ترتيب وظهور الصفحات التي تمثل …",
-                  "name": "text",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_76981db75fa4a"
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_e4b911b7a0d7e": {
-          "key": "layout_e4b911b7a0d7e",
-          "name": "why",
-          "label": "قسم: Why",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_447bbcc65040f",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_4757d65fef480",
-              "label": "العنوان: قرارات سيو مبنية على الأولوية والقياس",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_47f72e7e5f63b",
-              "label": "العناصر: نحدد الفرص التي تستحق الاستثمار قبل …",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_cdaa45774d709",
-                  "label": "نص: نحدد الفرص التي تستحق الاستثمار قبل …",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_cdaa45774d709"
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_61612d9c03217": {
-          "key": "layout_61612d9c03217",
-          "name": "reviews",
-          "label": "التقييمات",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_f3a663b4a6601",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_65ccf4d6e9825",
-              "label": "الوسم: تجارب العملاء",
-              "name": "eyebrow",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_5b25fc916bb83",
-              "label": "العنوان: ماذا يقول عملاؤنا عن العمل معنا؟",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_64051e41b7cf5",
-              "label": "النص: تُعرض التقييمات كما كتبها العملاء في…",
-              "name": "text",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_50f644bfcb195",
-              "label": "عنوان فرعي: مساحة عرض تقييمات Google",
-              "name": "heading",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_529f692590c4d",
-              "label": "النص: تظهر هنا تقييمات الحساب الحقيقية بأس…",
-              "name": "text_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_110dd78ebb8b1",
-              "label": "نص: Trustindex",
+              "key": "field_b06b8755a6954",
+              "label": "نص: المخرج",
               "name": "label",
               "type": "text",
               "instructions": "",
               "required": 0
             }
           ],
-          "min": "",
-          "max": "1"
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_b06b8755a6954"
         },
-        "layout_7b152482be3e3": {
-          "key": "layout_7b152482be3e3",
-          "name": "faq",
-          "label": "الأسئلة الشائعة — مكوّن مشترك",
-          "display": "block",
+        {
+          "key": "field_38b83b8cbc994",
+          "label": "نص: الأولوية",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_3ca3c2b917341",
+          "label": "العناصر: 01 مراجعة الظهور الحالي والمنافسين ا…",
+          "name": "items_2",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 5. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
           "sub_fields": [
             {
-              "key": "field_aa19c120391a7",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_74624440c2246",
-              "name": "eyebrow",
-              "label": "الوسم",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_b71975e129cd1",
-              "name": "title",
-              "label": "عنوان القسم",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_b971c2a4ea87f",
-              "name": "items",
-              "label": "الأسئلة",
-              "type": "repeater",
-              "layout": "block",
-              "button_label": "إضافة سؤال",
-              "collapsed": "field_f705f77ad75b7",
-              "instructions": "نفس الأسئلة تُستخدم في FAQPage Schema. لا تضف سؤالًا غير ظاهر في الصفحة.",
-              "sub_fields": [
-                {
-                  "key": "field_f705f77ad75b7",
-                  "name": "question",
-                  "label": "السؤال",
-                  "type": "text",
-                  "required": 1
-                },
-                {
-                  "key": "field_8aaf3e4b814c3",
-                  "name": "answer",
-                  "label": "الإجابة",
-                  "type": "textarea",
-                  "rows": 3,
-                  "new_lines": "br",
-                  "required": 1
-                }
-              ],
-              "required": 0
-            },
-            {
-              "key": "field_b095726d2d28c",
-              "name": "schema",
-              "label": "إخراج FAQPage Schema",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 1,
-              "instructions": "يُخرج من نفس الأسئلة الظاهرة فقط.",
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_258a37ece7726": {
-          "key": "layout_258a37ece7726",
-          "name": "booking",
-          "label": "حجز الاستشارة — مكوّن مشترك",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_9e1fbc92a901a",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_6d896c23db708",
-              "name": "service",
-              "label": "الخدمة المختارة مسبقًا",
-              "type": "select",
-              "choices": {
-                "": "بدون اختيار مسبق",
-                "seo": "تحسين محركات البحث",
-                "web": "تصميم وتطوير موقع",
-                "stores": "تصميم متجر إلكتروني",
-                "products": "إضافة المنتجات",
-                "unsure": "لم أحدد بعد"
-              },
-              "default_value": "",
-              "allow_null": 1,
-              "return_format": "value",
-              "required": 0
-            },
-            {
-              "key": "field_529bb0286a0ef",
-              "name": "eyebrow",
-              "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_f3033b5774835",
-              "name": "title",
-              "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_6faf9a4c13582",
+              "key": "field_7f6a8b025e97b",
+              "label": "النص: مراجعة الظهور الحالي والمنافسين الفع…",
               "name": "text",
-              "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
-              "type": "textarea",
-              "rows": 2,
-              "new_lines": "",
+              "type": "text",
+              "instructions": "",
               "required": 0
             },
             {
-              "key": "field_51585ea47b8e1",
-              "name": "points",
-              "label": "نقاط الفائدة (فارغة = النقاط العامة)",
-              "type": "repeater",
-              "layout": "table",
-              "button_label": "إضافة نقطة",
-              "max": 4,
-              "sub_fields": [
-                {
-                  "key": "field_b58c8633a5a01",
-                  "name": "text",
-                  "label": "النقطة",
-                  "type": "text",
-                  "required": 0
-                }
+              "key": "field_a83947e6f13bd",
+              "label": "نص: قائمة بالمواقع والصفحات التي تستحوذ …",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_023f2f3b9a129",
+              "label": "نص: عالية",
+              "name": "label_2",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_95a7600d392e8",
+              "label": "نمط العرض",
+              "name": "variant",
+              "type": "select",
+              "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
+              "required": 0,
+              "choices": {
+                "v1": "النمط 1 — فسفوري",
+                "v2": "النمط 2 — فسفوري",
+                "v3": "النمط 3 — سماوي",
+                "v4": "النمط 4 — سماوي",
+                "v5": "النمط 5 — سماوي"
+              },
+              "default_value": "v1",
+              "allow_null": 0,
+              "ui": 0,
+              "return_format": "value"
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_7f6a8b025e97b"
+        }
+      ]
+    },
+    {
+      "key": "field_03147f504190e",
+      "label": "القطاعات",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_803141957645c",
+      "label": "",
+      "name": "s_sectors",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_e50df727a456c",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_602de36c38111",
+          "label": "الوسم: القطاعات",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_4aeb5931e334f",
+          "label": "العنوان: تختلف فرصة البحث باختلاف طبيعة النشاط",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_ee4f8eb355a93",
+          "label": "الرابط: جميع القطاعات ←",
+          "name": "link",
+          "type": "page_link",
+          "instructions": "",
+          "required": 0,
+          "post_type": [
+            "page",
+            "case_study",
+            "team_member",
+            "post"
+          ],
+          "allow_null": 1,
+          "allow_archives": 1,
+          "multiple": 0
+        },
+        {
+          "key": "field_2b30c8b84821f",
+          "label": "نص الرابط: جميع القطاعات ←",
+          "name": "link_label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_bff911c7d7a87",
+          "label": "العناصر: التجارة الإلكترونية البحث يبدأ من ال…",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 8. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_75550d4feee7e",
+              "label": "الرابط: التجارة الإلكترونية البحث يبدأ من ال…",
+              "name": "link",
+              "type": "page_link",
+              "instructions": "",
+              "required": 0,
+              "post_type": [
+                "page",
+                "case_study",
+                "team_member",
+                "post"
               ],
+              "allow_null": 1,
+              "allow_archives": 1,
+              "multiple": 0
+            },
+            {
+              "key": "field_43e612fe51b4b",
+              "label": "عنوان فرعي: التجارة الإلكترونية",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_a483ae5fdeb40",
+              "label": "نص: البحث يبدأ من المنتج أو الفئة وينتهي…",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_aca0bf6d6796b",
+              "label": "نمط العرض",
+              "name": "variant",
+              "type": "select",
+              "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
+              "required": 0,
+              "choices": {
+                "v1": "النمط 1 — فسفوري",
+                "v2": "النمط 2 — sky-rgb"
+              },
+              "default_value": "v1",
+              "allow_null": 0,
+              "ui": 0,
+              "return_format": "value"
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_43e612fe51b4b"
+        }
+      ]
+    },
+    {
+      "key": "field_9453753f50533",
+      "label": "قسم: القياس",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_834760ff14db4",
+      "label": "",
+      "name": "s_measure",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_4518304c5473b",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_adc8d24157039",
+          "label": "الوسم: القياس",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_0cbc2789e037d",
+          "label": "العنوان: نقيس التقدم بما يخدم هدف الشركة",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_ede060406fb44",
+          "label": "النص: النتائج المنشورة في صفحة النتائج تخص…",
+          "name": "text",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_6055562631f54",
+          "label": "العناصر: تحسن ظهور الصفحات التجارية المهمة نت…",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_a6441624c4e66",
+              "label": "الأيقونة",
+              "name": "icon",
+              "type": "select",
+              "instructions": "أيقونات التصميم المعتمد.",
+              "required": 0,
+              "choices": {
+                "i74ca11e5": "أيقونة 51",
+                "i2779bfcf": "أيقونة 52",
+                "i2cbe0dd3": "أيقونة 53"
+              },
+              "default_value": "i74ca11e5",
+              "allow_null": 0,
+              "return_format": "value"
+            },
+            {
+              "key": "field_76981db75fa4a",
+              "label": "عنوان فرعي: تحسن ظهور الصفحات التجارية المهمة",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_1c17bcfa13295",
+              "label": "النص: نتابع ترتيب وظهور الصفحات التي تمثل …",
+              "name": "text",
+              "type": "text",
+              "instructions": "",
               "required": 0
             }
           ],
-          "min": "",
-          "max": "1"
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_76981db75fa4a"
         }
+      ]
+    },
+    {
+      "key": "field_92422d44a0c9a",
+      "label": "قسم: قرارات سيو مبنية على الأولوية والقياس",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_8f1eb7dca9e0b",
+      "label": "",
+      "name": "s_why",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
       },
-      "button_label": "إضافة قسم",
-      "min": "",
-      "max": ""
+      "sub_fields": [
+        {
+          "key": "field_447bbcc65040f",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_4757d65fef480",
+          "label": "العنوان: قرارات سيو مبنية على الأولوية والقياس",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_47f72e7e5f63b",
+          "label": "العناصر: نحدد الفرص التي تستحق الاستثمار قبل …",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_cdaa45774d709",
+              "label": "نص: نحدد الفرص التي تستحق الاستثمار قبل …",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_cdaa45774d709"
+        }
+      ]
+    },
+    {
+      "key": "field_db4734dca1912",
+      "label": "التقييمات",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_bfc737ecd15be",
+      "label": "",
+      "name": "s_reviews",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_f3a663b4a6601",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_65ccf4d6e9825",
+          "label": "الوسم: تجارب العملاء",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_5b25fc916bb83",
+          "label": "العنوان: ماذا يقول عملاؤنا عن العمل معنا؟",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_64051e41b7cf5",
+          "label": "النص: تُعرض التقييمات كما كتبها العملاء في…",
+          "name": "text",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_50f644bfcb195",
+          "label": "عنوان فرعي: مساحة عرض تقييمات Google",
+          "name": "heading",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_529f692590c4d",
+          "label": "النص: تظهر هنا تقييمات الحساب الحقيقية بأس…",
+          "name": "text_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_110dd78ebb8b1",
+          "label": "نص: Trustindex",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_62f51acaedfeb",
+      "label": "الأسئلة الشائعة — مكوّن مشترك",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_0d1a96a762e04",
+      "label": "",
+      "name": "s_faq",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_aa19c120391a7",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_74624440c2246",
+          "name": "eyebrow",
+          "label": "الوسم",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_b71975e129cd1",
+          "name": "title",
+          "label": "عنوان القسم",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_b971c2a4ea87f",
+          "name": "items",
+          "label": "الأسئلة",
+          "type": "sh_rows",
+          "layout": "block",
+          "button_label": "إضافة سؤال",
+          "collapsed": "field_f705f77ad75b7",
+          "instructions": "نفس الأسئلة تُستخدم في FAQPage Schema. لا تضف سؤالًا غير ظاهر في الصفحة.",
+          "sub_fields": [
+            {
+              "key": "field_f705f77ad75b7",
+              "name": "question",
+              "label": "السؤال",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_8aaf3e4b814c3",
+              "name": "answer",
+              "label": "الإجابة",
+              "type": "textarea",
+              "rows": 3,
+              "new_lines": "br",
+              "required": 1
+            }
+          ],
+          "required": 0
+        },
+        {
+          "key": "field_b095726d2d28c",
+          "name": "schema",
+          "label": "إخراج FAQPage Schema",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 1,
+          "instructions": "يُخرج من نفس الأسئلة الظاهرة فقط.",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_dd03db1a67f0c",
+      "label": "حجز الاستشارة — مكوّن مشترك",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_b2739a5c01c30",
+      "label": "",
+      "name": "s_booking",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_9e1fbc92a901a",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_6d896c23db708",
+          "name": "service",
+          "label": "الخدمة المختارة مسبقًا",
+          "type": "select",
+          "choices": {
+            "": "بدون اختيار مسبق",
+            "seo": "تحسين محركات البحث",
+            "web": "تصميم وتطوير موقع",
+            "stores": "تصميم متجر إلكتروني",
+            "products": "إضافة المنتجات",
+            "unsure": "لم أحدد بعد"
+          },
+          "default_value": "",
+          "allow_null": 1,
+          "return_format": "value",
+          "required": 0
+        },
+        {
+          "key": "field_529bb0286a0ef",
+          "name": "eyebrow",
+          "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_f3033b5774835",
+          "name": "title",
+          "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_6faf9a4c13582",
+          "name": "text",
+          "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
+          "type": "textarea",
+          "rows": 2,
+          "new_lines": "",
+          "required": 0
+        },
+        {
+          "key": "field_51585ea47b8e1",
+          "name": "points",
+          "label": "نقاط الفائدة (فارغة = النقاط العامة)",
+          "type": "sh_rows",
+          "layout": "table",
+          "button_label": "إضافة نقطة",
+          "max": 4,
+          "sub_fields": [
+            {
+              "key": "field_b58c8633a5a01",
+              "name": "text",
+              "label": "النقطة",
+              "type": "text",
+              "required": 0
+            }
+          ],
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_90fced82a5e2e",
+      "label": "",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 1
     }
   ],
   "location": [
@@ -1258,7 +1411,7 @@
     "send-trackbacks"
   ],
   "active": true,
-  "description": "حقول قالب السيو في الإمارات — مولدة من SEO House - UAE SEO Page.dc.html",
+  "description": "حقول قالب السيو في الإمارات — مولدة من SEO House - UAE SEO Page.dc.html. الأقسام بترتيب التصميم؛ يمكن إخفاء أي قسم.",
   "show_in_rest": 0,
   "modified": 1790000000
 }

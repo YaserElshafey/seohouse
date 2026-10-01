@@ -1,6 +1,7 @@
 <?php
 /**
- * Renders the Flexible Content sections of a design page template.
+ * Renders the sections of a design page template (ACF Group fields "s_<layout>", read through
+ * sh_core_sections() in SEO House Core).
  * Each layout maps to sections/<page-key>/<layout>.php, or to sections/shared/<layout>.php
  * for shared components (FAQ, booking, related links).
  *
@@ -17,8 +18,7 @@ function sh_sections_rows( ?int $post_id = null ): array {
 		return array();
 	}
 	if ( ! isset( $cache[ $post_id ] ) ) {
-		$rows              = get_field( 'sh_sections', $post_id );
-		$cache[ $post_id ] = is_array( $rows ) ? $rows : array();
+		$cache[ $post_id ] = sh_core_sections( $post_id );
 	}
 	return $cache[ $post_id ];
 }
@@ -38,7 +38,7 @@ function sh_section_file( string $key, string $layout ): string {
 function sh_render_sections( string $key ): void {
 	if ( ! sh_acf_ready() ) {
 		if ( current_user_can( 'edit_pages' ) ) {
-			echo '<div class="sh-admin-hint">' . esc_html__( 'حقول ACF غير متاحة؛ فعّل ACF PRO أو Secure Custom Fields وإضافة SEO House Core.', 'seohouse' ) . '</div>';
+			echo '<div class="sh-admin-hint">' . esc_html__( 'حقول ACF غير متاحة؛ فعّل Advanced Custom Fields وإضافة SEO House Core.', 'seohouse' ) . '</div>';
 		}
 		return;
 	}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Site search over ACF content: design pages keep their text in Flexible Content fields,
+ * Site search over ACF content: design pages keep their text in section and list fields,
  * so a plain-text copy is kept in one meta key (_sh_search_text) and included in the "s" query.
  *
  * @package SEOHouseCore

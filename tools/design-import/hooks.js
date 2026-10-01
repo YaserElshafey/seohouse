@@ -4,6 +4,7 @@
  *   - dynamic regions that read WordPress data (logos, team, results, posts),
  *   - the ACF field group wrapper for each page template.
  */
+const { toFree, assertFree } = require('./lib/acf-free');
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
@@ -138,34 +139,41 @@ try { PAGE_HOOKS = require('./hooks.pages')({ openTag, attrStyle, phpStr, hasSty
 
 // ------------------------------------------------------------------ field group
 function fieldGroup(pg, layouts) {
-  const lay = {};
+  // ACF (free): each design section is an ACF Group field "s_<layout>" in the design order,
+  // introduced by an Accordion field so the editor can fold sections. (Flexible Content is PRO.)
+  const fields = [];
   for (const l of layouts) {
-    const lk = 'layout_' + md5(`${pg.key}/${l.layout}`).slice(0, 13);
     const common = [
       { key: key(pg.key, l.layout, '__hide'), name: 'sh_hide', label: 'إخفاء القسم', type: 'true_false', ui: 1, default_value: 0, wrapper: { width: '30' } }
     ];
     if (l.anchor) common.push({ key: key(pg.key, l.layout, '__anchor'), name: 'sh_anchor', label: 'معرّف الرابط الداخلي (anchor)', type: 'text', placeholder: l.anchor, instructions: `الافتراضي: #${l.anchor} — الأزرار داخل الصفحة تشير إليه.`, wrapper: { width: '70' } });
-    lay[lk] = {
-      key: lk, name: l.layout, label: sectionLabel(l.label, l.shared), display: 'block',
-      sub_fields: [...common, ...normalizeFields(l.fields)], min: '', max: '1'
-    };
+    fields.push({ key: key(pg.key, l.layout, '__acc'), label: sectionLabel(l.label, l.shared, l.fields), name: '', type: 'accordion', open: 0, multi_expand: 1, endpoint: 0 });
+    fields.push({ key: key(pg.key, l.layout, '__section'), label: '', name: 's_' + l.layout, type: 'group', layout: 'block', instructions: '', wrapper: { class: 'sh-section' }, sub_fields: toFree([...common, ...normalizeFields(l.fields)]) });
   }
-  return {
+  fields.push({ key: key(pg.key, '__acc_end'), label: '', name: '', type: 'accordion', open: 0, multi_expand: 0, endpoint: 1 });
+  return assertFree({
     key: `group_sh_page_${pg.key.replace(/-/g, '_')}`,
     title: `أقسام الصفحة — ${pg.admin}`,
-    fields: [
-      { key: key(pg.key, 'sh_sections'), label: 'أقسام الصفحة', name: 'sh_sections', type: 'flexible_content', instructions: 'الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.', layouts: lay, button_label: 'إضافة قسم', min: '', max: '' }
-    ],
+    fields,
     location: [[{ param: 'page_template', operator: '==', value: `page-templates/${pg.key}.php` }]],
     menu_order: 0, position: 'normal', style: 'default', label_placement: 'top', instruction_placement: 'label',
     hide_on_screen: ['the_content', 'excerpt', 'discussion', 'comments', 'format', 'send-trackbacks'],
-    active: true, description: `حقول قالب ${pg.admin} — مولدة من ${pg.file}`, show_in_rest: 0,
+    active: true, description: `حقول قالب ${pg.admin} — مولدة من ${pg.file}. الأقسام بترتيب التصميم؛ يمكن إخفاء أي قسم.`, show_in_rest: 0,
     modified: 1790000000
-  };
+  });
 }
 
-const LABEL_AR = { Hero: 'الواجهة (Hero)', FAQ: 'الأسئلة الشائعة', Booking: 'حجز الاستشارة', Related: 'صفحات مرتبطة', 'Client logos': 'شعارات العملاء', Reviews: 'التقييمات', Results: 'النتائج', Sectors: 'القطاعات', Services: 'الخدمات', Markets: 'الأسواق', Articles: 'المقالات', Platforms: 'المنصات', About: 'عن الشركة', Process: 'خطوات العمل', Scope: 'النطاق', Phases: 'المراحل', Deliverables: 'التسليمات', Tools: 'الأدوات', Flow: 'المسار', Cases: 'الحالات' };
-function sectionLabel(l, shared) { return (LABEL_AR[l] ? `${LABEL_AR[l]}` : `قسم: ${l}`) + (shared ? ' — مكوّن مشترك' : ''); }
+const LABEL_AR = { Hero: 'الواجهة (Hero)', FAQ: 'الأسئلة الشائعة', Booking: 'حجز الاستشارة', Related: 'صفحات مرتبطة', 'Client logos': 'شعارات العملاء', Reviews: 'التقييمات', Results: 'النتائج', Sectors: 'القطاعات', Services: 'الخدمات', Markets: 'الأسواق', Articles: 'المقالات', Platforms: 'المنصات', About: 'عن الشركة', Process: 'خطوات العمل', Scope: 'النطاق', Phases: 'المراحل', Deliverables: 'التسليمات', Tools: 'الأدوات', Flow: 'المسار', Cases: 'الحالات', 'Pricing strip': 'شريط الأسعار', Honest: 'ما نلتزم به', Opportunities: 'الفرص' };
+/** Section name in the editor: known Arabic name, else the section's own heading from the design. */
+function sectionLabel(l, shared, fields = []) {
+  let name = LABEL_AR[l];
+  if (!name) {
+    const f = (fields || []).find(x => x.name === 'eyebrow') || (fields || []).find(x => x.name === 'title');
+    const preview = f && String(f.label || '').split(': ').slice(1).join(': ').trim();
+    name = preview ? `قسم: ${preview}` : `قسم: ${l}`;
+  }
+  return name + (shared ? ' — مكوّن مشترك' : '');
+}
 
 function normalizeFields(fields) {
   return (fields || []).map(f => {

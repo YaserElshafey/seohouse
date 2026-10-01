@@ -3,217 +3,238 @@
   "title": "أقسام الصفحة — الشروط والأحكام",
   "fields": [
     {
-      "key": "field_60c938b34a887",
-      "label": "أقسام الصفحة",
-      "name": "sh_sections",
-      "type": "flexible_content",
-      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
-      "layouts": {
-        "layout_ee898823f063b": {
-          "key": "layout_ee898823f063b",
-          "name": "hero",
-          "label": "الواجهة (Hero)",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_d88a35e59096d",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_4a5b587c438bf",
-              "label": "العنوان: الشروط والأحكام",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_8b21b8cb45929",
-              "label": "النص: شروط استخدام الموقع وطلب الخدمات. ال…",
-              "name": "text",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_3e2bcb61322cc",
-              "label": "الرابط: سياسة الخصوصية ←",
-              "name": "link",
-              "type": "page_link",
-              "instructions": "",
-              "required": 0,
-              "post_type": [
-                "page",
-                "case_study",
-                "team_member",
-                "post"
-              ],
-              "allow_null": 1,
-              "allow_archives": 1,
-              "multiple": 0
-            },
-            {
-              "key": "field_daa8b5439a796",
-              "label": "نص الرابط: سياسة الخصوصية ←",
-              "name": "link_label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
+      "key": "field_ab1b01ddf6ec6",
+      "label": "الواجهة (Hero)",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_6c1aec90578d5",
+      "label": "",
+      "name": "s_hero",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_d88a35e59096d",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
         },
-        "layout_e657494a98826": {
-          "key": "layout_e657494a98826",
-          "name": "document",
-          "label": "قسم: Document",
-          "display": "block",
+        {
+          "key": "field_4a5b587c438bf",
+          "label": "العنوان: الشروط والأحكام",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_8b21b8cb45929",
+          "label": "النص: شروط استخدام الموقع وطلب الخدمات. ال…",
+          "name": "text",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_3e2bcb61322cc",
+          "label": "الرابط: سياسة الخصوصية ←",
+          "name": "link",
+          "type": "page_link",
+          "instructions": "",
+          "required": 0,
+          "post_type": [
+            "page",
+            "case_study",
+            "team_member",
+            "post"
+          ],
+          "allow_null": 1,
+          "allow_archives": 1,
+          "multiple": 0
+        },
+        {
+          "key": "field_daa8b5439a796",
+          "label": "نص الرابط: سياسة الخصوصية ←",
+          "name": "link_label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_15de28b625ef9",
+      "label": "قسم: المحتويات",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_7a5320f7e9231",
+      "label": "",
+      "name": "s_document",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_bde84b0fd4ac3",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_2fb138dbe2ca7",
+          "label": "الوسم: المحتويات",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_340afad938d44",
+          "label": "العناصر: 1استخدام الموقع",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 9. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
           "sub_fields": [
             {
-              "key": "field_bde84b0fd4ac3",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_2fb138dbe2ca7",
-              "label": "الوسم: المحتويات",
-              "name": "eyebrow",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_340afad938d44",
-              "label": "العناصر: 1استخدام الموقع",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 9. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_9b688f1ccd5ef",
-                  "label": "نص: استخدام الموقع",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_89d738b858ff8",
-                  "label": "نمط العرض",
-                  "name": "variant",
-                  "type": "select",
-                  "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
-                  "required": 0,
-                  "choices": {
-                    "v1": "النمط 1",
-                    "v2": "النمط 2",
-                    "v3": "النمط 3",
-                    "v4": "النمط 4",
-                    "v5": "النمط 5",
-                    "v6": "النمط 6",
-                    "v7": "النمط 7",
-                    "v8": "النمط 8",
-                    "v9": "النمط 9"
-                  },
-                  "default_value": "v1",
-                  "allow_null": 0,
-                  "ui": 0,
-                  "return_format": "value"
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_9b688f1ccd5ef"
-            },
-            {
-              "key": "field_fdf7750bd221e",
-              "label": "نص: آخر تحديث:",
+              "key": "field_9b688f1ccd5ef",
+              "label": "نص: استخدام الموقع",
               "name": "label",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
-              "key": "field_d2cde4329728b",
-              "label": "العناصر: 1. استخدام الموقع [يُضاف النص القانو…",
-              "name": "items_2",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 9. يمكن الإضافة والحذف وإعادة الترتيب.",
+              "key": "field_89d738b858ff8",
+              "label": "نمط العرض",
+              "name": "variant",
+              "type": "select",
+              "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
               "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_af9d7fa1f94af",
-                  "label": "العنوان: 1. استخدام الموقع",
-                  "name": "title",
-                  "type": "textarea",
-                  "instructions": "يمكن استخدام وسوم نصية بسيطة مثل <bdi> و<strong> و<br>.",
-                  "required": 0,
-                  "rows": 3,
-                  "new_lines": ""
-                },
-                {
-                  "key": "field_003452c91097f",
-                  "label": "نص: [يُضاف النص القانوني المعتمد قبل الن…",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_03c0b8310311f",
-                  "label": "نمط العرض",
-                  "name": "variant",
-                  "type": "select",
-                  "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
-                  "required": 0,
-                  "choices": {
-                    "v1": "النمط 1",
-                    "v2": "النمط 2",
-                    "v3": "النمط 3",
-                    "v4": "النمط 4",
-                    "v5": "النمط 5",
-                    "v6": "النمط 6",
-                    "v7": "النمط 7",
-                    "v8": "النمط 8",
-                    "v9": "النمط 9"
-                  },
-                  "default_value": "v1",
-                  "allow_null": 0,
-                  "ui": 0,
-                  "return_format": "value"
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_af9d7fa1f94af"
+              "choices": {
+                "v1": "النمط 1",
+                "v2": "النمط 2",
+                "v3": "النمط 3",
+                "v4": "النمط 4",
+                "v5": "النمط 5",
+                "v6": "النمط 6",
+                "v7": "النمط 7",
+                "v8": "النمط 8",
+                "v9": "النمط 9"
+              },
+              "default_value": "v1",
+              "allow_null": 0,
+              "ui": 0,
+              "return_format": "value"
             }
           ],
-          "min": "",
-          "max": "1"
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_9b688f1ccd5ef"
+        },
+        {
+          "key": "field_fdf7750bd221e",
+          "label": "نص: آخر تحديث:",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_d2cde4329728b",
+          "label": "العناصر: 1. استخدام الموقع [يُضاف النص القانو…",
+          "name": "items_2",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 9. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_af9d7fa1f94af",
+              "label": "العنوان: 1. استخدام الموقع",
+              "name": "title",
+              "type": "textarea",
+              "instructions": "يمكن استخدام وسوم نصية بسيطة مثل <bdi> و<strong> و<br>.",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_003452c91097f",
+              "label": "نص: [يُضاف النص القانوني المعتمد قبل الن…",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_03c0b8310311f",
+              "label": "نمط العرض",
+              "name": "variant",
+              "type": "select",
+              "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
+              "required": 0,
+              "choices": {
+                "v1": "النمط 1",
+                "v2": "النمط 2",
+                "v3": "النمط 3",
+                "v4": "النمط 4",
+                "v5": "النمط 5",
+                "v6": "النمط 6",
+                "v7": "النمط 7",
+                "v8": "النمط 8",
+                "v9": "النمط 9"
+              },
+              "default_value": "v1",
+              "allow_null": 0,
+              "ui": 0,
+              "return_format": "value"
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_af9d7fa1f94af"
         }
-      },
-      "button_label": "إضافة قسم",
-      "min": "",
-      "max": ""
+      ]
+    },
+    {
+      "key": "field_c8d8b88c08985",
+      "label": "",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 1
     }
   ],
   "location": [
@@ -239,7 +260,7 @@
     "send-trackbacks"
   ],
   "active": true,
-  "description": "حقول قالب الشروط والأحكام — مولدة من SEO House - Terms.dc.html",
+  "description": "حقول قالب الشروط والأحكام — مولدة من SEO House - Terms.dc.html. الأقسام بترتيب التصميم؛ يمكن إخفاء أي قسم.",
   "show_in_rest": 0,
   "modified": 1790000000
 }

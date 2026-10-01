@@ -3,985 +3,1090 @@
   "title": "أقسام الصفحة — قطاع الصحة والطب",
   "fields": [
     {
-      "key": "field_e7cd689b767cb",
-      "label": "أقسام الصفحة",
-      "name": "sh_sections",
-      "type": "flexible_content",
-      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
-      "layouts": {
-        "layout_5f93d444c7a65": {
-          "key": "layout_5f93d444c7a65",
-          "name": "hero",
-          "label": "الواجهة (Hero)",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_3bf50ec77df57",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_21ca14c4a9974",
-              "label": "الوسم: الصحة والطب",
-              "name": "eyebrow",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_afb697c639163",
-              "label": "العنوان: تحسين محركات البحث للقطاع الطبي",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_4fffd8e785f10",
-              "label": "النص: المريض قد يبدأ بسؤال عن عرض، ثم يبحث…",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
-              "required": 0,
-              "rows": 3,
-              "new_lines": ""
-            },
-            {
-              "key": "field_9ae00dae35351",
-              "label": "نص الرابط: احجز مكالمة استشارية",
-              "name": "link_label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_4393c44112cd5",
-              "label": "نص الرابط: مسار المريض",
-              "name": "link_label_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_47d311a4dc2b8",
-              "label": "الوسم: مسار بحث العميل",
-              "name": "eyebrow_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_fa39376436b5e",
-              "label": "نص: مثال توضيحي",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_6cfa86aeb086e",
-              "label": "نص: طبيب جلدية قريب مني",
-              "name": "label_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_9912833c62e91",
-              "label": "العناصر: التخصصصفحة تجمع خدمات القسم",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_5ec2730a03b35",
-                  "label": "الأيقونة",
-                  "name": "icon",
-                  "type": "select",
-                  "instructions": "أيقونات التصميم المعتمد.",
-                  "required": 0,
-                  "choices": {
-                    "i300033cf": "أيقونة 78",
-                    "i85efa4ab": "أيقونة 79",
-                    "i4968b528": "أيقونة 80"
-                  },
-                  "default_value": "i300033cf",
-                  "allow_null": 0,
-                  "return_format": "value"
-                },
-                {
-                  "key": "field_21cf7806b8bc9",
-                  "label": "عنوان فرعي: التخصص",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_7d6bd94fc0923",
-                  "label": "نص: صفحة تجمع خدمات القسم",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_21cf7806b8bc9"
-            },
-            {
-              "key": "field_7a20a84aeb7e8",
-              "label": "نص: الإجراء الذي نقيسه",
-              "name": "label_3",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_3096fae22b671",
-              "label": "عنوان فرعي: طلب موعد",
-              "name": "heading",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_f504f7cbe17b8": {
-          "key": "layout_f504f7cbe17b8",
-          "name": "sector_journey",
-          "label": "قسم: Sector journey",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_b5e89c7ea5862",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_d2b1ddf149711",
-              "label": "الوسم: مثال توضيحي لمنشأة صحية",
-              "name": "eyebrow",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_b8ca23aae2ab1",
-              "label": "العنوان: من سؤال المريض إلى طلب الموعد",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_7ca7e73ef1082",
-              "label": "الوسم: 1",
-              "name": "eyebrow_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_628cec162453a",
-              "label": "عنوان فرعي: البحث",
-              "name": "heading",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_08dcf42023bc2",
-              "label": "نص: طبيب أسنان للأطفال",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_1ac8497d322c7",
-              "label": "نص: يبحث عن تخصص وخدمة قريبة قبل أن يبحث…",
-              "name": "label_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_385a671bd30d7",
-              "label": "الوسم: 2",
-              "name": "eyebrow_3",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_9dfbd29ef41e1",
-              "label": "عنوان فرعي: صفحة الخدمة والطبيب",
-              "name": "heading_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_7a4e83f932475",
-              "label": "الوسم: طب أسنان الأطفال",
-              "name": "eyebrow_4",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_659a80f76d51d",
-              "label": "نص: الطبيب · الخبرة · الفرع",
-              "name": "label_3",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_6a4722dadb70a",
-              "label": "الوسم: 3",
-              "name": "eyebrow_5",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_328b1c8ab1efb",
-              "label": "عنوان فرعي: طلب الموعد",
-              "name": "heading_3",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_5b12fb24eec2b",
-              "label": "الوسم: صباحًا",
-              "name": "eyebrow_6",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_6d64e4ac113a4",
-              "label": "الوسم: مساءً",
-              "name": "eyebrow_7",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_671b1688ccc7d",
-              "label": "العناصر: الاسم",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_246028ecbbc9a",
-                  "label": "نص: الاسم",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_246028ecbbc9a"
-            },
-            {
-              "key": "field_1073e7be65136",
-              "label": "الوسم: طلب موعد",
-              "name": "eyebrow_8",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_a1f18047350d4": {
-          "key": "layout_a1f18047350d4",
-          "name": "journey",
-          "label": "قسم: Journey",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_9f09ab1d693eb",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_0ef3b1ed99321",
-              "name": "sh_anchor",
-              "label": "معرّف الرابط الداخلي (anchor)",
-              "type": "text",
-              "placeholder": "hl-journey",
-              "instructions": "الافتراضي: #hl-journey — الأزرار داخل الصفحة تشير إليه.",
-              "wrapper": {
-                "width": "70"
-              }
-            },
-            {
-              "key": "field_2450ad06153a1",
-              "label": "نص: من السؤال الطبي إلى صفحة الخدمة",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_61ac1462fd3ef",
-              "label": "العنوان: رحلة المريض لا تبدأ دائمًا باسم الخدمة",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_8b203a7823ef0",
-              "label": "العناصر: سؤال أو عرض يقلق الزائر",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 5. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_51df3a2903520",
-                  "label": "عنوان فرعي: سؤال أو عرض",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_f40989a2d35d3",
-                  "label": "نص: يقلق الزائر",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_51df3a2903520"
-            },
-            {
-              "key": "field_b518a47563d79",
-              "label": "النص: قد يبدأ الزائر بالبحث عن عرض يقلقه، …",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
-              "required": 0,
-              "rows": 3,
-              "new_lines": ""
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_e4b9d5dd7bee7": {
-          "key": "layout_e4b9d5dd7bee7",
-          "name": "pages",
-          "label": "قسم: Pages",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_4539619e0f17b",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_b67a89c91505a",
-              "name": "sh_anchor",
-              "label": "معرّف الرابط الداخلي (anchor)",
-              "type": "text",
-              "placeholder": "hl-pages",
-              "instructions": "الافتراضي: #hl-pages — الأزرار داخل الصفحة تشير إليه.",
-              "wrapper": {
-                "width": "70"
-              }
-            },
-            {
-              "key": "field_8d6d3933a16d9",
-              "label": "الوسم: الطبيب والتخصص والفرع",
-              "name": "eyebrow",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_8c8a9119e01df",
-              "label": "العنوان: لكل نوع صفحة وظيفة واضحة",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_9fa8234aebc24",
-              "label": "العناصر: صفحة الخدمة تشرح ما تقدمه المنشأة فع…",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_661b19daca7cf",
-                  "label": "الأيقونة",
-                  "name": "icon",
-                  "type": "select",
-                  "instructions": "أيقونات التصميم المعتمد.",
-                  "required": 0,
-                  "choices": {
-                    "ibf55d922": "أيقونة 81",
-                    "i03d84387": "أيقونة 82",
-                    "if0120d7d": "أيقونة 83"
-                  },
-                  "default_value": "ibf55d922",
-                  "allow_null": 0,
-                  "return_format": "value"
-                },
-                {
-                  "key": "field_6223906773ba9",
-                  "label": "عنوان فرعي: صفحة الخدمة",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_208b1654f8d64",
-                  "label": "النص: تشرح ما تقدمه المنشأة فعلًا ومن يقدم…",
-                  "name": "text",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_6223906773ba9"
-            },
-            {
-              "key": "field_11ee68261b1b0",
-              "label": "عنوان فرعي: محتوى دقيق يمكن الرجوع إلى مصدره",
-              "name": "heading",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_af9d691c3440d",
-              "label": "النص: لا يكفي نشر مقال يتكرر فيه اسم المرض…",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
-              "required": 0,
-              "rows": 3,
-              "new_lines": ""
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_545fb76f89fa6": {
-          "key": "layout_545fb76f89fa6",
-          "name": "measure",
-          "label": "قسم: Measure",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_867eea4ce8576",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_ed9b3a2193bb1",
-              "name": "sh_anchor",
-              "label": "معرّف الرابط الداخلي (anchor)",
-              "type": "text",
-              "placeholder": "hl-measure",
-              "instructions": "الافتراضي: #hl-measure — الأزرار داخل الصفحة تشير إليه.",
-              "wrapper": {
-                "width": "70"
-              }
-            },
-            {
-              "key": "field_25bf589f4605d",
-              "label": "نص: كيف نقيس؟",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_196d2dce08b45",
-              "label": "العنوان: من النقرات إلى طلب الموعد",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_cfc05b43d78f7",
-              "label": "النص: نقرأ أداء صفحات التخصصات والخدمات وا…",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
-              "required": 0,
-              "rows": 3,
-              "new_lines": ""
-            },
-            {
-              "key": "field_b0ba2e1400a4b",
-              "label": "العناصر: لدينا حالة موثقة لموقع خدمات طبية ار…",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_e0c4f6c140618",
-                  "label": "النص: لدينا حالة موثقة لموقع خدمات طبية ار…",
-                  "name": "text",
-                  "type": "textarea",
-                  "instructions": "",
-                  "required": 0,
-                  "rows": 3,
-                  "new_lines": ""
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_e0c4f6c140618"
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_25aeb57f53335": {
-          "key": "layout_25aeb57f53335",
-          "name": "case",
-          "label": "قسم: Case",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_6b613ea415017",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_4b2c3348d842e",
-              "label": "نص: نتيجة موثقة",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_c90efb022aef2",
-              "label": "العنوان: من 825 إلى 12.9 ألف نقرة خلال 28 يومًا",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_4d8ee7199486c",
-              "label": "النص: لموقع خدمات طبية، ارتفعت النقرات الع…",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
-              "required": 0,
-              "rows": 3,
-              "new_lines": ""
-            },
-            {
-              "key": "field_8d542885e0202",
-              "label": "نص: الفترة السابقة",
-              "name": "label_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_cf7791a3c063d",
-              "label": "عنوان فرعي: 825",
-              "name": "heading",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_90d42042c8366",
-              "label": "نص: نقرة",
-              "name": "label_3",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_5280427a611b5",
-              "label": "نص: آخر 28 يومًا",
-              "name": "label_4",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_c7f101f922bc9",
-              "label": "عنوان فرعي: 12.9 ألف",
-              "name": "heading_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_7537c26122e1d",
-              "label": "نص: نقرة عضوية",
-              "name": "label_5",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_94da8a67fab45",
-              "label": "العناصر: القطاع الخدمات الطبية",
-              "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_2840644b81772",
-                  "label": "نص: القطاع",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_6bb7494117ca0",
-                  "label": "عنوان فرعي: الخدمات الطبية",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_2840644b81772"
-            },
-            {
-              "key": "field_eb9f173f2d486",
-              "label": "نص: سيرش كونسول",
-              "name": "label_6",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_f4b338d1f31d3",
-              "label": "الرابط: ",
-              "name": "link",
-              "type": "text",
-              "instructions": "رابط داخلي يبدأ بـ / أو رابط كامل أو #قسم",
-              "required": 0
-            },
-            {
-              "key": "field_7ced62fbdd739",
-              "label": "الصورة: لوحة سيرش كونسول تظهر 12.9 ألف نقرة …",
-              "name": "image",
-              "type": "image",
-              "instructions": "",
-              "required": 0,
-              "return_format": "id",
-              "preview_size": "medium",
-              "library": "all"
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_9c7689e52cdf0": {
-          "key": "layout_9c7689e52cdf0",
-          "name": "related",
-          "label": "صفحات مرتبطة — مكوّن مشترك",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_a35917e6f426d",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_85d78b559e663",
-              "name": "lead",
-              "label": "العنوان التمهيدي",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_c847a75226125",
-              "name": "links",
-              "label": "الصفحات المرتبطة",
-              "type": "repeater",
-              "layout": "table",
-              "button_label": "إضافة رابط",
-              "max": 8,
-              "sub_fields": [
-                {
-                  "key": "field_400373600788e",
-                  "name": "label",
-                  "label": "النص",
-                  "type": "text",
-                  "required": 1
-                },
-                {
-                  "key": "field_92cd5b3c59582",
-                  "name": "link",
-                  "label": "الصفحة",
-                  "type": "page_link",
-                  "post_type": [
-                    "page",
-                    "case_study",
-                    "post",
-                    "team_member"
-                  ],
-                  "allow_archives": 1,
-                  "allow_null": 0,
-                  "required": 1
-                }
-              ],
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_9e960076f6987": {
-          "key": "layout_9e960076f6987",
-          "name": "faq",
-          "label": "الأسئلة الشائعة — مكوّن مشترك",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_f9e7ef6285467",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_a106870ce83c0",
-              "name": "eyebrow",
-              "label": "الوسم",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_726c93dcac65b",
-              "name": "title",
-              "label": "عنوان القسم",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_a9cba81aa08fe",
-              "name": "items",
-              "label": "الأسئلة",
-              "type": "repeater",
-              "layout": "block",
-              "button_label": "إضافة سؤال",
-              "collapsed": "field_65b57b0c0237a",
-              "instructions": "نفس الأسئلة تُستخدم في FAQPage Schema. لا تضف سؤالًا غير ظاهر في الصفحة.",
-              "sub_fields": [
-                {
-                  "key": "field_65b57b0c0237a",
-                  "name": "question",
-                  "label": "السؤال",
-                  "type": "text",
-                  "required": 1
-                },
-                {
-                  "key": "field_78612caa906f6",
-                  "name": "answer",
-                  "label": "الإجابة",
-                  "type": "textarea",
-                  "rows": 3,
-                  "new_lines": "br",
-                  "required": 1
-                }
-              ],
-              "required": 0
-            },
-            {
-              "key": "field_1ebdae939bd15",
-              "name": "schema",
-              "label": "إخراج FAQPage Schema",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 1,
-              "instructions": "يُخرج من نفس الأسئلة الظاهرة فقط.",
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
-        },
-        "layout_3a00303feedc1": {
-          "key": "layout_3a00303feedc1",
-          "name": "booking",
-          "label": "حجز الاستشارة — مكوّن مشترك",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_c3aeac48f67c0",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_cfbe36224ed92",
-              "name": "service",
-              "label": "الخدمة المختارة مسبقًا",
-              "type": "select",
-              "choices": {
-                "": "بدون اختيار مسبق",
-                "seo": "تحسين محركات البحث",
-                "web": "تصميم وتطوير موقع",
-                "stores": "تصميم متجر إلكتروني",
-                "products": "إضافة المنتجات",
-                "unsure": "لم أحدد بعد"
-              },
-              "default_value": "",
-              "allow_null": 1,
-              "return_format": "value",
-              "required": 0
-            },
-            {
-              "key": "field_63da82c7f167f",
-              "name": "eyebrow",
-              "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_c2b9738b56b20",
-              "name": "title",
-              "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
-              "type": "text",
-              "required": 0
-            },
-            {
-              "key": "field_e6db2c60c06b2",
-              "name": "text",
-              "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
-              "type": "textarea",
-              "rows": 2,
-              "new_lines": "",
-              "required": 0
-            },
-            {
-              "key": "field_cd30769f4110c",
-              "name": "points",
-              "label": "نقاط الفائدة (فارغة = النقاط العامة)",
-              "type": "repeater",
-              "layout": "table",
-              "button_label": "إضافة نقطة",
-              "max": 4,
-              "sub_fields": [
-                {
-                  "key": "field_e908bac86f14e",
-                  "name": "text",
-                  "label": "النقطة",
-                  "type": "text",
-                  "required": 0
-                }
-              ],
-              "required": 0
-            }
-          ],
-          "min": "",
-          "max": "1"
-        }
+      "key": "field_538b91a5ef265",
+      "label": "الواجهة (Hero)",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_c1ddd7cb965dc",
+      "label": "",
+      "name": "s_hero",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
       },
-      "button_label": "إضافة قسم",
-      "min": "",
-      "max": ""
+      "sub_fields": [
+        {
+          "key": "field_3bf50ec77df57",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_21ca14c4a9974",
+          "label": "الوسم: الصحة والطب",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_afb697c639163",
+          "label": "العنوان: تحسين محركات البحث للقطاع الطبي",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_4fffd8e785f10",
+          "label": "النص: المريض قد يبدأ بسؤال عن عرض، ثم يبحث…",
+          "name": "text",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_9ae00dae35351",
+          "label": "نص الرابط: احجز مكالمة استشارية",
+          "name": "link_label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_4393c44112cd5",
+          "label": "نص الرابط: مسار المريض",
+          "name": "link_label_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_47d311a4dc2b8",
+          "label": "الوسم: مسار بحث العميل",
+          "name": "eyebrow_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_fa39376436b5e",
+          "label": "نص: مثال توضيحي",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_6cfa86aeb086e",
+          "label": "نص: طبيب جلدية قريب مني",
+          "name": "label_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_9912833c62e91",
+          "label": "العناصر: التخصصصفحة تجمع خدمات القسم",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_5ec2730a03b35",
+              "label": "الأيقونة",
+              "name": "icon",
+              "type": "select",
+              "instructions": "أيقونات التصميم المعتمد.",
+              "required": 0,
+              "choices": {
+                "i300033cf": "أيقونة 78",
+                "i85efa4ab": "أيقونة 79",
+                "i4968b528": "أيقونة 80"
+              },
+              "default_value": "i300033cf",
+              "allow_null": 0,
+              "return_format": "value"
+            },
+            {
+              "key": "field_21cf7806b8bc9",
+              "label": "عنوان فرعي: التخصص",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_7d6bd94fc0923",
+              "label": "نص: صفحة تجمع خدمات القسم",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_21cf7806b8bc9"
+        },
+        {
+          "key": "field_7a20a84aeb7e8",
+          "label": "نص: الإجراء الذي نقيسه",
+          "name": "label_3",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_3096fae22b671",
+          "label": "عنوان فرعي: طلب موعد",
+          "name": "heading",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_43033369fa05a",
+      "label": "قسم: مثال توضيحي لمنشأة صحية",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_5d4fb4cc33763",
+      "label": "",
+      "name": "s_sector_journey",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_b5e89c7ea5862",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_d2b1ddf149711",
+          "label": "الوسم: مثال توضيحي لمنشأة صحية",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_b8ca23aae2ab1",
+          "label": "العنوان: من سؤال المريض إلى طلب الموعد",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_7ca7e73ef1082",
+          "label": "الوسم: 1",
+          "name": "eyebrow_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_628cec162453a",
+          "label": "عنوان فرعي: البحث",
+          "name": "heading",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_08dcf42023bc2",
+          "label": "نص: طبيب أسنان للأطفال",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_1ac8497d322c7",
+          "label": "نص: يبحث عن تخصص وخدمة قريبة قبل أن يبحث…",
+          "name": "label_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_385a671bd30d7",
+          "label": "الوسم: 2",
+          "name": "eyebrow_3",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_9dfbd29ef41e1",
+          "label": "عنوان فرعي: صفحة الخدمة والطبيب",
+          "name": "heading_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_7a4e83f932475",
+          "label": "الوسم: طب أسنان الأطفال",
+          "name": "eyebrow_4",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_659a80f76d51d",
+          "label": "نص: الطبيب · الخبرة · الفرع",
+          "name": "label_3",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_6a4722dadb70a",
+          "label": "الوسم: 3",
+          "name": "eyebrow_5",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_328b1c8ab1efb",
+          "label": "عنوان فرعي: طلب الموعد",
+          "name": "heading_3",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_5b12fb24eec2b",
+          "label": "الوسم: صباحًا",
+          "name": "eyebrow_6",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_6d64e4ac113a4",
+          "label": "الوسم: مساءً",
+          "name": "eyebrow_7",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_671b1688ccc7d",
+          "label": "العناصر: الاسم",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_246028ecbbc9a",
+              "label": "نص: الاسم",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_246028ecbbc9a"
+        },
+        {
+          "key": "field_1073e7be65136",
+          "label": "الوسم: طلب موعد",
+          "name": "eyebrow_8",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_e894c4376fdfa",
+      "label": "قسم: رحلة المريض لا تبدأ دائمًا باسم الخدمة",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_a10f336f440ed",
+      "label": "",
+      "name": "s_journey",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_9f09ab1d693eb",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_0ef3b1ed99321",
+          "name": "sh_anchor",
+          "label": "معرّف الرابط الداخلي (anchor)",
+          "type": "text",
+          "placeholder": "hl-journey",
+          "instructions": "الافتراضي: #hl-journey — الأزرار داخل الصفحة تشير إليه.",
+          "wrapper": {
+            "width": "70"
+          }
+        },
+        {
+          "key": "field_2450ad06153a1",
+          "label": "نص: من السؤال الطبي إلى صفحة الخدمة",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_61ac1462fd3ef",
+          "label": "العنوان: رحلة المريض لا تبدأ دائمًا باسم الخدمة",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_8b203a7823ef0",
+          "label": "العناصر: سؤال أو عرض يقلق الزائر",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 5. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_51df3a2903520",
+              "label": "عنوان فرعي: سؤال أو عرض",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_f40989a2d35d3",
+              "label": "نص: يقلق الزائر",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_51df3a2903520"
+        },
+        {
+          "key": "field_b518a47563d79",
+          "label": "النص: قد يبدأ الزائر بالبحث عن عرض يقلقه، …",
+          "name": "text",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
+        }
+      ]
+    },
+    {
+      "key": "field_5a08e5c476001",
+      "label": "قسم: الطبيب والتخصص والفرع",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_f397363a2ca23",
+      "label": "",
+      "name": "s_pages",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_4539619e0f17b",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_b67a89c91505a",
+          "name": "sh_anchor",
+          "label": "معرّف الرابط الداخلي (anchor)",
+          "type": "text",
+          "placeholder": "hl-pages",
+          "instructions": "الافتراضي: #hl-pages — الأزرار داخل الصفحة تشير إليه.",
+          "wrapper": {
+            "width": "70"
+          }
+        },
+        {
+          "key": "field_8d6d3933a16d9",
+          "label": "الوسم: الطبيب والتخصص والفرع",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_8c8a9119e01df",
+          "label": "العنوان: لكل نوع صفحة وظيفة واضحة",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_9fa8234aebc24",
+          "label": "العناصر: صفحة الخدمة تشرح ما تقدمه المنشأة فع…",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 3. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_661b19daca7cf",
+              "label": "الأيقونة",
+              "name": "icon",
+              "type": "select",
+              "instructions": "أيقونات التصميم المعتمد.",
+              "required": 0,
+              "choices": {
+                "ibf55d922": "أيقونة 81",
+                "i03d84387": "أيقونة 82",
+                "if0120d7d": "أيقونة 83"
+              },
+              "default_value": "ibf55d922",
+              "allow_null": 0,
+              "return_format": "value"
+            },
+            {
+              "key": "field_6223906773ba9",
+              "label": "عنوان فرعي: صفحة الخدمة",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_208b1654f8d64",
+              "label": "النص: تشرح ما تقدمه المنشأة فعلًا ومن يقدم…",
+              "name": "text",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_6223906773ba9"
+        },
+        {
+          "key": "field_11ee68261b1b0",
+          "label": "عنوان فرعي: محتوى دقيق يمكن الرجوع إلى مصدره",
+          "name": "heading",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_af9d691c3440d",
+          "label": "النص: لا يكفي نشر مقال يتكرر فيه اسم المرض…",
+          "name": "text",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
+        }
+      ]
+    },
+    {
+      "key": "field_f4e7fe970ca8f",
+      "label": "قسم: من النقرات إلى طلب الموعد",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_0681747f98ba3",
+      "label": "",
+      "name": "s_measure",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_867eea4ce8576",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_ed9b3a2193bb1",
+          "name": "sh_anchor",
+          "label": "معرّف الرابط الداخلي (anchor)",
+          "type": "text",
+          "placeholder": "hl-measure",
+          "instructions": "الافتراضي: #hl-measure — الأزرار داخل الصفحة تشير إليه.",
+          "wrapper": {
+            "width": "70"
+          }
+        },
+        {
+          "key": "field_25bf589f4605d",
+          "label": "نص: كيف نقيس؟",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_196d2dce08b45",
+          "label": "العنوان: من النقرات إلى طلب الموعد",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_cfc05b43d78f7",
+          "label": "النص: نقرأ أداء صفحات التخصصات والخدمات وا…",
+          "name": "text",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_b0ba2e1400a4b",
+          "label": "العناصر: لدينا حالة موثقة لموقع خدمات طبية ار…",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_e0c4f6c140618",
+              "label": "النص: لدينا حالة موثقة لموقع خدمات طبية ار…",
+              "name": "text",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_e0c4f6c140618"
+        }
+      ]
+    },
+    {
+      "key": "field_680f338b9a5f0",
+      "label": "قسم: من 825 إلى 12.9 ألف نقرة خلال 28 يومًا",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_6c3716cad2a67",
+      "label": "",
+      "name": "s_case",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_6b613ea415017",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_4b2c3348d842e",
+          "label": "نص: نتيجة موثقة",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_c90efb022aef2",
+          "label": "العنوان: من 825 إلى 12.9 ألف نقرة خلال 28 يومًا",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_4d8ee7199486c",
+          "label": "النص: لموقع خدمات طبية، ارتفعت النقرات الع…",
+          "name": "text",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
+        },
+        {
+          "key": "field_8d542885e0202",
+          "label": "نص: الفترة السابقة",
+          "name": "label_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_cf7791a3c063d",
+          "label": "عنوان فرعي: 825",
+          "name": "heading",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_90d42042c8366",
+          "label": "نص: نقرة",
+          "name": "label_3",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_5280427a611b5",
+          "label": "نص: آخر 28 يومًا",
+          "name": "label_4",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_c7f101f922bc9",
+          "label": "عنوان فرعي: 12.9 ألف",
+          "name": "heading_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_7537c26122e1d",
+          "label": "نص: نقرة عضوية",
+          "name": "label_5",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_94da8a67fab45",
+          "label": "العناصر: القطاع الخدمات الطبية",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_2840644b81772",
+              "label": "نص: القطاع",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_6bb7494117ca0",
+              "label": "عنوان فرعي: الخدمات الطبية",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_2840644b81772"
+        },
+        {
+          "key": "field_eb9f173f2d486",
+          "label": "نص: سيرش كونسول",
+          "name": "label_6",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_f4b338d1f31d3",
+          "label": "الرابط: ",
+          "name": "link",
+          "type": "text",
+          "instructions": "رابط داخلي يبدأ بـ / أو رابط كامل أو #قسم",
+          "required": 0
+        },
+        {
+          "key": "field_7ced62fbdd739",
+          "label": "الصورة: لوحة سيرش كونسول تظهر 12.9 ألف نقرة …",
+          "name": "image",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "return_format": "id",
+          "preview_size": "medium",
+          "library": "all"
+        }
+      ]
+    },
+    {
+      "key": "field_c237b6b23fde4",
+      "label": "صفحات مرتبطة — مكوّن مشترك",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_b587abe112bf9",
+      "label": "",
+      "name": "s_related",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_a35917e6f426d",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_85d78b559e663",
+          "name": "lead",
+          "label": "العنوان التمهيدي",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_c847a75226125",
+          "name": "links",
+          "label": "الصفحات المرتبطة",
+          "type": "sh_rows",
+          "layout": "table",
+          "button_label": "إضافة رابط",
+          "max": 8,
+          "sub_fields": [
+            {
+              "key": "field_400373600788e",
+              "name": "label",
+              "label": "النص",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_92cd5b3c59582",
+              "name": "link",
+              "label": "الصفحة",
+              "type": "page_link",
+              "post_type": [
+                "page",
+                "case_study",
+                "post",
+                "team_member"
+              ],
+              "allow_archives": 1,
+              "allow_null": 0,
+              "required": 1
+            }
+          ],
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_973e16d394b8f",
+      "label": "الأسئلة الشائعة — مكوّن مشترك",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_9f87728b10ba8",
+      "label": "",
+      "name": "s_faq",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_f9e7ef6285467",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_a106870ce83c0",
+          "name": "eyebrow",
+          "label": "الوسم",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_726c93dcac65b",
+          "name": "title",
+          "label": "عنوان القسم",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_a9cba81aa08fe",
+          "name": "items",
+          "label": "الأسئلة",
+          "type": "sh_rows",
+          "layout": "block",
+          "button_label": "إضافة سؤال",
+          "collapsed": "field_65b57b0c0237a",
+          "instructions": "نفس الأسئلة تُستخدم في FAQPage Schema. لا تضف سؤالًا غير ظاهر في الصفحة.",
+          "sub_fields": [
+            {
+              "key": "field_65b57b0c0237a",
+              "name": "question",
+              "label": "السؤال",
+              "type": "text",
+              "required": 1
+            },
+            {
+              "key": "field_78612caa906f6",
+              "name": "answer",
+              "label": "الإجابة",
+              "type": "textarea",
+              "rows": 3,
+              "new_lines": "br",
+              "required": 1
+            }
+          ],
+          "required": 0
+        },
+        {
+          "key": "field_1ebdae939bd15",
+          "name": "schema",
+          "label": "إخراج FAQPage Schema",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 1,
+          "instructions": "يُخرج من نفس الأسئلة الظاهرة فقط.",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_08bcacc2b326d",
+      "label": "حجز الاستشارة — مكوّن مشترك",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_5b7aead3da16e",
+      "label": "",
+      "name": "s_booking",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_c3aeac48f67c0",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_cfbe36224ed92",
+          "name": "service",
+          "label": "الخدمة المختارة مسبقًا",
+          "type": "select",
+          "choices": {
+            "": "بدون اختيار مسبق",
+            "seo": "تحسين محركات البحث",
+            "web": "تصميم وتطوير موقع",
+            "stores": "تصميم متجر إلكتروني",
+            "products": "إضافة المنتجات",
+            "unsure": "لم أحدد بعد"
+          },
+          "default_value": "",
+          "allow_null": 1,
+          "return_format": "value",
+          "required": 0
+        },
+        {
+          "key": "field_63da82c7f167f",
+          "name": "eyebrow",
+          "label": "الوسم (اتركه فارغًا لاستخدام النص العام)",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_c2b9738b56b20",
+          "name": "title",
+          "label": "العنوان (اتركه فارغًا لاستخدام النص العام)",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_e6db2c60c06b2",
+          "name": "text",
+          "label": "الوصف (اتركه فارغًا لاستخدام النص العام)",
+          "type": "textarea",
+          "rows": 2,
+          "new_lines": "",
+          "required": 0
+        },
+        {
+          "key": "field_cd30769f4110c",
+          "name": "points",
+          "label": "نقاط الفائدة (فارغة = النقاط العامة)",
+          "type": "sh_rows",
+          "layout": "table",
+          "button_label": "إضافة نقطة",
+          "max": 4,
+          "sub_fields": [
+            {
+              "key": "field_e908bac86f14e",
+              "name": "text",
+              "label": "النقطة",
+              "type": "text",
+              "required": 0
+            }
+          ],
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_8dc8cf7170465",
+      "label": "",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 1
     }
   ],
   "location": [
@@ -1007,7 +1112,7 @@
     "send-trackbacks"
   ],
   "active": true,
-  "description": "حقول قالب قطاع الصحة والطب — مولدة من SEO House - Sector Health.dc.html",
+  "description": "حقول قالب قطاع الصحة والطب — مولدة من SEO House - Sector Health.dc.html. الأقسام بترتيب التصميم؛ يمكن إخفاء أي قسم.",
   "show_in_rest": 0,
   "modified": 1790000000
 }

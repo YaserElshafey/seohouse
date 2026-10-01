@@ -7,8 +7,54 @@
 
 defined( 'ABSPATH' ) || exit;
 
+/** ACF (free 6.x, PRO or SCF) is active and the Core field type is registered. */
 function sh_core_acf_ready(): bool {
-	return function_exists( 'get_field' ) && function_exists( 'acf_get_field_type' ) && acf_get_field_type( 'flexible_content' ) && acf_get_field_type( 'repeater' );
+	return function_exists( 'get_field' ) && function_exists( 'acf_get_field_type' ) && acf_get_field_type( 'group' ) && acf_get_field_type( 'sh_rows' );
+}
+
+/**
+ * Sections of a page in the design order: the ACF Group fields "s_<layout>" of the page's
+ * template field group. Each row carries its layout name in `acf_fc_layout`.
+ *
+ * @return array<int,array>
+ */
+function sh_core_sections( int $post_id ): array {
+	static $cache = array();
+	if ( isset( $cache[ $post_id ] ) ) {
+		return $cache[ $post_id ];
+	}
+	$rows = array();
+	if ( $post_id && sh_core_acf_ready() ) {
+		sh_core_prime_rows( $post_id );
+		foreach ( sh_core_section_fields( $post_id ) as $f ) {
+			$v      = get_field( $f['key'], $post_id );
+			$row    = is_array( $v ) ? $v : array();
+			$rows[] = array( 'acf_fc_layout' => substr( $f['name'], 2 ) ) + $row;
+		}
+	}
+	return $cache[ $post_id ] = $rows; // phpcs:ignore Squiz.PHP.DisallowMultipleAssignments
+}
+
+/** The section Group fields ("s_*") of the page's template field group, in order. */
+function sh_core_section_fields( int $post_id ): array {
+	foreach ( acf_get_field_groups( array( 'post_id' => $post_id ) ) as $g ) {
+		if ( str_starts_with( (string) $g['key'], 'group_sh_page_' ) ) {
+			return array_values( array_filter( acf_get_fields( $g ), static fn( $f ) => 'group' === $f['type'] && str_starts_with( (string) $f['name'], 's_' ) ) );
+		}
+	}
+	return array();
+}
+
+/** Loads all list-item records of a post (two levels) and their meta in two queries. */
+function sh_core_prime_rows( int $post_id ): void {
+	$parents = array( $post_id );
+	for ( $level = 0; $level < 3 && $parents; $level++ ) {
+		$ids = get_posts( array( 'post_type' => 'sh_row', 'post_status' => 'any', 'posts_per_page' => -1, 'fields' => 'ids', 'post_parent__in' => $parents, 'orderby' => 'none', 'no_found_rows' => true ) );
+		if ( $ids ) {
+			_prime_post_caches( $ids, false, true );
+		}
+		$parents = $ids;
+	}
 }
 
 /** Safe get_field (returns default without ACF). */

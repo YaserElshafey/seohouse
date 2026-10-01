@@ -3,208 +3,287 @@
   "title": "أقسام الصفحة — اتصل بنا",
   "fields": [
     {
-      "key": "field_e1a1ea51f95b5",
-      "label": "أقسام الصفحة",
-      "name": "sh_sections",
-      "type": "flexible_content",
-      "instructions": "الأقسام كما في التصميم المعتمد. يمكن إخفاء القسم أو إعادة ترتيبه؛ لا تتوفر أقسام خارج التصميم.",
-      "layouts": {
-        "layout_f0b0c3ffb7fea": {
-          "key": "layout_f0b0c3ffb7fea",
-          "name": "hero",
-          "label": "الواجهة (Hero)",
-          "display": "block",
+      "key": "field_96309f95c7542",
+      "label": "الواجهة (Hero)",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_d1c3cd3b53bff",
+      "label": "",
+      "name": "s_hero",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_096d7d5d18855",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_e838630f7ceb8",
+          "label": "الوسم: اتصل بنا",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_b3158ed82d5bb",
+          "label": "العنوان: احجز استشارة مجانية",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_e97bb3d231f4c",
+          "label": "النص: أرسل بيانات موقعك وهدفك، ونراجع الحا…",
+          "name": "text",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 3,
+          "new_lines": ""
+        }
+      ]
+    },
+    {
+      "key": "field_adce8d45c5d05",
+      "label": "المسار",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_dba65ba4e1fcd",
+      "label": "",
+      "name": "s_flow",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_0e863235c5228",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_8e3e80364adec",
+          "label": "الوسم: ماذا سيحدث؟",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_d4688050c1c60",
+          "label": "العناصر: مكالمة مجانية 30 دقيقةموعد واحد نتفق…",
+          "name": "items",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
           "sub_fields": [
             {
-              "key": "field_096d7d5d18855",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_e838630f7ceb8",
-              "label": "الوسم: اتصل بنا",
-              "name": "eyebrow",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_b3158ed82d5bb",
-              "label": "العنوان: احجز استشارة مجانية",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_e97bb3d231f4c",
-              "label": "النص: أرسل بيانات موقعك وهدفك، ونراجع الحا…",
-              "name": "text",
-              "type": "textarea",
-              "instructions": "",
+              "key": "field_136469672d707",
+              "label": "الأيقونة",
+              "name": "icon",
+              "type": "select",
+              "instructions": "أيقونات التصميم المعتمد.",
               "required": 0,
-              "rows": 3,
-              "new_lines": ""
+              "choices": {
+                "ib0043c43": "أيقونة 104",
+                "ie3b5a702": "أيقونة 105",
+                "i4f70d48b": "أيقونة 106",
+                "i5fe1dda6": "أيقونة 107"
+              },
+              "default_value": "ib0043c43",
+              "allow_null": 0,
+              "return_format": "value"
+            },
+            {
+              "key": "field_34ac1b2b3740a",
+              "label": "عنوان فرعي: مكالمة مجانية 30 دقيقة",
+              "name": "heading",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_36c2b487aa586",
+              "label": "النص: موعد واحد نتفق عليه بعد استلام بيانا…",
+              "name": "text",
+              "type": "text",
+              "instructions": "",
+              "required": 0
             }
           ],
-          "min": "",
-          "max": "1"
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_34ac1b2b3740a"
         },
-        "layout_a49abe410568d": {
-          "key": "layout_a49abe410568d",
-          "name": "flow",
-          "label": "المسار",
-          "display": "block",
+        {
+          "key": "field_4e3a583af842a",
+          "label": "العناصر: نطاق الأسعار ←",
+          "name": "items_2",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
           "sub_fields": [
             {
-              "key": "field_0e863235c5228",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
+              "key": "field_0a597ca7018fa",
+              "label": "الرابط: نطاق الأسعار ←",
+              "name": "link",
+              "type": "page_link",
+              "instructions": "",
+              "required": 0,
+              "post_type": [
+                "page",
+                "case_study",
+                "team_member",
+                "post"
+              ],
+              "allow_null": 1,
+              "allow_archives": 1,
+              "multiple": 0
             },
             {
-              "key": "field_8e3e80364adec",
-              "label": "الوسم: ماذا سيحدث؟",
-              "name": "eyebrow",
+              "key": "field_5968ee83ef007",
+              "label": "نص الرابط: نطاق الأسعار ←",
+              "name": "link_label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_5968ee83ef007"
+        },
+        {
+          "key": "field_909840558c7ff",
+          "label": "الوسم: نموذج التأهيل",
+          "name": "eyebrow_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_b6fb5b47260b7",
+          "label": "العنوان: أرسل بيانات موقعك",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_0d2b742dbffd2",
+          "label": "العناصر: الاسم",
+          "name": "items_3",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 5. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_d6ce25823d48c",
+              "label": "نص: الاسم",
+              "name": "label",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
-              "key": "field_d4688050c1c60",
-              "label": "العناصر: مكالمة مجانية 30 دقيقةموعد واحد نتفق…",
+              "key": "field_d11496eb6d7ba",
+              "label": "نمط العرض",
+              "name": "variant",
+              "type": "select",
+              "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
+              "required": 0,
+              "choices": {
+                "v1": "النمط 1",
+                "v2": "النمط 2",
+                "v3": "النمط 3",
+                "v4": "النمط 4",
+                "v5": "النمط 5"
+              },
+              "default_value": "v1",
+              "allow_null": 0,
+              "ui": 0,
+              "return_format": "value"
+            }
+          ],
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_d6ce25823d48c"
+        },
+        {
+          "key": "field_7fad385bbc793",
+          "label": "العناصر: السوق السعودية مصر الإمارات سوق آخر",
+          "name": "items_4",
+          "type": "sh_rows",
+          "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_e52ea3da3136f",
+              "label": "نص: السوق",
+              "name": "label",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_c076e89a904df",
+              "label": "العناصر: السعودية",
               "name": "items",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 4. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_136469672d707",
-                  "label": "الأيقونة",
-                  "name": "icon",
-                  "type": "select",
-                  "instructions": "أيقونات التصميم المعتمد.",
-                  "required": 0,
-                  "choices": {
-                    "ib0043c43": "أيقونة 104",
-                    "ie3b5a702": "أيقونة 105",
-                    "i4f70d48b": "أيقونة 106",
-                    "i5fe1dda6": "أيقونة 107"
-                  },
-                  "default_value": "ib0043c43",
-                  "allow_null": 0,
-                  "return_format": "value"
-                },
-                {
-                  "key": "field_34ac1b2b3740a",
-                  "label": "عنوان فرعي: مكالمة مجانية 30 دقيقة",
-                  "name": "heading",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_36c2b487aa586",
-                  "label": "النص: موعد واحد نتفق عليه بعد استلام بيانا…",
-                  "name": "text",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_34ac1b2b3740a"
-            },
-            {
-              "key": "field_4e3a583af842a",
-              "label": "العناصر: نطاق الأسعار ←",
-              "name": "items_2",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_0a597ca7018fa",
-                  "label": "الرابط: نطاق الأسعار ←",
-                  "name": "link",
-                  "type": "page_link",
-                  "instructions": "",
-                  "required": 0,
-                  "post_type": [
-                    "page",
-                    "case_study",
-                    "team_member",
-                    "post"
-                  ],
-                  "allow_null": 1,
-                  "allow_archives": 1,
-                  "multiple": 0
-                },
-                {
-                  "key": "field_5968ee83ef007",
-                  "label": "نص الرابط: نطاق الأسعار ←",
-                  "name": "link_label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_5968ee83ef007"
-            },
-            {
-              "key": "field_909840558c7ff",
-              "label": "الوسم: نموذج التأهيل",
-              "name": "eyebrow_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_b6fb5b47260b7",
-              "label": "العنوان: أرسل بيانات موقعك",
-              "name": "title",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_0d2b742dbffd2",
-              "label": "العناصر: الاسم",
-              "name": "items_3",
-              "type": "repeater",
+              "type": "sh_rows",
               "instructions": "العدد المعتمد في التصميم: 5. يمكن الإضافة والحذف وإعادة الترتيب.",
               "required": 0,
               "layout": "block",
               "button_label": "إضافة عنصر",
               "sub_fields": [
                 {
-                  "key": "field_d6ce25823d48c",
-                  "label": "نص: الاسم",
+                  "key": "field_5c57dad46e0d4",
+                  "label": "نص: السعودية",
                   "name": "label",
                   "type": "text",
                   "instructions": "",
                   "required": 0
                 },
                 {
-                  "key": "field_d11496eb6d7ba",
+                  "key": "field_6ccb98d46e4a6",
                   "label": "نمط العرض",
                   "name": "variant",
                   "type": "select",
@@ -215,7 +294,11 @@
                     "v2": "النمط 2",
                     "v3": "النمط 3",
                     "v4": "النمط 4",
-                    "v5": "النمط 5"
+                    "v5": "النمط 5",
+                    "v6": "النمط 6",
+                    "v7": "النمط 7",
+                    "v8": "النمط 8",
+                    "v9": "النمط 9"
                   },
                   "default_value": "v1",
                   "allow_null": 0,
@@ -225,171 +308,121 @@
               ],
               "min": 0,
               "max": 0,
-              "collapsed": "field_d6ce25823d48c"
-            },
-            {
-              "key": "field_7fad385bbc793",
-              "label": "العناصر: السوق السعودية مصر الإمارات سوق آخر",
-              "name": "items_4",
-              "type": "repeater",
-              "instructions": "العدد المعتمد في التصميم: 2. يمكن الإضافة والحذف وإعادة الترتيب.",
-              "required": 0,
-              "layout": "block",
-              "button_label": "إضافة عنصر",
-              "sub_fields": [
-                {
-                  "key": "field_e52ea3da3136f",
-                  "label": "نص: السوق",
-                  "name": "label",
-                  "type": "text",
-                  "instructions": "",
-                  "required": 0
-                },
-                {
-                  "key": "field_c076e89a904df",
-                  "label": "العناصر: السعودية",
-                  "name": "items",
-                  "type": "repeater",
-                  "instructions": "العدد المعتمد في التصميم: 5. يمكن الإضافة والحذف وإعادة الترتيب.",
-                  "required": 0,
-                  "layout": "block",
-                  "button_label": "إضافة عنصر",
-                  "sub_fields": [
-                    {
-                      "key": "field_5c57dad46e0d4",
-                      "label": "نص: السعودية",
-                      "name": "label",
-                      "type": "text",
-                      "instructions": "",
-                      "required": 0
-                    },
-                    {
-                      "key": "field_6ccb98d46e4a6",
-                      "label": "نمط العرض",
-                      "name": "variant",
-                      "type": "select",
-                      "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
-                      "required": 0,
-                      "choices": {
-                        "v1": "النمط 1",
-                        "v2": "النمط 2",
-                        "v3": "النمط 3",
-                        "v4": "النمط 4",
-                        "v5": "النمط 5",
-                        "v6": "النمط 6",
-                        "v7": "النمط 7",
-                        "v8": "النمط 8",
-                        "v9": "النمط 9"
-                      },
-                      "default_value": "v1",
-                      "allow_null": 0,
-                      "ui": 0,
-                      "return_format": "value"
-                    }
-                  ],
-                  "min": 0,
-                  "max": 0,
-                  "collapsed": "field_5c57dad46e0d4"
-                }
-              ],
-              "min": 0,
-              "max": 0,
-              "collapsed": "field_e52ea3da3136f"
-            },
-            {
-              "key": "field_9e7d4a6b6e4e3",
-              "label": "نص: الهدف أو التحدي الأساسي",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_a6b94e928d4b5",
-              "label": "نص الزر: إرسال ومتابعة لاختيار الموعد",
-              "name": "button",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_59bbbe17699ce",
-              "label": "نص: نستخدم بياناتك للتواصل بشأن طلبك وتر…",
-              "name": "label_2",
-              "type": "text",
-              "instructions": "",
-              "required": 0
+              "collapsed": "field_5c57dad46e0d4"
             }
           ],
-          "min": "",
-          "max": "1"
+          "min": 0,
+          "max": 0,
+          "collapsed": "field_e52ea3da3136f"
         },
-        "layout_798eb673fef3f": {
-          "key": "layout_798eb673fef3f",
-          "name": "related",
-          "label": "صفحات مرتبطة — مكوّن مشترك",
-          "display": "block",
+        {
+          "key": "field_9e7d4a6b6e4e3",
+          "label": "نص: الهدف أو التحدي الأساسي",
+          "name": "label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_a6b94e928d4b5",
+          "label": "نص الزر: إرسال ومتابعة لاختيار الموعد",
+          "name": "button",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_59bbbe17699ce",
+          "label": "نص: نستخدم بياناتك للتواصل بشأن طلبك وتر…",
+          "name": "label_2",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_6816c0d748808",
+      "label": "صفحات مرتبطة — مكوّن مشترك",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_47bbb96fd7128",
+      "label": "",
+      "name": "s_related",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_a4b02e20004d2",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_15e5a9c13593b",
+          "name": "lead",
+          "label": "العنوان التمهيدي",
+          "type": "text",
+          "required": 0
+        },
+        {
+          "key": "field_4a6b4410d9bab",
+          "name": "links",
+          "label": "الصفحات المرتبطة",
+          "type": "sh_rows",
+          "layout": "table",
+          "button_label": "إضافة رابط",
+          "max": 8,
           "sub_fields": [
             {
-              "key": "field_a4b02e20004d2",
-              "name": "sh_hide",
-              "label": "إخفاء القسم",
-              "type": "true_false",
-              "ui": 1,
-              "default_value": 0,
-              "wrapper": {
-                "width": "30"
-              }
-            },
-            {
-              "key": "field_15e5a9c13593b",
-              "name": "lead",
-              "label": "العنوان التمهيدي",
+              "key": "field_b570f9b945578",
+              "name": "label",
+              "label": "النص",
               "type": "text",
-              "required": 0
+              "required": 1
             },
             {
-              "key": "field_4a6b4410d9bab",
-              "name": "links",
-              "label": "الصفحات المرتبطة",
-              "type": "repeater",
-              "layout": "table",
-              "button_label": "إضافة رابط",
-              "max": 8,
-              "sub_fields": [
-                {
-                  "key": "field_b570f9b945578",
-                  "name": "label",
-                  "label": "النص",
-                  "type": "text",
-                  "required": 1
-                },
-                {
-                  "key": "field_372e4a88bbafa",
-                  "name": "link",
-                  "label": "الصفحة",
-                  "type": "page_link",
-                  "post_type": [
-                    "page",
-                    "case_study",
-                    "post",
-                    "team_member"
-                  ],
-                  "allow_archives": 1,
-                  "allow_null": 0,
-                  "required": 1
-                }
+              "key": "field_372e4a88bbafa",
+              "name": "link",
+              "label": "الصفحة",
+              "type": "page_link",
+              "post_type": [
+                "page",
+                "case_study",
+                "post",
+                "team_member"
               ],
-              "required": 0
+              "allow_archives": 1,
+              "allow_null": 0,
+              "required": 1
             }
           ],
-          "min": "",
-          "max": "1"
+          "required": 0
         }
-      },
-      "button_label": "إضافة قسم",
-      "min": "",
-      "max": ""
+      ]
+    },
+    {
+      "key": "field_4f54555e7fabf",
+      "label": "",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 1
     }
   ],
   "location": [
@@ -415,7 +448,7 @@
     "send-trackbacks"
   ],
   "active": true,
-  "description": "حقول قالب اتصل بنا — مولدة من SEO House - Contact.dc.html",
+  "description": "حقول قالب اتصل بنا — مولدة من SEO House - Contact.dc.html. الأقسام بترتيب التصميم؛ يمكن إخفاء أي قسم.",
   "show_in_rest": 0,
   "modified": 1790000000
 }

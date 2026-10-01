@@ -78,8 +78,47 @@ function sh_core_register_post_types(): void {
 			'query_var'           => false,
 		)
 	);
+
+	// Items of "قائمة عناصر" fields (ACF free has no Repeater): one record per item, edited inline
+	// on its owner's screen, never on its own.
+	register_post_type(
+		'sh_row',
+		array(
+			'labels'              => array(
+				'name'          => __( 'عناصر القوائم', 'seohouse-core' ),
+				'singular_name' => __( 'عنصر قائمة', 'seohouse-core' ),
+			),
+			'public'              => false,
+			'publicly_queryable'  => false,
+			'exclude_from_search' => true,
+			'show_ui'             => false,
+			'show_in_menu'        => false,
+			'show_in_nav_menus'   => false,
+			'show_in_rest'        => false,
+			'hierarchical'        => false,
+			'supports'            => array( 'title', 'custom-fields' ),
+			'rewrite'             => false,
+			'query_var'           => false,
+			'can_export'          => true,
+			'delete_with_user'    => false,
+		)
+	);
 }
 add_action( 'init', 'sh_core_register_post_types', 5 );
+
+/** Deleting a page/post (or a revision/autosave) also deletes the list items it owns. */
+add_action(
+	'before_delete_post',
+	static function ( $post_id ) {
+		if ( ! class_exists( 'SH_Field_Rows' ) ) {
+			return;
+		}
+		$owned = get_posts( array( 'post_type' => 'sh_row', 'post_status' => 'any', 'posts_per_page' => -1, 'fields' => 'ids', 'meta_key' => '_sh_owner', 'meta_value' => (string) $post_id ) ); // phpcs:ignore WordPress.DB.SlowDBQuery
+		foreach ( $owned as $row ) {
+			SH_Field_Rows::delete_record( (int) $row );
+		}
+	}
+);
 
 /**
  * Permalink structure and blog/category bases the project map requires.

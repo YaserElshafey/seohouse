@@ -260,7 +260,7 @@
       "key": "field_sh_opt_socials",
       "label": "الروابط الاجتماعية",
       "name": "sh_socials",
-      "type": "repeater",
+      "type": "sh_rows",
       "instructions": "",
       "required": 0,
       "layout": "table",
@@ -332,7 +332,7 @@
         {
           "name": "points",
           "label": "نقاط الفائدة",
-          "type": "repeater",
+          "type": "sh_rows",
           "instructions": "",
           "required": 0,
           "layout": "table",
@@ -353,7 +353,7 @@
         {
           "name": "services",
           "label": "الخدمات في النموذج",
-          "type": "repeater",
+          "type": "sh_rows",
           "instructions": "",
           "required": 0,
           "layout": "table",
@@ -467,7 +467,7 @@
       "key": "field_sh_opt_client_logos",
       "label": "شعارات العملاء",
       "name": "sh_client_logos",
-      "type": "repeater",
+      "type": "sh_rows",
       "instructions": "الشعارات المعتمدة فقط. تظهر في الشريط المتحرك بنفس الترتيب.",
       "required": 0,
       "layout": "table",
@@ -628,7 +628,7 @@
   "location": [
     [
       {
-        "param": "options_page",
+        "param": "sh_screen",
         "operator": "==",
         "value": "seohouse-settings"
       }

@@ -491,6 +491,30 @@ class SH_Importer {
 		return $out;
 	}
 
+	/**
+	 * Field name → key for the top-level fields of the Core groups (options, case study, team,
+	 * article, SEO, menu item, blog page). Values are always written by key so ACF never has to
+	 * guess a field from a name that also exists elsewhere.
+	 */
+	private function field_key( string $name ): string {
+		static $map = null;
+		if ( null === $map ) {
+			$map = array();
+			foreach ( (array) glob( SH_CORE_DIR . 'acf-json/group_sh_*.json' ) as $file ) {
+				if ( str_contains( (string) $file, 'group_sh_page_' ) ) {
+					continue;
+				}
+				$g = json_decode( (string) file_get_contents( $file ), true ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+				foreach ( (array) ( $g['fields'] ?? array() ) as $f ) {
+					if ( ! empty( $f['name'] ) ) {
+						$map[ $f['name'] ] = $f['key'];
+					}
+				}
+			}
+		}
+		return $map[ $name ] ?? $name;
+	}
+
 	/** Hash of what is stored now for a set of fields (raw values). */
 	private function state_hash( int $id, array $names ): string {
 		$vals = array();
@@ -546,7 +570,7 @@ class SH_Importer {
 		}
 		$first = ! get_post_meta( $id, self::META_HASH, true );
 		foreach ( $resolved as $name => $value ) {
-			update_field( $keys_by_name[ $name ] ?? $name, $value, $id );
+			update_field( $keys_by_name[ $name ] ?? $this->field_key( $name ), $value, $id );
 		}
 		update_post_meta( $id, self::META_HASH, $this->state_hash( $id, array_keys( $fields ) ) );
 		if ( function_exists( 'sh_search_index' ) ) {
@@ -571,8 +595,23 @@ class SH_Importer {
 				$this->note( 'failed', $key, 'مجموعة الحقول غير موجودة' );
 				return;
 			}
-			$fields['sh_sections'] = $seed['sections'];
-			$keys['sh_sections']   = $group['fields'][0]['key'];
+			// one ACF Group field per design section ("s_<layout>"), written by field key
+			$section_keys = array();
+			foreach ( $group['fields'] as $gf ) {
+				if ( 'group' === ( $gf['type'] ?? '' ) && str_starts_with( (string) $gf['name'], 's_' ) ) {
+					$section_keys[ $gf['name'] ] = $gf['key'];
+				}
+			}
+			foreach ( (array) $seed['sections'] as $section ) {
+				$name = 's_' . ( $section['acf_fc_layout'] ?? '' );
+				if ( ! isset( $section_keys[ $name ] ) ) {
+					$this->note( 'failed', $key, 'قسم بلا حقل مقابل: ' . $name );
+					continue;
+				}
+				unset( $section['acf_fc_layout'] );
+				$fields[ $name ] = $section;
+				$keys[ $name ]   = $section_keys[ $name ];
+			}
 		}
 		$seo_title = $seed['seo']['title'] ?? '';
 		$fields['sh_seo_title']       = $seo_title;
@@ -604,7 +643,7 @@ class SH_Importer {
 		foreach ( $labels as $route => $label ) {
 			$id = $this->route_id( $route );
 			if ( $id > 0 && ! $this->dry && ! get_field( 'sh_crumb_ancestor', $id ) && sh_crumb_label( $id ) !== $label ) {
-				update_field( 'sh_crumb_ancestor', $label, $id );
+				update_field( $this->field_key( 'sh_crumb_ancestor' ), $label, $id );
 			}
 		}
 	}
@@ -722,7 +761,7 @@ class SH_Importer {
 			}
 			foreach ( array( 'icon' => 'sh_menu_icon', 'all_label' => 'sh_menu_all_label', 'layout' => 'sh_menu_layout' ) as $src => $field ) {
 				if ( ! empty( $it[ $src ] ) ) {
-					update_field( $field, $it[ $src ], $item_id );
+					update_field( $this->field_key( $field ), $it[ $src ], $item_id );
 				}
 			}
 			if ( ! empty( $it['children'] ) ) {
@@ -751,7 +790,7 @@ class SH_Importer {
 			return;
 		}
 		foreach ( $resolved as $name => $value ) {
-			update_field( $name, $value, 'option' );
+			update_field( $this->field_key( $name ), $value, 'option' );
 		}
 		update_option( 'sh_options_import_hash', md5( wp_json_encode( array_map( static fn( $n ) => get_field( $n, 'option', false ), array_keys( $opts ) ) ) ), false );
 		$this->note( $hash ? 'updated' : 'created', 'options', 'إعدادات سيو هاوس' );
@@ -775,7 +814,7 @@ class SH_Importer {
 			if ( ! $id || 'page' !== $seed['kind'] ) {
 				continue;
 			}
-			$stored = get_field( 'sh_sections', $id );
+			$stored = sh_core_sections( (int) $id );
 			$want   = array();
 			$have   = array();
 			$this->flatten( $this->expected( $seed['sections'] ), '', $want );
