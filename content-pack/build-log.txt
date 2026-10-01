@@ -1,1 +1,2 @@
-posts: 1 article body present in the design; the other listed articles have titles only and are not created (see implementation-status.md).
+posts: 1 article from the design + 3 draft articles for published URLs (new text for review).
+legacy URLs: 53 — same-path 48, wordpress-feed 4, redirect-301 1

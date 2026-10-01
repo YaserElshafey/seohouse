@@ -1,0 +1,370 @@
+[
+ {
+  "path": "/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:home",
+  "status": "publish"
+ },
+ {
+  "path": "/about/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:about",
+  "status": "publish"
+ },
+ {
+  "path": "/blog/",
+  "source": "sitemap:post",
+  "resolution": "same-path",
+  "object": "page:blog",
+  "status": "publish"
+ },
+ {
+  "path": "/blog/category/off-page-seo/",
+  "source": "linked",
+  "resolution": "same-path",
+  "object": "category:off-page-seo",
+  "status": "publish"
+ },
+ {
+  "path": "/blog/category/technical-seo/",
+  "source": "linked",
+  "resolution": "same-path",
+  "object": "category:technical-seo",
+  "status": "publish"
+ },
+ {
+  "path": "/blog/fix-404-not-found/",
+  "source": "sitemap:post",
+  "resolution": "same-path",
+  "object": "post:fix-404-not-found",
+  "status": "draft"
+ },
+ {
+  "path": "/blog/fix-404-not-found/feed/",
+  "source": "linked",
+  "resolution": "wordpress-feed",
+  "status": "publish"
+ },
+ {
+  "path": "/blog/how-to-build-backlinks-correctly/",
+  "source": "sitemap:post",
+  "resolution": "same-path",
+  "object": "post:how-to-build-backlinks-correctly",
+  "status": "draft"
+ },
+ {
+  "path": "/blog/why-is-my-website-not-showing-in-search-engines/",
+  "source": "sitemap:post",
+  "resolution": "same-path",
+  "object": "post:why-is-my-website-not-showing-in-search-engines",
+  "status": "draft"
+ },
+ {
+  "path": "/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+  "source": "sitemap:post",
+  "resolution": "same-path",
+  "object": "post:ai-search-console-reports",
+  "status": "publish"
+ },
+ {
+  "path": "/comments/feed/",
+  "source": "linked",
+  "resolution": "wordpress-feed",
+  "status": "publish"
+ },
+ {
+  "path": "/contact/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:contact",
+  "status": "publish"
+ },
+ {
+  "path": "/feed/",
+  "source": "linked",
+  "resolution": "wordpress-feed",
+  "status": "publish"
+ },
+ {
+  "path": "/pricing/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:pricing",
+  "status": "publish"
+ },
+ {
+  "path": "/privacy-policy/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:privacy-policy",
+  "status": "draft"
+ },
+ {
+  "path": "/results/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:results",
+  "status": "publish"
+ },
+ {
+  "path": "/results/feed/",
+  "source": "linked",
+  "resolution": "wordpress-feed",
+  "status": "publish"
+ },
+ {
+  "path": "/results/تستتست/",
+  "source": "sitemap:case_study",
+  "resolution": "same-path",
+  "object": "case:education-platform",
+  "status": "publish"
+ },
+ {
+  "path": "/results/قطاع-التجارة-الإلكترونية/",
+  "source": "sitemap:case_study",
+  "resolution": "same-path",
+  "object": "case:ecommerce-salla",
+  "status": "publish"
+ },
+ {
+  "path": "/results/قطاع-الصحة-والطب/",
+  "source": "sitemap:case_study",
+  "resolution": "same-path",
+  "object": "case:health-clinic",
+  "status": "publish"
+ },
+ {
+  "path": "/sectors/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:sectors",
+  "status": "publish"
+ },
+ {
+  "path": "/sectors/ecommerce/",
+  "source": "linked",
+  "resolution": "same-path",
+  "object": "page:sector-ecommerce",
+  "status": "publish"
+ },
+ {
+  "path": "/sectors/education/",
+  "source": "sitemap:sector",
+  "resolution": "same-path",
+  "object": "page:sector-education",
+  "status": "publish"
+ },
+ {
+  "path": "/sectors/food/",
+  "source": "sitemap:sector",
+  "resolution": "same-path",
+  "object": "page:sector-food",
+  "status": "publish"
+ },
+ {
+  "path": "/sectors/health/",
+  "source": "sitemap:sector",
+  "resolution": "same-path",
+  "object": "page:sector-health",
+  "status": "publish"
+ },
+ {
+  "path": "/sectors/legal/",
+  "source": "sitemap:sector",
+  "resolution": "same-path",
+  "object": "page:sector-legal",
+  "status": "publish"
+ },
+ {
+  "path": "/sectors/real-estate/",
+  "source": "sitemap:sector",
+  "resolution": "same-path",
+  "object": "page:sector-real-estate",
+  "status": "publish"
+ },
+ {
+  "path": "/sectors/tech/",
+  "source": "sitemap:sector",
+  "resolution": "same-path",
+  "object": "page:sector-tech",
+  "status": "publish"
+ },
+ {
+  "path": "/sectors/tourism/",
+  "source": "sitemap:sector",
+  "resolution": "same-path",
+  "object": "page:sector-tourism",
+  "status": "publish"
+ },
+ {
+  "path": "/services/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:services",
+  "status": "publish"
+ },
+ {
+  "path": "/services/products/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:products",
+  "status": "publish"
+ },
+ {
+  "path": "/services/seo/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:seo",
+  "status": "publish"
+ },
+ {
+  "path": "/services/seo/backlinks/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:seo-backlinks",
+  "status": "publish"
+ },
+ {
+  "path": "/services/seo/consulting/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:seo-consulting",
+  "status": "publish"
+ },
+ {
+  "path": "/services/seo/content/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:seo-content",
+  "status": "publish"
+ },
+ {
+  "path": "/services/seo/egypt/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:seo-egypt",
+  "status": "publish"
+ },
+ {
+  "path": "/services/seo/ksa/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:seo-ksa",
+  "status": "publish"
+ },
+ {
+  "path": "/services/seo/on-page/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:seo-on-page",
+  "status": "publish"
+ },
+ {
+  "path": "/services/seo/stores-seo/",
+  "source": "sitemap:page",
+  "resolution": "redirect-301",
+  "target": "/sectors/ecommerce/",
+  "note": "مكافئة: الصفحة المنشورة عنوانها «تحسين محركات البحث للمتاجر الإلكترونية»، وهو عنوان صفحة /sectors/ecommerce/ وموضوعها في التصميم الجديد. — للمراجعة",
+  "status": "publish"
+ },
+ {
+  "path": "/services/seo/technical/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:seo-technical",
+  "status": "publish"
+ },
+ {
+  "path": "/services/seo/uae/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:seo-uae",
+  "status": "publish"
+ },
+ {
+  "path": "/services/stores/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:stores",
+  "status": "publish"
+ },
+ {
+  "path": "/services/stores/salla/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:stores-salla",
+  "status": "publish"
+ },
+ {
+  "path": "/services/stores/shopify/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:stores-shopify",
+  "status": "publish"
+ },
+ {
+  "path": "/services/stores/woocommerce/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:stores-woocommerce",
+  "status": "publish"
+ },
+ {
+  "path": "/services/stores/zid/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:stores-zid",
+  "status": "publish"
+ },
+ {
+  "path": "/services/web-design/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:web-design",
+  "status": "publish"
+ },
+ {
+  "path": "/services/web-design/custom-dev/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:web-custom-dev",
+  "status": "publish"
+ },
+ {
+  "path": "/services/web-design/react-next/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:web-react-next",
+  "status": "publish"
+ },
+ {
+  "path": "/services/web-design/webflow/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:web-webflow",
+  "status": "publish"
+ },
+ {
+  "path": "/services/web-design/wordpress/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:web-wordpress",
+  "status": "publish"
+ },
+ {
+  "path": "/team/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:team",
+  "status": "publish"
+ },
+ {
+  "path": "/terms/",
+  "source": "sitemap:page",
+  "resolution": "same-path",
+  "object": "page:terms",
+  "status": "draft"
+ }
+]

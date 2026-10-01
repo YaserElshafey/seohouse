@@ -131,5 +131,14 @@
    "url": ""
   }
  ],
- "sh_reviews_show_examples": 1
+ "sh_reviews_show_examples": 1,
+ "sh_redirects": [
+  {
+   "from": "/services/seo/stores-seo/",
+   "to": {
+    "__route": "/sectors/ecommerce/"
+   },
+   "note": "مكافئة: الصفحة المنشورة عنوانها «تحسين محركات البحث للمتاجر الإلكترونية»، وهو عنوان صفحة /sectors/ecommerce/ وموضوعها في التصميم الجديد. — للمراجعة"
+  }
+ ]
 }

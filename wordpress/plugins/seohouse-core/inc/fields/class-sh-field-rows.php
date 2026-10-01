@@ -33,6 +33,9 @@ class SH_Field_Rows extends acf_field {
 			'button_label' => '',
 			'collapsed'    => '',
 		);
+		// sub fields are registered as ACF fields of their own (validated, with type defaults)
+		$this->add_field_filter( 'acf/prepare_field_for_export', array( $this, 'prepare_field_for_export' ) );
+		$this->add_field_filter( 'acf/prepare_field_for_import', array( $this, 'prepare_field_for_import' ) );
 	}
 
 	/* ------------------------------------------------------------ definition */
@@ -171,18 +174,20 @@ class SH_Field_Rows extends acf_field {
 	 * form sends it, otherwise by position — so saving again never duplicates items.
 	 */
 	public function update_value( $value, $post_id, $field ) {
-		$existing = $this->record_ids( acf_get_metadata_by_field( $post_id, $field ), $post_id, $field );
+		$owner    = self::owner_key( $post_id );
+		// only records owned by this post may be reused or deleted (a copied page may still point
+		// at the original's records: those are left untouched and replaced by its own)
+		$existing = array_values( array_filter( $this->record_ids( acf_get_metadata_by_field( $post_id, $field ), $post_id, $field ), static fn( $id ) => get_post_meta( $id, '_sh_owner', true ) === $owner ) );
 		$rows     = is_array( $value ) ? $value : array();
 		unset( $rows[ self::token( $field ) ] );
 		$rows  = array_values( array_filter( $rows, 'is_array' ) );
-		$owner = self::owner_key( $post_id );
 		$keep  = array();
 		$pool  = $existing;
 
 		foreach ( $rows as $i => $row ) {
 			$id = (int) ( $row['_row_id'] ?? 0 );
-			if ( $id && ( ! in_array( $id, $existing, true ) || get_post_meta( $id, '_sh_owner', true ) !== $owner ) ) {
-				$id = 0; // stale or foreign ID (e.g. a revision): treat as new
+			if ( $id && ! in_array( $id, $existing, true ) ) {
+				$id = 0; // stale or foreign ID (another page, a revision): its values are copied into a new record
 			}
 			if ( ! $id ) {
 				// reuse the first existing record not claimed by an explicit ID

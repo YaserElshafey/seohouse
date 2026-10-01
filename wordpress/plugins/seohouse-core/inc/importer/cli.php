@@ -94,6 +94,64 @@ class SH_CLI_Command {
 		WP_CLI\Utils\format_items( 'table', $rows, array( 'grp', 'n' ) );
 	}
 
+	/**
+	 * Checks every published URL of the previous site (content pack data/legacy-urls.json)
+	 * against this installation: each must answer 200, or 301 to a page that answers 200.
+	 * Run before launch; any failure means a published link would become a 404.
+	 *
+	 * ## OPTIONS
+	 *
+	 * [--source=<dir>]
+	 * : Content pack folder (default: uploads/seohouse-content).
+	 *
+	 * [--base=<url>]
+	 * : Site address to test (default: home_url()).
+	 *
+	 * [--format=<format>]
+	 * : table, csv or json. Default: table.
+	 *
+	 * @subcommand launch-check
+	 * @when after_wp_load
+	 */
+	public function launch_check( $args, $assoc ) {
+		$dir  = $assoc['source'] ?? SH_Importer::default_dir();
+		$file = trailingslashit( $dir ) . 'data/legacy-urls.json';
+		if ( ! file_exists( $file ) ) {
+			WP_CLI::error( 'لا يوجد ملف الروابط المنشورة: ' . $file );
+		}
+		$base = untrailingslashit( $assoc['base'] ?? home_url() );
+		$rows = array();
+		$fail = 0;
+		foreach ( (array) json_decode( (string) file_get_contents( $file ), true ) as $u ) { // phpcs:ignore WordPress.WP.AlternativeFunctions
+			$url  = $base . implode( '/', array_map( 'rawurlencode', explode( '/', $u['path'] ) ) );
+			$res  = wp_remote_get( $url, array( 'redirection' => 0, 'timeout' => 30, 'sslverify' => false ) );
+			$code = is_wp_error( $res ) ? 0 : (int) wp_remote_retrieve_response_code( $res );
+			$to   = '';
+			$ok   = 200 === $code;
+			if ( in_array( $code, array( 301, 308 ), true ) ) {
+				$to    = (string) wp_remote_retrieve_header( $res, 'location' );
+				$final = wp_remote_get( $to, array( 'redirection' => 0, 'timeout' => 30, 'sslverify' => false ) );
+				$ok    = ! is_wp_error( $final ) && 200 === (int) wp_remote_retrieve_response_code( $final );
+				$to    = rawurldecode( (string) wp_parse_url( $to, PHP_URL_PATH ) );
+			}
+			$fail  += $ok ? 0 : 1;
+			$rows[] = array(
+				'path'     => $u['path'],
+				'expected' => $u['resolution'] . ( ! empty( $u['object'] ) ? ' ' . $u['object'] : '' ) . ( ! empty( $u['target'] ) ? ' → ' . $u['target'] : '' ),
+				'http'     => $code,
+				'redirect' => $to,
+				'result'   => $ok ? 'OK' : 'FAIL',
+				'note'     => $ok ? '' : ( 'draft' === ( $u['status'] ?? '' ) ? 'مسودة بانتظار الاعتماد والنشر' : ( 'MISSING' === $u['resolution'] ? 'لا وجهة' : '' ) ),
+			);
+		}
+		WP_CLI\Utils\format_items( $assoc['format'] ?? 'table', $rows, array( 'path', 'expected', 'http', 'redirect', 'result', 'note' ) );
+		if ( $fail ) {
+			WP_CLI::warning( sprintf( '%d من %d رابطًا منشورًا لن يعمل عند الإطلاق.', $fail, count( $rows ) ) );
+			WP_CLI::halt( 1 );
+		}
+		WP_CLI::success( sprintf( 'كل الروابط المنشورة (%d) تعمل.', count( $rows ) ) );
+	}
+
 	private function print_log( SH_Importer $imp ): void {
 		foreach ( $imp->log as $l ) {
 			if ( 'skipped' === $l[0] && ! WP_CLI::get_config( 'debug' ) ) {

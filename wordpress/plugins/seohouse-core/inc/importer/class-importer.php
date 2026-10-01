@@ -142,13 +142,16 @@ class SH_Importer {
 				$this->ensure_post(
 					'post',
 					$p['key'],
-					array(
-						'post_title'    => $p['title'],
-						'post_name'     => $p['slug'],
-						'post_date'     => $p['date'],
-						'post_content'  => $p['content'],
-						'post_excerpt'  => $p['excerpt'],
-						'post_category' => array( $this->category_id( $p['category']['slug'] ) ),
+					array_filter(
+						array(
+							'post_title'    => $p['title'],
+							'post_name'     => $p['slug'],
+							'post_status'   => $p['status'] ?? 'publish', // articles written for review are drafts
+							'post_date'     => $p['date'] ?? '',          // no date for drafts: set when published
+							'post_content'  => $p['content'],
+							'post_excerpt'  => $p['excerpt'],
+							'post_category' => array( $this->category_id( $p['category']['slug'] ) ),
+						)
 					)
 				);
 			}

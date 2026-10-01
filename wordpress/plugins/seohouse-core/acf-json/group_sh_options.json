@@ -623,6 +623,62 @@
       "type": "text",
       "instructions": "",
       "required": 0
+    },
+    {
+      "key": "field_sh_opt_tab_redirects",
+      "label": "التحويلات",
+      "name": "tab_redirects",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_opt_redirects",
+      "label": "تحويلات الروابط القديمة (301)",
+      "name": "sh_redirects",
+      "type": "sh_rows",
+      "instructions": "لروابط منشورة في الموقع السابق ولا يوجد لها مسار مطابق. حوّل فقط إلى صفحة مكافئة في الموضوع والغرض؛ لا تحوّل إلى الرئيسية. يعمل التحويل فقط عندما لا توجد صفحة منشورة على الرابط القديم.",
+      "required": 0,
+      "layout": "table",
+      "button_label": "إضافة تحويل",
+      "collapsed": "field_sh_opt_redirects__from",
+      "sub_fields": [
+        {
+          "name": "from",
+          "label": "الرابط القديم (المسار)",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "placeholder": "/services/seo/stores-seo/",
+          "key": "field_sh_opt_redirects__from"
+        },
+        {
+          "name": "to",
+          "label": "الصفحة المكافئة",
+          "type": "page_link",
+          "instructions": "",
+          "required": 0,
+          "post_type": [
+            "page",
+            "post",
+            "case_study",
+            "team_member"
+          ],
+          "allow_null": 1,
+          "allow_archives": 0,
+          "key": "field_sh_opt_redirects__to"
+        },
+        {
+          "name": "note",
+          "label": "سبب التكافؤ",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_opt_redirects__note"
+        }
+      ]
     }
   ],
   "location": [

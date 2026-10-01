@@ -88,7 +88,14 @@ const options = group('options', 'إعدادات سيو هاوس', [
   F(O, 'reviews_show_examples', 'إظهار أمثلة التقييمات المعلنة حتى ربط المصدر', 'true_false', { name: 'sh_reviews_show_examples', ui: 1, default_value: 1, instructions: 'الأمثلة موسومة «محتوى مؤقت». أطفئ الخيار لإخفاء القسم تمامًا حتى الربط.' }),
   F(O, 'gtm', 'معرّف Google Tag Manager', 'text', { name: 'sh_gtm_id', placeholder: 'GTM-XXXXXXX', instructions: 'مصدر تتبع واحد. لا يُحمّل إذا كانت إضافة أخرى تضيف GTM.' }),
   F(O, 'ga4', 'معرّف GA4 (إن لم يُستخدم GTM)', 'text', { name: 'sh_ga4_id', placeholder: 'G-XXXXXXX' }),
-  F(O, 'search_console', 'رمز التحقق من Search Console', 'text', { name: 'sh_gsc_verification' })
+  F(O, 'search_console', 'رمز التحقق من Search Console', 'text', { name: 'sh_gsc_verification' }),
+
+  tab(O, 'redirects', 'التحويلات'),
+  F(O, 'redirects', 'تحويلات الروابط القديمة (301)', 'repeater', { name: 'sh_redirects', layout: 'table', button_label: 'إضافة تحويل', collapsed: 'from', instructions: 'لروابط منشورة في الموقع السابق ولا يوجد لها مسار مطابق. حوّل فقط إلى صفحة مكافئة في الموضوع والغرض؛ لا تحوّل إلى الرئيسية. يعمل التحويل فقط عندما لا توجد صفحة منشورة على الرابط القديم.', sub_fields: [
+    S('from', 'الرابط القديم (المسار)', 'text', { placeholder: '/services/seo/stores-seo/', required: 1 }),
+    S('to', 'الصفحة المكافئة', 'page_link', { post_type: ['page', 'post', 'case_study', 'team_member'], allow_null: 1, allow_archives: 0 }),
+    S('note', 'سبب التكافؤ', 'text')
+  ] })
 ], [[{ param: 'sh_screen', operator: '==', value: 'seohouse-settings' }]]); // Core settings screen (ACF free; Options Pages are PRO)
 
 // fix: options fields whose storage name differs from helper name

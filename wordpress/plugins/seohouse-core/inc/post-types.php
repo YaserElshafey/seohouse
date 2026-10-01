@@ -106,6 +106,19 @@ function sh_core_register_post_types(): void {
 }
 add_action( 'init', 'sh_core_register_post_types', 5 );
 
+/**
+ * /results/ is a page (design template), so the case study archive is off; the published
+ * feed of case studies keeps its address /results/feed/.
+ */
+add_action(
+	'init',
+	static function () {
+		add_rewrite_rule( '^results/feed/(feed|rdf|rss|rss2|atom)/?$', 'index.php?post_type=case_study&feed=$matches[1]', 'top' );
+		add_rewrite_rule( '^results/feed/?$', 'index.php?post_type=case_study&feed=rss2', 'top' );
+	},
+	6
+);
+
 /** Deleting a page/post (or a revision/autosave) also deletes the list items it owns. */
 add_action(
 	'before_delete_post',
