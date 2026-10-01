@@ -152,6 +152,74 @@ class SH_CLI_Command {
 		WP_CLI::success( sprintf( 'كل الروابط المنشورة (%d) تعمل.', count( $rows ) ) );
 	}
 
+	/**
+	 * Applies the approved search descriptions (content pack data/seo-proposals.json):
+	 * pages → «وصف SEO» field, categories → category description. Empty fields only, unless --force.
+	 * Run only after the proposals are approved.
+	 *
+	 * ## OPTIONS
+	 *
+	 * [--source=<dir>]
+	 * : Content pack folder (default: uploads/seohouse-content).
+	 *
+	 * [--dry-run]
+	 * : Show what would change.
+	 *
+	 * [--force]
+	 * : Replace descriptions that are already filled.
+	 *
+	 * @subcommand apply-proposals
+	 * @when after_wp_load
+	 */
+	public function apply_proposals( $args, $assoc ) {
+		$file = trailingslashit( $assoc['source'] ?? SH_Importer::default_dir() ) . 'data/seo-proposals.json';
+		$data = file_exists( $file ) ? json_decode( (string) file_get_contents( $file ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions
+		if ( ! is_array( $data ) ) {
+			WP_CLI::error( 'لا يوجد ملف المقترحات: ' . $file );
+		}
+		$dry   = ! empty( $assoc['dry-run'] );
+		$force = ! empty( $assoc['force'] );
+		$seo   = json_decode( (string) file_get_contents( SH_CORE_DIR . 'acf-json/group_sh_seo.json' ), true ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+		$fkey  = '';
+		foreach ( $seo['fields'] as $f ) {
+			if ( 'sh_seo_description' === $f['name'] ) {
+				$fkey = $f['key'];
+			}
+		}
+		foreach ( (array) ( $data['pages'] ?? array() ) as $source => $text ) {
+			$ids = get_posts( array( 'post_type' => 'any', 'post_status' => 'any', 'fields' => 'ids', 'posts_per_page' => 1, 'meta_key' => SH_Importer::META_KEY, 'meta_value' => $source ) ); // phpcs:ignore WordPress.DB.SlowDBQuery
+			if ( ! $ids ) {
+				WP_CLI::warning( "$source: الصفحة غير موجودة" );
+				continue;
+			}
+			$now = (string) get_field( $fkey, $ids[0], false );
+			if ( '' !== trim( $now ) && ! $force ) {
+				WP_CLI::log( "skipped  $source — يوجد وصف: $now" );
+				continue;
+			}
+			if ( ! $dry ) {
+				update_field( $fkey, $text, $ids[0] );
+			}
+			WP_CLI::log( ( $dry ? 'would set ' : 'set      ' ) . "$source — $text" );
+		}
+		foreach ( (array) ( $data['categories'] ?? array() ) as $slug => $text ) {
+			$term = get_term_by( 'slug', $slug, 'category' );
+			if ( ! $term ) {
+				WP_CLI::warning( "category:$slug غير موجود" );
+				continue;
+			}
+			if ( '' !== trim( (string) $term->description ) && ! $force ) {
+				WP_CLI::log( "skipped  category:$slug — يوجد وصف" );
+				continue;
+			}
+			if ( ! $dry ) {
+				wp_update_term( $term->term_id, 'category', array( 'description' => $text ) );
+			}
+			WP_CLI::log( ( $dry ? 'would set ' : 'set      ' ) . "category:$slug — $text" );
+		}
+		WP_CLI::success( $dry ? 'تجربة فقط؛ لم يُحفظ شيء.' : 'طُبّقت المقترحات المعتمدة.' );
+	}
+
 	private function print_log( SH_Importer $imp ): void {
 		foreach ( $imp->log as $l ) {
 			if ( 'skipped' === $l[0] && ! WP_CLI::get_config( 'debug' ) ) {
