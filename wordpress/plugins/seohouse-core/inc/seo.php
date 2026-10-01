@@ -81,6 +81,9 @@ function sh_seo_noindex(): bool {
 	if ( is_search() || is_404() || is_author() || is_date() || is_tag() || is_attachment() ) {
 		return true;
 	}
+	if ( is_category() && 0 === (int) ( get_queried_object()->count ?? 0 ) ) {
+		return true; // empty category archive (e.g. its articles are still drafts)
+	}
 	$id = sh_seo_object_id();
 	if ( $id && sh_core_field( 'sh_seo_noindex', $id, false ) ) {
 		return true;

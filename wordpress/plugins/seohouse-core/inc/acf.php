@@ -148,3 +148,23 @@ add_filter(
 	10,
 	2
 );
+
+/**
+ * Link fields that point to content which is not published yet (a page awaiting approved text,
+ * a draft article) output nothing to visitors, so no link leads to a 404. The link reappears by
+ * itself once the target is published. Editors and the admin/CLI still see the stored target.
+ */
+add_filter(
+	'acf/format_value/type=page_link',
+	static function ( $value ) {
+		if ( is_admin() || ( defined( 'WP_CLI' ) && WP_CLI ) || current_user_can( 'edit_posts' ) ) {
+			return $value;
+		}
+		$visible = static fn( $v ) => ! is_numeric( $v ) || 'publish' === get_post_status( (int) $v );
+		if ( is_array( $value ) ) {
+			return array_values( array_filter( $value, $visible ) );
+		}
+		return $visible( $value ) ? $value : '';
+	},
+	5
+);

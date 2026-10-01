@@ -215,8 +215,22 @@ class SH_Importer {
 
 	private function index_routes(): void {
 		foreach ( $this->keys as $key => $id ) {
-			if ( $id <= 0 || 'publish' !== get_post_status( $id ) ) {
-				continue; // drafts have query-string permalinks; they are not routes yet
+			if ( $id <= 0 ) {
+				continue;
+			}
+			if ( 'publish' !== get_post_status( $id ) ) {
+				// drafts: remember the path they will have once published, so menus and link fields
+				// point to the record itself (hidden from visitors until it is published)
+				$p = get_post( $id );
+				if ( $p ) {
+					$p              = clone $p;
+					$p->post_status = 'publish';
+					$link           = get_permalink( $p );
+					if ( $link ) {
+						$this->draft_routes[ $this->path_of( $link ) ] = $id;
+					}
+				}
+				continue;
 			}
 			$link = get_permalink( $id );
 			if ( $link ) {
@@ -240,8 +254,11 @@ class SH_Importer {
 
 	private function route_id( string $route ): int {
 		$r = trailingslashit( rawurldecode( strtok( $route, '#?' ) ) );
-		return $this->routes[ $r ] ?? 0;
+		return $this->routes[ $r ] ?? ( $this->draft_routes[ $r ] ?? 0 );
 	}
+
+	/** @var array<string,int> path → ID of records that are not published yet */
+	private $draft_routes = array();
 
 	/* ================================================================ settings */
 
