@@ -103,7 +103,7 @@ const icons = new Map();
 const assets = new Set();
 const svgChoices = [];
 const report = [];
-const manifest = { generated: new Date().toISOString().slice(0, 10), designFingerprint: hooks.fingerprint(designDir), pages: [] };
+const manifest = { version: '2.1.0', generated: new Date().toISOString().slice(0, 10), designFingerprint: hooks.fingerprint(designDir), pages: [] };
 const fieldMap = [];
 const seeds = [];
 
