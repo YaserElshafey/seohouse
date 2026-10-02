@@ -29,7 +29,8 @@ const norm = href => {
     return u.toString();
   } catch (e) { return null; }
 };
-const pathOf = u => decodeURIComponent(new URL(u).pathname) + (new URL(u).search || '');
+const BASE = new URL(WP + '/').pathname.replace(/\/$/, ''); // e.g. "/new" when WordPress lives in a folder
+const pathOf = u => { const x = new URL(u); let p = decodeURIComponent(x.pathname); if (BASE && p.startsWith(BASE + '/')) p = p.slice(BASE.length); return p + (x.search || ''); };
 const skip = u => /\/wp-(admin|login|json)|xmlrpc\.php|[?&](replytocom|p=)|\/feed\/?$|\.(xml|xsl)$/.test(u);
 
 async function get(url, follow = false) {
@@ -59,7 +60,7 @@ async function get(url, follow = false) {
   }
   const legacyFile = opt('legacy', '');
   const legacy = legacyFile ? JSON.parse(fs.readFileSync(legacyFile, 'utf8')) : [];
-  for (const l of legacy) if (!/\/feed\/$/.test(l.path)) enqueue(norm(l.path.split('/').map(encodeURIComponent).join('/')), 'legacy');
+  for (const l of legacy) if (!/\/feed\/$/.test(l.path)) enqueue(norm(WP + l.path.split('/').map(encodeURIComponent).join('/')), 'legacy');
 
   while (queue.length) {
     const u = queue.shift();

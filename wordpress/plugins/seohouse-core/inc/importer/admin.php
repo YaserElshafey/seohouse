@@ -160,6 +160,15 @@ add_action(
 );
 
 add_action(
+	'wp_ajax_sh_setup_permalinks',
+	static function () {
+		sh_setup_ajax_guard();
+		sh_core_apply_permalinks();
+		wp_send_json_success( array( 'checks' => sh_setup_checks() ) );
+	}
+);
+
+add_action(
 	'wp_ajax_sh_setup_check',
 	static function () {
 		sh_setup_ajax_guard();
@@ -170,7 +179,7 @@ add_action(
 /**
  * What a site owner looks at after the import.
  *
- * @return array<int,array{0:bool,1:string,2:string}> ok, label, detail
+ * @return array<int,array{0:bool,1:string,2:string,3?:string}> ok, label, detail, fix action
  */
 function sh_setup_checks(): array {
 	$imp    = new SH_Importer( SH_Importer::default_dir() );
@@ -196,7 +205,9 @@ function sh_setup_checks(): array {
 	$out[]  = array( $media >= $need, 'الصور في مكتبة الوسائط', $media . ' / ' . $need );
 	$logos  = (array) sh_core_option( 'sh_client_logos', array() );
 	$out[]  = array( (bool) sh_core_option( 'sh_company_name', '' ) && count( $logos ) > 0, 'إعدادات سيو هاوس', 'اسم الشركة: ' . sh_core_option( 'sh_company_name', '—' ) . ' · شعارات العملاء: ' . count( $logos ) );
-	$out[]  = array( '/blog/%postname%/' === get_option( 'permalink_structure' ), 'الروابط الدائمة', (string) get_option( 'permalink_structure' ) );
+	$struct = (string) get_option( 'permalink_structure' );
+	$okperm = '/blog/%postname%/' === $struct && 'blog/category' === get_option( 'category_base' );
+	$out[]  = array( $okperm, 'الروابط الدائمة', $okperm ? '/blog/%postname%/ — المقالات على /blog/… والتصنيفات على /blog/category/…' : sprintf( 'الحالية %s — روابط المقالات المنشورة سابقًا (/blog/…) لن تعمل حتى تُطبَّق بنية المشروع.', $struct ? $struct : 'الافتراضية' ), $okperm ? '' : 'permalinks' );
 	$drafts = array();
 	foreach ( array( 'page' => array( 'privacy-policy', 'terms' ), 'post' => array( 'fix-404-not-found', 'how-to-build-backlinks-correctly', 'why-is-my-website-not-showing-in-search-engines' ) ) as $type => $slugs ) {
 		foreach ( $slugs as $slug ) {
@@ -307,11 +318,22 @@ function sh_import_admin_page(): void {
 		}).catch(function (e) { $('sh-preview-out').innerHTML = '<div class="notice notice-error inline"><p>' + esc(e.message) + '</p></div>'; }).finally(function () { busy(false); });
 	});
 
+	function render(checks) {
+		$('sh-check-out').innerHTML = '<table class="widefat striped" style="max-width:60em"><tbody>' + checks.map(function (c) {
+			var fix = c[3] === 'permalinks' ? ' <button type="button" class="button button-small" data-fix="permalinks">تطبيق بنية روابط المشروع</button>' : '';
+			return '<tr data-ok="' + (c[0] ? '1' : '0') + '"><td style="width:9em;font-weight:600;color:' + (c[0] ? '#00701a' : '#b32d2e') + '">' + (c[0] ? 'سليم' : 'يحتاج مراجعة') + '</td><td style="width:18em">' + esc(c[1]) + '</td><td>' + esc(c[2]) + fix + '</td></tr>';
+		}).join('') + '</tbody></table>';
+		$('sh-links').hidden = false;
+		var b = document.querySelector('[data-fix="permalinks"]');
+		if (b) b.addEventListener('click', function () {
+			if (!window.confirm('تغيير بنية الروابط الدائمة إلى /blog/%postname%/؟ تتغير روابط المقالات الحالية إلى /blog/…')) return;
+			b.disabled = true; post('sh_setup_permalinks').then(function (d) { render(d.checks); }).catch(function (e) { window.alert(e.message); b.disabled = false; });
+		});
+	}
 	function check() {
 		$('sh-check-out').innerHTML = '<p>جارٍ الفحص…</p>';
 		return post('sh_setup_check').then(function (d) {
-			$('sh-check-out').innerHTML = '<table class="widefat striped" style="max-width:60em"><tbody>' + d.checks.map(function (c) { return '<tr><td style="width:2em">' + (c[0] ? '✅' : '⚠️') + '</td><td style="width:18em">' + esc(c[1]) + '</td><td>' + esc(c[2]) + '</td></tr>'; }).join('') + '</tbody></table>';
-			$('sh-links').hidden = false;
+			render(d.checks);
 		}).catch(function (e) { $('sh-check-out').innerHTML = '<div class="notice notice-error inline"><p>' + esc(e.message) + '</p></div>'; });
 	}
 	$('sh-check').addEventListener('click', function () { busy(true); check().finally(function () { busy(false); }); });

@@ -400,16 +400,32 @@ class SH_Importer {
 			$this->note( 'skipped', 'permalinks', 'بنية الروابط مضبوطة مسبقًا' );
 			return;
 		}
-		// WordPress install defaults are replaced on the first setup; anything else was chosen by someone.
-		$install_default = in_array( $struct, array( '', '/%year%/%monthnum%/%day%/%postname%/', '/index.php/%year%/%monthnum%/%day%/%postname%/' ), true ) && ! get_option( 'sh_content_last_import' );
-		if ( $struct && '/blog/%postname%/' !== $struct && ! $install_default && ! $this->force ) {
-			$this->note( 'protected', 'permalinks', 'بنية روابط مختلفة مضبوطة يدويًا (' . $struct . '). استخدم --force لتطبيق /blog/%postname%/.' );
+		// On the first setup the project structure is applied when nothing can break: the structure is a
+		// WordPress install default, or the site holds no published content of its own yet (only the
+		// WordPress samples). Otherwise the owner's structure is kept and the result check warns about it.
+		$first           = ! get_option( 'sh_content_last_import' );
+		$install_default = in_array( $struct, array( '', '/%year%/%monthnum%/%day%/%postname%/', '/index.php/%year%/%monthnum%/%day%/%postname%/' ), true );
+		if ( $struct && '/blog/%postname%/' !== $struct && ! $this->force && ! ( $first && ( $install_default || ! self::site_has_own_content() ) ) ) {
+			$this->note( 'protected', 'permalinks', 'بنية روابط مختلفة مضبوطة مسبقًا (' . $struct . ') والموقع فيه محتوى منشور؛ لم تُغيَّر. المقالات المنشورة سابقًا على /blog/… تحتاج /blog/%postname%/ — طبّقها من «تهيئة الموقع ← فحص الموقع».' );
 			return;
 		}
 		if ( ! $this->dry ) {
 			sh_core_apply_permalinks();
 		}
 		$this->note( 'updated', 'permalinks', '/blog/%postname%/ و /blog/category/{slug}/' );
+	}
+
+	/** Published posts or pages other than the WordPress samples and the records this tool created. */
+	public static function site_has_own_content(): bool {
+		global $wpdb;
+		$n = (int) $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			$wpdb->prepare(
+				"SELECT COUNT(*) FROM {$wpdb->posts} p LEFT JOIN {$wpdb->postmeta} m ON m.post_id = p.ID AND m.meta_key = %s
+				 WHERE p.post_type IN ('post','page') AND p.post_status = 'publish' AND m.meta_id IS NULL AND p.ID NOT IN (1, 2)",
+				self::META_KEY
+			)
+		);
+		return $n > 0;
 	}
 
 	/** WordPress install samples ("Hello world!", "Sample Page", sample comment) are removed only if untouched. */
