@@ -77,7 +77,7 @@ function sh_import_admin_page(): void {
 		echo '<div class="notice notice-error"><p>' . esc_html( $error ) . '</p></div>';
 	}
 	if ( ! sh_core_acf_ready() ) {
-		echo '<div class="notice notice-error"><p>' . esc_html__( 'فعّل ACF PRO أو Secure Custom Fields أولًا.', 'seohouse-core' ) . '</p></div></div>';
+		echo '<div class="notice notice-error"><p>' . esc_html__( 'فعّل Advanced Custom Fields أولًا (الإصدار المجاني يكفي).', 'seohouse-core' ) . '</p></div></div>';
 		return;
 	}
 	echo '<h2>1. ' . esc_html__( 'حزمة المحتوى', 'seohouse-core' ) . '</h2>';

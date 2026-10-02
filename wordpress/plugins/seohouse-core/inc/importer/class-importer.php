@@ -91,7 +91,7 @@ class SH_Importer {
 
 	public function run(): bool {
 		if ( ! sh_core_acf_ready() ) {
-			$this->note( 'failed', 'acf', 'ACF PRO أو Secure Custom Fields غير مفعّل. لم يُنفّذ شيء.' );
+			$this->note( 'failed', 'acf', 'Advanced Custom Fields غير مفعّلة. لم يُنفّذ شيء.' );
 			return false;
 		}
 		$manifest = $this->json( 'manifest.json' );

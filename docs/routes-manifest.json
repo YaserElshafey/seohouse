@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30",
+  "generated": "2026-10-02",
   "permalinks": {
     "posts": "/blog/%postname%/",
     "category_base": "blog/category",
@@ -566,8 +566,40 @@
       "http": 200
     },
     {
+      "route": "/blog/fix-404-not-found/",
+      "key": "post:fix-404-not-found",
+      "object": "post",
+      "status": "publish",
+      "template": "single.php",
+      "http": 404
+    },
+    {
+      "route": "/blog/how-to-build-backlinks-correctly/",
+      "key": "post:how-to-build-backlinks-correctly",
+      "object": "post",
+      "status": "publish",
+      "template": "single.php",
+      "http": 404
+    },
+    {
+      "route": "/blog/why-is-my-website-not-showing-in-search-engines/",
+      "key": "post:why-is-my-website-not-showing-in-search-engines",
+      "object": "post",
+      "status": "publish",
+      "template": "single.php",
+      "http": 404
+    },
+    {
       "route": "/blog/category/technical-seo/",
       "key": "category:technical-seo",
+      "object": "category",
+      "status": "publish",
+      "template": "archive.php",
+      "http": 200
+    },
+    {
+      "route": "/blog/category/off-page-seo/",
+      "key": "category:off-page-seo",
       "object": "category",
       "status": "publish",
       "template": "archive.php",
