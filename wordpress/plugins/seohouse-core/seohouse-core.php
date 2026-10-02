@@ -43,6 +43,9 @@ register_activation_hook(
 	static function () {
 		sh_core_register_post_types();
 		flush_rewrite_rules( false );
+		if ( ! get_option( 'sh_content_last_import' ) ) {
+			update_option( 'sh_setup_redirect', 1, false );
+		}
 	}
 );
 register_deactivation_hook( __FILE__, static fn() => flush_rewrite_rules( false ) );

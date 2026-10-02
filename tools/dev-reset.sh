@@ -7,6 +7,7 @@ cd "$REPO/tools/design-import"
 node convert.js "$DESIGN" "$REPO" > /dev/null
 node core-groups.js "$REPO" > /dev/null
 node build-content.js "$DESIGN" "$REPO" > /dev/null
+python3 optimize-pack.py "$REPO/content-pack" > /dev/null   # images → WebP, references rewritten
 cd "$WP_PATH"
 wp db reset --yes --allow-root > /dev/null
 find wp-content/uploads -mindepth 1 -maxdepth 1 -type d -name '[0-9][0-9][0-9][0-9]' -exec rm -rf {} + # media from the previous local import

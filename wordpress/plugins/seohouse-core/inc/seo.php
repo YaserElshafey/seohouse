@@ -200,7 +200,7 @@ add_action(
 	'template_redirect',
 	static function () {
 		// /search/ is not a real route in the project map.
-		if ( ! is_admin() && preg_match( '#^/search/?$#', (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ) ) ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+		if ( ! is_admin() && '/search/' === sh_core_request_path() ) {
 			global $wp_query;
 			$wp_query->set_404();
 			status_header( 404 );

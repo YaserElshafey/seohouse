@@ -1,144 +1,144 @@
 {
- "sh_company_name": "سيو هاوس",
- "sh_company_name_en": "SEO House",
- "sh_footer_text": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
- "sh_copyright": "© {year} سيو هاوس",
- "sh_cta_label": "احجز استشارة مجانية",
- "sh_cta_fallback": {
-  "__route": "/contact/"
- },
- "sh_founded": 2017,
- "sh_areas": "السعودية، مصر، الإمارات",
- "sh_booking": {
-  "eyebrow": "مجانية · 30 دقيقة · عبر الإنترنت",
-  "title": "احجز استشارة مجانية",
-  "text": "أخبرنا عن موقعك والخدمة التي تحتاجها. نراجع الموقع قبل المكالمة، ثم نتفق معك على الخطوة الأنسب.",
-  "points": [
-   {
-    "text": "مراجعة أولية للموقع قبل الموعد"
-   },
-   {
-    "text": "توصيات واضحة دون التزام"
-   }
+  "sh_company_name": "سيو هاوس",
+  "sh_company_name_en": "SEO House",
+  "sh_footer_text": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+  "sh_copyright": "© {year} سيو هاوس",
+  "sh_cta_label": "احجز استشارة مجانية",
+  "sh_cta_fallback": {
+    "__route": "/contact/"
+  },
+  "sh_founded": 2017,
+  "sh_areas": "السعودية، مصر، الإمارات",
+  "sh_booking": {
+    "eyebrow": "مجانية · 30 دقيقة · عبر الإنترنت",
+    "title": "احجز استشارة مجانية",
+    "text": "أخبرنا عن موقعك والخدمة التي تحتاجها. نراجع الموقع قبل المكالمة، ثم نتفق معك على الخطوة الأنسب.",
+    "points": [
+      {
+        "text": "مراجعة أولية للموقع قبل الموعد"
+      },
+      {
+        "text": "توصيات واضحة دون التزام"
+      }
+    ],
+    "services": [
+      {
+        "key": "seo",
+        "label": "تحسين محركات البحث"
+      },
+      {
+        "key": "web",
+        "label": "تصميم وتطوير موقع"
+      },
+      {
+        "key": "stores",
+        "label": "تصميم متجر إلكتروني"
+      },
+      {
+        "key": "products",
+        "label": "إضافة المنتجات"
+      },
+      {
+        "key": "unsure",
+        "label": "لم أحدد بعد"
+      }
+    ],
+    "step2": {
+      "title": "وصلنا طلبك",
+      "text": "سجّلنا طلب الاستشارة. نراجع موقعك ونتواصل معك لتحديد موعد المكالمة."
+    }
+  },
+  "sh_booking_provider": "none",
+  "sh_article_cta": {
+    "title": "تريد معرفة وضع موقعك؟",
+    "text": "مكالمة مجانية مدتها 30 دقيقة نراجع فيها موقعك ونحدد الأولوية.",
+    "label": "احجز استشارة",
+    "link": {
+      "__route": "/contact/"
+    }
+  },
+  "sh_client_logos": [
+    {
+      "name": "المربعت",
+      "logo": {
+        "__asset": "assets/logos/marbaat.webp",
+        "alt": "المربعت"
+      },
+      "url": ""
+    },
+    {
+      "name": "Jalsatak",
+      "logo": {
+        "__asset": "assets/logos/jalsatak.webp",
+        "alt": "Jalsatak"
+      },
+      "url": ""
+    },
+    {
+      "name": "سهل للمحاماة",
+      "logo": {
+        "__asset": "assets/logos/sahal.webp",
+        "alt": "سهل للمحاماة"
+      },
+      "url": ""
+    },
+    {
+      "name": "دربك",
+      "logo": {
+        "__asset": "assets/logos/darbk.webp",
+        "alt": "دربك"
+      },
+      "url": ""
+    },
+    {
+      "name": "Arab Computers",
+      "logo": {
+        "__asset": "assets/logos/arabcomputers.webp",
+        "alt": "Arab Computers"
+      },
+      "url": ""
+    },
+    {
+      "name": "عيادات أفيرون",
+      "logo": {
+        "__asset": "assets/logos/afyroun.webp",
+        "alt": "عيادات أفيرون"
+      },
+      "url": ""
+    },
+    {
+      "name": "جنان العربية للسياحة والسفر",
+      "logo": {
+        "__asset": "assets/logos/jinan.webp",
+        "alt": "جنان العربية للسياحة والسفر"
+      },
+      "url": ""
+    },
+    {
+      "name": "Mkkabbani Furniture",
+      "logo": {
+        "__asset": "assets/logos/mkkabbani.webp",
+        "alt": "Mkkabbani Furniture"
+      },
+      "url": ""
+    },
+    {
+      "name": "عميل",
+      "logo": {
+        "__asset": "assets/logos/mark9.webp",
+        "alt": "عميل"
+      },
+      "url": ""
+    }
   ],
-  "services": [
-   {
-    "key": "seo",
-    "label": "تحسين محركات البحث"
-   },
-   {
-    "key": "web",
-    "label": "تصميم وتطوير موقع"
-   },
-   {
-    "key": "stores",
-    "label": "تصميم متجر إلكتروني"
-   },
-   {
-    "key": "products",
-    "label": "إضافة المنتجات"
-   },
-   {
-    "key": "unsure",
-    "label": "لم أحدد بعد"
-   }
-  ],
-  "step2": {
-   "title": "وصلنا طلبك",
-   "text": "سجّلنا طلب الاستشارة. نراجع موقعك ونتواصل معك لتحديد موعد المكالمة."
-  }
- },
- "sh_booking_provider": "none",
- "sh_article_cta": {
-  "title": "تريد معرفة وضع موقعك؟",
-  "text": "مكالمة مجانية مدتها 30 دقيقة نراجع فيها موقعك ونحدد الأولوية.",
-  "label": "احجز استشارة",
-  "link": {
-   "__route": "/contact/"
-  }
- },
- "sh_client_logos": [
-  {
-   "name": "المربعت",
-   "logo": {
-    "__asset": "assets/logos/marbaat.png",
-    "alt": "المربعت"
-   },
-   "url": ""
-  },
-  {
-   "name": "Jalsatak",
-   "logo": {
-    "__asset": "assets/logos/jalsatak.png",
-    "alt": "Jalsatak"
-   },
-   "url": ""
-  },
-  {
-   "name": "سهل للمحاماة",
-   "logo": {
-    "__asset": "assets/logos/sahal.png",
-    "alt": "سهل للمحاماة"
-   },
-   "url": ""
-  },
-  {
-   "name": "دربك",
-   "logo": {
-    "__asset": "assets/logos/darbk.png",
-    "alt": "دربك"
-   },
-   "url": ""
-  },
-  {
-   "name": "Arab Computers",
-   "logo": {
-    "__asset": "assets/logos/arabcomputers.png",
-    "alt": "Arab Computers"
-   },
-   "url": ""
-  },
-  {
-   "name": "عيادات أفيرون",
-   "logo": {
-    "__asset": "assets/logos/afyroun.png",
-    "alt": "عيادات أفيرون"
-   },
-   "url": ""
-  },
-  {
-   "name": "جنان العربية للسياحة والسفر",
-   "logo": {
-    "__asset": "assets/logos/jinan.png",
-    "alt": "جنان العربية للسياحة والسفر"
-   },
-   "url": ""
-  },
-  {
-   "name": "Mkkabbani Furniture",
-   "logo": {
-    "__asset": "assets/logos/mkkabbani.png",
-    "alt": "Mkkabbani Furniture"
-   },
-   "url": ""
-  },
-  {
-   "name": "عميل",
-   "logo": {
-    "__asset": "assets/logos/mark9.png",
-    "alt": "عميل"
-   },
-   "url": ""
-  }
- ],
- "sh_reviews_show_examples": 1,
- "sh_redirects": [
-  {
-   "from": "/services/seo/stores-seo/",
-   "to": {
-    "__route": "/sectors/ecommerce/"
-   },
-   "note": "نفس السلوك الحالي: الموقع المنشور يحوّل هذا الرابط 301 إلى /sectors/ecommerce/ (فُحص 2026-10-02). والوجهة الجديدة بنفس النية: سيو المتاجر الإلكترونية (الفئات والمنتجات، الجانب التقني، سلة/زد/شوبيفاي/ووكومرس، القياس بالطلبات والمبيعات). — للمراجعة"
-  }
- ]
+  "sh_reviews_show_examples": 1,
+  "sh_redirects": [
+    {
+      "from": "/services/seo/stores-seo/",
+      "to": {
+        "__route": "/sectors/ecommerce/"
+      },
+      "note": "نفس السلوك الحالي: الموقع المنشور يحوّل هذا الرابط 301 إلى /sectors/ecommerce/ (فُحص 2026-10-02). والوجهة الجديدة بنفس النية: سيو المتاجر الإلكترونية (الفئات والمنتجات، الجانب التقني، سلة/زد/شوبيفاي/ووكومرس، القياس بالطلبات والمبيعات). — للمراجعة"
+    }
+  ]
 }

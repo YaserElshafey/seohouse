@@ -89,3 +89,22 @@ function sh_core_url( string $path ): string {
 function sh_core_plain( $v ): string {
 	return trim( preg_replace( '/\s+/u', ' ', wp_strip_all_tags( (string) $v ) ) );
 }
+
+/**
+ * Site-relative path of a URL or request: decoded, without the folder WordPress lives in
+ * (a site at example.com/new/ turns "/new/services/" into "/services/"), with slashes at both ends.
+ */
+function sh_core_site_path( string $url ): string {
+	$p    = rawurldecode( (string) wp_parse_url( $url, PHP_URL_PATH ) );
+	$home = rawurldecode( (string) wp_parse_url( home_url( '/' ), PHP_URL_PATH ) );
+	if ( $home && '/' !== $home && str_starts_with( trailingslashit( $p ), $home ) ) {
+		$p = substr( $p, strlen( $home ) - 1 );
+	}
+	$p = '/' . trim( $p, '/' ) . '/';
+	return '//' === $p ? '/' : $p;
+}
+
+/** Site-relative path of the current request. */
+function sh_core_request_path(): string {
+	return sh_core_site_path( (string) wp_unslash( $_SERVER['REQUEST_URI'] ?? '/' ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput -- compared only.
+}

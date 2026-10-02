@@ -13,11 +13,9 @@
 
 defined( 'ABSPATH' ) || exit;
 
-/** Normalised path: decoded, leading and trailing slash, no query string. */
+/** Normalised site-relative path (works when WordPress lives in a folder such as /new/). */
 function sh_redirect_path( string $url ): string {
-	$path = (string) wp_parse_url( $url, PHP_URL_PATH );
-	$path = '/' . trim( rawurldecode( $path ), '/' ) . '/';
-	return '//' === $path ? '/' : $path;
+	return sh_core_site_path( $url );
 }
 
 add_action(
@@ -26,7 +24,7 @@ add_action(
 		if ( ! is_404() || ! function_exists( 'get_field' ) ) {
 			return;
 		}
-		$req = sh_redirect_path( (string) ( $_SERVER['REQUEST_URI'] ?? '' ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput -- compared only.
+		$req = sh_core_request_path();
 		foreach ( (array) sh_core_option( 'sh_redirects', array() ) as $r ) {
 			if ( empty( $r['from'] ) || empty( $r['to'] ) || sh_redirect_path( (string) $r['from'] ) !== $req ) {
 				continue;

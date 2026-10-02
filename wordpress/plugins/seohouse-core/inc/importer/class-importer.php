@@ -56,12 +56,34 @@ class SH_Importer {
 		$this->force  = ! empty( $opts['force'] );
 	}
 
+	/**
+	 * Content pack to use: SH_CONTENT_DIR if defined; otherwise the pack bundled with Core
+	 * (seohouse-core/content-pack), unless a newer pack was uploaded to uploads/seohouse-content.
+	 */
 	public static function default_dir(): string {
 		if ( defined( 'SH_CONTENT_DIR' ) ) {
 			return SH_CONTENT_DIR;
 		}
-		$up = wp_upload_dir( null, false );
-		return trailingslashit( $up['basedir'] ) . 'seohouse-content';
+		$up       = wp_upload_dir( null, false );
+		$uploaded = trailingslashit( $up['basedir'] ) . 'seohouse-content';
+		$bundled  = SH_CORE_DIR . 'content-pack';
+		$ver      = static function ( $dir ) {
+			$m = file_exists( $dir . '/manifest.json' ) ? json_decode( (string) file_get_contents( $dir . '/manifest.json' ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions
+			return is_array( $m ) ? (string) ( $m['version'] ?? '0' ) : '';
+		};
+		$vu = $ver( $uploaded );
+		$vb = $ver( $bundled );
+		if ( '' !== $vu && ( '' === $vb || version_compare( $vu, $vb, '>' ) ) ) {
+			return $uploaded;
+		}
+		return '' !== $vb ? $bundled : $uploaded;
+	}
+
+	/** Manifest of a pack folder (or null). */
+	public static function manifest_of( string $dir ): ?array {
+		$f = rtrim( $dir, '/' ) . '/manifest.json';
+		$m = file_exists( $f ) ? json_decode( (string) file_get_contents( $f ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions
+		return is_array( $m ) ? $m : null;
 	}
 
 	private function note( string $status, string $key, string $msg = '' ): void {
@@ -90,6 +112,102 @@ class SH_Importer {
 	/* ================================================================ run */
 
 	public function run(): bool {
+		$manifest = $this->prepare();
+		if ( ! $manifest ) {
+			return false;
+		}
+		$this->phase_records();
+		$this->phase_fill( array( 'pages', 'team', 'cases', 'posts' ) );
+		$this->phase_finish( $manifest );
+		return 0 === $this->counts['failed'];
+	}
+
+	/**
+	 * Steps of a full import, each short enough for one web request (the admin screen runs them in
+	 * order; each step is idempotent, so an interrupted run can simply be started again).
+	 *
+	 * @return array<int,array{0:string,1?:int,2?:int,label:string}>
+	 */
+	public function plan(): array {
+		$steps  = array();
+		$assets = $this->pack_assets();
+		for ( $i = 0; $i < count( $assets ); $i += 4 ) {
+			$steps[] = array( 'media', $i, 4, 'label' => sprintf( 'الصور %d–%d من %d', $i + 1, min( $i + 4, count( $assets ) ), count( $assets ) ) );
+		}
+		$steps[] = array( 'records', 'label' => 'إنشاء الصفحات والسجلات' );
+		$pages   = $this->load_pages( (array) $this->json( 'manifest.json' ) );
+		for ( $i = 0; $i < count( $pages ); $i += 6 ) {
+			$steps[] = array( 'pages', $i, 6, 'label' => sprintf( 'محتوى الصفحات %d–%d من %d', $i + 1, min( $i + 6, count( $pages ) ), count( $pages ) ) );
+		}
+		$steps[] = array( 'records-fill', 'label' => 'الفريق ودراسات الحالة والمقالات' );
+		$steps[] = array( 'finish', 'label' => 'القوائم والإعدادات والقراءة' );
+		return $steps;
+	}
+
+	/** Runs one step of plan(). */
+	public function run_step( array $step ): bool {
+		$manifest = $this->prepare();
+		if ( ! $manifest ) {
+			return false;
+		}
+		switch ( $step[0] ) {
+			case 'media':
+				foreach ( array_slice( $this->pack_assets(), (int) $step[1], (int) $step[2], true ) as $rel => $alt ) {
+					$this->asset_id( $rel, $alt );
+				}
+				break;
+			case 'records':
+				$this->phase_records();
+				break;
+			case 'pages':
+				$this->index_routes();
+				$this->phase_fill( array( 'pages' ), array( (int) $step[1], (int) $step[2] ) );
+				break;
+			case 'records-fill':
+				$this->index_routes();
+				$this->phase_fill( array( 'team', 'cases', 'posts' ) );
+				break;
+			case 'finish':
+				$this->index_routes();
+				if ( $this->want( 'pages' ) ) {
+					$this->crumb_ancestors( $this->load_pages( $manifest ) );
+				}
+				$this->phase_finish( $manifest );
+				break;
+		}
+		wp_defer_term_counting( false );
+		return 0 === $this->counts['failed'];
+	}
+
+	/** Every image the pack uses (relative path → alt text), in a stable order. */
+	public function pack_assets(): array {
+		$out  = array();
+		$walk = static function ( $v ) use ( &$walk, &$out ) {
+			if ( is_array( $v ) ) {
+				if ( isset( $v['__asset'] ) && is_string( $v['__asset'] ) && ! isset( $out[ $v['__asset'] ] ) ) {
+					$out[ $v['__asset'] ] = (string) ( $v['alt'] ?? '' );
+				}
+				foreach ( $v as $x ) {
+					$walk( $x );
+				}
+			}
+		};
+		foreach ( (array) glob( $this->dir . '/pages/*.json' ) as $f ) {
+			$walk( json_decode( (string) file_get_contents( $f ), true ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+		}
+		foreach ( array( 'cases', 'posts', 'options', 'menus', 'extra' ) as $d ) {
+			$walk( $this->json( "data/$d.json" ) );
+		}
+		foreach ( (array) $this->json( 'data/team.json' ) as $m ) {
+			if ( ! empty( $m['photo'] ) && ! isset( $out[ $m['photo'] ] ) ) {
+				$out[ $m['photo'] ] = $m['name'] . ' — ' . $m['role'];
+			}
+		}
+		return $out;
+	}
+
+	/** Checks, source note, existing records. @return array|false the manifest */
+	private function prepare() {
 		if ( ! sh_core_acf_ready() ) {
 			$this->note( 'failed', 'acf', 'Advanced Custom Fields غير مفعّلة. لم يُنفّذ شيء.' );
 			return false;
@@ -99,38 +217,39 @@ class SH_Importer {
 			$this->note( 'failed', 'source', 'لم يُعثر على manifest.json في: ' . $this->dir );
 			return false;
 		}
-		$this->note( 'info', 'source', 'بصمة التصميم: ' . ( $manifest['designFingerprint'] ?? '—' ) . ( $this->dry ? ' — تشغيل تجريبي (بدون كتابة)' : '' ) );
-
+		$this->note( 'info', 'source', 'حزمة المحتوى ' . ( $manifest['version'] ?? '' ) . ' — بصمة التصميم: ' . ( $manifest['designFingerprint'] ?? '—' ) . ( $this->dry ? ' — تشغيل تجريبي (بدون كتابة)' : '' ) );
 		wp_defer_term_counting( true );
 		if ( function_exists( 'wp_suspend_cache_invalidation' ) ) {
 			wp_suspend_cache_invalidation( false );
 		}
-
 		$this->index_existing();
+		$this->manifest = $manifest;
+		return $manifest;
+	}
+
+	/** @var array */
+	private $manifest = array();
+
+	/** Phase 1: settings and every record, so routes and authors exist before relations are resolved. */
+	private function phase_records(): void {
 		if ( $this->want( 'settings' ) ) {
 			$this->step_settings();
 			if ( ! get_option( 'sh_content_last_import' ) ) {
 				$this->step_defaults();
 			}
 		}
-
-		// Phase 1: records (so every route and author exists before relations are resolved).
-		$pages = $this->load_pages( $manifest );
 		if ( $this->want( 'pages' ) ) {
-			foreach ( $pages as $p ) {
+			foreach ( $this->load_pages( $this->manifest ) as $p ) {
 				$this->ensure_page( $p );
 			}
 		}
-		$team  = (array) $this->json( 'data/team.json' );
-		$cases = (array) $this->json( 'data/cases.json' );
-		$posts = (array) $this->json( 'data/posts.json' );
 		if ( $this->want( 'team' ) ) {
-			foreach ( $team as $m ) {
+			foreach ( (array) $this->json( 'data/team.json' ) as $m ) {
 				$this->ensure_post( 'team_member', $m['key'], array( 'post_title' => $m['name'], 'post_name' => $m['slug'], 'menu_order' => (int) $m['order'] ) );
 			}
 		}
 		if ( $this->want( 'cases' ) ) {
-			foreach ( $cases as $c ) {
+			foreach ( (array) $this->json( 'data/cases.json' ) as $c ) {
 				$this->ensure_post( 'case_study', $c['key'], array( 'post_title' => $c['title'], 'post_name' => $c['slug'], 'post_status' => $c['status'], 'menu_order' => (int) $c['order'] ) );
 			}
 		}
@@ -138,7 +257,7 @@ class SH_Importer {
 			foreach ( (array) $this->json( 'data/categories.json' ) as $cat ) {
 				$this->ensure_category( $cat );
 			}
-			foreach ( $posts as $p ) {
+			foreach ( (array) $this->json( 'data/posts.json' ) as $p ) {
 				$this->ensure_post(
 					'post',
 					$p['key'],
@@ -157,29 +276,43 @@ class SH_Importer {
 			}
 		}
 		$this->index_routes();
+	}
 
-		// Phase 2: fields and relations.
-		if ( $this->want( 'pages' ) ) {
-			foreach ( $pages as $p ) {
+	/**
+	 * Phase 2: fields and relations.
+	 *
+	 * @param string[]   $groups pages, team, cases, posts
+	 * @param array|null $slice  [offset, length] of pages
+	 */
+	private function phase_fill( array $groups, ?array $slice = null ): void {
+		if ( in_array( 'pages', $groups, true ) && $this->want( 'pages' ) ) {
+			$pages = $this->load_pages( $this->manifest );
+			foreach ( $slice ? array_slice( $pages, $slice[0], $slice[1] ) : $pages as $p ) {
 				$this->fill_page( $p );
 			}
-			$this->crumb_ancestors( $pages );
+			if ( ! $slice ) {
+				$this->crumb_ancestors( $pages );
+			}
 		}
-		if ( $this->want( 'team' ) ) {
-			foreach ( $team as $m ) {
+		if ( in_array( 'team', $groups, true ) && $this->want( 'team' ) ) {
+			foreach ( (array) $this->json( 'data/team.json' ) as $m ) {
 				$this->fill_team( $m );
 			}
 		}
-		if ( $this->want( 'cases' ) ) {
-			foreach ( $cases as $c ) {
+		if ( in_array( 'cases', $groups, true ) && $this->want( 'cases' ) ) {
+			foreach ( (array) $this->json( 'data/cases.json' ) as $c ) {
 				$this->fill_case( $c );
 			}
 		}
-		if ( $this->want( 'posts' ) ) {
-			foreach ( $posts as $p ) {
+		if ( in_array( 'posts', $groups, true ) && $this->want( 'posts' ) ) {
+			foreach ( (array) $this->json( 'data/posts.json' ) as $p ) {
 				$this->fill_post( $p );
 			}
 		}
+	}
+
+	/** Phase 3: menus, settings, reading; marks the import as done. */
+	private function phase_finish( array $manifest ): void {
 		if ( $this->want( 'menus' ) ) {
 			$this->step_menus();
 		}
@@ -192,9 +325,8 @@ class SH_Importer {
 		wp_defer_term_counting( false );
 		if ( ! $this->dry ) {
 			flush_rewrite_rules( false );
-			update_option( 'sh_content_last_import', array( 'time' => time(), 'fingerprint' => $manifest['designFingerprint'] ?? '', 'counts' => $this->counts ) );
+			update_option( 'sh_content_last_import', array( 'time' => time(), 'version' => $manifest['version'] ?? '', 'fingerprint' => $manifest['designFingerprint'] ?? '', 'counts' => $this->counts ) );
 		}
-		return 0 === $this->counts['failed'];
 	}
 
 	/* ================================================================ lookup */
