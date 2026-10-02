@@ -732,10 +732,16 @@ class SH_Importer {
 				}
 				continue;
 			}
+			// a menu edited in Appearance › Menus after the import is never rebuilt (unless --force)
+			if ( $term && ! $this->force && get_term_meta( $term->term_id, self::META_HASH, true ) !== $this->menu_hash( $term->term_id ) ) {
+				$this->note( 'protected', $key, 'عُدّلت القائمة من لوحة التحكم؛ لم يُكتب فوقها. (--force للكتابة)' );
+				continue;
+			}
 			if ( $this->dry ) {
 				$this->note( $term ? 'updated' : 'created', $key, 'قائمة (تجريبي)' );
 				continue;
 			}
+			$before = $term ? $this->menu_hash( $term->term_id ) : '';
 			if ( $term ) {
 				foreach ( (array) wp_get_nav_menu_items( $term->term_id ) as $it ) {
 					wp_delete_post( $it->ID, true );
@@ -751,11 +757,38 @@ class SH_Importer {
 			}
 			$this->add_menu_items( $menu_id, $menu['items'], 0 );
 			$locs[ $loc ] = $menu_id;
-			$this->note( $term ? 'updated' : 'created', $key, 'قائمة' );
+			$after        = $this->menu_hash( (int) $menu_id );
+			update_term_meta( $menu_id, self::META_HASH, $after );
+			if ( $term && $after === $before ) {
+				$this->note( 'skipped', $key, 'بلا تغيير' );
+			} else {
+				$this->note( $term ? 'updated' : 'created', $key, 'قائمة' );
+			}
 		}
 		if ( ! $this->dry ) {
 			set_theme_mod( 'nav_menu_locations', $locs );
 		}
+	}
+
+	/** Fingerprint of a menu as editors see it: order, labels, targets, descriptions, Core item fields. */
+	private function menu_hash( int $menu_id ): string {
+		$items = array();
+		$pos   = array();
+		foreach ( (array) wp_get_nav_menu_items( $menu_id ) as $it ) {
+			$pos[ $it->ID ] = count( $pos );
+		}
+		foreach ( (array) wp_get_nav_menu_items( $menu_id ) as $it ) {
+			$items[] = array(
+				$it->title,
+				'custom' === $it->type ? $it->url : $it->object . ':' . $it->object_id,
+				$pos[ (int) $it->menu_item_parent ] ?? -1,
+				$it->description,
+				get_post_meta( $it->ID, 'sh_menu_icon', true ),
+				get_post_meta( $it->ID, 'sh_menu_all_label', true ),
+				get_post_meta( $it->ID, 'sh_menu_layout', true ),
+			);
+		}
+		return md5( wp_json_encode( $items ) );
 	}
 
 	private function add_menu_items( int $menu_id, array $items, int $parent ): void {

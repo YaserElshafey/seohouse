@@ -23,9 +23,9 @@ class SH_CLI_Command {
 	 * [--only=<groups>]
 	 * : Comma list: settings,pages,team,cases,posts,menus,options.
 	 *
-	 * [--update=<targets>]
+	 * [--update[=<targets>]]
 	 * : Re-apply pack values to existing records that were not edited since the import.
-	 *   Comma list of groups (pages,team,cases,posts,menus,options), keys (page:seo-technical) or "all".
+	 *   Comma list of groups (pages,team,cases,posts,menus,options), keys (page:seo-technical) or "all" (default when no value is given).
 	 *
 	 * [--force]
 	 * : Also overwrite records edited in the admin (only with --update).
@@ -44,7 +44,7 @@ class SH_CLI_Command {
 			array(
 				'dry_run' => isset( $assoc['dry-run'] ),
 				'only'    => isset( $assoc['only'] ) ? explode( ',', $assoc['only'] ) : array(),
-				'update'  => isset( $assoc['update'] ) ? ( true === $assoc['update'] ? array( 'all' ) : explode( ',', (string) $assoc['update'] ) ) : array(), // bare --update = all
+				'update'  => isset( $assoc['update'] ) ? ( in_array( $assoc['update'], array( true, '', '1' ), true ) ? array( 'all' ) : explode( ',', (string) $assoc['update'] ) ) : array(), // bare --update = all
 				'force'   => isset( $assoc['force'] ),
 			)
 		);
