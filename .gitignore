@@ -4,3 +4,4 @@ tools/design-import/vendor/
 tools/qa/out/
 dist/
 .DS_Store
+review/

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-02T19:59:11.730Z",
+  "wp": "http://127.0.0.1:8093",
+  "urls": 67,
+  "ok200": 66,
+  "redirects": 1,
+  "notFound": 0,
+  "internalLinks": 2188,
+  "sitemapEntries": 64,
+  "assets": 117,
+  "assetErrors": [],
+  "brokenLinks": [],
+  "sitemapProblems": [],
+  "indexableNotInSitemap": [],
+  "draftsLinkedOrListed": []
+}
