@@ -21,10 +21,10 @@ while ( have_posts() ) :
 	// Articles: posts whose "author_member" is this profile, or written by the linked WordPress account.
 	$meta_q = array( array( 'key' => 'author_member', 'value' => $id ) );
 	$q_args = array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 6, 'no_found_rows' => true );
-	$posts  = get_posts( $q_args + array( 'meta_query' => $meta_q ) ); // phpcs:ignore WordPress.DB.SlowDBQuery
+	$articles  = get_posts( $q_args + array( 'meta_query' => $meta_q ) ); // phpcs:ignore WordPress.DB.SlowDBQuery
 	if ( ! empty( $f['author'] ) ) {
-		$posts = array_merge( $posts, get_posts( $q_args + array( 'author' => (int) $f['author'] ) ) );
-		$posts = array_values( array_unique( $posts, SORT_REGULAR ) );
+		$articles = array_merge( $articles, get_posts( $q_args + array( 'author' => (int) $f['author'] ) ) );
+		$articles = array_values( array_unique( $articles, SORT_REGULAR ) );
 	}
 	// design: the next three members in team order (wrapping around)
 	$all   = array_values( sh_team_members() );
@@ -80,9 +80,9 @@ while ( have_posts() ) :
 	<section id="articles" data-screen-label="Articles" style="position: relative; scroll-margin-top: 88px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
 		<div style="max-width: 1100px; margin: 0px auto; padding: clamp(32px, 4.4vw, 56px) 20px;">
 			<h2 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); line-height: 1.35; margin: 0px;"><?php echo esc_html( sprintf( /* translators: %s: name */ __( 'مقالات %s', 'seohouse' ), $name ) ); ?></h2>
-			<?php if ( $posts ) : ?>
+			<?php if ( $articles ) : ?>
 			<div data-pf-mates style="margin-top: 18px;">
-				<?php foreach ( $posts as $p ) : ?>
+				<?php foreach ( $articles as $p ) : ?>
 				<a href="<?php echo esc_url( get_permalink( $p ) ); ?>" class="sh-hv-mate" style="display: flex; flex-direction: column; gap: 4px; border-radius: 14px; background: rgba(255, 255, 255, 0.035); padding: 14px 16px; color: var(--sh-text);">
 					<span style="display: block; font-weight: 600; font-size: 15.5px; line-height: 1.6;"><?php echo esc_html( get_the_title( $p ) ); ?></span>
 					<span style="display: block; font-size: 13.5px; color: var(--sh-dim);"><?php echo esc_html( sh_post_date( $p ) ); ?></span>

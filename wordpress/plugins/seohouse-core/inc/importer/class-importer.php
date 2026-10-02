@@ -772,12 +772,27 @@ class SH_Importer {
 
 	/** Fingerprint of a menu as editors see it: order, labels, targets, descriptions, Core item fields. */
 	private function menu_hash( int $menu_id ): string {
+		// read straight from the database: right after building a menu the menu-items cache is stale
+		clean_term_cache( $menu_id, 'nav_menu' );
+		$posts = get_posts(
+			array(
+				'post_type'        => 'nav_menu_item',
+				'post_status'      => 'any',
+				'posts_per_page'   => -1,
+				'orderby'          => 'menu_order',
+				'order'            => 'ASC',
+				'cache_results'    => false,
+				'suppress_filters' => true,
+				'tax_query'        => array( array( 'taxonomy' => 'nav_menu', 'field' => 'term_id', 'terms' => $menu_id ) ), // phpcs:ignore WordPress.DB.SlowDBQuery
+			)
+		);
+		$list  = array_map( 'wp_setup_nav_menu_item', $posts );
 		$items = array();
 		$pos   = array();
-		foreach ( (array) wp_get_nav_menu_items( $menu_id ) as $it ) {
+		foreach ( $list as $it ) {
 			$pos[ $it->ID ] = count( $pos );
 		}
-		foreach ( (array) wp_get_nav_menu_items( $menu_id ) as $it ) {
+		foreach ( $list as $it ) {
 			$items[] = array(
 				$it->title,
 				'custom' === $it->type ? $it->url : $it->object . ':' . $it->object_id,

@@ -7,11 +7,11 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$posts = get_posts( array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 3, 'no_found_rows' => true ) );
-if ( ! $posts ) {
+$articles = get_posts( array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 3, 'no_found_rows' => true ) );
+if ( ! $articles ) {
 	return;
 }
-$lead   = array_shift( $posts );
+$lead   = array_shift( $articles );
 $cat    = sh_primary_category( $lead );
 $member = sh_post_author_member( $lead );
 $intro  = (string) sh_field( 'intro', $lead->ID, '' );
@@ -31,10 +31,10 @@ $intro  = $intro ? $intro : get_the_excerpt( $lead );
 		<span style="margin-inline-start: auto; font-weight: 700; color: var(--sh-lime);"><?php esc_html_e( 'اقرأ المقال', 'seohouse' ); ?> <span aria-hidden="true">←</span></span>
 	</span>
 </a>
-<?php if ( $posts ) : ?>
+<?php if ( $articles ) : ?>
 <div style="display: flex; flex-direction: column; gap: 12px;">
 	<?php
-	foreach ( $posts as $p ) :
+	foreach ( $articles as $p ) :
 		$c = sh_primary_category( $p );
 		?>
 	<a href="<?php echo esc_url( get_permalink( $p ) ); ?>" data-blog-row class="sh-hv-row" style="display: flex; flex-direction: column; gap: 8px; flex: 1 1 0px; background: rgb(255, 255, 255); border-radius: 16px; padding: 18px 20px; box-shadow: rgba(var(--sh-ink-rgb), 0.06) 0px 0px 0px 1px; color: var(--sh-ink); transition: box-shadow 0.2s, color 0.2s;">
