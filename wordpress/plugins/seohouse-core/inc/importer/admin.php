@@ -247,14 +247,34 @@ function sh_import_admin_page(): void {
 		echo '<div class="notice notice-error"><p>' . esc_html__( 'فعّل إضافة Advanced Custom Fields أولًا (الإصدار المجاني يكفي)، ثم عُد إلى هذه الصفحة.', 'seohouse-core' ) . '</p></div></div>';
 		return;
 	}
-	if ( ! $manifest ) {
-		echo '<div class="notice notice-error"><p>' . esc_html__( 'حزمة المحتوى غير موجودة. أعد تثبيت SEO House Core من الحزمة الكاملة.', 'seohouse-core' ) . '</p></div></div>';
+	$status = SH_Importer::pack_status( $dir );
+	if ( ! $manifest || $status['missing'] ) {
+		$uploaded = SH_Importer::uploaded_dir();
+		echo '<div class="notice notice-error"><p><strong>' . esc_html( $manifest ? __( 'حزمة المحتوى المضمّنة ناقصة؛ لم تُنسخ كل ملفاتها أثناء تثبيت الإضافة.', 'seohouse-core' ) : __( 'لم يُعثر على حزمة المحتوى داخل SEO House Core.', 'seohouse-core' ) ) . '</strong></p>';
+		echo '<p>' . esc_html__( 'الحل: ارفع seohouse-core.zip مرة أخرى من «الإضافات ← أضف جديد ← رفع إضافة» واختر «استبدال الحالي بالمرفوع». إن تكررت الرسالة أرسل الجدول التالي.', 'seohouse-core' ) . '</p></div>';
+		echo '<table class="widefat striped" style="max-width:60em"><tbody>';
+		$rows = array(
+			'إصدار SEO House Core'          => SH_CORE_VERSION,
+			'مجلد الإضافة'                  => SH_CORE_DIR,
+			'مسار الحزمة المتوقع'           => $status['dir'],
+			'المجلد موجود'                  => $status['is_dir'] ? 'نعم' : 'لا',
+			'عدد الملفات فيه'               => (string) $status['files'],
+			'manifest.json'                 => 'present' === $status['manifest'] ? ( 'موجود — ' . ( $status['readable'] ? 'قابل للقراءة' : 'غير قابل للقراءة' ) . ' — JSON: ' . $status['json'] ) : 'غير موجود',
+			'ملفات الحزمة المتوقعة'         => $status['listed'] ? (string) $status['listed'] : 'pack-files.json غير موجود',
+			'الملفات الناقصة'               => $status['missing'] ? count( $status['missing'] ) . ': ' . implode( '، ', array_slice( $status['missing'], 0, 15 ) ) . ( count( $status['missing'] ) > 15 ? '…' : '' ) : '—',
+			'uploads/seohouse-content'      => is_dir( $uploaded ) ? 'مجلد' . ( SH_Importer::pack_version( $uploaded ) ? ' (حزمة ' . SH_Importer::pack_version( $uploaded ) . ')' : ' بلا حزمة صالحة' ) : ( file_exists( $uploaded ) ? 'ملف (من رفع سابق غير مكتمل؛ يُتجاهل)' : 'غير موجود' ),
+			'PHP / ووردبريس'                => PHP_VERSION . ' / ' . get_bloginfo( 'version' ),
+		);
+		foreach ( $rows as $k => $v ) {
+			echo '<tr><th style="width:16em">' . esc_html( $k ) . '</th><td dir="auto"><code style="white-space:pre-wrap">' . esc_html( $v ) . '</code></td></tr>';
+		}
+		echo '</tbody></table></div>';
 		return;
 	}
 
 	echo '<p style="font-size:14px;max-width:60em">' . esc_html__( 'تنشئ التهيئة كل صفحات التصميم وأقسامها، وفريق العمل، ودراسات الحالة، والمقالات، والصور، والقوائم، وإعدادات سيو هاوس، وتضبط الصفحة الرئيسية والروابط الدائمة. لا تحتاج إلى تعبئة أي حقل يدويًا.', 'seohouse-core' ) . '</p>';
 	echo '<table class="widefat" style="max-width:60em"><tbody>';
-	echo '<tr><th style="width:14em">' . esc_html__( 'حزمة المحتوى', 'seohouse-core' ) . '</th><td>' . esc_html( ( $manifest['version'] ?? '' ) . ' — ' . ( $bundled ? __( 'مضمّنة في SEO House Core', 'seohouse-core' ) : __( 'مرفوعة', 'seohouse-core' ) ) ) . ' <code dir="ltr">' . esc_html( $manifest['designFingerprint'] ?? '' ) . '</code></td></tr>';
+	echo '<tr><th style="width:14em">' . esc_html__( 'حزمة المحتوى', 'seohouse-core' ) . '</th><td>' . esc_html( ( $manifest['version'] ?? '' ) . ' — ' . ( $bundled ? __( 'مضمّنة في SEO House Core', 'seohouse-core' ) : __( 'مرفوعة', 'seohouse-core' ) ) ) . ' <code dir="ltr">' . esc_html( $manifest['designFingerprint'] ?? '' ) . '</code><br><small dir="ltr">' . esc_html( $dir ) . ' — ' . (int) $status['files'] . ' ' . esc_html__( 'ملفًا', 'seohouse-core' ) . ( $status['listed'] ? ' / ' . (int) $status['listed'] . ' ' . esc_html__( 'متوقعة، سليمة', 'seohouse-core' ) : '' ) . '</small></td></tr>';
 	echo '<tr><th>' . esc_html__( 'الحالة', 'seohouse-core' ) . '</th><td>' . ( $last ? esc_html( sprintf( __( 'هُيّئ في %1$s (حزمة %2$s)', 'seohouse-core' ), wp_date( 'Y-m-d H:i', $last['time'] ), $last['version'] ?? '' ) ) : '<strong>' . esc_html__( 'لم يُهيّأ بعد', 'seohouse-core' ) . '</strong>' ) . '</td></tr>';
 	echo '</tbody></table>';
 

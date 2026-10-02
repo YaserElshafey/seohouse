@@ -58,25 +58,75 @@ class SH_Importer {
 
 	/**
 	 * Content pack to use: SH_CONTENT_DIR if defined; otherwise the pack bundled with Core
-	 * (seohouse-core/content-pack), unless a newer pack was uploaded to uploads/seohouse-content.
+	 * (seohouse-core/content-pack), unless a newer complete pack was uploaded to uploads/seohouse-content.
 	 */
 	public static function default_dir(): string {
 		if ( defined( 'SH_CONTENT_DIR' ) ) {
 			return SH_CONTENT_DIR;
 		}
-		$up       = wp_upload_dir( null, false );
-		$uploaded = trailingslashit( $up['basedir'] ) . 'seohouse-content';
-		$bundled  = SH_CORE_DIR . 'content-pack';
-		$ver      = static function ( $dir ) {
-			$m = file_exists( $dir . '/manifest.json' ) ? json_decode( (string) file_get_contents( $dir . '/manifest.json' ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions
-			return is_array( $m ) ? (string) ( $m['version'] ?? '0' ) : '';
-		};
-		$vu = $ver( $uploaded );
-		$vb = $ver( $bundled );
+		$bundled  = self::bundled_dir();
+		$uploaded = self::uploaded_dir();
+		$vb       = self::pack_version( $bundled );
+		$vu       = self::pack_version( $uploaded );
 		if ( '' !== $vu && ( '' === $vb || version_compare( $vu, $vb, '>' ) ) ) {
 			return $uploaded;
 		}
-		return '' !== $vb ? $bundled : $uploaded;
+		return $bundled;
+	}
+
+	/** The pack shipped inside the plugin (also accepts a pack nested one folder deeper). */
+	public static function bundled_dir(): string {
+		$dir = SH_CORE_DIR . 'content-pack';
+		if ( ! is_file( $dir . '/manifest.json' ) ) {
+			foreach ( (array) glob( $dir . '/*/manifest.json' ) as $m ) {
+				return dirname( $m );
+			}
+		}
+		return $dir;
+	}
+
+	public static function uploaded_dir(): string {
+		$up = wp_upload_dir( null, false );
+		return trailingslashit( $up['basedir'] ) . 'seohouse-content';
+	}
+
+	/** Version of a complete pack in $dir ('' when there is no readable manifest there). */
+	public static function pack_version( string $dir ): string {
+		$m = is_dir( $dir ) ? self::manifest_of( $dir ) : null;
+		return $m ? (string) ( $m['version'] ?? '0' ) : '';
+	}
+
+	/**
+	 * What is (and is not) in a pack folder — shown on the setup screen when something is wrong.
+	 *
+	 * @return array{dir:string,is_dir:bool,manifest:string,readable:bool,json:string,listed:int,missing:array,files:int}
+	 */
+	public static function pack_status( string $dir ): array {
+		$st = array( 'dir' => $dir, 'is_dir' => is_dir( $dir ), 'manifest' => 'missing', 'readable' => false, 'json' => '', 'listed' => 0, 'missing' => array(), 'files' => 0 );
+		if ( ! $st['is_dir'] ) {
+			return $st;
+		}
+		$it          = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $dir, FilesystemIterator::SKIP_DOTS ) );
+		$st['files'] = iterator_count( $it );
+		$mf          = $dir . '/manifest.json';
+		if ( is_file( $mf ) ) {
+			$st['manifest'] = 'present';
+			$st['readable'] = is_readable( $mf );
+			$raw            = $st['readable'] ? file_get_contents( $mf ) : false; // phpcs:ignore WordPress.WP.AlternativeFunctions
+			json_decode( (string) $raw, true );
+			$st['json'] = false === $raw ? 'unreadable' : ( JSON_ERROR_NONE === json_last_error() ? 'ok' : json_last_error_msg() );
+		}
+		$list = is_file( $dir . '/pack-files.json' ) ? json_decode( (string) file_get_contents( $dir . '/pack-files.json' ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions
+		if ( is_array( $list ) ) {
+			$st['listed'] = count( (array) $list['files'] );
+			foreach ( (array) $list['files'] as $f ) {
+				$p = $dir . '/' . $f['path'];
+				if ( ! is_file( $p ) || filesize( $p ) !== (int) $f['size'] ) {
+					$st['missing'][] = $f['path'];
+				}
+			}
+		}
+		return $st;
 	}
 
 	/** Manifest of a pack folder (or null). */
