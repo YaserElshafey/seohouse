@@ -51,10 +51,28 @@ const check = (name, ok, detail = '') => { results.push({ name, ok: !!ok, detail
     check('ACF (from WordPress.org) active', await p.locator('tr[data-slug="advanced-custom-fields"].active').count() > 0);
   }
   await upload('theme', opt('theme'));
-  await upload('plugin', opt('core'));
+  if (opt('core-old')) {
+    // the owner's starting point: an older Core already installed and active, site never initialised
+    await upload('plugin', opt('core-old'));
+    const h = await (await p.context().request.get(WP + '/')).text();
+    check('with the old Core: home still empty (WordPress default post)', /أهلاً بالعالم|أهلًا بالعالم|Hello world/.test(h));
+    // upload the new Core over it: WordPress offers "replace current with uploaded"
+    await p.goto(`${WP}/wp-admin/plugin-install.php?tab=upload`);
+    await p.setInputFiles('#pluginzip', opt('core'));
+    await Promise.all([p.waitForNavigation({ timeout: 120000 }), p.click('#install-plugin-submit')]);
+    await shot('00-replace-offer');
+    const rep = p.locator('a.update-from-upload-overwrite');
+    check('WordPress offers to replace the installed Core with the uploaded one', await rep.count() > 0);
+    await Promise.all([p.waitForNavigation({ timeout: 120000 }), rep.click()]);
+    check('Core replaced', /تم تحديث|updated successfully|بنجاح/.test(await p.textContent('body')));
+    await p.goto(WP + '/wp-admin/plugins.php');
+    check('Core 2.2.0 active after replace', /2\.2\.0/.test(await p.textContent('tr[data-plugin="seohouse-core/seohouse-core.php"]')) && await p.locator('tr[data-plugin="seohouse-core/seohouse-core.php"].active').count() > 0);
+    await p.goto(WP + '/wp-admin/admin.php?page=seohouse-content-setup');
+  } else {
+    await upload('plugin', opt('core'));
+    check('activating Core opens «تهيئة الموقع»', p.url().includes('page=seohouse-content-setup'), p.url().replace(WP, ''));
+  }
 
-  // activation of Core opens the setup screen
-  check('activating Core opens «تهيئة الموقع»', p.url().includes('page=seohouse-content-setup'), p.url().replace(WP, ''));
   await shot('01-setup-screen');
   const info = await p.textContent('#sh-setup table');
   check('setup screen: bundled content pack found', /مضمّنة/.test(info), info.replace(/\s+/g, ' ').trim());
