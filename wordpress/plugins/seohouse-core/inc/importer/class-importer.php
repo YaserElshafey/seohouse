@@ -588,16 +588,18 @@ class SH_Importer {
 			$this->note( 'updated', $key, 'حقول: ' . implode( '، ', array_keys( $resolved ) ) . ' (تجريبي)' );
 			return;
 		}
-		$first = ! get_post_meta( $id, self::META_HASH, true );
+		$before = (string) get_post_meta( $id, self::META_HASH, true );
+		$first  = '' === $before;
 		foreach ( $resolved as $name => $value ) {
 			update_field( $keys_by_name[ $name ] ?? $this->field_key( $name ), $value, $id );
 		}
-		update_post_meta( $id, self::META_HASH, $this->state_hash( $id, array_keys( $fields ) ) );
+		$after = $this->state_hash( $id, array_keys( $fields ) );
+		update_post_meta( $id, self::META_HASH, $after );
 		if ( function_exists( 'sh_search_index' ) ) {
 			sh_search_index( $id );
 		}
 		if ( ! $first ) {
-			$this->note( 'updated', $key, 'حقول' );
+			$this->note( $after === $before ? 'skipped' : 'updated', $key, $after === $before ? 'بلا تغيير' : 'حقول' );
 		}
 	}
 

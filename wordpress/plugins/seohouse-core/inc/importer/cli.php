@@ -44,7 +44,7 @@ class SH_CLI_Command {
 			array(
 				'dry_run' => isset( $assoc['dry-run'] ),
 				'only'    => isset( $assoc['only'] ) ? explode( ',', $assoc['only'] ) : array(),
-				'update'  => isset( $assoc['update'] ) ? explode( ',', $assoc['update'] ) : array(),
+				'update'  => isset( $assoc['update'] ) ? ( true === $assoc['update'] ? array( 'all' ) : explode( ',', (string) $assoc['update'] ) ) : array(), // bare --update = all
 				'force'   => isset( $assoc['force'] ),
 			)
 		);
