@@ -1,0 +1,4 @@
+github folder route: core 2.4.1, manifest present, files 125 / listed 125, missing 0
+FAIL /tmp/claude-0/-home-user-seohouse/bc400f7a-b50f-5096-95dd-038cd2fb1a09/scratchpad/github-folder-2.4.1.zip
+  - main plugin file is not the last entry
+(a plain zip of the folder is not ordered; the order check applies to the release file only — the pack itself is complete)

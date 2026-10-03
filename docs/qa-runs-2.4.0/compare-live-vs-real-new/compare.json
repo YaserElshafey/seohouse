@@ -1,0 +1,3364 @@
+{
+ "summary": {
+  "date": "2026-10-03T14:55:36.281Z",
+  "live": "https://seohouse.agency",
+  "new": "https://seohouse.agency/new",
+  "mode": "review",
+  "label": "seohouse.agency/new الحالي (2.3.0، قبل التحديث)",
+  "liveSitemap": "/sitemap_index.xml",
+  "liveSitemapUrls": 46,
+  "newSitemap": "none",
+  "newSitemapUrls": 0,
+  "urls": 50,
+  "same": 1,
+  "intended": 3,
+  "toFix": 46,
+  "newOnly": 0,
+  "brokenInternal": [
+   "/privacy-policy/ 404",
+   "/terms/ 404"
+  ]
+ },
+ "rows": [
+  {
+   "path": "/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "صور الموقع الحالي غير موجودة في الجديد: 1-1، 10-1، 11، 12، 13، 2، 3، 4، 5-1-e1780063641711، 6، 7، 8، 9-e1780064323988، ChatGPT-Image-3-يونيو-2026،-05_07_09-م، d1db1390-8654-45ed-bc23-1acc93638886، المربع-نت، بداية، جلستك، جنان-للسفر-والسياحة، دربك، سهل، عرب-كمبيوتر، قباني، لافيزون، لماذا-لا-يظهر-موقعك-في-محركات-البحث: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 36/35: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "سيو هاوس | نساعد الشركات والمتاجر على النمو",
+    "description": "سيو هاوس شركة سيو متخصصة في زيادة الظهور والعملاء والمبيعات للشركات والمتاجر عبر استراتيجيات واضحة ومحتوى مدروس ونتائج قابلة للقياس.",
+    "canonical": "/",
+    "canonicalAbs": "https://seohouse.agency/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "كن آخر نقرة يبحث عنها عميلك"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 25,
+    "imageFiles": [
+     "1-1",
+     "10-1",
+     "11",
+     "12",
+     "13",
+     "2",
+     "3",
+     "4",
+     "5-1-e1780063641711",
+     "6",
+     "7",
+     "8",
+     "9-e1780064323988",
+     "ChatGPT-Image-3-يونيو-2026،-05_07_09-م",
+     "d1db1390-8654-45ed-bc23-1acc93638886",
+     "المربع-نت",
+     "بداية",
+     "جلستك",
+     "جنان-للسفر-والسياحة",
+     "دربك",
+     "سهل",
+     "عرب-كمبيوتر",
+     "قباني",
+     "لافيزون",
+     "لماذا-لا-يظهر-موقعك-في-محركات-البحث"
+    ],
+    "imagesNoAlt": 0,
+    "links": 36,
+    "words": 918,
+    "sim": 0.23
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "سيو هاوس",
+    "description": "",
+    "canonical": "/",
+    "canonicalAbs": "https://seohouse.agency/new/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "نرفع ظهور موقعك أمام من يبحث عن خدمتك"
+    ],
+    "schema": [],
+    "images": 27,
+    "imageFiles": [
+     "afyroun",
+     "arabcomputers",
+     "darbk",
+     "jalsatak",
+     "jinan",
+     "marbaat",
+     "mark9",
+     "mkkabbani",
+     "pasted-1789463270111-0",
+     "pasted-1789463278866-0",
+     "pasted-1789463282905-0",
+     "pasted-1789463286768-0",
+     "pasted-1789463290373-0",
+     "pasted-1789463294080-0",
+     "pasted-1789463297756-0",
+     "pasted-1789463301137-0",
+     "pasted-1789463304330-0",
+     "pasted-1789463309884-0",
+     "pasted-1789463312814-0",
+     "pasted-1789463316318-0",
+     "pasted-1789463320135-0",
+     "pasted-1789463324129-0",
+     "pasted-1789463327303-0",
+     "pasted-1789463331172-0",
+     "pasted-1789463334083-0",
+     "pasted-1789463337592-0",
+     "sahal"
+    ],
+    "imagesNoAlt": 0,
+    "links": 35,
+    "words": 530
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.23,
+   "exception": ""
+  },
+  {
+   "path": "/about/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "عن سيو هاوس | فريق متخصص في نمو المواقع والمتاجر",
+    "description": "تعرف على سيو هاوس وفريق العمل الذي يساعد الشركات والمتاجر على بناء نمو رقمي مستدام من خلال المحتوى والتحليل واستراتيجيات الظهور في محركات البحث.",
+    "canonical": "/about/",
+    "canonicalAbs": "https://seohouse.agency/about/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "نعمل بمنطق الأداء لا بمنطق الوعود"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 248,
+    "sim": 0.15
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "عن الشركة – سيو هاوس",
+    "description": "",
+    "canonical": "/about/",
+    "canonicalAbs": "https://seohouse.agency/new/about/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "عن سيو هاوس"
+    ],
+    "schema": [],
+    "images": 9,
+    "imageFiles": [
+     "afyroun",
+     "arabcomputers",
+     "darbk",
+     "jalsatak",
+     "jinan",
+     "marbaat",
+     "mark9",
+     "mkkabbani",
+     "sahal"
+    ],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 313
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.15,
+   "exception": ""
+  },
+  {
+   "path": "/blog/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "canonical: Rank Math لا يطبع canonical لصفحة noindex (يعود بعد رفع الحجب)",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "صور الموقع الحالي غير موجودة في الجديد: ChatGPT-Image-3-يونيو-2026،-05_07_09-م، d1db1390-8654-45ed-bc23-1acc93638886، لماذا-لا-يظهر-موقعك-في-محركات-البحث، مشكلة-404-not-found: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 39/32: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "مدونة سيو هاوس | مكتبة من المقالات في السيو ونمو المواقع",
+    "description": "اقرأ مقالات سيو هاوس عن السيو والمحتوى وتحليل الأداء ونمو المواقع والمتاجر، مع أفكار عملية تساعدك على تحسين الظهور وزيادة العملاء.",
+    "canonical": "/blog/",
+    "canonicalAbs": "https://seohouse.agency/blog/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "رؤى وأدوات تبني موقعك"
+    ],
+    "schema": [
+     "CollectionPage",
+     "Organization",
+     "WebSite"
+    ],
+    "images": 4,
+    "imageFiles": [
+     "ChatGPT-Image-3-يونيو-2026،-05_07_09-م",
+     "d1db1390-8654-45ed-bc23-1acc93638886",
+     "لماذا-لا-يظهر-موقعك-في-محركات-البحث",
+     "مشكلة-404-not-found"
+    ],
+    "imagesNoAlt": 0,
+    "links": 39,
+    "words": 297,
+    "sim": 0.23
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "المدونة – سيو هاوس",
+    "description": "",
+    "canonical": "",
+    "canonicalAbs": "",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "المدونة"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 32,
+    "words": 57
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.23,
+   "exception": ""
+  },
+  {
+   "path": "/blog/category/off-page-seo/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "Schema ناقصة: CollectionPage, Organization, WebSite",
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "canonical: Rank Math لا يطبع canonical لصفحة noindex (يعود بعد رفع الحجب)",
+    "العنوان: أرشيف التصنيف بتصميم المدونة الجديد",
+    "H1: أرشيف التصنيف بتصميم المدونة الجديد",
+    "المحتوى (تشابه 0.04): أرشيف التصنيف بتصميم المدونة الجديد",
+    "صور الموقع الحالي غير موجودة في الجديد: d1db1390-8654-45ed-bc23-1acc93638886: أرشيف التصنيف بتصميم المدونة الجديد",
+    "الروابط الداخلية 34/31: أرشيف التصنيف بتصميم المدونة الجديد"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "سيو خارجي - سيو هاوس",
+    "description": "",
+    "canonical": "/blog/category/off-page-seo/",
+    "canonicalAbs": "https://seohouse.agency/blog/category/off-page-seo/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "تصنيف: سيو خارجي"
+    ],
+    "schema": [
+     "CollectionPage",
+     "Organization",
+     "WebSite"
+    ],
+    "images": 1,
+    "imageFiles": [
+     "d1db1390-8654-45ed-bc23-1acc93638886"
+    ],
+    "imagesNoAlt": 0,
+    "links": 34,
+    "words": 62,
+    "sim": 0.04
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "السيو الخارجي – سيو هاوس",
+    "description": "",
+    "canonical": "",
+    "canonicalAbs": "",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "السيو الخارجي"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 14
+   },
+   "sitemap": {
+    "live": false,
+    "new": false
+   },
+   "similarity": 0.04,
+   "exception": "تصميم جديد"
+  },
+  {
+   "path": "/blog/category/technical-seo/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "Schema ناقصة: CollectionPage, Organization, WebSite",
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "canonical: Rank Math لا يطبع canonical لصفحة noindex (يعود بعد رفع الحجب)",
+    "العنوان: أرشيف التصنيف بتصميم المدونة الجديد",
+    "H1: أرشيف التصنيف بتصميم المدونة الجديد",
+    "المحتوى (تشابه 0.15): أرشيف التصنيف بتصميم المدونة الجديد",
+    "صور الموقع الحالي غير موجودة في الجديد: ChatGPT-Image-3-يونيو-2026،-05_07_09-م، لماذا-لا-يظهر-موقعك-في-محركات-البحث، مشكلة-404-not-found: أرشيف التصنيف بتصميم المدونة الجديد",
+    "الروابط الداخلية 36/32: أرشيف التصنيف بتصميم المدونة الجديد"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "سيو تقني - سيو هاوس",
+    "description": "",
+    "canonical": "/blog/category/technical-seo/",
+    "canonicalAbs": "https://seohouse.agency/blog/category/technical-seo/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "تصنيف: سيو تقني"
+    ],
+    "schema": [
+     "CollectionPage",
+     "Organization",
+     "WebSite"
+    ],
+    "images": 3,
+    "imageFiles": [
+     "ChatGPT-Image-3-يونيو-2026،-05_07_09-م",
+     "لماذا-لا-يظهر-موقعك-في-محركات-البحث",
+     "مشكلة-404-not-found"
+    ],
+    "imagesNoAlt": 0,
+    "links": 36,
+    "words": 160,
+    "sim": 0.15
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "سيو تقني – سيو هاوس",
+    "description": "",
+    "canonical": "",
+    "canonicalAbs": "",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "سيو تقني"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 32,
+    "words": 24
+   },
+   "sitemap": {
+    "live": false,
+    "new": false
+   },
+   "similarity": 0.15,
+   "exception": "تصميم جديد"
+  },
+  {
+   "path": "/blog/fix-404-not-found/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "الحالة 200 / 404"
+   ],
+   "intended": [
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزانية الزحف وتجربة المستخدم - سيو هاوس",
+    "description": "في عالم تحسين محركات البحث الفني (Technical SEO)، لا تعد الأخطاء البرمجية مجرد رموز عابرة تظهر للمستخدم، بل هي مؤشرات حيوية تعكس مدى صحة البنية التحتية للموقع",
+    "canonical": "/blog/fix-404-not-found/",
+    "canonicalAbs": "https://seohouse.agency/blog/fix-404-not-found/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزانية الزحف وتجربة المستخدم"
+    ],
+    "schema": [
+     "BlogPosting",
+     "ImageObject",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 1,
+    "imageFiles": [
+     "مشكلة-404-not-found"
+    ],
+    "imagesNoAlt": 0,
+    "links": 37,
+    "words": 948
+   },
+   "new": {
+    "status": 404,
+    "location": "",
+    "title": "الصفحة غير موجودة. – سيو هاوس",
+    "description": "",
+    "canonical": "",
+    "canonicalAbs": "",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "الصفحة غير موجودة"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 13
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": null,
+   "exception": ""
+  },
+  {
+   "path": "/blog/how-to-build-backlinks-correctly/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "الحالة 200 / 404"
+   ],
+   "intended": [
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "كيفية بناء باك لينك موقعك بطريقة صحيحة | دليل عملي من سيو هاوس",
+    "description": "تعلّم كيفية بناء باك لينك لموقعك بطريقة صحيحة عبر استراتيجية آمنة وعملية: اختيار الصفحات، تحليل المنافسين، صناعة أصول قابلة للربط، والتواصل الذكي دون مخالفات.",
+    "canonical": "/blog/how-to-build-backlinks-correctly/",
+    "canonicalAbs": "https://seohouse.agency/blog/how-to-build-backlinks-correctly/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "كيفية بناء باك لينك موقعك بطريقة صحيحة | دليل عملي من سيو هاوس"
+    ],
+    "schema": [
+     "BlogPosting",
+     "ImageObject",
+     "Organization",
+     "Person",
+     "WebPage/FAQPage",
+     "WebSite"
+    ],
+    "images": 2,
+    "imageFiles": [
+     "2618eeea-5510-4a06-aeea-a91470ccab47",
+     "d1db1390-8654-45ed-bc23-1acc93638886"
+    ],
+    "imagesNoAlt": 0,
+    "links": 35,
+    "words": 2977
+   },
+   "new": {
+    "status": 404,
+    "location": "",
+    "title": "الصفحة غير موجودة. – سيو هاوس",
+    "description": "",
+    "canonical": "",
+    "canonicalAbs": "",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "الصفحة غير موجودة"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 13
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": null,
+   "exception": ""
+  },
+  {
+   "path": "/blog/why-is-my-website-not-showing-in-search-engines/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "الحالة 200 / 404"
+   ],
+   "intended": [
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول - سيو هاوس",
+    "description": "عدم ظهور الموقع في محركات البحث من أكثر المشاكل التي تسبب قلقًا لأصحاب المواقع، خصوصًا بعد إطلاق موقع جديد أو نشر صفحات مهمة وانتظار ظهورها في نتائج جوجل دون",
+    "canonical": "/blog/why-is-my-website-not-showing-in-search-engines/",
+    "canonicalAbs": "https://seohouse.agency/blog/why-is-my-website-not-showing-in-search-engines/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول"
+    ],
+    "schema": [
+     "BlogPosting",
+     "ImageObject",
+     "Organization",
+     "Person",
+     "WebPage/FAQPage",
+     "WebSite"
+    ],
+    "images": 1,
+    "imageFiles": [
+     "لماذا-لا-يظهر-موقعك-في-محركات-البحث"
+    ],
+    "imagesNoAlt": 0,
+    "links": 37,
+    "words": 2043
+   },
+   "new": {
+    "status": 404,
+    "location": "",
+    "title": "الصفحة غير موجودة. – سيو هاوس",
+    "description": "",
+    "canonical": "",
+    "canonicalAbs": "",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "الصفحة غير موجودة"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 13
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": null,
+   "exception": ""
+  },
+  {
+   "path": "/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "العنوان",
+    "الوصف",
+    "المحتوى (تشابه 0.5)",
+    "Schema ناقصة: BlogPosting, ImageObject, Organization, Person, WebPage, WebSite",
+    "صور الموقع الحالي غير موجودة في الجديد: ChatGPT-Image-3-يونيو-2026،-05_07_09-م",
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "الروابط الداخلية 37/33: الهيدر والفوتر والقوائم من التصميم الجديد",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة - سيو هاوس",
+    "description": "مع تغير شكل نتائج البحث في Google، لم يعد ظهور الموقع مقتصرًا على الروابط التقليدية التي اعتاد المستخدمون رؤيتها في صفحة النتائج.",
+    "canonical": "/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+    "canonicalAbs": "https://seohouse.agency/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة"
+    ],
+    "schema": [
+     "BlogPosting",
+     "ImageObject",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 1,
+    "imageFiles": [
+     "ChatGPT-Image-3-يونيو-2026،-05_07_09-م"
+    ],
+    "imagesNoAlt": 0,
+    "links": 37,
+    "words": 1776,
+    "sim": 0.5
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة – سيو هاوس",
+    "description": "",
+    "canonical": "/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+    "canonicalAbs": "https://seohouse.agency/new/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 762
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.5,
+   "exception": ""
+  },
+  {
+   "path": "/contact/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "اتصل بنا | احجز استشارة مع سيو هاوس",
+    "description": "تواصل مع سيو هاوس واحجز استشارة لموقعك أو متجرك، واكتشف الفرص الضائعة وخطوات النمو المناسبة لزيادة الظهور والعملاء والمبيعات.",
+    "canonical": "/contact/",
+    "canonicalAbs": "https://seohouse.agency/contact/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "30 دقيقة قد تغيّر مسار موقعك"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 165,
+    "sim": 0.25
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "اتصل بنا – سيو هاوس",
+    "description": "",
+    "canonical": "/contact/",
+    "canonicalAbs": "https://seohouse.agency/new/contact/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "احجز استشارة مجانية"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 149
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.25,
+   "exception": ""
+  },
+  {
+   "path": "/pricing/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "اسعار باقات السيو - سيو هاوس",
+    "description": "",
+    "canonical": "/pricing/",
+    "canonicalAbs": "https://seohouse.agency/pricing/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "كم تكلفة SEOلموقعك؟"
+    ],
+    "schema": [
+     "Article",
+     "FAQPage",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 1073,
+    "sim": 0.24
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "الأسعار – سيو هاوس",
+    "description": "",
+    "canonical": "/pricing/",
+    "canonicalAbs": "https://seohouse.agency/new/pricing/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "أسعار خدماتنا"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 527
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.24,
+   "exception": ""
+  },
+  {
+   "path": "/privacy-policy/",
+   "verdict": "مختلف مقصود",
+   "issues": [],
+   "intended": [
+    "الحالة 200 / 404: مسودة في البناء الجديد حتى اعتماد النص القانوني؛ لا يُنشر نص مؤقت",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "سياسة الخصوصية - سيو هاوس",
+    "description": "نحن في سيو هاوس نلتزم بحماية خصوصية زوار الموقع والعملاء، ونعمل على التعامل مع البيانات الشخصية بمسؤولية وشفافية. توضح هذه الصفحة كيفية جمع المعلومات",
+    "canonical": "/privacy-policy/",
+    "canonicalAbs": "https://seohouse.agency/privacy-policy/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "سياسة الخصوصية"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 561
+   },
+   "new": {
+    "status": 404,
+    "location": "",
+    "title": "الصفحة غير موجودة. – سيو هاوس",
+    "description": "",
+    "canonical": "",
+    "canonicalAbs": "",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "الصفحة غير موجودة"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 13
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": null,
+   "exception": "مسودة مقصودة"
+  },
+  {
+   "path": "/results/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 36/34: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "نتائج الأعمال - سيو هاوس",
+    "description": "نتائج الأعمال Archive - سيو هاوس",
+    "canonical": "/results/",
+    "canonicalAbs": "https://seohouse.agency/results/",
+    "robots": "index, follow",
+    "h1": [
+     "نتائج من مشاريع حقيقية"
+    ],
+    "schema": [
+     "CollectionPage",
+     "Organization",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 36,
+    "words": 142,
+    "sim": 0.13
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "نتائج الأعمال – سيو هاوس",
+    "description": "",
+    "canonical": "/results/",
+    "canonicalAbs": "https://seohouse.agency/new/results/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "نتائج الأعمال"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 34,
+    "words": 156
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.13,
+   "exception": ""
+  },
+  {
+   "path": "/results/تستتست/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "صور الموقع الحالي غير موجودة في الجديد: 486532137_1229849509166873_3193459158019643982_n، 486609636_1234627725355718_5276409582997516111_n، 491421570_1250334437118380_877132540122562913_n: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع التعليم والتدريب - سيو هاوس",
+    "description": "نمو في عدد الليدز الشهرية لمنصة تدريب — 14 كلمة مفتاحية تنافسية في الصفحة الأولى.",
+    "canonical": "/results/تستتست/",
+    "canonicalAbs": "https://seohouse.agency/results/%d8%aa%d8%b3%d8%aa%d8%aa%d8%b3%d8%aa/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "قطاع التعليم والتدريب"
+    ],
+    "schema": [],
+    "images": 3,
+    "imageFiles": [
+     "486532137_1229849509166873_3193459158019643982_n",
+     "486609636_1234627725355718_5276409582997516111_n",
+     "491421570_1250334437118380_877132540122562913_n"
+    ],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 243,
+    "sim": 0.75
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع التعليم والتدريب – سيو هاوس",
+    "description": "",
+    "canonical": "/results/تستتست/",
+    "canonicalAbs": "https://seohouse.agency/new/results/%d8%aa%d8%b3%d8%aa%d8%aa%d8%b3%d8%aa/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "قطاع التعليم والتدريب"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 223
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.75,
+   "exception": ""
+  },
+  {
+   "path": "/results/قطاع-التجارة-الإلكترونية/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "صور الموقع الحالي غير موجودة في الجديد: 486532137_1229849509166873_3193459158019643982_n، 486609636_1234627725355718_5276409582997516111_n، 491421570_1250334437118380_877132540122562913_n: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع التجارة الإلكترونية - سيو هاوس",
+    "description": "زيادة في المبيعات العضوية لمتجر سلة مع خفض الاعتماد على Google Ads بنسبة 45%.",
+    "canonical": "/results/قطاع-التجارة-الإلكترونية/",
+    "canonicalAbs": "https://seohouse.agency/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%aa%d8%ac%d8%a7%d8%b1%d8%a9-%d8%a7%d9%84%d8%a5%d9%84%d9%83%d8%aa%d8%b1%d9%88%d9%86%d9%8a%d8%a9/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "قطاع التجارة الإلكترونية"
+    ],
+    "schema": [],
+    "images": 3,
+    "imageFiles": [
+     "486532137_1229849509166873_3193459158019643982_n",
+     "486609636_1234627725355718_5276409582997516111_n",
+     "491421570_1250334437118380_877132540122562913_n"
+    ],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 253,
+    "sim": 0.75
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع التجارة الإلكترونية – سيو هاوس",
+    "description": "",
+    "canonical": "/results/قطاع-التجارة-الإلكترونية/",
+    "canonicalAbs": "https://seohouse.agency/new/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%aa%d8%ac%d8%a7%d8%b1%d8%a9-%d8%a7%d9%84%d8%a5%d9%84%d9%83%d8%aa%d8%b1%d9%88%d9%86%d9%8a%d8%a9/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "قطاع التجارة الإلكترونية"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 241
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.75,
+   "exception": ""
+  },
+  {
+   "path": "/results/قطاع-الصحة-والطب/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "صور الموقع الحالي غير موجودة في الجديد: 486532137_1229849509166873_3193459158019643982_n، 486609636_1234627725355718_5276409582997516111_n، 491421570_1250334437118380_877132540122562913_n: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع الصحة والطب - سيو هاوس",
+    "description": "نمو في الزيارات العضوية لعيادة طبية متخصصة خلال 8 أشهر — انتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.",
+    "canonical": "/results/قطاع-الصحة-والطب/",
+    "canonicalAbs": "https://seohouse.agency/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "قطاع الصحة والطب"
+    ],
+    "schema": [],
+    "images": 3,
+    "imageFiles": [
+     "486532137_1229849509166873_3193459158019643982_n",
+     "486609636_1234627725355718_5276409582997516111_n",
+     "491421570_1250334437118380_877132540122562913_n"
+    ],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 257,
+    "sim": 0.73
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع الصحة والطب – سيو هاوس",
+    "description": "",
+    "canonical": "/results/قطاع-الصحة-والطب/",
+    "canonicalAbs": "https://seohouse.agency/new/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "قطاع الصحة والطب"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 214
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.73,
+   "exception": ""
+  },
+  {
+   "path": "/sectors/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 34/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "القطاعات - سيو هاوس",
+    "description": "القطاعات Archive - سيو هاوس",
+    "canonical": "/sectors/",
+    "canonicalAbs": "https://seohouse.agency/sectors/",
+    "robots": "index, follow",
+    "h1": [
+     "سيو مخصص لقطاعك"
+    ],
+    "schema": [
+     "CollectionPage",
+     "Organization",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 34,
+    "words": 191,
+    "sim": 0.17
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "القطاعات – سيو هاوس",
+    "description": "",
+    "canonical": "/sectors/",
+    "canonicalAbs": "https://seohouse.agency/new/sectors/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "القطاعات التي نخدمها"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 374
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.17,
+   "exception": ""
+  },
+  {
+   "path": "/sectors/ecommerce/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "canonical — / /sectors/ecommerce/: قرار: يتبع قرار الفهرسة أعلاه",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تحسين محركات البحث للمتاجر الإلكترونية - سيو هاوس",
+    "description": "نساعد المتاجر الإلكترونية على زيادة الظهور والزيارات والطلبات عبر منهجية سيو مبنية على صفحات المنتجات والتصنيفات وتجربة الشراء والنمو.",
+    "canonical": "",
+    "canonicalAbs": "",
+    "robots": "follow, noindex",
+    "h1": [
+     "سيو المتاجر الإلكترونية الذي يُترجم إلى مبيعات"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 539,
+    "sim": 0.18
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع التجارة الإلكترونية – سيو هاوس",
+    "description": "",
+    "canonical": "/sectors/ecommerce/",
+    "canonicalAbs": "https://seohouse.agency/new/sectors/ecommerce/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تحسين محركات البحث للمتاجر الإلكترونية"
+    ],
+    "schema": [],
+    "images": 1,
+    "imageFiles": [
+     "02-case-organic-revenue-106274"
+    ],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 628
+   },
+   "sitemap": {
+    "live": false,
+    "new": false
+   },
+   "similarity": 0.18,
+   "exception": "قرار مطلوب"
+  },
+  {
+   "path": "/sectors/education/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تحسين محركات البحث للمواقع التعليمية والتدريبية | سيو هاوس",
+    "description": "نساعد المعاهد والمنصات التعليمية على زيادة الظهور وجذب الطلاب والعملاء عبر استراتيجية محتوى ونمو تناسب طبيعة قطاع التعليم والتدريب.",
+    "canonical": "/sectors/education/",
+    "canonicalAbs": "https://seohouse.agency/sectors/education/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "سيو قطاع التعليم والتدريب"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 441,
+    "sim": 0.16
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع التعليم والتدريب – سيو هاوس",
+    "description": "",
+    "canonical": "/sectors/education/",
+    "canonicalAbs": "https://seohouse.agency/new/sectors/education/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تحسين محركات البحث لقطاع التعليم والتدريب"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 505
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.16,
+   "exception": ""
+  },
+  {
+   "path": "/sectors/food/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تحسين محركات البحث للمطاعم - سيو هاوس",
+    "description": "نساعد المطاعم والعلامات الغذائية على زيادة الظهور المحلي وجذب عملاء أكثر عبر محتوى وصفحات واستراتيجية نمو تناسب طبيعة القطاع.",
+    "canonical": "/sectors/food/",
+    "canonicalAbs": "https://seohouse.agency/sectors/food/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "سيو قطاع الأغذية والمطاعم"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 474,
+    "sim": 0.16
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع الأغذية والمطاعم – سيو هاوس",
+    "description": "",
+    "canonical": "/sectors/food/",
+    "canonicalAbs": "https://seohouse.agency/new/sectors/food/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تحسين محركات البحث للمطاعم وعلامات الأغذية"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 522
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.16,
+   "exception": ""
+  },
+  {
+   "path": "/sectors/health/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تحسين محركات البحث للمواقع الطبية - سيو هاوس",
+    "description": "نساعد العيادات والمراكز الطبية على الظهور أمام الجمهور المناسب وزيادة الحجوزات والاستفسارات عبر محتوى وصفحات واستراتيجية مناسبة للقطاع الصحي.",
+    "canonical": "/sectors/health/",
+    "canonicalAbs": "https://seohouse.agency/sectors/health/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "سيو القطاع الصحي والطبي"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 459,
+    "sim": 0.16
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع الصحة والطب – سيو هاوس",
+    "description": "",
+    "canonical": "/sectors/health/",
+    "canonicalAbs": "https://seohouse.agency/new/sectors/health/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تحسين محركات البحث للقطاع الطبي"
+    ],
+    "schema": [],
+    "images": 1,
+    "imageFiles": [
+     "03-case-gsc-clicks-12900"
+    ],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 615
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.16,
+   "exception": ""
+  },
+  {
+   "path": "/sectors/legal/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تحسين محركات البحث لمواقع المحاماة - سيو هاوس",
+    "description": "نساعد مكاتب المحاماة والاستشارات على زيادة الظهور أمام العملاء المحتملين وبناء حضور رقمي أكثر ثقة وتأثيرًا عبر صفحات ومحتوى مناسبين.",
+    "canonical": "/sectors/legal/",
+    "canonicalAbs": "https://seohouse.agency/sectors/legal/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "سيو قطاع القانون والاستشارات"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 449,
+    "sim": 0.15
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع القانون والاستشارات – سيو هاوس",
+    "description": "",
+    "canonical": "/sectors/legal/",
+    "canonicalAbs": "https://seohouse.agency/new/sectors/legal/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تحسين محركات البحث لمكاتب المحاماة"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 464
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.15,
+   "exception": ""
+  },
+  {
+   "path": "/sectors/real-estate/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تحسين محركات البحث لمواقع العقارات والمقاولات - سيو هاوس",
+    "description": "نساعد شركات العقارات والمقاولات على تحسين الظهور للكلمات المهمة وجذب عملاء أكثر عبر صفحات ومحتوى واستراتيجية نمو تناسب طبيعة القطاع.",
+    "canonical": "/sectors/real-estate/",
+    "canonicalAbs": "https://seohouse.agency/sectors/real-estate/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "سيو العقارات والبناء"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 466,
+    "sim": 0.14
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع العقارات والبناء – سيو هاوس",
+    "description": "",
+    "canonical": "/sectors/real-estate/",
+    "canonicalAbs": "https://seohouse.agency/new/sectors/real-estate/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تحسين محركات البحث لقطاع العقارات"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 527
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.14,
+   "exception": ""
+  },
+  {
+   "path": "/sectors/realestate/",
+   "verdict": "مطابق",
+   "issues": [],
+   "intended": [],
+   "live": {
+    "status": 404,
+    "location": "",
+    "title": "Page Not Found - سيو هاوس",
+    "description": "",
+    "canonical": "",
+    "canonicalAbs": "",
+    "robots": "follow, noindex",
+    "h1": [
+     "الصفحة غير موجودة"
+    ],
+    "schema": [
+     "Organization",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 26
+   },
+   "new": {
+    "status": 404,
+    "location": "",
+    "title": "الصفحة غير موجودة. – سيو هاوس",
+    "description": "",
+    "canonical": "",
+    "canonicalAbs": "",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "الصفحة غير موجودة"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 13
+   },
+   "sitemap": {
+    "live": false,
+    "new": false
+   },
+   "similarity": null,
+   "exception": ""
+  },
+  {
+   "path": "/sectors/tech/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 33/32: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تحسين محركات البحث للمواقع التقنية والبرمجيات - سيو هاوس",
+    "description": "نساعد شركات التقنية والبرمجيات على بناء ظهور أقوى وجذب عملاء محتملين عبر تحليل واضح ومحتوى متخصص واستراتيجية تنافسية مناسبة للقطاع.",
+    "canonical": "/sectors/tech/",
+    "canonicalAbs": "https://seohouse.agency/sectors/tech/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "سيو قطاع التقنية والبرمجيات"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 455,
+    "sim": 0.14
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع التقنية والبرمجيات – سيو هاوس",
+    "description": "",
+    "canonical": "/sectors/tech/",
+    "canonicalAbs": "https://seohouse.agency/new/sectors/tech/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تحسين محركات البحث لشركات التقنية والبرمجيات"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 32,
+    "words": 520
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.14,
+   "exception": ""
+  },
+  {
+   "path": "/sectors/tourism/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تحسين محركات البحث لمواقع السياحة والسفر |",
+    "description": "نقدم حلول نمو رقمي لشركات السياحة والسفر تساعدها على الظهور أمام العملاء المناسبين وزيادة الحجوزات والاستفسارات عبر صفحات ومحتوى موجه.",
+    "canonical": "/sectors/tourism/",
+    "canonicalAbs": "https://seohouse.agency/sectors/tourism/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "سيو السياحة والسفر"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 478,
+    "sim": 0.16
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "قطاع السياحة والسفر – سيو هاوس",
+    "description": "",
+    "canonical": "/sectors/tourism/",
+    "canonicalAbs": "https://seohouse.agency/new/sectors/tourism/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تحسين محركات البحث لقطاع السياحة والسفر"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 516
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.16,
+   "exception": ""
+  },
+  {
+   "path": "/services/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/39: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "الخدمات - سيو هاوس",
+    "description": "",
+    "canonical": "/services/",
+    "canonicalAbs": "https://seohouse.agency/services/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "خدمات تبني وجودك الرقمي"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 327,
+    "sim": 0.18
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "الخدمات – سيو هاوس",
+    "description": "",
+    "canonical": "/services/",
+    "canonicalAbs": "https://seohouse.agency/new/services/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "خدمات سيو هاوس"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 39,
+    "words": 485
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.18,
+   "exception": ""
+  },
+  {
+   "path": "/services/products/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/35: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "رفع المنتجات للمتاجر وتنظيم ورفع المنتجات باحتراف | سيو هاوس",
+    "description": "نقدم خدمة رفع المنتجات للمتاجر لمساعدتك في تنظيم البيانات والصور والأوصاف والتصنيفات بشكل احترافي يسرّع الإطلاق ويحسن تجربة التسوق.",
+    "canonical": "/services/products/",
+    "canonicalAbs": "https://seohouse.agency/services/products/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "رفع المنتجات للمتاجر باحترافية"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 130,
+    "sim": 0.09
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "رفع المنتجات – سيو هاوس",
+    "description": "",
+    "canonical": "/services/products/",
+    "canonicalAbs": "https://seohouse.agency/new/services/products/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "رفع المنتجات وتنظيمها"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 35,
+    "words": 503
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.09,
+   "exception": ""
+  },
+  {
+   "path": "/services/seo/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "صور الموقع الحالي غير موجودة في الجديد: 15، 16، 17، 20، 25، 26، 4e286342-4c3b-4070-b249-2f4a5a38020a، IMG_2231-scaled-e1779978115425، IMG_2269-scaled-e1779979775239، IMG_2283-scaled-e1779978583396، IMG_2305-scaled-e1779979318465، IMG_2310-scaled-e1779979990763، IMG_2313-scaled-e1779976505826، IMG_2425-scaled-e1779979393769، IMG_2448-scaled-e1779979564107، IMG_2484-scaled-e1779977043743، IMG_2498-scaled-e1779976890496، IMG_2694-scaled-e1779976986114، المربع-نت، بداية، جلستك، جنان-للسفر-والسياحة، دربك، سهل، عرب-كمبيوتر، قباني، لافيزون: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 38/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تحسين محركات البحث في الوطن العربي والشرق الاوسط | سيو هاوس",
+    "description": "نقدم خدمات تحسين محركات البحث للشركات والمتاجر التي تريد زيادة الظهور وجذب عملاء أكثر وبناء نمو مستدام من خلال خطة واضحة ونتائج قابلة للقياس.",
+    "canonical": "/services/seo/",
+    "canonicalAbs": "https://seohouse.agency/services/seo/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "نضع موقعك أمام العملاء الذين يبحثون عمّا تقدمه"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 27,
+    "imageFiles": [
+     "15",
+     "16",
+     "17",
+     "20",
+     "25",
+     "26",
+     "4e286342-4c3b-4070-b249-2f4a5a38020a",
+     "IMG_2231-scaled-e1779978115425",
+     "IMG_2269-scaled-e1779979775239",
+     "IMG_2283-scaled-e1779978583396",
+     "IMG_2305-scaled-e1779979318465",
+     "IMG_2310-scaled-e1779979990763",
+     "IMG_2313-scaled-e1779976505826",
+     "IMG_2425-scaled-e1779979393769",
+     "IMG_2448-scaled-e1779979564107",
+     "IMG_2484-scaled-e1779977043743",
+     "IMG_2498-scaled-e1779976890496",
+     "IMG_2694-scaled-e1779976986114",
+     "المربع-نت",
+     "بداية",
+     "جلستك",
+     "جنان-للسفر-والسياحة",
+     "دربك",
+     "سهل",
+     "عرب-كمبيوتر",
+     "قباني",
+     "لافيزون"
+    ],
+    "imagesNoAlt": 0,
+    "links": 38,
+    "words": 1206,
+    "sim": 0.34
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "تحسين محركات البحث – سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/",
+    "canonicalAbs": "https://seohouse.agency/new/services/seo/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "خدمات تحسين محركات البحث"
+    ],
+    "schema": [],
+    "images": 30,
+    "imageFiles": [
+     "02-case-organic-revenue-106274",
+     "03-case-gsc-clicks-12900",
+     "05-case-organic-ranking-law-firm-number-1",
+     "afyroun",
+     "arabcomputers",
+     "darbk",
+     "jalsatak",
+     "jinan",
+     "marbaat",
+     "mark9",
+     "mkkabbani",
+     "pasted-1789463270111-0",
+     "pasted-1789463278866-0",
+     "pasted-1789463282905-0",
+     "pasted-1789463286768-0",
+     "pasted-1789463290373-0",
+     "pasted-1789463294080-0",
+     "pasted-1789463297756-0",
+     "pasted-1789463301137-0",
+     "pasted-1789463304330-0",
+     "pasted-1789463309884-0",
+     "pasted-1789463312814-0",
+     "pasted-1789463316318-0",
+     "pasted-1789463320135-0",
+     "pasted-1789463324129-0",
+     "pasted-1789463327303-0",
+     "pasted-1789463331172-0",
+     "pasted-1789463334083-0",
+     "pasted-1789463337592-0",
+     "sahal"
+    ],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 1197
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.34,
+   "exception": ""
+  },
+  {
+   "path": "/services/seo/backlinks/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 35/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "خدمة بناء الباك لينك والجيست بوست | سيو هاوس",
+    "description": "نقدم خدمة بناء الروابط الخارجية عبر استراتيجية مدروسة تساعد على دعم الصفحات المهمة في موقعك وزيادة الثقة وتحسين فرص المنافسة في نتائج البحث.",
+    "canonical": "/services/seo/backlinks/",
+    "canonicalAbs": "https://seohouse.agency/services/seo/backlinks/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "روابط خارجية موثوقة تعزّز ثقة Google في موقعك"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 35,
+    "words": 1000,
+    "sim": 0.15
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "بناء الروابط – سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/backlinks/",
+    "canonicalAbs": "https://seohouse.agency/new/services/seo/backlinks/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "بناء الروابط الخارجية"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 566
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.15,
+   "exception": ""
+  },
+  {
+   "path": "/services/seo/consulting/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 35/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "خدمة استشارات السيو لفهم الأداء واتخاذ القرارات - سيو هاوس",
+    "description": "احجز استشارات السيو لفهم أرقام الزيارات والعملاء والمبيعات ومراجعة أداء موقعك أو خطتك الحالية واتخاذ قرارات أوضح مبنية على البيانات.",
+    "canonical": "/services/seo/consulting/",
+    "canonicalAbs": "https://seohouse.agency/services/seo/consulting/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "نعرفك ما يحتاجه موقعك قبل أن تبدأ التنفيذ"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 35,
+    "words": 868,
+    "sim": 0.21
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "الاستشارات وتحليل الأداء – سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/consulting/",
+    "canonicalAbs": "https://seohouse.agency/new/services/seo/consulting/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "استشارات تحسين محركات البحث"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 468
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.21,
+   "exception": ""
+  },
+  {
+   "path": "/services/seo/content/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 35/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "خدمة كتابة محتوي يساعد على الظهور والتحويل | سيو هاوس",
+    "description": "نكتب محتوى مدروسًا يساعد الشركات والمتاجر على استهداف الكلمات المناسبة وبناء صفحات ومقالات ترفع الظهور وتحوّل الزيارات إلى فرص ومبيعات.",
+    "canonical": "/services/seo/content/",
+    "canonicalAbs": "https://seohouse.agency/services/seo/content/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "محتوى سيو يجذب العميل ويقوده إلى الخطوة التالية"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 35,
+    "words": 1048,
+    "sim": 0.17
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "محتوى السيو – سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/content/",
+    "canonicalAbs": "https://seohouse.agency/new/services/seo/content/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "كتابة محتوى السيو"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 530
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.17,
+   "exception": ""
+  },
+  {
+   "path": "/services/seo/egypt/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 36/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تحسين محركات البحث في مصر - سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/egypt/",
+    "canonicalAbs": "https://seohouse.agency/services/seo/egypt/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "شركة سيو في مصر لتحسين ظهور موقعك وزيادة العملاء"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 36,
+    "words": 105,
+    "sim": 0.07
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "السيو في مصر – سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/egypt/",
+    "canonicalAbs": "https://seohouse.agency/new/services/seo/egypt/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "خدمات السيو في مصر"
+    ],
+    "schema": [],
+    "images": 10,
+    "imageFiles": [
+     "03-case-gsc-clicks-12900",
+     "afyroun",
+     "arabcomputers",
+     "darbk",
+     "jalsatak",
+     "jinan",
+     "marbaat",
+     "mark9",
+     "mkkabbani",
+     "sahal"
+    ],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 1429
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.07,
+   "exception": ""
+  },
+  {
+   "path": "/services/seo/ksa/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 36/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تحسين محركات البحث في السعودية - سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/ksa/",
+    "canonicalAbs": "https://seohouse.agency/services/seo/ksa/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "شركة سيو في السعودية لزيادة ظهور موقعك وجذب عملاء جدد"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 36,
+    "words": 120,
+    "sim": 0.1
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "السيو في السعودية – سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/ksa/",
+    "canonicalAbs": "https://seohouse.agency/new/services/seo/ksa/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "خدمات السيو في السعودية"
+    ],
+    "schema": [],
+    "images": 10,
+    "imageFiles": [
+     "02-case-organic-revenue-106274",
+     "afyroun",
+     "arabcomputers",
+     "darbk",
+     "jalsatak",
+     "jinan",
+     "marbaat",
+     "mark9",
+     "mkkabbani",
+     "sahal"
+    ],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 770
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.1,
+   "exception": ""
+  },
+  {
+   "path": "/services/seo/on-page/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 34/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "السيو الداخلي - سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/on-page/",
+    "canonicalAbs": "https://seohouse.agency/services/seo/on-page/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "نرتّب صفحات موقعك لتفهمها Google ويصل العميل لما يبحث عنه"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 34,
+    "words": 823,
+    "sim": 0.19
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "السيو الداخلي – سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/on-page/",
+    "canonicalAbs": "https://seohouse.agency/new/services/seo/on-page/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تحسين صفحات موقعك"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 457
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.19,
+   "exception": ""
+  },
+  {
+   "path": "/services/seo/stores-seo/",
+   "verdict": "مختلف مقصود",
+   "issues": [],
+   "intended": [
+    "الحالة 301→/sectors/ecommerce/ / 404: تحويل 301 إلى /sectors/ecommerce/ كما في الموقع الحالي (صفحة مكافئة؛ docs/legacy-url-map.md)",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 301,
+    "location": "/sectors/ecommerce/",
+    "title": "",
+    "description": "",
+    "canonical": "",
+    "canonicalAbs": "",
+    "robots": "",
+    "h1": [],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 0,
+    "words": 0
+   },
+   "new": {
+    "status": 404,
+    "location": "",
+    "title": "الصفحة غير موجودة. – سيو هاوس",
+    "description": "",
+    "canonical": "",
+    "canonicalAbs": "",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "الصفحة غير موجودة"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 13
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": null,
+   "exception": "تحويل مقصود"
+  },
+  {
+   "path": "/services/seo/technical/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 34/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "السيو التقني - سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/technical/",
+    "canonicalAbs": "https://seohouse.agency/services/seo/technical/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "السيو التقني يُزيل عوائق ظهور موقعك"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 34,
+    "words": 1014,
+    "sim": 0.22
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "السيو التقني – سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/technical/",
+    "canonicalAbs": "https://seohouse.agency/new/services/seo/technical/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "السيو التقني لموقعك"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 569
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.22,
+   "exception": ""
+  },
+  {
+   "path": "/services/seo/uae/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "صور الموقع الحالي غير موجودة في الجديد: 15، 16، 17، 20، 25، 26، 4e286342-4c3b-4070-b249-2f4a5a38020a، IMG_2231-scaled-e1779978115425، IMG_2269-scaled-e1779979775239، IMG_2283-scaled-e1779978583396، IMG_2305-scaled-e1779979318465، IMG_2310-scaled-e1779979990763، IMG_2313-scaled-e1779976505826، IMG_2425-scaled-e1779979393769، IMG_2448-scaled-e1779979564107، IMG_2484-scaled-e1779977043743، IMG_2498-scaled-e1779976890496، IMG_2694-scaled-e1779976986114، المربع-نت، بداية، جلستك، جنان-للسفر-والسياحة، دربك، سهل، عرب-كمبيوتر، قباني، لافيزون: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 36/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تحسين محركات البحث في الامارات - سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/uae/",
+    "canonicalAbs": "https://seohouse.agency/services/seo/uae/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "شركة سيو في الإمارات لتحسين ظهور موقعك أمام عملائك"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 27,
+    "imageFiles": [
+     "15",
+     "16",
+     "17",
+     "20",
+     "25",
+     "26",
+     "4e286342-4c3b-4070-b249-2f4a5a38020a",
+     "IMG_2231-scaled-e1779978115425",
+     "IMG_2269-scaled-e1779979775239",
+     "IMG_2283-scaled-e1779978583396",
+     "IMG_2305-scaled-e1779979318465",
+     "IMG_2310-scaled-e1779979990763",
+     "IMG_2313-scaled-e1779976505826",
+     "IMG_2425-scaled-e1779979393769",
+     "IMG_2448-scaled-e1779979564107",
+     "IMG_2484-scaled-e1779977043743",
+     "IMG_2498-scaled-e1779976890496",
+     "IMG_2694-scaled-e1779976986114",
+     "المربع-نت",
+     "بداية",
+     "جلستك",
+     "جنان-للسفر-والسياحة",
+     "دربك",
+     "سهل",
+     "عرب-كمبيوتر",
+     "قباني",
+     "لافيزون"
+    ],
+    "imagesNoAlt": 0,
+    "links": 36,
+    "words": 1382,
+    "sim": 0.28
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "السيو في الإمارات – سيو هاوس",
+    "description": "",
+    "canonical": "/services/seo/uae/",
+    "canonicalAbs": "https://seohouse.agency/new/services/seo/uae/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "خدمات السيو في الإمارات"
+    ],
+    "schema": [],
+    "images": 10,
+    "imageFiles": [
+     "04-case-ga4-revenue-growth-253",
+     "afyroun",
+     "arabcomputers",
+     "darbk",
+     "jalsatak",
+     "jinan",
+     "marbaat",
+     "mark9",
+     "mkkabbani",
+     "sahal"
+    ],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 1347
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.28,
+   "exception": ""
+  },
+  {
+   "path": "/services/stores/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/35: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "إنشاء وتصميم متاجر إلكترونية | سيو هاوس",
+    "description": "ننشئ ونصمم متاجر إلكترونية تساعدك على عرض منتجاتك باحتراف وتحسين تجربة الشراء ورفع التحويلات وبناء متجر جاهز للنمو والمبيعات.",
+    "canonical": "/services/stores/",
+    "canonicalAbs": "https://seohouse.agency/services/stores/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "إنشاء وتصميم متجرك الإلكتروني"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 967,
+    "sim": 0.18
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "تصميم المتاجر – سيو هاوس",
+    "description": "",
+    "canonical": "/services/stores/",
+    "canonicalAbs": "https://seohouse.agency/new/services/stores/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تصميم المتاجر الإلكترونية"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 35,
+    "words": 495
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.18,
+   "exception": ""
+  },
+  {
+   "path": "/services/stores/salla/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/32: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تصميم متاجر سلة | سيو هاوس",
+    "description": "نصمم متاجر سلة بشكل احترافي يساعدك على تنظيم المنتجات وتحسين تجربة الشراء وبناء متجر واضح وسريع وجاهز لزيادة المبيعات.",
+    "canonical": "/services/stores/salla/",
+    "canonicalAbs": "https://seohouse.agency/services/stores/salla/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "انشاء متاجر سلة"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 380,
+    "sim": 0.19
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "سلة – سيو هاوس",
+    "description": "",
+    "canonical": "/services/stores/salla/",
+    "canonicalAbs": "https://seohouse.agency/new/services/stores/salla/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تصميم متاجر سلة"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 32,
+    "words": 404
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.19,
+   "exception": ""
+  },
+  {
+   "path": "/services/stores/shopify/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/31: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تصميم متاجر شوبيفاي | سيو هاوس",
+    "description": "نصمم متاجر شوبيفاي للعلامات التي تبحث عن متجر احترافي منظم وقابل للتوسع، مع تجربة شراء قوية وصفحات تساعد على رفع المبيعات.",
+    "canonical": "/services/stores/shopify/",
+    "canonicalAbs": "https://seohouse.agency/services/stores/shopify/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "إنشاء متاجر شوبيفاي"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 380,
+    "sim": 0.14
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "شوبيفاي – سيو هاوس",
+    "description": "",
+    "canonical": "/services/stores/shopify/",
+    "canonicalAbs": "https://seohouse.agency/new/services/stores/shopify/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تصميم متاجر شوبيفاي"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 414
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.14,
+   "exception": ""
+  },
+  {
+   "path": "/services/stores/woocommerce/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/32: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تصميم متاجر ووكومرس | سيو هاوس",
+    "description": "نصمم متاجر ووكومرس بشكل احترافي يساعدك على إدارة المنتجات بسهولة وتحسين تجربة الشراء وبناء متجر مرن يدعم النمو والتحويل.",
+    "canonical": "/services/stores/woocommerce/",
+    "canonicalAbs": "https://seohouse.agency/services/stores/woocommerce/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "انشاء متاجر ووكومرس"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 380,
+    "sim": 0.14
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "ووكومرس – سيو هاوس",
+    "description": "",
+    "canonical": "/services/stores/woocommerce/",
+    "canonicalAbs": "https://seohouse.agency/new/services/stores/woocommerce/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تصميم متاجر ووكومرس"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 32,
+    "words": 370
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.14,
+   "exception": ""
+  },
+  {
+   "path": "/services/stores/zid/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/32: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تصميم متاجر زد | سيو هاوس",
+    "description": "نقدم تصميم متجر زد للعلامات التجارية التي تريد متجرًا سريعًا وواضحًا وجاهزًا للبيع، مع تجربة استخدام قوية تدعم التوسع والمبيعات.",
+    "canonical": "/services/stores/zid/",
+    "canonicalAbs": "https://seohouse.agency/services/stores/zid/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "انشاء متاجر زد"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 380,
+    "sim": 0.18
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "زد – سيو هاوس",
+    "description": "",
+    "canonical": "/services/stores/zid/",
+    "canonicalAbs": "https://seohouse.agency/new/services/stores/zid/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تصميم متاجر زد"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 32,
+    "words": 388
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.18,
+   "exception": ""
+  },
+  {
+   "path": "/services/web-design/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/35: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "إنشاء وتصميم مواقع احترافية تدعم النمو والظهور - سيو هاوس",
+    "description": "ننشئ ونصمم مواقع احترافية تساعد الشركات على تقديم خدماتها بشكل أوضح وتحسين تجربة المستخدم وبناء صفحات تدعم الظهور والتحويل والنمو.",
+    "canonical": "/services/web-design/",
+    "canonicalAbs": "https://seohouse.agency/services/web-design/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "تصميم مواقع تبني الثقة وتجلب العملاء"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 822,
+    "sim": 0.16
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "تصميم المواقع – سيو هاوس",
+    "description": "",
+    "canonical": "/services/web-design/",
+    "canonicalAbs": "https://seohouse.agency/new/services/web-design/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تصميم وتطوير المواقع"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 35,
+    "words": 515
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.16,
+   "exception": ""
+  },
+  {
+   "path": "/services/web-design/custom-dev/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/32: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "برمجة مواقع خاصة تتجاوز القوالب الجاهزة - سيو هاوس",
+    "description": "نقدم برمجة مواقع خاصة للشركات التي تحتاج إلى حلول مخصصة تناسب احتياجاتها التشغيلية والتسويقية بعيدًا عن القيود التقليدية للقوالب الجاهزة.",
+    "canonical": "/services/web-design/custom-dev/",
+    "canonicalAbs": "https://seohouse.agency/services/web-design/custom-dev/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "برمجة مواقع خاصة"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 430,
+    "sim": 0.16
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "البرمجة الخاصة – سيو هاوس",
+    "description": "",
+    "canonical": "/services/web-design/custom-dev/",
+    "canonicalAbs": "https://seohouse.agency/new/services/web-design/custom-dev/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تطوير أنظمة مخصصة"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 32,
+    "words": 407
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.16,
+   "exception": ""
+  },
+  {
+   "path": "/services/web-design/react-next/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/32: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "برمجة مواقع React & Next | سيو هاوس",
+    "description": "نطور مواقع باستخدام React وNext للشركات التي تحتاج إلى أداء أعلى وتجربة أسرع وبنية تقنية متقدمة تدعم التوسع والنمو الرقمي.",
+    "canonical": "/services/web-design/react-next/",
+    "canonicalAbs": "https://seohouse.agency/services/web-design/react-next/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "مواقع رياكت ونكست"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 432,
+    "sim": 0.21
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "رياكت ونكست – سيو هاوس",
+    "description": "",
+    "canonical": "/services/web-design/react-next/",
+    "canonicalAbs": "https://seohouse.agency/new/services/web-design/react-next/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تطوير مواقع رياكت ونكست"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 32,
+    "words": 480
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.21,
+   "exception": ""
+  },
+  {
+   "path": "/services/web-design/webflow/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/32: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تصميم مواقع ويب فلو مناسبة للشركات - سيو هاوس",
+    "description": "نقدم خدمة تصميم مواقع ويب فلو للشركات التي تحتاج إلى موقع حديث وسريع ومرن، مع تجربة استخدام قوية وهيكل واضح يدعم النمو الرقمي.",
+    "canonical": "/services/web-design/webflow/",
+    "canonicalAbs": "https://seohouse.agency/services/web-design/webflow/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "تصميم مواقع ويب فلو"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 440,
+    "sim": 0.16
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "ويب فلو – سيو هاوس",
+    "description": "",
+    "canonical": "/services/web-design/webflow/",
+    "canonicalAbs": "https://seohouse.agency/new/services/web-design/webflow/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تصميم مواقع ويب فلو"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 32,
+    "words": 396
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.16,
+   "exception": ""
+  },
+  {
+   "path": "/services/web-design/wordpress/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "الروابط الداخلية 33/32: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "تصميم مواقع ووردبريس مرنة وسهلة الإدارة - سيو هاوس",
+    "description": "نصمم مواقع ووردبريس احترافية سريعة ومرنة وسهلة الإدارة، تساعد الشركات على تطوير حضورها الرقمي وبناء موقع قابل للنمو والتوسع.",
+    "canonical": "/services/web-design/wordpress/",
+    "canonicalAbs": "https://seohouse.agency/services/web-design/wordpress/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "تصميم مواقع ووردبريس"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 428,
+    "sim": 0.2
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "ووردبريس – سيو هاوس",
+    "description": "",
+    "canonical": "/services/web-design/wordpress/",
+    "canonicalAbs": "https://seohouse.agency/new/services/web-design/wordpress/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "تصميم مواقع ووردبريس"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 32,
+    "words": 420
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.2,
+   "exception": ""
+  },
+  {
+   "path": "/team/",
+   "verdict": "يحتاج معالجة",
+   "issues": [
+    "روابط داخلية لا تعمل: /privacy-policy/ /terms/"
+   ],
+   "intended": [
+    "robots: نسخة المراجعة محجوبة عن الفهرسة (noindex) حتى الإطلاق",
+    "العنوان: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الوصف: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "H1: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "Schema: البيانات المنظمة يخرجها مصدر واحد لكل عقدة في البناء الجديد (Rank Math + SEO House Core) بدل إعدادات الموقع الحالي",
+    "صور الموقع الحالي غير موجودة في الجديد: 15، 16، 17، 20، 25، 26، 4e286342-4c3b-4070-b249-2f4a5a38020a، IMG_2231-scaled-e1779978115425، IMG_2269-scaled-e1779979775239، IMG_2283-scaled-e1779978583396، IMG_2305-scaled-e1779979318465، IMG_2310-scaled-e1779979990763، IMG_2313-scaled-e1779976505826، IMG_2425-scaled-e1779979393769، IMG_2448-scaled-e1779979564107، IMG_2484-scaled-e1779977043743، IMG_2498-scaled-e1779976890496، IMG_2694-scaled-e1779976986114: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "الروابط الداخلية 33/49: صفحة من التصميم الجديد المعتمد: النص والعنوان والصور والروابط من التصميم، والرابط نفسه",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "فريق العمل | خبراء النمو الرقمي والتحليل وإدارة المحتوي",
+    "description": "تعرف على فريق سيو هاوس من المتخصصين في المحتوى والتحليل وبناء النمو الرقمي للمواقع والمتاجر بخبرة عملية وفهم واضح لاحتياجات السوق.",
+    "canonical": "/team/",
+    "canonicalAbs": "https://seohouse.agency/team/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "خبراء متخصصون لا موظفون"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 18,
+    "imageFiles": [
+     "15",
+     "16",
+     "17",
+     "20",
+     "25",
+     "26",
+     "4e286342-4c3b-4070-b249-2f4a5a38020a",
+     "IMG_2231-scaled-e1779978115425",
+     "IMG_2269-scaled-e1779979775239",
+     "IMG_2283-scaled-e1779978583396",
+     "IMG_2305-scaled-e1779979318465",
+     "IMG_2310-scaled-e1779979990763",
+     "IMG_2313-scaled-e1779976505826",
+     "IMG_2425-scaled-e1779979393769",
+     "IMG_2448-scaled-e1779979564107",
+     "IMG_2484-scaled-e1779977043743",
+     "IMG_2498-scaled-e1779976890496",
+     "IMG_2694-scaled-e1779976986114"
+    ],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 366,
+    "sim": 0.27
+   },
+   "new": {
+    "status": 200,
+    "location": "",
+    "title": "فريق العمل – سيو هاوس",
+    "description": "",
+    "canonical": "/team/",
+    "canonicalAbs": "https://seohouse.agency/new/team/",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "فريق سيو هاوس"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 49,
+    "words": 483
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": 0.27,
+   "exception": ""
+  },
+  {
+   "path": "/terms/",
+   "verdict": "مختلف مقصود",
+   "issues": [],
+   "intended": [
+    "الحالة 200 / 404: مسودة في البناء الجديد حتى اعتماد النص القانوني؛ لا يُنشر نص مؤقت",
+    "خريطة الموقع نعم/لا: نسخة المراجعة بلا خريطة (محجوبة) حتى الإطلاق"
+   ],
+   "live": {
+    "status": 200,
+    "location": "",
+    "title": "الشروط والأحكام - سيو هاوس",
+    "description": "مرحبًا بك في موقع سيو هاوس. إن استخدامك لهذا الموقع أو تصفحك له أو تقديمك لأي طلب من خلاله يعني موافقتك على الالتزام بهذه الشروط والأحكام. يرجى قراءة هذه",
+    "canonical": "/terms/",
+    "canonicalAbs": "https://seohouse.agency/terms/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "h1": [
+     "الشروط والأحكام"
+    ],
+    "schema": [
+     "Article",
+     "Organization",
+     "Person",
+     "WebPage",
+     "WebSite"
+    ],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 33,
+    "words": 774
+   },
+   "new": {
+    "status": 404,
+    "location": "",
+    "title": "الصفحة غير موجودة. – سيو هاوس",
+    "description": "",
+    "canonical": "",
+    "canonicalAbs": "",
+    "robots": "noindex, nofollow",
+    "h1": [
+     "الصفحة غير موجودة"
+    ],
+    "schema": [],
+    "images": 0,
+    "imageFiles": [],
+    "imagesNoAlt": 0,
+    "links": 31,
+    "words": 13
+   },
+   "sitemap": {
+    "live": true,
+    "new": false
+   },
+   "similarity": null,
+   "exception": "مسودة مقصودة"
+  }
+ ]
+}

@@ -1,0 +1,490 @@
+{
+ "crumbs": [],
+ "key": "home",
+ "route": "/",
+ "kind": "page",
+ "title": "الرئيسية",
+ "file": "SEO House - Homepage.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "سيو هاوس | تحسين الظهور وتصميم المواقع والمتاجر",
+  "description": "",
+  "robots": "",
+  "schema_type": "auto",
+  "schema_service": ""
+ },
+ "template": "page-templates/home.php",
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "title": "نرفع ظهور موقعك أمام من يبحث عن خدمتك",
+   "text": "نبدأ بفهم نشاطك وطريقة بحث عملائك، ثم نحسّن موقعك ونقيس أثر ذلك على الزيارات والاستفسارات والطلبات.",
+   "link_label": "احجز استشارة مجانية",
+   "link_label_2": "شاهد نتائجنا",
+   "items": [
+    {},
+    {}
+   ],
+   "link": {
+    "__route": "/team/"
+   },
+   "link_label_3": "تعرّف على فريق سيو هاوس"
+  },
+  {
+   "acf_fc_layout": "client_logos",
+   "text": "شركات تثق بنا"
+  },
+  {
+   "acf_fc_layout": "services",
+   "title": "خدماتنا",
+   "link": {
+    "__route": "/services/"
+   },
+   "link_label": "كل الخدمات",
+   "items": [
+    {
+     "link": {
+      "__route": "/services/seo/"
+     },
+     "icon": "i9db3f4c7",
+     "eyebrow": "الخدمة الأساسية",
+     "heading": "تحسين محركات البحث",
+     "text": "نحسّن ظهور موقعك أمام من يبحث عن خدمتك، ونقيس الأثر على الزيارات والاستفسارات والطلبات.",
+     "items": [
+      {
+       "eyebrow": "استعلام البحث",
+       "variant": "v1"
+      },
+      {
+       "eyebrow": "صفحة الخدمة",
+       "variant": "v1"
+      },
+      {
+       "eyebrow": "طلب",
+       "variant": "v1"
+      }
+     ],
+     "label": "تفاصيل خدمة السيو ←"
+    },
+    {
+     "link": {
+      "__route": "/services/web-design/"
+     },
+     "icon": "iaee0e3f0",
+     "eyebrow": "الخدمة الأساسية",
+     "heading": "تصميم وتطوير المواقع",
+     "text": "مواقع سريعة وبنية صفحات تدعم الظهور في البحث.",
+     "items": [
+      {
+       "eyebrow": "الرئيسية",
+       "variant": "v2"
+      },
+      {
+       "eyebrow": "الخدمات",
+       "variant": "v2"
+      },
+      {
+       "eyebrow": "تواصل",
+       "variant": "v2"
+      }
+     ],
+     "label": "تفاصيل الخدمة ←"
+    },
+    {
+     "link": {
+      "__route": "/services/stores/"
+     },
+     "icon": "i42aa1ca9",
+     "eyebrow": "الخدمة الأساسية",
+     "heading": "تصميم وتطوير المتاجر الإلكترونية",
+     "text": "متاجر على سلة وزد وشوبيفاي وووكومرس بصفحات جاهزة للبيع.",
+     "items": [
+      {
+       "eyebrow": "الفئة",
+       "variant": "v2"
+      },
+      {
+       "eyebrow": "المنتج",
+       "variant": "v2"
+      },
+      {
+       "eyebrow": "السلة",
+       "variant": "v2"
+      }
+     ],
+     "label": "تفاصيل الخدمة ←"
+    },
+    {
+     "link": {
+      "__route": "/services/products/"
+     },
+     "icon": "i6073398f",
+     "eyebrow": "الخدمة الأساسية",
+     "heading": "رفع المنتجات وإدارة محتوى المتاجر",
+     "text": "إدخال المنتجات وبياناتها وتصنيفاتها ومتابعة تحديثها.",
+     "items": [
+      {
+       "eyebrow": "ملف المورد",
+       "variant": "v2"
+      },
+      {
+       "eyebrow": "التحرير",
+       "variant": "v2"
+      },
+      {
+       "eyebrow": "منشور",
+       "variant": "v2"
+      }
+     ],
+     "label": "تفاصيل الخدمة ←"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "sectors",
+   "eyebrow": "القطاعات",
+   "title": "قطاعات نعمل معها",
+   "link": {
+    "__route": "/sectors/"
+   },
+   "link_label": "كل القطاعات",
+   "items": [
+    {
+     "link": {
+      "__route": "/sectors/ecommerce/"
+     },
+     "icon": "i245ac198",
+     "heading": "التجارة الإلكترونية",
+     "label": "من صفحات الفئات والمنتجات إلى السلة والطلب",
+     "items": [
+      {
+       "eyebrow": "الفئة"
+      },
+      {
+       "eyebrow": "المنتج"
+      },
+      {
+       "eyebrow": "الشراء"
+      }
+     ]
+    },
+    {
+     "link": {
+      "__route": "/sectors/health/"
+     },
+     "icon": "i25d8cd9c",
+     "heading": "الصحة والطب",
+     "label": "البحث عن الخدمة والطبيب ثم الحجز",
+     "items": [
+      {
+       "eyebrow": "التخصص"
+      },
+      {
+       "eyebrow": "الصفحة"
+      },
+      {
+       "eyebrow": "الموعد"
+      }
+     ]
+    },
+    {
+     "link": {
+      "__route": "/sectors/real-estate/"
+     },
+     "icon": "i3c0ccf7f",
+     "heading": "العقارات والبناء",
+     "label": "صفحات المشروعات والمواقع والخريطة",
+     "items": [
+      {
+       "eyebrow": "المنطقة"
+      },
+      {
+       "eyebrow": "المشروع"
+      },
+      {
+       "eyebrow": "الاستفسار"
+      }
+     ]
+    },
+    {
+     "link": {
+      "__route": "/sectors/education/"
+     },
+     "icon": "i19db1f1b",
+     "heading": "التعليم والتدريب",
+     "label": "الدورات والمستويات وصفحات التسجيل",
+     "items": [
+      {
+       "eyebrow": "المجال"
+      },
+      {
+       "eyebrow": "الدورة"
+      },
+      {
+       "eyebrow": "التسجيل"
+      }
+     ]
+    },
+    {
+     "link": {
+      "__route": "/sectors/tourism/"
+     },
+     "icon": "i29d22bbf",
+     "heading": "السياحة والسفر",
+     "label": "الوجهات والمسارات وصفحات الحجز",
+     "items": [
+      {
+       "eyebrow": "الوجهة"
+      },
+      {
+       "eyebrow": "البرنامج"
+      },
+      {
+       "eyebrow": "الحجز"
+      }
+     ]
+    },
+    {
+     "link": {
+      "__route": "/sectors/tech/"
+     },
+     "icon": "i7c0f5381",
+     "heading": "التقنية والبرمجيات",
+     "label": "صفحات الحلول والاستخدامات والتكامل",
+     "items": [
+      {
+       "eyebrow": "المشكلة"
+      },
+      {
+       "eyebrow": "الحل"
+      },
+      {
+       "eyebrow": "طلب عرض"
+      }
+     ]
+    },
+    {
+     "link": {
+      "__route": "/sectors/legal/"
+     },
+     "icon": "i872d6632",
+     "heading": "القانون والاستشارات",
+     "label": "صفحات الخدمات ومصادر الثقة",
+     "items": [
+      {
+       "eyebrow": "المسألة"
+      },
+      {
+       "eyebrow": "الخبرة"
+      },
+      {
+       "eyebrow": "الاستشارة"
+      }
+     ]
+    },
+    {
+     "link": {
+      "__route": "/sectors/food/"
+     },
+     "icon": "i81f82ddb",
+     "heading": "الأغذية والمطاعم",
+     "label": "البحث المحلي والقائمة والفروع والطلب",
+     "items": [
+      {
+       "eyebrow": "الفرع"
+      },
+      {
+       "eyebrow": "القائمة"
+      },
+      {
+       "eyebrow": "الطلب"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "about",
+   "eyebrow": "عن سيو هاوس",
+   "title": "سيو هاوس منذ 2017",
+   "text": "بدأت سيو هاوس لأن السوق كان يحتاج إلى شركة تنفّذ ما تعد به، وتربط العمل بنتائج حقيقية يمكن متابعتها. نبدأ بفهم النشاط والسوق، ثم نحدد الأولويات ونعمل مع العميل بوضوح من التنفيذ إلى القياس.",
+   "link": {
+    "__route": "/about/"
+   },
+   "link_label": "عن الشركة",
+   "items": [
+    {
+     "text": "السيو هو تخصصنا الأساسي."
+    },
+    {
+     "text": "ننفّذ داخل الموقع ولا نكتفي بالتوصيات."
+    },
+    {
+     "text": "نقيس أثر العمل على الزيارات والاستفسارات والطلبات."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "markets",
+   "eyebrow": "الأسواق",
+   "title": "أسواق نعمل فيها",
+   "items": [
+    {
+     "link": {
+      "__route": "/services/seo/ksa/"
+     },
+     "icon": "i2ea38d47",
+     "heading": "السعودية",
+     "label": "شركات داخل المملكة تريد الوصول إلى عملائها في البحث.",
+     "eyebrow": "اعرف المزيد ←"
+    },
+    {
+     "link": {
+      "__route": "/services/seo/egypt/"
+     },
+     "icon": "i5653018a",
+     "heading": "مصر",
+     "label": "تحويل حجم البحث الكبير إلى زيارات واستفسارات ذات قيمة.",
+     "eyebrow": "اعرف المزيد ←"
+    },
+    {
+     "link": {
+      "__route": "/services/seo/uae/"
+     },
+     "icon": "idde4edda",
+     "heading": "الإمارات",
+     "label": "سوق تنافسي يحتاج ظهورًا دقيقًا في العبارات ذات النية الشرائية.",
+     "eyebrow": "اعرف المزيد ←"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "reviews",
+   "eyebrow": "تقييمات Google",
+   "title": "ما يقوله عملاؤنا",
+   "items": [
+    {
+     "label": "صورة",
+     "text": "اسم العميل",
+     "label_2": "تقييم Google",
+     "text_2": "نص التقييم الحقيقي يُستقبل من إضافة Trustindex المرتبطة بحساب Google، ويظهر هنا بالاسم والصورة والتقييم.",
+     "label_3": "محتوى مؤقت — سيُستقبل من Trustindex",
+     "variant": "v1"
+    },
+    {
+     "label": "صورة",
+     "text": "اسم العميل",
+     "label_2": "تقييم Google",
+     "text_2": "مساحة التقييم الثاني. طول النص متغير، والتكوين يتحمل نصًا أطول أو أقصر دون كسر الشبكة.",
+     "label_3": "محتوى مؤقت — سيُستقبل من Trustindex",
+     "variant": "v2"
+    },
+    {
+     "label": "صورة",
+     "text": "اسم العميل",
+     "label_2": "تقييم Google",
+     "text_2": "مساحة التقييم الثالث. على الهاتف يظهر تقييم واحد فقط مع أسهم وسحب يدوي.",
+     "label_3": "محتوى مؤقت — سيُستقبل من Trustindex",
+     "variant": "v3"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "articles",
+   "eyebrow": "المدونة",
+   "title": "أحدث ما كتبناه",
+   "link": {
+    "__route": "/blog/"
+   },
+   "link_label": "كل المقالات"
+  },
+  {
+   "acf_fc_layout": "platforms",
+   "eyebrow": "المنصات والأدوات",
+   "title": "منصات وأدوات نعمل عليها",
+   "items": [
+    {
+     "items": [
+      {
+       "logo": "assets/platforms/official/wordpress.svg",
+       "label": "ووردبريس"
+      },
+      {
+       "logo": "assets/platforms/official/shopify.svg",
+       "label": "شوبيفاي"
+      },
+      {
+       "logo": "assets/platforms/official/salla.svg",
+       "label": "سلة"
+      },
+      {
+       "logo": "assets/platforms/official/gsc.svg",
+       "label": "سيرش كونسول"
+      },
+      {
+       "logo": "assets/platforms/official/webflow.svg",
+       "label": "ويب فلو"
+      },
+      {
+       "logo": "assets/platforms/official/woocommerce.svg",
+       "label": "ووكومرس"
+      },
+      {
+       "logo": "assets/platforms/official/ga4.svg",
+       "label": "جوجل أناليتكس"
+      }
+     ]
+    },
+    {
+     "items": [
+      {
+       "logo": "assets/platforms/official/ga4.svg",
+       "label": "جوجل أناليتكس"
+      },
+      {
+       "logo": "assets/platforms/official/woocommerce.svg",
+       "label": "ووكومرس"
+      },
+      {
+       "logo": "assets/platforms/official/webflow.svg",
+       "label": "ويب فلو"
+      },
+      {
+       "logo": "assets/platforms/official/gsc.svg",
+       "label": "سيرش كونسول"
+      },
+      {
+       "logo": "assets/platforms/official/salla.svg",
+       "label": "سلة"
+      },
+      {
+       "logo": "assets/platforms/official/shopify.svg",
+       "label": "شوبيفاي"
+      },
+      {
+       "logo": "assets/platforms/official/wordpress.svg",
+       "label": "ووردبريس"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "results",
+   "eyebrow": "نتائج موثقة",
+   "title": "نتائج من مشاريعنا",
+   "link": {
+    "__route": "/results/"
+   },
+   "link_label": "كل النتائج ←"
+  },
+  {
+   "acf_fc_layout": "booking",
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

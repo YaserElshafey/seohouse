@@ -1,0 +1,1787 @@
+{
+ "theme": "seohouse",
+ "version": "2.6.0",
+ "count": 356,
+ "files": [
+  {
+   "path": "404.php",
+   "size": 2145,
+   "sha1": "91e244ae269b33279da5af1416f88231a913a7a8"
+  },
+  {
+   "path": "archive.php",
+   "size": 3495,
+   "sha1": "3e351dc6f1b263dcae74785dabc715ebcc04347c"
+  },
+  {
+   "path": "footer.php",
+   "size": 176,
+   "sha1": "9e8023bd0ac7b57163c51e2ac6d480b7f11e9f2d"
+  },
+  {
+   "path": "functions.php",
+   "size": 984,
+   "sha1": "612667dcab5cb23e8bab9236778eb2dceadec276"
+  },
+  {
+   "path": "header.php",
+   "size": 776,
+   "sha1": "48346b3197db13a5dc89fd73ff0fc1f96f4829cd"
+  },
+  {
+   "path": "home.php",
+   "size": 5941,
+   "sha1": "7efa62f830cad24c87ef529f4ba9088fe821544c"
+  },
+  {
+   "path": "index.php",
+   "size": 631,
+   "sha1": "2289c41dedbb3be4ce26d56556047ec60a60a92b"
+  },
+  {
+   "path": "page.php",
+   "size": 669,
+   "sha1": "90412523532e8040e44a2da8da768257247d849b"
+  },
+  {
+   "path": "search.php",
+   "size": 4807,
+   "sha1": "6b6a2a0c468c96f916906cb038914580105293d3"
+  },
+  {
+   "path": "searchform.php",
+   "size": 1318,
+   "sha1": "b6df61e649b4b64b2af46742cc46e550d46ab56c"
+  },
+  {
+   "path": "single-case_study.php",
+   "size": 17308,
+   "sha1": "3c0248e85fea3af718814d180d87730e4e005377"
+  },
+  {
+   "path": "single-team_member.php",
+   "size": 8531,
+   "sha1": "25946682edd82f28162be6178bce10e0a09cd07e"
+  },
+  {
+   "path": "single.php",
+   "size": 10684,
+   "sha1": "87d875324200807bd57479e82c96fbb81613cf20"
+  },
+  {
+   "path": "style.css",
+   "size": 545,
+   "sha1": "1997e515113108e1750b1e084836ea712248a18e"
+  },
+  {
+   "path": "theme.json",
+   "size": 2098,
+   "sha1": "dc29ca5803c54cf1764e047646e5f131f632ed93"
+  },
+  {
+   "path": "assets/css/design-base.css",
+   "size": 13497,
+   "sha1": "075d4ff5d808ddce05363bff0e4de8f08b38e8a7"
+  },
+  {
+   "path": "assets/css/fonts.css",
+   "size": 6218,
+   "sha1": "9950344195b58b18ea391e4acbd73f77a8f29c47"
+  },
+  {
+   "path": "assets/css/theme.css",
+   "size": 9178,
+   "sha1": "4b76cc098279444e19f89aa6fcf9d239b0baaa78"
+  },
+  {
+   "path": "assets/css/pages/404.css",
+   "size": 531,
+   "sha1": "432b74c8d8cb43b9ddbf4e76074760ce8efde136"
+  },
+  {
+   "path": "assets/css/pages/about.css",
+   "size": 2039,
+   "sha1": "9f54535fa7c8f961e0cd475c93712ea2ab5023f3"
+  },
+  {
+   "path": "assets/css/pages/blog-category.css",
+   "size": 960,
+   "sha1": "64403177813726017fff591fa4d3d7887dabcadf"
+  },
+  {
+   "path": "assets/css/pages/blog.css",
+   "size": 1465,
+   "sha1": "4f7da32a33812aa39665fe45e1e151ed6e419068"
+  },
+  {
+   "path": "assets/css/pages/case-ecommerce.css",
+   "size": 1170,
+   "sha1": "a11c6ab5afdafbe6e11c2edb4fafabc23a13f9bd"
+  },
+  {
+   "path": "assets/css/pages/case-education.css",
+   "size": 1173,
+   "sha1": "a699be2150c3d5eea8577bf13e366f184357b9c5"
+  },
+  {
+   "path": "assets/css/pages/case-health.css",
+   "size": 1168,
+   "sha1": "c9facee939be935529cdaf48c7932d3a6189b51e"
+  },
+  {
+   "path": "assets/css/pages/case-medical-search.css",
+   "size": 2219,
+   "sha1": "aa673747b0bbb0ac013d603010f4304004686428"
+  },
+  {
+   "path": "assets/css/pages/case-organic-revenue.css",
+   "size": 1183,
+   "sha1": "661bf5a7dd43dce5bceecd27c07d25ca8d83a1ff"
+  },
+  {
+   "path": "assets/css/pages/case-template.css",
+   "size": 1169,
+   "sha1": "83bb2ee0c14d7b2c902680e9dd7587aa0684718b"
+  },
+  {
+   "path": "assets/css/pages/contact.css",
+   "size": 1170,
+   "sha1": "55587973fdc16e98367b08c46be02444c188e1f1"
+  },
+  {
+   "path": "assets/css/pages/home.css",
+   "size": 7484,
+   "sha1": "2d38349e4000daff8f2e16a457e9f9ee8098526a"
+  },
+  {
+   "path": "assets/css/pages/pricing.css",
+   "size": 2206,
+   "sha1": "b1f7bd73698ff04c145da862b0b6b514b429f602"
+  },
+  {
+   "path": "assets/css/pages/privacy-policy.css",
+   "size": 759,
+   "sha1": "541c4cd2e6df6715182af1346a6980784d7ba0f9"
+  },
+  {
+   "path": "assets/css/pages/products.css",
+   "size": 1573,
+   "sha1": "1556b0cd93f0eaa75dba3ad2dba28fa7048f4c31"
+  },
+  {
+   "path": "assets/css/pages/results.css",
+   "size": 1493,
+   "sha1": "5bdf278be19462fcfa4b1957165110e67ca78360"
+  },
+  {
+   "path": "assets/css/pages/search.css",
+   "size": 542,
+   "sha1": "1cdcba1527b13a210606d58ad1006da7df29aadc"
+  },
+  {
+   "path": "assets/css/pages/sector-ecommerce.css",
+   "size": 5745,
+   "sha1": "1f38163116b47bfca622a5fb50533298ecc37b59"
+  },
+  {
+   "path": "assets/css/pages/sector-education.css",
+   "size": 5711,
+   "sha1": "972ade46467c24880b2b0055955add57fed057bf"
+  },
+  {
+   "path": "assets/css/pages/sector-food.css",
+   "size": 5707,
+   "sha1": "a3a63978a677a6e40e7fd5a4354134edcb9d0ce8"
+  },
+  {
+   "path": "assets/css/pages/sector-health.css",
+   "size": 7826,
+   "sha1": "379e2c11fa4a2471aafd9cccf71ab6bb4fac5b9c"
+  },
+  {
+   "path": "assets/css/pages/sector-legal.css",
+   "size": 5748,
+   "sha1": "455fab18dda486aacbce23cd06bcaa517c103d6c"
+  },
+  {
+   "path": "assets/css/pages/sector-real-estate.css",
+   "size": 5818,
+   "sha1": "81dc3a6c3a5a1080ded9d98213c89c77a176f672"
+  },
+  {
+   "path": "assets/css/pages/sector-tech.css",
+   "size": 5857,
+   "sha1": "71f26cf32225738449fdbb4ab672926c2575130f"
+  },
+  {
+   "path": "assets/css/pages/sector-tourism.css",
+   "size": 7175,
+   "sha1": "ed9b49b199350190f31c39d93d550a26706794ff"
+  },
+  {
+   "path": "assets/css/pages/sectors.css",
+   "size": 1106,
+   "sha1": "f88c1a49b7240bae3232e618f4c09559f8b7e399"
+  },
+  {
+   "path": "assets/css/pages/seo-backlinks.css",
+   "size": 806,
+   "sha1": "d29308d8de9e9a482e148635e8d3885aba2f9ce0"
+  },
+  {
+   "path": "assets/css/pages/seo-consulting.css",
+   "size": 1233,
+   "sha1": "b5664fa1b0ee9ac45a28bdc4f2793b44b429e75e"
+  },
+  {
+   "path": "assets/css/pages/seo-content.css",
+   "size": 808,
+   "sha1": "f0684adbf9e5830f3e49783bf2fa53d82978bfc8"
+  },
+  {
+   "path": "assets/css/pages/seo-egypt.css",
+   "size": 5146,
+   "sha1": "0e5453348cccc39a35b463d4ae820289cef6fb0d"
+  },
+  {
+   "path": "assets/css/pages/seo-ksa.css",
+   "size": 8061,
+   "sha1": "1efe449ac131c872da4e157501145919c2bc4a80"
+  },
+  {
+   "path": "assets/css/pages/seo-on-page.css",
+   "size": 808,
+   "sha1": "a8612d033e7cf6f0000b677396a62eccbb1147c5"
+  },
+  {
+   "path": "assets/css/pages/seo-technical.css",
+   "size": 965,
+   "sha1": "64124eba06903a47f76ed58ce0bce246debebfdd"
+  },
+  {
+   "path": "assets/css/pages/seo-uae.css",
+   "size": 5568,
+   "sha1": "93a17798745a565a3eef8eb1f3e72047d4c589b1"
+  },
+  {
+   "path": "assets/css/pages/seo.css",
+   "size": 6868,
+   "sha1": "9daec2d1129ac55d28f63cf2f4f643badbf23bbc"
+  },
+  {
+   "path": "assets/css/pages/services.css",
+   "size": 1169,
+   "sha1": "de467322eea9538d8c6d207e59b1e4591817ba00"
+  },
+  {
+   "path": "assets/css/pages/single-post.css",
+   "size": 4233,
+   "sha1": "0c688462af3c837f1331c160024e8deb3a040452"
+  },
+  {
+   "path": "assets/css/pages/stores-salla.css",
+   "size": 1249,
+   "sha1": "7b641ec6d674027641e284606bbcb21613c4403d"
+  },
+  {
+   "path": "assets/css/pages/stores-shopify.css",
+   "size": 1254,
+   "sha1": "8b3a6f8862267c6975ee57e839a8d605e850c359"
+  },
+  {
+   "path": "assets/css/pages/stores-woocommerce.css",
+   "size": 1310,
+   "sha1": "520c588b59fd46b24065280e42c8aed3c0b71278"
+  },
+  {
+   "path": "assets/css/pages/stores-zid.css",
+   "size": 1483,
+   "sha1": "65c46f9383a661529e974dbb839573f9950ad3c6"
+  },
+  {
+   "path": "assets/css/pages/stores.css",
+   "size": 1320,
+   "sha1": "461e7ff28aa8ad79306930ddd341a4b523365359"
+  },
+  {
+   "path": "assets/css/pages/team-member.css",
+   "size": 1961,
+   "sha1": "2e59256569282d9e32d25604063b57ea3558f18c"
+  },
+  {
+   "path": "assets/css/pages/team.css",
+   "size": 3684,
+   "sha1": "6a0d9050efa00c3c9d8359ec1527e7412d170a04"
+  },
+  {
+   "path": "assets/css/pages/terms.css",
+   "size": 768,
+   "sha1": "9933a7009be212d6675f987ea4c3e9941833f7e7"
+  },
+  {
+   "path": "assets/css/pages/thank-you.css",
+   "size": 537,
+   "sha1": "ddcd015492a6c1784979b72beb682e8f77b02b5d"
+  },
+  {
+   "path": "assets/css/pages/web-custom-dev.css",
+   "size": 1121,
+   "sha1": "75e1f9e530a86b7a2cf3390fde2d9a27738ec1a8"
+  },
+  {
+   "path": "assets/css/pages/web-design.css",
+   "size": 1137,
+   "sha1": "b587fcc5ad638a555e643b05170b7f51c8c3e6e9"
+  },
+  {
+   "path": "assets/css/pages/web-react-next.css",
+   "size": 962,
+   "sha1": "69f694bb2f1274e47c1a23e59c9dd113b4aeaea3"
+  },
+  {
+   "path": "assets/css/pages/web-webflow.css",
+   "size": 953,
+   "sha1": "0796584c7792ef2bfabf354d10b77c5df9c9facc"
+  },
+  {
+   "path": "assets/css/pages/web-wordpress.css",
+   "size": 1025,
+   "sha1": "8449d052c5bfdcb81551b6f4f63626ce0c66d0ff"
+  },
+  {
+   "path": "assets/fonts/alexandria-arabic.woff2",
+   "size": 31348,
+   "sha1": "fbc8a2cf57fbe9a0fbf0b28f1a9332d30d15be5a"
+  },
+  {
+   "path": "assets/fonts/alexandria-latin.woff2",
+   "size": 30140,
+   "sha1": "a5d4f37ad7173d36184f456ce23092a2bc9ad62a"
+  },
+  {
+   "path": "assets/fonts/ibm-plex-sans-arabic-400-arabic.woff2",
+   "size": 42848,
+   "sha1": "a9cefdcae54676211fe42927574e4c013a1af538"
+  },
+  {
+   "path": "assets/fonts/ibm-plex-sans-arabic-400-latin.woff2",
+   "size": 19164,
+   "sha1": "653bfd524aa4674232e85a15acd2e914a9f330bd"
+  },
+  {
+   "path": "assets/fonts/ibm-plex-sans-arabic-500-arabic.woff2",
+   "size": 45296,
+   "sha1": "31cb9792b1f981498da21d6c3de567142c6b2a1e"
+  },
+  {
+   "path": "assets/fonts/ibm-plex-sans-arabic-500-latin.woff2",
+   "size": 20088,
+   "sha1": "c55b4b1b5b5d57d2c291c6e23cb2370da51422dc"
+  },
+  {
+   "path": "assets/fonts/ibm-plex-sans-arabic-600-arabic.woff2",
+   "size": 45688,
+   "sha1": "9e5c019d8d6e9acb93f69e74d9ff5ab0fb49944f"
+  },
+  {
+   "path": "assets/fonts/ibm-plex-sans-arabic-600-latin.woff2",
+   "size": 20500,
+   "sha1": "ee160f53bfe8585270adcde9c6864054675f4856"
+  },
+  {
+   "path": "assets/fonts/ibm-plex-sans-arabic-700-arabic.woff2",
+   "size": 44280,
+   "sha1": "27765dbaf24ff38fbe696acc4bb183bb02910264"
+  },
+  {
+   "path": "assets/fonts/ibm-plex-sans-arabic-700-latin.woff2",
+   "size": 19504,
+   "sha1": "9e002e656ff8bade0ba6e6c0dc6b726de1d90182"
+  },
+  {
+   "path": "assets/img/logo-white.png",
+   "size": 47327,
+   "sha1": "fd1b4e8e40104dc67fe6aead2a6eba2557a5c9c9"
+  },
+  {
+   "path": "assets/img/logo-white.webp",
+   "size": 5408,
+   "sha1": "38ed99525e204ba7abbbf0499bdca01fa74c01c3"
+  },
+  {
+   "path": "assets/js/site.js",
+   "size": 19568,
+   "sha1": "cbe72a0c1aeaa5a0d5a47297a3f0134552c15e06"
+  },
+  {
+   "path": "assets/platforms/ga4.svg",
+   "size": 297,
+   "sha1": "4666f3364f7027c9a737faf730685124beedd34a"
+  },
+  {
+   "path": "assets/platforms/gsc.svg",
+   "size": 303,
+   "sha1": "767982c04ccc3d651ef7135e911c5304378fc0c2"
+  },
+  {
+   "path": "assets/platforms/looker.svg",
+   "size": 287,
+   "sha1": "55022341e79b5a44c130b26e7c163327f0c81174"
+  },
+  {
+   "path": "assets/platforms/salla.svg",
+   "size": 306,
+   "sha1": "4698e3ecaeb0c8d76658ab2f3ad8ccf638322a7a"
+  },
+  {
+   "path": "assets/platforms/screamingfrog.svg",
+   "size": 289,
+   "sha1": "f8a51a2f318e54d59741cc0d322c5ad8b9f87a95"
+  },
+  {
+   "path": "assets/platforms/shopify.svg",
+   "size": 273,
+   "sha1": "c4e2971b278ed9f76fd8466f4f061ab733cb4c44"
+  },
+  {
+   "path": "assets/platforms/webflow.svg",
+   "size": 273,
+   "sha1": "591713b1b56852907d99ba2b79b6d0007e90d238"
+  },
+  {
+   "path": "assets/platforms/woocommerce.svg",
+   "size": 283,
+   "sha1": "ba63de70ef95f09c9472d42de2a8be204eebf40f"
+  },
+  {
+   "path": "assets/platforms/wordpress.svg",
+   "size": 279,
+   "sha1": "c936740a47ed7e27a7d76f670c1db86623e8e9e2"
+  },
+  {
+   "path": "assets/platforms/zid.svg",
+   "size": 302,
+   "sha1": "89e978e9449251ff5b292941de8a23e83d5503f4"
+  },
+  {
+   "path": "assets/platforms/official/ga4.svg",
+   "size": 759,
+   "sha1": "684bb8a1411bb06d1f4000de374805758551bca7"
+  },
+  {
+   "path": "assets/platforms/official/gsc.svg",
+   "size": 1089,
+   "sha1": "5d6ce84e6ea12a41ae820b571542e047b4fd4743"
+  },
+  {
+   "path": "assets/platforms/official/looker.svg",
+   "size": 1115,
+   "sha1": "74c5522ff77fdca82ac54c47df830877a1d88b72"
+  },
+  {
+   "path": "assets/platforms/official/nextjs.svg",
+   "size": 343,
+   "sha1": "23ae8c450ac2fb409d383d324d886f0f51171553"
+  },
+  {
+   "path": "assets/platforms/official/react.svg",
+   "size": 2947,
+   "sha1": "e3d454af5c37170e13af22bab2cba34d77433075"
+  },
+  {
+   "path": "assets/platforms/official/salla.svg",
+   "size": 772,
+   "sha1": "5907667cfd7ce839970e4605e248155e2ec55330"
+  },
+  {
+   "path": "assets/platforms/official/shopify.svg",
+   "size": 1255,
+   "sha1": "c0f9df8b55c8c1bb6e1df34ab26b1e71f54b9970"
+  },
+  {
+   "path": "assets/platforms/official/webflow.svg",
+   "size": 315,
+   "sha1": "18dc9ed8bedba3096f4f437889eb34dadb2f6a82"
+  },
+  {
+   "path": "assets/platforms/official/woocommerce.svg",
+   "size": 3606,
+   "sha1": "f09d911c338b872ff18086143868db801329f075"
+  },
+  {
+   "path": "assets/platforms/official/wordpress.svg",
+   "size": 1080,
+   "sha1": "3b66a1a9568a9dae4c29124643f1d0f507643caa"
+  },
+  {
+   "path": "inc/breadcrumbs.php",
+   "size": 1074,
+   "sha1": "5230e6de74a13f2d3ca6c3792173fd79b1ce1d30"
+  },
+  {
+   "path": "inc/dependencies.php",
+   "size": 1825,
+   "sha1": "ff54733efee5d9437df8419ee2f8b95d34fc6822"
+  },
+  {
+   "path": "inc/dynamic.php",
+   "size": 6346,
+   "sha1": "5d72d87c29346fdfe42b670e8f9ffb0a377889a0"
+  },
+  {
+   "path": "inc/enqueue.php",
+   "size": 5685,
+   "sha1": "5940b6efe2d3da9662c7692b081516f96d21d72e"
+  },
+  {
+   "path": "inc/helpers.php",
+   "size": 7103,
+   "sha1": "963df39e1700a3da72a55171eab24fcff0636b84"
+  },
+  {
+   "path": "inc/navigation.php",
+   "size": 5532,
+   "sha1": "38d9188144b471406740bbbeff7a262f167c0a95"
+  },
+  {
+   "path": "inc/release-files.php",
+   "size": 10624,
+   "sha1": "34587273d417c63c417128d271f2d82b16d8b04f"
+  },
+  {
+   "path": "inc/render.php",
+   "size": 2755,
+   "sha1": "671d188cd618e3ed3bd1fb15e6bf8187bb0514c3"
+  },
+  {
+   "path": "inc/setup.php",
+   "size": 1929,
+   "sha1": "65fd789b26e65bcb80c5157660b660adb2100d9b"
+  },
+  {
+   "path": "inc/generated/icons.php",
+   "size": 35397,
+   "sha1": "d88a6ff930e50efd964506a8809152e5c56a5b9b"
+  },
+  {
+   "path": "page-templates/about.php",
+   "size": 275,
+   "sha1": "09cb3978a83e3edcc1c6c2db8098a43a4a14f185"
+  },
+  {
+   "path": "page-templates/contact.php",
+   "size": 277,
+   "sha1": "da994c9eb69a5becfb7fff1bef0a95a64d6da14d"
+  },
+  {
+   "path": "page-templates/home.php",
+   "size": 276,
+   "sha1": "f99994e04a2fc7d9ce325a79b0af22b0c27e6ec4"
+  },
+  {
+   "path": "page-templates/pricing.php",
+   "size": 276,
+   "sha1": "f2ee070881f1d8f78d4db655fcf32ec4df4f9f1f"
+  },
+  {
+   "path": "page-templates/privacy-policy.php",
+   "size": 303,
+   "sha1": "ff8cb0c6a872ba20590a4ea3d0c4c026fe3ea4c2"
+  },
+  {
+   "path": "page-templates/products.php",
+   "size": 293,
+   "sha1": "762e08ce3ea0d3ae86d6e2a37f3343b284aac1e3"
+  },
+  {
+   "path": "page-templates/results.php",
+   "size": 287,
+   "sha1": "3fb50f5350aa344a9dd30acab54fcb090c3d78ae"
+  },
+  {
+   "path": "page-templates/sector-ecommerce.php",
+   "size": 326,
+   "sha1": "7fd912403c7b54b29a83a063961d3dd817458ee9"
+  },
+  {
+   "path": "page-templates/sector-education.php",
+   "size": 320,
+   "sha1": "d7877592ce250d23f4b8c896f1b5cc95ef39b106"
+  },
+  {
+   "path": "page-templates/sector-food.php",
+   "size": 310,
+   "sha1": "625b9d45976cbdd002495c9514db28e3d2e0e42a"
+  },
+  {
+   "path": "page-templates/sector-health.php",
+   "size": 304,
+   "sha1": "ff9b38ad23df8513dfa514ab3f204245724acb98"
+  },
+  {
+   "path": "page-templates/sector-legal.php",
+   "size": 318,
+   "sha1": "2c6472ab53597a309de692eb895836191351b670"
+  },
+  {
+   "path": "page-templates/sector-real-estate.php",
+   "size": 324,
+   "sha1": "98b62c94f2d7201e241875d3d179a42720ec5679"
+  },
+  {
+   "path": "page-templates/sector-tech.php",
+   "size": 314,
+   "sha1": "d0ed78722d6324107df42f57827f6c1ef43839ff"
+  },
+  {
+   "path": "page-templates/sector-tourism.php",
+   "size": 312,
+   "sha1": "91dfcd8a3c63da668fd90bb36bc598efda1166e5"
+  },
+  {
+   "path": "page-templates/sectors.php",
+   "size": 278,
+   "sha1": "27bc7483a88b6e650fcf067449012afd6d70c3d2"
+  },
+  {
+   "path": "page-templates/seo-backlinks.php",
+   "size": 293,
+   "sha1": "3b571fd5c32bea4f10474ce5f789eb21d14623db"
+  },
+  {
+   "path": "page-templates/seo-consulting.php",
+   "size": 322,
+   "sha1": "3720da72d555299989beac9b55445f5dad2909a3"
+  },
+  {
+   "path": "page-templates/seo-content.php",
+   "size": 291,
+   "sha1": "b5803d9a9772efb2e20a0c4ca33f3bc04799c193"
+  },
+  {
+   "path": "page-templates/seo-egypt.php",
+   "size": 293,
+   "sha1": "15730a6a788d595cb8a91893ff95fbf46ef9eadb"
+  },
+  {
+   "path": "page-templates/seo-ksa.php",
+   "size": 301,
+   "sha1": "72265a5c2d5983f6d6b448f11b8dadb38fb91d39"
+  },
+  {
+   "path": "page-templates/seo-on-page.php",
+   "size": 295,
+   "sha1": "a1dc0c6f33415c5defe96b3be622363e896af15c"
+  },
+  {
+   "path": "page-templates/seo-technical.php",
+   "size": 297,
+   "sha1": "ca11d46f1f30c3474e33c0e3e78e9df2eeb3cb0f"
+  },
+  {
+   "path": "page-templates/seo-uae.php",
+   "size": 299,
+   "sha1": "5b0eaf6a932f66038b649c7750088f3e1e76bf23"
+  },
+  {
+   "path": "page-templates/seo.php",
+   "size": 301,
+   "sha1": "d127d8b33292fe05de15549e526ff5db86451170"
+  },
+  {
+   "path": "page-templates/services.php",
+   "size": 282,
+   "sha1": "c33474ce8fc842725f9bf770fd3de67b0af1a213"
+  },
+  {
+   "path": "page-templates/stores-salla.php",
+   "size": 271,
+   "sha1": "105b02a28e77bfca469b149fa0eddf58a456ffa4"
+  },
+  {
+   "path": "page-templates/stores-shopify.php",
+   "size": 283,
+   "sha1": "9da87561d8ed1dab007f9d9c31a655fbbbc63539"
+  },
+  {
+   "path": "page-templates/stores-woocommerce.php",
+   "size": 291,
+   "sha1": "22a0c8369a38b617b4cdc874d6c744cba0608a00"
+  },
+  {
+   "path": "page-templates/stores-zid.php",
+   "size": 265,
+   "sha1": "701c497a356fd3f4fe3bc4aed1874e5aa1c32f56"
+  },
+  {
+   "path": "page-templates/stores.php",
+   "size": 292,
+   "sha1": "c162c8cede9418e9e08a7cbd691dd2b3f3bf8b4e"
+  },
+  {
+   "path": "page-templates/team.php",
+   "size": 275,
+   "sha1": "206bd4972f5fe5de62f36ed4435802e2d5a8b534"
+  },
+  {
+   "path": "page-templates/terms.php",
+   "size": 287,
+   "sha1": "78dc1204f3b986790d64ba11e6c2875deea28371"
+  },
+  {
+   "path": "page-templates/thank-you.php",
+   "size": 287,
+   "sha1": "4109619478be998c94940c9dbce55d4c51523a57"
+  },
+  {
+   "path": "page-templates/web-custom-dev.php",
+   "size": 307,
+   "sha1": "ff79d2c59e2c875aa46c906b3c481105fae51eb5"
+  },
+  {
+   "path": "page-templates/web-design.php",
+   "size": 293,
+   "sha1": "c85f3f10335ada97fc63bca9984bee7ff79f8fcb"
+  },
+  {
+   "path": "page-templates/web-react-next.php",
+   "size": 293,
+   "sha1": "165f25a32b18f7885a04cddbae54fb6bbba1ec5f"
+  },
+  {
+   "path": "page-templates/web-webflow.php",
+   "size": 279,
+   "sha1": "a006593e4b4af07e8d82842efb14a17ee316f162"
+  },
+  {
+   "path": "page-templates/web-wordpress.php",
+   "size": 286,
+   "sha1": "5b9338816fab699850190bc50ec35dab5d86b199"
+  },
+  {
+   "path": "parts/drawer.php",
+   "size": 2926,
+   "sha1": "a92bbf19bd3e6bcc972abf099ccc727c019eec67"
+  },
+  {
+   "path": "parts/quick-links.php",
+   "size": 1178,
+   "sha1": "fa1dfcc229f2117363bdabbb1d9be13a4d0386d2"
+  },
+  {
+   "path": "parts/site-footer.php",
+   "size": 4430,
+   "sha1": "9f48b492238710a1cd9a2d2aeb02c8d8dd86f68b"
+  },
+  {
+   "path": "parts/site-header.php",
+   "size": 7112,
+   "sha1": "b9671db6ddba8d6b8ff05e36f906570c58f0b105"
+  },
+  {
+   "path": "parts/blog/empty.php",
+   "size": 807,
+   "sha1": "fdaf77cf5e1db83bcff3b2925216a371e80b80cc"
+  },
+  {
+   "path": "parts/blog/rows.php",
+   "size": 3347,
+   "sha1": "40aef01e81a9d6f8416e57854c890dd882d32701"
+  },
+  {
+   "path": "parts/dynamic/case-filters.php",
+   "size": 1190,
+   "sha1": "4d6d3360f1bc0a7ca6e652e4916d6748b8b8d42f"
+  },
+  {
+   "path": "parts/dynamic/case-list.php",
+   "size": 2950,
+   "sha1": "9347d42044be2fa4967f35da97b441b572390c61"
+  },
+  {
+   "path": "parts/dynamic/posts-home.php",
+   "size": 4441,
+   "sha1": "c5b284046d6649219a1cb9e283414b278d8c9c86"
+  },
+  {
+   "path": "parts/dynamic/team-columns.php",
+   "size": 1228,
+   "sha1": "d749bb495b62705dd64f50e64c96410686260939"
+  },
+  {
+   "path": "parts/dynamic/team-directory.php",
+   "size": 3339,
+   "sha1": "e304c994dc796c2c689da9d3b43a28264b49346d"
+  },
+  {
+   "path": "parts/dynamic/team-track.php",
+   "size": 961,
+   "sha1": "0f1fff5d1c438224b1e57fd4040c5275463ad623"
+  },
+  {
+   "path": "sections/about/client_logos.php",
+   "size": 1767,
+   "sha1": "5ec375f8bf751674187536b81d4b609565e586b6"
+  },
+  {
+   "path": "sections/about/hero.php",
+   "size": 2989,
+   "sha1": "8f89efd7da53c4b0b5106901ae664560f5e284a7"
+  },
+  {
+   "path": "sections/about/nopromise.php",
+   "size": 2751,
+   "sha1": "842052c45265caa085e5f439f7aabce1ecc4b296"
+  },
+  {
+   "path": "sections/about/now.php",
+   "size": 2724,
+   "sha1": "7da60ccc5b26ddf08f3cd0fe964c7c976f419984"
+  },
+  {
+   "path": "sections/about/principles.php",
+   "size": 2397,
+   "sha1": "714f049cb01b8df47fb37cd80f08939bff7fecad"
+  },
+  {
+   "path": "sections/contact/flow.php",
+   "size": 11367,
+   "sha1": "369f6320ea145fc130a7878114dca93c0464eeaf"
+  },
+  {
+   "path": "sections/contact/hero.php",
+   "size": 1870,
+   "sha1": "92feaef6a501571d20608173e2bc824f1c3917f2"
+  },
+  {
+   "path": "sections/home/about.php",
+   "size": 2491,
+   "sha1": "4cf9f9e1ff51d29635bbfc88d0688fc2d7868b99"
+  },
+  {
+   "path": "sections/home/articles.php",
+   "size": 1667,
+   "sha1": "7bb7c3430dd4d4d691fdb3ebcd6f2770a9867865"
+  },
+  {
+   "path": "sections/home/client_logos.php",
+   "size": 1770,
+   "sha1": "42114bec91fff481a465873359a185afe1a21d1b"
+  },
+  {
+   "path": "sections/home/hero.php",
+   "size": 5432,
+   "sha1": "714d56ef114b9f2a604ed662498feb34e24b7783"
+  },
+  {
+   "path": "sections/home/markets.php",
+   "size": 3255,
+   "sha1": "89a43caf3b469812bf69eee1f15444b6d8a1cd0b"
+  },
+  {
+   "path": "sections/home/platforms.php",
+   "size": 2268,
+   "sha1": "1b3b221f892a793219245fb4197fa48bf21c388a"
+  },
+  {
+   "path": "sections/home/results.php",
+   "size": 1805,
+   "sha1": "154202ac0b70ceff826629322ac3d8f4f1e107c2"
+  },
+  {
+   "path": "sections/home/reviews.php",
+   "size": 4771,
+   "sha1": "a74dbe4e9ffe54378f45214ace8c4889ee67757d"
+  },
+  {
+   "path": "sections/home/sectors.php",
+   "size": 3598,
+   "sha1": "907ac54a1d5784b457c1af8bafc0d4cfcb9235f0"
+  },
+  {
+   "path": "sections/home/services.php",
+   "size": 5833,
+   "sha1": "c7bca3bf560a740a8d1f21fe9fe1968a66e09f6d"
+  },
+  {
+   "path": "sections/pricing/before.php",
+   "size": 2820,
+   "sha1": "dc1323b1325823e075db51742d7e328103322ee6"
+  },
+  {
+   "path": "sections/pricing/direction.php",
+   "size": 3089,
+   "sha1": "af7c96545faa6d39d0d8a589e7dc1f3bd7db8b82"
+  },
+  {
+   "path": "sections/pricing/factors.php",
+   "size": 2420,
+   "sha1": "fbf1383f3d297548b9a267b678c671cc26d67b36"
+  },
+  {
+   "path": "sections/pricing/groups.php",
+   "size": 1872,
+   "sha1": "a58132e26d65edcb1f8cb318b429536ad73c4b10"
+  },
+  {
+   "path": "sections/pricing/hero.php",
+   "size": 4532,
+   "sha1": "7363ca513f9bcc021269463e7d4db6fc0a57c3bf"
+  },
+  {
+   "path": "sections/privacy-policy/document.php",
+   "size": 2954,
+   "sha1": "bbc0b95fb0be80c20381149ebe688b0abbcafdbb"
+  },
+  {
+   "path": "sections/privacy-policy/hero.php",
+   "size": 1651,
+   "sha1": "6af5b1aa626e137b3a97915538d1534942812153"
+  },
+  {
+   "path": "sections/products/fields.php",
+   "size": 2329,
+   "sha1": "99ad2932735b02930c667acb1a3c584382d7f215"
+  },
+  {
+   "path": "sections/products/flow.php",
+   "size": 9446,
+   "sha1": "4ecc6d822684dc0cef3334d421f7d8f5bf4e4784"
+  },
+  {
+   "path": "sections/products/hero.php",
+   "size": 6620,
+   "sha1": "6165a79315df7fd48bb8732a09078981f74d0887"
+  },
+  {
+   "path": "sections/products/platforms.php",
+   "size": 5195,
+   "sha1": "36b394503f6e0efa858c923f315a1f08df9f15fb"
+  },
+  {
+   "path": "sections/products/process.php",
+   "size": 2563,
+   "sha1": "0cd1ec0306a59b007b9c6ecd2666cf7dca2fbd6e"
+  },
+  {
+   "path": "sections/results/cases.php",
+   "size": 1188,
+   "sha1": "6c50c196d2f5ec40cf2007af90834da5c7dae281"
+  },
+  {
+   "path": "sections/results/hero.php",
+   "size": 1774,
+   "sha1": "a98111a07dd4b5def354835914f13ca948792d48"
+  },
+  {
+   "path": "sections/sector-ecommerce/case.php",
+   "size": 3798,
+   "sha1": "e4887ec0089b8d6fa4ee99441f14f245acf9ca3a"
+  },
+  {
+   "path": "sections/sector-ecommerce/hero.php",
+   "size": 6449,
+   "sha1": "41a97d330b85e77e3148dc960682cba05a771743"
+  },
+  {
+   "path": "sections/sector-ecommerce/measure.php",
+   "size": 2819,
+   "sha1": "469c28c764b4d4e96345396eb162d992b900f7e6"
+  },
+  {
+   "path": "sections/sector-ecommerce/path.php",
+   "size": 4051,
+   "sha1": "9acf27342116b77f42d156a69d6cfce5b5e48dd6"
+  },
+  {
+   "path": "sections/sector-ecommerce/sector_journey.php",
+   "size": 8751,
+   "sha1": "19dd704fde2afd7692069c012b030c970284eb88"
+  },
+  {
+   "path": "sections/sector-ecommerce/visibility.php",
+   "size": 3053,
+   "sha1": "2268ea39113f9096b8696e682fa3caf465197d4b"
+  },
+  {
+   "path": "sections/sector-education/hero.php",
+   "size": 6497,
+   "sha1": "39db4f7e5822963bcc322d6e40f204707d4eec5c"
+  },
+  {
+   "path": "sections/sector-education/info.php",
+   "size": 2596,
+   "sha1": "d6c9675c6cc531daff412db8b02353b23346725f"
+  },
+  {
+   "path": "sections/sector-education/levels.php",
+   "size": 3476,
+   "sha1": "9c48ee5225d6c9cc64b2032717cbea97545a8e29"
+  },
+  {
+   "path": "sections/sector-education/measure.php",
+   "size": 2450,
+   "sha1": "948b0042aca9658580dd80dac92b39d6d4ca08ff"
+  },
+  {
+   "path": "sections/sector-education/sector_journey.php",
+   "size": 6861,
+   "sha1": "15a3d32747bb23c0bfa94ccdf0494b24e1b9b21d"
+  },
+  {
+   "path": "sections/sector-food/branch.php",
+   "size": 3383,
+   "sha1": "e16fb35571b894b2ec42c88adf88e5f15fa1255c"
+  },
+  {
+   "path": "sections/sector-food/hero.php",
+   "size": 6483,
+   "sha1": "6361199c3ed9a61b760b7db2ffecabfc409aff60"
+  },
+  {
+   "path": "sections/sector-food/measure.php",
+   "size": 2417,
+   "sha1": "ab59a45d98beed76f5aec044a6375c6d1a176eef"
+  },
+  {
+   "path": "sections/sector-food/menu.php",
+   "size": 2758,
+   "sha1": "1e2c05216841462ce730cc86013b1c0dcd865de6"
+  },
+  {
+   "path": "sections/sector-food/sector_journey.php",
+   "size": 7201,
+   "sha1": "070ca5798931e09bc74c13c89f6378bc7dbdf912"
+  },
+  {
+   "path": "sections/sector-health/case.php",
+   "size": 5746,
+   "sha1": "13d9a05f4b97a3dd6ef94219da7dce04061146b5"
+  },
+  {
+   "path": "sections/sector-health/hero.php",
+   "size": 6509,
+   "sha1": "9c812254e1241dbfc2ceaa2415ebd17e48d95224"
+  },
+  {
+   "path": "sections/sector-health/journey.php",
+   "size": 3202,
+   "sha1": "3380e93e1e5b627fe5bf516fd1350eab8b97a6b8"
+  },
+  {
+   "path": "sections/sector-health/measure.php",
+   "size": 2461,
+   "sha1": "c2d66b20e943a0ab73a2e4c1c4326fd3f0dda252"
+  },
+  {
+   "path": "sections/sector-health/pages.php",
+   "size": 3161,
+   "sha1": "5571c99879ab5b68ed5613b0963ec7c64e9c8c10"
+  },
+  {
+   "path": "sections/sector-health/sector_journey.php",
+   "size": 7372,
+   "sha1": "fd4358bb1b276002b4469ae17a280a7c6bf6ff75"
+  },
+  {
+   "path": "sections/sector-legal/expertise.php",
+   "size": 2646,
+   "sha1": "9eb903694d59b2f692e6ae5429441c2ce0342c07"
+  },
+  {
+   "path": "sections/sector-legal/hero.php",
+   "size": 6488,
+   "sha1": "5a0d40259ffe0efde16485bf9f2eb94d6141d91c"
+  },
+  {
+   "path": "sections/sector-legal/practice.php",
+   "size": 3533,
+   "sha1": "fe484ae7e88484ee36c455242de69ebaa38772f6"
+  },
+  {
+   "path": "sections/sector-legal/sector_journey.php",
+   "size": 6518,
+   "sha1": "41e20af029b5fccca929a115120446228c562051"
+  },
+  {
+   "path": "sections/sector-real-estate/hero.php",
+   "size": 6498,
+   "sha1": "95c586c1e936fce8b41e9e7ea76b24a8008316ab"
+  },
+  {
+   "path": "sections/sector-real-estate/lifecycle.php",
+   "size": 3235,
+   "sha1": "1348a66552e7c80cba604a07c117aa4a5660b55b"
+  },
+  {
+   "path": "sections/sector-real-estate/measure.php",
+   "size": 2458,
+   "sha1": "38e3a9d26eacd09d297abe28ae2c03925b94605d"
+  },
+  {
+   "path": "sections/sector-real-estate/sector_journey.php",
+   "size": 8168,
+   "sha1": "f9a53af7928d268ad5b52b29d67eaad808978d12"
+  },
+  {
+   "path": "sections/sector-real-estate/structure.php",
+   "size": 3419,
+   "sha1": "e79c4b8910f44adeb00a85e1246a400b58d3d0da"
+  },
+  {
+   "path": "sections/sector-tech/hero.php",
+   "size": 6480,
+   "sha1": "2c687748cceb4f3a55d080a76533fb01a143066f"
+  },
+  {
+   "path": "sections/sector-tech/measure.php",
+   "size": 2417,
+   "sha1": "e993ad5ae0376ced0696abe4b1f97cfa5ccfb4ef"
+  },
+  {
+   "path": "sections/sector-tech/problem.php",
+   "size": 2996,
+   "sha1": "9aa91ac5a7ce136085580051c0eaa50ee6d8179d"
+  },
+  {
+   "path": "sections/sector-tech/sector_journey.php",
+   "size": 7006,
+   "sha1": "50c0b9ad9cc81b82125912b44d7a723c92a4526d"
+  },
+  {
+   "path": "sections/sector-tech/verify.php",
+   "size": 2998,
+   "sha1": "db70b978c9d009de8766dac7fc25c5c15004c0eb"
+  },
+  {
+   "path": "sections/sector-tourism/choose.php",
+   "size": 3645,
+   "sha1": "272d58b7ca268999a7aa3685afda20c7ed663f61"
+  },
+  {
+   "path": "sections/sector-tourism/hero.php",
+   "size": 6509,
+   "sha1": "46308af297961ccc35b4e18ecef9205d2ddfa669"
+  },
+  {
+   "path": "sections/sector-tourism/inquiry.php",
+   "size": 2454,
+   "sha1": "5b7997cb7eefc2d7d00672357ab8785a01e6fac6"
+  },
+  {
+   "path": "sections/sector-tourism/season.php",
+   "size": 2957,
+   "sha1": "6258d50dcfe9aec5808f517bdeeb4594ca98e17f"
+  },
+  {
+   "path": "sections/sector-tourism/sector_journey.php",
+   "size": 6890,
+   "sha1": "4f4fb574d57959a1520fa696f6b520f205818e9e"
+  },
+  {
+   "path": "sections/sectors/hero.php",
+   "size": 2683,
+   "sha1": "6163d78580f5e46794bd8b68e0eccd208389a5f3"
+  },
+  {
+   "path": "sections/sectors/list.php",
+   "size": 3544,
+   "sha1": "93a2c61e408dc36c1833f3d7cf0eabd0ac815137"
+  },
+  {
+   "path": "sections/sectors/pick.php",
+   "size": 2926,
+   "sha1": "a7f21db7de2fc694eccc8079a61a4cde9467abef"
+  },
+  {
+   "path": "sections/seo/client_logos.php",
+   "size": 1778,
+   "sha1": "1e3cb3eef40b78dc11f7bd74b500a7457031c4c2"
+  },
+  {
+   "path": "sections/seo/hero.php",
+   "size": 7453,
+   "sha1": "4a040ed88bda4c043ac8f6335bd7793878de6e79"
+  },
+  {
+   "path": "sections/seo/layers.php",
+   "size": 3887,
+   "sha1": "74c04eaff062cbe60e270c8544137cc9985f3129"
+  },
+  {
+   "path": "sections/seo/markets.php",
+   "size": 2483,
+   "sha1": "7cc993ba87ebec6ecb91c667c72799cd3c157d76"
+  },
+  {
+   "path": "sections/seo/pricing_strip.php",
+   "size": 2030,
+   "sha1": "2ddbcac2ca0897e4eb9e15433e4193521863b3c9"
+  },
+  {
+   "path": "sections/seo/process.php",
+   "size": 10060,
+   "sha1": "1ec5fa25bf21311349f258eef005a701c2468e03"
+  },
+  {
+   "path": "sections/seo/results.php",
+   "size": 6521,
+   "sha1": "eed274ddae1c4a332c0cc9be3910aa9617d4e3e1"
+  },
+  {
+   "path": "sections/seo/reviews.php",
+   "size": 4813,
+   "sha1": "88681b87a34d5f49053bc4e6fed5b03eb57edaac"
+  },
+  {
+   "path": "sections/seo/sectors.php",
+   "size": 3084,
+   "sha1": "914a66d59c8cdfc5ea2dbba896d29ccad6f99a0c"
+  },
+  {
+   "path": "sections/seo/seo_system.php",
+   "size": 6261,
+   "sha1": "45abd22dec4dcc25d0098347e854d657ba1719df"
+  },
+  {
+   "path": "sections/seo/tools.php",
+   "size": 4203,
+   "sha1": "c86daab6613298bae6ce13ba2bd81c9f414f8fd9"
+  },
+  {
+   "path": "sections/seo-backlinks/compare.php",
+   "size": 3067,
+   "sha1": "f81897ae169153d8ff2649700077dcb2f1b5b965"
+  },
+  {
+   "path": "sections/seo-backlinks/flow.php",
+   "size": 2552,
+   "sha1": "08c853a46a4e9d4ab0fa2718889735e09ccf05c7"
+  },
+  {
+   "path": "sections/seo-backlinks/hero.php",
+   "size": 7220,
+   "sha1": "80245b69f7c9b88830173dd76b33fb3ba95e60b3"
+  },
+  {
+   "path": "sections/seo-backlinks/honest.php",
+   "size": 1983,
+   "sha1": "faf8a0d4d3233578c864cbf4ea364a00251e48b1"
+  },
+  {
+   "path": "sections/seo-backlinks/quality.php",
+   "size": 2922,
+   "sha1": "8ea60e1863708e3ef4a3e0a440b3bc58b6345321"
+  },
+  {
+   "path": "sections/seo-consulting/chain.php",
+   "size": 3767,
+   "sha1": "c29de2aeb61d9160c756a432dee8c1e824b9308b"
+  },
+  {
+   "path": "sections/seo-consulting/deliver.php",
+   "size": 2132,
+   "sha1": "5b3782cf352421fbf044ff660e60604b9d254120"
+  },
+  {
+   "path": "sections/seo-consulting/hero.php",
+   "size": 4985,
+   "sha1": "611a5805e3c435967ededea9b2f2800fc57a1bd9"
+  },
+  {
+   "path": "sections/seo-consulting/when.php",
+   "size": 1818,
+   "sha1": "40a1fa602d2d2f2de5c20a569ff352dc7e188599"
+  },
+  {
+   "path": "sections/seo-content/flow.php",
+   "size": 2568,
+   "sha1": "b7cf049a64247fff2244a68d4ae1574dff1b95fc"
+  },
+  {
+   "path": "sections/seo-content/hero.php",
+   "size": 4481,
+   "sha1": "ffae19d6ed88a2f7939a39174b12a79d17e7dd02"
+  },
+  {
+   "path": "sections/seo-content/human.php",
+   "size": 2216,
+   "sha1": "773fb87e91149c76cfa9f3fecf985b08ad6c7103"
+  },
+  {
+   "path": "sections/seo-content/proof.php",
+   "size": 2045,
+   "sha1": "311e388f7a8a417ea4ac8365a0717eb0244f563e"
+  },
+  {
+   "path": "sections/seo-content/types.php",
+   "size": 2032,
+   "sha1": "71536633b3e6188658c3f410e7179ed3b8a3f602"
+  },
+  {
+   "path": "sections/seo-egypt/client_logos.php",
+   "size": 1367,
+   "sha1": "a8afdb9f1c9463f1f11cd4a7978c5c64db4919f6"
+  },
+  {
+   "path": "sections/seo-egypt/egypt_case.php",
+   "size": 3755,
+   "sha1": "7e93ca6da949644c9265e76878349045bb315934"
+  },
+  {
+   "path": "sections/seo-egypt/first_month.php",
+   "size": 2250,
+   "sha1": "e9f33b2d4333eb0fd29a2034a0d799d1c456aebf"
+  },
+  {
+   "path": "sections/seo-egypt/hero.php",
+   "size": 6311,
+   "sha1": "7d905c5c931c4d7ffdbc74254d5998c86e3c4ed6"
+  },
+  {
+   "path": "sections/seo-egypt/market.php",
+   "size": 4490,
+   "sha1": "09ed1f8277897d922e8c45f7f45c3032159fcde7"
+  },
+  {
+   "path": "sections/seo-egypt/method.php",
+   "size": 6024,
+   "sha1": "712f955be8e90b4f7812bab7af7b25c3eeab6933"
+  },
+  {
+   "path": "sections/seo-egypt/reviews.php",
+   "size": 2231,
+   "sha1": "4724c6f34a86fc5104484281f3cfbede59afb38b"
+  },
+  {
+   "path": "sections/seo-egypt/scope.php",
+   "size": 2900,
+   "sha1": "7584c6198fba138cc0a68e7c131fc862dd939c67"
+  },
+  {
+   "path": "sections/seo-egypt/sectors.php",
+   "size": 7183,
+   "sha1": "9e4303fd170dc93c147ab5d16272112ef67778dc"
+  },
+  {
+   "path": "sections/seo-egypt/why.php",
+   "size": 1847,
+   "sha1": "3617816b7c369bb00dc6cddb30646740e35bb7a0"
+  },
+  {
+   "path": "sections/seo-ksa/client_logos.php",
+   "size": 1367,
+   "sha1": "7d60eb62721b9ef5efffa171a465bef21f6391b5"
+  },
+  {
+   "path": "sections/seo-ksa/first_month.php",
+   "size": 2610,
+   "sha1": "193f81ec7168d9b070a36f4131cb44ce86dd03bc"
+  },
+  {
+   "path": "sections/seo-ksa/hero.php",
+   "size": 6559,
+   "sha1": "ececa369d8217ae73ec7d14cf43416d3abe38d70"
+  },
+  {
+   "path": "sections/seo-ksa/market.php",
+   "size": 6245,
+   "sha1": "39d7a4cb295c31e44d1dd71feb743817f5fd06d8"
+  },
+  {
+   "path": "sections/seo-ksa/reviews.php",
+   "size": 4460,
+   "sha1": "70567d0c7fef3484940cf8c185d0bd647b2cd75f"
+  },
+  {
+   "path": "sections/seo-ksa/saudi_case.php",
+   "size": 4063,
+   "sha1": "5a00c3961d35e377e6179854bdbc23209c0478d5"
+  },
+  {
+   "path": "sections/seo-ksa/scope.php",
+   "size": 3248,
+   "sha1": "b2175d2e2427ee8d29a0241abd4b3ed7b6bf5428"
+  },
+  {
+   "path": "sections/seo-ksa/sectors.php",
+   "size": 3032,
+   "sha1": "ef35df2738deeebc54c120689813dcfee72413b5"
+  },
+  {
+   "path": "sections/seo-ksa/why.php",
+   "size": 1848,
+   "sha1": "f45ea5ff6f563220d26f73af92f737960b60ea4e"
+  },
+  {
+   "path": "sections/seo-on-page/deliverables.php",
+   "size": 2141,
+   "sha1": "b60154af1757c8d4d358b963a1671111d093bcd2"
+  },
+  {
+   "path": "sections/seo-on-page/flow.php",
+   "size": 4714,
+   "sha1": "59485eecdeb37866a68249dd8445157ee7a7a96c"
+  },
+  {
+   "path": "sections/seo-on-page/hero.php",
+   "size": 4918,
+   "sha1": "300c9b05128b1686624ac1a3f1f35f9ac759befd"
+  },
+  {
+   "path": "sections/seo-on-page/layers.php",
+   "size": 2036,
+   "sha1": "9de4fdb7791da3a5607b957d2c051c11f600ba43"
+  },
+  {
+   "path": "sections/seo-technical/hero.php",
+   "size": 4696,
+   "sha1": "ee0f676e2171c112d16edcb20b658e871da91897"
+  },
+  {
+   "path": "sections/seo-technical/issues.php",
+   "size": 3003,
+   "sha1": "72a292266e7d2fc5053c5681fbce6a81f86bcbf9"
+  },
+  {
+   "path": "sections/seo-technical/levels.php",
+   "size": 2805,
+   "sha1": "51eb0567018f7daeb4420348b27d9858ced286a5"
+  },
+  {
+   "path": "sections/seo-technical/scope.php",
+   "size": 2194,
+   "sha1": "1e57c6e8a10af616d36a72c20ea910cb6ece9ed1"
+  },
+  {
+   "path": "sections/seo-technical/tools.php",
+   "size": 3229,
+   "sha1": "574160dbb655f0ab0c859d34a716fdb8c40677d6"
+  },
+  {
+   "path": "sections/seo-uae/client_logos.php",
+   "size": 1365,
+   "sha1": "3ac5776df627271eee365887f68a1bd48f777050"
+  },
+  {
+   "path": "sections/seo-uae/first_month.php",
+   "size": 4829,
+   "sha1": "ea23acb18a1d236d57bdfbb2af21efdb10923b28"
+  },
+  {
+   "path": "sections/seo-uae/gulf_case.php",
+   "size": 3956,
+   "sha1": "a78ef42656bb6699aceb3454cbe4a6cea31ec505"
+  },
+  {
+   "path": "sections/seo-uae/hero.php",
+   "size": 9417,
+   "sha1": "ffe7acfbcc5c37ae09c2213cb856a80f3092e7a4"
+  },
+  {
+   "path": "sections/seo-uae/market.php",
+   "size": 2914,
+   "sha1": "6dbc408bc598ed0f5e249d59f981a5945307616c"
+  },
+  {
+   "path": "sections/seo-uae/measure.php",
+   "size": 2700,
+   "sha1": "413390406c726b103bc74c03a9984d2ff19c5161"
+  },
+  {
+   "path": "sections/seo-uae/needs.php",
+   "size": 2417,
+   "sha1": "7dbbaa33d6db2df26756239940daeaee16e878e0"
+  },
+  {
+   "path": "sections/seo-uae/opportunities.php",
+   "size": 6302,
+   "sha1": "9d3dd5e6b0100725c20daba3172795c1ef0cbbd7"
+  },
+  {
+   "path": "sections/seo-uae/reviews.php",
+   "size": 2229,
+   "sha1": "07d67bbaa0b779df32d6463caa93a7c73fbaecd0"
+  },
+  {
+   "path": "sections/seo-uae/sectors.php",
+   "size": 2916,
+   "sha1": "dcac126c3667bdbcc5c3fd3f004319fdadb2eca0"
+  },
+  {
+   "path": "sections/seo-uae/why.php",
+   "size": 1845,
+   "sha1": "ca36983de46afbff66723ee9aa05f799f1686eb0"
+  },
+  {
+   "path": "sections/services/families.php",
+   "size": 7876,
+   "sha1": "8853741c4dcbd088edd2efbf62f3cd994484d7f7"
+  },
+  {
+   "path": "sections/services/hero.php",
+   "size": 6324,
+   "sha1": "242515929aa3d628242b87f251d44b916495e911"
+  },
+  {
+   "path": "sections/services/path.php",
+   "size": 2825,
+   "sha1": "a1ebf8d0b9d2a8a1dbd4439a352f4a107074a09e"
+  },
+  {
+   "path": "sections/services/sectors.php",
+   "size": 1967,
+   "sha1": "43d89cac8a6ff960783dd3c2b93c9599f6186c72"
+  },
+  {
+   "path": "sections/shared/booking.php",
+   "size": 9487,
+   "sha1": "4baaae48cf594754bba246fbc47cd8b0d1e4b98b"
+  },
+  {
+   "path": "sections/shared/faq.php",
+   "size": 2512,
+   "sha1": "5db245af4294ec577f95d2ce2aa949026bf607ca"
+  },
+  {
+   "path": "sections/shared/related.php",
+   "size": 1272,
+   "sha1": "400c8bfa6c4ba953eaa212f61f66cb7b28ff4bd1"
+  },
+  {
+   "path": "sections/stores/hero.php",
+   "size": 5160,
+   "sha1": "749318e47a8db02a3d3638533be1221c51fad9e3"
+  },
+  {
+   "path": "sections/stores/journey.php",
+   "size": 10205,
+   "sha1": "f6d38c49251f48ac3d43dd7d08ad1dca82f1310e"
+  },
+  {
+   "path": "sections/stores/phases.php",
+   "size": 2560,
+   "sha1": "fc7df7f387ff288a310b6411b6eb5eeaf8422df2"
+  },
+  {
+   "path": "sections/stores/platforms.php",
+   "size": 6782,
+   "sha1": "0574a8aedfd0952885f0eb78ea9538a8ad628259"
+  },
+  {
+   "path": "sections/stores-salla/hero.php",
+   "size": 5192,
+   "sha1": "ff311a74731c88a19e23b1c7150b0869bf08ff6d"
+  },
+  {
+   "path": "sections/stores-salla/limits.php",
+   "size": 2353,
+   "sha1": "cd02a0d2f613f92905bbdc7d3b44125d7b630884"
+  },
+  {
+   "path": "sections/stores-salla/phases.php",
+   "size": 2306,
+   "sha1": "025b8cc443d336d4557111b4e0cce632fb30938f"
+  },
+  {
+   "path": "sections/stores-salla/setup.php",
+   "size": 1812,
+   "sha1": "ef540b34f9eb3c2796ff60caa47c0afa8986c4b3"
+  },
+  {
+   "path": "sections/stores-shopify/apps.php",
+   "size": 3101,
+   "sha1": "5d714f6ab35b1dc0067132f7db6bb0de8ad1ae9d"
+  },
+  {
+   "path": "sections/stores-shopify/build.php",
+   "size": 1956,
+   "sha1": "f61f1a8c0454acefe046340be33ac8a365c19d13"
+  },
+  {
+   "path": "sections/stores-shopify/care.php",
+   "size": 2119,
+   "sha1": "0c427f5a6b98a3a4f39bb036687ae67c4e5976b3"
+  },
+  {
+   "path": "sections/stores-shopify/hero.php",
+   "size": 5266,
+   "sha1": "3c5729cbb906713a0db0ceb6ad4da88afe87e47d"
+  },
+  {
+   "path": "sections/stores-woocommerce/build.php",
+   "size": 2264,
+   "sha1": "e85f85a462f1d4e0ee3a320dcca6767c2d042cce"
+  },
+  {
+   "path": "sections/stores-woocommerce/fit.php",
+   "size": 2121,
+   "sha1": "f8adbaec97ddba43775534d5725eba6902c0bc67"
+  },
+  {
+   "path": "sections/stores-woocommerce/hero.php",
+   "size": 4889,
+   "sha1": "5d528290bff780466686a7ee023bb5f2e68637bc"
+  },
+  {
+   "path": "sections/stores-woocommerce/phases.php",
+   "size": 3137,
+   "sha1": "ab2754997be519988390aff78a238376de0fe905"
+  },
+  {
+   "path": "sections/stores-zid/fit.php",
+   "size": 2113,
+   "sha1": "cb57c2b6eac677e78f745ce997b0763702b0418d"
+  },
+  {
+   "path": "sections/stores-zid/hero.php",
+   "size": 3896,
+   "sha1": "d329a6a11dedf0b96fd60165230b4ad803475a20"
+  },
+  {
+   "path": "sections/stores-zid/ops.php",
+   "size": 2531,
+   "sha1": "b5b9d58fa89b2dc7767d2d7f9a9a1d606294039d"
+  },
+  {
+   "path": "sections/stores-zid/phases.php",
+   "size": 3106,
+   "sha1": "9d15356afcbe526b21946c10e4b24f1b7d03d982"
+  },
+  {
+   "path": "sections/team/collab.php",
+   "size": 2240,
+   "sha1": "16be96643e99dda9edf77ed7f7bb49463c295b87"
+  },
+  {
+   "path": "sections/team/directory.php",
+   "size": 2005,
+   "sha1": "612ea41c2a0abe2b75d21d11c968236a63c2adf7"
+  },
+  {
+   "path": "sections/team/hero.php",
+   "size": 1718,
+   "sha1": "6529e1c5b463158fca379131cc487415e71f2419"
+  },
+  {
+   "path": "sections/team/remote.php",
+   "size": 2320,
+   "sha1": "cd0062b310a5f9be80489506bf16b58c1ffc32aa"
+  },
+  {
+   "path": "sections/terms/document.php",
+   "size": 3141,
+   "sha1": "52e66c004b75e10ccf21b06fb18b2190ca5d8168"
+  },
+  {
+   "path": "sections/terms/hero.php",
+   "size": 2014,
+   "sha1": "6f8a749a1008fc57ef9777aef5e36f30db55116f"
+  },
+  {
+   "path": "sections/thank-you/hero.php",
+   "size": 3287,
+   "sha1": "3d0af6fd459166009df8714acbd77d675b73bb2d"
+  },
+  {
+   "path": "sections/web-custom-dev/cases.php",
+   "size": 2285,
+   "sha1": "584d76fa008135f6c843158eec00115939085684"
+  },
+  {
+   "path": "sections/web-custom-dev/fit.php",
+   "size": 3188,
+   "sha1": "225dd32d5c4de2af12492856aef693d9a126d0cf"
+  },
+  {
+   "path": "sections/web-custom-dev/hero.php",
+   "size": 4861,
+   "sha1": "2b0567cde927ea27e185f3dadd10597b82ed0379"
+  },
+  {
+   "path": "sections/web-custom-dev/phases.php",
+   "size": 2565,
+   "sha1": "e8fe2183b8fd8fe9980d4b63d3f3f4c3af1f54e2"
+  },
+  {
+   "path": "sections/web-design/deliverables.php",
+   "size": 13307,
+   "sha1": "9e64e1679f881d1b58603efec79e6891bfaba90f"
+  },
+  {
+   "path": "sections/web-design/hero.php",
+   "size": 4374,
+   "sha1": "a69c737f25899392955b1082008778c1a8134daf"
+  },
+  {
+   "path": "sections/web-design/phases.php",
+   "size": 2557,
+   "sha1": "30d6b5ddc4ef54aca6a15e2e8d8a6107d3d30373"
+  },
+  {
+   "path": "sections/web-design/platforms.php",
+   "size": 5914,
+   "sha1": "a0c3fbc4c23c18e3b9fdd8b42d9faa3a5e7e28a8"
+  },
+  {
+   "path": "sections/web-react-next/deliver.php",
+   "size": 2128,
+   "sha1": "933412d0fb44377c3b2c013ae1f388bb36a1ef2b"
+  },
+  {
+   "path": "sections/web-react-next/hero.php",
+   "size": 5115,
+   "sha1": "3f283eff1c10ca177ff28d859bb64cf3989aa19f"
+  },
+  {
+   "path": "sections/web-react-next/render.php",
+   "size": 2450,
+   "sha1": "334960b64cb6b7873de14a22330e297e6e3ba63f"
+  },
+  {
+   "path": "sections/web-react-next/when.php",
+   "size": 1814,
+   "sha1": "384316d4442bc76aeb9b5a9346982d62ddef7fe4"
+  },
+  {
+   "path": "sections/web-webflow/build.php",
+   "size": 2028,
+   "sha1": "ef3f065c79b8491c0e942f00341baf16ebad1b7e"
+  },
+  {
+   "path": "sections/web-webflow/care.php",
+   "size": 2119,
+   "sha1": "3ca1468d7e1c31ffa8c506feb9272a8a77f56d0a"
+  },
+  {
+   "path": "sections/web-webflow/hero.php",
+   "size": 5798,
+   "sha1": "25b623abb19b2027ae605bc2b9c8283e49d7826c"
+  },
+  {
+   "path": "sections/web-webflow/launch.php",
+   "size": 2554,
+   "sha1": "efbe29e5ffdb40b871f501b9bf79e248f9cdb32b"
+  },
+  {
+   "path": "sections/web-wordpress/fit.php",
+   "size": 3124,
+   "sha1": "f6ddb8c8ea7bb97701e19666f71cdc3ea2ec3316"
+  },
+  {
+   "path": "sections/web-wordpress/hero.php",
+   "size": 5524,
+   "sha1": "67db7d778d7b65f8d1ca3b3361d16001a79463d2"
+  },
+  {
+   "path": "sections/web-wordpress/ops.php",
+   "size": 1679,
+   "sha1": "49027a573a643e381868f14c47068400483c8187"
+  },
+  {
+   "path": "sections/web-wordpress/system.php",
+   "size": 2033,
+   "sha1": "7a3b4d738c4598c79a93daf1e056319fa50b87ff"
+  }
+ ]
+}

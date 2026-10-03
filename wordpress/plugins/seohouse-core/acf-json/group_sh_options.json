@@ -1,0 +1,733 @@
+{
+  "key": "group_sh_options",
+  "title": "إعدادات سيو هاوس",
+  "fields": [
+    {
+      "key": "field_sh_opt_tab_identity",
+      "label": "الهوية",
+      "name": "tab_identity",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_opt_company_name",
+      "label": "اسم الشركة",
+      "name": "sh_company_name",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "default_value": "سيو هاوس"
+    },
+    {
+      "key": "field_sh_opt_company_name_en",
+      "label": "الاسم اللاتيني",
+      "name": "sh_company_name_en",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "default_value": "SEO House"
+    },
+    {
+      "key": "field_sh_opt_logo",
+      "label": "الشعار (على الخلفية الداكنة)",
+      "name": "sh_logo",
+      "type": "image",
+      "instructions": "PNG أو WebP بخلفية شفافة. عند الإفراغ يُستخدم شعار الثيم.",
+      "required": 0,
+      "return_format": "id",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_sh_opt_logo_light",
+      "label": "الشعار على الخلفية الفاتحة",
+      "name": "sh_logo_light",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "return_format": "id",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_sh_opt_footer_text",
+      "label": "نبذة الفوتر",
+      "name": "sh_footer_text",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "rows": 3,
+      "new_lines": ""
+    },
+    {
+      "key": "field_sh_opt_copyright",
+      "label": "سطر الحقوق",
+      "name": "sh_copyright",
+      "type": "text",
+      "instructions": "استخدم {year} للسنة الحالية. مثال: © {year} سيو هاوس",
+      "required": 0
+    },
+    {
+      "key": "field_sh_opt_tab_design",
+      "label": "التصميم",
+      "name": "tab_design",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_opt_design_msg",
+      "label": "تنبيه",
+      "name": "design_msg",
+      "type": "message",
+      "instructions": "",
+      "required": 0,
+      "message": "الألوان مأخوذة من التصميم المعتمد. غيّرها فقط بقرار هوية؛ كل الأقسام تقرأ من هذه القيم."
+    },
+    {
+      "key": "field_sh_opt_c_ink",
+      "label": "الخلفية الداكنة",
+      "name": "sh_color_ink",
+      "type": "color_picker",
+      "instructions": "القيمة المعتمدة: #060B1F. التغيير يطبّق على كل الصفحات.",
+      "required": 0,
+      "default_value": "#060B1F",
+      "enable_opacity": 0,
+      "return_format": "string"
+    },
+    {
+      "key": "field_sh_opt_c_blue",
+      "label": "الأزرق الحيوي",
+      "name": "sh_color_blue",
+      "type": "color_picker",
+      "instructions": "القيمة المعتمدة: #2F5BFF. التغيير يطبّق على كل الصفحات.",
+      "required": 0,
+      "default_value": "#2F5BFF",
+      "enable_opacity": 0,
+      "return_format": "string"
+    },
+    {
+      "key": "field_sh_opt_c_sky",
+      "label": "السماوي (الروابط)",
+      "name": "sh_color_sky",
+      "type": "color_picker",
+      "instructions": "القيمة المعتمدة: #4CACFF. التغيير يطبّق على كل الصفحات.",
+      "required": 0,
+      "default_value": "#4CACFF",
+      "enable_opacity": 0,
+      "return_format": "string"
+    },
+    {
+      "key": "field_sh_opt_c_lime",
+      "label": "الفسفوري (الإجراء البارز)",
+      "name": "sh_color_lime",
+      "type": "color_picker",
+      "instructions": "القيمة المعتمدة: #C7FF32. التغيير يطبّق على كل الصفحات.",
+      "required": 0,
+      "default_value": "#C7FF32",
+      "enable_opacity": 0,
+      "return_format": "string"
+    },
+    {
+      "key": "field_sh_opt_c_paper",
+      "label": "السطح الفاتح",
+      "name": "sh_color_paper",
+      "type": "color_picker",
+      "instructions": "القيمة المعتمدة: #F7F9FD. التغيير يطبّق على كل الصفحات.",
+      "required": 0,
+      "default_value": "#F7F9FD",
+      "enable_opacity": 0,
+      "return_format": "string"
+    },
+    {
+      "key": "field_sh_opt_c_text",
+      "label": "النص على الداكن",
+      "name": "sh_color_text",
+      "type": "color_picker",
+      "instructions": "القيمة المعتمدة: #EDF1FA. التغيير يطبّق على كل الصفحات.",
+      "required": 0,
+      "default_value": "#EDF1FA",
+      "enable_opacity": 0,
+      "return_format": "string"
+    },
+    {
+      "key": "field_sh_opt_c_muted",
+      "label": "النص الثانوي",
+      "name": "sh_color_muted",
+      "type": "color_picker",
+      "instructions": "القيمة المعتمدة: #B9C4DC. التغيير يطبّق على كل الصفحات.",
+      "required": 0,
+      "default_value": "#B9C4DC",
+      "enable_opacity": 0,
+      "return_format": "string"
+    },
+    {
+      "key": "field_sh_opt_tab_header",
+      "label": "الهيدر",
+      "name": "tab_header",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_opt_cta_label",
+      "label": "نص زر الاستشارة",
+      "name": "sh_cta_label",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "default_value": "احجز استشارة مجانية"
+    },
+    {
+      "key": "field_sh_opt_cta_fallback",
+      "label": "وجهة الزر في الصفحات التي لا تحتوي نموذج الحجز",
+      "name": "sh_cta_fallback",
+      "type": "page_link",
+      "instructions": "في الصفحات التي تحتوي قسم الحجز يتجه الزر إلى #booking تلقائيًا.",
+      "required": 0,
+      "post_type": [
+        "page"
+      ],
+      "allow_null": 1
+    },
+    {
+      "key": "field_sh_opt_menu_msg",
+      "label": "القوائم",
+      "name": "menu_msg",
+      "type": "message",
+      "instructions": "",
+      "required": 0,
+      "message": "عناصر القائمة والميجا مينيو وأيقوناتها تُدار من المظهر ← القوائم (القائمة الرئيسية، أعمدة الفوتر، روابط أسفل الفوتر)."
+    },
+    {
+      "key": "field_sh_opt_tab_company",
+      "label": "بيانات الشركة",
+      "name": "tab_company",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_opt_email",
+      "label": "البريد الإلكتروني",
+      "name": "sh_email",
+      "type": "email",
+      "instructions": "",
+      "required": 0
+    },
+    {
+      "key": "field_sh_opt_phone",
+      "label": "الهاتف",
+      "name": "sh_phone",
+      "type": "text",
+      "instructions": "بالصيغة الدولية، مثال +9665xxxxxxx. يظهر فقط بعد اعتماده.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_opt_whatsapp",
+      "label": "واتساب",
+      "name": "sh_whatsapp",
+      "type": "text",
+      "instructions": "",
+      "required": 0
+    },
+    {
+      "key": "field_sh_opt_founded",
+      "label": "سنة التأسيس",
+      "name": "sh_founded",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "default_value": 2017
+    },
+    {
+      "key": "field_sh_opt_areas",
+      "label": "الأسواق المخدومة",
+      "name": "sh_areas",
+      "type": "text",
+      "instructions": "تُستخدم في areaServed داخل Schema. الخدمة عن بُعد؛ لا تُضاف عناوين مكاتب غير حقيقية.",
+      "required": 0,
+      "default_value": "السعودية، مصر، الإمارات"
+    },
+    {
+      "key": "field_sh_opt_socials",
+      "label": "الروابط الاجتماعية",
+      "name": "sh_socials",
+      "type": "sh_rows",
+      "instructions": "",
+      "required": 0,
+      "layout": "table",
+      "button_label": "إضافة رابط",
+      "sub_fields": [
+        {
+          "name": "label",
+          "label": "الاسم",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_opt_socials__label"
+        },
+        {
+          "name": "url",
+          "label": "الرابط",
+          "type": "url",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_opt_socials__url"
+        }
+      ]
+    },
+    {
+      "key": "field_sh_opt_tab_booking",
+      "label": "الاستشارة",
+      "name": "tab_booking",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_opt_booking",
+      "label": "قسم الحجز (النص العام)",
+      "name": "sh_booking",
+      "type": "group",
+      "instructions": "",
+      "required": 0,
+      "layout": "block",
+      "sub_fields": [
+        {
+          "name": "eyebrow",
+          "label": "الوسم",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_opt_booking__eyebrow"
+        },
+        {
+          "name": "title",
+          "label": "العنوان",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_opt_booking__title"
+        },
+        {
+          "name": "text",
+          "label": "الوصف",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 2,
+          "new_lines": "",
+          "key": "field_sh_opt_booking__text"
+        },
+        {
+          "name": "points",
+          "label": "نقاط الفائدة",
+          "type": "sh_rows",
+          "instructions": "",
+          "required": 0,
+          "layout": "table",
+          "button_label": "إضافة نقطة",
+          "max": 4,
+          "sub_fields": [
+            {
+              "name": "text",
+              "label": "النقطة",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "key": "field_sh_opt_booking__points__text"
+            }
+          ],
+          "key": "field_sh_opt_booking__points"
+        },
+        {
+          "name": "services",
+          "label": "الخدمات في النموذج",
+          "type": "sh_rows",
+          "instructions": "",
+          "required": 0,
+          "layout": "table",
+          "button_label": "إضافة خدمة",
+          "min": 1,
+          "max": 8,
+          "sub_fields": [
+            {
+              "name": "key",
+              "label": "المفتاح",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "key": "field_sh_opt_booking__services__key"
+            },
+            {
+              "name": "label",
+              "label": "النص",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "key": "field_sh_opt_booking__services__label"
+            }
+          ],
+          "key": "field_sh_opt_booking__services"
+        },
+        {
+          "name": "step2",
+          "label": "رسالة الخطوة الثانية (قبل ربط أداة الحجز)",
+          "type": "group",
+          "instructions": "",
+          "required": 0,
+          "layout": "block",
+          "sub_fields": [
+            {
+              "name": "title",
+              "label": "العنوان",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "default_value": "وصلنا طلبك",
+              "key": "field_sh_opt_booking__step2__title"
+            },
+            {
+              "name": "text",
+              "label": "النص",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 2,
+              "new_lines": "",
+              "default_value": "سجّلنا طلب الاستشارة. نراجع موقعك ونتواصل معك لتحديد موعد المكالمة.",
+              "key": "field_sh_opt_booking__step2__text"
+            }
+          ],
+          "key": "field_sh_opt_booking__step2"
+        }
+      ]
+    },
+    {
+      "key": "field_sh_opt_lead_to",
+      "label": "بريد استلام الطلبات",
+      "name": "sh_lead_to",
+      "type": "text",
+      "instructions": "عنوان أو أكثر مفصولة بفاصلة. عند الإفراغ يُستخدم بريد مدير الموقع.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_opt_booking_provider",
+      "label": "أداة الحجز",
+      "name": "sh_booking_provider",
+      "type": "select",
+      "instructions": "",
+      "required": 0,
+      "choices": {
+        "none": "غير مربوطة — تأكيد استلام الطلب فقط",
+        "calendly": "Calendly",
+        "other": "رابط تضمين آخر"
+      },
+      "default_value": "none",
+      "return_format": "value"
+    },
+    {
+      "key": "field_sh_opt_booking_url",
+      "label": "رابط التضمين",
+      "name": "sh_booking_url",
+      "type": "url",
+      "instructions": "يُعرض داخل الخطوة الثانية بعد حفظ الطلب. يوجَّه الزائر إلى /thank-you/ من إعدادات أداة الحجز بعد تأكيد الموعد فقط.",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_sh_opt_booking_provider",
+            "operator": "!=",
+            "value": "none"
+          }
+        ]
+      ]
+    },
+    {
+      "key": "field_sh_opt_tab_shared",
+      "label": "المحتوى المشترك",
+      "name": "tab_shared",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_opt_client_logos",
+      "label": "شعارات العملاء",
+      "name": "sh_client_logos",
+      "type": "sh_rows",
+      "instructions": "الشعارات المعتمدة فقط. تظهر في الشريط المتحرك بنفس الترتيب.",
+      "required": 0,
+      "layout": "table",
+      "button_label": "إضافة شعار",
+      "collapsed": "field_sh_opt_client_logos__name",
+      "sub_fields": [
+        {
+          "name": "name",
+          "label": "اسم العميل",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "key": "field_sh_opt_client_logos__name"
+        },
+        {
+          "name": "logo",
+          "label": "الشعار",
+          "type": "image",
+          "instructions": "",
+          "required": 1,
+          "return_format": "id",
+          "preview_size": "thumbnail",
+          "key": "field_sh_opt_client_logos__logo"
+        },
+        {
+          "name": "url",
+          "label": "رابط (اختياري)",
+          "type": "url",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_opt_client_logos__url"
+        }
+      ]
+    },
+    {
+      "key": "field_sh_opt_platforms",
+      "label": "المنصات والأدوات",
+      "name": "sh_platforms",
+      "type": "sh_rows",
+      "instructions": "شعارات المنصات والأدوات في أقسام «منصات نعمل عليها» وأدوات القياس. كل قسم في الصفحات يختار منها ما يعرضه وترتيبه، والترتيب هنا ترتيبها في قوائم الاختيار. غيّر الشعار من مكتبة الوسائط (SVG أو PNG أو WebP بخلفية شفافة)؛ يظهر بنفس المقاس في كل الأقسام.",
+      "required": 0,
+      "layout": "table",
+      "button_label": "إضافة منصة أو أداة",
+      "collapsed": "field_sh_opt_platforms__name",
+      "sub_fields": [
+        {
+          "name": "name",
+          "label": "الاسم",
+          "type": "text",
+          "instructions": "يُستخدم نصًا بديلًا للشعار عند عدم وجود اسم ظاهر بجانبه.",
+          "required": 1,
+          "key": "field_sh_opt_platforms__name"
+        },
+        {
+          "name": "logo",
+          "label": "الشعار",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "return_format": "id",
+          "preview_size": "thumbnail",
+          "library": "all",
+          "key": "field_sh_opt_platforms__logo"
+        },
+        {
+          "name": "url",
+          "label": "رابط (اختياري)",
+          "type": "url",
+          "instructions": "إن أُدخل صار الشعار رابطًا يفتح في نافذة جديدة.",
+          "required": 0,
+          "key": "field_sh_opt_platforms__url"
+        },
+        {
+          "name": "ref",
+          "label": "المعرّف الداخلي",
+          "type": "text",
+          "instructions": "يربط الشعارات المعتمدة بالأقسام؛ لا يظهر في المحرر.",
+          "required": 0,
+          "key": "field_sh_opt_platforms__ref"
+        }
+      ]
+    },
+    {
+      "key": "field_sh_opt_article_cta",
+      "label": "دعوة الاستشارة بجانب المقالات",
+      "name": "sh_article_cta",
+      "type": "group",
+      "instructions": "",
+      "required": 0,
+      "layout": "block",
+      "sub_fields": [
+        {
+          "name": "title",
+          "label": "العنوان",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "default_value": "تريد معرفة وضع موقعك؟",
+          "key": "field_sh_opt_article_cta__title"
+        },
+        {
+          "name": "text",
+          "label": "النص",
+          "type": "textarea",
+          "instructions": "",
+          "required": 0,
+          "rows": 2,
+          "new_lines": "",
+          "default_value": "مكالمة مجانية مدتها 30 دقيقة نراجع فيها موقعك ونحدد الأولوية.",
+          "key": "field_sh_opt_article_cta__text"
+        },
+        {
+          "name": "label",
+          "label": "نص الزر",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "default_value": "احجز استشارة",
+          "key": "field_sh_opt_article_cta__label"
+        },
+        {
+          "name": "link",
+          "label": "وجهة الزر",
+          "type": "page_link",
+          "instructions": "",
+          "required": 0,
+          "post_type": [
+            "page"
+          ],
+          "allow_null": 1,
+          "key": "field_sh_opt_article_cta__link"
+        }
+      ]
+    },
+    {
+      "key": "field_sh_opt_home_cases",
+      "label": "دراسات الحالة المختارة للأقسام المشتركة",
+      "name": "sh_featured_cases",
+      "type": "relationship",
+      "instructions": "فارغة = أحدث الحالات المنشورة.",
+      "required": 0,
+      "post_type": [
+        "case_study"
+      ],
+      "filters": [
+        "search"
+      ],
+      "return_format": "id",
+      "max": 6
+    },
+    {
+      "key": "field_sh_opt_tab_integrations",
+      "label": "التكاملات",
+      "name": "tab_integrations",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_opt_gtm",
+      "label": "معرّف Google Tag Manager",
+      "name": "sh_gtm_id",
+      "type": "text",
+      "instructions": "مصدر تتبع واحد. لا يُحمّل إذا كانت إضافة أخرى تضيف GTM.",
+      "required": 0,
+      "placeholder": "GTM-XXXXXXX"
+    },
+    {
+      "key": "field_sh_opt_ga4",
+      "label": "معرّف GA4 (إن لم يُستخدم GTM)",
+      "name": "sh_ga4_id",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "placeholder": "G-XXXXXXX"
+    },
+    {
+      "key": "field_sh_opt_search_console",
+      "label": "رمز التحقق من Search Console",
+      "name": "sh_gsc_verification",
+      "type": "text",
+      "instructions": "",
+      "required": 0
+    },
+    {
+      "key": "field_sh_opt_tab_redirects",
+      "label": "التحويلات",
+      "name": "tab_redirects",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_opt_redirects",
+      "label": "تحويلات الروابط القديمة (301)",
+      "name": "sh_redirects",
+      "type": "sh_rows",
+      "instructions": "لروابط منشورة في الموقع السابق ولا يوجد لها مسار مطابق. حوّل فقط إلى صفحة مكافئة في الموضوع والغرض؛ لا تحوّل إلى الرئيسية. يعمل التحويل فقط عندما لا توجد صفحة منشورة على الرابط القديم.",
+      "required": 0,
+      "layout": "table",
+      "button_label": "إضافة تحويل",
+      "collapsed": "field_sh_opt_redirects__from",
+      "sub_fields": [
+        {
+          "name": "from",
+          "label": "الرابط القديم (المسار)",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "placeholder": "/services/seo/stores-seo/",
+          "key": "field_sh_opt_redirects__from"
+        },
+        {
+          "name": "to",
+          "label": "الصفحة المكافئة",
+          "type": "page_link",
+          "instructions": "",
+          "required": 0,
+          "post_type": [
+            "page",
+            "post",
+            "case_study",
+            "team_member"
+          ],
+          "allow_null": 1,
+          "allow_archives": 0,
+          "key": "field_sh_opt_redirects__to"
+        },
+        {
+          "name": "note",
+          "label": "سبب التكافؤ",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_opt_redirects__note"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "sh_screen",
+        "operator": "==",
+        "value": "seohouse-settings"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

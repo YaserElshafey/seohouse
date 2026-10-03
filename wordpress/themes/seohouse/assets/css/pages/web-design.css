@@ -1,0 +1,16 @@
+/* SEO House - Web Design.dc.html — page-specific rules from the approved design (generated). */
+[data-bk-grid] { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); }
+[data-bk-row] { grid-template-columns:1fr 1fr; }
+@media (max-width:899px) { [data-bk-grid] { grid-template-columns:1fr; } }
+@media (max-width:559px) { [data-bk-row] { grid-template-columns:1fr; } }
+[data-screen-label="Hero"] { position:relative; overflow:hidden; }
+[data-hero-grid] ~ *:not([aria-hidden="true"]) { position:relative; }
+[data-wd-grid] { grid-template-columns:repeat(3,minmax(0,1fr)); }
+@media (max-width:959px) { [data-wd-grid] { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:599px) { [data-wd-grid] { grid-template-columns:1fr; } }
+[data-wd-tech] { grid-template-columns:repeat(4,minmax(0,1fr)); }
+@media (max-width:1023px) { [data-wd-tech] { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:559px) { [data-wd-tech] { grid-template-columns:1fr; } }
+[data-sh-center] { text-align:center; }
+[data-sh-center] > p { margin-inline:auto !important; max-width:44em; }
+[data-sh-center] h2 { text-wrap:balance; }

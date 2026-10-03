@@ -1,0 +1,43 @@
+# Builds seohouse-core.zip from the repository, checks that the content pack is inside and intact,
+# and attaches it to the release when a release is published. The plugin folder in the repository is
+# complete by itself (content-pack inside), so the release file and a copy of the folder are the same.
+name: SEO House Core zip
+on:
+  push:
+    branches: ['**']
+    paths: ['wordpress/plugins/seohouse-core/**', 'wordpress/themes/seohouse/**', 'tools/package-core.py', 'tools/package-theme.py', 'tools/theme-manifest.py', 'tools/verify-core-zip.py', 'tools/design-import/finalize-pack.py']
+  release:
+    types: [published]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Content pack finalized (ASCII names, integrity list)
+        run: python3 tools/design-import/finalize-pack.py wordpress/plugins/seohouse-core/content-pack --check
+      - name: Build and verify
+        run: python3 tools/package-core.py . seohouse-core.zip
+      - name: Theme zip (only the files in theme-files.json, no leftovers)
+        run: python3 tools/package-theme.py . seohouse-theme.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: seohouse-core
+          path: |
+            seohouse-core.zip
+            seohouse-theme.zip
+      - name: Release file (keep an attached, tested file; check it against the committed folder)
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="${{ github.event.release.tag_name }}"
+          if gh release download "$tag" -p seohouse-core.zip -O attached.zip 2>/dev/null; then
+            python3 tools/verify-core-zip.py attached.zip --folder wordpress/plugins/seohouse-core
+          else
+            gh release upload "$tag" seohouse-core.zip
+          fi

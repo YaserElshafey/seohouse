@@ -1,0 +1,16 @@
+/* SEO House - WooCommerce.dc.html — page-specific rules from the approved design (generated). */
+@media (max-width:719px) { [data-wc-note] { display:none; } }
+[data-wc-join] { grid-template-columns:1fr auto 1fr; }
+@media (max-width:859px) { [data-wc-join] { grid-template-columns:1fr; } [data-wc-join] > div:first-child { border-radius:16px 16px 0 0; } [data-wc-join] > div:last-child { border-radius:0 0 16px 16px; } [data-wc-mid] { padding:4px 10px; } }
+[data-wc-stack] { grid-template-columns:repeat(5,minmax(0,1fr)); }
+@media (max-width:959px) { [data-wc-stack] { grid-template-columns:1fr; } }
+[data-bk-grid] { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); }
+[data-bk-row] { grid-template-columns:1fr 1fr; }
+@media (max-width:899px) { [data-bk-grid] { grid-template-columns:1fr; } }
+@media (max-width:559px) { [data-bk-row] { grid-template-columns:1fr; } }
+[data-screen-label="Hero"] { position:relative; overflow:hidden; }
+[data-hero-grid] ~ *:not([aria-hidden="true"]) { position:relative; }
+[data-sec-head][data-center] { text-align:center; margin-inline:auto; }
+[data-sec-head][data-center] > div:first-child { justify-content:center; }
+p[data-center] { margin-inline:auto !important; text-align:center; }
+@media (max-width:859px) { [data-pts] { grid-template-columns:1fr !important; } }

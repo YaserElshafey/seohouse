@@ -1,0 +1,7 @@
+Local copy of the site after the move (theme 2.5.0 extracted over the old theme folder, old front-page.php in place):
+GET / → HTTP 500
+PHP Fatal error:  Uncaught Error: Call to undefined function sh_page_url() in /srv/shwplive/wp-content/themes/seohouse/front-page.php:28
+After renaming it front-page.php.old (the fix on the server):
+GET / → HTTP 200
+Old sitemap left in Rank Math's file cache: /services/seo/stores-seo/ listed:
+1

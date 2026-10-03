@@ -1,0 +1,122 @@
+[
+ {
+  "url": "/",
+  "title": 1,
+  "description": 0,
+  "canonical": 1,
+  "ogTitle": 1,
+  "robots": 1,
+  "ldScripts": 1,
+  "graph": "Person/Organization, WebSite, WebPage"
+ },
+ {
+  "url": "/services/seo/technical/",
+  "title": 1,
+  "description": 1,
+  "canonical": 1,
+  "ogTitle": 1,
+  "robots": 1,
+  "ldScripts": 1,
+  "graph": "Person/Organization, WebSite, WebPage, BreadcrumbList, Service, FAQPage"
+ },
+ {
+  "url": "/sectors/ecommerce/",
+  "title": 1,
+  "description": 1,
+  "canonical": 1,
+  "ogTitle": 1,
+  "robots": 1,
+  "ldScripts": 1,
+  "graph": "Person/Organization, WebSite, WebPage, BreadcrumbList, Service, FAQPage"
+ },
+ {
+  "url": "/services/seo/egypt/",
+  "title": 1,
+  "description": 1,
+  "canonical": 1,
+  "ogTitle": 1,
+  "robots": 1,
+  "ldScripts": 1,
+  "graph": "Person/Organization, WebSite, WebPage, BreadcrumbList, Service, FAQPage"
+ },
+ {
+  "url": "/services/web-design/react-next/",
+  "title": 1,
+  "description": 1,
+  "canonical": 1,
+  "ogTitle": 1,
+  "robots": 1,
+  "ldScripts": 1,
+  "graph": "Person/Organization, WebSite, WebPage, BreadcrumbList, Service, FAQPage"
+ },
+ {
+  "url": "/results/",
+  "title": 1,
+  "description": 1,
+  "canonical": 1,
+  "ogTitle": 1,
+  "robots": 1,
+  "ldScripts": 1,
+  "graph": "Person/Organization, WebSite, CollectionPage, BreadcrumbList, ItemList"
+ },
+ {
+  "url": "/team/",
+  "title": 1,
+  "description": 1,
+  "canonical": 1,
+  "ogTitle": 1,
+  "robots": 1,
+  "ldScripts": 1,
+  "graph": "Person/Organization, WebSite, CollectionPage, BreadcrumbList, ItemList"
+ },
+ {
+  "url": "/about/",
+  "title": 1,
+  "description": 1,
+  "canonical": 1,
+  "ogTitle": 1,
+  "robots": 1,
+  "ldScripts": 1,
+  "graph": "Person/Organization, WebSite, AboutPage, BreadcrumbList"
+ },
+ {
+  "url": "/contact/",
+  "title": 1,
+  "description": 1,
+  "canonical": 1,
+  "ogTitle": 1,
+  "robots": 1,
+  "ldScripts": 1,
+  "graph": "Person/Organization, WebSite, ContactPage, BreadcrumbList"
+ },
+ {
+  "url": "/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+  "title": 1,
+  "description": 1,
+  "canonical": 1,
+  "ogTitle": 1,
+  "robots": 1,
+  "ldScripts": 1,
+  "graph": "Person/Organization, WebSite, ImageObject, WebPage, BlogPosting, BreadcrumbList, Person"
+ },
+ {
+  "url": "/results/تستتست/",
+  "title": 1,
+  "description": 1,
+  "canonical": 1,
+  "ogTitle": 1,
+  "robots": 1,
+  "ldScripts": 1,
+  "graph": "Organization, WebSite, WebPage, BreadcrumbList, Article"
+ },
+ {
+  "url": "/team/eman-farid/",
+  "title": 1,
+  "description": 1,
+  "canonical": 1,
+  "ogTitle": 1,
+  "robots": 1,
+  "ldScripts": 1,
+  "graph": "Organization, WebSite, ProfilePage, BreadcrumbList, Person"
+ }
+]
