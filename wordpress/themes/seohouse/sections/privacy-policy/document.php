@@ -2,7 +2,8 @@
 /**
  * Section "Document" — SEO House - Privacy Policy.
  * Generated from the approved design by tools/design-import/convert.js.
- * To maintain this file by hand add the tag sh-manual (prefixed with @) as its own line here.
+ * Maintained by hand since 2.5.0: each item has a body text (sh_doc_text) and the page an update date.
+ * @sh-manual
  *
  * @var array $args { f: layout values }
  */
@@ -18,10 +19,10 @@ $f = $args['f'] ?? array();
         </ol>
       </nav>
       <div style="min-width: 0px; max-width: 720px;">
-        <?php if (!empty($f['label'])) : ?><div style="font-size: 13.5px; color: var(--sh-slate);"><?= esc_html($f['label'] ?? '') ?> </div><?php endif; ?>
+        <?php if (!empty($f['label']) || !empty($f['updated'])) : ?><div style="font-size: 13.5px; color: var(--sh-slate);"><?= esc_html($f['label'] ?? '') ?> <?php if (!empty($f['updated'])) : ?><time><?= esc_html($f['updated']) ?></time><?php endif; ?></div><?php endif; ?>
         <?php $r1_list = $f['items_2'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><?php $vt_84b96cf1 = ['v1' => ['p1'], 'v2' => ['p2'], 'v3' => ['p3'], 'v4' => ['p4'], 'v5' => ['p5'], 'v6' => ['p6'], 'v7' => ['p7'], 'v8' => ['p8']]; $vk_84b96cf1 = $vt_84b96cf1[$r1['variant'] ?? 'v1'] ?? $vt_84b96cf1['v1']; ?><div id="<?= esc_attr($vk_84b96cf1[0] ?? '') ?>" style="<?= esc_attr($i1 === 0 ? 'scroll-margin-top: 96px; padding: 18px 0px 0px;' : 'scroll-margin-top: 96px; padding: 26px 0px 0px;') ?>">
           <?php if (!empty($r1['title'])) : ?><h2 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); line-height: 1.4; margin: 0px 0px 12px;"><?= esc_html($r1['title'] ?? '') ?></h2><?php endif; ?>
-          <?php if (!empty($r1['label'])) : ?><span style="display: inline-block; font-size: 14.5px; color: rgb(142, 91, 0); background: rgba(245, 166, 35, 0.12); border-radius: 8px; padding: 6px 10px;"><?= esc_html($r1['label'] ?? '') ?></span><?php endif; ?>
+          <?php if (!empty($r1['body'])) : ?><div style="font-size: 16px; line-height: 1.9; color: var(--sh-ink-soft);"><?= sh_doc_text($r1['body']) // escaped inside ?></div><?php else : ?><?php if (!empty($r1['label'])) : ?><span style="display: inline-block; font-size: 14.5px; color: rgb(142, 91, 0); background: rgba(245, 166, 35, 0.12); border-radius: 8px; padding: 6px 10px;"><?= esc_html($r1['label'] ?? '') ?></span><?php endif; ?><?php endif; ?>
         </div><?php endforeach; ?>
       </div>
     </div>

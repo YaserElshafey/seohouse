@@ -29,6 +29,33 @@ function sh_inline( $html ): string {
 }
 
 /**
+ * Body text of a document section (privacy policy, terms): plain text typed in a textarea.
+ * A blank line starts a new paragraph; lines starting with "- " or "• " form a list. Inline
+ * markup of sh_inline_allowed() (links, bold) is kept.
+ */
+function sh_doc_text( $text ): string {
+	$text = trim( str_replace( "\r\n", "\n", (string) $text ) );
+	if ( '' === $text ) {
+		return '';
+	}
+	$out = '';
+	foreach ( preg_split( '/\n\s*\n/', $text ) as $block ) {
+		$lines = array_values( array_filter( array_map( 'trim', explode( "\n", $block ) ), 'strlen' ) );
+		$items = array_filter( $lines, static fn( $l ) => (bool) preg_match( '/^(?:-|•)\s+/u', $l ) );
+		if ( $items && count( $items ) === count( $lines ) ) {
+			$out .= '<ul style="margin: 0px 0px 14px; padding-inline-start: 22px; display: flex; flex-direction: column; gap: 6px;">';
+			foreach ( $lines as $l ) {
+				$out .= '<li>' . sh_inline( preg_replace( '/^(?:-|•)\s+/u', '', $l ) ) . '</li>';
+			}
+			$out .= '</ul>';
+			continue;
+		}
+		$out .= '<p style="margin: 0px 0px 14px;">' . implode( '<br>', array_map( 'sh_inline', $lines ) ) . '</p>';
+	}
+	return $out;
+}
+
+/**
  * Normalise a link field value (page_link returns a URL; text links may be "/path/" or "#id").
  */
 function sh_link( $value ): string {

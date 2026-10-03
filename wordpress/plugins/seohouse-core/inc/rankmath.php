@@ -259,6 +259,33 @@ function sh_rankmath_apply( ?array $plan = null ): int {
 	return $n;
 }
 
+/** Core's design title and description of a post, as handed to Rank Math ('' when none). */
+function sh_rankmath_design_values( int $id ): array {
+	$p = get_post( $id );
+	if ( ! $p || ! sh_rankmath_active() ) {
+		return array();
+	}
+	return array(
+		'rank_math_title'       => (string) sh_rankmath_core_value( $p, 'sh_seo_title' ),
+		'rank_math_description' => (string) sh_rankmath_core_value( $p, 'sh_seo_description' ),
+	);
+}
+
+/**
+ * After a content update changed a design value: a Rank Math field that still holds the previous
+ * design value (copied there automatically, never edited) follows to the new one. A value typed
+ * in Rank Math, or written by «نقل عناوين وأوصاف SEO», differs from the old design value and stays.
+ */
+function sh_rankmath_follow_design( int $id, array $old ): void {
+	$new = sh_rankmath_design_values( $id );
+	foreach ( $old as $key => $was ) {
+		$now = (string) get_post_meta( $id, $key, true );
+		if ( '' !== $was && $now === $was && '' !== ( $new[ $key ] ?? '' ) && $new[ $key ] !== $was ) {
+			update_post_meta( $id, $key, wp_slash( $new[ $key ] ) );
+		}
+	}
+}
+
 /* ------------------------------------------------------------------ front end */
 
 add_action(

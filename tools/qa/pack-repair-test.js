@@ -46,7 +46,7 @@ const flat = s => String(s || '').replace(/\s+/g, ' ').trim();
 
   await p.goto(WP + '/wp-admin/plugins.php');
   const row = flat(await p.textContent('tr[data-plugin="seohouse-core/seohouse-core.php"]'));
-  check('SEO House Core still active, new version', await p.locator('tr[data-plugin="seohouse-core/seohouse-core.php"].active').count() > 0 && /2\.4\.1/.test(row), (row.match(/(الإصدار|Version) [\d.]+/) || [''])[0]);
+  check('SEO House Core still active, new version', await p.locator('tr[data-plugin="seohouse-core/seohouse-core.php"].active').count() > 0 && new RegExp(opt('version', '2.5.0').replace(/\./g, '\\.')).test(row), (row.match(/(الإصدار|Version) [\d.]+/) || [''])[0]);
 
   await p.goto(WP + '/wp-admin/admin.php?page=seohouse-content-setup');
   t = flat(await p.textContent('#sh-setup'));

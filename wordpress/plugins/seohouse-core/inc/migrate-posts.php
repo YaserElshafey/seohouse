@@ -198,6 +198,24 @@ class SH_Post_Migration {
 		return $out;
 	}
 
+	/* read-only access for the other screens that read the main site (inc/seo-transfer.php) */
+
+	public function query( string $sql ): array {
+		return $this->db ? $this->rows( $sql ) : array();
+	}
+
+	public function table( string $table ): string {
+		return $this->t( $table );
+	}
+
+	public function quote( string $s ): string {
+		return "'" . $this->db->real_escape_string( $s ) . "'";
+	}
+
+	public function source_home(): string {
+		return $this->src_home;
+	}
+
 	/** Source summary for the screen (no password). */
 	public function describe(): array {
 		return array(

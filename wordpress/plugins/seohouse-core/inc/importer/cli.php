@@ -300,6 +300,60 @@ class SH_CLI_Command {
 		WP_CLI::log( wp_json_encode( $m->counts ) );
 		$ok ? WP_CLI::success( empty( $assoc['dry-run'] ) ? 'اكتمل النقل.' : 'معاينة فقط.' ) : WP_CLI::error( 'انتهى مع أخطاء.' );
 	}
+
+	/**
+	 * Main site's shown <title> and meta description → Rank Math fields of the same path here.
+	 *
+	 * ## OPTIONS
+	 *
+	 * [--dry-run]
+	 * : Preview only.
+	 *
+	 * [--compare]
+	 * : Only compare what both sites show now.
+	 *
+	 * [--restore]
+	 * : Put back the values from before the transfer.
+	 *
+	 * [--out=<file>]
+	 * : Also write the plan (and the comparison) to a JSON file.
+	 *
+	 * @subcommand seo-transfer
+	 */
+	public function seo_transfer( $args, $assoc ) {
+		if ( ! empty( $assoc['restore'] ) ) {
+			WP_CLI::success( sprintf( '%d قيمة أُعيدت.', SH_SEO_Transfer::restore() ) );
+			return;
+		}
+		if ( ! sh_rankmath_active() ) {
+			WP_CLI::error( 'Rank Math غير مفعّلة أو متوقفة هنا؛ القيم تُكتب في حقولها.' );
+		}
+		$t = new SH_SEO_Transfer();
+		if ( ! $t->connect() ) {
+			WP_CLI::error( $t->error );
+		}
+		$t->plan();
+		if ( '' !== $t->error ) {
+			WP_CLI::error( $t->error );
+		}
+		foreach ( $t->rows as $r ) {
+			WP_CLI::log( sprintf( '%-9s %-9s %s%s', $r['action']['title'], $r['action']['description'], $r['path'], $r['note'] ? ' — ' . $r['note'] : '' ) );
+		}
+		WP_CLI::log( wp_json_encode( $t->counts ) );
+		$out = array( 'plan' => $t->rows, 'counts' => $t->counts, 'source_only' => array_keys( $t->src_only ) );
+		if ( empty( $assoc['dry-run'] ) && empty( $assoc['compare'] ) ) {
+			$out['run'] = $t->run();
+			WP_CLI::log( wp_json_encode( $out['run'] ) );
+		}
+		if ( empty( $assoc['dry-run'] ) ) {
+			$out['report'] = $t->compare();
+			WP_CLI::log( 'comparison: ' . wp_json_encode( $out['report']['summary'] ) );
+		}
+		if ( ! empty( $assoc['out'] ) ) {
+			file_put_contents( $assoc['out'], wp_json_encode( $out, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+		}
+		WP_CLI::success( empty( $assoc['dry-run'] ) ? 'done' : 'preview only' );
+	}
 }
 
 WP_CLI::add_command( 'seohouse', 'SH_CLI_Command' );

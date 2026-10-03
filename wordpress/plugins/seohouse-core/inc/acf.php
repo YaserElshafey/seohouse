@@ -168,3 +168,28 @@ add_filter(
 	},
 	5
 );
+
+/**
+ * Preview of a draft: ACF reads the post's latest revision. A revision saved before the page's
+ * fields were filled (WordPress's own privacy-policy page has one from installation) holds no
+ * field values, so the preview came out empty. Such a revision falls back to the page itself.
+ */
+add_filter(
+	'acf/validate_post_id',
+	static function ( $post_id ) {
+		if ( ! is_numeric( $post_id ) || ! is_preview() ) {
+			return $post_id;
+		}
+		$parent = wp_is_post_revision( (int) $post_id );
+		if ( ! $parent ) {
+			return $post_id;
+		}
+		foreach ( get_post_meta( (int) $post_id ) as $values ) {
+			if ( is_string( $values[0] ?? null ) && str_starts_with( $values[0], 'field_' ) ) {
+				return $post_id; // the revision has its own field values
+			}
+		}
+		return $parent;
+	},
+	20
+);

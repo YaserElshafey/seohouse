@@ -92,7 +92,7 @@
         },
         {
           "key": "field_bf5091333e8bf",
-          "label": "العناصر: البيانات التي يجمعها الموقع",
+          "label": "المحتويات: روابط الأقسام",
           "name": "items",
           "type": "sh_rows",
           "instructions": "العدد المعتمد في التصميم: 8. يمكن الإضافة والحذف وإعادة الترتيب.",
@@ -144,26 +144,44 @@
           "required": 0
         },
         {
+          "key": "field_22111d491c7b2",
+          "label": "تاريخ آخر تحديث",
+          "name": "updated",
+          "type": "text",
+          "instructions": "مثل: 3 أكتوبر 2026. يظهر بعد «آخر تحديث:».",
+          "required": 0
+        },
+        {
           "key": "field_22c535cfeec88",
-          "label": "العناصر: البيانات التي يجمعها الموقع [يُضاف ا…",
+          "label": "الأقسام: العنوان والنص",
           "name": "items_2",
           "type": "sh_rows",
-          "instructions": "العدد المعتمد في التصميم: 8. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "instructions": "كل عنصر قسم في الصفحة: عنوانه ونصه. سطر فارغ يبدأ فقرة جديدة، والسطر الذي يبدأ بـ «- » عنصر في قائمة. رتّب الأقسام كما في «المحتويات».",
           "required": 0,
           "layout": "block",
           "button_label": "إضافة عنصر",
           "sub_fields": [
             {
               "key": "field_d0f66908aa747",
-              "label": "العنوان: البيانات التي يجمعها الموقع",
+              "label": "عنوان القسم",
               "name": "title",
               "type": "text",
               "instructions": "",
               "required": 0
             },
             {
+              "key": "field_f0c08d914a600",
+              "label": "نص القسم",
+              "name": "body",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 10,
+              "new_lines": ""
+            },
+            {
               "key": "field_af3223de6e3f9",
-              "label": "نص: [يُضاف النص القانوني المعتمد قبل الن…",
+              "label": "ملاحظة مؤقتة (تظهر فقط إذا كان نص القسم فارغًا)",
               "name": "label",
               "type": "text",
               "instructions": "",
@@ -233,5 +251,5 @@
   "active": true,
   "description": "حقول قالب سياسة الخصوصية — مولدة من SEO House - Privacy Policy.dc.html. الأقسام بترتيب التصميم؛ يمكن إخفاء أي قسم.",
   "show_in_rest": 0,
-  "modified": 1790000000
+  "modified": 1790500000
 }

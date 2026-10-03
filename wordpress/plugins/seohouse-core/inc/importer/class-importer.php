@@ -857,15 +857,16 @@ class SH_Importer {
 
 	/**
 	 * Keys of section fields added after sites were first initialised (the media-library logo next
-	 * to each platform choice, 2.4.0). While still empty they are left out of the fingerprint, so a
-	 * page imported earlier is not mistaken for one an editor changed.
+	 * to each platform choice, 2.4.0; the body text of each section and the update date of the
+	 * privacy policy and terms, 2.5.0). While still empty they are left out of the fingerprint, so
+	 * a page imported earlier is not mistaken for one an editor changed.
 	 */
 	private static function added_keys(): array {
 		static $keys = null;
 		if ( null !== $keys ) {
 			return $keys;
 		}
-		$keys = array();
+		$keys = array_fill_keys( array( 'field_22111d491c7b2', 'field_f0c08d914a600', 'field_a53ac4599d8f1', 'field_044edb582521b' ), true );
 		$walk = static function ( array $fields ) use ( &$walk, &$keys ) {
 			foreach ( $fields as $f ) {
 				if ( preg_match( '/^logo(_\d+)?_image$/', (string) ( $f['name'] ?? '' ) ) ) {
@@ -950,6 +951,7 @@ class SH_Importer {
 		}
 		$before = (string) get_post_meta( $id, self::META_HASH, true );
 		$first  = '' === $before;
+		$seo    = function_exists( 'sh_rankmath_design_values' ) ? sh_rankmath_design_values( $id ) : array();
 		foreach ( $resolved as $name => $value ) {
 			if ( 'pages' === $group ) {
 				// Survives a worker timeout, so the setup screen can identify the
@@ -960,6 +962,9 @@ class SH_Importer {
 		}
 		$after = $this->state_hash( $id, array_keys( $fields ) );
 		update_post_meta( $id, self::META_HASH, $after );
+		if ( $seo ) {
+			sh_rankmath_follow_design( $id, $seo ); // Rank Math still holding the old design value takes the new one
+		}
 		if ( 'pages' === $group ) {
 			delete_option( 'sh_setup_current_field' );
 		}

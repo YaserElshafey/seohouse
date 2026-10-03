@@ -117,7 +117,7 @@
         },
         {
           "key": "field_340afad938d44",
-          "label": "العناصر: 1استخدام الموقع",
+          "label": "المحتويات: روابط الأقسام",
           "name": "items",
           "type": "sh_rows",
           "instructions": "العدد المعتمد في التصميم: 9. يمكن الإضافة والحذف وإعادة الترتيب.",
@@ -170,18 +170,26 @@
           "required": 0
         },
         {
+          "key": "field_a53ac4599d8f1",
+          "label": "تاريخ آخر تحديث",
+          "name": "updated",
+          "type": "text",
+          "instructions": "مثل: 3 أكتوبر 2026. يظهر بعد «آخر تحديث:».",
+          "required": 0
+        },
+        {
           "key": "field_d2cde4329728b",
-          "label": "العناصر: 1. استخدام الموقع [يُضاف النص القانو…",
+          "label": "الأقسام: العنوان والنص",
           "name": "items_2",
           "type": "sh_rows",
-          "instructions": "العدد المعتمد في التصميم: 9. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "instructions": "كل عنصر قسم في الصفحة: عنوانه ونصه. سطر فارغ يبدأ فقرة جديدة، والسطر الذي يبدأ بـ «- » عنصر في قائمة. رتّب الأقسام كما في «المحتويات».",
           "required": 0,
           "layout": "block",
           "button_label": "إضافة عنصر",
           "sub_fields": [
             {
               "key": "field_af9d7fa1f94af",
-              "label": "العنوان: 1. استخدام الموقع",
+              "label": "عنوان القسم",
               "name": "title",
               "type": "textarea",
               "instructions": "يمكن استخدام وسوم نصية بسيطة مثل <bdi> و<strong> و<br>.",
@@ -190,8 +198,18 @@
               "new_lines": ""
             },
             {
+              "key": "field_044edb582521b",
+              "label": "نص القسم",
+              "name": "body",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 10,
+              "new_lines": ""
+            },
+            {
               "key": "field_003452c91097f",
-              "label": "نص: [يُضاف النص القانوني المعتمد قبل الن…",
+              "label": "ملاحظة مؤقتة (تظهر فقط إذا كان نص القسم فارغًا)",
               "name": "label",
               "type": "text",
               "instructions": "",
@@ -262,5 +280,5 @@
   "active": true,
   "description": "حقول قالب الشروط والأحكام — مولدة من SEO House - Terms.dc.html. الأقسام بترتيب التصميم؛ يمكن إخفاء أي قسم.",
   "show_in_rest": 0,
-  "modified": 1790000000
+  "modified": 1790500000
 }
