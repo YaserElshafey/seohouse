@@ -1,0 +1,8 @@
+PASS  booking: validation message without data  — اكتب اسمك.
+PASS  booking: submitted, step 2 shown
+PASS  contact: validation message without data  — أدخل الاسم واسم الشركة للمتابعة.
+PASS  contact: submitted, confirmation shown  — السوق: السعودية · الخدمة: تصميم وتطوير موقع
+PASS  honeypot: request rejected  — 422 spam
+PASS  no JavaScript errors
+
+6/6 passed (stamp musicjy4)
