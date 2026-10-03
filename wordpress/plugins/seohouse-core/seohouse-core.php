@@ -40,6 +40,7 @@ require SH_CORE_DIR . 'inc/media.php';
 require SH_CORE_DIR . 'inc/settings-tools.php';
 require SH_CORE_DIR . 'inc/importer/class-importer.php';
 require SH_CORE_DIR . 'inc/importer/admin.php';
+require SH_CORE_DIR . 'inc/importer/legal.php';
 
 if ( defined( 'WP_CLI' ) && WP_CLI ) {
 	require SH_CORE_DIR . 'inc/importer/cli.php';

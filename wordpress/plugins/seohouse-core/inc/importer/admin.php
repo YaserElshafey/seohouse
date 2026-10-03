@@ -365,6 +365,10 @@ function sh_import_admin_page(): void {
 	echo '<div id="sh-check-out"></div>';
 	echo '<p id="sh-links"' . ( $last ? '' : ' hidden' ) . '><a class="button" href="' . esc_url( home_url( '/' ) ) . '" target="_blank">' . esc_html__( 'عرض الموقع', 'seohouse-core' ) . '</a> <a class="button" href="' . esc_url( admin_url( 'edit.php?post_type=page' ) ) . '">' . esc_html__( 'الصفحات', 'seohouse-core' ) . '</a> <a class="button" href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '">' . esc_html__( 'القوائم', 'seohouse-core' ) . '</a> <a class="button" href="' . esc_url( admin_url( 'admin.php?page=seohouse-settings' ) ) . '">' . esc_html__( 'إعدادات سيو هاوس', 'seohouse-core' ) . '</a></p>';
 
+	if ( $last ) {
+		sh_legal_box();
+	}
+
 	echo '<hr><details><summary style="cursor:pointer">' . esc_html__( 'خيارات متقدمة: رفع حزمة محتوى أحدث (اختياري)', 'seohouse-core' ) . '</summary>';
 	echo '<p>' . esc_html( sprintf( __( 'لا تحتاج إليها عادة: الحزمة مضمّنة في SEO House Core. تُستخدم فقط إذا سُلّمت حزمة أحدث. حد الرفع في هذا الخادم: %s.', 'seohouse-core' ), size_format( sh_setup_upload_limit() ) ) ) . '</p>';
 	echo '<form method="post" enctype="multipart/form-data">';
