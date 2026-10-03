@@ -101,6 +101,19 @@ class SH_Field_Rows extends acf_field {
 		return $ids;
 	}
 
+	/**
+	 * Read the stored list of row IDs before replacing or deleting it.
+	 * acf_get_metadata_by_field() is absent from some supported ACF PRO releases;
+	 * acf_get_metadata() is available in those releases and uses the field's
+	 * already-resolved name (including its group prefix, when nested).
+	 */
+	private function stored_row_ids( $post_id, array $field ): array {
+		$value = function_exists( 'acf_get_metadata_by_field' )
+			? acf_get_metadata_by_field( $post_id, $field )
+			: acf_get_metadata( $post_id, $field['name'] );
+		return $this->record_ids( $value, $post_id, $field );
+	}
+
 	private function create_record( $post_id, array $field, int $order ): int {
 		$id = wp_insert_post(
 			array(
@@ -177,7 +190,7 @@ class SH_Field_Rows extends acf_field {
 		$owner    = self::owner_key( $post_id );
 		// only records owned by this post may be reused or deleted (a copied page may still point
 		// at the original's records: those are left untouched and replaced by its own)
-		$existing = array_values( array_filter( $this->record_ids( acf_get_metadata_by_field( $post_id, $field ), $post_id, $field ), static fn( $id ) => get_post_meta( $id, '_sh_owner', true ) === $owner ) );
+		$existing = array_values( array_filter( $this->stored_row_ids( $post_id, $field ), static fn( $id ) => get_post_meta( $id, '_sh_owner', true ) === $owner ) );
 		$rows     = is_array( $value ) ? $value : array();
 		unset( $rows[ self::token( $field ) ] );
 		$rows  = array_values( array_filter( $rows, 'is_array' ) );
@@ -234,7 +247,7 @@ class SH_Field_Rows extends acf_field {
 	}
 
 	public function delete_value( $post_id, $key, $field ) {
-		foreach ( $this->record_ids( acf_get_metadata_by_field( $post_id, $field ), $post_id, $field ) as $id ) {
+		foreach ( $this->stored_row_ids( $post_id, $field ) as $id ) {
 			if ( get_post_meta( $id, '_sh_owner', true ) === self::owner_key( $post_id ) ) {
 				self::delete_record( $id );
 			}

@@ -31,6 +31,11 @@ for junk in ('build-log.txt',):
         os.remove(p)
 
 # 1. ASCII-only asset names (references rewritten in the bundled copy only)
+# Names already used by installed sites: media is keyed by its pack path (asset:<path>), so these
+# must stay as Core 2.2.5 shipped them or a re-import would add a second copy of the image.
+FIXED = {
+    'ChatGPT-Image-3-يونيو-2026--05_07_09-م-800x450.webp': 'chatgpt-image-2026-06-03-800x450.webp',
+}
 renames = {}
 assets = os.path.join(dst_pack, 'assets')
 for d, _, files in os.walk(assets):
@@ -39,7 +44,7 @@ for d, _, files in os.walk(assets):
             continue
         base, ext = os.path.splitext(f)
         ascii_base = re.sub(r'-{2,}', '-', re.sub(r'[^A-Za-z0-9._-]+', '-', base)).strip('-')
-        new = f"{ascii_base}-{hashlib.sha1(f.encode()).hexdigest()[:8]}{ext}"
+        new = FIXED.get(f) or f"{ascii_base}-{hashlib.sha1(f.encode()).hexdigest()[:8]}{ext}"
         os.rename(os.path.join(d, f), os.path.join(d, new))
         rel_old = os.path.relpath(os.path.join(d, f), assets).replace(os.sep, '/')
         renames[rel_old] = os.path.relpath(os.path.join(d, new), assets).replace(os.sep, '/')

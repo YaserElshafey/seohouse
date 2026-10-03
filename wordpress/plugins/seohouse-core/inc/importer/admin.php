@@ -124,7 +124,10 @@ add_action(
 	'wp_ajax_sh_setup_preview',
 	static function () {
 		sh_setup_ajax_guard();
-		$imp = new SH_Importer( SH_Importer::default_dir(), array( 'dry_run' => true ) );
+		$imp = new SH_Importer( SH_Importer::default_dir(), array(
+			'dry_run' => true,
+			'adopt_existing_pages' => ! empty( $_POST['adopt_existing_pages'] ), // phpcs:ignore WordPress.Security.NonceVerification.Missing -- AJAX guard verifies the nonce.
+		) );
 		$ok  = $imp->run();
 		wp_send_json_success( array( 'ok' => $ok, 'counts' => $imp->counts, 'log' => sh_setup_log( $imp ) ) );
 	}
@@ -143,7 +146,9 @@ add_action(
 	'wp_ajax_sh_setup_step',
 	static function () {
 		sh_setup_ajax_guard();
-		$imp   = new SH_Importer( SH_Importer::default_dir() );
+		$imp   = new SH_Importer( SH_Importer::default_dir(), array(
+			'adopt_existing_pages' => ! empty( $_POST['adopt_existing_pages'] ), // phpcs:ignore WordPress.Security.NonceVerification.Missing -- AJAX guard verifies the nonce.
+		) );
 		$steps = $imp->plan();
 		$i     = isset( $_POST['step'] ) ? absint( $_POST['step'] ) : 0;
 		if ( ! isset( $steps[ $i ] ) ) {
@@ -152,9 +157,35 @@ add_action(
 		if ( get_transient( 'sh_setup_lock' ) ) {
 			wp_send_json_error( array( 'message' => __( 'التهيئة تعمل في نافذة أخرى. انتظر حتى تنتهي.', 'seohouse-core' ) ) );
 		}
-		set_transient( 'sh_setup_lock', 1, 120 );
+		$token = wp_generate_uuid4();
+		set_transient( 'sh_setup_lock', $token, 120 );
+		// An uncaught PHP error must not leave the next attempt reporting that a
+		// second window is still running. Keep the token check so this request
+		// cannot clear a newer request's lock.
+		register_shutdown_function(
+			static function () use ( $token, $i, $steps ) {
+				$error = error_get_last();
+				if ( $error && in_array( $error['type'], array( E_ERROR, E_PARSE, E_CORE_ERROR, E_COMPILE_ERROR, E_USER_ERROR ), true ) ) {
+					update_option(
+						'sh_setup_last_fatal',
+						array(
+							'time'    => time(),
+							'step'    => $steps[ $i ]['label'],
+							'message' => $error['message'],
+							'file'    => $error['file'],
+							'line'    => $error['line'],
+						),
+						false
+					);
+				}
+				if ( get_transient( 'sh_setup_lock' ) === $token ) {
+					delete_transient( 'sh_setup_lock' );
+				}
+			}
+		);
 		$ok = $imp->run_step( $steps[ $i ] );
 		delete_transient( 'sh_setup_lock' );
+		delete_option( 'sh_setup_last_fatal' );
 		wp_send_json_success( array( 'ok' => $ok, 'counts' => $imp->counts, 'log' => sh_setup_log( $imp ) ) );
 	}
 );
@@ -191,10 +222,16 @@ function sh_setup_checks(): array {
 	$pages  = (int) ( new WP_Query( array( 'post_type' => 'page', 'post_status' => 'publish', 'posts_per_page' => 1, 'fields' => 'ids', 'meta_key' => SH_Importer::META_KEY, 'meta_compare' => 'EXISTS' ) ) )->found_posts; // phpcs:ignore WordPress.DB.SlowDBQuery
 	$out[]  = array( $pages >= 30, 'صفحات التصميم المنشورة', (string) $pages );
 	$bad    = 0;
+	$bad_samples = array();
 	foreach ( $imp->verify() as $r ) {
 		$bad += (int) $r[2];
+		foreach ( array_keys( $r[3] ) as $path ) {
+			if ( count( $bad_samples ) < 8 ) {
+				$bad_samples[] = $r[0] . ': ' . $path;
+			}
+		}
 	}
-	$out[]  = array( 0 === $bad, 'مطابقة نصوص وصور وروابط الأقسام مع التصميم', $bad ? $bad . ' اختلافًا (قد تكون تعديلاتك)' : 'مطابقة' );
+	$out[]  = array( 0 === $bad, 'مطابقة نصوص وصور وروابط الأقسام مع التصميم', $bad ? $bad . ' اختلافًا؛ أمثلة: ' . implode( '، ', $bad_samples ) : 'مطابقة' );
 	$locs   = get_nav_menu_locations();
 	foreach ( array( 'primary' => 'القائمة الرئيسية', 'footer' => 'قائمة الفوتر', 'legal' => 'روابط أسفل الفوتر' ) as $loc => $label ) {
 		$n     = ! empty( $locs[ $loc ] ) ? count( (array) wp_get_nav_menu_items( $locs[ $loc ] ) ) : 0;
@@ -248,7 +285,15 @@ function sh_import_admin_page(): void {
 		return;
 	}
 	$status = SH_Importer::pack_status( $dir );
-	if ( ! $manifest || $status['missing'] ) {
+	$last_fatal = get_option( 'sh_setup_last_fatal' );
+	if ( is_array( $last_fatal ) && ! empty( $last_fatal['time'] ) ) {
+		echo '<div class="notice notice-error"><p><strong>' . esc_html__( 'آخر خطأ أثناء التهيئة', 'seohouse-core' ) . ':</strong> ' . esc_html( $last_fatal['step'] ?? '' ) . '</p><p dir="ltr">' . esc_html( ( $last_fatal['message'] ?? '' ) . ' — ' . ( $last_fatal['file'] ?? '' ) . ':' . ( $last_fatal['line'] ?? '' ) ) . '</p></div>';
+	}
+	$current_field = get_option( 'sh_setup_current_field' );
+	if ( is_array( $current_field ) && ! empty( $current_field['time'] ) ) {
+		echo '<div class="notice notice-warning"><p><strong>' . esc_html__( 'آخر قسم حاولت التهيئة كتابته', 'seohouse-core' ) . ':</strong> <code>' . esc_html( ( $current_field['page'] ?? '' ) . ' / ' . ( $current_field['field'] ?? '' ) ) . '</code></p></div>';
+	}
+	if ( ! $manifest || ! $status['listed'] || $status['missing'] ) {
 		$uploaded = SH_Importer::uploaded_dir();
 		echo '<div class="notice notice-error"><p><strong>' . esc_html( $manifest ? __( 'حزمة المحتوى المضمّنة ناقصة؛ لم تُنسخ كل ملفاتها أثناء تثبيت الإضافة.', 'seohouse-core' ) : __( 'لم يُعثر على حزمة المحتوى داخل SEO House Core.', 'seohouse-core' ) ) . '</strong></p>';
 		echo '<p>' . esc_html__( 'الحل: ارفع seohouse-core.zip مرة أخرى من «الإضافات ← أضف جديد ← رفع إضافة» واختر «استبدال الحالي بالمرفوع». إن تكررت الرسالة أرسل الجدول التالي.', 'seohouse-core' ) . '</p></div>';
@@ -273,6 +318,9 @@ function sh_import_admin_page(): void {
 	}
 
 	echo '<p style="font-size:14px;max-width:60em">' . esc_html__( 'تنشئ التهيئة كل صفحات التصميم وأقسامها، وفريق العمل، ودراسات الحالة، والمقالات، والصور، والقوائم، وإعدادات سيو هاوس، وتضبط الصفحة الرئيسية والروابط الدائمة. لا تحتاج إلى تعبئة أي حقل يدويًا.', 'seohouse-core' ) . '</p>';
+	if ( SH_Importer::is_new_staging_site() ) {
+		echo '<p style="max-width:60em;padding:12px;background:#fff;border-right:4px solid #2271b1"><label><input type="checkbox" id="sh-adopt-pages" value="1"> <strong>' . esc_html__( 'اعتمد الصفحات الموجودة على نفس الروابط داخل /new/ واملأها بمحتوى التصميم الجديد', 'seohouse-core' ) . '</strong></label><br><small>' . esc_html__( 'تُبقي التهيئة رقم الصفحة ورابطها، وتحفظ نصوصها السابقة في نسخة داخلية مرة واحدة. هذا الخيار لا يعمل على الموقع الرئيسي، ولا يغيّر الصفحات التي سبق تحريرها بعد استيرادها.', 'seohouse-core' ) . '</small></p>';
+	}
 	echo '<table class="widefat" style="max-width:60em"><tbody>';
 	echo '<tr><th style="width:14em">' . esc_html__( 'حزمة المحتوى', 'seohouse-core' ) . '</th><td>' . esc_html( ( $manifest['version'] ?? '' ) . ' — ' . ( $bundled ? __( 'مضمّنة في SEO House Core', 'seohouse-core' ) : __( 'مرفوعة', 'seohouse-core' ) ) ) . ' <code dir="ltr">' . esc_html( $manifest['designFingerprint'] ?? '' ) . '</code><br><small dir="ltr">' . esc_html( $dir ) . ' — ' . (int) $status['files'] . ' ' . esc_html__( 'ملفًا', 'seohouse-core' ) . ( $status['listed'] ? ' / ' . (int) $status['listed'] . ' ' . esc_html__( 'متوقعة، سليمة', 'seohouse-core' ) : '' ) . '</small></td></tr>';
 	echo '<tr><th>' . esc_html__( 'الحالة', 'seohouse-core' ) . '</th><td>' . ( $last ? esc_html( sprintf( __( 'هُيّئ في %1$s (حزمة %2$s)', 'seohouse-core' ), wp_date( 'Y-m-d H:i', $last['time'] ), $last['version'] ?? '' ) ) : '<strong>' . esc_html__( 'لم يُهيّأ بعد', 'seohouse-core' ) . '</strong>' ) . '</td></tr>';
@@ -309,8 +357,9 @@ function sh_import_admin_page(): void {
 <script>
 (function () {
 	var C = <?php echo wp_json_encode( $cfg ); ?>;
-	var L = { created: 'أُنشئ', updated: 'حُدّث', protected: 'محمي (عُدّل من لوحة التحكم)', failed: 'فشل', info: 'معلومة' };
+	var L = { created: 'أُنشئ', updated: 'حُدّث', protected: 'محمي (صفحة سابقة أو تعديل)', failed: 'فشل', info: 'معلومة' };
 	function $(id) { return document.getElementById(id); }
+	function adoptOption() { return $('sh-adopt-pages') && $('sh-adopt-pages').checked ? '1' : '0'; }
 	function post(action, data) {
 		var fd = new FormData(); fd.append('action', action); fd.append('nonce', C.nonce);
 		for (var k in (data || {})) fd.append(k, data[k]);
@@ -333,7 +382,7 @@ function sh_import_admin_page(): void {
 
 	$('sh-preview').addEventListener('click', function () {
 		busy(true); $('sh-preview-out').innerHTML = '<p>جارٍ المعاينة…</p>';
-		post('sh_setup_preview').then(function (d) {
+		post('sh_setup_preview', { adopt_existing_pages: adoptOption() }).then(function (d) {
 			$('sh-preview-out').innerHTML = '<div class="notice notice-info inline"><p><strong>تشغيل تجريبي — لم يُكتب شيء.</strong></p>' + counts(d.counts) + '</div>' + table(d.log);
 		}).catch(function (e) { $('sh-preview-out').innerHTML = '<div class="notice notice-error inline"><p>' + esc(e.message) + '</p></div>'; }).finally(function () { busy(false); });
 	});
@@ -361,6 +410,7 @@ function sh_import_admin_page(): void {
 	function run() {
 		busy(true); $('sh-progress').hidden = false; $('sh-run-out').innerHTML = ''; $('sh-bar').style.width = '2%';
 		var total = { created: 0, updated: 0, skipped: 0, protected: 0, failed: 0 }, log = [];
+		var adopt = adoptOption();
 		post('sh_setup_plan').then(function (d) {
 			var steps = d.steps, i = 0;
 			function next() {
@@ -370,8 +420,9 @@ function sh_import_admin_page(): void {
 					return check();
 				}
 				$('sh-step').textContent = 'المرحلة ' + (i + 1) + ' من ' + steps.length + ': ' + steps[i].label;
-				return post('sh_setup_step', { step: i }).then(function (r) {
+				return post('sh_setup_step', { step: i, adopt_existing_pages: adopt }).then(function (r) {
 					total = sum(total, r.counts); log = log.concat(r.log.filter(function (l) { return !(l[0] === 'info' && l[1] === 'source' && log.length); }));
+					if (!r.ok) throw new Error('لم تكتمل هذه المرحلة. راجع السجل؛ أُنشئ: ' + total.created + '، حُدّث: ' + total.updated + '، محمي: ' + total.protected + '، فشل: ' + total.failed);
 					i++; $('sh-bar').style.width = Math.round(i / steps.length * 100) + '%';
 					return next();
 				});
@@ -382,7 +433,8 @@ function sh_import_admin_page(): void {
 		}).finally(function () { busy(false); });
 	}
 	$('sh-run').addEventListener('click', function () {
-		if (!window.confirm('بدء تهيئة الموقع بمحتوى التصميم المعتمد؟ لن يُكتب فوق أي تعديل أجريته من لوحة التحكم.')) return;
+		var message = adoptOption() === '1' ? 'اعتماد الصفحات الموجودة في /new/ بمحتوى التصميم الجديد مع إبقاء روابطها؟' : 'بدء تهيئة الموقع بمحتوى التصميم المعتمد؟ لن يُكتب فوق أي تعديل أجريته من لوحة التحكم.';
+		if (!window.confirm(message)) return;
 		run();
 	});
 })();

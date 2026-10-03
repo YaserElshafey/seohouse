@@ -18,8 +18,11 @@ function sh_core_acf_ready(): bool {
  *
  * @return array<int,array>
  */
-function sh_core_sections( int $post_id ): array {
+function sh_core_sections( int $post_id, bool $refresh = false ): array {
 	static $cache = array();
+	if ( $refresh ) {
+		unset( $cache[ $post_id ] );
+	}
 	if ( isset( $cache[ $post_id ] ) ) {
 		return $cache[ $post_id ];
 	}

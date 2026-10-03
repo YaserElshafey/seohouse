@@ -33,6 +33,8 @@ class SH_Importer {
 	private $update;
 	/** @var bool */
 	private $force;
+	/** @var bool Explicitly adopt pages already occupying design URLs on the /new/ staging site. */
+	private $adopt_existing_pages;
 
 	/** @var array<string,int> route path => post ID */
 	private $routes = array();
@@ -54,6 +56,12 @@ class SH_Importer {
 		$this->only   = array_filter( (array) ( $opts['only'] ?? array() ) );
 		$this->update = array_filter( (array) ( $opts['update'] ?? array() ) );
 		$this->force  = ! empty( $opts['force'] );
+		$this->adopt_existing_pages = ! empty( $opts['adopt_existing_pages'] ) && self::is_new_staging_site();
+	}
+
+	/** Keep the adoption workflow confined to the staging install, never the live root site. */
+	public static function is_new_staging_site(): bool {
+		return '/new/' === trailingslashit( (string) wp_parse_url( home_url( '/' ), PHP_URL_PATH ) );
 	}
 
 	/**
@@ -186,8 +194,10 @@ class SH_Importer {
 		}
 		$steps[] = array( 'records', 'label' => 'إنشاء الصفحات والسجلات' );
 		$pages   = $this->load_pages( (array) $this->json( 'manifest.json' ) );
-		for ( $i = 0; $i < count( $pages ); $i += 6 ) {
-			$steps[] = array( 'pages', $i, 6, 'label' => sprintf( 'محتوى الصفحات %d–%d من %d', $i + 1, min( $i + 6, count( $pages ) ), count( $pages ) ) );
+		// ACF row sections can create many records. One page per request keeps each
+		// AJAX request within the limits of typical shared-hosting PHP workers.
+		for ( $i = 0; $i < count( $pages ); ++$i ) {
+			$steps[] = array( 'pages', $i, 1, 'label' => sprintf( 'محتوى الصفحة %d من %d: %s', $i + 1, count( $pages ), $pages[ $i ]['title'] ) );
 		}
 		$steps[] = array( 'records-fill', 'label' => 'الفريق ودراسات الحالة والمقالات' );
 		$steps[] = array( 'finish', 'label' => 'القوائم والإعدادات والقراءة' );
@@ -363,6 +373,35 @@ class SH_Importer {
 
 	/** Phase 3: menus, settings, reading; marks the import as done. */
 	private function phase_finish( array $manifest ): void {
+		$missing_pages = array();
+		if ( $this->want( 'pages' ) ) {
+			foreach ( $this->load_pages( $manifest ) as $page ) {
+				$id = (int) ( $this->keys[ 'page:' . $page['key'] ] ?? 0 );
+				if ( ! $id || ! get_post_status( $id ) ) {
+					$missing_pages[] = $page['route'];
+				}
+			}
+		}
+		if ( $missing_pages ) {
+			$this->note( 'failed', 'pages', count( $missing_pages ) . ' صفحة موجودة على مسارات التصميم ولم تُعتمد. لم تكتمل التهيئة: ' . implode( '، ', array_slice( $missing_pages, 0, 5 ) ) );
+			return;
+		}
+		if ( $this->want( 'pages' ) && ! $this->dry ) {
+			$bad = 0;
+			$samples = array();
+			foreach ( $this->verify() as $check ) {
+				$bad += (int) $check[2];
+				foreach ( array_keys( $check[3] ) as $path ) {
+					if ( count( $samples ) < 8 ) {
+						$samples[] = $check[0] . ': ' . $path;
+					}
+				}
+			}
+			if ( $bad ) {
+				$this->note( 'failed', 'pages', $bad . ' اختلافًا بين أقسام الصفحات وحزمة التصميم. أمثلة: ' . implode( '، ', $samples ) );
+				return;
+			}
+		}
 		if ( $this->want( 'menus' ) ) {
 			$this->step_menus();
 		}
@@ -618,11 +657,54 @@ class SH_Importer {
 				return;
 			}
 			if ( $existing ) {
+				if ( $this->adopt_existing_pages ) {
+					$this->adopt_page( $existing, $key, $args, $seed );
+					return;
+				}
 				$this->note( 'protected', $key, 'يوجد محتوى على المسار ' . $route . ' لم تنشئه الأداة؛ لم يُستبدل. اربطه يدويًا أو احذفه ثم أعد التشغيل.' );
 				return;
 			}
 		}
 		$this->ensure_post( 'page', $key, $args );
+	}
+
+	/** Keep the existing post ID and URL, retaining a one-time copy of its previous content. */
+	private function adopt_page( WP_Post $existing, string $key, array $args, array $seed ): void {
+		if ( $this->dry ) {
+			$this->keys[ $key ] = (int) $existing->ID;
+			$this->note( 'updated', $key, 'سيُعتمد محتوى الصفحة الموجودة على ' . $seed['route'] . ' (تشغيل تجريبي)' );
+			return;
+		}
+		if ( ! metadata_exists( 'post', $existing->ID, '_sh_pre_adoption' ) ) {
+			update_post_meta( $existing->ID, '_sh_pre_adoption', array(
+				'post_title' => $existing->post_title,
+				'post_content' => $existing->post_content,
+				'post_excerpt' => $existing->post_excerpt,
+				'post_status' => $existing->post_status,
+				'import_hash' => get_post_meta( $existing->ID, self::META_HASH, true ),
+				'page_template' => get_post_meta( $existing->ID, '_wp_page_template', true ),
+			) );
+		}
+		$result = wp_update_post( array(
+			'ID' => $existing->ID,
+			'post_title' => $args['post_title'],
+			'post_name' => $args['post_name'],
+			'post_status' => $args['post_status'],
+			'post_parent' => $args['post_parent'],
+			'post_content' => '',
+			'post_excerpt' => '',
+		), true );
+		if ( is_wp_error( $result ) ) {
+			$this->note( 'failed', $key, $result->get_error_message() );
+			return;
+		}
+		update_post_meta( $existing->ID, '_wp_page_template', $args['page_template'] ?? 'default' );
+		update_post_meta( $existing->ID, self::META_KEY, $key );
+		// A page with the right URL but no source key has never been filled by
+		// this importer. A stale hash must not suppress its first field write.
+		delete_post_meta( $existing->ID, self::META_HASH );
+		$this->keys[ $key ] = (int) $existing->ID;
+		$this->note( 'updated', $key, 'اعتُمدت الصفحة الموجودة على ' . $seed['route'] . ' مع الاحتفاظ برابطها ونسخة من محتواها السابق' );
 	}
 
 	/** @var array<string,string> */
@@ -747,12 +829,18 @@ class SH_Importer {
 	 *
 	 * @return string 'write' | 'skip' | 'protected'
 	 */
-	private function write_mode( int $id, string $group, string $key, array $names ): string {
+	private function write_mode( int $id, string $group, string $key, array $names, bool $retry_incomplete = false ): string {
 		$stored = get_post_meta( $id, self::META_HASH, true );
 		if ( ! $stored ) {
 			return 'write'; // first fill
 		}
 		if ( ! $this->wants_update( $group, $key ) ) {
+			// An earlier run may have saved a hash for a partially filled page.
+			// Retry mismatched sections only if their current state is still the
+			// importer's state. An editor change remains protected.
+			if ( 'pages' === $group && $retry_incomplete && $stored === $this->state_hash( $id, $names ) ) {
+				return 'write';
+			}
 			return 'skip';
 		}
 		if ( $this->force || $stored === $this->state_hash( $id, $names ) ) {
@@ -766,14 +854,14 @@ class SH_Importer {
 	 *
 	 * @param array<string,mixed> $fields name => value (field keys resolved by ACF from the post's groups)
 	 */
-	private function write_fields( int $id, string $group, string $key, array $fields, array $keys_by_name = array() ): void {
+	private function write_fields( int $id, string $group, string $key, array $fields, array $keys_by_name = array(), bool $retry_incomplete = false ): void {
 		if ( $id <= 0 ) {
 			if ( $this->dry ) {
 				$this->note( 'info', $key, 'حقول: ' . count( $fields ) . ' (تجريبي)' );
 			}
 			return;
 		}
-		$mode = $this->write_mode( $id, $group, $key, array_keys( $fields ) );
+		$mode = $this->write_mode( $id, $group, $key, array_keys( $fields ), $retry_incomplete );
 		if ( 'skip' === $mode ) {
 			return;
 		}
@@ -789,10 +877,18 @@ class SH_Importer {
 		$before = (string) get_post_meta( $id, self::META_HASH, true );
 		$first  = '' === $before;
 		foreach ( $resolved as $name => $value ) {
+			if ( 'pages' === $group ) {
+				// Survives a worker timeout, so the setup screen can identify the
+				// exact section that was being written when an AJAX request died.
+				update_option( 'sh_setup_current_field', array( 'time' => time(), 'page' => $key, 'field' => $name ), false );
+			}
 			update_field( $keys_by_name[ $name ] ?? $this->field_key( $name ), $value, $id );
 		}
 		$after = $this->state_hash( $id, array_keys( $fields ) );
 		update_post_meta( $id, self::META_HASH, $after );
+		if ( 'pages' === $group ) {
+			delete_option( 'sh_setup_current_field' );
+		}
 		if ( function_exists( 'sh_search_index' ) ) {
 			sh_search_index( $id );
 		}
@@ -847,7 +943,24 @@ class SH_Importer {
 			$extra = (array) $this->json( 'data/extra.json' );
 		}
 		$fields = array_merge( $fields, (array) ( $extra[ $key ] ?? array() ) );
-		$this->write_fields( $id, 'pages', $key, $fields, $keys );
+		$this->write_fields( $id, 'pages', $key, $fields, $keys, $this->page_sections_mismatch( $seed, $id ) );
+	}
+
+	/** Compare the current section fields with the imported design before deciding on a safe retry. */
+	private function page_sections_mismatch( array $seed, int $id ): bool {
+		if ( 'page' !== $seed['kind'] || $id <= 0 ) {
+			return false;
+		}
+		$want = array();
+		$have = array();
+		$this->flatten( $this->expected( $seed['sections'] ), '', $want );
+		$this->flatten( sh_core_sections( $id ), '', $have );
+		foreach ( $want as $path => $value ) {
+			if ( (string) ( $have[ $path ] ?? null ) !== (string) $value ) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/** A page may carry a different label when it appears as a parent (from the children's breadcrumbs). */
@@ -1079,10 +1192,14 @@ class SH_Importer {
 		$out      = array();
 		foreach ( $this->load_pages( $manifest ) as $seed ) {
 			$id = $this->keys[ 'page:' . $seed['key'] ] ?? 0;
-			if ( ! $id || 'page' !== $seed['kind'] ) {
+			if ( 'page' !== $seed['kind'] ) {
 				continue;
 			}
-			$stored = sh_core_sections( (int) $id );
+			if ( ! $id ) {
+				$out[] = array( $seed['key'], 0, 1, array( '_page' => array( $seed['route'], 'الصفحة غير مرتبطة بحزمة التصميم' ) ) );
+				continue;
+			}
+			$stored = sh_core_sections( (int) $id, true );
 			$want   = array();
 			$have   = array();
 			$this->flatten( $this->expected( $seed['sections'] ), '', $want );
