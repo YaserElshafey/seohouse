@@ -1,0 +1,51 @@
+Independent check (not using the plugin): <title>/meta description on seohouse.agency (read 3 Oct 2026) vs local /new/ (installed from the 2.5.0 zips) after the transfer
+MATCH / | robots here: noindex, nofollow
+MATCH /about/ | robots here: noindex, nofollow
+MATCH /blog/ | robots here: noindex, nofollow
+MATCH /blog/category/off-page-seo/ | robots here: noindex, nofollow
+MATCH /blog/category/technical-seo/ | robots here: noindex, nofollow
+MATCH /blog/fix-404-not-found/ | robots here: noindex, nofollow
+MATCH /blog/how-to-build-backlinks-correctly/ | robots here: noindex, nofollow
+MATCH /blog/why-is-my-website-not-showing-in-search-engines/ | robots here: noindex, nofollow
+MATCH /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/ | robots here: noindex, nofollow
+MATCH /contact/ | robots here: noindex, nofollow
+DIFF  /pricing/ | title ok | desc live «» / here «نعمل داخل نطاق 1,500 إلى 7,000 ريال، ويتحدد السعر النهائي بحسب حالة ال»
+NOT PUBLISHED HERE /privacy-policy/ 404
+MATCH /results/ | robots here: noindex, nofollow
+MATCH /results/تستتست/ | robots here: noindex, nofollow
+MATCH /results/قطاع-التجارة-الإلكترونية/ | robots here: noindex, nofollow
+MATCH /results/قطاع-الصحة-والطب/ | robots here: noindex, nofollow
+MATCH /sectors/ | robots here: noindex, nofollow
+MATCH /sectors/ecommerce/ | robots here: noindex, nofollow
+MATCH /sectors/education/ | robots here: noindex, nofollow
+MATCH /sectors/food/ | robots here: noindex, nofollow
+MATCH /sectors/health/ | robots here: noindex, nofollow
+MATCH /sectors/legal/ | robots here: noindex, nofollow
+MATCH /sectors/real-estate/ | robots here: noindex, nofollow
+MATCH /sectors/tech/ | robots here: noindex, nofollow
+MATCH /sectors/tourism/ | robots here: noindex, nofollow
+DIFF  /services/ | title ok | desc live «» / here «منظومة خدمات سيو هاوس: تحسين محركات البحث كتخصص أساسي، إلى جانب تصميم »
+MATCH /services/products/ | robots here: noindex, nofollow
+MATCH /services/seo/ | robots here: noindex, nofollow
+MATCH /services/seo/backlinks/ | robots here: noindex, nofollow
+MATCH /services/seo/consulting/ | robots here: noindex, nofollow
+MATCH /services/seo/content/ | robots here: noindex, nofollow
+DIFF  /services/seo/egypt/ | title ok | desc live «» / here «نساعد الشركات داخل مصر على تحسين ظهور مواقعها في نتائج البحث من خلال ا»
+DIFF  /services/seo/ksa/ | title live «تحسين محركات البحث في السعودية - سيو هاوس» / here «عنوان كتبه المحرر لصفحة السعودية» | desc live «» / here «نساعد الشركات داخل السعودية على تحسين ظهور مواقعها، ومعالجة الجوانب ال»
+DIFF  /services/seo/on-page/ | title ok | desc live «» / here «نربط كل صفحة بنية بحث واضحة، ونضبط العناوين والمحتوى والروابط الداخلية»
+SKIP /services/seo/stores-seo/ live 301
+DIFF  /services/seo/technical/ | title ok | desc live «» / here «نفحص الزحف والفهرسة والسرعة وبنية الموقع والبيانات المنظمة، ونرتب المش»
+DIFF  /services/seo/uae/ | title ok | desc live «» / here «نساعد الشركات داخل الإمارات على تحسين ظهور مواقعها في نتائج البحث من خ»
+MATCH /services/stores/ | robots here: noindex, nofollow
+MATCH /services/stores/salla/ | robots here: noindex, nofollow
+MATCH /services/stores/shopify/ | robots here: noindex, nofollow
+MATCH /services/stores/woocommerce/ | robots here: noindex, nofollow
+MATCH /services/stores/zid/ | robots here: noindex, nofollow
+MATCH /services/web-design/ | robots here: noindex, nofollow
+MATCH /services/web-design/custom-dev/ | robots here: noindex, nofollow
+MATCH /services/web-design/react-next/ | robots here: noindex, nofollow
+MATCH /services/web-design/webflow/ | robots here: noindex, nofollow
+MATCH /services/web-design/wordpress/ | robots here: noindex, nofollow
+MATCH /team/ | robots here: noindex, nofollow
+NOT PUBLISHED HERE /terms/ 404
+match 39, differ 7, not compared 3

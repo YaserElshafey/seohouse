@@ -1,18 +1,22 @@
-# SEO House Core — ملف التثبيت
+# SEO House 2.5.0 — ملفات التثبيت
 
-`seohouse-core.zip` — **SEO House Core 2.4.1** كاملة: الكود وحزمة المحتوى في `seohouse-core/content-pack/` (125 ملفًا مع `manifest.json` و`pack-files.json`).
+| الملف | المحتوى | SHA-256 |
+|---|---|---|
+| `seohouse-core.zip` | **SEO House Core 2.5.0** كاملة: الكود وحزمة المحتوى 2.5.0 في `seohouse-core/content-pack/` (125 ملفًا مع `manifest.json` و`pack-files.json`) | في `SHA256SUMS.txt` |
+| `seohouse-theme.zip` | قالب **SEO House 2.5.0** | في `SHA256SUMS.txt` |
 
-- بُني من الالتزام `3f62135` بالأمر `tools/package.sh`، وهو مطابق لمجلد `wordpress/plugins/seohouse-core` بايتًا ببايت.
-- فُحص بالأداة `tools/verify-core-zip.py`.
-- SHA-256 في `SHA256SUMS.txt`.
+- بُنيا من الالتزام `c6f41f3` بالأمر `tools/package.sh`، وكل ملف مطابق لمجلده في المستودع بايتًا ببايت.
+- فُحص ملف الإضافة بالأداة `tools/verify-core-zip.py`.
+- الاختبارات على الملفين نفسيهما في `docs/qa-runs-2.5.0/`.
 
-## التثبيت
+## التحديث من 2.4.x
 
-1. «الإضافات ← أضف جديد ← رفع إضافة».
-2. اختر الملف.
-3. «استبدال الحالي بالمرفوع».
+1. «المظهر ← قوالب ← أضف جديد ← رفع قالب» ← `seohouse-theme.zip` ← «استبدال الحالي بالمرفوع».
+2. «الإضافات ← أضف جديد ← رفع إضافة» ← `seohouse-core.zip` ← «استبدال الحالي بالمرفوع».
+3. «سيو هاوس ← تهيئة الموقع» ← «معاينة التهيئة» ← «إعادة التهيئة».
+4. «سيو هاوس ← نقل عناوين وأوصاف SEO» ← «معاينة» ← «تنفيذ النقل».
 
-بعدها تعرض «سيو هاوس ← تهيئة الموقع»: `125 ملفًا / 125 متوقعة — كاملة وسليمة`.
+## روابط التنزيل المباشر
 
-رابط التنزيل المباشر:
-https://raw.githubusercontent.com/YaserElshafey/seohouse/claude/new-session-9obdta/release/seohouse-core.zip
+- https://raw.githubusercontent.com/YaserElshafey/seohouse/claude/new-session-9obdta/release/seohouse-core.zip
+- https://raw.githubusercontent.com/YaserElshafey/seohouse/claude/new-session-9obdta/release/seohouse-theme.zip
