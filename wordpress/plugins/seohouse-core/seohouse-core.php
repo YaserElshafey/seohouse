@@ -18,8 +18,8 @@ define( 'SH_CORE_VERSION', '2.4.1' );
 define( 'SH_CORE_FILE', __FILE__ );
 define( 'SH_CORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SH_CORE_URL', plugin_dir_url( __FILE__ ) );
-// the complete plugin (code + content pack), published with every release
-define( 'SH_CORE_RELEASE_URL', 'https://github.com/YaserElshafey/seohouse/releases/latest/download/seohouse-core.zip' );
+// the complete plugin (code + content pack): the verified file kept in the repository (release/)
+define( 'SH_CORE_RELEASE_URL', 'https://raw.githubusercontent.com/YaserElshafey/seohouse/claude/new-session-9obdta/release/seohouse-core.zip' );
 
 require SH_CORE_DIR . 'inc/helpers.php';
 require SH_CORE_DIR . 'inc/post-types.php';

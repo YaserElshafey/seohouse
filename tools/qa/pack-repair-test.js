@@ -65,8 +65,8 @@ const flat = s => String(s || '').replace(/\s+/g, ' ').trim();
     try {
       await p.goto(WP + '/wp-admin/admin.php?page=seohouse-content-setup');
       t = flat(await p.textContent('.wrap'));
-      const href = await p.locator('a[href*="releases/latest/download/seohouse-core.zip"]').first().getAttribute('href').catch(() => '');
-      check('2.4.1 without a pack: the screen names the cause and links the complete release file', /لا يحتوي مجلد content-pack/.test(t) && href === 'https://github.com/YaserElshafey/seohouse/releases/latest/download/seohouse-core.zip', href);
+      const href = await p.locator('a[href*="release/seohouse-core.zip"]').first().getAttribute('href').catch(() => '');
+      check('2.4.1 without a pack: the screen names the cause and links the complete release file', /لا يحتوي مجلد content-pack/.test(t) && href === 'https://raw.githubusercontent.com/YaserElshafey/seohouse/claude/new-session-9obdta/release/seohouse-core.zip', href);
       await shot('5-missing-pack-message');
     } finally {
       fs.renameSync(path.join(dir, 'content-pack.off'), path.join(dir, 'content-pack'));
