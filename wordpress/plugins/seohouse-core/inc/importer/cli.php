@@ -266,6 +266,40 @@ class SH_CLI_Command {
 		}
 		WP_CLI::success( sprintf( 'نُقلت %d قيمة (مطابق %d، بقي %d كما هو).', sh_rankmath_apply( $plan ), $c['same'] ?? 0, $c['keep'] ?? 0 ) );
 	}
+
+	/**
+	 * Copies every published article of the main WordPress site to this site (read-only on the
+	 * main site). Matches by slug, backs up replaced drafts, never duplicates.
+	 *
+	 * ## OPTIONS
+	 *
+	 * [--dry-run]
+	 * : List what would happen.
+	 *
+	 * [--source-config=<path>]
+	 * : The main site's wp-config.php (default: the folder above this site).
+	 *
+	 * [--force]
+	 * : Also overwrite articles edited here after an earlier migration.
+	 *
+	 * @subcommand migrate-posts
+	 */
+	public function migrate_posts( $args, $assoc ) {
+		$m = new SH_Post_Migration( array( 'dry_run' => ! empty( $assoc['dry-run'] ), 'force' => ! empty( $assoc['force'] ), 'config' => $assoc['source-config'] ?? '' ) );
+		if ( ! $m->connect() ) {
+			WP_CLI::error( $m->error );
+		}
+		if ( empty( $assoc['dry-run'] ) && '/blog/%postname%/' !== get_option( 'permalink_structure' ) ) {
+			sh_core_apply_permalinks();
+			WP_CLI::log( 'permalinks → /blog/%postname%/' );
+		}
+		$ok = $m->run();
+		foreach ( $m->log as $l ) {
+			WP_CLI::log( sprintf( '%-10s %s — %s', $l[0], $l[1], $l[2] ) );
+		}
+		WP_CLI::log( wp_json_encode( $m->counts ) );
+		$ok ? WP_CLI::success( empty( $assoc['dry-run'] ) ? 'اكتمل النقل.' : 'معاينة فقط.' ) : WP_CLI::error( 'انتهى مع أخطاء.' );
+	}
 }
 
 WP_CLI::add_command( 'seohouse', 'SH_CLI_Command' );

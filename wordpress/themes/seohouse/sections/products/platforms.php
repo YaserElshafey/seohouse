@@ -17,7 +17,7 @@ $f = $args['f'] ?? array();
       </div>
       <div data-pu-plat style="margin-top: 22px; display: grid; gap: 14px;">
         <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" class="hv-ea1db0" style="display: flex; flex-direction: column; gap: 10px; background: rgb(255, 255, 255); border-radius: 16px; padding: 18px; box-shadow: rgba(var(--sh-ink-rgb), 0.45) 0px 14px 34px -26px, rgba(var(--sh-ink-rgb), 0.06) 0px 0px 0px 1px; color: var(--sh-ink); transition: box-shadow 0.2s;">
-          <span style="display: flex; align-items: center; min-height: 30px;"><?= sh_svg_img($f['logo'] ?? '', '', ['style' => 'height: 28px; width: auto; max-width: 120px; display: block;']) ?></span>
+          <span style="display: flex; align-items: center; min-height: 30px;"><?= sh_svg_img($f['logo'] ?? '', '', ['style' => 'height: 28px; width: auto; max-width: 120px; display: block;'], (int) ($f['logo_image'] ?? 0)) ?></span>
           <?php if (!empty($f['heading'])) : ?><span style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: 17px;"><?= esc_html($f['heading'] ?? '') ?></span><?php endif; ?>
           <?php if (!empty($f['label'])) : ?><span style="font-size: 14px; line-height: 1.7; color: var(--sh-ink-soft);"><?= esc_html($f['label'] ?? '') ?></span><?php endif; ?>
           <?php if (!empty($f['eyebrow_2'])) : ?><span style="margin-top: auto; font-size: 14px; font-weight: 600; color: var(--sh-blue);"><?= esc_html($f['eyebrow_2'] ?? '') ?></span><?php endif; ?>
@@ -28,7 +28,7 @@ $f = $args['f'] ?? array();
           <?php if (!empty($f['eyebrow_3'])) : ?><span style="margin-top: auto; font-size: 14px; font-weight: 600; color: var(--sh-blue);"><?= esc_html($f['eyebrow_3'] ?? '') ?></span><?php endif; ?>
         </a><?php endif; ?>
         <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><?php if (!empty(sh_link($r1['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($r1['link'] ?? '')) ?>" class="hv-ea1db0" style="display: flex; flex-direction: column; gap: 10px; background: rgb(255, 255, 255); border-radius: 16px; padding: 18px; box-shadow: rgba(var(--sh-ink-rgb), 0.45) 0px 14px 34px -26px, rgba(var(--sh-ink-rgb), 0.06) 0px 0px 0px 1px; color: var(--sh-ink); transition: box-shadow 0.2s;">
-          <span style="display: flex; align-items: center; min-height: 30px;"><?= sh_svg_img($r1['logo'] ?? '', '', ['style' => 'height: 28px; width: auto; max-width: 120px; display: block;']) ?></span>
+          <span style="display: flex; align-items: center; min-height: 30px;"><?= sh_svg_img($r1['logo'] ?? '', '', ['style' => 'height: 28px; width: auto; max-width: 120px; display: block;'], (int) ($r1['logo_image'] ?? 0)) ?></span>
           <?php if (!empty($r1['heading'])) : ?><span style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: 17px;"><?= esc_html($r1['heading'] ?? '') ?></span><?php endif; ?>
           <?php if (!empty($r1['label'])) : ?><span style="font-size: 14px; line-height: 1.7; color: var(--sh-ink-soft);"><?= esc_html($r1['label'] ?? '') ?></span><?php endif; ?>
           <?php if (!empty($r1['eyebrow'])) : ?><span style="margin-top: auto; font-size: 14px; font-weight: 600; color: var(--sh-blue);"><?= esc_html($r1['eyebrow'] ?? '') ?></span><?php endif; ?>

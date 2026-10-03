@@ -11,7 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 
 function sh_seo_plugin_active(): bool {
-	return class_exists( 'RankMath' ) || defined( 'WPSEO_VERSION' ) || defined( 'SEOPRESS_VERSION' ) || defined( 'AIOSEO_VERSION' );
+	return sh_rankmath_active() || defined( 'WPSEO_VERSION' ) || defined( 'SEOPRESS_VERSION' ) || defined( 'AIOSEO_VERSION' );
 }
 
 /** Post whose SEO fields apply to the current view. */
@@ -217,4 +217,46 @@ add_action(
 		}
 	},
 	1
+);
+
+/*
+ * Review copy in /new/: never indexable, whatever SEO plugin is active (Rank Math ignores the
+ * WordPress «discourage search engines» setting in its meta robots). After the site moves to the
+ * root this no longer applies and the normal per-page robots are used.
+ */
+function sh_seo_is_review_copy(): bool {
+	return class_exists( 'SH_Importer' ) && SH_Importer::is_new_staging_site();
+}
+
+add_filter(
+	'wp_robots',
+	static function ( $robots ) {
+		if ( sh_seo_is_review_copy() ) {
+			unset( $robots['index'], $robots['follow'], $robots['max-image-preview'] );
+			$robots['noindex']  = true;
+			$robots['nofollow'] = true;
+		}
+		return $robots;
+	},
+	99
+);
+add_filter(
+	'rank_math/frontend/robots',
+	static function ( $robots ) {
+		if ( sh_seo_is_review_copy() ) {
+			$robots = array_diff( (array) $robots, array( 'index', 'follow' ) );
+			$robots['index']  = 'noindex';
+			$robots['follow'] = 'nofollow';
+		}
+		return $robots;
+	},
+	99
+);
+add_action(
+	'send_headers',
+	static function () {
+		if ( sh_seo_is_review_copy() && ! is_admin() ) {
+			header( 'X-Robots-Tag: noindex, nofollow', true );
+		}
+	}
 );

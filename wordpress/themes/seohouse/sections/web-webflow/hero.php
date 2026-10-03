@@ -17,7 +17,7 @@ $f = $args['f'] ?? array();
 
     <div data-wf-hero style="position: relative; max-width: 1200px; margin: 0px auto; padding: clamp(22px, 2.6vw, 38px) 20px clamp(36px, 4vw, 56px); display: grid; gap: clamp(24px, 3vw, 44px); align-items: center;">
       <div style="animation: 0.7s ease 0s 1 normal both running fadeUp;">
-        <?= sh_svg_img($f['logo'] ?? '', 'ويب فلو', ['style' => 'height: 22px; width: auto; display: block; opacity: 0.85;']) ?>
+        <?= sh_svg_img($f['logo'] ?? '', 'ويب فلو', ['style' => 'height: 22px; width: auto; display: block; opacity: 0.85;'], (int) ($f['logo_image'] ?? 0)) ?>
         <?php if (!empty($f['title'])) : ?><h1 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(28px, 3.2vw, 44px); line-height: 1.3; margin: 14px 0px 0px; max-width: 19em;"><?= esc_html($f['title'] ?? '') ?></h1><?php endif; ?>
         <?php if (!empty($f['text'])) : ?><p style="font-size: 17px; line-height: 1.85; color: var(--sh-muted); max-width: 36em; margin: 16px 0px 0px; text-wrap: pretty;"><?= esc_html($f['text'] ?? '') ?></p><?php endif; ?>
         <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin-top: 26px;">

@@ -632,6 +632,17 @@
           "return_format": "value"
         },
         {
+          "key": "field_6018484c80498",
+          "label": "أو شعار من مكتبة الوسائط",
+          "name": "logo_image",
+          "type": "image",
+          "instructions": "ارفع شعارًا أو اختره من مكتبة الوسائط. بلا اختيار منصة أعلاه تُضاف منصة جديدة بهذا الشعار إلى «المنصات والأدوات» عند الحفظ؛ ومع اختيار منصة يظهر هذا الشعار في هذه الصفحة فقط.",
+          "required": 0,
+          "return_format": "id",
+          "preview_size": "thumbnail",
+          "library": "all"
+        },
+        {
           "key": "field_98f6b73237b33",
           "label": "عنوان فرعي: سلة",
           "name": "heading",
@@ -737,6 +748,17 @@
               "default_value": "assets/platforms/official/shopify.svg",
               "allow_null": 1,
               "return_format": "value"
+            },
+            {
+              "key": "field_126cef60b40af",
+              "label": "أو شعار من مكتبة الوسائط",
+              "name": "logo_image",
+              "type": "image",
+              "instructions": "ارفع شعارًا أو اختره من مكتبة الوسائط. بلا اختيار منصة أعلاه تُضاف منصة جديدة بهذا الشعار إلى «المنصات والأدوات» عند الحفظ؛ ومع اختيار منصة يظهر هذا الشعار في هذه الصفحة فقط.",
+              "required": 0,
+              "return_format": "id",
+              "preview_size": "thumbnail",
+              "library": "all"
             },
             {
               "key": "field_d02e64acf8761",

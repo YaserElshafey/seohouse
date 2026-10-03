@@ -10,16 +10,13 @@ defined( 'ABSPATH' ) || exit;
 
 /**
  * Reviews shortcode for a page: the page's own override, otherwise the shared one
- * («إعدادات سيو هاوس ← التكاملات»). Only a single registered shortcode is accepted
+ * («سيو هاوس ← تقييمات جوجل»). Only a single registered shortcode is accepted
  * (e.g. [trustindex no-registration=google]); anything else counts as empty.
  */
 function sh_reviews_code( int $post_id = 0 ): string {
 	$post_id = $post_id ? $post_id : (int) get_queried_object_id();
-	foreach ( array( $post_id ? sh_field( 'sh_reviews_shortcode_page', $post_id, '' ) : '', sh_option( 'sh_reviews_shortcode', '' ) ) as $code ) {
-		$code = trim( (string) $code );
-		if ( preg_match( '/^\[([A-Za-z0-9_-]+)(?:\s[^\[\]]*)?\]$/', $code, $m ) && shortcode_exists( $m[1] ) ) {
-			return $code;
-		}
+	if ( function_exists( 'sh_core_reviews_for' ) ) {
+		return sh_core_reviews_for( $post_id )['code']; // «سيو هاوس ← تقييمات جوجل»
 	}
 	return '';
 }

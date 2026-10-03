@@ -48,6 +48,17 @@
           "return_format": "value"
         },
         {
+          "key": "field_b23ad59d41d8f",
+          "label": "أو شعار من مكتبة الوسائط",
+          "name": "logo_image",
+          "type": "image",
+          "instructions": "ارفع شعارًا أو اختره من مكتبة الوسائط. بلا اختيار منصة أعلاه تُضاف منصة جديدة بهذا الشعار إلى «المنصات والأدوات» عند الحفظ؛ ومع اختيار منصة يظهر هذا الشعار في هذه الصفحة فقط.",
+          "required": 0,
+          "return_format": "id",
+          "preview_size": "thumbnail",
+          "library": "all"
+        },
+        {
           "key": "field_e863e70eeb6b9",
           "label": "العنوان: تصميم متاجر ووكومرس",
           "name": "title",

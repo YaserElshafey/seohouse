@@ -1,0 +1,33 @@
+{
+  "key": "group_sh_reviews_settings",
+  "title": "تقييمات جوجل",
+  "fields": [
+    {
+      "key": "field_sh_opt_reviews_shortcode",
+      "label": "شورت كود التقييمات العام",
+      "name": "sh_reviews_shortcode",
+      "type": "text",
+      "instructions": "مثال: [trustindex no-registration=google]. يظهر في مكان قسم التقييمات في كل صفحة فيها هذا القسم، ويمكن تغييره لصفحة بعينها من «التقييمات في هذه الصفحة» في محررها. بلا شورت كود لإضافة مفعّلة لا يظهر قسم التقييمات، ولا تُعرض شهادات تجريبية.",
+      "required": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "sh_screen",
+        "operator": "==",
+        "value": "seohouse-reviews"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

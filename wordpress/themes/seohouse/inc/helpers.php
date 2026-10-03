@@ -85,7 +85,7 @@ function sh_image( $id, array $attrs = array(), string $alt_fallback = '', strin
 }
 
 /** Platform or tool logo: the dashboard library (Core) first, then the design SVG shipped with the theme. */
-function sh_svg_img( $file, string $alt = '', array $attrs = array() ): string {
+function sh_svg_img( $file, string $alt = '', array $attrs = array(), int $image = 0 ): string {
 	$file = ltrim( (string) $file, '/' );
 	$src  = '';
 	$url  = '';
@@ -94,6 +94,16 @@ function sh_svg_img( $file, string $alt = '', array $attrs = array() ): string {
 	if ( $p ) {
 		$src = sh_core_platform_logo_url( $p );
 		$url = (string) $p['url'];
+	}
+	// a logo picked from the media library in the section itself (this page only)
+	if ( $image ) {
+		$own = (string) wp_get_attachment_url( $image );
+		if ( '' !== $own ) {
+			$src = $own;
+			if ( '' === $alt && ! $p ) {
+				$alt = (string) get_post_meta( $image, '_wp_attachment_image_alt', true );
+			}
+		}
 	}
 	// otherwise the design's own file shipped with the theme
 	if ( '' === $src && '' !== $file && preg_match( '#^assets/platforms/[a-z0-9/_-]+\.svg$#i', $file ) && file_exists( SH_THEME_DIR . '/' . $file ) ) {

@@ -21,7 +21,7 @@ $f = $args['f'] ?? array();
       <div data-pf-grid style="margin-top: clamp(22px, 2.6vw, 32px); display: grid; gap: 14px;">
           <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><?php if (!empty(sh_link($r1['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($r1['link'] ?? '')) ?>" data-pf-card class="hv-ea1db0" style="display: flex; flex-direction: column; gap: 12px; background: rgb(255, 255, 255); border-radius: 16px; padding: 20px; box-shadow: rgba(var(--sh-ink-rgb), 0.45) 0px 14px 34px -26px, rgba(var(--sh-ink-rgb), 0.06) 0px 0px 0px 1px; color: var(--sh-ink); transition: box-shadow 0.2s;">
             <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 32px;">
-              <?= sh_svg_img($r1['logo'] ?? '', '', ['style' => 'height: 26px; width: auto; max-width: 110px; display: block;']) ?>
+              <?= sh_svg_img($r1['logo'] ?? '', '', ['style' => 'height: 26px; width: auto; max-width: 110px; display: block;'], (int) ($r1['logo_image'] ?? 0)) ?>
               <?php if (!empty($r1['eyebrow'])) : ?><span style="font-size: 12px; font-weight: 600; color: var(--sh-blue); background: rgba(var(--sh-blue-rgb), 0.08); border-radius: 999px; padding: 5px 10px; white-space: nowrap;"><?= esc_html($r1['eyebrow'] ?? '') ?></span><?php endif; ?>
             </span>
             <?php if (!empty($r1['heading'])) : ?><span style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: 18px;"><?= esc_html($r1['heading'] ?? '') ?></span><?php endif; ?>
@@ -39,7 +39,7 @@ $f = $args['f'] ?? array();
           </a><?php endif; ?>
           <?php if (!empty(sh_link($f['link_2'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link_2'] ?? '')) ?>" data-pf-card class="hv-ea1db0" style="display: flex; flex-direction: column; gap: 12px; background: rgb(255, 255, 255); border-radius: 16px; padding: 20px; box-shadow: rgba(var(--sh-ink-rgb), 0.45) 0px 14px 34px -26px, rgba(var(--sh-ink-rgb), 0.06) 0px 0px 0px 1px; color: var(--sh-ink); transition: box-shadow 0.2s;">
             <span style="display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 32px;">
-              <?= sh_svg_img($f['logo'] ?? '', '', ['style' => 'height: 16px; width: auto; display: block;']) ?>
+              <?= sh_svg_img($f['logo'] ?? '', '', ['style' => 'height: 16px; width: auto; display: block;'], (int) ($f['logo_image'] ?? 0)) ?>
               <?php if (!empty($f['eyebrow_3'])) : ?><span style="font-size: 12px; font-weight: 600; color: var(--sh-blue); background: rgba(var(--sh-blue-rgb), 0.08); border-radius: 999px; padding: 5px 10px; white-space: nowrap;"><?= esc_html($f['eyebrow_3'] ?? '') ?></span><?php endif; ?>
             </span>
             <?php if (!empty($f['heading_3'])) : ?><span style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: 18px;"><?= esc_html($f['heading_3'] ?? '') ?></span><?php endif; ?>

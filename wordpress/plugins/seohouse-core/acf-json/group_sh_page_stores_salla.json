@@ -48,6 +48,17 @@
           "return_format": "value"
         },
         {
+          "key": "field_0f04d7f6e4c65",
+          "label": "أو شعار من مكتبة الوسائط",
+          "name": "logo_image",
+          "type": "image",
+          "instructions": "ارفع شعارًا أو اختره من مكتبة الوسائط. بلا اختيار منصة أعلاه تُضاف منصة جديدة بهذا الشعار إلى «المنصات والأدوات» عند الحفظ؛ ومع اختيار منصة يظهر هذا الشعار في هذه الصفحة فقط.",
+          "required": 0,
+          "return_format": "id",
+          "preview_size": "thumbnail",
+          "library": "all"
+        },
+        {
           "key": "field_386855260b030",
           "label": "العنوان: تصميم متاجر سلة",
           "name": "title",

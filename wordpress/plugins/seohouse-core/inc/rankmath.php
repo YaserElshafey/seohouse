@@ -16,9 +16,94 @@
 
 defined( 'ABSPATH' ) || exit;
 
-function sh_rankmath_active(): bool {
+/** Rank Math is installed and active (it may still be waiting for its registration step). */
+function sh_rankmath_installed(): bool {
 	return class_exists( 'RankMath' );
 }
+
+/**
+ * Rank Math is actually running. While its registration step («Connect» or «Skip») has not been
+ * completed it loads neither its editor box nor its front-end tags, so Core must not hand the
+ * output over to it.
+ */
+function sh_rankmath_active(): bool {
+	if ( ! class_exists( 'RankMath' ) ) {
+		return false;
+	}
+	if ( class_exists( '\RankMath\Helper' ) && method_exists( '\RankMath\Helper', 'is_invalid_registration' ) ) {
+		return ! \RankMath\Helper::is_invalid_registration();
+	}
+	return true;
+}
+
+/** Public post types that get the Rank Math box («SEO Controls»). */
+function sh_rankmath_post_types(): array {
+	return array( 'page', 'post', 'case_study', 'team_member' );
+}
+
+/** Types whose Rank Math box is switched off in Rank Math ← Titles & Meta. */
+function sh_rankmath_controls_off(): array {
+	$titles = get_option( 'rank-math-options-titles', array() );
+	$off    = array();
+	foreach ( sh_rankmath_post_types() as $t ) {
+		if ( post_type_exists( $t ) && 'on' !== ( $titles[ "pt_{$t}_add_meta_box" ] ?? 'on' ) ) {
+			$off[] = $t;
+		}
+	}
+	return $off;
+}
+
+/** Switches the Rank Math box on for the site's public types; returns the types changed. */
+function sh_rankmath_enable_controls(): array {
+	$titles  = get_option( 'rank-math-options-titles', array() );
+	$changed = array();
+	foreach ( sh_rankmath_post_types() as $t ) {
+		if ( post_type_exists( $t ) && 'on' !== ( $titles[ "pt_{$t}_add_meta_box" ] ?? '' ) ) {
+			$titles[ "pt_{$t}_add_meta_box" ] = 'on';
+			$changed[]                         = $t;
+		}
+	}
+	if ( $changed ) {
+		update_option( 'rank-math-options-titles', $titles );
+	}
+	return $changed;
+}
+
+// Once, when Rank Math first runs here: SEO Controls on for pages, articles, case studies and team.
+add_action(
+	'admin_init',
+	static function () {
+		if ( sh_rankmath_active() && ! get_option( 'sh_rankmath_controls_done' ) && current_user_can( 'manage_options' ) ) {
+			sh_rankmath_enable_controls();
+			update_option( 'sh_rankmath_controls_done', time(), false );
+		}
+	}
+);
+
+// Rank Math waiting for its registration step: say so where the editor looks for its box.
+add_action(
+	'admin_notices',
+	static function () {
+		if ( ! current_user_can( 'manage_options' ) || ! sh_rankmath_installed() || sh_rankmath_active() ) {
+			return;
+		}
+		echo '<div class="notice notice-error"><p><strong>' . esc_html__( 'Rank Math مفعّلة لكنها متوقفة: لم تكتمل خطوة الحساب في معالج الإعداد.', 'seohouse-core' ) . '</strong> ' . esc_html__( 'حتى تكتمل لا يظهر صندوق Rank Math في المحرر ولا تُخرج وسوم البحث، ويتولى SEO House Core العنوان والوصف والبيانات المنظمة مؤقتًا.', 'seohouse-core' ) . '</p><p><a class="button button-primary" href="' . esc_url( admin_url( 'admin.php?page=rank-math-registration' ) ) . '">' . esc_html__( 'ربط حساب Rank Math', 'seohouse-core' ) . '</a> ';
+		echo '<a class="button" href="' . esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=sh_rankmath_skip' ), 'sh_rankmath_skip' ) ) . '">' . esc_html__( 'تشغيل Rank Math بدون حساب (مثل «Skip» في المعالج)', 'seohouse-core' ) . '</a></p></div>';
+	}
+);
+
+add_action(
+	'admin_post_sh_rankmath_skip',
+	static function () {
+		check_admin_referer( 'sh_rankmath_skip' );
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( '', 403 );
+		}
+		update_option( 'rank_math_registration_skip', true ); // Rank Math's own "Skip" setting
+		wp_safe_redirect( admin_url( 'admin.php?page=seohouse-rankmath&skipped=1' ) );
+		exit;
+	}
+);
 
 /** Core field name => what it becomes in Rank Math. */
 function sh_rankmath_fields(): array {
@@ -398,6 +483,11 @@ function sh_rankmath_admin_page(): void {
 		check_admin_referer( 'sh_rankmath_apply' );
 		$done = sh_rankmath_apply();
 	}
+	if ( isset( $_POST['sh_rankmath_controls'] ) ) {
+		check_admin_referer( 'sh_rankmath_controls' );
+		$on = sh_rankmath_enable_controls();
+		echo '<div class="notice notice-success"><p>' . esc_html( $on ? 'فُعّل صندوق Rank Math لـ: ' . implode( '، ', $on ) : 'صندوق Rank Math مفعّل لكل الأنواع.' ) . '</p></div>';
+	}
 	$plan   = sh_rankmath_plan();
 	$counts = array_count_values( wp_list_pluck( $plan, 'action' ) );
 	$fmt    = static fn( $v ) => is_array( $v ) ? implode( ', ', $v ) : (string) $v;
@@ -405,6 +495,24 @@ function sh_rankmath_admin_page(): void {
 	echo '<div class="wrap"><h1>' . esc_html__( 'نقل عنوان ووصف البحث إلى Rank Math', 'seohouse-core' ) . '</h1>';
 	if ( null !== $done ) {
 		echo '<div class="notice notice-success"><p>' . esc_html( sprintf( 'نُقلت %d قيمة إلى حقول Rank Math الفارغة. لم تتغير أي قيمة موجودة.', $done ) ) . '</p></div>';
+	}
+	if ( isset( $_GET['skipped'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
+		echo '<div class="notice notice-success"><p>' . esc_html__( 'Rank Math تعمل الآن بدون حساب. صندوقها يظهر في المحرر.', 'seohouse-core' ) . '</p></div>';
+	}
+	$labels = array( 'page' => 'الصفحات', 'post' => 'المقالات', 'case_study' => 'دراسات الحالة', 'team_member' => 'فريق العمل' );
+	$off    = sh_rankmath_controls_off();
+	echo '<h2>' . esc_html__( 'صندوق Rank Math في المحرر (SEO Controls)', 'seohouse-core' ) . '</h2><table class="widefat" style="max-width:40em"><tbody>';
+	foreach ( sh_rankmath_post_types() as $t ) {
+		if ( post_type_exists( $t ) ) {
+			echo '<tr><td>' . esc_html( $labels[ $t ] ) . '</td><td>' . ( in_array( $t, $off, true ) ? '<strong>' . esc_html__( 'مطفأ', 'seohouse-core' ) . '</strong>' : esc_html__( 'ظاهر', 'seohouse-core' ) ) . '</td></tr>';
+		}
+	}
+	echo '</tbody></table>';
+	if ( $off ) {
+		echo '<form method="post">';
+		wp_nonce_field( 'sh_rankmath_controls' );
+		submit_button( __( 'أظهر صندوق Rank Math لكل الأنواع', 'seohouse-core' ), 'secondary', 'sh_rankmath_controls', false );
+		echo '</form>';
 	}
 	echo '<p style="max-width:62em">' . esc_html__( 'مع تفعيل Rank Math يُحرَّر عنوان البحث ووصفه وصورة المشاركة والفهرسة من صندوق Rank Math في محرر الصفحة فقط، وتُخفى الحقول المكررة من «السيو ومسار التنقل». هذه الصفحة تنقل القيم الموجودة في حقول سيو هاوس مرة واحدة إلى حقول Rank Math الفارغة فقط؛ القيم التي حرّرتها في Rank Math تبقى كما هي.', 'seohouse-core' ) . '</p>';
 	$last = get_option( 'sh_rankmath_migrated' );

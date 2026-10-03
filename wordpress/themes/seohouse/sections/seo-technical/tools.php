@@ -23,7 +23,7 @@ $f = $args['f'] ?? array();
             <?php if (!empty($f['label'])) : ?><div style="font-size: 14.5px; line-height: 1.7; color: var(--sh-muted);"><?= esc_html($f['label'] ?? '') ?></div><?php endif; ?>
           </div>
           <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><div style="border-radius: 16px; background: var(--sh-surface); border: 1px solid rgba(var(--sh-sky-rgb), 0.14); padding: 18px 20px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px;">
-            <?= sh_svg_img($r1['logo'] ?? '', '', ['style' => 'height: 30px; width: auto;']) ?>
+            <?= sh_svg_img($r1['logo'] ?? '', '', ['style' => 'height: 30px; width: auto;'], (int) ($r1['logo_image'] ?? 0)) ?>
             <?php if (!empty($r1['heading'])) : ?><div style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: 16.5px;"><?= esc_html($r1['heading'] ?? '') ?></div><?php endif; ?>
             <?php if (!empty($r1['label'])) : ?><div style="font-size: 14.5px; line-height: 1.7; color: var(--sh-muted);"><?= esc_html($r1['label'] ?? '') ?></div><?php endif; ?>
           </div><?php endforeach; ?>

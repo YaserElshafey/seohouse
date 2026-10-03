@@ -629,14 +629,6 @@
       "endpoint": 0
     },
     {
-      "key": "field_sh_opt_reviews_shortcode",
-      "label": "شورت كود التقييمات (Trustindex أو غيره)",
-      "name": "sh_reviews_shortcode",
-      "type": "text",
-      "instructions": "مثال: [trustindex no-registration=google]. يظهر في مكان قسم التقييمات في كل صفحة فيها هذا القسم، ويمكن تغييره لصفحة بعينها من «التقييمات في هذه الصفحة» في محررها. بلا شورت كود لإضافة مفعّلة لا يظهر قسم التقييمات، ولا تُعرض شهادات تجريبية.",
-      "required": 0
-    },
-    {
       "key": "field_sh_opt_gtm",
       "label": "معرّف Google Tag Manager",
       "name": "sh_gtm_id",

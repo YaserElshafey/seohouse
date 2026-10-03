@@ -38,7 +38,7 @@ $f = $args['f'] ?? array();
           <div data-plat-track>
             
               <?php foreach ( array( false, true ) as $dup1 ) : ?><?php $r1_list = $f['items_2'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><div data-plat aria-hidden="<?= $dup1 ? 'true' : 'false' ?>">
-                <span data-plat-chip><?= sh_svg_img($r1['logo'] ?? '', '', ['width' => '24', 'height' => '24']) ?><?php if (!empty($r1['label'])) : ?><span><?= esc_html($r1['label'] ?? '') ?></span><?php endif; ?></span>
+                <span data-plat-chip><?= sh_svg_img($r1['logo'] ?? '', '', ['width' => '24', 'height' => '24'], (int) ($r1['logo_image'] ?? 0)) ?><?php if (!empty($r1['label'])) : ?><span><?= esc_html($r1['label'] ?? '') ?></span><?php endif; ?></span>
               </div><?php endforeach; ?><?php endforeach; ?>
             
           </div>

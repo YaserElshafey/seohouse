@@ -90,7 +90,6 @@ const options = group('options', 'إعدادات سيو هاوس', [
   F(O, 'home_cases', 'دراسات الحالة المختارة للأقسام المشتركة', 'relationship', { name: 'sh_featured_cases', post_type: ['case_study'], filters: ['search'], return_format: 'id', max: 6, instructions: 'فارغة = أحدث الحالات المنشورة.' }),
 
   tab(O, 'integrations', 'التكاملات'),
-  F(O, 'reviews_shortcode', 'شورت كود التقييمات (Trustindex أو غيره)', 'text', { name: 'sh_reviews_shortcode', instructions: 'مثال: [trustindex no-registration=google]. يظهر في مكان قسم التقييمات في كل صفحة فيها هذا القسم، ويمكن تغييره لصفحة بعينها من «التقييمات في هذه الصفحة» في محررها. بلا شورت كود لإضافة مفعّلة لا يظهر قسم التقييمات، ولا تُعرض شهادات تجريبية.' }),
   F(O, 'gtm', 'معرّف Google Tag Manager', 'text', { name: 'sh_gtm_id', placeholder: 'GTM-XXXXXXX', instructions: 'مصدر تتبع واحد. لا يُحمّل إذا كانت إضافة أخرى تضيف GTM.' }),
   F(O, 'ga4', 'معرّف GA4 (إن لم يُستخدم GTM)', 'text', { name: 'sh_ga4_id', placeholder: 'G-XXXXXXX' }),
   F(O, 'search_console', 'رمز التحقق من Search Console', 'text', { name: 'sh_gsc_verification' }),
@@ -210,16 +209,21 @@ const blogPage = group('blog_page', 'صفحة المدونة', [
   F(B, 'intro', 'وصف المدونة تحت العنوان', 'textarea', { name: 'sh_blog_intro', rows: 2, new_lines: '' })
 ], [[{ param: 'page_type', operator: '==', value: 'posts_page' }]], { position: 'acf_after_title', hide_on_screen: ['the_content', 'excerpt', 'discussion', 'comments'] });
 
+// ------------------------------------------------------------------ Google reviews (own screen «تقييمات جوجل»; same field key as before)
+const reviewsSettings = group('reviews_settings', 'تقييمات جوجل', [
+  F(O, 'reviews_shortcode', 'شورت كود التقييمات العام', 'text', { name: 'sh_reviews_shortcode', instructions: 'مثال: [trustindex no-registration=google]. يظهر في مكان قسم التقييمات في كل صفحة فيها هذا القسم، ويمكن تغييره لصفحة بعينها من «التقييمات في هذه الصفحة» في محررها. بلا شورت كود لإضافة مفعّلة لا يظهر قسم التقييمات، ولا تُعرض شهادات تجريبية.' }),
+], [[{ param: 'sh_screen', operator: '==', value: 'seohouse-reviews' }]]);
+
 // ------------------------------------------------------------------ reviews override (pages with a reviews section)
 const RV = 'rv';
 const reviewPages = JSON.parse(fs.readFileSync(path.join(repo, 'content-pack/manifest.json'), 'utf8')).pages
   .filter(p => p.kind === 'page' && (p.layouts || []).some(l => /^reviews/.test(l))).map(p => p.key);
 const pageReviews = group('page_reviews', 'التقييمات في هذه الصفحة', [
-  F(RV, 'shortcode', 'شورت كود التقييمات لهذه الصفحة (اختياري)', 'text', { name: 'sh_reviews_shortcode_page', placeholder: '[trustindex no-registration=google]', instructions: 'فارغ = الشورت كود العام من «إعدادات سيو هاوس ← التكاملات». يُعرض في مكان قسم التقييمات بنفس تصميمه. بلا شورت كود لا يظهر القسم.' })
+  F(RV, 'shortcode', 'شورت كود التقييمات لهذه الصفحة (اختياري)', 'text', { name: 'sh_reviews_shortcode_page', placeholder: '[trustindex no-registration=google]', instructions: 'فارغ = الشورت كود العام من «سيو هاوس ← تقييمات جوجل». يُعرض في مكان قسم التقييمات بنفس تصميمه. بلا شورت كود لا يظهر القسم.' })
 ], reviewPages.map(k => [{ param: 'page_template', operator: '==', value: `page-templates/${k}.php` }]), { position: 'side', menu_order: 40 });
 
-for (const g0 of [options, caseStudy, team, post, seo, menu, blogPage, pageReviews]) {
+for (const g0 of [options, caseStudy, team, post, seo, menu, blogPage, pageReviews, reviewsSettings]) {
   const g = assertFree({ ...g0, fields: toFree(g0.fields) }); // repeaters → sh_rows (ACF free)
   fs.writeFileSync(path.join(OUT, `${g.key}.json`), JSON.stringify(g, null, 2) + '\n');
 }
-console.log('wrote', 8, 'groups,', counter, 'fields');
+console.log('wrote', 9, 'groups,', counter, 'fields');

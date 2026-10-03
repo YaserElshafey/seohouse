@@ -577,8 +577,10 @@ class SectionCompiler {
       for (const s of srcs) choices[s] = s.split('/').pop().replace('.svg', '');
       const f = this.field(scope, 'logo', { type: 'select', label: `${ROLE_AR.logo}: ${preview(alts[0] || srcs[0].split('/').pop())}`, instructions: 'شعارات المنصات المعتمدة في التصميم.', extra: { choices, default_value: srcs[0], allow_null: 1, return_format: 'value' } });
       scope.rows.forEach((r, k) => { r[f.name] = srcs[k]; });
+      // a logo from the media library next to the choice (Core: new platform or page-specific logo)
+      const fi = this.field(scope, 'logo', { name: `${f.name}_image`, type: 'image', label: 'أو شعار من مكتبة الوسائط', instructions: 'ارفع شعارًا أو اختره من مكتبة الوسائط. بلا اختيار منصة أعلاه تُضاف منصة جديدة بهذا الشعار إلى «المنصات والأدوات» عند الحفظ؛ ومع اختيار منصة يظهر هذا الشعار في هذه الصفحة فقط.', extra: { return_format: 'id', preview_size: 'thumbnail', library: 'all' } });
       const altExpr = alts.every(a => a === alts[0]) ? this.phpStr(alts[0]) : "''";
-      return `<?= sh_svg_img(${scope.v}['${f.name}'] ?? '', ${altExpr}, ${attrPhp}) ?>`;
+      return `<?= sh_svg_img(${scope.v}['${f.name}'] ?? '', ${altExpr}, ${attrPhp}, (int) (${scope.v}['${fi.name}'] ?? 0)) ?>`;
     }
     srcs.forEach(s => this.assets.add(s));
     const f = this.field(scope, 'image', { type: 'image', label: `${ROLE_AR.image}: ${preview(alts[0] || srcs[0].split('/').pop())}`, extra: { return_format: 'id', preview_size: 'medium', library: 'all' } });

@@ -262,10 +262,12 @@ function sh_setup_checks(): array {
 	foreach ( array( 'page' => array( 'privacy-policy', 'terms' ), 'post' => array( 'fix-404-not-found', 'how-to-build-backlinks-correctly', 'why-is-my-website-not-showing-in-search-engines' ) ) as $type => $slugs ) {
 		foreach ( $slugs as $slug ) {
 			$p        = get_posts( array( 'post_type' => $type, 'name' => $slug, 'post_status' => 'any', 'posts_per_page' => 1 ) );
-			$drafts[] = $p ? $p[0]->post_status : 'missing';
+			// an article migrated from the main site is published as it is there
+			$drafts[] = ! $p ? 'missing' : ( get_post_meta( $p[0]->ID, '_sh_source_post', true ) ? 'migrated' : $p[0]->post_status );
 		}
 	}
-	$out[]  = array( ! in_array( 'missing', $drafts, true ), 'الصفحات القانونية والمقالات غير المعتمدة', implode( '، ', array_map( static fn( $s ) => 'draft' === $s ? 'مسودة' : $s, $drafts ) ) );
+	$names  = array( 'draft' => 'مسودة', 'migrated' => 'منشور (منقول من الموقع الأساسي)' );
+	$out[]  = array( ! in_array( 'missing', $drafts, true ) && ! in_array( 'publish', $drafts, true ), 'الصفحات القانونية والمقالات غير المعتمدة', implode( '، ', array_map( static fn( $s ) => $names[ $s ] ?? $s, $drafts ) ) );
 	return $out;
 }
 

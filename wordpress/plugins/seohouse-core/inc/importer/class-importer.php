@@ -318,6 +318,10 @@ class SH_Importer {
 				$this->ensure_category( $cat );
 			}
 			foreach ( (array) $this->json( 'data/posts.json' ) as $p ) {
+				if ( apply_filters( 'sh_importer_skip_post', false, (int) ( $this->keys[ $p['key'] ] ?? 0 ) ) ) {
+					$this->note( 'skipped', $p['key'], 'منقول من الموقع الأساسي؛ لا تغيّره التهيئة' );
+					continue;
+				}
 				$this->ensure_post(
 					'post',
 					$p['key'],
@@ -366,6 +370,9 @@ class SH_Importer {
 		}
 		if ( in_array( 'posts', $groups, true ) && $this->want( 'posts' ) ) {
 			foreach ( (array) $this->json( 'data/posts.json' ) as $p ) {
+				if ( apply_filters( 'sh_importer_skip_post', false, (int) ( $this->keys[ $p['key'] ] ?? 0 ) ) ) {
+					continue;
+				}
 				$this->fill_post( $p );
 			}
 		}
@@ -842,9 +849,52 @@ class SH_Importer {
 	private function state_hash( int $id, array $names ): string {
 		$vals = array();
 		foreach ( $names as $n ) {
-			$vals[ $n ] = get_field( $n, $id, false );
+			$vals[ $n ] = self::without_added( get_field( $n, $id, false ) );
 		}
 		return md5( wp_json_encode( $vals ) );
+	}
+
+	/**
+	 * Keys of section fields added after sites were first initialised (the media-library logo next
+	 * to each platform choice, 2.4.0). While still empty they are left out of the fingerprint, so a
+	 * page imported earlier is not mistaken for one an editor changed.
+	 */
+	private static function added_keys(): array {
+		static $keys = null;
+		if ( null !== $keys ) {
+			return $keys;
+		}
+		$keys = array();
+		$walk = static function ( array $fields ) use ( &$walk, &$keys ) {
+			foreach ( $fields as $f ) {
+				if ( preg_match( '/^logo(_\d+)?_image$/', (string) ( $f['name'] ?? '' ) ) ) {
+					$keys[ $f['key'] ] = true;
+				}
+				if ( ! empty( $f['sub_fields'] ) ) {
+					$walk( $f['sub_fields'] );
+				}
+			}
+		};
+		foreach ( (array) glob( SH_CORE_DIR . 'acf-json/group_sh_page_*.json' ) as $file ) {
+			$g = json_decode( (string) file_get_contents( $file ), true ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+			$walk( (array) ( $g['fields'] ?? array() ) );
+		}
+		return $keys;
+	}
+
+	private static function without_added( $v ) {
+		if ( ! is_array( $v ) ) {
+			return $v;
+		}
+		$added = self::added_keys();
+		foreach ( $v as $k => $x ) {
+			if ( isset( $added[ $k ] ) && ( null === $x || '' === $x || 0 === $x || '0' === $x || false === $x ) ) {
+				unset( $v[ $k ] );
+				continue;
+			}
+			$v[ $k ] = self::without_added( $x );
+		}
+		return $v;
 	}
 
 	/**

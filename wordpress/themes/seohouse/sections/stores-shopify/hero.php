@@ -17,7 +17,7 @@ $f = $args['f'] ?? array();
     </div>
 
     <div style="position: relative; max-width: 1120px; margin: 0px auto; padding: clamp(20px, 2.4vw, 34px) 20px clamp(0px, 1vw, 10px); text-align: center; animation: 0.7s ease 0s 1 normal both running fadeUp;">
-      <?= sh_svg_img($f['logo'] ?? '', 'شوبيفاي', ['style' => 'height: 22px; width: auto; display: inline-block; opacity: 0.85;']) ?>
+      <?= sh_svg_img($f['logo'] ?? '', 'شوبيفاي', ['style' => 'height: 22px; width: auto; display: inline-block; opacity: 0.85;'], (int) ($f['logo_image'] ?? 0)) ?>
       <?php if (!empty($f['title'])) : ?><h1 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(28px, 3.2vw, 44px); line-height: 1.3; margin: 14px auto 0px; max-width: 18em;"><?= esc_html($f['title'] ?? '') ?></h1><?php endif; ?>
       <?php if (!empty($f['text'])) : ?><p style="font-size: 17px; line-height: 1.85; color: var(--sh-muted); max-width: 40em; margin: 16px auto 0px; text-wrap: pretty;"><?= esc_html($f['text'] ?? '') ?></p><?php endif; ?>
       <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px 24px; margin-top: 26px;">

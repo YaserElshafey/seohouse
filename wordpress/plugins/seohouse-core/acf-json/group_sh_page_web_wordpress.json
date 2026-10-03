@@ -48,6 +48,17 @@
           "return_format": "value"
         },
         {
+          "key": "field_770a13ab9aa04",
+          "label": "أو شعار من مكتبة الوسائط",
+          "name": "logo_image",
+          "type": "image",
+          "instructions": "ارفع شعارًا أو اختره من مكتبة الوسائط. بلا اختيار منصة أعلاه تُضاف منصة جديدة بهذا الشعار إلى «المنصات والأدوات» عند الحفظ؛ ومع اختيار منصة يظهر هذا الشعار في هذه الصفحة فقط.",
+          "required": 0,
+          "return_format": "id",
+          "preview_size": "thumbnail",
+          "library": "all"
+        },
+        {
           "key": "field_7f7f89554e10e",
           "label": "العنوان: تصميم مواقع ووردبريس",
           "name": "title",

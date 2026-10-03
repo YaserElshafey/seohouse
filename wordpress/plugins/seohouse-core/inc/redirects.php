@@ -38,3 +38,34 @@ add_action(
 	},
 	1
 );
+
+/*
+ * Menu items pointing to content that is not published (the legal pages kept as drafts until
+ * their text is approved) are left out for visitors, so no menu ever links to a 404. They show
+ * again by themselves once the page is published. The menu editor still lists them.
+ */
+add_filter(
+	'wp_get_nav_menu_items',
+	static function ( $items ) {
+		if ( is_admin() || ! is_array( $items ) ) {
+			return $items;
+		}
+		$drop = array();
+		foreach ( $items as $i => $item ) {
+			if ( 'post_type' === ( $item->type ?? '' ) && (int) $item->object_id && 'publish' !== get_post_status( (int) $item->object_id ) ) {
+				$drop[] = (int) $item->ID;
+				unset( $items[ $i ] );
+			}
+		}
+		if ( $drop ) {
+			// children of a hidden item go with it
+			foreach ( $items as $i => $item ) {
+				if ( in_array( (int) $item->menu_item_parent, $drop, true ) ) {
+					unset( $items[ $i ] );
+				}
+			}
+		}
+		return array_values( $items );
+	},
+	20
+);

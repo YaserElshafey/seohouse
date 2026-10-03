@@ -504,6 +504,17 @@
               "return_format": "value"
             },
             {
+              "key": "field_81148fb8a7382",
+              "label": "أو شعار من مكتبة الوسائط",
+              "name": "logo_image",
+              "type": "image",
+              "instructions": "ارفع شعارًا أو اختره من مكتبة الوسائط. بلا اختيار منصة أعلاه تُضاف منصة جديدة بهذا الشعار إلى «المنصات والأدوات» عند الحفظ؛ ومع اختيار منصة يظهر هذا الشعار في هذه الصفحة فقط.",
+              "required": 0,
+              "return_format": "id",
+              "preview_size": "thumbnail",
+              "library": "all"
+            },
+            {
               "key": "field_34feca0f6e618",
               "label": "عنوان فرعي: ووردبريس",
               "name": "heading",
@@ -573,6 +584,17 @@
               "default_value": "assets/platforms/official/react.svg",
               "allow_null": 1,
               "return_format": "value"
+            },
+            {
+              "key": "field_7adf10c8c289d",
+              "label": "أو شعار من مكتبة الوسائط",
+              "name": "logo_image",
+              "type": "image",
+              "instructions": "ارفع شعارًا أو اختره من مكتبة الوسائط. بلا اختيار منصة أعلاه تُضاف منصة جديدة بهذا الشعار إلى «المنصات والأدوات» عند الحفظ؛ ومع اختيار منصة يظهر هذا الشعار في هذه الصفحة فقط.",
+              "required": 0,
+              "return_format": "id",
+              "preview_size": "thumbnail",
+              "library": "all"
             }
           ],
           "min": 0,

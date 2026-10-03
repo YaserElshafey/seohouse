@@ -405,6 +405,17 @@
               "return_format": "value"
             },
             {
+              "key": "field_40d69241d0d19",
+              "label": "أو شعار من مكتبة الوسائط",
+              "name": "logo_image",
+              "type": "image",
+              "instructions": "ارفع شعارًا أو اختره من مكتبة الوسائط. بلا اختيار منصة أعلاه تُضاف منصة جديدة بهذا الشعار إلى «المنصات والأدوات» عند الحفظ؛ ومع اختيار منصة يظهر هذا الشعار في هذه الصفحة فقط.",
+              "required": 0,
+              "return_format": "id",
+              "preview_size": "thumbnail",
+              "library": "all"
+            },
+            {
               "key": "field_f6ea1133f7d9f",
               "label": "الوسم: متاجر متعددة الأسواق",
               "name": "eyebrow",
@@ -528,6 +539,17 @@
           "default_value": "assets/platforms/official/woocommerce.svg",
           "allow_null": 1,
           "return_format": "value"
+        },
+        {
+          "key": "field_4d161df113f18",
+          "label": "أو شعار من مكتبة الوسائط",
+          "name": "logo_image",
+          "type": "image",
+          "instructions": "ارفع شعارًا أو اختره من مكتبة الوسائط. بلا اختيار منصة أعلاه تُضاف منصة جديدة بهذا الشعار إلى «المنصات والأدوات» عند الحفظ؛ ومع اختيار منصة يظهر هذا الشعار في هذه الصفحة فقط.",
+          "required": 0,
+          "return_format": "id",
+          "preview_size": "thumbnail",
+          "library": "all"
         },
         {
           "key": "field_3a4eea5742841",
