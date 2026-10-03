@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-03T15:44:10.162Z",
+  "date": "2026-10-03T15:47:23.303Z",
   "wp": "http://127.0.0.1:8097/new",
   "results": [
     {
@@ -35,7 +35,7 @@
     {
       "name": "2.4.1 without a pack: the screen names the cause and links the complete release file",
       "ok": true,
-      "detail": "https://github.com/YaserElshafey/seohouse/releases/latest/download/seohouse-core.zip"
+      "detail": "https://raw.githubusercontent.com/YaserElshafey/seohouse/claude/new-session-9obdta/release/seohouse-core.zip"
     },
     {
       "name": "no JavaScript errors",

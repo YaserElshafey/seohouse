@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-03T15:42:48.248Z",
+  "date": "2026-10-03T15:47:03.558Z",
   "wp": "http://127.0.0.1:8097/new",
   "results": [
     {
@@ -18,7 +18,7 @@
       "detail": ""
     },
     {
-      "name": "upload seohouse-core.zip through the admin",
+      "name": "upload final-core.zip through the admin",
       "ok": true,
       "detail": ""
     },
