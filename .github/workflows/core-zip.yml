@@ -5,7 +5,7 @@ name: SEO House Core zip
 on:
   push:
     branches: ['**']
-    paths: ['wordpress/plugins/seohouse-core/**', 'tools/package-core.py', 'tools/verify-core-zip.py', 'tools/design-import/finalize-pack.py']
+    paths: ['wordpress/plugins/seohouse-core/**', 'wordpress/themes/seohouse/**', 'tools/package-core.py', 'tools/package-theme.py', 'tools/theme-manifest.py', 'tools/verify-core-zip.py', 'tools/design-import/finalize-pack.py']
   release:
     types: [published]
 permissions:
@@ -22,10 +22,14 @@ jobs:
         run: python3 tools/design-import/finalize-pack.py wordpress/plugins/seohouse-core/content-pack --check
       - name: Build and verify
         run: python3 tools/package-core.py . seohouse-core.zip
+      - name: Theme zip (only the files in theme-files.json, no leftovers)
+        run: python3 tools/package-theme.py . seohouse-theme.zip
       - uses: actions/upload-artifact@v4
         with:
           name: seohouse-core
-          path: seohouse-core.zip
+          path: |
+            seohouse-core.zip
+            seohouse-theme.zip
       - name: Release file (keep an attached, tested file; check it against the committed folder)
         if: github.event_name == 'release'
         env:

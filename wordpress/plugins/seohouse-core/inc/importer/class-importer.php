@@ -21,6 +21,8 @@ defined( 'ABSPATH' ) || exit;
 class SH_Importer {
 
 	const META_KEY  = '_sh_source_key';
+	/** Pages whose text is written only when the page is created here, or from «تهيئة الموقع» → their own box (inc/importer/legal.php). */
+	const LEGAL     = array( 'page:privacy-policy', 'page:terms' );
 	const META_HASH = '_sh_import_hash';
 
 	/** @var string */
@@ -680,11 +682,19 @@ class SH_Importer {
 			if ( $existing && (int) get_option( 'wp_page_for_privacy_policy' ) === $existing->ID && 'draft' === $existing->post_status && ! get_post_meta( $existing->ID, self::META_KEY, true ) ) {
 				if ( ! $this->dry ) {
 					update_post_meta( $existing->ID, self::META_KEY, $key );
+					update_post_meta( $existing->ID, '_sh_created_by_import', 1 ); // WordPress's own empty draft: filled like a new page
 					update_post_meta( $existing->ID, '_wp_page_template', $args['page_template'] ?? '' );
 					wp_update_post( array( 'ID' => $existing->ID, 'post_title' => $args['post_title'], 'post_content' => '' ) );
 				}
 				$this->keys[ $key ] = $this->dry ? $this->fake-- : $existing->ID;
 				$this->note( 'updated', $key, 'اعتُمدت صفحة الخصوصية الافتراضية في ووردبريس (تبقى مسودة)' );
+				return;
+			}
+			if ( $existing && in_array( $key, self::LEGAL, true ) ) {
+				// a legal page already on its address (e.g. after a site move) is used as it is; its
+				// text is never written by an update — see «تهيئة الموقع» → سياسة الخصوصية والشروط
+				$this->keys[ $key ] = (int) $existing->ID;
+				$this->note( 'skipped', $key, 'صفحة قانونية موجودة على ' . $route . ' — لا تغيّرها التهيئة' );
 				return;
 			}
 			if ( $existing ) {
@@ -758,7 +768,7 @@ class SH_Importer {
 				array(
 					'post_type'   => $type,
 					'post_status' => 'publish',
-					'meta_input'  => array( self::META_KEY => $key ),
+					'meta_input'  => array( self::META_KEY => $key, '_sh_created_by_import' => 1 ),
 				),
 				$args
 			),
@@ -906,6 +916,9 @@ class SH_Importer {
 	 */
 	private function write_mode( int $id, string $group, string $key, array $names, bool $retry_incomplete = false ): string {
 		$stored = get_post_meta( $id, self::META_HASH, true );
+		if ( 'pages' === $group && in_array( $key, self::LEGAL, true ) && ( $stored || ! get_post_meta( $id, '_sh_created_by_import', true ) ) ) {
+			return 'skip'; // a legal page is filled once, when the setup creates it; its text is never replaced by an update
+		}
 		if ( ! $stored ) {
 			return 'write'; // first fill
 		}
@@ -1345,8 +1358,8 @@ class SH_Importer {
 		$out      = array();
 		foreach ( $this->load_pages( $manifest ) as $seed ) {
 			$id = $this->keys[ 'page:' . $seed['key'] ] ?? 0;
-			if ( 'page' !== $seed['kind'] ) {
-				continue;
+			if ( 'page' !== $seed['kind'] || in_array( 'page:' . $seed['key'], self::LEGAL, true ) ) {
+				continue; // legal pages are checked in their own box
 			}
 			if ( ! $id ) {
 				$out[] = array( $seed['key'], 0, 1, array( '_page' => array( $seed['route'], 'الصفحة غير مرتبطة بحزمة التصميم' ) ) );

@@ -109,64 +109,18 @@
         },
         {
           "key": "field_2fb138dbe2ca7",
-          "label": "الوسم: المحتويات",
+          "label": "عنوان قائمة المحتويات",
           "name": "eyebrow",
           "type": "text",
-          "instructions": "",
+          "instructions": "تُبنى القائمة تلقائيًا من عناوين الأقسام أدناه.",
           "required": 0
         },
         {
-          "key": "field_340afad938d44",
-          "label": "المحتويات: روابط الأقسام",
-          "name": "items",
-          "type": "sh_rows",
-          "instructions": "العدد المعتمد في التصميم: 9. يمكن الإضافة والحذف وإعادة الترتيب.",
-          "required": 0,
-          "layout": "block",
-          "button_label": "إضافة عنصر",
-          "sub_fields": [
-            {
-              "key": "field_9b688f1ccd5ef",
-              "label": "نص: استخدام الموقع",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_89d738b858ff8",
-              "label": "نمط العرض",
-              "name": "variant",
-              "type": "select",
-              "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
-              "required": 0,
-              "choices": {
-                "v1": "النمط 1",
-                "v2": "النمط 2",
-                "v3": "النمط 3",
-                "v4": "النمط 4",
-                "v5": "النمط 5",
-                "v6": "النمط 6",
-                "v7": "النمط 7",
-                "v8": "النمط 8",
-                "v9": "النمط 9"
-              },
-              "default_value": "v1",
-              "allow_null": 0,
-              "ui": 0,
-              "return_format": "value"
-            }
-          ],
-          "min": 0,
-          "max": 0,
-          "collapsed": "field_9b688f1ccd5ef"
-        },
-        {
           "key": "field_fdf7750bd221e",
-          "label": "نص: آخر تحديث:",
+          "label": "نص قبل التاريخ",
           "name": "label",
           "type": "text",
-          "instructions": "",
+          "instructions": "مثل: آخر تحديث:",
           "required": 0
         },
         {
@@ -179,10 +133,10 @@
         },
         {
           "key": "field_d2cde4329728b",
-          "label": "الأقسام: العنوان والنص",
+          "label": "الأقسام",
           "name": "items_2",
           "type": "sh_rows",
-          "instructions": "كل عنصر قسم في الصفحة: عنوانه ونصه. سطر فارغ يبدأ فقرة جديدة، والسطر الذي يبدأ بـ «- » عنصر في قائمة. رتّب الأقسام كما في «المحتويات».",
+          "instructions": "كل قسم: عنوان ونص. القسم بلا عنوان يظهر نصه دون أن يدخل قائمة المحتويات (مثل المقدمة). سطر فارغ يبدأ فقرة جديدة، والسطر الذي يبدأ بـ «- » عنصر في قائمة. يمكن الإضافة والحذف وإعادة الترتيب.",
           "required": 0,
           "layout": "block",
           "button_label": "إضافة عنصر",
@@ -206,41 +160,8 @@
               "required": 0,
               "rows": 10,
               "new_lines": ""
-            },
-            {
-              "key": "field_003452c91097f",
-              "label": "ملاحظة مؤقتة (تظهر فقط إذا كان نص القسم فارغًا)",
-              "name": "label",
-              "type": "text",
-              "instructions": "",
-              "required": 0
-            },
-            {
-              "key": "field_03c0b8310311f",
-              "label": "نمط العرض",
-              "name": "variant",
-              "type": "select",
-              "instructions": "أنماط مأخوذة من التصميم المعتمد فقط.",
-              "required": 0,
-              "choices": {
-                "v1": "النمط 1",
-                "v2": "النمط 2",
-                "v3": "النمط 3",
-                "v4": "النمط 4",
-                "v5": "النمط 5",
-                "v6": "النمط 6",
-                "v7": "النمط 7",
-                "v8": "النمط 8",
-                "v9": "النمط 9"
-              },
-              "default_value": "v1",
-              "allow_null": 0,
-              "ui": 0,
-              "return_format": "value"
             }
           ],
-          "min": 0,
-          "max": 0,
           "collapsed": "field_af9d7fa1f94af"
         }
       ]
@@ -280,5 +201,5 @@
   "active": true,
   "description": "حقول قالب الشروط والأحكام — مولدة من SEO House - Terms.dc.html. الأقسام بترتيب التصميم؛ يمكن إخفاء أي قسم.",
   "show_in_rest": 0,
-  "modified": 1790500000
+  "modified": 1790600000
 }

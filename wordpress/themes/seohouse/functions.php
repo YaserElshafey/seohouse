@@ -12,10 +12,11 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SH_THEME_VERSION', '2.5.0' );
+define( 'SH_THEME_VERSION', '2.6.0' );
 define( 'SH_THEME_DIR', get_template_directory() );
 define( 'SH_THEME_URI', get_template_directory_uri() );
 
+require SH_THEME_DIR . '/inc/release-files.php'; // first: leftovers of an older theme never answer a request
 require SH_THEME_DIR . '/inc/dependencies.php';
 require SH_THEME_DIR . '/inc/setup.php';
 require SH_THEME_DIR . '/inc/helpers.php';

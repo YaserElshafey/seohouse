@@ -258,16 +258,31 @@ function sh_setup_checks(): array {
 	$struct = (string) get_option( 'permalink_structure' );
 	$okperm = '/blog/%postname%/' === $struct && 'blog/category' === get_option( 'category_base' );
 	$out[]  = array( $okperm, 'الروابط الدائمة', $okperm ? '/blog/%postname%/ — المقالات على /blog/… والتصنيفات على /blog/category/…' : sprintf( 'الحالية %s — روابط المقالات المنشورة سابقًا (/blog/…) لن تعمل حتى تُطبَّق بنية المشروع.', $struct ? $struct : 'الافتراضية' ), $okperm ? '' : 'permalinks' );
-	$drafts = array();
-	foreach ( array( 'page' => array( 'privacy-policy', 'terms' ), 'post' => array( 'fix-404-not-found', 'how-to-build-backlinks-correctly', 'why-is-my-website-not-showing-in-search-engines' ) ) as $type => $slugs ) {
-		foreach ( $slugs as $slug ) {
-			$p        = get_posts( array( 'post_type' => $type, 'name' => $slug, 'post_status' => 'any', 'posts_per_page' => 1 ) );
-			// an article migrated from the main site is published as it is there
-			$drafts[] = ! $p ? 'missing' : ( get_post_meta( $p[0]->ID, '_sh_source_post', true ) ? 'migrated' : $p[0]->post_status );
+	// legal pages: a published page must carry the approved text (or one an editor wrote)
+	$legal = array();
+	$lok   = true;
+	foreach ( SH_LEGAL_PAGES as $key => $title ) {
+		$st = sh_legal_state( $key );
+		if ( ! $st['page'] ) {
+			$lok     = false;
+			$legal[] = $title . ': غير موجودة';
+			continue;
 		}
+		$pub     = 'publish' === $st['page']->post_status;
+		$lok     = $lok && ( ! $pub || in_array( $st['state'], array( 'pack', 'manual' ), true ) );
+		$legal[] = $title . ': ' . ( $pub ? 'منشورة' : 'مسودة' ) . ' — ' . $st['label'];
 	}
-	$names  = array( 'draft' => 'مسودة', 'migrated' => 'منشور (منقول من الموقع الأساسي)' );
-	$out[]  = array( ! in_array( 'missing', $drafts, true ) && ! in_array( 'publish', $drafts, true ), 'الصفحات القانونية والمقالات غير المعتمدة', implode( '، ', array_map( static fn( $s ) => $names[ $s ] ?? $s, $drafts ) ) );
+	$out[] = array( $lok, 'الصفحات القانونية', implode( '، ', $legal ) . ( $lok ? '' : ' — انظر «سياسة الخصوصية والشروط والأحكام» أسفل هذه الصفحة' ) );
+	$miss  = function_exists( 'sh_redirects_missing' ) ? sh_redirects_missing() : array();
+	$out[] = array( ! $miss, 'تحويلات روابط الموقع السابق', $miss ? 'ناقصة: ' . implode( '، ', wp_list_pluck( $miss, 'from' ) ) . ' — انظر «تحويلات الموقع السابق» أسفل هذه الصفحة' : 'كل تحويلات الحزمة موجودة في «إعدادات سيو هاوس ← التحويلات»' );
+	$drafts = array();
+	foreach ( array( 'fix-404-not-found', 'how-to-build-backlinks-correctly', 'why-is-my-website-not-showing-in-search-engines' ) as $slug ) {
+		$p = get_posts( array( 'post_type' => 'post', 'name' => $slug, 'post_status' => 'any', 'posts_per_page' => 1 ) );
+		// an article migrated from the main site is published as it is there
+		$drafts[] = ! $p ? 'missing' : ( get_post_meta( $p[0]->ID, '_sh_source_post', true ) ? 'migrated' : $p[0]->post_status );
+	}
+	$names = array( 'draft' => 'مسودة', 'migrated' => 'منشور (منقول من الموقع الأساسي)' );
+	$out[] = array( ! in_array( 'missing', $drafts, true ) && ! in_array( 'publish', $drafts, true ), 'المقالات غير المعتمدة', implode( '، ', array_map( static fn( $s ) => $names[ $s ] ?? $s, $drafts ) ) );
 	return $out;
 }
 
@@ -367,6 +382,7 @@ function sh_import_admin_page(): void {
 
 	if ( $last ) {
 		sh_legal_box();
+		sh_redirects_box();
 	}
 
 	echo '<hr><details><summary style="cursor:pointer">' . esc_html__( 'خيارات متقدمة: رفع حزمة محتوى أحدث (اختياري)', 'seohouse-core' ) . '</summary>';
@@ -467,4 +483,28 @@ function sh_import_admin_page(): void {
 })();
 </script>
 	<?php
+}
+
+/** «تحويلات الموقع السابق»: the pack's redirects missing from the settings, with a button to add them. */
+function sh_redirects_box(): void {
+	$added = null;
+	if ( isset( $_POST['sh_redirects_add'] ) && check_admin_referer( 'sh_redirects_add' ) && current_user_can( 'manage_options' ) ) {
+		$added = sh_redirects_add_missing();
+	}
+	$miss = sh_redirects_missing();
+	echo '<h2 id="sh-redirects">' . esc_html__( 'تحويلات الموقع السابق', 'seohouse-core' ) . '</h2>';
+	if ( null !== $added ) {
+		echo '<div class="notice notice-success inline" style="max-width:60em"><p>' . esc_html( sprintf( 'أُضيف %d تحويل إلى «إعدادات سيو هاوس ← التحويلات». التحويلات الموجودة بقيت كما هي.', $added ) ) . '</p></div>';
+	}
+	if ( ! $miss ) {
+		echo '<p data-redirects="ok">' . esc_html__( 'كل تحويلات الحزمة موجودة في «إعدادات سيو هاوس ← التحويلات».', 'seohouse-core' ) . '</p>';
+		return;
+	}
+	echo '<p style="max-width:60em">' . esc_html__( 'روابط كان الموقع السابق يحوّلها 301 وليست في قائمة التحويلات هنا، فتعطي الآن «الصفحة غير موجودة». الإضافة تضعها بعد التحويلات الموجودة ولا تغيّر شيئًا آخر. يعمل التحويل فقط إن لم تكن هناك صفحة منشورة على الرابط القديم.', 'seohouse-core' ) . '</p><ul data-redirects="missing">';
+	foreach ( $miss as $m ) {
+		echo '<li><code dir="ltr">' . esc_html( $m['from'] ) . '</code> ← <code dir="ltr">' . esc_html( $m['route'] ) . '</code></li>';
+	}
+	echo '</ul><form method="post">';
+	wp_nonce_field( 'sh_redirects_add' );
+	echo '<button class="button" name="sh_redirects_add" value="1">' . esc_html__( 'إضافة التحويلات الناقصة', 'seohouse-core' ) . '</button></form>';
 }

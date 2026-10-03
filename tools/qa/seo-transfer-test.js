@@ -76,7 +76,7 @@ const SRC_DB = `global $wpdb; echo md5( wp_json_encode( array( $wpdb->get_result
 
   // ---- preview
   await press('#sh-seo-preview');
-  const summary = flat(await p.textContent('#sh-seo-transfer .notice-info'));
+  const summary = flat(await p.textContent('#sh-seo-transfer .notice-info:has-text("معاينة")'));
   check('preview: «معاينة — لم يُكتب شيء» with counts', /معاينة — لم يُكتب شيء/.test(summary), summary);
   const heads = (await p.locator('.sh-seo-plan thead th').allTextContents()).map(flat);
   check('preview columns: الرابط، العنوان القديم والجديد، الوصف القديم والجديد، الإجراء المقترح', JSON.stringify(heads) === JSON.stringify(['الرابط', 'عنوان SEO القديم', 'عنوان SEO الجديد', 'الوصف القديم', 'الوصف الجديد', 'الإجراء المقترح']), heads.join(' | '));

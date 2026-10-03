@@ -558,3 +558,32 @@ function sh_rankmath_admin_page(): void {
 	echo '</tbody></table>';
 	echo '<h2>' . esc_html__( 'البيانات المنظمة', 'seohouse-core' ) . '</h2><p style="max-width:62em">' . esc_html__( 'Rank Math يخرج Organization وWebSite وWebPage والمقالات. سيو هاوس يضيف إلى نفس المخطط: Service لصفحات الخدمات والقطاعات والدول، وFAQPage من قسم الأسئلة الظاهر، وBreadcrumbList من مسار التنقل الظاهر، وPerson لصفحات الفريق وكاتب المقال، وItemList لصفحات القوائم. أي Schema تضيفه من تبويب Schema في Rank Math يبقى ولا يُضاف مقابله من سيو هاوس. اضبط نوع الكيان (مؤسسة) واسمها وشعارها من Rank Math ← العناوين والوصف ← Local SEO.', 'seohouse-core' ) . '</p></div>';
 }
+
+/* ------------------------------------------------------------------ sitemap cache after a move or an update */
+
+/**
+ * Rank Math keeps the XML sitemaps it built in files (uploads/rank-math). A site move that copies
+ * files over the old site (All-in-One WP Migration, FTP) leaves the old site's cached sitemaps
+ * there, and Rank Math keeps serving them: addresses of the previous site, old dates. When Core is
+ * installed or updated, the cache is emptied once so Rank Math builds the sitemaps from this site's
+ * content. Nothing else changes (no content, no SEO values, no Rank Math settings).
+ */
+function sh_rankmath_sitemap_cache_clear(): bool {
+	if ( ! class_exists( '\RankMath\Sitemap\Cache' ) || ! method_exists( '\RankMath\Sitemap\Cache', 'invalidate_storage' ) ) {
+		return false;
+	}
+	\RankMath\Sitemap\Cache::invalidate_storage();
+	return true;
+}
+
+add_action(
+	'admin_init',
+	static function () {
+		if ( get_option( 'sh_core_sitemap_cache_version' ) === SH_CORE_VERSION || ! sh_rankmath_active() ) {
+			return;
+		}
+		if ( sh_rankmath_sitemap_cache_clear() ) {
+			update_option( 'sh_core_sitemap_cache_version', SH_CORE_VERSION, false );
+		}
+	}
+);

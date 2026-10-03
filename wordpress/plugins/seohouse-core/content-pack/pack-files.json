@@ -1,5 +1,5 @@
 {
- "version": "2.5.0",
+ "version": "2.6.0",
  "count": 125,
  "files": [
   {
@@ -370,7 +370,7 @@
   {
    "path": "manifest.json",
    "size": 12721,
-   "sha1": "5860713ffb90944b12b9c11c8083bedd601acdc3"
+   "sha1": "8eba2d07a44fd80d714831d467c2f4722fba93cc"
   },
   {
    "path": "pages/404.json",
@@ -439,8 +439,8 @@
   },
   {
    "path": "pages/privacy-policy.json",
-   "size": 10622,
-   "sha1": "64c9ed6670236528fe434cc134bec1ebdcea7b5f"
+   "size": 7373,
+   "sha1": "16359e7b99af787f84282ff67b32e47c4d926f10"
   },
   {
    "path": "pages/products.json",
@@ -594,8 +594,8 @@
   },
   {
    "path": "pages/terms.json",
-   "size": 9293,
-   "sha1": "1e44cae029163b1a396d32335cf7fa508e6adb72"
+   "size": 9684,
+   "sha1": "d3cf9d50cc4435f579a7bbedfde8b14fe13453ad"
   },
   {
    "path": "pages/thank-you.json",

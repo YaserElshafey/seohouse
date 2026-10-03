@@ -69,3 +69,75 @@ add_filter(
 	},
 	20
 );
+
+/* ------------------------------------------------------------------ redirects of the previous site that are missing */
+
+/**
+ * Redirects in the content pack (data/options.json → sh_redirects) whose old address has no entry
+ * in «إعدادات سيو هاوس ← التحويلات». After a move, or when the settings were edited before the
+ * redirect list existed, the old site's 301 can be missing and its address answers 404.
+ *
+ * @return array<int,array{from:string,route:string,note:string}>
+ */
+function sh_redirects_missing(): array {
+	if ( ! class_exists( 'SH_Importer' ) || ! function_exists( 'get_field' ) ) {
+		return array();
+	}
+	$opts = json_decode( (string) @file_get_contents( SH_Importer::default_dir() . '/data/options.json' ), true ); // phpcs:ignore
+	$have = array();
+	foreach ( (array) sh_core_option( 'sh_redirects', array() ) as $r ) {
+		if ( ! empty( $r['from'] ) ) {
+			$have[ sh_redirect_path( (string) $r['from'] ) ] = true;
+		}
+	}
+	$out = array();
+	foreach ( (array) ( $opts['sh_redirects'] ?? array() ) as $r ) {
+		$from = (string) ( $r['from'] ?? '' );
+		if ( '' !== $from && empty( $have[ sh_redirect_path( $from ) ] ) ) {
+			$out[] = array( 'from' => $from, 'route' => (string) ( $r['to']['__route'] ?? '' ), 'note' => (string) ( $r['note'] ?? '' ) );
+		}
+	}
+	return $out;
+}
+
+/** Adds the missing ones after the existing entries (which stay as they are). Returns the count added. */
+function sh_redirects_add_missing(): int {
+	$missing = sh_redirects_missing();
+	if ( ! $missing ) {
+		return 0;
+	}
+	$g   = json_decode( (string) @file_get_contents( SH_CORE_DIR . 'acf-json/group_sh_options.json' ), true ); // phpcs:ignore
+	$key = '';
+	$walk = static function ( array $fields ) use ( &$walk, &$key ) {
+		foreach ( $fields as $f ) {
+			if ( 'sh_redirects' === ( $f['name'] ?? '' ) ) {
+				$key = $f['key'];
+			}
+			if ( ! empty( $f['sub_fields'] ) ) {
+				$walk( $f['sub_fields'] );
+			}
+		}
+	};
+	$walk( (array) ( $g['fields'] ?? array() ) );
+	if ( '' === $key ) {
+		return 0;
+	}
+	$rows = array();
+	foreach ( (array) sh_core_option( 'sh_redirects', array() ) as $r ) {
+		$rows[] = array( 'from' => (string) ( $r['from'] ?? '' ), 'to' => is_numeric( $r['to'] ?? '' ) ? (int) $r['to'] : (string) ( $r['to'] ?? '' ), 'note' => (string) ( $r['note'] ?? '' ) );
+	}
+	update_option( 'sh_redirects_before_add', array( 'time' => time(), 'rows' => $rows ), false );
+	$added = 0;
+	foreach ( $missing as $m ) {
+		$target = get_page_by_path( trim( $m['route'], '/' ) );
+		if ( ! $target || 'publish' !== $target->post_status ) {
+			continue; // only to a published page
+		}
+		$rows[] = array( 'from' => $m['from'], 'to' => (int) $target->ID, 'note' => $m['note'] );
+		++$added;
+	}
+	if ( $added ) {
+		update_field( $key, $rows, 'option' );
+	}
+	return $added;
+}

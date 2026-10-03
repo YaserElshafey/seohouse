@@ -2,12 +2,14 @@
 /**
  * Section "Hero" — SEO House - Terms.
  * Generated from the approved design by tools/design-import/convert.js.
- * To maintain this file by hand add the tag sh-manual (prefixed with @) as its own line here.
+ * Maintained by hand (2.6.0): the H1 falls back to the page title when the field is empty.
+ * @sh-manual
  *
  * @var array $args { f: layout values }
  */
 defined( 'ABSPATH' ) || exit;
 $f = $args['f'] ?? array();
+$f['title'] = ! empty( $f['title'] ) ? $f['title'] : get_the_title();
 ?>
 <section data-screen-label="Hero" style="position: relative; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
     <div aria-hidden="true" data-hero-grid style="position: absolute; inset: 0px; opacity: 0.07; background-image: linear-gradient(rgba(var(--sh-sky-rgb), 0.9) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--sh-sky-rgb), 0.9) 1px, transparent 1px); background-size: 72px 72px; mask-image: radial-gradient(90% 100% at 70% 10%, rgb(0, 0, 0), transparent 68%); pointer-events: none;"></div>
