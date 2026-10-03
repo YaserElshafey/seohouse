@@ -44,10 +44,18 @@ add_action(
 add_action(
 	'admin_notices',
 	static function () {
-		if ( ! current_user_can( 'manage_options' ) || get_option( 'sh_content_last_import' ) || ( isset( $_GET['page'] ) && SH_SETUP_SLUG === $_GET['page'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
+		if ( ! current_user_can( 'manage_options' ) || ( isset( $_GET['page'] ) && SH_SETUP_SLUG === $_GET['page'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification
 			return;
 		}
-		$url = admin_url( 'admin.php?page=' . SH_SETUP_SLUG );
+		$url  = admin_url( 'admin.php?page=' . SH_SETUP_SLUG );
+		$last = get_option( 'sh_content_last_import' );
+		if ( $last ) {
+			$pack = SH_Importer::pack_version( SH_Importer::default_dir() );
+			if ( '' !== $pack && version_compare( $pack, (string) ( $last['version'] ?? '0' ), '>' ) ) {
+				echo '<div class="notice notice-info"><p>' . esc_html( sprintf( __( 'تحديث محتوى التصميم %s متاح في SEO House Core. يطبَّق على الصفحات التي لم تعدّلها فقط.', 'seohouse-core' ), $pack ) ) . ' <a href="' . esc_url( $url ) . '">' . esc_html__( 'مراجعة التحديث', 'seohouse-core' ) . '</a></p></div>';
+			}
+			return;
+		}
 		echo '<div class="notice notice-warning"><p style="font-size:14px"><strong>' . esc_html__( 'الموقع لم يُهيّأ بعد بمحتوى التصميم المعتمد.', 'seohouse-core' ) . '</strong> ';
 		echo esc_html__( 'الصفحات والقوائم والصور والإعدادات جاهزة داخل SEO House Core، وتُنشأ بخطوة واحدة.', 'seohouse-core' ) . '</p>';
 		echo '<p><a class="button button-primary" href="' . esc_url( $url ) . '">' . esc_html__( 'تهيئة الموقع الآن', 'seohouse-core' ) . '</a></p></div>';
@@ -223,7 +231,12 @@ function sh_setup_checks(): array {
 	$out[]  = array( $pages >= 30, 'صفحات التصميم المنشورة', (string) $pages );
 	$bad    = 0;
 	$bad_samples = array();
+	$edited = 0;
 	foreach ( $imp->verify() as $r ) {
+		if ( ! empty( $r[4] ) ) {
+			++$edited; // an editor's change, kept on purpose
+			continue;
+		}
 		$bad += (int) $r[2];
 		foreach ( array_keys( $r[3] ) as $path ) {
 			if ( count( $bad_samples ) < 8 ) {
@@ -231,7 +244,7 @@ function sh_setup_checks(): array {
 			}
 		}
 	}
-	$out[]  = array( 0 === $bad, 'مطابقة نصوص وصور وروابط الأقسام مع التصميم', $bad ? $bad . ' اختلافًا؛ أمثلة: ' . implode( '، ', $bad_samples ) : 'مطابقة' );
+	$out[]  = array( 0 === $bad, 'مطابقة نصوص وصور وروابط الأقسام مع التصميم', ( $bad ? $bad . ' اختلافًا؛ أمثلة: ' . implode( '، ', $bad_samples ) : 'مطابقة' ) . ( $edited ? '؛ ' . $edited . ' صفحة عدّلتها من لوحة التحكم وبقيت كما هي' : '' ) );
 	$locs   = get_nav_menu_locations();
 	foreach ( array( 'primary' => 'القائمة الرئيسية', 'footer' => 'قائمة الفوتر', 'legal' => 'روابط أسفل الفوتر' ) as $loc => $label ) {
 		$n     = ! empty( $locs[ $loc ] ) ? count( (array) wp_get_nav_menu_items( $locs[ $loc ] ) ) : 0;
@@ -325,6 +338,9 @@ function sh_import_admin_page(): void {
 	echo '<tr><th style="width:14em">' . esc_html__( 'حزمة المحتوى', 'seohouse-core' ) . '</th><td>' . esc_html( ( $manifest['version'] ?? '' ) . ' — ' . ( $bundled ? __( 'مضمّنة في SEO House Core', 'seohouse-core' ) : __( 'مرفوعة', 'seohouse-core' ) ) ) . ' <code dir="ltr">' . esc_html( $manifest['designFingerprint'] ?? '' ) . '</code><br><small dir="ltr">' . esc_html( $dir ) . ' — ' . (int) $status['files'] . ' ' . esc_html__( 'ملفًا', 'seohouse-core' ) . ( $status['listed'] ? ' / ' . (int) $status['listed'] . ' ' . esc_html__( 'متوقعة، سليمة', 'seohouse-core' ) : '' ) . '</small></td></tr>';
 	echo '<tr><th>' . esc_html__( 'الحالة', 'seohouse-core' ) . '</th><td>' . ( $last ? esc_html( sprintf( __( 'هُيّئ في %1$s (حزمة %2$s)', 'seohouse-core' ), wp_date( 'Y-m-d H:i', $last['time'] ), $last['version'] ?? '' ) ) : '<strong>' . esc_html__( 'لم يُهيّأ بعد', 'seohouse-core' ) . '</strong>' ) . '</td></tr>';
 	echo '</tbody></table>';
+	if ( $last && ! empty( $manifest['version'] ) && version_compare( (string) $manifest['version'], (string) ( $last['version'] ?? '0' ), '>' ) ) {
+		echo '<div class="notice notice-info inline" style="max-width:60em"><p><strong>' . esc_html( sprintf( __( 'حزمة المحتوى %1$s أحدث مما هُيّئ به الموقع (%2$s).', 'seohouse-core' ), $manifest['version'], $last['version'] ?? '' ) ) . '</strong> ' . esc_html__( 'شغّل المعاينة ثم «إعادة التهيئة» لتطبيق التحديث: تُحدَّث الصفحات التي لم تعدّلها فقط، وتُضاف الإعدادات الجديدة إن كانت فارغة. الصفحات التي عدّلتها وروابطها وأرقامها تبقى كما هي.', 'seohouse-core' ) . '</p></div>';
+	}
 
 	echo '<h2>' . esc_html__( 'الخطوة 1: معاينة (تشغيل تجريبي)', 'seohouse-core' ) . '</h2>';
 	echo '<p>' . esc_html__( 'يعرض ما سيُنشأ أو يُحدَّث، دون أن يكتب أي شيء.', 'seohouse-core' ) . '</p>';

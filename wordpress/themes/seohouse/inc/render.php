@@ -55,6 +55,9 @@ function sh_render_sections( string $key ): void {
 			continue;
 		}
 		$layout = (string) ( $row['acf_fc_layout'] ?? '' );
+		if ( str_starts_with( $layout, 'reviews' ) && '' === sh_reviews_code() ) {
+			continue; // no reviews source connected: no example testimonials
+		}
 		$file   = $layout ? sh_section_file( $key, $layout ) : '';
 		if ( ! $file ) {
 			continue;

@@ -45,7 +45,17 @@ const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, 
 const phpStr = s => `'${String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`;
 
 // ------------------------------------------------------------------ inputs
-const pages = cfg.pages.map(p => ({ ...p, x: JSON.parse(fs.readFileSync(path.join(__dirname, 'extract', p.key + '.json'), 'utf8')) }));
+// approved wording changes on top of the design export (copy-edits.json); every edit must still match
+const COPY = JSON.parse(fs.readFileSync(path.join(__dirname, 'copy-edits.json'), 'utf8')).edits;
+const readExtract = key => {
+  let raw = fs.readFileSync(path.join(__dirname, 'extract', key + '.json'), 'utf8');
+  for (const e of COPY.filter(c => c.page === key)) {
+    if (!raw.includes(e.from)) throw new Error(`copy-edits.json: "${e.from}" not found in ${key}`);
+    raw = raw.split(e.from).join(e.to);
+  }
+  return JSON.parse(raw);
+};
+const pages = cfg.pages.map(p => ({ ...p, x: readExtract(p.key) }));
 const routeSet = new Set(pages.map(p => p.route).filter(r => r.startsWith('/')));
 ['/blog/', '/team/'].forEach(r => routeSet.add(r));
 const teamData = hooks.loadTeam(designDir);
@@ -103,7 +113,7 @@ const icons = new Map();
 const assets = new Set();
 const svgChoices = [];
 const report = [];
-const manifest = { version: '2.2.0', generated: new Date().toISOString().slice(0, 10), designFingerprint: hooks.fingerprint(designDir), pages: [] };
+const manifest = { version: '2.3.0', generated: new Date().toISOString().slice(0, 10), designFingerprint: hooks.fingerprint(designDir), pages: [] };
 const fieldMap = [];
 const seeds = [];
 

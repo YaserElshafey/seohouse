@@ -84,17 +84,34 @@ function sh_image( $id, array $attrs = array(), string $alt_fallback = '', strin
 	return wp_get_attachment_image( $id, $size, false, $attrs );
 }
 
-/** Approved design SVG (platform logos) shipped with the theme. */
+/** Platform or tool logo: the dashboard library (Core) first, then the design SVG shipped with the theme. */
 function sh_svg_img( $file, string $alt = '', array $attrs = array() ): string {
 	$file = ltrim( (string) $file, '/' );
-	if ( '' === $file || ! preg_match( '#^assets/platforms/[a-z0-9/_-]+\.svg$#i', $file ) || ! file_exists( SH_THEME_DIR . '/' . $file ) ) {
+	$src  = '';
+	$url  = '';
+	// platforms and tools library (Core): the logo and link chosen in the dashboard
+	$p = ( '' !== $file && function_exists( 'sh_core_platform' ) ) ? sh_core_platform( $file ) : null;
+	if ( $p ) {
+		$src = sh_core_platform_logo_url( $p );
+		$url = (string) $p['url'];
+	}
+	// otherwise the design's own file shipped with the theme
+	if ( '' === $src && '' !== $file && preg_match( '#^assets/platforms/[a-z0-9/_-]+\.svg$#i', $file ) && file_exists( SH_THEME_DIR . '/' . $file ) ) {
+		$src = SH_THEME_URI . '/' . $file;
+	}
+	if ( '' === $src ) {
 		return '';
 	}
-	$out = '<img src="' . esc_url( SH_THEME_URI . '/' . $file ) . '" alt="' . esc_attr( $alt ) . '"';
+	$out = '<img src="' . esc_url( $src ) . '" alt="' . esc_attr( $alt ) . '"';
 	foreach ( $attrs as $k => $v ) {
 		$out .= ' ' . esc_attr( $k ) . ( '' === $v ? '' : '="' . esc_attr( $v ) . '"' );
 	}
-	return $out . ' decoding="async">';
+	$out .= ' decoding="async">';
+	if ( $url ) {
+		$label = '' !== $alt ? $alt : (string) ( $p['name'] ?? '' );
+		$out   = '<a href="' . esc_url( $url ) . '" target="_blank" rel="noopener" aria-label="' . esc_attr( $label ) . '" style="display:contents">' . $out . '</a>';
+	}
+	return $out;
 }
 
 /** Inline SVG icon from the design icon library (inc/generated/icons.php). */

@@ -228,9 +228,19 @@ function options() {
     sh_article_cta: { title: 'تريد معرفة وضع موقعك؟', text: 'مكالمة مجانية مدتها 30 دقيقة نراجع فيها موقعك ونحدد الأولوية.', label: 'احجز استشارة', link: { __route: '/contact/' } },
     sh_client_logos: logos,
     sh_reviews_show_examples: 1,
-    sh_redirects: REDIRECTS.map(r => ({ from: r.from, to: { __route: r.to }, note: r.note }))
+    sh_redirects: REDIRECTS.map(r => ({ from: r.from, to: { __route: r.to }, note: r.note })),
+    // platforms and tools library: the design's logo files as first entries; `ref` is the value the
+    // page sections already store, so they resolve to these entries (Core inc/platforms.php)
+    sh_platforms: PLATFORMS.map(([file, name]) => ({ name, logo: { __asset: addAsset(`assets/platforms/official/${file}.svg`), alt: name }, url: '', ref: `assets/platforms/official/${file}.svg` }))
   });
 }
+
+const PLATFORMS = [
+  ['wordpress', 'ووردبريس'], ['woocommerce', 'ووكومرس'], ['shopify', 'شوبيفاي'], ['salla', 'سلة'], ['webflow', 'ويب فلو'],
+  ['react', 'رياكت'], ['nextjs', 'نكست'], ['gsc', 'سيرش كونسول'], ['ga4', 'جوجل أناليتكس'], ['looker', 'لوكر ستوديو']
+];
+// sh_reviews_show_examples stays in options.json only so sites initialised before 2.3.0 keep matching
+// their settings fingerprint; the theme never shows example reviews (Core 2.3.0).
 
 // 301 only to an equivalent page of the new design (same topic and purpose as the published URL)
 const REDIRECTS = [

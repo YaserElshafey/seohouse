@@ -9,20 +9,36 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
+ * Reviews shortcode for a page: the page's own override, otherwise the shared one
+ * («إعدادات سيو هاوس ← التكاملات»). Only a single registered shortcode is accepted
+ * (e.g. [trustindex no-registration=google]); anything else counts as empty.
+ */
+function sh_reviews_code( int $post_id = 0 ): string {
+	$post_id = $post_id ? $post_id : (int) get_queried_object_id();
+	foreach ( array( $post_id ? sh_field( 'sh_reviews_shortcode_page', $post_id, '' ) : '', sh_option( 'sh_reviews_shortcode', '' ) ) as $code ) {
+		$code = trim( (string) $code );
+		if ( preg_match( '/^\[([A-Za-z0-9_-]+)(?:\s[^\[\]]*)?\]$/', $code, $m ) && shortcode_exists( $m[1] ) ) {
+			return $code;
+		}
+	}
+	return '';
+}
+
+/**
  * A live data source replaces the design example when connected.
- * Returns true when it printed something (the design example is then skipped).
+ * Returns true when the design example must be skipped. Reviews never fall back to
+ * example testimonials: without a shortcode the whole section is left out (sh_render_sections).
  */
 function sh_dynamic_slot( string $name ): bool {
 	if ( 'reviews-slot' === $name ) {
-		$code = trim( (string) sh_option( 'sh_reviews_shortcode', '' ) );
-		if ( '' !== $code && str_starts_with( $code, '[' ) ) {
-			echo '<div class="sh-reviews-live">' . do_shortcode( $code ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput -- shortcode output.
-			return true;
+		static $done = array();
+		$code = sh_reviews_code();
+		$id   = (int) get_queried_object_id();
+		if ( '' !== $code && empty( $done[ $id ] ) ) {
+			$done[ $id ] = true; // one reviews widget per page
+			echo '<div class="sh-reviews-live" data-reviews-live>' . do_shortcode( $code ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput -- output of a registered shortcode chosen by an editor.
 		}
-		// Design examples are only shown while they are declared as examples (option on by default).
-		if ( ! sh_option( 'sh_reviews_show_examples', true ) ) {
-			return true;
-		}
+		return true;
 	}
 	return false;
 }

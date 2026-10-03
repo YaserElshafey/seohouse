@@ -75,6 +75,12 @@ const options = group('options', 'إعدادات سيو هاوس', [
 
   tab(O, 'shared', 'المحتوى المشترك'),
   F(O, 'client_logos', 'شعارات العملاء', 'repeater', { name: 'sh_client_logos', layout: 'table', button_label: 'إضافة شعار', collapsed: 'name', instructions: 'الشعارات المعتمدة فقط. تظهر في الشريط المتحرك بنفس الترتيب.', sub_fields: [S('name', 'اسم العميل', 'text', { required: 1 }), S('logo', 'الشعار', 'image', { return_format: 'id', preview_size: 'thumbnail', required: 1 }), S('url', 'رابط (اختياري)', 'url')] }),
+  F(O, 'platforms', 'المنصات والأدوات', 'repeater', { name: 'sh_platforms', layout: 'table', button_label: 'إضافة منصة أو أداة', collapsed: 'name', instructions: 'شعارات المنصات والأدوات في أقسام «منصات نعمل عليها» وأدوات القياس. كل قسم في الصفحات يختار منها ما يعرضه وترتيبه، والترتيب هنا ترتيبها في قوائم الاختيار. غيّر الشعار من مكتبة الوسائط (SVG أو PNG أو WebP بخلفية شفافة)؛ يظهر بنفس المقاس في كل الأقسام.', sub_fields: [
+    S('name', 'الاسم', 'text', { required: 1, instructions: 'يُستخدم نصًا بديلًا للشعار عند عدم وجود اسم ظاهر بجانبه.' }),
+    S('logo', 'الشعار', 'image', { return_format: 'id', preview_size: 'thumbnail', library: 'all' }),
+    S('url', 'رابط (اختياري)', 'url', { instructions: 'إن أُدخل صار الشعار رابطًا يفتح في نافذة جديدة.' }),
+    S('ref', 'المعرّف الداخلي', 'text', { instructions: 'يربط الشعارات المعتمدة بالأقسام؛ لا يظهر في المحرر.' })
+  ] }),
   F(O, 'article_cta', 'دعوة الاستشارة بجانب المقالات', 'group', { name: 'sh_article_cta', layout: 'block', sub_fields: [
     S('title', 'العنوان', 'text', { default_value: 'تريد معرفة وضع موقعك؟' }),
     S('text', 'النص', 'textarea', { rows: 2, new_lines: '', default_value: 'مكالمة مجانية مدتها 30 دقيقة نراجع فيها موقعك ونحدد الأولوية.' }),
@@ -84,8 +90,7 @@ const options = group('options', 'إعدادات سيو هاوس', [
   F(O, 'home_cases', 'دراسات الحالة المختارة للأقسام المشتركة', 'relationship', { name: 'sh_featured_cases', post_type: ['case_study'], filters: ['search'], return_format: 'id', max: 6, instructions: 'فارغة = أحدث الحالات المنشورة.' }),
 
   tab(O, 'integrations', 'التكاملات'),
-  F(O, 'reviews_shortcode', 'كود مراجعات جوجل (Trustindex أو غيره)', 'text', { name: 'sh_reviews_shortcode', instructions: 'مثال: [trustindex no-registration=google]. عند إضافته يحل محل الأمثلة في أقسام التقييمات.' }),
-  F(O, 'reviews_show_examples', 'إظهار أمثلة التقييمات المعلنة حتى ربط المصدر', 'true_false', { name: 'sh_reviews_show_examples', ui: 1, default_value: 1, instructions: 'الأمثلة موسومة «محتوى مؤقت». أطفئ الخيار لإخفاء القسم تمامًا حتى الربط.' }),
+  F(O, 'reviews_shortcode', 'شورت كود التقييمات (Trustindex أو غيره)', 'text', { name: 'sh_reviews_shortcode', instructions: 'مثال: [trustindex no-registration=google]. يظهر في مكان قسم التقييمات في كل صفحة فيها هذا القسم، ويمكن تغييره لصفحة بعينها من «التقييمات في هذه الصفحة» في محررها. بلا شورت كود لإضافة مفعّلة لا يظهر قسم التقييمات، ولا تُعرض شهادات تجريبية.' }),
   F(O, 'gtm', 'معرّف Google Tag Manager', 'text', { name: 'sh_gtm_id', placeholder: 'GTM-XXXXXXX', instructions: 'مصدر تتبع واحد. لا يُحمّل إذا كانت إضافة أخرى تضيف GTM.' }),
   F(O, 'ga4', 'معرّف GA4 (إن لم يُستخدم GTM)', 'text', { name: 'sh_ga4_id', placeholder: 'G-XXXXXXX' }),
   F(O, 'search_console', 'رمز التحقق من Search Console', 'text', { name: 'sh_gsc_verification' }),
@@ -180,6 +185,7 @@ const post = group('post', 'خيارات المقال', [
 // ------------------------------------------------------------------ SEO + navigation (all content)
 const G = 'seo';
 const seo = group('seo', 'السيو ومسار التنقل', [
+  F(G, 'rankmath_msg', 'Rank Math', 'message', { message: 'Rank Math مفعّلة: عنوان البحث ووصفه وصورة المشاركة ومنع الفهرسة تُحرَّر من صندوق Rank Math في هذه الصفحة. الحقول هنا لمسار التنقل ونوع الصفحة في البيانات المنظمة.' }),
   F(G, 'title', 'عنوان SEO', 'text', { name: 'sh_seo_title', maxlength: 70, instructions: 'فارغ = عنوان الصفحة + اسم الموقع. منفصل عن H1 ونص القائمة.' }),
   F(G, 'description', 'وصف SEO', 'textarea', { name: 'sh_seo_description', rows: 2, maxlength: 170, new_lines: '' }),
   F(G, 'noindex', 'منع الفهرسة (noindex)', 'true_false', { name: 'sh_seo_noindex', ui: 1, default_value: 0 }),
@@ -204,8 +210,16 @@ const blogPage = group('blog_page', 'صفحة المدونة', [
   F(B, 'intro', 'وصف المدونة تحت العنوان', 'textarea', { name: 'sh_blog_intro', rows: 2, new_lines: '' })
 ], [[{ param: 'page_type', operator: '==', value: 'posts_page' }]], { position: 'acf_after_title', hide_on_screen: ['the_content', 'excerpt', 'discussion', 'comments'] });
 
-for (const g0 of [options, caseStudy, team, post, seo, menu, blogPage]) {
+// ------------------------------------------------------------------ reviews override (pages with a reviews section)
+const RV = 'rv';
+const reviewPages = JSON.parse(fs.readFileSync(path.join(repo, 'content-pack/manifest.json'), 'utf8')).pages
+  .filter(p => p.kind === 'page' && (p.layouts || []).some(l => /^reviews/.test(l))).map(p => p.key);
+const pageReviews = group('page_reviews', 'التقييمات في هذه الصفحة', [
+  F(RV, 'shortcode', 'شورت كود التقييمات لهذه الصفحة (اختياري)', 'text', { name: 'sh_reviews_shortcode_page', placeholder: '[trustindex no-registration=google]', instructions: 'فارغ = الشورت كود العام من «إعدادات سيو هاوس ← التكاملات». يُعرض في مكان قسم التقييمات بنفس تصميمه. بلا شورت كود لا يظهر القسم.' })
+], reviewPages.map(k => [{ param: 'page_template', operator: '==', value: `page-templates/${k}.php` }]), { position: 'side', menu_order: 40 });
+
+for (const g0 of [options, caseStudy, team, post, seo, menu, blogPage, pageReviews]) {
   const g = assertFree({ ...g0, fields: toFree(g0.fields) }); // repeaters → sh_rows (ACF free)
   fs.writeFileSync(path.join(OUT, `${g.key}.json`), JSON.stringify(g, null, 2) + '\n');
 }
-console.log('wrote', 6, 'groups,', counter, 'fields');
+console.log('wrote', 8, 'groups,', counter, 'fields');

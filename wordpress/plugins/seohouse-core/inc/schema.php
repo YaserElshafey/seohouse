@@ -226,7 +226,14 @@ function sh_schema_page_type( int $id ): string {
 		'team'    => 'collection',
 		'sectors' => 'collection',
 	);
-	return $map[ $key ] ?? 'webpage';
+	if ( isset( $map[ $key ] ) ) {
+		return $map[ $key ];
+	}
+	// service, sector and country pages describe a service the company provides
+	if ( preg_match( '/^(seo|seo-[a-z-]+|web-[a-z-]+|web-design|stores|stores-[a-z]+|products|sector-[a-z-]+)$/', $key ) ) {
+		return 'service';
+	}
+	return 'webpage';
 }
 
 /**

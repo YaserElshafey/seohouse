@@ -377,7 +377,8 @@ class SH_Importer {
 		if ( $this->want( 'pages' ) ) {
 			foreach ( $this->load_pages( $manifest ) as $page ) {
 				$id = (int) ( $this->keys[ 'page:' . $page['key'] ] ?? 0 );
-				if ( ! $id || ! get_post_status( $id ) ) {
+				// a dry run gives pages it would create a placeholder (negative) ID
+				if ( ! $id || ( $id > 0 && ! get_post_status( $id ) ) ) {
 					$missing_pages[] = $page['route'];
 				}
 			}
@@ -387,9 +388,14 @@ class SH_Importer {
 			return;
 		}
 		if ( $this->want( 'pages' ) && ! $this->dry ) {
-			$bad = 0;
+			$bad     = 0;
 			$samples = array();
 			foreach ( $this->verify() as $check ) {
+				if ( ! empty( $check[4] ) ) {
+					// differences an editor made are kept, not a failed import
+					$this->note( 'protected', 'page:' . $check[0], 'عُدّلت من لوحة التحكم؛ بقيت تعديلاتك (' . (int) $check[2] . ' اختلافًا عن التصميم).' );
+					continue;
+				}
 				$bad += (int) $check[2];
 				foreach ( array_keys( $check[3] ) as $path ) {
 					if ( count( $samples ) < 8 ) {
@@ -412,6 +418,11 @@ class SH_Importer {
 			$this->step_reading();
 		}
 		wp_defer_term_counting( false );
+		if ( ! $this->dry && function_exists( 'sh_rankmath_active' ) && sh_rankmath_active() ) {
+			// one place to edit: SEO values go to Rank Math's own fields, only where those are empty
+			$moved = sh_rankmath_apply();
+			$this->note( 'info', 'rank-math', $moved ? 'نُقلت ' . $moved . ' قيمة سيو إلى حقول Rank Math الفارغة' : 'حقول Rank Math مكتملة؛ لم يُنقل شيء' );
+		}
 		if ( ! $this->dry ) {
 			flush_rewrite_rules( false );
 			update_option( 'sh_content_last_import', array( 'time' => time(), 'version' => $manifest['version'] ?? '', 'fingerprint' => $manifest['designFingerprint'] ?? '', 'counts' => $this->counts ) );
@@ -577,7 +588,19 @@ class SH_Importer {
 		$tmp = wp_tempnam( basename( $file ) );
 		copy( $file, $tmp );
 		$name = sanitize_file_name( preg_replace( '/\.png\.png$/i', '.png', basename( $rel ) ) );
+		// platform logos are SVG files from the pack itself: allowed for this one sideload only
+		$svg  = (bool) preg_match( '/\.svg$/i', $name );
+		$mime = static fn( $m ) => $m + array( 'svg' => 'image/svg+xml' );
+		$chk  = static fn( $d, $f, $n ) => preg_match( '/\.svg$/i', (string) $n ) ? array( 'ext' => 'svg', 'type' => 'image/svg+xml', 'proper_filename' => false ) : $d;
+		if ( $svg ) {
+			add_filter( 'upload_mimes', $mime );
+			add_filter( 'wp_check_filetype_and_ext', $chk, 10, 3 );
+		}
 		$id   = media_handle_sideload( array( 'name' => $name, 'tmp_name' => $tmp ), 0, $alt ? $alt : null );
+		if ( $svg ) {
+			remove_filter( 'upload_mimes', $mime );
+			remove_filter( 'wp_check_filetype_and_ext', $chk, 10 );
+		}
 		if ( is_wp_error( $id ) ) {
 			@unlink( $tmp ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
 			$this->note( 'failed', 'asset:' . $rel, $id->get_error_message() );
@@ -903,13 +926,28 @@ class SH_Importer {
 		if ( ! $id ) {
 			return;
 		}
+		$built = $this->page_fields( $seed );
+		if ( null === $built ) {
+			return;
+		}
+		[ $fields, $keys ] = $built;
+		$this->write_fields( $id, 'pages', $key, $fields, $keys, $this->page_sections_mismatch( $seed, $id ) );
+	}
+
+	/**
+	 * Field values the importer writes for a page (sections, SEO, breadcrumb, extras).
+	 *
+	 * @return array{0:array<string,mixed>,1:array<string,string>}|null [ name => value, name => field key ]
+	 */
+	private function page_fields( array $seed ): ?array {
+		$key    = 'page:' . $seed['key'];
 		$fields = array();
 		$keys   = array();
 		if ( 'page' === $seed['kind'] ) {
 			$group = json_decode( (string) file_get_contents( SH_CORE_DIR . 'acf-json/group_sh_page_' . str_replace( '-', '_', $seed['key'] ) . '.json' ), true ); // phpcs:ignore
 			if ( ! $group ) {
 				$this->note( 'failed', $key, 'مجموعة الحقول غير موجودة' );
-				return;
+				return null;
 			}
 			// one ACF Group field per design section ("s_<layout>"), written by field key
 			$section_keys = array();
@@ -943,7 +981,17 @@ class SH_Importer {
 			$extra = (array) $this->json( 'data/extra.json' );
 		}
 		$fields = array_merge( $fields, (array) ( $extra[ $key ] ?? array() ) );
-		$this->write_fields( $id, 'pages', $key, $fields, $keys, $this->page_sections_mismatch( $seed, $id ) );
+		return array( $fields, $keys );
+	}
+
+	/** A page an editor changed after the import (its fields no longer match the importer's hash). */
+	private function page_edited( array $seed, int $id ): bool {
+		$stored = (string) get_post_meta( $id, self::META_HASH, true );
+		if ( '' === $stored ) {
+			return false;
+		}
+		$built = $this->page_fields( $seed );
+		return null !== $built && $stored !== $this->state_hash( $id, array_keys( $built[0] ) );
 	}
 
 	/** Compare the current section fields with the imported design before deciding on a safe retry. */
@@ -1153,10 +1201,27 @@ class SH_Importer {
 
 	/* ================================================================ options */
 
+	/**
+	 * Settings that arrived after a site's first initialisation (name => Core version). On such a
+	 * site they are added once if still empty, whatever the protection state of the others.
+	 */
+	const OPTIONS_ADDED = array( 'sh_platforms' => '2.3.0' );
+
 	private function step_options(): void {
-		$opts = (array) $this->json( 'data/options.json' );
-		$hash = get_option( 'sh_options_import_hash' );
-		$now  = md5( wp_json_encode( array_map( static fn( $n ) => get_field( $n, 'option', false ), array_keys( $opts ) ) ) );
+		$opts  = (array) $this->json( 'data/options.json' );
+		$hash  = get_option( 'sh_options_import_hash' );
+		$read  = static fn( array $names ) => md5( wp_json_encode( array_map( static fn( $n ) => get_field( $n, 'option', false ), $names ) ) );
+		// names the stored hash covers (sites initialised before 2.3.0 did not record them)
+		$covered = get_option( 'sh_options_import_keys' );
+		if ( ! is_array( $covered ) ) {
+			$covered = array_values( array_diff( array_keys( $opts ), array_keys( self::OPTIONS_ADDED ) ) );
+		}
+		$names = array_values( array_intersect( array_keys( $opts ), $covered ) );
+
+		if ( $hash ) {
+			$this->seed_new_options( $opts, $covered, $hash === $read( $names ) );
+		}
+		$now = $read( $names );
 		if ( $hash && ! $this->wants_update( 'options', 'options' ) ) {
 			$this->note( 'skipped', 'options', 'الإعدادات مجهّزة مسبقًا' );
 			return;
@@ -1173,8 +1238,40 @@ class SH_Importer {
 		foreach ( $resolved as $name => $value ) {
 			update_field( $this->field_key( $name ), $value, 'option' );
 		}
-		update_option( 'sh_options_import_hash', md5( wp_json_encode( array_map( static fn( $n ) => get_field( $n, 'option', false ), array_keys( $opts ) ) ) ), false );
+		update_option( 'sh_options_import_hash', $read( array_keys( $opts ) ), false );
+		update_option( 'sh_options_import_keys', array_keys( $opts ), false );
 		$this->note( $hash ? 'updated' : 'created', 'options', 'إعدادات سيو هاوس' );
+	}
+
+	/**
+	 * Adds settings the site has never received (empty and not covered by its hash). The other
+	 * settings are not touched. When the covered settings are still the importer's state, the
+	 * hash is extended to the added ones so later updates keep working.
+	 */
+	private function seed_new_options( array $opts, array $covered, bool $untouched ): void {
+		$added = array();
+		foreach ( array_diff( array_keys( $opts ), $covered ) as $name ) {
+			$cur = get_field( $name, 'option', false );
+			if ( ! ( null === $cur || '' === $cur || array() === $cur || false === $cur ) ) {
+				continue; // already has a value (set by hand): left as is
+			}
+			if ( $this->dry ) {
+				$this->note( 'created', 'options:' . $name, 'إعداد جديد سيُضاف (تجريبي)' );
+				continue;
+			}
+			update_field( $this->field_key( $name ), $this->resolve( $opts[ $name ] ), 'option' );
+			$added[] = $name;
+			$this->note( 'created', 'options:' . $name, 'إعداد جديد أُضيف' );
+		}
+		if ( $this->dry || ! $added ) {
+			return;
+		}
+		$covered = array_values( array_unique( array_merge( $covered, $added ) ) );
+		update_option( 'sh_options_import_keys', $covered, false );
+		if ( $untouched ) {
+			$names = array_values( array_intersect( array_keys( $opts ), $covered ) );
+			update_option( 'sh_options_import_hash', md5( wp_json_encode( array_map( static fn( $n ) => get_field( $n, 'option', false ), $names ) ) ), false );
+		}
 	}
 
 	/* ================================================================ verification */
@@ -1183,7 +1280,7 @@ class SH_Importer {
 	 * Compare the design values in the pack with what WordPress now returns
 	 * (sections, headings, paragraphs, links, images) — words are never rewritten.
 	 *
-	 * @return array<int,array{0:string,1:int,2:int,3:array}> [key, fields checked, mismatches, samples]
+	 * @return array<int,array{0:string,1:int,2:int,3:array,4:bool}> [key, fields checked, mismatches, samples, edited by an editor]
 	 */
 	public function verify(): array {
 		$this->index_existing();
@@ -1211,7 +1308,8 @@ class SH_Importer {
 					$bad[ $path ] = array( $v, $h );
 				}
 			}
-			$out[] = array( $seed['key'], count( $want ), count( $bad ), array_slice( $bad, 0, 5, true ) );
+			// [4]: the differences come from an editor's change after the import (kept, not a failure)
+			$out[] = array( $seed['key'], count( $want ), count( $bad ), array_slice( $bad, 0, 5, true ), $bad && $this->page_edited( $seed, (int) $id ) );
 		}
 		return $out;
 	}

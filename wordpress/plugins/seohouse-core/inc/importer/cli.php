@@ -192,13 +192,19 @@ class SH_CLI_Command {
 				WP_CLI::warning( "$source: الصفحة غير موجودة" );
 				continue;
 			}
-			$now = (string) get_field( $fkey, $ids[0], false );
+			// with Rank Math its own description field is the one the editor sees
+			$rm  = function_exists( 'sh_rankmath_active' ) && sh_rankmath_active();
+			$now = $rm ? (string) get_post_meta( $ids[0], 'rank_math_description', true ) : (string) get_field( $fkey, $ids[0], false );
 			if ( '' !== trim( $now ) && ! $force ) {
 				WP_CLI::log( "skipped  $source — يوجد وصف: $now" );
 				continue;
 			}
 			if ( ! $dry ) {
-				update_field( $fkey, $text, $ids[0] );
+				if ( $rm ) {
+					update_post_meta( $ids[0], 'rank_math_description', wp_slash( $text ) );
+				} else {
+					update_field( $fkey, $text, $ids[0] );
+				}
 			}
 			WP_CLI::log( ( $dry ? 'would set ' : 'set      ' ) . "$source — $text" );
 		}
@@ -231,6 +237,34 @@ class SH_CLI_Command {
 		foreach ( $imp->counts as $k => $v ) {
 			WP_CLI::log( str_pad( $k, 10 ) . ' ' . $v );
 		}
+	}
+
+	/**
+	 * Moves Core's search title, description, social image and noindex into Rank Math's own
+	 * fields — only where those are empty. Values written in Rank Math are never changed.
+	 *
+	 * ## OPTIONS
+	 *
+	 * [--dry-run]
+	 * : List what would be moved.
+	 *
+	 * @subcommand rankmath-migrate
+	 */
+	public function rankmath_migrate( $args, $assoc ) {
+		if ( ! sh_rankmath_active() ) {
+			WP_CLI::error( 'Rank Math غير مفعّلة.' );
+		}
+		$plan = sh_rankmath_plan();
+		foreach ( $plan as $r ) {
+			$v = is_array( $r['core'] ) ? implode( ',', $r['core'] ) : $r['core'];
+			WP_CLI::log( sprintf( '%-5s %-10s %-20s %s — %s', $r['action'], $r['type'], $r['field'], $r['title'], $v ) );
+		}
+		$c = array_count_values( wp_list_pluck( $plan, 'action' ) );
+		if ( ! empty( $assoc['dry-run'] ) ) {
+			WP_CLI::success( sprintf( 'تجريبي: سيُنقل %d، مطابق %d، يبقى %d', $c['fill'] ?? 0, $c['same'] ?? 0, $c['keep'] ?? 0 ) );
+			return;
+		}
+		WP_CLI::success( sprintf( 'نُقلت %d قيمة (مطابق %d، بقي %d كما هو).', sh_rankmath_apply( $plan ), $c['same'] ?? 0, $c['keep'] ?? 0 ) );
 	}
 }
 

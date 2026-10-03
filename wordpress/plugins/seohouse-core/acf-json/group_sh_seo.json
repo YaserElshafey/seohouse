@@ -3,6 +3,15 @@
   "title": "السيو ومسار التنقل",
   "fields": [
     {
+      "key": "field_sh_seo_rankmath_msg",
+      "label": "Rank Math",
+      "name": "rankmath_msg",
+      "type": "message",
+      "instructions": "",
+      "required": 0,
+      "message": "Rank Math مفعّلة: عنوان البحث ووصفه وصورة المشاركة ومنع الفهرسة تُحرَّر من صندوق Rank Math في هذه الصفحة. الحقول هنا لمسار التنقل ونوع الصفحة في البيانات المنظمة."
+    },
+    {
       "key": "field_sh_seo_title",
       "label": "عنوان SEO",
       "name": "sh_seo_title",

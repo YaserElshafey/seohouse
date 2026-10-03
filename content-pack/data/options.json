@@ -140,5 +140,97 @@
       },
       "note": "نفس السلوك الحالي: الموقع المنشور يحوّل هذا الرابط 301 إلى /sectors/ecommerce/ (فُحص 2026-10-02). والوجهة الجديدة بنفس النية: سيو المتاجر الإلكترونية (الفئات والمنتجات، الجانب التقني، سلة/زد/شوبيفاي/ووكومرس، القياس بالطلبات والمبيعات). — للمراجعة"
     }
+  ],
+  "sh_platforms": [
+    {
+      "name": "ووردبريس",
+      "logo": {
+        "__asset": "assets/platforms/official/wordpress.svg",
+        "alt": "ووردبريس"
+      },
+      "url": "",
+      "ref": "assets/platforms/official/wordpress.svg"
+    },
+    {
+      "name": "ووكومرس",
+      "logo": {
+        "__asset": "assets/platforms/official/woocommerce.svg",
+        "alt": "ووكومرس"
+      },
+      "url": "",
+      "ref": "assets/platforms/official/woocommerce.svg"
+    },
+    {
+      "name": "شوبيفاي",
+      "logo": {
+        "__asset": "assets/platforms/official/shopify.svg",
+        "alt": "شوبيفاي"
+      },
+      "url": "",
+      "ref": "assets/platforms/official/shopify.svg"
+    },
+    {
+      "name": "سلة",
+      "logo": {
+        "__asset": "assets/platforms/official/salla.svg",
+        "alt": "سلة"
+      },
+      "url": "",
+      "ref": "assets/platforms/official/salla.svg"
+    },
+    {
+      "name": "ويب فلو",
+      "logo": {
+        "__asset": "assets/platforms/official/webflow.svg",
+        "alt": "ويب فلو"
+      },
+      "url": "",
+      "ref": "assets/platforms/official/webflow.svg"
+    },
+    {
+      "name": "رياكت",
+      "logo": {
+        "__asset": "assets/platforms/official/react.svg",
+        "alt": "رياكت"
+      },
+      "url": "",
+      "ref": "assets/platforms/official/react.svg"
+    },
+    {
+      "name": "نكست",
+      "logo": {
+        "__asset": "assets/platforms/official/nextjs.svg",
+        "alt": "نكست"
+      },
+      "url": "",
+      "ref": "assets/platforms/official/nextjs.svg"
+    },
+    {
+      "name": "سيرش كونسول",
+      "logo": {
+        "__asset": "assets/platforms/official/gsc.svg",
+        "alt": "سيرش كونسول"
+      },
+      "url": "",
+      "ref": "assets/platforms/official/gsc.svg"
+    },
+    {
+      "name": "جوجل أناليتكس",
+      "logo": {
+        "__asset": "assets/platforms/official/ga4.svg",
+        "alt": "جوجل أناليتكس"
+      },
+      "url": "",
+      "ref": "assets/platforms/official/ga4.svg"
+    },
+    {
+      "name": "لوكر ستوديو",
+      "logo": {
+        "__asset": "assets/platforms/official/looker.svg",
+        "alt": "لوكر ستوديو"
+      },
+      "url": "",
+      "ref": "assets/platforms/official/looker.svg"
+    }
   ]
 }

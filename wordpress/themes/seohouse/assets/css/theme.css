@@ -106,3 +106,9 @@ img { height: auto; }
 .sh-hv-chip[aria-current]:hover { background: var(--sh-lime) !important; color: var(--sh-ink) !important; }
 [data-sh-booking] label { min-width: 0; }
 [data-sh-booking] input { width: 100%; min-width: 0; box-sizing: border-box; }
+
+/* Reviews from the connected plugin (shortcode) replace the example cards: the design's
+   carousel arrows and dots belong to those cards, so they are hidden; the plugin's own
+   controls inside the widget stay. */
+[data-screen-label="Reviews"]:has([data-reviews-live]) button[aria-label]:not([data-reviews-live] *) { display: none; }
+.sh-reviews-live { margin-top: 24px; min-width: 0; max-width: 100%; overflow-x: clip; }

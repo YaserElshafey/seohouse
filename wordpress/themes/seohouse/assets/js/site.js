@@ -337,4 +337,7 @@
 		var h = a.getAttribute('href');
 		window.dataLayer.push({ event: 'sh_cta_click', sh_target: h.indexOf('tel:') === 0 ? 'phone' : h.indexOf('mailto:') === 0 ? 'email' : h.indexOf('wa.me') >= 0 ? 'whatsapp' : h.charAt(0) === '#' ? 'booking' : 'contact' });
 	});
+
+	/* ---------------------------------------------------------------- marquee copies: links in the hidden duplicate set are not focusable */
+	$$('[aria-hidden="true"] a[href]').forEach(function (a) { a.setAttribute('tabindex', '-1'); });
 })();

@@ -503,6 +503,54 @@
       ]
     },
     {
+      "key": "field_sh_opt_platforms",
+      "label": "المنصات والأدوات",
+      "name": "sh_platforms",
+      "type": "sh_rows",
+      "instructions": "شعارات المنصات والأدوات في أقسام «منصات نعمل عليها» وأدوات القياس. كل قسم في الصفحات يختار منها ما يعرضه وترتيبه، والترتيب هنا ترتيبها في قوائم الاختيار. غيّر الشعار من مكتبة الوسائط (SVG أو PNG أو WebP بخلفية شفافة)؛ يظهر بنفس المقاس في كل الأقسام.",
+      "required": 0,
+      "layout": "table",
+      "button_label": "إضافة منصة أو أداة",
+      "collapsed": "field_sh_opt_platforms__name",
+      "sub_fields": [
+        {
+          "name": "name",
+          "label": "الاسم",
+          "type": "text",
+          "instructions": "يُستخدم نصًا بديلًا للشعار عند عدم وجود اسم ظاهر بجانبه.",
+          "required": 1,
+          "key": "field_sh_opt_platforms__name"
+        },
+        {
+          "name": "logo",
+          "label": "الشعار",
+          "type": "image",
+          "instructions": "",
+          "required": 0,
+          "return_format": "id",
+          "preview_size": "thumbnail",
+          "library": "all",
+          "key": "field_sh_opt_platforms__logo"
+        },
+        {
+          "name": "url",
+          "label": "رابط (اختياري)",
+          "type": "url",
+          "instructions": "إن أُدخل صار الشعار رابطًا يفتح في نافذة جديدة.",
+          "required": 0,
+          "key": "field_sh_opt_platforms__url"
+        },
+        {
+          "name": "ref",
+          "label": "المعرّف الداخلي",
+          "type": "text",
+          "instructions": "يربط الشعارات المعتمدة بالأقسام؛ لا يظهر في المحرر.",
+          "required": 0,
+          "key": "field_sh_opt_platforms__ref"
+        }
+      ]
+    },
+    {
       "key": "field_sh_opt_article_cta",
       "label": "دعوة الاستشارة بجانب المقالات",
       "name": "sh_article_cta",
@@ -582,21 +630,11 @@
     },
     {
       "key": "field_sh_opt_reviews_shortcode",
-      "label": "كود مراجعات جوجل (Trustindex أو غيره)",
+      "label": "شورت كود التقييمات (Trustindex أو غيره)",
       "name": "sh_reviews_shortcode",
       "type": "text",
-      "instructions": "مثال: [trustindex no-registration=google]. عند إضافته يحل محل الأمثلة في أقسام التقييمات.",
+      "instructions": "مثال: [trustindex no-registration=google]. يظهر في مكان قسم التقييمات في كل صفحة فيها هذا القسم، ويمكن تغييره لصفحة بعينها من «التقييمات في هذه الصفحة» في محررها. بلا شورت كود لإضافة مفعّلة لا يظهر قسم التقييمات، ولا تُعرض شهادات تجريبية.",
       "required": 0
-    },
-    {
-      "key": "field_sh_opt_reviews_show_examples",
-      "label": "إظهار أمثلة التقييمات المعلنة حتى ربط المصدر",
-      "name": "sh_reviews_show_examples",
-      "type": "true_false",
-      "instructions": "الأمثلة موسومة «محتوى مؤقت». أطفئ الخيار لإخفاء القسم تمامًا حتى الربط.",
-      "required": 0,
-      "ui": 1,
-      "default_value": 1
     },
     {
       "key": "field_sh_opt_gtm",

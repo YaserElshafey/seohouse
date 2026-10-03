@@ -2,7 +2,8 @@
 /**
  * SEO output: document title, meta description, canonical, robots, Open Graph.
  * One output source: when Rank Math, Yoast SEO, SEOPress or AIOSEO is active they own these
- * tags and Core outputs none of them (it only passes its field values to them where supported).
+ * tags and Core outputs none of them. With Rank Math its own fields are the only source
+ * (inc/rankmath.php); Yoast receives Core's field values.
  *
  * @package SEOHouseCore
  */
@@ -27,29 +28,39 @@ function sh_seo_object_id(): int {
 function sh_seo_description(): string {
 	$id = sh_seo_object_id();
 	if ( $id ) {
-		$d = sh_core_field( 'sh_seo_description', $id, '' );
-		if ( $d ) {
-			return sh_core_plain( $d );
-		}
 		$p = get_post( $id );
-		if ( $p && 'case_study' === $p->post_type ) {
-			return sh_core_plain( sh_core_field( 'summary', $id, '' ) );
-		}
-		if ( $p && 'team_member' === $p->post_type ) {
-			$bio = sh_core_plain( sh_core_field( 'bio', $id, '' ) );
-			if ( $bio ) {
-				return wp_html_excerpt( $bio, 160, '…' );
-			}
-			$role = sh_core_plain( sh_core_field( 'role', $id, '' ) );
-			return $role ? sprintf( '%s — %s، %s', get_the_title( $p ), $role, sh_core_option( 'sh_company_name', get_bloginfo( 'name' ) ) ) : '';
-		}
-		if ( $p && 'post' === $p->post_type ) {
-			$intro = sh_core_field( 'intro', $id, '' );
-			return sh_core_plain( $intro ? $intro : get_the_excerpt( $p ) );
+		$d = $p ? sh_seo_description_for( $p ) : '';
+		if ( $d ) {
+			return $d;
 		}
 	}
 	if ( is_category() ) {
 		return sh_core_plain( category_description() );
+	}
+	return '';
+}
+
+/** Description from Core's fields for one post (field, then the record's own summary). */
+function sh_seo_description_for( WP_Post $p ): string {
+	$id = (int) $p->ID;
+	$d  = sh_core_field( 'sh_seo_description', $id, '' );
+	if ( $d ) {
+		return sh_core_plain( $d );
+	}
+	if ( 'case_study' === $p->post_type ) {
+		return sh_core_plain( sh_core_field( 'summary', $id, '' ) );
+	}
+	if ( 'team_member' === $p->post_type ) {
+		$bio = sh_core_plain( sh_core_field( 'bio', $id, '' ) );
+		if ( $bio ) {
+			return wp_html_excerpt( $bio, 160, '…' );
+		}
+		$role = sh_core_plain( sh_core_field( 'role', $id, '' ) );
+		return $role ? sprintf( '%s — %s، %s', get_the_title( $p ), $role, sh_core_option( 'sh_company_name', get_bloginfo( 'name' ) ) ) : '';
+	}
+	if ( 'post' === $p->post_type ) {
+		$intro = sh_core_field( 'intro', $id, '' );
+		return sh_core_plain( $intro ? $intro : get_the_excerpt( $p ) );
 	}
 	return '';
 }
@@ -177,8 +188,9 @@ if ( ! sh_seo_plugin_active() ) {
 		},
 		3
 	);
-} else {
-	// Pass Core's fields to Rank Math / Yoast so editors keep one place to edit.
+} elseif ( ! sh_rankmath_active() ) {
+	// Yoast SEO: pass Core's fields so editors keep one place to edit.
+	// (Rank Math: inc/rankmath.php — its own fields are the only source.)
 	$title_cb = static function ( $title ) {
 		$id = sh_seo_object_id();
 		$t  = $id ? sh_core_field( 'sh_seo_title', $id, '' ) : '';
@@ -188,8 +200,6 @@ if ( ! sh_seo_plugin_active() ) {
 		$x = sh_seo_description();
 		return $x ? $x : $d;
 	};
-	add_filter( 'rank_math/frontend/title', $title_cb );
-	add_filter( 'rank_math/frontend/description', $desc_cb );
 	add_filter( 'wpseo_title', $title_cb );
 	add_filter( 'wpseo_metadesc', $desc_cb );
 }
