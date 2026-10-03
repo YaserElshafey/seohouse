@@ -35,7 +35,7 @@ function htmlToBlocks(html) {
 
 const designDir = path.resolve(process.argv[2] || '');
 const repo = path.resolve(process.argv[3] || path.join(__dirname, '..', '..'));
-const PACK = path.join(repo, 'content-pack');
+const PACK = path.join(repo, 'wordpress/plugins/seohouse-core/content-pack'); // shipped inside Core
 const DATA = path.join(PACK, 'data');
 const ASSETS = path.join(PACK, 'assets');
 fs.mkdirSync(DATA, { recursive: true });
@@ -282,7 +282,7 @@ function legacy() {
 
 (async () => {
   menus(); options(); posts(); await cases(); legacy();
-  fs.writeFileSync(path.join(PACK, 'build-log.txt'), log.join('\n') + '\n');
+  fs.writeFileSync(path.join(__dirname, 'pack-build-log.txt'), log.join('\n') + '\n'); // not shipped
   console.log(log.join('\n'));
   console.log('content pack:', PACK);
 })();

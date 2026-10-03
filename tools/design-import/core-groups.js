@@ -216,7 +216,7 @@ const reviewsSettings = group('reviews_settings', 'تقييمات جوجل', [
 
 // ------------------------------------------------------------------ reviews override (pages with a reviews section)
 const RV = 'rv';
-const reviewPages = JSON.parse(fs.readFileSync(path.join(repo, 'content-pack/manifest.json'), 'utf8')).pages
+const reviewPages = JSON.parse(fs.readFileSync(path.join(repo, 'wordpress/plugins/seohouse-core/content-pack/manifest.json'), 'utf8')).pages
   .filter(p => p.kind === 'page' && (p.layouts || []).some(l => /^reviews/.test(l))).map(p => p.key);
 const pageReviews = group('page_reviews', 'التقييمات في هذه الصفحة', [
   F(RV, 'shortcode', 'شورت كود التقييمات لهذه الصفحة (اختياري)', 'text', { name: 'sh_reviews_shortcode_page', placeholder: '[trustindex no-registration=google]', instructions: 'فارغ = الشورت كود العام من «سيو هاوس ← تقييمات جوجل». يُعرض في مكان قسم التقييمات بنفس تصميمه. بلا شورت كود لا يظهر القسم.' })

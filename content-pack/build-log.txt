@@ -1,2 +1,0 @@
-posts: 1 article from the design + 3 draft articles for published URLs (new text for review).
-legacy URLs: 53 — same-path 48, wordpress-feed 4, redirect-301 1

@@ -26,13 +26,13 @@ const csv = rows => rows.map(r => r.map(v => {
 }).join(',')).join('\n') + '\n';
 
 const cfg = readJson('tools/design-import/pages.config.json').pages;
-const manifest = readJson('content-pack/manifest.json');
-const cases = readJson('content-pack/data/cases.json');
-const team = readJson('content-pack/data/team.json');
-const posts = readJson('content-pack/data/posts.json');
-const cats = readJson('content-pack/data/categories.json');
-const seeds = Object.fromEntries(fs.readdirSync(path.join(ROOT, 'content-pack/pages')).map(f => {
-  const j = readJson('content-pack/pages/' + f);
+const manifest = readJson('wordpress/plugins/seohouse-core/content-pack/manifest.json');
+const cases = readJson('wordpress/plugins/seohouse-core/content-pack/data/cases.json');
+const team = readJson('wordpress/plugins/seohouse-core/content-pack/data/team.json');
+const posts = readJson('wordpress/plugins/seohouse-core/content-pack/data/posts.json');
+const cats = readJson('wordpress/plugins/seohouse-core/content-pack/data/categories.json');
+const seeds = Object.fromEntries(fs.readdirSync(path.join(ROOT, 'wordpress/plugins/seohouse-core/content-pack/pages')).map(f => {
+  const j = readJson('wordpress/plugins/seohouse-core/content-pack/pages/' + f);
   return [j.key, j];
 }));
 
@@ -157,10 +157,10 @@ const enc = route => route.split('/').map(s => (s ? encodeURIComponent(decodeURI
     } else if (typeof obj === 'string' && /^(assets|uploads|remote)\//.test(obj)) (usage[obj] = usage[obj] || new Set()).add(where);
   };
   for (const [k, s] of Object.entries(seeds)) scan(s, 'page:' + k);
-  for (const f of ['cases', 'team', 'posts', 'options', 'menus', 'extra']) scan(readJson(`content-pack/data/${f}.json`), f);
+  for (const f of ['cases', 'team', 'posts', 'options', 'menus', 'extra']) scan(readJson(`wordpress/plugins/seohouse-core/content-pack/data/${f}.json`), f);
   const listFiles = dir => fs.readdirSync(dir, { withFileTypes: true }).flatMap(e => e.isDirectory() ? listFiles(path.join(dir, e.name)) : [path.join(dir, e.name)]);
-  for (const f of listFiles(path.join(ROOT, 'content-pack/assets')).sort()) {
-    const rel = path.relative(path.join(ROOT, 'content-pack/assets'), f);
+  for (const f of listFiles(path.join(ROOT, 'wordpress/plugins/seohouse-core/content-pack/assets')).sort()) {
+    const rel = path.relative(path.join(ROOT, 'wordpress/plugins/seohouse-core/content-pack/assets'), f);
     const buf = fs.readFileSync(f);
     rows.push([rel, 'content', buf.length, crypto.createHash('sha1').update(buf).digest('hex'), path.extname(f).slice(1), [...(usage[rel] || [])].join(' ')]);
   }

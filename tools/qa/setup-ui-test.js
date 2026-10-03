@@ -75,7 +75,8 @@ const check = (name, ok, detail = '') => { results.push({ name, ok: !!ok, detail
 
   await shot('01-setup-screen');
   const info = await p.textContent('#sh-setup table');
-  check('setup screen: bundled content pack found', /مضمّنة/.test(info), info.replace(/\s+/g, ' ').trim());
+  const want = opt('pack-files', '125');
+  check(`setup screen: bundled content pack found, ${want} files / ${want} expected, complete`, /مضمّنة/.test(info) && new RegExp(`\\b${want} ملفًا / ${want} متوقعة — كاملة وسليمة`).test(info.replace(/\s+/g, ' ')), info.replace(/\s+/g, ' ').trim());
 
   // the notice on other screens
   await p.goto(WP + '/wp-admin/');

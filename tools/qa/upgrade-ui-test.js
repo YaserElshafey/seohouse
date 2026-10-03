@@ -57,7 +57,7 @@ const flat = s => String(s || '').replace(/\s+/g, ' ').trim();
 
   await p.goto(WP + '/wp-admin/admin.php?page=seohouse-content-setup');
   const info = flat(await p.textContent('#sh-setup'));
-  check('setup screen: bundled pack 2.3.0 found and intact', /2\.3\.0 — مضمّنة/.test(info) && /\d+ ملفًا \/ 125 متوقعة، سليمة/.test(info), (info.match(/حزمة المحتوى.{0,160}/) || [''])[0]);
+  check('setup screen: bundled pack 2.3.0 found and intact', /2\.3\.0 — مضمّنة/.test(info) && /125 ملفًا \/ 125 متوقعة — كاملة وسليمة/.test(info), (info.match(/حزمة المحتوى.{0,160}/) || [''])[0]);
   check('setup screen: newer pack notice (2.3.0 > 2.2.1)', /حزمة المحتوى 2\.3\.0 أحدث مما هُيّئ به الموقع \(2\.2\.1\)/.test(info));
   await shot('02-setup-screen');
 

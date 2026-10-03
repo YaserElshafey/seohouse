@@ -22,7 +22,7 @@ const designDir = path.resolve(process.argv[2] || '');
 const repo = path.resolve(process.argv[3] || path.join(__dirname, '..', '..'));
 const THEME = path.join(repo, 'wordpress/themes/seohouse');
 const CORE = path.join(repo, 'wordpress/plugins/seohouse-core');
-const CONTENT = path.join(repo, 'content-pack');
+const CONTENT = path.join(repo, 'wordpress/plugins/seohouse-core/content-pack'); // shipped inside Core: the plugin folder alone is complete
 const cfg = JSON.parse(fs.readFileSync(path.join(__dirname, 'pages.config.json'), 'utf8'));
 const md5 = s => crypto.createHash('md5').update(s).digest('hex');
 

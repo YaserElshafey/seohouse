@@ -116,7 +116,7 @@ const isDesignPage = p => EXC.designPages.includes(p);
   const newMap = await sitemap(NEW);
   const livePaths = new Set([...liveMap.urls].map(u => pathOf(u, LIVE)));
   const newSitemapPaths = new Set([...newMap.urls].map(u => pathOf(u, NEW)));
-  const legacy = JSON.parse(fs.readFileSync(path.join(REPO, 'content-pack/data/legacy-urls.json'), 'utf8'));
+  const legacy = JSON.parse(fs.readFileSync(path.join(REPO, 'wordpress/plugins/seohouse-core/content-pack/data/legacy-urls.json'), 'utf8'));
   const all = new Set([...livePaths, ...legacy.map(l => norm(l.path)), ...newSitemapPaths]);
   const live = {}, nw = {};
   // first pass: pages from sitemaps and the URL map; links found on live pages are added

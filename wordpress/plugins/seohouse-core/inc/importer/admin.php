@@ -311,7 +311,12 @@ function sh_import_admin_page(): void {
 	if ( ! $manifest || ! $status['listed'] || $status['missing'] ) {
 		$uploaded = SH_Importer::uploaded_dir();
 		echo '<div class="notice notice-error"><p><strong>' . esc_html( $manifest ? __( 'حزمة المحتوى المضمّنة ناقصة؛ لم تُنسخ كل ملفاتها أثناء تثبيت الإضافة.', 'seohouse-core' ) : __( 'لم يُعثر على حزمة المحتوى داخل SEO House Core.', 'seohouse-core' ) ) . '</strong></p>';
-		echo '<p>' . esc_html__( 'الحل: ارفع seohouse-core.zip مرة أخرى من «الإضافات ← أضف جديد ← رفع إضافة» واختر «استبدال الحالي بالمرفوع». إن تكررت الرسالة أرسل الجدول التالي.', 'seohouse-core' ) . '</p></div>';
+		// The usual cause until 2.4.0: the plugin was installed from the repository folder (GitHub
+		// download, a zip of wordpress/plugins/seohouse-core, a Git deployment). That folder had no
+		// content-pack; since 2.4.1 the pack lives inside it.
+		$git = is_dir( SH_CORE_DIR . '.git' ) || file_exists( SH_CORE_DIR . '.github' );
+		echo '<p>' . esc_html( $manifest ? __( 'جزء من الملفات لم يُنسخ أثناء التثبيت.', 'seohouse-core' ) : ( $git ? __( 'هذه النسخة منشورة من مستودع Git.', 'seohouse-core' ) : __( 'هذه النسخة ثُبّتت من مصدر لا يحتوي مجلد content-pack — غالبًا نسخة من مجلد الإضافة في GitHub أو ملف مضغوط منه، لا ملف الإصدار.', 'seohouse-core' ) ) ) . '</p>';
+		echo '<p><a class="button button-primary" href="' . esc_url( SH_CORE_RELEASE_URL ) . '">' . esc_html__( 'تنزيل ملف الإصدار الكامل seohouse-core.zip', 'seohouse-core' ) . '</a> ' . esc_html__( 'ثم «الإضافات ← أضف جديد ← رفع إضافة» و«استبدال الحالي بالمرفوع». المحتوى والإعدادات الموجودة لا تتأثر.', 'seohouse-core' ) . '</p></div>';
 		echo '<table class="widefat striped" style="max-width:60em"><tbody>';
 		$rows = array(
 			'إصدار SEO House Core'          => SH_CORE_VERSION,
@@ -337,7 +342,7 @@ function sh_import_admin_page(): void {
 		echo '<p style="max-width:60em;padding:12px;background:#fff;border-right:4px solid #2271b1"><label><input type="checkbox" id="sh-adopt-pages" value="1"> <strong>' . esc_html__( 'اعتمد الصفحات الموجودة على نفس الروابط داخل /new/ واملأها بمحتوى التصميم الجديد', 'seohouse-core' ) . '</strong></label><br><small>' . esc_html__( 'تُبقي التهيئة رقم الصفحة ورابطها، وتحفظ نصوصها السابقة في نسخة داخلية مرة واحدة. هذا الخيار لا يعمل على الموقع الرئيسي، ولا يغيّر الصفحات التي سبق تحريرها بعد استيرادها.', 'seohouse-core' ) . '</small></p>';
 	}
 	echo '<table class="widefat" style="max-width:60em"><tbody>';
-	echo '<tr><th style="width:14em">' . esc_html__( 'حزمة المحتوى', 'seohouse-core' ) . '</th><td>' . esc_html( ( $manifest['version'] ?? '' ) . ' — ' . ( $bundled ? __( 'مضمّنة في SEO House Core', 'seohouse-core' ) : __( 'مرفوعة', 'seohouse-core' ) ) ) . ' <code dir="ltr">' . esc_html( $manifest['designFingerprint'] ?? '' ) . '</code><br><small dir="ltr">' . esc_html( $dir ) . ' — ' . (int) $status['files'] . ' ' . esc_html__( 'ملفًا', 'seohouse-core' ) . ( $status['listed'] ? ' / ' . (int) $status['listed'] . ' ' . esc_html__( 'متوقعة، سليمة', 'seohouse-core' ) : '' ) . '</small></td></tr>';
+	echo '<tr><th style="width:14em">' . esc_html__( 'حزمة المحتوى', 'seohouse-core' ) . '</th><td>' . esc_html( ( $manifest['version'] ?? '' ) . ' — ' . ( $bundled ? __( 'مضمّنة في SEO House Core', 'seohouse-core' ) : __( 'مرفوعة', 'seohouse-core' ) ) ) . ' <code dir="ltr">' . esc_html( $manifest['designFingerprint'] ?? '' ) . '</code><br><small dir="ltr">' . esc_html( $dir ) . ' — ' . (int) $status['files'] . ' ' . esc_html__( 'ملفًا', 'seohouse-core' ) . ( $status['listed'] ? ' / ' . (int) $status['listed'] . ' ' . esc_html__( 'متوقعة', 'seohouse-core' ) . ( $status['missing'] ? '' : ' — ' . esc_html__( 'كاملة وسليمة', 'seohouse-core' ) ) : '' ) . '</small></td></tr>';
 	echo '<tr><th>' . esc_html__( 'الحالة', 'seohouse-core' ) . '</th><td>' . ( $last ? esc_html( sprintf( __( 'هُيّئ في %1$s (حزمة %2$s)', 'seohouse-core' ), wp_date( 'Y-m-d H:i', $last['time'] ), $last['version'] ?? '' ) ) : '<strong>' . esc_html__( 'لم يُهيّأ بعد', 'seohouse-core' ) . '</strong>' ) . '</td></tr>';
 	echo '</tbody></table>';
 	if ( $last && ! empty( $manifest['version'] ) && version_compare( (string) $manifest['version'], (string) ( $last['version'] ?? '0' ), '>' ) ) {

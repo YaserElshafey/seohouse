@@ -115,7 +115,8 @@ class SH_Importer {
 			return $st;
 		}
 		$it          = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $dir, FilesystemIterator::SKIP_DOTS ) );
-		$st['files'] = iterator_count( $it );
+		// content files of the pack (its own integrity list, pack-files.json, is not one of them)
+		$st['files'] = iterator_count( $it ) - ( is_file( $dir . '/pack-files.json' ) ? 1 : 0 );
 		$mf          = $dir . '/manifest.json';
 		if ( is_file( $mf ) ) {
 			$st['manifest'] = 'present';
