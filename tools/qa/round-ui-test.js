@@ -11,7 +11,7 @@
  *  D. «نقل المقالات»: preview and run from the screen.
  * Needs mu-plugin test shortcodes [fake_reviews] and [fake_reviews_alt] and a PNG (--logo).
  *
- * Usage: node round-ui-test.js --wp http://127.0.0.1:8097/new --logo logo.png --out dir [--skip-migrate]
+ * Usage: node round-ui-test.js --wp http://127.0.0.1:8097/new --logo logo.png --out dir [--theme t.zip --core c.zip] [--skip-migrate]
  */
 const path = require('path');
 const fs = require('fs');
@@ -41,6 +41,25 @@ const stamp = Date.now().toString(36);
   await p.fill('#user_login', 'admin'); await p.fill('#user_pass', 'admin');
   await Promise.all([p.waitForNavigation(), p.click('#wp-submit')]);
 
+  // ------------------------------------------------------------ 0. install the packages over 2.3.0 (admin upload)
+  for (const [kind, file] of [['theme', opt('theme')], ['plugin', opt('core')]]) {
+    if (!file) continue;
+    await p.goto(`${WP}/wp-admin/${kind === 'theme' ? 'theme-install.php?upload' : 'plugin-install.php?tab=upload'}`);
+    if (kind === 'theme' && !(await p.locator('#install-theme-submit').isVisible())) await p.click('.upload-view-toggle');
+    await p.setInputFiles(kind === 'theme' ? '#themezip' : '#pluginzip', file);
+    await Promise.all([p.waitForNavigation({ timeout: 120000 }), p.click(kind === 'theme' ? '#install-theme-submit' : '#install-plugin-submit')]);
+    const rep = p.locator('a.update-from-upload-overwrite');
+    const cmp = flat(await p.textContent('.update-from-upload-comparison').catch(() => ''));
+    check(`0 upload ${path.basename(file)}: WordPress offers to replace the installed ${kind}`, await rep.count() > 0, cmp.slice(0, 120));
+    await Promise.all([p.waitForNavigation({ timeout: 120000 }), rep.click()]);
+    check(`0 ${kind} replaced`, /تم تحديث|updated successfully|بنجاح/.test(await p.textContent('body')));
+  }
+  if (opt('core')) {
+    await p.goto(WP + '/wp-admin/plugins.php');
+    check('0 SEO House Core 2.4.0 active', /2\.4\.0/.test(await p.textContent('tr[data-plugin="seohouse-core/seohouse-core.php"]')) && await p.locator('tr[data-plugin="seohouse-core/seohouse-core.php"].active').count() > 0);
+    await shot('0-plugins');
+  }
+
   // ------------------------------------------------------------ D. migration screen
   if (!argv.includes('--skip-migrate')) {
     await p.goto(WP + '/wp-admin/admin.php?page=seohouse-migrate-posts');
@@ -58,6 +77,9 @@ const stamp = Date.now().toString(36);
       const r = await p.context().request.get(WP + u);
       check(`D4 ${u} answers 200 on /new/`, r.status() === 200, r.status());
     }
+    const art = await (await p.context().request.get(WP + '/blog/how-to-build-backlinks-correctly/')).text();
+    const by = flat((art.match(/بقلم[\s\S]{0,400}?<\/(?:a|span)>/) || [''])[0].replace(/<[^>]+>/g, ' '));
+    check('D4 article byline: the author of the main site (not a generic team name)', /بقلم \S/.test(by) && !/فريق/.test(by), by);
     await Promise.all([p.waitForNavigation({ timeout: 300000 }), p.click('button[value="run"]')]);
     check('D5 second run: nothing created or replaced', /جديد: 0 — استبدال مسودة: 0/.test(flat(await p.textContent('.wrap'))));
   }

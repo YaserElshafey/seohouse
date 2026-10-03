@@ -60,6 +60,9 @@ while ( have_posts() ) :
 					<span style="white-space: nowrap;"><?php esc_html_e( 'بقلم', 'seohouse' ); ?>
 					<?php if ( $member ) : ?>
 						<a href="<?php echo esc_url( get_permalink( $member ) ); ?>" rel="author" style="font-weight: 600; color: <?php echo esc_attr( $ink ); ?>; border-bottom: 1px solid rgba(var(--sh-blue-rgb), 0.4);"><?php echo esc_html( get_the_title( $member ) ); ?></a>
+					<?php elseif ( '' !== trim( (string) get_the_author_meta( 'display_name', (int) get_post_field( 'post_author', $id ) ) ) ) : ?>
+						<?php // no team profile linked: the article's WordPress author, as on the main site ?>
+						<span style="font-weight: 600; color: <?php echo esc_attr( $ink ); ?>;"><?php echo esc_html( get_the_author_meta( 'display_name', (int) get_post_field( 'post_author', $id ) ) ); ?></span>
 					<?php else : ?>
 						<?php $team = get_page_by_path( 'team' ); ?>
 						<a href="<?php echo esc_url( $team ? get_permalink( $team ) : home_url( '/' ) ); ?>" style="font-weight: 600; color: <?php echo esc_attr( $ink ); ?>; border-bottom: 1px solid rgba(var(--sh-blue-rgb), 0.4);"><?php echo esc_html( sprintf( /* translators: %s: company */ __( 'فريق %s', 'seohouse' ), sh_site_name() ) ); ?></a>
