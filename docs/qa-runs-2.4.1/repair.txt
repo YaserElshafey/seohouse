@@ -1,0 +1,13 @@
+PASS  before: the setup screen reports the pack missing (the reported state)  — لم يُعثر على حزمة المحتوى داخل SEO House Core.
+PASS  upload the zip: WordPress offers «استبدال الحالي بالمرفوع»  — الحاليةالمرفوعةاسم الإضافةSEO House CoreSEO House Coreالنسخة2.4.02.4.1كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5نسخة PHP المطلوبة8.1
+PASS  replaced
+PASS  SEO House Core still active, new version
+PASS  after: setup screen shows 125 files / 125 expected — complete  — حزمة المحتوى2.3.0 — مضمّنة في SEO House Core sha256:8b521594e8dc8695/srv/shwpnew/new/wp-content/plugins/seohouse-core/content-pack — 125 ملفًا / 125 متوقعة — كاملة وسليمةالحالةهُيّئ 
+PASS  preview (dry run) works and writes nothing  — تشغيل تجريبي — لم يُكتب شيء.أُنشئ: 0 حُدّث: 0 بلا تغيير: 73 محمي: 1 فشل: 0السجل (2)معلومةsourceحزمة المحتوى 2.3.0 — بصمة التصميم: sha256:8b521594e8dc8695 — تشغي
+PASS  2.4.1 without a pack: the screen names the cause and links the complete release file  — https://github.com/YaserElshafey/seohouse/releases/latest/download/seohouse-core.zip
+PASS  no JavaScript errors
+
+8/8 passed
+
+before the upload: pages 40; 112 records; core 2.4.0; pack dir absent
+after the upload:  pages 40; 112 records; core 2.4.1; pack files 126

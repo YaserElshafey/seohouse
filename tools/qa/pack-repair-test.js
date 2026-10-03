@@ -5,7 +5,7 @@
  * zip over it («استبدال الحالي بالمرفوع») — must bring the pack: the screen shows every file, the
  * preview (dry run) works, and nothing already on the site changes.
  *
- * Usage: node pack-repair-test.js --wp http://127.0.0.1:8097/new --core dist/seohouse-core.zip --out dir [--files 125]
+ * Usage: node pack-repair-test.js --wp http://127.0.0.1:8097/new --core dist/seohouse-core.zip --out dir [--files 125] [--plugin-dir <installed seohouse-core>]
  */
 const path = require('path');
 const fs = require('fs');
@@ -31,7 +31,6 @@ const flat = s => String(s || '').replace(/\s+/g, ' ').trim();
   await p.goto(WP + '/wp-admin/admin.php?page=seohouse-content-setup');
   let t = flat(await p.textContent('.wrap'));
   check('before: the setup screen reports the pack missing (the reported state)', /لم يُعثر على حزمة المحتوى/.test(t) && /عدد الملفات فيه\s*0/.test(t) && /manifest\.json\s*غير موجود/.test(t) && /pack-files\.json غير موجود/.test(t), (t.match(/لم يُعثر[^.]*\./) || [''])[0]);
-  check('before: the screen names the cause and links the complete release file', /لا يحتوي مجلد content-pack/.test(t) && await p.locator('a[href*="releases/latest/download/seohouse-core.zip"]').count() > 0);
   await shot('1-before');
 
   // the one step
@@ -58,6 +57,21 @@ const flat = s => String(s || '').replace(/\s+/g, ' ').trim();
   const pv = flat(await p.textContent('#sh-preview-out'));
   check('preview (dry run) works and writes nothing', /تشغيل تجريبي — لم يُكتب شيء/.test(pv) && /فشل:\s*0/.test(pv), pv.slice(0, 160));
   await shot('4-preview');
+
+  // the 2.4.1 screen itself when a copy without the pack is installed (pack folder moved away for a moment)
+  const dir = opt('plugin-dir');
+  if (dir) {
+    fs.renameSync(path.join(dir, 'content-pack'), path.join(dir, 'content-pack.off'));
+    try {
+      await p.goto(WP + '/wp-admin/admin.php?page=seohouse-content-setup');
+      t = flat(await p.textContent('.wrap'));
+      const href = await p.locator('a[href*="releases/latest/download/seohouse-core.zip"]').first().getAttribute('href').catch(() => '');
+      check('2.4.1 without a pack: the screen names the cause and links the complete release file', /لا يحتوي مجلد content-pack/.test(t) && href === 'https://github.com/YaserElshafey/seohouse/releases/latest/download/seohouse-core.zip', href);
+      await shot('5-missing-pack-message');
+    } finally {
+      fs.renameSync(path.join(dir, 'content-pack.off'), path.join(dir, 'content-pack'));
+    }
+  }
 
   check('no JavaScript errors', errors.length === 0, errors.slice(0, 2).join(' | '));
   await b.close();
