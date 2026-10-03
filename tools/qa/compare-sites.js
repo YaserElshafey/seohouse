@@ -171,7 +171,13 @@ const isDesignPage = p => EXC.designPages.includes(p);
       const sim = similarity(L.text, N.text);
       L.sim = sim;
       if (sim < (design ? 0 : EXC.minSimilarity)) add(false, `المحتوى (تشابه ${sim})`, why);
-      if (JSON.stringify(L.schema) !== JSON.stringify(N.schema)) add(false, 'Schema', design || exc ? EXC.reasons.schema : EXC.reasons.schema);
+      if (JSON.stringify(L.schema) !== JSON.stringify(N.schema)) {
+        // a migrated page (article) must keep every Schema type it has live (e.g. its FAQPage)
+        const types = list => new Set(list.flatMap(t => t.split('/')));
+        const lost = [...types(L.schema)].filter(t => !types(N.schema).has(t) && !design);
+        if (lost.length) issues.push('Schema ناقصة: ' + lost.join(', '));
+        else add(false, 'Schema', EXC.reasons.schema);
+      }
       const missingImgs = (L.imageFiles || []).filter(f => !(N.imageFiles || []).includes(f));
       if (missingImgs.length) add(false, `صور الموقع الحالي غير موجودة في الجديد: ${missingImgs.join('، ')}`, why);
       if (N.imagesNoAlt > L.imagesNoAlt) add(false, `صور بلا نص بديل ${L.imagesNoAlt}/${N.imagesNoAlt}`, '');

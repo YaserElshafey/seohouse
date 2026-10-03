@@ -246,6 +246,7 @@ class SH_Post_Migration {
 		foreach ( $posts as $p ) {
 			$this->migrate_one( $p, $pmeta[ (int) $p['ID'] ] ?? array(), array_values( array_filter( $terms, static fn( $t ) => (int) $t['object_id'] === (int) $p['ID'] ) ) );
 		}
+		$this->rank_math_entity();
 		if ( ! $this->dry && $this->backups ) {
 			$this->write_backup_file();
 		}
@@ -372,6 +373,66 @@ class SH_Post_Migration {
 		update_post_meta( $id, '_sh_migration_hash', $this->target_hash( $id ) );
 		$msg = array( 'create' => 'أُنشئ', 'replace' => 'استُبدلت المسودة (نسختها محفوظة)', 'update' => 'حُدّث' );
 		$this->note( 'create' === $mode ? 'created' : ( 'replace' === $mode ? 'replaced' : 'updated' ), $label, $msg[ $mode ] . ' — ' . get_permalink( $id ) );
+	}
+
+	/**
+	 * Rank Math's site entity (Titles & Meta ← Local SEO: Organization or Person, name, logo, social
+	 * profiles) from the main site, so the Organization node stays as it is there. Only fields still
+	 * at Rank Math's default here are filled; a value set here is kept.
+	 */
+	private function rank_math_entity(): void {
+		if ( ! function_exists( 'sh_rankmath_active' ) || ! sh_rankmath_active() ) {
+			return;
+		}
+		$row = $this->rows( "SELECT option_value FROM {$this->t('options')} WHERE option_name = 'rank-math-options-titles'" );
+		$src = $row ? @unserialize( $row[0]['option_value'], array( 'allowed_classes' => false ) ) : false; // phpcs:ignore
+		if ( ! is_array( $src ) ) {
+			return;
+		}
+		$here    = get_option( 'rank-math-options-titles', array() );
+		$here    = is_array( $here ) ? $here : array();
+		$keys    = array( 'knowledgegraph_type', 'knowledgegraph_name', 'knowledgegraph_logo', 'website_name', 'website_alternate_name', 'social_url_facebook', 'twitter_author_names', 'social_additional_profiles', 'local_business_type', 'local_address', 'phone', 'email', 'url', 'opening_hours' );
+		$default = array( 'knowledgegraph_type' => 'person', 'knowledgegraph_name' => get_bloginfo( 'name' ), 'website_name' => get_bloginfo( 'name' ) );
+		$changed = array();
+		foreach ( $keys as $k ) {
+			if ( ! isset( $src[ $k ] ) || '' === $src[ $k ] || array() === $src[ $k ] ) {
+				continue;
+			}
+			$cur = $here[ $k ] ?? '';
+			if ( '' !== $cur && array() !== $cur && ( $default[ $k ] ?? null ) !== $cur ) {
+				continue; // set here: kept
+			}
+			if ( $cur === $src[ $k ] ) {
+				continue;
+			}
+			$here[ $k ] = $this->rewrite_deep( $src[ $k ] );
+			$changed[]  = $k;
+			if ( 'knowledgegraph_logo' === $k && ! $this->dry ) {
+				$this->copy_upload( (string) $src[ $k ] );
+			}
+		}
+		if ( ! $changed ) {
+			return;
+		}
+		if ( ! $this->dry ) {
+			update_option( 'rank-math-options-titles', $here );
+		}
+		$this->note( 'info', 'rank-math', ( $this->dry ? 'سيُنسخ' : 'نُسخ' ) . ' كيان الموقع من Rank Math في الموقع الأساسي: ' . implode( '، ', $changed ) );
+	}
+
+	/** Copies one file of the main site's uploads (by its URL) to the same path here. */
+	private function copy_upload( string $url ): void {
+		$base = preg_replace( '~^https?:~', '', $this->src_uploads );
+		$rel  = preg_replace( '~^(?:https?:)?' . preg_quote( $base, '~' ) . '/~i', '', $url, 1, $n );
+		if ( ! $n || str_contains( $rel, '..' ) ) {
+			return;
+		}
+		$from = $this->src_up_dir . '/' . rawurldecode( $rel );
+		$to   = wp_upload_dir( null, false )['basedir'] . '/' . rawurldecode( $rel );
+		if ( is_readable( $from ) && ! file_exists( $to ) ) {
+			wp_mkdir_p( dirname( $to ) );
+			copy( $from, $to );
+		}
 	}
 
 	/** Fingerprint of what the migration wrote (to tell later edits made here). */

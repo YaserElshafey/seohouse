@@ -6,6 +6,26 @@
  * Usage: wp --path=<main-site-copy> eval-file build-source.php <live-posts.json>
  */
 $d = json_decode( file_get_contents( $args[0] ), true );
+
+/**
+ * The REST API returns rendered HTML; the database holds blocks. Rank Math's FAQ block is put
+ * back in its stored form (block comment with its questions) so Rank Math builds its FAQPage
+ * schema from it, as on the main site.
+ */
+function sh_fixture_raw( string $html ): string {
+	return preg_replace_callback(
+		'~<div id="rank-math-faq" class="rank-math-block">.*?</div>\s*</div>\s*</div>\s*</div>~s',
+		static function ( $m ) {
+			preg_match_all( '~<div id="(faq-question-\d+)" class="rank-math-list-item">\s*<h3 class="rank-math-question ">(.*?)</h3>\s*<div class="rank-math-answer ">(.*?)</div>\s*</div>~s', $m[0], $q, PREG_SET_ORDER );
+			$questions = array();
+			foreach ( $q as $x ) {
+				$questions[] = array( 'id' => $x[1], 'title' => trim( $x[2] ), 'content' => trim( $x[3] ), 'visible' => true );
+			}
+			return '<!-- wp:rank-math/faq-block ' . wp_json_encode( array( 'questions' => $questions ), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES ) . ' -->' . "\n" . $m[0] . "\n" . '<!-- /wp:rank-math/faq-block -->';
+		},
+		$html
+	);
+}
 global $wpdb;
 $users = array();
 foreach ( $d['users'] as $u ) {
@@ -46,10 +66,14 @@ foreach ( $d['media'] as $m ) {
 }
 foreach ( $d['posts'] as $p ) {
 	if ( get_post( $p['id'] ) ) {
+		// refresh the content of an existing copy (raw form, as stored in the database)
+		$wpdb->update( $wpdb->posts, array( 'post_content' => sh_fixture_raw( $p['content']['rendered'] ) ), array( 'ID' => (int) $p['id'] ) );
+		delete_post_meta( (int) $p['id'], 'rank_math_schema_FAQPage' );
+		clean_post_cache( (int) $p['id'] );
 		continue;
 	}
 	kses_remove_filters();
-	$id = wp_insert_post( array( 'import_id' => $p['id'], 'post_type' => 'post', 'post_status' => 'publish', 'post_title' => html_entity_decode( $p['title']['rendered'], ENT_QUOTES ), 'post_name' => $p['slug'], 'post_content' => $p['content']['rendered'], 'post_date' => $p['date'], 'post_date_gmt' => $p['date_gmt'], 'post_author' => $users[ (int) $p['author'] ] ?? 1, 'post_category' => array_map( static fn( $c ) => $terms[ $c ], $p['categories'] ) ) );
+	$id = wp_insert_post( array( 'import_id' => $p['id'], 'post_type' => 'post', 'post_status' => 'publish', 'post_title' => html_entity_decode( $p['title']['rendered'], ENT_QUOTES ), 'post_name' => $p['slug'], 'post_content' => sh_fixture_raw( $p['content']['rendered'] ), 'post_date' => $p['date'], 'post_date_gmt' => $p['date_gmt'], 'post_author' => $users[ (int) $p['author'] ] ?? 1, 'post_category' => array_map( static fn( $c ) => $terms[ $c ], $p['categories'] ) ) );
 	$wpdb->update( $wpdb->posts, array( 'post_modified' => $p['modified'], 'post_modified_gmt' => $p['modified_gmt'], 'post_name' => $p['slug'] ), array( 'ID' => $id ) );
 	if ( $p['featured_media'] ) {
 		update_post_meta( $id, '_thumbnail_id', $p['featured_media'] );
@@ -62,6 +86,24 @@ foreach ( $d['posts'] as $p ) {
 	if ( $rm['og_image'] ) {
 		update_post_meta( $id, 'rank_math_facebook_image', $rm['og_image'] );
 		update_post_meta( $id, 'rank_math_facebook_image_id', (string) $p['featured_media'] );
+	}
+}
+// Rank Math's site entity as the main site shows it (Organization node of its schema)
+foreach ( $d['posts'][0]['_rank_math']['schema'] as $ld ) {
+	foreach ( (array) ( $ld['@graph'] ?? array() ) as $node ) {
+		if ( 'Organization' === ( $node['@type'] ?? '' ) ) {
+			$t = get_option( 'rank-math-options-titles', array() );
+			$t = is_array( $t ) ? $t : array();
+			$t['knowledgegraph_type'] = 'company';
+			$t['knowledgegraph_name'] = $node['name'] ?? 'سيو هاوس';
+			if ( ! empty( $node['logo']['url'] ) ) {
+				$t['knowledgegraph_logo'] = $node['logo']['url'];
+			}
+			if ( ! empty( $node['sameAs'] ) ) {
+				$t['social_additional_profiles'] = implode( "\n", (array) $node['sameAs'] );
+			}
+			update_option( 'rank-math-options-titles', $t );
+		}
 	}
 }
 // a draft and a page on the main site must not be migrated

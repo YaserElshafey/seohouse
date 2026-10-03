@@ -56,5 +56,15 @@ for md in media:
         try:
             with urllib.request.urlopen(urllib.parse.quote(u, safe=':/%')) as r2, open(dest, 'wb') as f: f.write(r2.read()); n += 1
         except Exception as e: print('file', u, e)
+# the site logo of Rank Math's Organization node (copied with the entity settings)
+for p in posts[:1]:
+    for ld in p['_rank_math']['schema']:
+        for node in ld.get('@graph', []):
+            u = (node.get('logo') or {}).get('url') if node.get('@type') == 'Organization' else None
+            if u and '/wp-content/uploads/' in u:
+                dest = os.path.join(UP, urllib.parse.unquote(u.split('/wp-content/uploads/')[1]))
+                if not os.path.exists(dest):
+                    os.makedirs(os.path.dirname(dest), exist_ok=True)
+                    with urllib.request.urlopen(urllib.parse.quote(u, safe=':/%')) as r2, open(dest, 'wb') as f: f.write(r2.read()); n += 1
 json.dump({'site': SITE, 'posts': posts, 'media': media, 'users': users_d, 'categories': cats_d, 'tags': tags_d}, open(os.path.join(OUT, 'live-posts.json'), 'w'), ensure_ascii=False, indent=1)
 print(f'{len(posts)} posts, {len(media)} media, {n} files, {len(users_d)} authors, {len(cats_d)} categories, {len(tags_d)} tags')
