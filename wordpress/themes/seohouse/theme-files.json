@@ -1,6 +1,6 @@
 {
  "theme": "seohouse",
- "version": "2.7.1",
+ "version": "2.7.2",
  "count": 359,
  "files": [
   {
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 984,
-   "sha1": "cad2a7a9ea65e3d5a8c9c8abfc0c5883178e2372"
+   "sha1": "846a29147390c904fe5be2ee8b34c6daa7d81106"
   },
   {
    "path": "header.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 545,
-   "sha1": "b9005bc019582d83797fb56e9775059b403ace65"
+   "sha1": "33509690e5bebdefde0110572f145bcb8f572fe2"
   },
   {
    "path": "theme.json",
@@ -95,8 +95,8 @@
   },
   {
    "path": "assets/css/theme.css",
-   "size": 15228,
-   "sha1": "9655f8eb42c07628d6e263ddb61a9412189becbd"
+   "size": 15332,
+   "sha1": "5aeb9a86e5bfc29eb7dc89645494ca2f4bbf259a"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -420,8 +420,8 @@
   },
   {
    "path": "assets/js/site.js",
-   "size": 20695,
-   "sha1": "a2454897a413c28096ebbd24a6d052c9e4d40c52"
+   "size": 24882,
+   "sha1": "66a0c0fdd68b302ca33eb7bdf3b437b455690229"
   },
   {
    "path": "assets/platforms/ga4.svg",
@@ -540,8 +540,8 @@
   },
   {
    "path": "inc/enqueue.php",
-   "size": 7327,
-   "sha1": "21dd0fe6510fffa9bacec4a7b1ecb516a8034c8f"
+   "size": 7696,
+   "sha1": "2a5b2b76d2db0e9163cb9d6545588d9905ec6b60"
   },
   {
    "path": "inc/helpers.php",
@@ -1550,8 +1550,8 @@
   },
   {
    "path": "sections/shared/booking.php",
-   "size": 9400,
-   "sha1": "12303fb22af3630f28d6a448fdfedcc7988d309b"
+   "size": 12416,
+   "sha1": "9820202996947e39d430f71c63cd0288f5aa231c"
   },
   {
    "path": "sections/shared/faq.php",

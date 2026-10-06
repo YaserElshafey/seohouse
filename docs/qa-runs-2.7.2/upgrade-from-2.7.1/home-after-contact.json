@@ -1,0 +1,37 @@
+[
+ {
+  "scenario": "home-after-contact",
+  "contact": {
+   "requests": 1,
+   "responses": [
+    {
+     "status": 200,
+     "body": {
+      "ok": true,
+      "code": "stored",
+      "message": "وصلنا طلبك.",
+      "ref": "8a52c05005efa7665c4d0734"
+     }
+    }
+   ],
+   "successShown": true,
+   "error": ""
+  },
+  "home": {
+   "requests": 1,
+   "responses": [
+    {
+     "status": 200,
+     "body": {
+      "ok": true,
+      "code": "stored",
+      "message": "وصلنا طلبك.",
+      "ref": "e93ed62e74d11c96ebbb68fa"
+     }
+    }
+   ],
+   "successShown": true,
+   "error": ""
+  }
+ }
+]

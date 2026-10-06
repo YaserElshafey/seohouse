@@ -188,11 +188,17 @@ function sh_design_token_css(): string {
 	return $css ? ':root { ' . $css . '}' : '';
 }
 
-/** Booking integration settings exposed to the form script. */
+/**
+ * Booking integration settings exposed to the form script («إعدادات سيو هاوس ← الاستشارة»).
+ * No URL unless a booking tool is chosen: «غير مربوطة» never shows a scheduler.
+ */
 function sh_booking_config(): array {
-	$url = (string) sh_option( 'sh_booking_url', '' );
+	$provider = (string) sh_option( 'sh_booking_provider', 'none' );
+	$url      = 'none' === $provider || '' === $provider ? '' : (string) sh_option( 'sh_booking_url', '' );
+	$minutes  = (int) sh_option( 'sh_booking_duration', 30 );
 	return array(
-		'provider' => (string) sh_option( 'sh_booking_provider', 'none' ),
-		'url'      => $url ? esc_url_raw( $url ) : '',
+		'provider' => $provider,
+		'url'      => preg_match( '#^https?://#i', $url ) ? esc_url_raw( $url ) : '',
+		'duration' => $minutes > 0 ? $minutes : 30,
 	);
 }

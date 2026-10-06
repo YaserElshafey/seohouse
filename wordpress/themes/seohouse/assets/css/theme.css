@@ -29,7 +29,8 @@
 @media (max-width: 559px) { [data-bk-row] { grid-template-columns: 1fr; } }
 [data-bk-pick] { border: 1px solid var(--sh-line); background: #fff; color: var(--sh-ink); }
 [data-bk-pick][aria-pressed="true"] { border-color: var(--sh-blue); background: var(--sh-blue); color: #fff; }
-[data-bk-embed] iframe { width: 100%; min-height: 640px; border: 0; border-radius: 12px; background: #fff; }
+[data-bk-embed] iframe { display: block; width: 100%; height: 700px; min-height: 640px; border: 0; border-radius: 12px; background: #fff; }
+@media (max-width: 559px) { [data-bk-embed] iframe { height: 1050px; } }
 [data-sh-booking] form[aria-busy="true"] button[type="submit"] { opacity: .7; cursor: progress; }
 
 /* accessibility: pause long animations on request */

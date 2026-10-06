@@ -431,8 +431,8 @@
       "required": 0,
       "choices": {
         "none": "غير مربوطة — تأكيد استلام الطلب فقط",
-        "calendly": "Calendly",
-        "other": "رابط تضمين آخر"
+        "calendly": "Calendly (مواعيد فعلية + تأكيد الحجز من Calendly)",
+        "other": "رابط تضمين آخر (يُعرض فقط، بلا تأكيد للحالة)"
       },
       "default_value": "none",
       "return_format": "value"
@@ -442,7 +442,7 @@
       "label": "رابط التضمين",
       "name": "sh_booking_url",
       "type": "url",
-      "instructions": "يُعرض داخل الخطوة الثانية بعد حفظ الطلب. يوجَّه الزائر إلى /thank-you/ من إعدادات أداة الحجز بعد تأكيد الموعد فقط.",
+      "instructions": "يُعرض داخل الخطوة الثانية بعد حفظ الطلب. Calendly: رابط نوع الحدث (Event Type) ذي مدة 30 دقيقة، مثل https://calendly.com/اسم-الحساب/30min — تظهر فيه الأيام والأوقات المتاحة فعلًا من تقويمك. اترك «Redirect to an external site» في Calendly مُطفأ حتى يُسجَّل الموعد على الطلب نفسه.",
       "required": 0,
       "conditional_logic": [
         [
@@ -450,6 +450,44 @@
             "field": "field_sh_opt_booking_provider",
             "operator": "!=",
             "value": "none"
+          }
+        ]
+      ]
+    },
+    {
+      "key": "field_sh_opt_booking_duration",
+      "label": "مدة المكالمة (دقيقة)",
+      "name": "sh_booking_duration",
+      "type": "number",
+      "instructions": "تُكتب فوق التقويم. يجب أن تطابق مدة نوع الحدث في أداة الحجز.",
+      "required": 0,
+      "default_value": 30,
+      "min": 5,
+      "max": 240,
+      "step": 5,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_sh_opt_booking_provider",
+            "operator": "!=",
+            "value": "none"
+          }
+        ]
+      ]
+    },
+    {
+      "key": "field_sh_opt_booking_token",
+      "label": "رمز Calendly API (Personal Access Token)",
+      "name": "sh_booking_token",
+      "type": "password",
+      "instructions": "من Calendly: Integrations ← API & Webhooks ← Personal Access Tokens. يُستخدم على الخادم فقط للتحقق من الحجز عند Calendly قبل تحويل الطلب إلى «موعد مؤكد» وتسجيل وقته. بدونه يبقى الطلب «طلب استشارة» ويُسجَّل الحجز «غير متحقق».",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_sh_opt_booking_provider",
+            "operator": "==",
+            "value": "calendly"
           }
         ]
       ]
