@@ -30,7 +30,7 @@ $f = $args['f'] ?? array();
         <div id="booking" data-sh-contact style="scroll-margin-top: 88px; background: rgb(251, 252, 254); color: var(--sh-ink); border-radius: 18px; box-shadow: rgba(0, 0, 0, 0.75) 0px 30px 64px -38px; padding: clamp(20px, 2.4vw, 32px);">
           <?php
           $ct_status = isset( $_GET['sh_lead'] ) ? sanitize_key( wp_unslash( $_GET['sh_lead'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification -- display only.
-          $ct_inputs = array( 'v1' => array( 'text', 'rtl', 'الاسم الكامل', 'name', 'name' ), 'v2' => array( 'text', 'rtl', 'اسم الشركة', 'company', 'organization' ), 'v3' => array( 'email', 'ltr', 'name@company.com', 'email', 'email' ), 'v4' => array( 'tel', 'ltr', '+966', 'phone', 'tel' ), 'v5' => array( 'url', 'ltr', 'https://', 'site', 'url' ) );
+          $ct_inputs = array( 'v1' => array( 'text', 'rtl', 'الاسم الكامل', 'name', 'name' ), 'v2' => array( 'text', 'rtl', 'اسم الشركة', 'company', 'organization' ), 'v3' => array( 'email', 'ltr', 'name@company.com', 'email', 'email' ), 'v4' => array( 'tel', 'ltr', '', 'phone', 'tel' ), 'v5' => array( 'url', 'ltr', 'https://', 'site', 'url' ) );
           // market options keep their label as value; service options map to the lead service keys
           $ct_service_keys = array( 'v5' => 'seo', 'v6' => 'web', 'v7' => 'stores', 'v8' => 'products', 'v9' => 'unsure' );
           $ct_fstyle = 'min-height: 52px; border: 1.5px solid var(--sh-line); background: var(--sh-surface); padding: 0px 14px; font-size: 16px; border-radius: 13px; color: var(--sh-ink);';
@@ -68,7 +68,6 @@ $f = $args['f'] ?? array();
               <div aria-hidden="true" style="width: 52px; height: 52px; border-radius: 999px; background: var(--sh-blue); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-size: 23px;">✓</div>
               <div style="font-family: Alexandria, sans-serif; font-weight: 800; font-size: 23px; margin-top: 16px;" tabindex="-1" data-ct-sent-title><?php esc_html_e( 'استلمنا بياناتك', 'seohouse' ); ?></div>
               <p style="font-size: 16px; color: var(--sh-text); margin: 12px 0px 0px;"><?php esc_html_e( 'الخطوة التالية اختيار موعد المكالمة.', 'seohouse' ); ?></p>
-              <div data-bk-embed hidden style="margin-top: 18px;"></div>
               <div data-ct-receipt style="margin-top: 18px; border: 1px dashed rgba(40, 84, 232, 0.3); border-radius: 16px; background: var(--sh-surface); padding: 22px; text-align: center; font-size: 14.5px; color: var(--sh-text);"><?php $bk = (array) sh_option( 'sh_booking', array() ); echo esc_html( $bk['step2']['text'] ?? __( 'سجّلنا طلبك. نراجع موقعك ونتواصل معك لتحديد موعد المكالمة.', 'seohouse' ) ); ?></div>
               <div data-ct-summary style="margin-top: 14px; font-size: 14px; color: var(--sh-text);"></div>
               <button type="button" data-ct-reset style="margin-top: 20px; background: none; border: 1.5px solid var(--sh-line); color: var(--sh-ink); font-weight: 600; min-height: 50px; padding: 0px 20px; border-radius: 14px; cursor: pointer;"><?php esc_html_e( 'إرسال طلب آخر', 'seohouse' ); ?></button>

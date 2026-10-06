@@ -2,7 +2,7 @@
 /**
  * Plugin Name: SEO House Core
  * Description: أنواع المحتوى والحقول وأداة تجهيز المحتوى وطلبات الاستشارة والسيو والبيانات المنظمة لموقع سيو هاوس. مستقلة عن الثيم حتى لا تضيع البيانات عند تغيير المظهر.
- * Version: 2.7.1
+ * Version: 2.7.2
  * Requires at least: 6.5
  * Requires PHP: 8.1
  * Author: SEO House
@@ -14,7 +14,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SH_CORE_VERSION', '2.7.1' );
+define( 'SH_CORE_VERSION', '2.7.2' );
 define( 'SH_CORE_FILE', __FILE__ );
 define( 'SH_CORE_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SH_CORE_URL', plugin_dir_url( __FILE__ ) );
@@ -38,6 +38,7 @@ require SH_CORE_DIR . 'inc/search.php';
 require SH_CORE_DIR . 'inc/redirects.php';
 require SH_CORE_DIR . 'inc/media.php';
 require SH_CORE_DIR . 'inc/settings-tools.php';
+require SH_CORE_DIR . 'inc/admin-cleanup.php';
 require SH_CORE_DIR . 'inc/importer/class-importer.php';
 require SH_CORE_DIR . 'inc/importer/admin.php';
 require SH_CORE_DIR . 'inc/importer/legal.php';

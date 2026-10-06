@@ -780,15 +780,16 @@
           "label": "رابط جميع المراجعات على Google",
           "name": "all_link",
           "type": "url",
-          "instructions": "رابط صفحة مراجعات سيو هاوس على خرائط Google (من ملف النشاط التجاري ← «مشاركة» أو «اقرأ المراجعات»). يظهر الرابط أسفل القسم ويفتح في نافذة جديدة؛ عند الإفراغ لا يظهر.",
-          "required": 0
+          "instructions": "رابط صفحة المراجعات على Google Maps لهذه الصفحة. فارغ = الرابط العام من «إعدادات سيو هاوس ← تقييمات جوجل». يظهر زر أسفل التقييمات ويفتح في تبويب جديد.",
+          "required": 0,
+          "placeholder": "https://"
         },
         {
           "key": "field_sh_home_reviews_all_label",
-          "label": "نص رابط جميع المراجعات",
+          "label": "نص زر جميع المراجعات",
           "name": "all_label",
           "type": "text",
-          "instructions": "",
+          "instructions": "فارغ = «شاهد جميع المراجعات على Google».",
           "placeholder": "شاهد جميع المراجعات على Google",
           "required": 0
         },

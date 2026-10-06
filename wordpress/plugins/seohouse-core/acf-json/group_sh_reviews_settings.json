@@ -9,6 +9,22 @@
       "type": "text",
       "instructions": "مثال: [trustindex no-registration=google]. يظهر في مكان قسم التقييمات في كل صفحة فيها هذا القسم، ويمكن تغييره لصفحة بعينها من «التقييمات في هذه الصفحة» في محررها. بلا شورت كود لإضافة مفعّلة لا يظهر قسم التقييمات، ولا تُعرض شهادات تجريبية.",
       "required": 0
+    },
+    {
+      "key": "field_sh_opt_reviews_all_link",
+      "label": "رابط جميع المراجعات على Google (عام)",
+      "name": "sh_reviews_all_link",
+      "type": "url",
+      "instructions": "رابط صفحة المراجعات على Google Maps. يظهر زر أسفل التقييمات في كل صفحة لا تحدد رابطًا خاصًا في قسم التقييمات.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_opt_reviews_all_label",
+      "label": "نص زر جميع المراجعات (عام)",
+      "name": "sh_reviews_all_label",
+      "type": "text",
+      "instructions": "فارغ = «شاهد جميع المراجعات على Google».",
+      "required": 0
     }
   ],
   "location": [

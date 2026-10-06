@@ -50,6 +50,11 @@ add_action(
 		$url  = admin_url( 'admin.php?page=' . SH_SETUP_SLUG );
 		$last = get_option( 'sh_content_last_import' );
 		if ( $last ) {
+			// 2.7.3: an initialised site is not reminded of design-content updates (they rewrite pages);
+			// the update is only offered inside «تهيئة الموقع» when the maintenance tools are switched on
+			if ( ! sh_core_tools_visible() ) {
+				return;
+			}
 			$pack = SH_Importer::pack_version( SH_Importer::default_dir() );
 			if ( '' !== $pack && version_compare( $pack, (string) ( $last['version'] ?? '0' ), '>' ) ) {
 				echo '<div class="notice notice-info"><p>' . esc_html( sprintf( __( 'تحديث محتوى التصميم %s متاح في SEO House Core. يطبَّق على الصفحات التي لم تعدّلها فقط.', 'seohouse-core' ), $pack ) ) . ' <a href="' . esc_url( $url ) . '">' . esc_html__( 'مراجعة التحديث', 'seohouse-core' ) . '</a></p></div>';
@@ -114,7 +119,7 @@ function sh_setup_handle_upload(): string {
 
 function sh_setup_ajax_guard(): void {
 	check_ajax_referer( 'sh_setup', 'nonce' );
-	if ( ! current_user_can( 'manage_options' ) ) {
+	if ( ! current_user_can( 'manage_options' ) || ! sh_core_tools_visible( SH_SETUP_SLUG ) ) {
 		wp_send_json_error( array( 'message' => __( 'غير مسموح.', 'seohouse-core' ) ), 403 );
 	}
 	if ( function_exists( 'set_time_limit' ) ) {

@@ -271,20 +271,49 @@ function sh_platform_logo_link( string $logo, int $image, string $label, bool $d
 }
 
 /**
- * Link of the «شاهد جميع المراجعات على Google» button: the section's own field, else a Google Maps /
- * Business Profile link already saved in «إعدادات سيو هاوس ← الروابط الاجتماعية». Never guessed: empty
- * when neither holds one (the button is then not shown).
+ * «شاهد جميع المراجعات على Google» under the reviews widget (every page with a reviews section).
+ * Link, first found: the page's reviews section (all_link) → «إعدادات سيو هاوس ← تقييمات جوجل ←
+ * رابط جميع المراجعات» → a Google Maps / Business Profile link saved in «الروابط الاجتماعية».
+ * Never guessed: no saved link, no button.
+ *
+ * @return array{url:string,label:string}
  */
-function sh_google_reviews_url( array $f ): string {
-	$own = trim( (string) ( $f['all_link'] ?? '' ) );
-	if ( '' !== $own ) {
-		return $own;
-	}
-	foreach ( (array) sh_option( 'sh_socials', array() ) as $row ) {
-		$url = trim( (string) ( is_array( $row ) ? ( $row['url'] ?? '' ) : '' ) );
-		if ( preg_match( '#^https?://(?:maps\.app\.goo\.gl|goo\.gl/maps|g\.page|share\.google|(?:www\.|maps\.)?google\.[a-z.]+/maps|search\.google\.com/local|g\.co/kgs)/#i', $url ) ) {
-			return $url;
+function sh_google_reviews_link( int $post_id = 0 ): array {
+	$post_id = $post_id ? $post_id : (int) get_queried_object_id();
+	$url     = '';
+	$label   = '';
+	foreach ( sh_sections_rows( $post_id ) as $row ) {
+		if ( is_array( $row ) && str_starts_with( (string) ( $row['acf_fc_layout'] ?? '' ), 'reviews' ) ) {
+			$url   = trim( (string) ( $row['all_link'] ?? '' ) );
+			$label = trim( (string) ( $row['all_label'] ?? '' ) );
+			break;
 		}
 	}
-	return '';
+	if ( '' === $url ) {
+		$url = trim( (string) sh_option( 'sh_reviews_all_link', '' ) );
+	}
+	if ( '' === $url ) {
+		foreach ( (array) sh_option( 'sh_socials', array() ) as $row ) {
+			$u = trim( (string) ( is_array( $row ) ? ( $row['url'] ?? '' ) : '' ) );
+			if ( preg_match( '#^https?://(?:maps\.app\.goo\.gl|goo\.gl/maps|g\.page|share\.google|(?:www\.|maps\.)?google\.[a-z.]+/maps|search\.google\.com/local|g\.co/kgs)/#i', $u ) ) {
+				$url = $u;
+				break;
+			}
+		}
+	}
+	if ( '' === $label ) {
+		$label = trim( (string) sh_option( 'sh_reviews_all_label', '' ) );
+	}
+	return array(
+		'url'   => preg_match( '#^https?://#i', $url ) ? $url : '',
+		'label' => '' !== $label ? $label : __( 'شاهد جميع المراجعات على Google', 'seohouse' ),
+	);
+}
+
+function sh_google_reviews_button( int $post_id = 0 ): string {
+	$l = sh_google_reviews_link( $post_id );
+	if ( '' === $l['url'] ) {
+		return '';
+	}
+	return '<div style="margin-top: 22px; text-align: center;"><a href="' . esc_url( $l['url'] ) . '" target="_blank" rel="noopener" data-reviews-all class="hv-54a5cb" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 15px; font-weight: 600; color: var(--sh-link); border-bottom: 1px solid rgba(40, 84, 232, 0.45);">' . esc_html( $l['label'] ) . ' <span aria-hidden="true">↗</span><span class="screen-reader-text">' . esc_html__( '(يفتح في نافذة جديدة)', 'seohouse' ) . '</span></a></div>';
 }

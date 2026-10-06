@@ -20,14 +20,18 @@
  *   admin email).
  *
  * 2.7.1
- * - Booking form: separate required email and phone (international format with the country code,
- *   normalised to +<digits>; no country assumed). A page cached before the update still sends the
+ * - Booking form: separate required email and phone. A page cached before the update still sends the
  *   single «contact» field and is accepted as before, so no request is lost.
  * - Every request gets a random reference (_sh_ref) returned to the browser. The scheduler step
  *   reports a booking with it: POST /lead/booking { ref, event, invitee }. The request is never
  *   stored twice; it becomes «موعد مؤكد» only after the booking is confirmed by Calendly's API
  *   («رمز Calendly API»). Without the token, or when Calendly can't be reached, it stays
  *   «طلب استشارة» with the booking recorded as unverified (re-check from the requests list).
+ *
+ * 2.7.3
+ * - The home form is one step again (no scheduler); the booking report endpoint and the stored
+ *   booking data of earlier requests are kept, so past «موعد مؤكد» states still show.
+ * - Phone (both forms): local or international, leading 0 kept, no country code required.
  *
  * @package SEOHouseCore
  */
@@ -63,17 +67,15 @@ function sh_lead_recipients(): array {
 }
 
 /**
- * Phone number in international format: +<country code><number>, 7–15 digits (E.164).
- * Accepts spaces, dashes, brackets, a leading 00 and Arabic-Indic digits; no country is assumed.
- * Returns '' when the number has no country code or is not a phone number.
+ * Phone number, local or international (2.7.3): Arabic-Indic or Latin digits, an optional leading
+ * +, spaces, dashes, dots and brackets; 7–15 digits. Stored as typed minus the separators, so a
+ * leading 0 (or 00 / +) is kept; no country code is assumed or added. Returns '' when it is not a
+ * phone number.
  */
 function sh_lead_phone( string $raw ): string {
 	$raw = strtr( $raw, array_combine( array( '٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩', '۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹' ), array( '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ) ) );
 	$raw = preg_replace( '/[\s().\-\x{200E}\x{200F}\x{202A}-\x{202E}]/u', '', trim( $raw ) );
-	if ( str_starts_with( $raw, '00' ) ) {
-		$raw = '+' . substr( $raw, 2 );
-	}
-	return preg_match( '/^\+[1-9][0-9]{6,14}$/', $raw ) ? $raw : '';
+	return preg_match( '/^\+?[0-9]{7,15}$/', $raw ) ? $raw : '';
 }
 
 /** Request state: «طلب استشارة» until a booking is confirmed by the scheduler. */
@@ -189,7 +191,7 @@ function sh_lead_handle( array $in ): array {
 		$extra = array(
 			'company' => sanitize_text_field( (string) ( $in['company'] ?? '' ) ),
 			'email'   => sanitize_email( (string) ( $in['email'] ?? '' ) ),
-			'phone'   => sanitize_text_field( (string) ( $in['phone'] ?? '' ) ),
+			'phone'   => sh_lead_phone( sanitize_text_field( (string) ( $in['phone'] ?? '' ) ) ),
 			'market'  => sanitize_text_field( (string) ( $in['market'] ?? '' ) ),
 			'goal'    => sanitize_textarea_field( (string) ( $in['goal'] ?? '' ) ),
 		);
@@ -199,8 +201,8 @@ function sh_lead_handle( array $in ): array {
 		if ( ! is_email( $extra['email'] ) ) {
 			return $fail( 'email', __( 'أدخل بريدًا إلكترونيًا صحيحًا.', 'seohouse-core' ) );
 		}
-		if ( ! preg_match( '/^\+?[0-9\s()-]{7,20}$/', $extra['phone'] ) ) {
-			return $fail( 'phone', __( 'أدخل رقم الهاتف أو واتساب.', 'seohouse-core' ) );
+		if ( '' === $extra['phone'] ) {
+			return $fail( 'phone', __( 'أدخل رقم هاتف صحيحًا.', 'seohouse-core' ) );
 		}
 		if ( '' === trim( $extra['goal'] ) || mb_strlen( $extra['goal'] ) > 3000 ) {
 			return $fail( 'goal', __( 'اكتب الهدف أو التحدي الأساسي.', 'seohouse-core' ) );
@@ -216,7 +218,7 @@ function sh_lead_handle( array $in ): array {
 			return $fail( 'email', __( 'أدخل بريدًا إلكترونيًا صحيحًا.', 'seohouse-core' ) );
 		}
 		if ( '' === $extra['phone'] ) {
-			return $fail( 'phone', __( 'أدخل رقم الهاتف مع رمز الدولة، يبدأ بـ + أو 00.', 'seohouse-core' ) );
+			return $fail( 'phone', __( 'أدخل رقم هاتف صحيحًا.', 'seohouse-core' ) );
 		}
 		$contact = $extra['email'];
 	}
@@ -228,7 +230,7 @@ function sh_lead_handle( array $in ): array {
 		return $fail( 'name', __( 'اكتب اسمك.', 'seohouse-core' ) );
 	}
 	$is_email = (bool) is_email( $contact );
-	$is_phone = (bool) preg_match( '/^\+?[0-9\s-]{8,20}$/', $contact );
+	$is_phone = '' !== sh_lead_phone( $contact );
 	if ( ! $is_email && ! $is_phone ) {
 		return $fail( 'contact', __( 'اكتب رقم جوال أو بريدًا إلكترونيًا صحيحًا.', 'seohouse-core' ) );
 	}

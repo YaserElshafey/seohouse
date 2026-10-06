@@ -34,6 +34,7 @@ function sh_dynamic_slot( string $name ): bool {
 		if ( '' !== $code && empty( $done[ $id ] ) ) {
 			$done[ $id ] = true; // one reviews widget per page
 			echo '<div class="sh-reviews-live" data-reviews-live>' . do_shortcode( $code ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput -- output of a registered shortcode chosen by an editor.
+			echo sh_google_reviews_button( $id ); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside
 		}
 		return true;
 	}

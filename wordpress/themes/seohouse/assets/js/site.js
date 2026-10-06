@@ -183,77 +183,18 @@
 		data.set('sid', form.getAttribute('data-sid'));
 		return data;
 	}
-	// international phone: +<country code><number>; spaces, dashes, brackets, 00 and Arabic-Indic digits accepted
+	// phone number, local or international: digits (Arabic-Indic accepted), optional leading +,
+	// spaces, dashes, dots and brackets; 7–15 digits. No country code is required or added.
 	function normPhone(v) {
 		v = String(v || '').replace(/[٠-٩]/g, function (c) { return String(c.charCodeAt(0) - 0x660); }).replace(/[۰-۹]/g, function (c) { return String(c.charCodeAt(0) - 0x6F0); });
-		v = v.replace(/[\s().\-\u200E\u200F\u202A-\u202E]/g, '');
-		return v.indexOf('00') === 0 ? '+' + v.slice(2) : v;
+		return v.replace(/[\s().\-\u200E\u200F\u202A-\u202E]/g, '');
 	}
+	function isPhone(v) { return /^\+?[0-9]{7,15}$/.test(normPhone(v)); }
 	function leadBusy(form, on) {
 		if (on) form.setAttribute('aria-busy', 'true'); else form.removeAttribute('aria-busy');
 		$$('button[type="submit"]', form).forEach(function (b) { b.disabled = !!on; });
 	}
 	$$('[data-ct-form], [data-bk-form]').forEach(function (f) { f.setAttribute('data-shown', String(Date.now())); });
-
-	/* ---------------------------------------------------------------- scheduler step (after the request is stored)
-	   Shows the booking tool chosen in «أداة الحجز» with the visitor's data prefilled and the request
-	   reference in utm_content. A Calendly booking (its event_scheduled message, only from the embedded
-	   frame) is reported to Core with the same reference: no new request is created, and «تم تأكيد
-	   الموعد» is shown only when Core confirmed it with Calendly. */
-	function mountScheduler(box, who, ref) {
-		var bk = cfg.booking || {}, embed = box.querySelector('[data-bk-embed]');
-		if (!bk.url || !embed) return false;
-		var u; try { u = new URL(bk.url); } catch (e) { return false; }
-		var origin = u.origin;
-		if (bk.provider === 'calendly') {
-			if (who.name) u.searchParams.set('name', who.name);
-			if (who.email) u.searchParams.set('email', who.email);
-			u.searchParams.set('hide_gdpr_banner', '1');
-			u.searchParams.set('embed_type', 'Inline');
-			u.searchParams.set('embed_domain', location.hostname);
-			u.searchParams.set('utm_source', 'seohouse-site');
-			u.searchParams.set('utm_medium', who.source || 'booking');
-			if (ref) u.searchParams.set('utm_content', ref);
-		}
-		var f = d.createElement('iframe');
-		f.src = u.toString(); f.title = 'اختيار موعد المكالمة'; f.setAttribute('allow', 'payment');
-		embed.innerHTML = ''; embed.appendChild(f); embed.hidden = false;
-		var sched = box.querySelector('[data-bk-sched]'), open = box.querySelector('[data-bk-open]');
-		if (sched) sched.hidden = false;
-		if (open) open.hidden = false;
-		var tz = box.querySelector('[data-bk-tz]');
-		if (tz) { var zone = ''; try { zone = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {} tz.textContent = zone ? tz.getAttribute('data-tpl').replace('%s', zone) : ''; tz.hidden = !zone; }
-		var reported = false;
-		function onMsg(e) {
-			if (e.origin !== origin || e.source !== f.contentWindow || !e.data || typeof e.data.event !== 'string') return;
-			if (e.data.event === 'calendly.page_height' && e.data.payload && e.data.payload.height) {
-				var h = parseInt(e.data.payload.height, 10); if (h > 300) f.style.height = h + 'px';
-				return;
-			}
-			if (e.data.event !== 'calendly.event_scheduled' || reported || !ref) return;
-			var p = e.data.payload || {}, inv = p.invitee && p.invitee.uri;
-			if (!inv) return;
-			reported = true;
-			var body = new FormData(); body.set('ref', ref); body.set('invitee', inv);
-			fetch((cfg.rest || '/wp-json/seohouse/v1/') + 'lead/booking', { method: 'POST', body: body, credentials: 'same-origin', cache: 'no-store' })
-				.then(function (r) { return r.json().catch(function () { return null; }); })
-				.then(function (j) {
-					var ok = box.querySelector('[data-bk-confirmed]'), wait = box.querySelector('[data-bk-pending]');
-					if (j && j.confirmed && ok) {
-						var when = box.querySelector('[data-bk-when]');
-						if (when && j.start) {
-							var s = new Date(j.start), en = j.end ? new Date(j.end) : null, o = { weekday: 'long', day: 'numeric', month: 'long', hour: 'numeric', minute: '2-digit' };
-							try { when.textContent = '— ' + s.toLocaleString('ar', o) + (en ? ' – ' + en.toLocaleTimeString('ar', { hour: 'numeric', minute: '2-digit' }) : '') + ' (' + Intl.DateTimeFormat().resolvedOptions().timeZone + ')'; } catch (er) { when.textContent = ''; }
-						}
-						ok.hidden = false; if (wait) wait.hidden = true; ok.focus();
-						if (window.dataLayer) window.dataLayer.push({ event: 'sh_booking_confirmed', sh_source: who.source || 'booking' });
-					} else if (wait) { wait.hidden = false; }
-				})
-				.catch(function () { var wait = box.querySelector('[data-bk-pending]'); if (wait) wait.hidden = false; });
-		}
-		window.addEventListener('message', onMsg);
-		return true;
-	}
 
 	/* ---------------------------------------------------------------- contact page form (same endpoint as booking, source "contact") */
 	$$('[data-sh-contact]').forEach(function (box) {
@@ -269,7 +210,7 @@
 			e.preventDefault();
 			if (!val('name') || !val('company')) return showErr('أدخل الاسم واسم الشركة للمتابعة.');
 			if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val('email'))) return showErr('أدخل بريدًا إلكترونيًا صحيحًا.');
-			if (!val('phone')) return showErr('أدخل رقم الهاتف أو واتساب.');
+			if (!isPhone(val('phone'))) return showErr('أدخل رقم هاتف صحيحًا.');
 			if (!val('goal')) return showErr('اكتب الهدف أو التحدي الأساسي.');
 			if (form.getAttribute('aria-busy') === 'true') return;
 			leadBusy(form, true);
@@ -281,8 +222,6 @@
 					form.removeAttribute('data-sid');
 					var sum = box.querySelector('[data-ct-summary]');
 					if (sum) sum.textContent = 'السوق: ' + optText('market') + ' · الخدمة: ' + optText('service');
-					var receipt = box.querySelector('[data-ct-receipt]');
-					if (mountScheduler(box, { name: val('name'), email: val('email'), source: 'contact' }, res.j.ref) && receipt) receipt.hidden = true;
 					form.hidden = true; sent.hidden = false;
 					var t = sent.querySelector('[data-ct-sent-title]'); if (t) t.focus();
 					if (window.dataLayer) window.dataLayer.push({ event: 'sh_lead_submitted', sh_source: 'contact', sh_service: val('service') });
@@ -349,13 +288,12 @@
 		});
 	});
 
-	/* ---------------------------------------------------------------- booking form */
+	/* ---------------------------------------------------------------- booking form (one step) */
 	$$('[data-sh-booking]').forEach(function (box) {
 		var form = box.querySelector('[data-bk-form]');
-		var step2 = box.querySelector('[data-bk-step2]');
+		var done = box.querySelector('[data-bk-step2]');
 		var err = box.querySelector('[data-bk-error]');
 		var svc = box.querySelector('[data-bk-service]');
-		var label = box.querySelector('[data-bk-label]'), counter = box.querySelector('[data-bk-counter]'), bar = box.querySelector('[data-bk-bar]');
 		if (!form) return;
 		$$('[data-bk-pick]', form).forEach(function (b) {
 			b.addEventListener('click', function () {
@@ -366,28 +304,18 @@
 		function showErr(m) { err.textContent = m; err.hidden = false; }
 		function hideErr() { err.hidden = true; err.textContent = ''; }
 		$$('input', form).forEach(function (i) { i.addEventListener('input', hideErr); });
-		function stage(n) {
-			var two = n === 2;
-			form.hidden = two; step2.hidden = !two;
-			if (label) label.textContent = label.getAttribute(two ? 'data-l2' : 'data-l1');
-			if (counter) counter.textContent = counter.getAttribute(two ? 'data-c2' : 'data-c1');
-			if (bar) bar.style.width = two ? '100%' : '50%';
-		}
-		if (!step2.hidden) stage(2);
-		box.querySelector('[data-bk-back]').addEventListener('click', function () { stage(1); });
 		form.addEventListener('submit', function (e) {
 			e.preventDefault();
-			var name = form.name.value.trim(), email = form.email ? form.email.value.trim() : '', phone = form.phone ? normPhone(form.phone.value) : '';
+			var name = form.name.value.trim(), email = form.email ? form.email.value.trim() : '';
 			if (!svc.value) return showErr('اختر الخدمة المطلوبة.');
 			if (!name) { form.name.focus(); return showErr('اكتب اسمك.'); }
 			if (!form.email && form.contact) {
 				// markup of a page cached before 2.7.2 (single «contact» field): accepted as before
-				email = form.contact.value.trim();
-				if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) && !/^\+?[0-9\s-]{8,}$/.test(email)) return showErr('اكتب رقم جوال أو بريدًا إلكترونيًا صحيحًا.');
-				if (email.indexOf('@') < 0) email = '';
+				var c = form.contact.value.trim();
+				if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c) && !isPhone(c)) return showErr('اكتب رقم جوال أو بريدًا إلكترونيًا صحيحًا.');
 			} else {
 				if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { form.email.focus(); return showErr('أدخل بريدًا إلكترونيًا صحيحًا.'); }
-				if (!/^\+[1-9][0-9]{6,14}$/.test(phone)) { form.phone.focus(); return showErr('أدخل رقم الهاتف مع رمز الدولة، يبدأ بـ + أو 00.'); }
+				if (!isPhone(form.phone.value)) { form.phone.focus(); return showErr('أدخل رقم هاتف صحيحًا.'); }
 			}
 			if (form.getAttribute('aria-busy') === 'true') return;
 			leadBusy(form, true);
@@ -397,14 +325,14 @@
 					leadBusy(form, false);
 					if (!res.ok || !res.j || !res.j.ok) return showErr((res.j && res.j.message) || (cfg.i18n && cfg.i18n.failed));
 					form.removeAttribute('data-sid');
-					stage(2);
-					var receipt = box.querySelector('[data-bk-receipt]');
-					if (mountScheduler(box, { name: name, email: email, source: 'booking' }, res.j.ref) && receipt) receipt.hidden = true;
+					form.hidden = true;
+					if (done) { done.hidden = false; done.focus(); }
 					if (window.dataLayer) window.dataLayer.push({ event: 'sh_lead_submitted', sh_source: 'booking', sh_service: svc.value });
 				})
 				.catch(function () { leadBusy(form, false); showErr(cfg.i18n && cfg.i18n.failed); });
 		});
 	});
+
 
 	/* ---------------------------------------------------------------- click tracking (no personal data) */
 	d.addEventListener('click', function (e) {

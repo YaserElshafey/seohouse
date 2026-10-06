@@ -81,7 +81,6 @@ add_action(
 			array(
 				'rest'     => esc_url_raw( rest_url( 'seohouse/v1/' ) ),
 				'contact'  => esc_url_raw( home_url( '/contact/' ) ),
-				'booking'  => sh_booking_config(),
 				'i18n'     => array(
 					'sending' => __( 'جارٍ الإرسال…', 'seohouse' ),
 					'failed'  => __( 'تعذر إرسال الطلب الآن. حاول مرة أخرى أو تواصل معنا عبر صفحة التواصل.', 'seohouse' ),
@@ -188,17 +187,3 @@ function sh_design_token_css(): string {
 	return $css ? ':root { ' . $css . '}' : '';
 }
 
-/**
- * Booking integration settings exposed to the form script («إعدادات سيو هاوس ← الاستشارة»).
- * No URL unless a booking tool is chosen: «غير مربوطة» never shows a scheduler.
- */
-function sh_booking_config(): array {
-	$provider = (string) sh_option( 'sh_booking_provider', 'none' );
-	$url      = 'none' === $provider || '' === $provider ? '' : (string) sh_option( 'sh_booking_url', '' );
-	$minutes  = (int) sh_option( 'sh_booking_duration', 30 );
-	return array(
-		'provider' => $provider,
-		'url'      => preg_match( '#^https?://#i', $url ) ? esc_url_raw( $url ) : '',
-		'duration' => $minutes > 0 ? $minutes : 30,
-	);
-}

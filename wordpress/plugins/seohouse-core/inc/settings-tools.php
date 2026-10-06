@@ -125,5 +125,5 @@ function sh_settings_tools_page(): void {
 	foreach ( array_keys( sh_settings_tabs() ) as $t ) {
 		echo '<option>' . esc_html( $t ) . '</option>';
 	}
-	echo '</select> <button class="button" name="sh_tools_action" value="reset">' . esc_html__( 'استعادة', 'seohouse-core' ) . '</button></form></div>';
+	echo '</select> <button class="button" name="sh_tools_action" value="reset">' . esc_html__( 'استعادة', 'seohouse-core' ) . '</button></form>' . sh_core_tools_switch_html() . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside
 }

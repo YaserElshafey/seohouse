@@ -381,8 +381,17 @@
           "key": "field_sh_opt_booking__services"
         },
         {
+          "key": "field_sh_opt_booking__success",
+          "label": "رسالة النجاح في نموذج الاستشارة",
+          "name": "success",
+          "type": "text",
+          "instructions": "تظهر بعد حفظ الطلب من نموذج الرئيسية. فارغ = «وصلنا طلبك، وسنتواصل معك لتحديد موعد الاستشارة».",
+          "required": 0,
+          "placeholder": "وصلنا طلبك، وسنتواصل معك لتحديد موعد الاستشارة"
+        },
+        {
           "name": "step2",
-          "label": "رسالة الخطوة الثانية (قبل ربط أداة الحجز)",
+          "label": "رسالة الاستلام في صفحة «اتصل بنا»",
           "type": "group",
           "instructions": "",
           "required": 0,
@@ -401,7 +410,7 @@
               "name": "text",
               "label": "النص",
               "type": "textarea",
-              "instructions": "",
+              "instructions": "تظهر بعد إرسال نموذج «اتصل بنا».",
               "required": 0,
               "rows": 2,
               "new_lines": "",

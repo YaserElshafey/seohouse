@@ -1148,6 +1148,24 @@
           "required": 0
         },
         {
+          "key": "field_sh_seo_egypt_reviews_all_link",
+          "label": "رابط جميع المراجعات على Google",
+          "name": "all_link",
+          "type": "url",
+          "instructions": "رابط صفحة المراجعات على Google Maps لهذه الصفحة. فارغ = الرابط العام من «إعدادات سيو هاوس ← تقييمات جوجل». يظهر زر أسفل التقييمات ويفتح في تبويب جديد.",
+          "required": 0,
+          "placeholder": "https://"
+        },
+        {
+          "key": "field_sh_seo_egypt_reviews_all_label",
+          "label": "نص زر جميع المراجعات",
+          "name": "all_label",
+          "type": "text",
+          "instructions": "فارغ = «شاهد جميع المراجعات على Google».",
+          "required": 0,
+          "placeholder": "شاهد جميع المراجعات على Google"
+        },
+        {
           "key": "field_af335b6c7891e",
           "label": "النص: تُعرض التقييمات كما كتبها العملاء في…",
           "name": "text",

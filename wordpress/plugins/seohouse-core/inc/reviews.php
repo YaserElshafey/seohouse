@@ -39,7 +39,11 @@ add_filter(
 			$field['instructions'] = __( 'محتوى القسم من شورت كود التقييمات («التقييمات في هذه الصفحة» في الشريط الجانبي، أو الشورت كود العام من «سيو هاوس ← تقييمات جوجل»). بلا شورت كود لا يظهر القسم.', 'seohouse-core' );
 			return $field;
 		}
-		if ( in_array( $field['parent'] ?? '', $groups, true ) && ! in_array( $field['name'] ?? '', array( 'sh_hide', 'sh_anchor', 'eyebrow', 'title', 'text' ), true ) ) {
+		// all_link / all_label: the «شاهد جميع المراجعات على Google» button. 2.7.3: compare ACF's own field
+		// name (_name); inside a group 'name' is already the input name «acf[group][key]», so before
+		// this fix every field of the section was hidden, the kept ones included.
+		$name = (string) ( $field['_name'] ?? ( $field['name'] ?? '' ) );
+		if ( in_array( $field['parent'] ?? '', $groups, true ) && ! in_array( $name, array( 'sh_hide', 'sh_anchor', 'eyebrow', 'title', 'text', 'all_link', 'all_label' ), true ) ) {
 			// example testimonials / placeholder texts of the design: never displayed
 			return false;
 		}
@@ -117,6 +121,8 @@ function sh_core_reviews_page(): void {
 	if ( isset( $_POST['sh_reviews_save'] ) ) {
 		check_admin_referer( 'sh_reviews_save' );
 		update_field( 'field_sh_opt_reviews_shortcode', sanitize_text_field( wp_unslash( $_POST['sh_reviews_global'] ?? '' ) ), 'option' );
+		update_field( 'field_sh_opt_reviews_all_link', esc_url_raw( trim( wp_unslash( $_POST['sh_reviews_all_link'] ?? '' ) ) ), 'option' );
+		update_field( 'field_sh_opt_reviews_all_label', sanitize_text_field( wp_unslash( $_POST['sh_reviews_all_label'] ?? '' ) ), 'option' );
 		foreach ( (array) ( $_POST['sh_reviews_page'] ?? array() ) as $pid => $code ) {
 			$pid = absint( $pid );
 			if ( $pid && current_user_can( 'edit_post', $pid ) ) {
@@ -147,7 +153,9 @@ function sh_core_reviews_page(): void {
 
 	echo '<form method="post">';
 	wp_nonce_field( 'sh_reviews_save' );
-	echo '<table class="form-table" role="presentation"><tr><th scope="row"><label for="sh-reviews-global">' . esc_html__( 'الشورت كود العام', 'seohouse-core' ) . '</label></th><td><input type="text" class="large-text code" dir="ltr" id="sh-reviews-global" name="sh_reviews_global" value="' . esc_attr( $global ) . '" placeholder="[trustindex no-registration=google]"><p class="description">' . esc_html__( 'شورت كود واحد فقط، كما تنسخه من الإضافة.', 'seohouse-core' ) . '</p></td></tr></table>';
+	echo '<table class="form-table" role="presentation"><tr><th scope="row"><label for="sh-reviews-global">' . esc_html__( 'الشورت كود العام', 'seohouse-core' ) . '</label></th><td><input type="text" class="large-text code" dir="ltr" id="sh-reviews-global" name="sh_reviews_global" value="' . esc_attr( $global ) . '" placeholder="[trustindex no-registration=google]"><p class="description">' . esc_html__( 'شورت كود واحد فقط، كما تنسخه من الإضافة.', 'seohouse-core' ) . '</p></td></tr>'
+		. '<tr><th scope="row"><label for="sh-reviews-all-link">' . esc_html__( 'رابط جميع المراجعات على Google', 'seohouse-core' ) . '</label></th><td><input type="url" class="large-text code" dir="ltr" id="sh-reviews-all-link" name="sh_reviews_all_link" value="' . esc_attr( (string) sh_core_option( 'sh_reviews_all_link', '' ) ) . '" placeholder="https://"><p class="description">' . esc_html__( 'رابط صفحة مراجعات نشاطك على Google Maps (افتح نشاطك في خرائط Google ← المراجعات ← انسخ الرابط). يظهر زر أسفل التقييمات في كل الصفحات ويفتح في تبويب جديد، ويمكن تغييره لصفحة من «قسم التقييمات» في محررها. فارغ = لا يظهر الزر.', 'seohouse-core' ) . '</p></td></tr>'
+		. '<tr><th scope="row"><label for="sh-reviews-all-label">' . esc_html__( 'نص الزر', 'seohouse-core' ) . '</label></th><td><input type="text" class="regular-text" id="sh-reviews-all-label" name="sh_reviews_all_label" value="' . esc_attr( (string) sh_core_option( 'sh_reviews_all_label', '' ) ) . '" placeholder="' . esc_attr__( 'شاهد جميع المراجعات على Google', 'seohouse-core' ) . '"><p class="description">' . esc_html__( 'فارغ = «شاهد جميع المراجعات على Google».', 'seohouse-core' ) . '</p></td></tr></table>';
 
 	echo '<h2>' . esc_html__( 'الصفحات التي فيها قسم التقييمات', 'seohouse-core' ) . '</h2><p>' . esc_html__( 'اترك «شورت كود خاص» فارغًا لتستخدم الصفحة الشورت كود العام. عند إدخاله يحل محل العام في تلك الصفحة فقط، ولا تُعرض التقييمات مرتين.', 'seohouse-core' ) . '</p>';
 	echo '<table class="widefat striped" style="max-width:72em"><thead><tr><th>' . esc_html__( 'الصفحة', 'seohouse-core' ) . '</th><th>' . esc_html__( 'شورت كود خاص (اختياري)', 'seohouse-core' ) . '</th><th>' . esc_html__( 'ما يظهر الآن', 'seohouse-core' ) . '</th></tr></thead><tbody>';

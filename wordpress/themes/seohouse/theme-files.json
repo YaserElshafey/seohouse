@@ -1,6 +1,6 @@
 {
  "theme": "seohouse",
- "version": "2.7.2",
+ "version": "2.7.3",
  "count": 359,
  "files": [
   {
@@ -21,12 +21,12 @@
   {
    "path": "functions.php",
    "size": 984,
-   "sha1": "846a29147390c904fe5be2ee8b34c6daa7d81106"
+   "sha1": "d6939c115b75bb88064afdda43bdf1758b92922f"
   },
   {
    "path": "header.php",
-   "size": 883,
-   "sha1": "b8c3dcb54d0ae610c33bdd0b925a14da3018faf7"
+   "size": 863,
+   "sha1": "858b8a0e03fa72b9c7844e119072cb6671560334"
   },
   {
    "path": "home.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 545,
-   "sha1": "33509690e5bebdefde0110572f145bcb8f572fe2"
+   "sha1": "ca37ad5a2c36edad54a337bdfff3398e52b822d9"
   },
   {
    "path": "theme.json",
@@ -95,8 +95,8 @@
   },
   {
    "path": "assets/css/theme.css",
-   "size": 15332,
-   "sha1": "5aeb9a86e5bfc29eb7dc89645494ca2f4bbf259a"
+   "size": 17064,
+   "sha1": "1dc497df3fb2b596dec8ff761beeff75ed569528"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -420,8 +420,8 @@
   },
   {
    "path": "assets/js/site.js",
-   "size": 24882,
-   "sha1": "66a0c0fdd68b302ca33eb7bdf3b437b455690229"
+   "size": 20094,
+   "sha1": "114e8c33cd7e1d849eed68cb9741c6c65639a224"
   },
   {
    "path": "assets/platforms/ga4.svg",
@@ -535,18 +535,18 @@
   },
   {
    "path": "inc/dynamic.php",
-   "size": 6346,
-   "sha1": "5d72d87c29346fdfe42b670e8f9ffb0a377889a0"
+   "size": 6453,
+   "sha1": "0bf3983e9e54abf5c0b0b4e6614eb12c1b285ed7"
   },
   {
    "path": "inc/enqueue.php",
-   "size": 7696,
-   "sha1": "2a5b2b76d2db0e9163cb9d6545588d9905ec6b60"
+   "size": 6995,
+   "sha1": "35615e457e740423d576f2eb5441d2c534cfaedb"
   },
   {
    "path": "inc/helpers.php",
-   "size": 11223,
-   "sha1": "0093dc6c2b76e8ea0ffc40298308b049055f5b53"
+   "size": 12773,
+   "sha1": "a603a399fe69bcb785ab2213fd9686b493a154d1"
   },
   {
    "path": "inc/navigation.php",
@@ -860,8 +860,8 @@
   },
   {
    "path": "sections/contact/flow.php",
-   "size": 11268,
-   "sha1": "58ec785145099b2a2953bf5c65ac3cb1d84d1318"
+   "size": 11191,
+   "sha1": "c4b4bbfd967a8c22adb77f64c957fdf3be3cda7c"
   },
   {
    "path": "sections/contact/hero.php",
@@ -905,8 +905,8 @@
   },
   {
    "path": "sections/home/reviews.php",
-   "size": 5687,
-   "sha1": "ed27f2ce023ab1db266cdcaab2b1bf70cd376c93"
+   "size": 4881,
+   "sha1": "d390855c34c5e3756395c77652089c7fcd53874f"
   },
   {
    "path": "sections/home/sectors.php",
@@ -1550,8 +1550,8 @@
   },
   {
    "path": "sections/shared/booking.php",
-   "size": 12416,
-   "sha1": "9820202996947e39d430f71c63cd0288f5aa231c"
+   "size": 8585,
+   "sha1": "963191e02335601c49de5020101cef12b4a43509"
   },
   {
    "path": "sections/shared/faq.php",
