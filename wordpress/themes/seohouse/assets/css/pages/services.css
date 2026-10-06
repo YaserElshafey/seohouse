@@ -4,7 +4,7 @@
 @media (max-width:899px) { [data-bk-grid] { grid-template-columns:1fr; } }
 @media (max-width:559px) { [data-bk-row] { grid-template-columns:1fr; } }
 [data-si-branch] > a { position:relative; }
-[data-si-branch] > a::before { content:""; position:absolute; inset-inline-start:-5px; top:50%; width:5px; height:1px; background:rgba(var(--sh-sky-rgb), .5); }
+[data-si-branch] > a::before { content:""; position:absolute; inset-inline-start:-5px; top:50%; width:5px; height:1px; background:rgba(40,84,232,.5); }
 [data-screen-label="Hero"] { position:relative; overflow:hidden; }
 [data-hero-grid] ~ *:not([aria-hidden="true"]) { position:relative; }
 [data-sh-center] { text-align:center; }

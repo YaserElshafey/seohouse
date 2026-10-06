@@ -14,7 +14,7 @@ const path = require('path');
 const crypto = require('crypto');
 const cheerio = require('cheerio');
 const { SectionCompiler, textOf } = require('./lib/section-compiler');
-const { tokenize, rootCss } = require('./lib/tokens');
+const { tokenize, rootCss, setDesignRoot, readDesignRoot } = require('./lib/tokens');
 const hooks = require('./hooks');
 const MANUAL = require('./manual');
 
@@ -31,9 +31,11 @@ const md5 = s => crypto.createHash('md5').update(s).digest('hex');
  * (the list order already conveys them): hidden from assistive tech, and lifted to the 3:1 contrast floor.
  */
 function decorativeCounters(php) {
-  return php.replace(/<(span|div)( style="[^"]*color: rgba\(var\(--sh-[a-z-]+-rgb\), 0?\.(?:[0-4]\d*|50*)\);?[^"]*")>(\s*<\?= esc_html\(sprintf\('%02d', \$i\d+ \+ \d+\)\) \?>\s*<\/\1>)/g,
+  // colour as a token (rgba(var(--sh-x-rgb), a)) or, since the v5 export, as a literal rgba(r, g, b, a)
+  const C = '(?:var\\(--sh-[a-z-]+-rgb\\)|\\d{1,3}, \\d{1,3}, \\d{1,3})';
+  return php.replace(new RegExp(`<(span|div)( style="[^"]*color: rgba\\(${C}, 0?\\.(?:[0-4]\\d*|50*)\\);?[^"]*")>(\\s*<\\?= esc_html\\(sprintf\\('%02d', \\$i\\d+ \\+ \\d+\\)\\) \\?>\\s*<\\/\\1>)`, 'g'),
     // alpha raised to 0.56 so the large numbers still meet the 3:1 contrast floor (visually the same step colour)
-    (m, tag, attrs, rest) => `<${tag} aria-hidden="true"${attrs.replace(/(color: rgba\(var\(--sh-[a-z-]+-rgb\), )0?\.(?:[0-4]\d*|50*)\)/g, '$10.56)')}>${rest}`);
+    (m, tag, attrs, rest) => `<${tag} aria-hidden="true"${attrs.replace(new RegExp(`(color: rgba\\(${C}, )0?\\.(?:[0-4]\\d*|50*)\\)`, 'g'), '$10.56)')}>${rest}`);
 }
 function writeGen(file, content) {
   if (fs.existsSync(file) && /^\s*\*\s*@sh-manual\b/m.test(fs.readFileSync(file, 'utf8'))) return false;
@@ -56,6 +58,8 @@ const readExtract = key => {
   return JSON.parse(raw);
 };
 const pages = cfg.pages.map(p => ({ ...p, x: readExtract(p.key) }));
+// colours the design redefines in :root are not turned into tokens of their old value (lib/tokens.js)
+setDesignRoot(readDesignRoot(pages.map(p => p.x.styles || '')));
 const routeSet = new Set(pages.map(p => p.route).filter(r => r.startsWith('/')));
 ['/blog/', '/team/'].forEach(r => routeSet.add(r));
 const teamData = hooks.loadTeam(designDir);

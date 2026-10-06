@@ -19,7 +19,7 @@
 @media (max-width:899px) { [data-bk-grid] { grid-template-columns:1fr; } }
 @media (max-width:559px) { [data-bk-row] { grid-template-columns:1fr; } }
 [data-ed-cols] { grid-template-columns:repeat(3,minmax(0,1fr)); }
-@media (max-width:767px) { [data-ed-cols] { grid-template-columns:1fr; } [data-ed-cols] > div { border-inline-start:0 !important; border-top:1px solid rgba(var(--sh-blue-rgb), .25); } [data-ed-cols] > div:first-child { border-top:0; } }
+@media (max-width:767px) { [data-ed-cols] { grid-template-columns:1fr; } [data-ed-cols] > div { border-inline-start:0 !important; border-top:1px solid rgba(40,84,232,.25); } [data-ed-cols] > div:first-child { border-top:0; } }
 [data-ed-split] { grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); }
 @media (max-width:899px) { [data-ed-split] { grid-template-columns:1fr; } }
 [data-screen-label="Hero"] { position:relative; overflow:hidden; }

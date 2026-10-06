@@ -28,6 +28,33 @@ const hexToRgb = h => { const n = parseInt(h.slice(1), 16); return [(n >> 16) & 
 const BY_RGB = new Map(TOKENS.map(([k, h]) => [hexToRgb(h).join(','), k]));
 const BY_HEX = new Map(TOKENS.map(([k, h]) => [h.toLowerCase(), k]));
 
+/**
+ * Tokens the design export redefines in its own :root with another value (v5: ink, text, surface,
+ * blue…). A literal colour of the token's old value must stay literal: turning it into var(--sh-x)
+ * would draw the design's new value instead (e.g. navy #0B1438 as near-white --sh-surface).
+ * RETARGET lists the deliberate exceptions: the old primary blue becomes the approved #2854E8.
+ */
+const RETARGET = new Set(['blue']);
+function setDesignRoot(root) {
+  for (const [k, h] of TOKENS) {
+    const v = root[k];
+    if (!v || v.toLowerCase() === h.toLowerCase() || RETARGET.has(k)) continue;
+    BY_RGB.delete(hexToRgb(h).join(','));
+    BY_HEX.delete(h.toLowerCase());
+  }
+}
+
+/** :root custom properties declared by the design files (name without --sh- → value). */
+function readDesignRoot(sources) {
+  const root = {};
+  for (const src of sources) {
+    for (const blk of src.match(/:root\s*\{[^}]*\}/g) || []) {
+      for (const m of blk.matchAll(/--sh-([a-z0-9-]+)\s*:\s*([^;}]+)/g)) root[m[1]] = m[2].trim();
+    }
+  }
+  return root;
+}
+
 /** rgb()/rgba()/hex → var() in any CSS text (inline style or stylesheet). */
 function tokenize(css) {
   if (!css) return css;
@@ -48,4 +75,4 @@ function rootCss() {
   return `:root {\n${lines.join('\n')}\n}\n`;
 }
 
-module.exports = { TOKENS, tokenize, rootCss, hexToRgb };
+module.exports = { TOKENS, tokenize, rootCss, hexToRgb, setDesignRoot, readDesignRoot };

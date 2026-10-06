@@ -10,7 +10,7 @@ get_header();
 ?>
 <main id="main" class="sh-main">
 	<section style="max-width: 880px; margin: 0 auto; padding: clamp(32px, 4.4vw, 60px) 20px;">
-		<?php sh_breadcrumbs(); ?>
+		<div class="sh-crumbs-light"><?php sh_breadcrumbs(); ?></div>
 		<?php
 		while ( have_posts() ) :
 			the_post();

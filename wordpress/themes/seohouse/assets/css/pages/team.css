@@ -19,7 +19,7 @@
 @media (max-width:859px) { [data-tm-three] { grid-template-columns:1fr; } }
 [data-tm-grid] { grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px !important; }
 [data-tm-ph] { width:100%; aspect-ratio:4/5; }
-[data-tm-card]:focus-within { outline:2px solid var(--sh-lime); outline-offset:3px; }
+[data-tm-card]:focus-within { outline:2px solid #2854E8; outline-offset:3px; }
 [data-tm-card] { height:100%; }
 [data-tm-img] { object-position:center 18%; }
 @media (max-width:1100px) { [data-tm-grid] { grid-template-columns:repeat(3,minmax(0,1fr)); } }
@@ -32,3 +32,8 @@
 [data-screen-label="Hero"] { position:relative; overflow:hidden; }
 [data-hero-grid] ~ *:not([aria-hidden="true"]) { position:relative; }
 @media (max-width:639px) { [data-screen-label="Hero"] h1 { text-align:center !important; margin-inline:auto !important; max-width:none !important; font-size:clamp(25px,7vw,30px) !important; line-height:1.36 !important; text-wrap:balance; } [data-screen-label="Hero"] :has(+ h1) { text-align:center !important; justify-content:center !important; margin-inline:auto; } [data-screen-label="Hero"] h1 + p { text-align:center !important; margin-inline:auto !important; max-width:34em !important; } [data-screen-label="Hero"] h1 ~ div:has(a[href="#booking"]), [data-screen-label="Hero"] h1 ~ div:has(a[href="/contact/"]) { justify-content:center !important; align-items:stretch !important; } [data-screen-label="Hero"] h1 ~ div:has(a[href="#booking"]) > a, [data-screen-label="Hero"] h1 ~ div:has(a[href="/contact/"]) > a { justify-content:center; } }
+[data-tm-card][data-hcard]:hover [data-tm-ph], [data-tm-card][data-hcard]:focus-within [data-tm-ph] { background:var(--sh-surface) !important; }
+[data-tm-card][data-hcard]:hover [data-tm-img] { transform:none !important; filter:grayscale(1) contrast(1.02) !important; }
+[data-tm-card][data-hcard]:focus-within { background:var(--sh-blue) !important; border-color:var(--sh-blue) !important; }
+[data-tm-card][data-hcard]:focus-within *:not(img) { color:#FFFFFF !important; }
+[data-tm-img], [data-tm-hero-img] { filter:grayscale(1) contrast(1.02) !important; }

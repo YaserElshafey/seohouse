@@ -97,7 +97,7 @@ function sh_inline_css( array $files ): string {
 	foreach ( $files as $rel ) {
 		$sig .= $rel . sh_asset_version( $rel );
 	}
-	$cache_key = 'sh_css_' . md5( $sig . SH_THEME_URI );
+	$cache_key = 'sh_css_' . md5( $sig . SH_THEME_URI . SH_THEME_VERSION . 'min2' );
 	$css       = wp_cache_get( $cache_key, 'seohouse' );
 	if ( false === $css ) {
 		$css = get_transient( $cache_key );
@@ -111,8 +111,16 @@ function sh_inline_css( array $files ): string {
 	}
 	$css = str_replace( "url('../fonts/", "url('" . SH_THEME_URI . '/assets/fonts/', $css );
 	$css = preg_replace( '#/\*.*?\*/#s', '', $css );
-	$css = preg_replace( '/\s+/', ' ', $css );
-	$css = preg_replace( '/\s*([{};,>])\s*/', '$1', $css );
+	// whitespace is collapsed outside quoted strings only: [style*="color: rgb(255, 255, 255)"]
+	// must keep its spaces to match the inline style attribute as printed
+	$parts = preg_split( '/("(?:\\\\.|[^"\\\\])*"|\'(?:\\\\.|[^\'\\\\])*\')/', $css, -1, PREG_SPLIT_DELIM_CAPTURE );
+	foreach ( $parts as $i => $part ) {
+		if ( 0 === $i % 2 ) {
+			$part        = preg_replace( '/\s+/', ' ', $part );
+			$parts[ $i ] = preg_replace( '/\s*([{};,>])\s*/', '$1', $part );
+		}
+	}
+	$css = implode( '', $parts );
 	$css = str_replace( ';}', '}', trim( $css ) );
 	wp_cache_set( $cache_key, $css, 'seohouse' );
 	set_transient( $cache_key, $css, WEEK_IN_SECONDS );
@@ -131,10 +139,34 @@ add_action(
 );
 
 /**
- * Colour tokens from "إعدادات سيو هاوس ← التصميم". Only approved roles can be changed;
- * values are validated hex colours.
+ * The colour settings of "إعدادات سيو هاوس ← التصميم" describe the 2.x palette (dark background,
+ * text on dark, lime accent…). The approved light design has other roles, and a value saved with the
+ * 2.x defaults (e.g. text #EDF1FA) would make body text unreadable on the light pages. They are
+ * therefore no longer printed; the saved values stay in the database untouched.
+ */
+const SH_LEGACY_COLOR_FIELDS = array( 'field_sh_opt_c_ink', 'field_sh_opt_c_blue', 'field_sh_opt_c_sky', 'field_sh_opt_c_lime', 'field_sh_opt_c_paper', 'field_sh_opt_c_text', 'field_sh_opt_c_muted' );
+
+foreach ( SH_LEGACY_COLOR_FIELDS as $sh_color_field ) {
+	add_filter(
+		'acf/prepare_field/key=' . $sh_color_field,
+		static function ( $field ) {
+			if ( is_array( $field ) ) {
+				$field['instructions'] = __( 'من التصميم السابق: لا يؤثر على ألوان الموقع في التصميم المعتمد الحالي. القيمة المحفوظة باقية كما هي.', 'seohouse' );
+			}
+			return $field;
+		}
+	);
+}
+unset( $sh_color_field );
+
+/**
+ * Colour tokens from "إعدادات سيو هاوس ← التصميم" (2.x roles). Not applied since 2.7.0 (see above);
+ * kept for the filter 'sh_apply_legacy_colors' should a site need them back.
  */
 function sh_design_token_css(): string {
+	if ( ! apply_filters( 'sh_apply_legacy_colors', false ) ) {
+		return '';
+	}
 	$map = array(
 		'ink'   => 'sh_color_ink',
 		'blue'  => 'sh_color_blue',

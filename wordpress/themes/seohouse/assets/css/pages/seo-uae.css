@@ -10,8 +10,8 @@
 [data-ua-mine] { animation:uaeRise 9s cubic-bezier(.65,0,.35,1) infinite; }
 [data-ua-drop] { animation:uaeFall 9s cubic-bezier(.65,0,.35,1) infinite; }
 [data-ua-signals] { grid-template-columns:repeat(3,minmax(0,1fr)); }
-[data-ua-srail] { position:absolute; top:11px; inset-inline:12px; height:1px; background:linear-gradient(90deg, rgba(var(--sh-lime-rgb), .5), rgba(var(--sh-sky-rgb), .4), rgba(var(--sh-sky-rgb), .12)); }
-@media (max-width:899px) { [data-ua-signals] { grid-template-columns:1fr; gap:0 !important; } [data-ua-srail] { top:16px; bottom:16px; height:auto; inset-inline:auto; inset-inline-start:11px; width:1px; background:linear-gradient(180deg, rgba(var(--sh-lime-rgb), .5), rgba(var(--sh-sky-rgb), .4), rgba(var(--sh-sky-rgb), .12)); } [data-ua-signal] { padding-inline-start:34px; padding-block:16px; } [data-ua-signal] [data-ua-sdot] { position:absolute; inset-inline-start:2px; top:20px; } }
+[data-ua-srail] { position:absolute; top:11px; inset-inline:12px; height:1px; background:linear-gradient(90deg, rgba(40,84,232,.5), rgba(40,84,232,.4), rgba(40,84,232,.12)); }
+@media (max-width:899px) { [data-ua-signals] { grid-template-columns:1fr; gap:0 !important; } [data-ua-srail] { top:16px; bottom:16px; height:auto; inset-inline:auto; inset-inline-start:11px; width:1px; background:linear-gradient(180deg, rgba(40,84,232,.5), rgba(40,84,232,.4), rgba(40,84,232,.12)); } [data-ua-signal] { padding-inline-start:34px; padding-block:16px; } [data-ua-signal] [data-ua-sdot] { position:absolute; inset-inline-start:2px; top:20px; } }
 [data-ua-opps] { grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); }
 [data-ua-opp-acc] { display:none; }
 @media (max-width:899px) { [data-ua-opps] { display:none !important; } [data-ua-opp-acc] { display:block; } }
@@ -19,7 +19,7 @@
 @media (max-width:1023px) { [data-ua-case] { grid-template-columns:1fr; } }
 [data-ua-meta] { grid-template-columns:repeat(4,1fr); }
 [data-ua-meta-item] { position:relative; padding-inline-end:20px; }
-[data-ua-meta-item]:not(:last-child)::after { content:""; position:absolute; inset-inline-end:0; top:2px; bottom:2px; width:1px; background:rgba(var(--sh-ink-rgb), .1); }
+[data-ua-meta-item]:not(:last-child)::after { content:""; position:absolute; inset-inline-end:0; top:2px; bottom:2px; width:1px; background:var(--sh-line); }
 @media (max-width:1023px) { [data-ua-meta] { grid-template-columns:repeat(2,1fr); } [data-ua-meta-item]:not(:last-child)::after { display:none; } }
 [data-ua-prow] { grid-template-columns:minmax(0,1.05fr) minmax(0,1.15fr) minmax(0,.5fr); }
 @media (max-width:899px) { [data-ua-prow] { grid-template-columns:1fr; } [data-ua-phead] { display:none !important; } }
@@ -39,7 +39,7 @@
 [data-ua-mgrid] { grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); }
 [data-eg-meta] { grid-template-columns:repeat(4,1fr); }
 [data-eg-meta-item] { position:relative; padding-inline-end:20px; }
-[data-eg-meta-item]:not(:last-child)::after { content:""; position:absolute; inset-inline-end:0; top:2px; bottom:2px; width:1px; background:rgba(var(--sh-ink-rgb), .1); }
+[data-eg-meta-item]:not(:last-child)::after { content:""; position:absolute; inset-inline-end:0; top:2px; bottom:2px; width:1px; background:var(--sh-line); }
 @media (max-width:1023px) { [data-eg-meta] { grid-template-columns:repeat(2,1fr); } [data-eg-meta-item]:not(:last-child)::after { display:none; } }
 @media (max-width:639px) { [data-screen-label="Hero"] h1 { text-align:center !important; margin-inline:auto !important; max-width:none !important; font-size:clamp(25px,7vw,30px) !important; line-height:1.36 !important; text-wrap:balance; } [data-screen-label="Hero"] :has(+ h1) { text-align:center !important; justify-content:center !important; margin-inline:auto; } [data-screen-label="Hero"] h1 + p { text-align:center !important; margin-inline:auto !important; max-width:34em !important; } [data-screen-label="Hero"] h1 ~ div:has(a[href="#booking"]), [data-screen-label="Hero"] h1 ~ div:has(a[href="/contact/"]) { justify-content:center !important; align-items:stretch !important; } [data-screen-label="Hero"] h1 ~ div:has(a[href="#booking"]) > a, [data-screen-label="Hero"] h1 ~ div:has(a[href="/contact/"]) > a { justify-content:center; } }
 [data-sh-center] { text-align:center; }

@@ -9,30 +9,30 @@
 defined( 'ABSPATH' ) || exit;
 $f = $args['f'] ?? array();
 ?>
-<section id="<?= esc_attr(sh_anchor($f, 'ksa-case')) ?>" data-screen-label="Saudi case" style="background: var(--sh-paper); color: var(--sh-ink); scroll-margin-top: 88px;">
+<section id="<?= esc_attr(sh_anchor($f, 'ksa-case')) ?>" data-screen-label="Saudi case" style="background: var(--sh-surface); color: var(--sh-ink); scroll-margin-top: 88px;">
     <div data-case style="max-width: 1200px; margin: 0px auto; padding: clamp(32px, 4.4vw, 60px) 20px; display: grid; gap: clamp(24px, 3vw, 46px); align-items: center;">
       <div>
-        <?php if (!empty($f['eyebrow'])) : ?><div style="font-size: 13.5px; font-weight: 600; color: var(--sh-blue);"><?= esc_html($f['eyebrow'] ?? '') ?></div><?php endif; ?>
+        <?php if (!empty($f['eyebrow'])) : ?><div style="font-size: 13.5px; font-weight: 600; color: var(--sh-link);"><?= esc_html($f['eyebrow'] ?? '') ?></div><?php endif; ?>
         <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 18px; margin-top: 14px;">
-          <?php if (!empty($f['heading'])) : ?><span style="font-family: Alexandria, sans-serif; font-weight: 800; font-size: clamp(40px, 4.6vw, 62px); line-height: 1; color: var(--sh-blue);"><?= esc_html($f['heading'] ?? '') ?></span><?php endif; ?>
+          <?php if (!empty($f['heading'])) : ?><span style="font-family: Alexandria, sans-serif; font-weight: 800; font-size: clamp(40px, 4.6vw, 62px); line-height: 1; color: var(--sh-link);"><?= esc_html($f['heading'] ?? '') ?></span><?php endif; ?>
           <?php if (!empty($f['title'])) : ?><h2 data-sec-h style="font-family: Alexandria, sans-serif; font-weight: 700; line-height: 1.28; margin: 0px;"><?= esc_html($f['title'] ?? '') ?></h2><?php endif; ?>
         </div>
-        <?php if (!empty($f['text'])) : ?><p style="font-size: 16.5px; color: var(--sh-ink-soft); margin: 16px 0px 0px; max-width: 36em; text-wrap: pretty;"><?= esc_html($f['text'] ?? '') ?></p><?php endif; ?>
-        <div data-case-meta style="margin-top: 22px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px 20px; padding-top: 18px; border-top: 1px solid rgba(var(--sh-ink-rgb), 0.1);">
+        <?php if (!empty($f['text'])) : ?><p style="font-size: 16.5px; color: var(--sh-text); margin: 16px 0px 0px; max-width: 36em; text-wrap: pretty;"><?= esc_html($f['text'] ?? '') ?></p><?php endif; ?>
+        <div data-case-meta style="margin-top: 22px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px 20px; padding-top: 18px; border-top: 1px solid var(--sh-line);">
           
             <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><div data-case-meta-item style="display: flex; flex-direction: column; gap: 4px;">
-              <?php if (!empty($r1['label'])) : ?><span style="font-size: 12.5px; color: var(--sh-slate);"><?= esc_html($r1['label'] ?? '') ?></span><?php endif; ?>
+              <?php if (!empty($r1['label'])) : ?><span style="font-size: 12.5px; color: var(--sh-text);"><?= esc_html($r1['label'] ?? '') ?></span><?php endif; ?>
               <?php if (!empty($r1['heading'])) : ?><span style="font-size: 14.5px; font-weight: 700; color: var(--sh-ink);"><?= esc_html($r1['heading'] ?? '') ?></span><?php endif; ?>
             </div><?php endforeach; ?>
           
         </div>
       </div>
-      <div style="min-width: 0px; background: rgb(255, 255, 255); border-radius: 16px; padding: 10px; box-shadow: rgba(var(--sh-ink-rgb), 0.55) 0px 20px 44px -32px;">
+      <div style="min-width: 0px; background: rgb(255, 255, 255); border-radius: 16px; padding: 10px; box-shadow: rgba(6, 11, 31, 0.55) 0px 20px 44px -32px;">
         <div style="display: flex; align-items: center; gap: 7px; padding: 4px 6px 10px;">
-          <span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 999px; background: rgba(var(--sh-ink-rgb), 0.16);"></span>
-          <span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 999px; background: rgba(var(--sh-ink-rgb), 0.12);"></span>
-          <span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 999px; background: rgba(var(--sh-ink-rgb), 0.08);"></span>
-          <?php if (!empty($f['label'])) : ?><span style="margin-inline-start: auto; font-size: 11.5px; color: var(--sh-slate);"><?= esc_html($f['label'] ?? '') ?></span><?php endif; ?>
+          <span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 999px; background: var(--sh-line);"></span>
+          <span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 999px; background: var(--sh-line);"></span>
+          <span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 999px; background: var(--sh-line);"></span>
+          <?php if (!empty($f['label'])) : ?><span style="margin-inline-start: auto; font-size: 11.5px; color: var(--sh-text);"><?= esc_html($f['label'] ?? '') ?></span><?php endif; ?>
         </div>
         <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" target="_blank" rel="noopener" title="افتح التقرير بالحجم الكامل" style="display: block; border-radius: 10px; overflow: hidden;">
           <?= sh_image($f['image'] ?? 0, ['style' => 'width: 100%; height: clamp(220px, 23vw, 300px); object-fit: contain; display: block; background: rgb(255, 255, 255);'], 'تقرير جوجل أناليتكس يوضح ارتفاع إيرادات القناة العضوية من 19,956 إلى 106,274 ريالًا') ?>

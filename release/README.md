@@ -1,25 +1,21 @@
-# SEO House 2.6.0 — ملفات التثبيت
+# SEO House 2.7.0 — ملفات التثبيت
 
-| الملف | المحتوى |
-|---|---|
-| `seohouse-theme.zip` | قالب **SEO House 2.6.0**: ملفات الإصدار المدرجة في `theme-files.json` فقط، ولا يوجد فيه `front-page.php` |
-| `seohouse-core.zip` | **SEO House Core 2.6.0** كاملة، مع حزمة المحتوى 2.6.0 داخلها |
+| الملف | المحتوى | يُرفع؟ |
+|---|---|---|
+| `seohouse-theme.zip` | قالب **SEO House 2.7.0**: التصميم المعتمد v5 (2026-10-05) على كل الصفحات والقوالب | **نعم** |
+| `seohouse-core.zip` | **SEO House Core 2.6.0**: لم تتغير في هذه الجولة | لا (المثبّت يكفي) |
 
-- البصمات في `SHA256SUMS.txt`.
-- بُنيا من الالتزام `b734dab` بالأمر `tools/package.sh`، وكل ملف مطابق لمجلده في المستودع.
-- الاختبارات في `docs/qa-runs-2.6.0/`، والتفاصيل في `docs/review-2.6.0.md`.
+- البصمات في `SHA256SUMS.txt`. التفاصيل والاختبارات في `docs/review-2.7.0.md` و`docs/qa-runs-2.7.0/`.
+- مبني ومختبَر على قالب 2.6.0 + Core 2.6.0. تأكد من الإصدارين المثبّتين قبل الرفع.
 
 ## الرفع على الموقع الأساسي
 
-1. خذ نسخة احتياطية من الاستضافة أو من All-in-One WP Migration (نسخة فقط، لا استيراد).
-2. **«المظهر ← قوالب ← أضف جديد ← رفع قالب»** ← `seohouse-theme.zip` ← **«استبدال الحالي بالمرفوع»**. هذا يستبدل مجلد القالب كله، فيحذف `front-page.php.old` والملفات القديمة.
-3. **«الإضافات ← أضف جديد ← رفع إضافة»** ← `seohouse-core.zip` ← **«استبدال الحالي بالمرفوع»**.
-4. **«سيو هاوس ← تهيئة الموقع»**، أسفل الصفحة:
-   - **«سياسة الخصوصية والشروط والأحكام»**: راجع النص، ثم «تطبيق النص المعتمد» لكل صفحة.
-   - **«تحويلات الموقع السابق»**: «إضافة التحويلات الناقصة».
-   - ثم «فحص الموقع».
+1. خذ نسخة احتياطية (نسخة فقط، لا استيراد).
+2. «المظهر ← قوالب ← أضف جديد ← رفع قالب» ← `seohouse-theme.zip` ← **«استبدال الحالي بالمرفوع»**.
+3. أفرغ كاش الموقع إن وُجد. **لا تشغّل «تهيئة الموقع» ولا «تجهيز المحتوى»**: التحديث لا يكتب أي محتوى.
+4. اختياري: ارفع شعارًا بالألوان في «إعدادات سيو هاوس ← الهوية ← الشعار على الخلفية الفاتحة» إن أردت غير الشعار الأزرق الافتراضي.
 
 ## روابط التنزيل المباشر
 
-- https://raw.githubusercontent.com/YaserElshafey/seohouse/claude/new-session-9obdta/release/seohouse-theme.zip
-- https://raw.githubusercontent.com/YaserElshafey/seohouse/claude/new-session-9obdta/release/seohouse-core.zip
+- https://raw.githubusercontent.com/YaserElshafey/seohouse/claude/design-v5-rollout/release/seohouse-theme.zip
+- https://raw.githubusercontent.com/YaserElshafey/seohouse/claude/design-v5-rollout/release/seohouse-core.zip (غير مطلوب)

@@ -1,17 +1,17 @@
 {
  "theme": "seohouse",
- "version": "2.6.0",
- "count": 356,
+ "version": "2.7.0",
+ "count": 357,
  "files": [
   {
    "path": "404.php",
-   "size": 2145,
-   "sha1": "91e244ae269b33279da5af1416f88231a913a7a8"
+   "size": 2282,
+   "sha1": "0f1068d4d53eaed8821fe488eed726fac5e63e92"
   },
   {
    "path": "archive.php",
-   "size": 3495,
-   "sha1": "3e351dc6f1b263dcae74785dabc715ebcc04347c"
+   "size": 3629,
+   "sha1": "c0466cbe252bc02743b1c97c2b1aac4ff39e0437"
   },
   {
    "path": "footer.php",
@@ -21,57 +21,57 @@
   {
    "path": "functions.php",
    "size": 984,
-   "sha1": "612667dcab5cb23e8bab9236778eb2dceadec276"
+   "sha1": "45bb23872ce955559ce70598f4ae52ea1605d1b0"
   },
   {
    "path": "header.php",
-   "size": 776,
-   "sha1": "48346b3197db13a5dc89fd73ff0fc1f96f4829cd"
+   "size": 883,
+   "sha1": "b8c3dcb54d0ae610c33bdd0b925a14da3018faf7"
   },
   {
    "path": "home.php",
-   "size": 5941,
-   "sha1": "7efa62f830cad24c87ef529f4ba9088fe821544c"
+   "size": 5997,
+   "sha1": "74012987ec59b90436215375fd89eef6ca8f20ab"
   },
   {
    "path": "index.php",
-   "size": 631,
-   "sha1": "2289c41dedbb3be4ce26d56556047ec60a60a92b"
+   "size": 666,
+   "sha1": "5964f25f4f0055d5291d55c37ba4681a5a7a6392"
   },
   {
    "path": "page.php",
-   "size": 669,
-   "sha1": "90412523532e8040e44a2da8da768257247d849b"
+   "size": 704,
+   "sha1": "62b19b313d65d74b053f9ad8be58e7ae4dade0b9"
   },
   {
    "path": "search.php",
-   "size": 4807,
-   "sha1": "6b6a2a0c468c96f916906cb038914580105293d3"
+   "size": 4910,
+   "sha1": "f4271190a059394de7470e95d2e9b9793874de28"
   },
   {
    "path": "searchform.php",
-   "size": 1318,
-   "sha1": "b6df61e649b4b64b2af46742cc46e550d46ab56c"
+   "size": 1342,
+   "sha1": "3501bb5549b0e1e6113535cfe1280f35691ba48b"
   },
   {
    "path": "single-case_study.php",
-   "size": 17308,
-   "sha1": "3c0248e85fea3af718814d180d87730e4e005377"
+   "size": 17178,
+   "sha1": "da48a5584d70c6e8e63c1fdb9219dbc40af431bd"
   },
   {
    "path": "single-team_member.php",
-   "size": 8531,
-   "sha1": "25946682edd82f28162be6178bce10e0a09cd07e"
+   "size": 8534,
+   "sha1": "9d70ac73061ea4f4270a512a983b9cfbbf3be385"
   },
   {
    "path": "single.php",
-   "size": 10684,
-   "sha1": "87d875324200807bd57479e82c96fbb81613cf20"
+   "size": 10626,
+   "sha1": "503e6f071470257cdd06d241add96b4960a84d42"
   },
   {
    "path": "style.css",
    "size": 545,
-   "sha1": "1997e515113108e1750b1e084836ea712248a18e"
+   "sha1": "396edbd2b2140c2b9e1a359cf472ec1b3636979c"
   },
   {
    "path": "theme.json",
@@ -80,8 +80,8 @@
   },
   {
    "path": "assets/css/design-base.css",
-   "size": 13497,
-   "sha1": "075d4ff5d808ddce05363bff0e4de8f08b38e8a7"
+   "size": 17391,
+   "sha1": "d5d67471e3ba1b245bcd0e008e3d3e690b98d42e"
   },
   {
    "path": "assets/css/fonts.css",
@@ -90,8 +90,8 @@
   },
   {
    "path": "assets/css/theme.css",
-   "size": 9178,
-   "sha1": "4b76cc098279444e19f89aa6fcf9d239b0baaa78"
+   "size": 11513,
+   "sha1": "4e59939c30e4b0e542b032f3d303fa75197c24c3"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -115,43 +115,43 @@
   },
   {
    "path": "assets/css/pages/case-ecommerce.css",
-   "size": 1170,
-   "sha1": "a11c6ab5afdafbe6e11c2edb4fafabc23a13f9bd"
+   "size": 1160,
+   "sha1": "1340609f3a33311488c0bf93ee26882b64f29c9d"
   },
   {
    "path": "assets/css/pages/case-education.css",
-   "size": 1173,
-   "sha1": "a699be2150c3d5eea8577bf13e366f184357b9c5"
+   "size": 1163,
+   "sha1": "a2a62968483a06b63ac5ea8a94baf12955c8f28d"
   },
   {
    "path": "assets/css/pages/case-health.css",
-   "size": 1168,
-   "sha1": "c9facee939be935529cdaf48c7932d3a6189b51e"
+   "size": 1158,
+   "sha1": "3471b04612bf69c760a393a92285fca4e8501894"
   },
   {
    "path": "assets/css/pages/case-medical-search.css",
-   "size": 2219,
-   "sha1": "aa673747b0bbb0ac013d603010f4304004686428"
+   "size": 2153,
+   "sha1": "b1a37a14ddee15e2d55edb548391f9c693a09087"
   },
   {
    "path": "assets/css/pages/case-organic-revenue.css",
-   "size": 1183,
-   "sha1": "661bf5a7dd43dce5bceecd27c07d25ca8d83a1ff"
+   "size": 1173,
+   "sha1": "b61a1a662f2ee48c51ec3415c2fd1c297f2edebb"
   },
   {
    "path": "assets/css/pages/case-template.css",
-   "size": 1169,
-   "sha1": "83bb2ee0c14d7b2c902680e9dd7587aa0684718b"
+   "size": 1159,
+   "sha1": "df77ca376aaa714df4bb60268e7d7d6b2b91bff3"
   },
   {
    "path": "assets/css/pages/contact.css",
-   "size": 1170,
-   "sha1": "55587973fdc16e98367b08c46be02444c188e1f1"
+   "size": 1160,
+   "sha1": "4632e43ae736ded3e1b01506bb43400f14de85cb"
   },
   {
    "path": "assets/css/pages/home.css",
-   "size": 7484,
-   "sha1": "2d38349e4000daff8f2e16a457e9f9ee8098526a"
+   "size": 11538,
+   "sha1": "95d6200f62acc40d5ff4786473aac8695e84bb6f"
   },
   {
    "path": "assets/css/pages/pricing.css",
@@ -185,8 +185,8 @@
   },
   {
    "path": "assets/css/pages/sector-education.css",
-   "size": 5711,
-   "sha1": "972ade46467c24880b2b0055955add57fed057bf"
+   "size": 5701,
+   "sha1": "77cda46bab3c0f9962f22961eec9be860cbd8b37"
   },
   {
    "path": "assets/css/pages/sector-food.css",
@@ -195,8 +195,8 @@
   },
   {
    "path": "assets/css/pages/sector-health.css",
-   "size": 7826,
-   "sha1": "379e2c11fa4a2471aafd9cccf71ab6bb4fac5b9c"
+   "size": 7806,
+   "sha1": "18ea9588e34bece83afbd25462b281c2fd7b8536"
   },
   {
    "path": "assets/css/pages/sector-legal.css",
@@ -240,13 +240,13 @@
   },
   {
    "path": "assets/css/pages/seo-egypt.css",
-   "size": 5146,
-   "sha1": "0e5453348cccc39a35b463d4ae820289cef6fb0d"
+   "size": 5021,
+   "sha1": "5eb7ed1cf3658e6233a08f1b40d4dfa6f28a0f26"
   },
   {
    "path": "assets/css/pages/seo-ksa.css",
-   "size": 8061,
-   "sha1": "1efe449ac131c872da4e157501145919c2bc4a80"
+   "size": 7938,
+   "sha1": "6e489122c67c46d12bb670f0cfc038262c2d2ef2"
   },
   {
    "path": "assets/css/pages/seo-on-page.css",
@@ -260,23 +260,23 @@
   },
   {
    "path": "assets/css/pages/seo-uae.css",
-   "size": 5568,
-   "sha1": "93a17798745a565a3eef8eb1f3e72047d4c589b1"
+   "size": 5486,
+   "sha1": "d6516bc35589ee728b99a4dbbed7be8e469d2440"
   },
   {
    "path": "assets/css/pages/seo.css",
-   "size": 6868,
-   "sha1": "9daec2d1129ac55d28f63cf2f4f643badbf23bbc"
+   "size": 6781,
+   "sha1": "055e2c2839c37d42ddfbe815ed45a1281562538b"
   },
   {
    "path": "assets/css/pages/services.css",
-   "size": 1169,
-   "sha1": "de467322eea9538d8c6d207e59b1e4591817ba00"
+   "size": 1160,
+   "sha1": "1942fba0404e419e9fc2aebfa53eb24a8f710974"
   },
   {
    "path": "assets/css/pages/single-post.css",
-   "size": 4233,
-   "sha1": "0c688462af3c837f1331c160024e8deb3a040452"
+   "size": 4186,
+   "sha1": "ac7722bb00516eb63c0895349c07763d16f577a5"
   },
   {
    "path": "assets/css/pages/stores-salla.css",
@@ -305,13 +305,13 @@
   },
   {
    "path": "assets/css/pages/team-member.css",
-   "size": 1961,
-   "sha1": "2e59256569282d9e32d25604063b57ea3558f18c"
+   "size": 2046,
+   "sha1": "c2730972856fb5f08275c5a42c0fbf54df4edc55"
   },
   {
    "path": "assets/css/pages/team.css",
-   "size": 3684,
-   "sha1": "6a0d9050efa00c3c9d8359ec1527e7412d170a04"
+   "size": 4235,
+   "sha1": "17c2982d1dec511a8d2ba3e5b6a32aaf24bc60ae"
   },
   {
    "path": "assets/css/pages/terms.css",
@@ -397,6 +397,11 @@
    "path": "assets/fonts/ibm-plex-sans-arabic-700-latin.woff2",
    "size": 19504,
    "sha1": "9e002e656ff8bade0ba6e6c0dc6b726de1d90182"
+  },
+  {
+   "path": "assets/img/logo-blue.webp",
+   "size": 11762,
+   "sha1": "037b99b669bfa57f5b2ea44ff0a21238d5a0f4df"
   },
   {
    "path": "assets/img/logo-white.png",
@@ -515,8 +520,8 @@
   },
   {
    "path": "inc/breadcrumbs.php",
-   "size": 1074,
-   "sha1": "5230e6de74a13f2d3ca6c3792173fd79b1ce1d30"
+   "size": 1176,
+   "sha1": "67a1d53ed4bfcd1fe5e48c70cb7a3118de0e8e98"
   },
   {
    "path": "inc/dependencies.php",
@@ -530,13 +535,13 @@
   },
   {
    "path": "inc/enqueue.php",
-   "size": 5685,
-   "sha1": "5940b6efe2d3da9662c7692b081516f96d21d72e"
+   "size": 7327,
+   "sha1": "21dd0fe6510fffa9bacec4a7b1ecb516a8034c8f"
   },
   {
    "path": "inc/helpers.php",
-   "size": 7103,
-   "sha1": "963df39e1700a3da72a55171eab24fcff0636b84"
+   "size": 7653,
+   "sha1": "87f636d2dc2c81d8a6355d1d6df8b18e99500668"
   },
   {
    "path": "inc/navigation.php",
@@ -560,8 +565,8 @@
   },
   {
    "path": "inc/generated/icons.php",
-   "size": 35397,
-   "sha1": "d88a6ff930e50efd964506a8809152e5c56a5b9b"
+   "size": 50895,
+   "sha1": "8143d0491f5a8acaa583c397e02356b9e7eb1158"
   },
   {
    "path": "page-templates/about.php",
@@ -760,33 +765,33 @@
   },
   {
    "path": "parts/drawer.php",
-   "size": 2926,
-   "sha1": "a92bbf19bd3e6bcc972abf099ccc727c019eec67"
+   "size": 3232,
+   "sha1": "abeb46507e86d6ea62d749e55227c172ea652395"
   },
   {
    "path": "parts/quick-links.php",
-   "size": 1178,
-   "sha1": "fa1dfcc229f2117363bdabbb1d9be13a4d0386d2"
+   "size": 1215,
+   "sha1": "24605b8fa0a707ce5a10a988c6b2f11e0bd31ed1"
   },
   {
    "path": "parts/site-footer.php",
-   "size": 4430,
-   "sha1": "9f48b492238710a1cd9a2d2aeb02c8d8dd86f68b"
+   "size": 4323,
+   "sha1": "bd681edfa598b32e880b41634bfee965f6d051a0"
   },
   {
    "path": "parts/site-header.php",
-   "size": 7112,
-   "sha1": "b9671db6ddba8d6b8ff05e36f906570c58f0b105"
+   "size": 7036,
+   "sha1": "6f9be297df3cffb33fd757649e0594e86ddd1e13"
   },
   {
    "path": "parts/blog/empty.php",
-   "size": 807,
-   "sha1": "fdaf77cf5e1db83bcff3b2925216a371e80b80cc"
+   "size": 786,
+   "sha1": "24038775168903f008c1b2b17e7b4e5ca711ddf0"
   },
   {
    "path": "parts/blog/rows.php",
-   "size": 3347,
-   "sha1": "40aef01e81a9d6f8416e57854c890dd882d32701"
+   "size": 3228,
+   "sha1": "8d2b35f4ea14206a741c5c5e1bdb9a90a5865506"
   },
   {
    "path": "parts/dynamic/case-filters.php",
@@ -795,13 +800,13 @@
   },
   {
    "path": "parts/dynamic/case-list.php",
-   "size": 2950,
-   "sha1": "9347d42044be2fa4967f35da97b441b572390c61"
+   "size": 2915,
+   "sha1": "f5fbcbf0b2521b2575d16dc65ff6be8400c6e0ee"
   },
   {
    "path": "parts/dynamic/posts-home.php",
-   "size": 4441,
-   "sha1": "c5b284046d6649219a1cb9e283414b278d8c9c86"
+   "size": 4406,
+   "sha1": "602df426f54ef62617a2c67dabd310e062cec23c"
   },
   {
    "path": "parts/dynamic/team-columns.php",
@@ -810,8 +815,8 @@
   },
   {
    "path": "parts/dynamic/team-directory.php",
-   "size": 3339,
-   "sha1": "e304c994dc796c2c689da9d3b43a28264b49346d"
+   "size": 3162,
+   "sha1": "4d22e81add0926e09ee7fcd1bf85f86e71d0f7a1"
   },
   {
    "path": "parts/dynamic/team-track.php",
@@ -820,968 +825,968 @@
   },
   {
    "path": "sections/about/client_logos.php",
-   "size": 1767,
-   "sha1": "5ec375f8bf751674187536b81d4b609565e586b6"
+   "size": 1731,
+   "sha1": "a85e9c0c8038c24028a1a0ccc341fff5e287858a"
   },
   {
    "path": "sections/about/hero.php",
-   "size": 2989,
-   "sha1": "8f89efd7da53c4b0b5106901ae664560f5e284a7"
+   "size": 3132,
+   "sha1": "a0d30ae051f81ddf8303ff990e5f48da2416c68e"
   },
   {
    "path": "sections/about/nopromise.php",
-   "size": 2751,
-   "sha1": "842052c45265caa085e5f439f7aabce1ecc4b296"
+   "size": 2710,
+   "sha1": "99016377ab5cf343cc57f88957e49deb1704b79b"
   },
   {
    "path": "sections/about/now.php",
-   "size": 2724,
-   "sha1": "7da60ccc5b26ddf08f3cd0fe964c7c976f419984"
+   "size": 2532,
+   "sha1": "c1de3c177b3d39637f50280419c2e5a5dc601ca3"
   },
   {
    "path": "sections/about/principles.php",
-   "size": 2397,
-   "sha1": "714f049cb01b8df47fb37cd80f08939bff7fecad"
+   "size": 2373,
+   "sha1": "2f6cc948a105aae49ba64fb5a036dbeabaaddd7b"
   },
   {
    "path": "sections/contact/flow.php",
-   "size": 11367,
-   "sha1": "369f6320ea145fc130a7878114dca93c0464eeaf"
+   "size": 11268,
+   "sha1": "58ec785145099b2a2953bf5c65ac3cb1d84d1318"
   },
   {
    "path": "sections/contact/hero.php",
-   "size": 1870,
-   "sha1": "92feaef6a501571d20608173e2bc824f1c3917f2"
+   "size": 2007,
+   "sha1": "ffd74483c895ff788370967df265aa12754c7c00"
   },
   {
    "path": "sections/home/about.php",
-   "size": 2491,
-   "sha1": "4cf9f9e1ff51d29635bbfc88d0688fc2d7868b99"
+   "size": 2456,
+   "sha1": "738b8cfd2fdc415f1e2e364f83d105d3fda2e39a"
   },
   {
    "path": "sections/home/articles.php",
    "size": 1667,
-   "sha1": "7bb7c3430dd4d4d691fdb3ebcd6f2770a9867865"
+   "sha1": "8a3d9e3bca0d63a1a5df3ebd1ea60d87bdadeb78"
   },
   {
    "path": "sections/home/client_logos.php",
-   "size": 1770,
-   "sha1": "42114bec91fff481a465873359a185afe1a21d1b"
+   "size": 1747,
+   "sha1": "6be8e2c31babda1a0d19426fb2a3da3cc01f98f8"
   },
   {
    "path": "sections/home/hero.php",
-   "size": 5432,
-   "sha1": "714d56ef114b9f2a604ed662498feb34e24b7783"
+   "size": 5919,
+   "sha1": "f741dcab0e1e1a38beef8375a0ec7acc3d635b5e"
   },
   {
    "path": "sections/home/markets.php",
-   "size": 3255,
-   "sha1": "89a43caf3b469812bf69eee1f15444b6d8a1cd0b"
+   "size": 3732,
+   "sha1": "80f00d56f642b5e848472bc90c192e190b94dd6a"
   },
   {
    "path": "sections/home/platforms.php",
-   "size": 2268,
-   "sha1": "1b3b221f892a793219245fb4197fa48bf21c388a"
+   "size": 2261,
+   "sha1": "b2393206c43c722bb78cfa141f6b258f076b0d78"
   },
   {
    "path": "sections/home/results.php",
-   "size": 1805,
-   "sha1": "154202ac0b70ceff826629322ac3d8f4f1e107c2"
+   "size": 1799,
+   "sha1": "cbbf70bc90a669ac97e54f90db2f8a9c6d6546a7"
   },
   {
    "path": "sections/home/reviews.php",
-   "size": 4771,
-   "sha1": "a74dbe4e9ffe54378f45214ace8c4889ee67757d"
+   "size": 4690,
+   "sha1": "148894e1f130795ff6f1899f004e2b7bf56b6c7c"
   },
   {
    "path": "sections/home/sectors.php",
-   "size": 3598,
-   "sha1": "907ac54a1d5784b457c1af8bafc0d4cfcb9235f0"
+   "size": 3538,
+   "sha1": "74032e6d3ec0b192d1b994c88ca51ccfdae867dd"
   },
   {
    "path": "sections/home/services.php",
-   "size": 5833,
-   "sha1": "c7bca3bf560a740a8d1f21fe9fe1968a66e09f6d"
+   "size": 5424,
+   "sha1": "cca8b7643d03549256c1970baf434dd8a3f63358"
   },
   {
    "path": "sections/pricing/before.php",
-   "size": 2820,
-   "sha1": "dc1323b1325823e075db51742d7e328103322ee6"
+   "size": 2786,
+   "sha1": "656228bdb5b9f002cc170f43719959ee4c29389e"
   },
   {
    "path": "sections/pricing/direction.php",
-   "size": 3089,
-   "sha1": "af7c96545faa6d39d0d8a589e7dc1f3bd7db8b82"
+   "size": 3044,
+   "sha1": "f3057a7237fac4cbe92cea9e278feab28c5b1aee"
   },
   {
    "path": "sections/pricing/factors.php",
-   "size": 2420,
-   "sha1": "fbf1383f3d297548b9a267b678c671cc26d67b36"
+   "size": 2373,
+   "sha1": "b6ecdce683aa3739118b8b24fe7c1d47b7eb22a3"
   },
   {
    "path": "sections/pricing/groups.php",
-   "size": 1872,
-   "sha1": "a58132e26d65edcb1f8cb318b429536ad73c4b10"
+   "size": 1866,
+   "sha1": "75af26be483a5d212d67c322f2210f8756c9998a"
   },
   {
    "path": "sections/pricing/hero.php",
-   "size": 4532,
-   "sha1": "7363ca513f9bcc021269463e7d4db6fc0a57c3bf"
+   "size": 4678,
+   "sha1": "432997380049a479160346fe341a0feee49f1d80"
   },
   {
    "path": "sections/privacy-policy/document.php",
-   "size": 2954,
-   "sha1": "bbc0b95fb0be80c20381149ebe688b0abbcafdbb"
+   "size": 2947,
+   "sha1": "71922996f32c98b30db3e47137de420d79cb2fc4"
   },
   {
    "path": "sections/privacy-policy/hero.php",
-   "size": 1651,
-   "sha1": "6af5b1aa626e137b3a97915538d1534942812153"
+   "size": 1768,
+   "sha1": "c7b35ebea2d65915a613557460d457b77d34c5af"
   },
   {
    "path": "sections/products/fields.php",
-   "size": 2329,
-   "sha1": "99ad2932735b02930c667acb1a3c584382d7f215"
+   "size": 2352,
+   "sha1": "56e3e025a4d4f144ba2565a10920d5b21d994199"
   },
   {
    "path": "sections/products/flow.php",
-   "size": 9446,
-   "sha1": "4ecc6d822684dc0cef3334d421f7d8f5bf4e4784"
+   "size": 9215,
+   "sha1": "b7e7917388c034b30dcf74cee959328a41e2f38c"
   },
   {
    "path": "sections/products/hero.php",
-   "size": 6620,
-   "sha1": "6165a79315df7fd48bb8732a09078981f74d0887"
+   "size": 6747,
+   "sha1": "1d5e936f2422740ec304a0b7ddc8af7212730ddf"
   },
   {
    "path": "sections/products/platforms.php",
-   "size": 5195,
-   "sha1": "36b394503f6e0efa858c923f315a1f08df9f15fb"
+   "size": 5089,
+   "sha1": "0081a75b6aa2f043b1f33922fb42d924b86bd90f"
   },
   {
    "path": "sections/products/process.php",
-   "size": 2563,
-   "sha1": "0cd1ec0306a59b007b9c6ecd2666cf7dca2fbd6e"
+   "size": 2236,
+   "sha1": "1aa57430674567709d1df9693368d05b9be9d4ea"
   },
   {
    "path": "sections/results/cases.php",
-   "size": 1188,
-   "sha1": "6c50c196d2f5ec40cf2007af90834da5c7dae281"
+   "size": 1187,
+   "sha1": "5df87357174fc005067b45be6083dbf652566885"
   },
   {
    "path": "sections/results/hero.php",
-   "size": 1774,
-   "sha1": "a98111a07dd4b5def354835914f13ca948792d48"
+   "size": 1879,
+   "sha1": "b3f9b42afa2da027c426c8de779f3f4305897b19"
   },
   {
    "path": "sections/sector-ecommerce/case.php",
-   "size": 3798,
-   "sha1": "e4887ec0089b8d6fa4ee99441f14f245acf9ca3a"
+   "size": 3727,
+   "sha1": "f61f8ea299b65af77177fafdae6dda97a3535de1"
   },
   {
    "path": "sections/sector-ecommerce/hero.php",
-   "size": 6449,
-   "sha1": "41a97d330b85e77e3148dc960682cba05a771743"
+   "size": 6493,
+   "sha1": "0754f368a6d11b61c1907424b6f66b5002bcb599"
   },
   {
    "path": "sections/sector-ecommerce/measure.php",
-   "size": 2819,
-   "sha1": "469c28c764b4d4e96345396eb162d992b900f7e6"
+   "size": 2769,
+   "sha1": "f140071b7cbeb99884d9fee9432c1c0b9033f451"
   },
   {
    "path": "sections/sector-ecommerce/path.php",
-   "size": 4051,
-   "sha1": "9acf27342116b77f42d156a69d6cfce5b5e48dd6"
+   "size": 3865,
+   "sha1": "6bb094d8c421c9266cb23bf8395a3e55b31464f5"
   },
   {
    "path": "sections/sector-ecommerce/sector_journey.php",
-   "size": 8751,
-   "sha1": "19dd704fde2afd7692069c012b030c970284eb88"
+   "size": 8720,
+   "sha1": "011ee75146d28404d360e75836a9cca94f8efbfd"
   },
   {
    "path": "sections/sector-ecommerce/visibility.php",
-   "size": 3053,
-   "sha1": "2268ea39113f9096b8696e682fa3caf465197d4b"
+   "size": 2998,
+   "sha1": "94d89f11ffd4b93fc2ef8b6241ea3725ca52d333"
   },
   {
    "path": "sections/sector-education/hero.php",
-   "size": 6497,
-   "sha1": "39db4f7e5822963bcc322d6e40f204707d4eec5c"
+   "size": 6541,
+   "sha1": "0f10847fa469430fe0675868cb1af15135fe2013"
   },
   {
    "path": "sections/sector-education/info.php",
-   "size": 2596,
-   "sha1": "d6c9675c6cc531daff412db8b02353b23346725f"
+   "size": 2557,
+   "sha1": "454ead35f987c94f86490e3d30312f2e3bd42ce4"
   },
   {
    "path": "sections/sector-education/levels.php",
-   "size": 3476,
-   "sha1": "9c48ee5225d6c9cc64b2032717cbea97545a8e29"
+   "size": 3309,
+   "sha1": "3cb710c35226cadcf65e230be42f7ad8e09282c0"
   },
   {
    "path": "sections/sector-education/measure.php",
-   "size": 2450,
-   "sha1": "948b0042aca9658580dd80dac92b39d6d4ca08ff"
+   "size": 2422,
+   "sha1": "2c221cb941153512488eff3ef61c152910fa86d0"
   },
   {
    "path": "sections/sector-education/sector_journey.php",
-   "size": 6861,
-   "sha1": "15a3d32747bb23c0bfa94ccdf0494b24e1b9b21d"
+   "size": 6832,
+   "sha1": "3efdcf6401c0a674944f06f8b53f3d5cd88c7eb6"
   },
   {
    "path": "sections/sector-food/branch.php",
-   "size": 3383,
-   "sha1": "e16fb35571b894b2ec42c88adf88e5f15fa1255c"
+   "size": 3350,
+   "sha1": "5585ced2c2cb5006224ce11210fe625249202eec"
   },
   {
    "path": "sections/sector-food/hero.php",
-   "size": 6483,
-   "sha1": "6361199c3ed9a61b760b7db2ffecabfc409aff60"
+   "size": 6527,
+   "sha1": "58f020d09e467246594e71f03114498e28318eb3"
   },
   {
    "path": "sections/sector-food/measure.php",
-   "size": 2417,
-   "sha1": "ab59a45d98beed76f5aec044a6375c6d1a176eef"
+   "size": 2389,
+   "sha1": "4a31065621952da395d7e32aeae2e975849df7cb"
   },
   {
    "path": "sections/sector-food/menu.php",
-   "size": 2758,
-   "sha1": "1e2c05216841462ce730cc86013b1c0dcd865de6"
+   "size": 2705,
+   "sha1": "318fa503110a811254c0243043ec35bdd7d69d20"
   },
   {
    "path": "sections/sector-food/sector_journey.php",
-   "size": 7201,
-   "sha1": "070ca5798931e09bc74c13c89f6378bc7dbdf912"
+   "size": 7167,
+   "sha1": "78cf17c8b528ffce56047442ccf5f5e20735dd77"
   },
   {
    "path": "sections/sector-health/case.php",
-   "size": 5746,
-   "sha1": "13d9a05f4b97a3dd6ef94219da7dce04061146b5"
+   "size": 5674,
+   "sha1": "cbbe3f24d8bf2c2dd8f88dc2a8a71cd726248615"
   },
   {
    "path": "sections/sector-health/hero.php",
-   "size": 6509,
-   "sha1": "9c812254e1241dbfc2ceaa2415ebd17e48d95224"
+   "size": 6553,
+   "sha1": "9f2572d4ada2495cb9f782cab4051d69d6756369"
   },
   {
    "path": "sections/sector-health/journey.php",
-   "size": 3202,
-   "sha1": "3380e93e1e5b627fe5bf516fd1350eab8b97a6b8"
+   "size": 2973,
+   "sha1": "c5896d4d40d7ec64ebab262b2750225370bd646a"
   },
   {
    "path": "sections/sector-health/measure.php",
-   "size": 2461,
-   "sha1": "c2d66b20e943a0ab73a2e4c1c4326fd3f0dda252"
+   "size": 2433,
+   "sha1": "d9b64c988ef0d902616f2b54be2ea75fb785b6ca"
   },
   {
    "path": "sections/sector-health/pages.php",
-   "size": 3161,
-   "sha1": "5571c99879ab5b68ed5613b0963ec7c64e9c8c10"
+   "size": 3094,
+   "sha1": "94a4b0714ab1fd70340c8aff0e9a95df77d17324"
   },
   {
    "path": "sections/sector-health/sector_journey.php",
-   "size": 7372,
-   "sha1": "fd4358bb1b276002b4469ae17a280a7c6bf6ff75"
+   "size": 7338,
+   "sha1": "700135262fcfedd8f3e86ed44c1264214e48120b"
   },
   {
    "path": "sections/sector-legal/expertise.php",
-   "size": 2646,
-   "sha1": "9eb903694d59b2f692e6ae5429441c2ce0342c07"
+   "size": 2608,
+   "sha1": "720edd9744fdecb3e206e72a28535822298b9290"
   },
   {
    "path": "sections/sector-legal/hero.php",
-   "size": 6488,
-   "sha1": "5a0d40259ffe0efde16485bf9f2eb94d6141d91c"
+   "size": 6532,
+   "sha1": "7c06cfb5875cc6c0073eeea94f6e3493d25e6b34"
   },
   {
    "path": "sections/sector-legal/practice.php",
-   "size": 3533,
-   "sha1": "fe484ae7e88484ee36c455242de69ebaa38772f6"
+   "size": 3617,
+   "sha1": "a671116d6e51a19cb2d9de5bace578c2fcfef3ed"
   },
   {
    "path": "sections/sector-legal/sector_journey.php",
-   "size": 6518,
-   "sha1": "41e20af029b5fccca929a115120446228c562051"
+   "size": 6496,
+   "sha1": "f51cf5495d880b6e62b36935f809df53a4b6cbeb"
   },
   {
    "path": "sections/sector-real-estate/hero.php",
-   "size": 6498,
-   "sha1": "95c586c1e936fce8b41e9e7ea76b24a8008316ab"
+   "size": 6542,
+   "sha1": "637d815dda16a40336a43c89c9a68b4cd37b44e5"
   },
   {
    "path": "sections/sector-real-estate/lifecycle.php",
-   "size": 3235,
-   "sha1": "1348a66552e7c80cba604a07c117aa4a5660b55b"
+   "size": 3182,
+   "sha1": "26853d9113854acf958673c503aaa31c833b8003"
   },
   {
    "path": "sections/sector-real-estate/measure.php",
-   "size": 2458,
-   "sha1": "38e3a9d26eacd09d297abe28ae2c03925b94605d"
+   "size": 2430,
+   "sha1": "45e6bb55fb1698b01730fe242831641a180023de"
   },
   {
    "path": "sections/sector-real-estate/sector_journey.php",
-   "size": 8168,
-   "sha1": "f9a53af7928d268ad5b52b29d67eaad808978d12"
+   "size": 8134,
+   "sha1": "82e0cd7bd7c98fae7c6b40cb85b9efd6af8d2624"
   },
   {
    "path": "sections/sector-real-estate/structure.php",
-   "size": 3419,
-   "sha1": "e79c4b8910f44adeb00a85e1246a400b58d3d0da"
+   "size": 3354,
+   "sha1": "d2c9908131eab38f78779fe8012522eb7440b246"
   },
   {
    "path": "sections/sector-tech/hero.php",
-   "size": 6480,
-   "sha1": "2c687748cceb4f3a55d080a76533fb01a143066f"
+   "size": 6524,
+   "sha1": "bb1235617d8f80de420fa2e72c8c02f333bf6fe8"
   },
   {
    "path": "sections/sector-tech/measure.php",
-   "size": 2417,
-   "sha1": "e993ad5ae0376ced0696abe4b1f97cfa5ccfb4ef"
+   "size": 2389,
+   "sha1": "ec391a665c4e3c3735a17eee201ba5bccb45acf9"
   },
   {
    "path": "sections/sector-tech/problem.php",
-   "size": 2996,
-   "sha1": "9aa91ac5a7ce136085580051c0eaa50ee6d8179d"
+   "size": 2943,
+   "sha1": "9a9680ac5e6d887183f460c6e24e6b6169b0e8d1"
   },
   {
    "path": "sections/sector-tech/sector_journey.php",
-   "size": 7006,
-   "sha1": "50c0b9ad9cc81b82125912b44d7a723c92a4526d"
+   "size": 6981,
+   "sha1": "2b09979aaa59dba8e8263d693c715093545c1174"
   },
   {
    "path": "sections/sector-tech/verify.php",
-   "size": 2998,
-   "sha1": "db70b978c9d009de8766dac7fc25c5c15004c0eb"
+   "size": 2922,
+   "sha1": "a17766d48f50f72c0608048cadd1aafd55c1c95d"
   },
   {
    "path": "sections/sector-tourism/choose.php",
-   "size": 3645,
-   "sha1": "272d58b7ca268999a7aa3685afda20c7ed663f61"
+   "size": 3592,
+   "sha1": "bff016b56e2d2332264d8a0fbdbf8fb077c3d66d"
   },
   {
    "path": "sections/sector-tourism/hero.php",
-   "size": 6509,
-   "sha1": "46308af297961ccc35b4e18ecef9205d2ddfa669"
+   "size": 6553,
+   "sha1": "57faffdd7846de0b1e04121aa33b74f0b0386dfe"
   },
   {
    "path": "sections/sector-tourism/inquiry.php",
-   "size": 2454,
-   "sha1": "5b7997cb7eefc2d7d00672357ab8785a01e6fac6"
+   "size": 2426,
+   "sha1": "7e6b15f827670b78e61a20349124165316c4f117"
   },
   {
    "path": "sections/sector-tourism/season.php",
-   "size": 2957,
-   "sha1": "6258d50dcfe9aec5808f517bdeeb4594ca98e17f"
+   "size": 2920,
+   "sha1": "40c6d70ad582c284dde935fe464cf2cb1da8e0b9"
   },
   {
    "path": "sections/sector-tourism/sector_journey.php",
-   "size": 6890,
-   "sha1": "4f4fb574d57959a1520fa696f6b520f205818e9e"
+   "size": 6869,
+   "sha1": "f6db786b82aaff2da2e5846355231dd58fba19cd"
   },
   {
    "path": "sections/sectors/hero.php",
-   "size": 2683,
-   "sha1": "6163d78580f5e46794bd8b68e0eccd208389a5f3"
+   "size": 2830,
+   "sha1": "d9afbc2e70f50f50de34dd7a79e54e11da609e08"
   },
   {
    "path": "sections/sectors/list.php",
-   "size": 3544,
-   "sha1": "93a2c61e408dc36c1833f3d7cf0eabd0ac815137"
+   "size": 3462,
+   "sha1": "ec8682026b076f4f21b679f65ab7007b9d651891"
   },
   {
    "path": "sections/sectors/pick.php",
-   "size": 2926,
-   "sha1": "a7f21db7de2fc694eccc8079a61a4cde9467abef"
+   "size": 2891,
+   "sha1": "276ba1e8bbcc15fe4c17ed1d6faacecd13951d4d"
   },
   {
    "path": "sections/seo/client_logos.php",
-   "size": 1778,
-   "sha1": "1e3cb3eef40b78dc11f7bd74b500a7457031c4c2"
+   "size": 1742,
+   "sha1": "0d42dc79793c97444a450c39291e8280bc7da991"
   },
   {
    "path": "sections/seo/hero.php",
-   "size": 7453,
-   "sha1": "4a040ed88bda4c043ac8f6335bd7793878de6e79"
+   "size": 7609,
+   "sha1": "da84953a3336160aff67b5febb69270428384765"
   },
   {
    "path": "sections/seo/layers.php",
-   "size": 3887,
-   "sha1": "74c04eaff062cbe60e270c8544137cc9985f3129"
+   "size": 4220,
+   "sha1": "fc7fa474220df35aeda5e4ba5f93e49e108b2590"
   },
   {
    "path": "sections/seo/markets.php",
-   "size": 2483,
-   "sha1": "7cc993ba87ebec6ecb91c667c72799cd3c157d76"
+   "size": 2451,
+   "sha1": "ce44e6ad8d5947d8a77f4bf76d0335895d338c1c"
   },
   {
    "path": "sections/seo/pricing_strip.php",
-   "size": 2030,
-   "sha1": "2ddbcac2ca0897e4eb9e15433e4193521863b3c9"
+   "size": 2009,
+   "sha1": "7cb7a90259f7a5be17c5a1ec5407f171af1399c1"
   },
   {
    "path": "sections/seo/process.php",
-   "size": 10060,
-   "sha1": "1ec5fa25bf21311349f258eef005a701c2468e03"
+   "size": 9984,
+   "sha1": "96d4d4edd9c3721f184b76cb6a9257efbb311878"
   },
   {
    "path": "sections/seo/results.php",
-   "size": 6521,
-   "sha1": "eed274ddae1c4a332c0cc9be3910aa9617d4e3e1"
+   "size": 6411,
+   "sha1": "21ee9811dfbb8dac0a8b578aecb72296cd8943a3"
   },
   {
    "path": "sections/seo/reviews.php",
-   "size": 4813,
-   "sha1": "88681b87a34d5f49053bc4e6fed5b03eb57edaac"
+   "size": 4733,
+   "sha1": "e78b3c673c788913208c89ac1c24c9bfe7148077"
   },
   {
    "path": "sections/seo/sectors.php",
-   "size": 3084,
-   "sha1": "914a66d59c8cdfc5ea2dbba896d29ccad6f99a0c"
+   "size": 3064,
+   "sha1": "eff011f575e61182a88c9d817aa11bdc44814907"
   },
   {
    "path": "sections/seo/seo_system.php",
-   "size": 6261,
-   "sha1": "45abd22dec4dcc25d0098347e854d657ba1719df"
+   "size": 6146,
+   "sha1": "23a2e7fd46bbad0056f026d706926779430dcc7e"
   },
   {
    "path": "sections/seo/tools.php",
-   "size": 4203,
-   "sha1": "c86daab6613298bae6ce13ba2bd81c9f414f8fd9"
+   "size": 4031,
+   "sha1": "8b24d99462e2bba5f23d288aad9e760d147e6f7a"
   },
   {
    "path": "sections/seo-backlinks/compare.php",
-   "size": 3067,
-   "sha1": "f81897ae169153d8ff2649700077dcb2f1b5b965"
+   "size": 3018,
+   "sha1": "17524c07c5e1182c042a20402f43e93dbb3bd05c"
   },
   {
    "path": "sections/seo-backlinks/flow.php",
-   "size": 2552,
-   "sha1": "08c853a46a4e9d4ab0fa2718889735e09ccf05c7"
+   "size": 2225,
+   "sha1": "26401aba429d83b7d11d6cd524297f3e25336f57"
   },
   {
    "path": "sections/seo-backlinks/hero.php",
-   "size": 7220,
-   "sha1": "80245b69f7c9b88830173dd76b33fb3ba95e60b3"
+   "size": 7039,
+   "sha1": "c87948f37dbde95d985f3161d1e52cd04d3b750c"
   },
   {
    "path": "sections/seo-backlinks/honest.php",
-   "size": 1983,
-   "sha1": "faf8a0d4d3233578c864cbf4ea364a00251e48b1"
+   "size": 1949,
+   "sha1": "6aef27c97f3c2ec71ea64320eb4158f6c3f17696"
   },
   {
    "path": "sections/seo-backlinks/quality.php",
-   "size": 2922,
-   "sha1": "8ea60e1863708e3ef4a3e0a440b3bc58b6345321"
+   "size": 2742,
+   "sha1": "08e354885a78dfe3ea19553aa3308972867f23e0"
   },
   {
    "path": "sections/seo-consulting/chain.php",
-   "size": 3767,
-   "sha1": "c29de2aeb61d9160c756a432dee8c1e824b9308b"
+   "size": 3574,
+   "sha1": "f55fd9957846212a228de1cf12b3c9da1c0f2f71"
   },
   {
    "path": "sections/seo-consulting/deliver.php",
-   "size": 2132,
-   "sha1": "5b3782cf352421fbf044ff660e60604b9d254120"
+   "size": 2112,
+   "sha1": "db3f847d06adccd44d412557e33badf8987c085f"
   },
   {
    "path": "sections/seo-consulting/hero.php",
-   "size": 4985,
-   "sha1": "611a5805e3c435967ededea9b2f2800fc57a1bd9"
+   "size": 5038,
+   "sha1": "3822a92208b6598d08c9def0841bc0a148d94bb9"
   },
   {
    "path": "sections/seo-consulting/when.php",
-   "size": 1818,
-   "sha1": "40a1fa602d2d2f2de5c20a569ff352dc7e188599"
+   "size": 1799,
+   "sha1": "22cda1e02463146ad0f89f068fc662c453efa255"
   },
   {
    "path": "sections/seo-content/flow.php",
-   "size": 2568,
-   "sha1": "b7cf049a64247fff2244a68d4ae1574dff1b95fc"
+   "size": 2536,
+   "sha1": "265991167345cc83029d5e193226619f1b59393b"
   },
   {
    "path": "sections/seo-content/hero.php",
-   "size": 4481,
-   "sha1": "ffae19d6ed88a2f7939a39174b12a79d17e7dd02"
+   "size": 4628,
+   "sha1": "331ccfc14ac7bc13cb0170d361c446815e8ab6de"
   },
   {
    "path": "sections/seo-content/human.php",
-   "size": 2216,
-   "sha1": "773fb87e91149c76cfa9f3fecf985b08ad6c7103"
+   "size": 2181,
+   "sha1": "8ed516ebefc7a67aaabdec9b6c55e78bc028207c"
   },
   {
    "path": "sections/seo-content/proof.php",
-   "size": 2045,
-   "sha1": "311e388f7a8a417ea4ac8365a0717eb0244f563e"
+   "size": 2020,
+   "sha1": "51aafbeecb15364d5d39e2fa8daeceb100770904"
   },
   {
    "path": "sections/seo-content/types.php",
-   "size": 2032,
-   "sha1": "71536633b3e6188658c3f410e7179ed3b8a3f602"
+   "size": 2011,
+   "sha1": "04b132c4bfe8560f84d7c3934a0e6fa03c17b1a7"
   },
   {
    "path": "sections/seo-egypt/client_logos.php",
-   "size": 1367,
-   "sha1": "a8afdb9f1c9463f1f11cd4a7978c5c64db4919f6"
+   "size": 1340,
+   "sha1": "ed72d1d0283de9e7e5384f053b7d8a5e257ec673"
   },
   {
    "path": "sections/seo-egypt/egypt_case.php",
-   "size": 3755,
-   "sha1": "7e93ca6da949644c9265e76878349045bb315934"
+   "size": 3684,
+   "sha1": "1e01f9d916035fababcb5838afde036c9b8b1c35"
   },
   {
    "path": "sections/seo-egypt/first_month.php",
-   "size": 2250,
-   "sha1": "e9f33b2d4333eb0fd29a2034a0d799d1c456aebf"
+   "size": 2110,
+   "sha1": "2ccc3dc705f0834fe4a68e817bd164312a55fa6d"
   },
   {
    "path": "sections/seo-egypt/hero.php",
-   "size": 6311,
-   "sha1": "7d905c5c931c4d7ffdbc74254d5998c86e3c4ed6"
+   "size": 6479,
+   "sha1": "50e19d72ba12daa1b242fc8525adb20326efc8db"
   },
   {
    "path": "sections/seo-egypt/market.php",
-   "size": 4490,
-   "sha1": "09ed1f8277897d922e8c45f7f45c3032159fcde7"
+   "size": 4330,
+   "sha1": "1956e4f73a1a6c9a7891b452f8915cdd76875fc3"
   },
   {
    "path": "sections/seo-egypt/method.php",
-   "size": 6024,
-   "sha1": "712f955be8e90b4f7812bab7af7b25c3eeab6933"
+   "size": 6028,
+   "sha1": "7b06b5a5d16cd0f17f7b32d180c1c0d50557659b"
   },
   {
    "path": "sections/seo-egypt/reviews.php",
-   "size": 2231,
-   "sha1": "4724c6f34a86fc5104484281f3cfbede59afb38b"
+   "size": 2210,
+   "sha1": "ec2745ea0b950263d998b2c0f0da41117e4e6069"
   },
   {
    "path": "sections/seo-egypt/scope.php",
-   "size": 2900,
-   "sha1": "7584c6198fba138cc0a68e7c131fc862dd939c67"
+   "size": 2714,
+   "sha1": "82ba0bb518de7cb5fbed168dab48edfcbf45eefe"
   },
   {
    "path": "sections/seo-egypt/sectors.php",
-   "size": 7183,
-   "sha1": "9e4303fd170dc93c147ab5d16272112ef67778dc"
+   "size": 7072,
+   "sha1": "15d1cd7dcb42d40598672cff33a207124be8721d"
   },
   {
    "path": "sections/seo-egypt/why.php",
-   "size": 1847,
-   "sha1": "3617816b7c369bb00dc6cddb30646740e35bb7a0"
+   "size": 1680,
+   "sha1": "399f6b264b36e5996af5bc1f70d274cf8bede684"
   },
   {
    "path": "sections/seo-ksa/client_logos.php",
-   "size": 1367,
-   "sha1": "7d60eb62721b9ef5efffa171a465bef21f6391b5"
+   "size": 1340,
+   "sha1": "a0da58f20f982ef7f4edbef6fb431a5d8661ec5b"
   },
   {
    "path": "sections/seo-ksa/first_month.php",
-   "size": 2610,
-   "sha1": "193f81ec7168d9b070a36f4131cb44ce86dd03bc"
+   "size": 2466,
+   "sha1": "03364e05818dd2f5e3d844c282c6cb54ffb15fe0"
   },
   {
    "path": "sections/seo-ksa/hero.php",
-   "size": 6559,
-   "sha1": "ececa369d8217ae73ec7d14cf43416d3abe38d70"
+   "size": 6702,
+   "sha1": "a37f8bda171a0dff33d73f3a2d6e1d94f148a2de"
   },
   {
    "path": "sections/seo-ksa/market.php",
-   "size": 6245,
-   "sha1": "39d7a4cb295c31e44d1dd71feb743817f5fd06d8"
+   "size": 6018,
+   "sha1": "a5083972fa10ccb7137a7fcb9c88db95e58dbaf7"
   },
   {
    "path": "sections/seo-ksa/reviews.php",
-   "size": 4460,
-   "sha1": "70567d0c7fef3484940cf8c185d0bd647b2cd75f"
+   "size": 4380,
+   "sha1": "df95e251f8811bedb8282921efc058b86f65eb4a"
   },
   {
    "path": "sections/seo-ksa/saudi_case.php",
-   "size": 4063,
-   "sha1": "5a00c3961d35e377e6179854bdbc23209c0478d5"
+   "size": 3992,
+   "sha1": "5da47dff68d6ff5941364ea50e4d8b05bea5a100"
   },
   {
    "path": "sections/seo-ksa/scope.php",
-   "size": 3248,
-   "sha1": "b2175d2e2427ee8d29a0241abd4b3ed7b6bf5428"
+   "size": 3212,
+   "sha1": "b6ece2cfefce893c344db418e6f4b67d436f9843"
   },
   {
    "path": "sections/seo-ksa/sectors.php",
-   "size": 3032,
-   "sha1": "ef35df2738deeebc54c120689813dcfee72413b5"
+   "size": 3008,
+   "sha1": "7cb540f820af65d636720fc5231698caa6c977e8"
   },
   {
    "path": "sections/seo-ksa/why.php",
-   "size": 1848,
-   "sha1": "f45ea5ff6f563220d26f73af92f737960b60ea4e"
+   "size": 1681,
+   "sha1": "4fc58cca30d0639df179d776ef09f5066d00443b"
   },
   {
    "path": "sections/seo-on-page/deliverables.php",
-   "size": 2141,
-   "sha1": "b60154af1757c8d4d358b963a1671111d093bcd2"
+   "size": 2121,
+   "sha1": "5fa757595d70812810b65b72eec94b4437243f33"
   },
   {
    "path": "sections/seo-on-page/flow.php",
-   "size": 4714,
-   "sha1": "59485eecdeb37866a68249dd8445157ee7a7a96c"
+   "size": 4667,
+   "sha1": "320a3088bd6f9596dc0f43842bbcd5d085b56d87"
   },
   {
    "path": "sections/seo-on-page/hero.php",
-   "size": 4918,
-   "sha1": "300c9b05128b1686624ac1a3f1f35f9ac759befd"
+   "size": 5039,
+   "sha1": "39e8a9b655152c19f7fbbf77c4ddd4578b465062"
   },
   {
    "path": "sections/seo-on-page/layers.php",
-   "size": 2036,
-   "sha1": "9de4fdb7791da3a5607b957d2c051c11f600ba43"
+   "size": 2015,
+   "sha1": "b6eac3c283f44beedffc16a55e6b64f6b426f5d7"
   },
   {
    "path": "sections/seo-technical/hero.php",
-   "size": 4696,
-   "sha1": "ee0f676e2171c112d16edcb20b658e871da91897"
+   "size": 4851,
+   "sha1": "b255b9fdfd3cdcd9b2cbab2c8b1d95739ac3cd27"
   },
   {
    "path": "sections/seo-technical/issues.php",
-   "size": 3003,
-   "sha1": "72a292266e7d2fc5053c5681fbce6a81f86bcbf9"
+   "size": 3049,
+   "sha1": "53ec0266ee3bb89e413c04578896a3cec25f9856"
   },
   {
    "path": "sections/seo-technical/levels.php",
-   "size": 2805,
-   "sha1": "51eb0567018f7daeb4420348b27d9858ced286a5"
+   "size": 2770,
+   "sha1": "f4f35c896722a5a88a6a4122f293a36f853a7db4"
   },
   {
    "path": "sections/seo-technical/scope.php",
-   "size": 2194,
-   "sha1": "1e57c6e8a10af616d36a72c20ea910cb6ece9ed1"
+   "size": 2157,
+   "sha1": "166902532724a23e27adb746d78e3e48738fecf9"
   },
   {
    "path": "sections/seo-technical/tools.php",
-   "size": 3229,
-   "sha1": "574160dbb655f0ab0c859d34a716fdb8c40677d6"
+   "size": 3196,
+   "sha1": "32f4e446663136043d6441470c02d4d2a6b91d49"
   },
   {
    "path": "sections/seo-uae/client_logos.php",
-   "size": 1365,
-   "sha1": "3ac5776df627271eee365887f68a1bd48f777050"
+   "size": 1338,
+   "sha1": "07469df1b4698bcb124f07471bc00c029c49fa4a"
   },
   {
    "path": "sections/seo-uae/first_month.php",
-   "size": 4829,
-   "sha1": "ea23acb18a1d236d57bdfbb2af21efdb10923b28"
+   "size": 4314,
+   "sha1": "ce10e2c197d3a910ffbf519d48e832b77527bbf7"
   },
   {
    "path": "sections/seo-uae/gulf_case.php",
-   "size": 3956,
-   "sha1": "a78ef42656bb6699aceb3454cbe4a6cea31ec505"
+   "size": 3885,
+   "sha1": "ca5c2729a03593047d6320162a51e3548d0e2b35"
   },
   {
    "path": "sections/seo-uae/hero.php",
-   "size": 9417,
-   "sha1": "ffe7acfbcc5c37ae09c2213cb856a80f3092e7a4"
+   "size": 9491,
+   "sha1": "147392224a15bed3cb8e715763b2f4ab97fca2c0"
   },
   {
    "path": "sections/seo-uae/market.php",
-   "size": 2914,
-   "sha1": "6dbc408bc598ed0f5e249d59f981a5945307616c"
+   "size": 2915,
+   "sha1": "08290fd6fd3a6149eb267d6acecb5446c3b61995"
   },
   {
    "path": "sections/seo-uae/measure.php",
-   "size": 2700,
-   "sha1": "413390406c726b103bc74c03a9984d2ff19c5161"
+   "size": 2673,
+   "sha1": "3927348eb9867f5893459fd3c68defe475a03c6d"
   },
   {
    "path": "sections/seo-uae/needs.php",
-   "size": 2417,
-   "sha1": "7dbbaa33d6db2df26756239940daeaee16e878e0"
+   "size": 2395,
+   "sha1": "d78018441a6ee04d9aa1796fbfc5ea512d794496"
   },
   {
    "path": "sections/seo-uae/opportunities.php",
-   "size": 6302,
-   "sha1": "9d3dd5e6b0100725c20daba3172795c1ef0cbbd7"
+   "size": 6238,
+   "sha1": "cb4fa105129be7970127ae2aefc039bcac26d821"
   },
   {
    "path": "sections/seo-uae/reviews.php",
-   "size": 2229,
-   "sha1": "07d67bbaa0b779df32d6463caa93a7c73fbaecd0"
+   "size": 2208,
+   "sha1": "71b6fe5acdd2c268b712798fd702bc8301973f02"
   },
   {
    "path": "sections/seo-uae/sectors.php",
-   "size": 2916,
-   "sha1": "dcac126c3667bdbcc5c3fd3f004319fdadb2eca0"
+   "size": 2912,
+   "sha1": "377adadd794288cb1cf2a9d996a470c035208734"
   },
   {
    "path": "sections/seo-uae/why.php",
-   "size": 1845,
-   "sha1": "ca36983de46afbff66723ee9aa05f799f1686eb0"
+   "size": 1678,
+   "sha1": "dbbed74ce89f285a320eab2f0484df1ab00efeba"
   },
   {
    "path": "sections/services/families.php",
-   "size": 7876,
-   "sha1": "8853741c4dcbd088edd2efbf62f3cd994484d7f7"
+   "size": 7598,
+   "sha1": "2edf47a84ffa499a9c190a4e7779978ddcb4720d"
   },
   {
    "path": "sections/services/hero.php",
-   "size": 6324,
-   "sha1": "242515929aa3d628242b87f251d44b916495e911"
+   "size": 6507,
+   "sha1": "dffa25416eafcd4a3a9b871365e61337e72e365d"
   },
   {
    "path": "sections/services/path.php",
-   "size": 2825,
-   "sha1": "a1ebf8d0b9d2a8a1dbd4439a352f4a107074a09e"
+   "size": 2809,
+   "sha1": "856d53450816ff01612702b6c02af6d0121a64f7"
   },
   {
    "path": "sections/services/sectors.php",
-   "size": 1967,
-   "sha1": "43d89cac8a6ff960783dd3c2b93c9599f6186c72"
+   "size": 1945,
+   "sha1": "bb4ab815f38e089cbb79df06fb8183f503caaa54"
   },
   {
    "path": "sections/shared/booking.php",
-   "size": 9487,
-   "sha1": "4baaae48cf594754bba246fbc47cd8b0d1e4b98b"
+   "size": 9400,
+   "sha1": "12303fb22af3630f28d6a448fdfedcc7988d309b"
   },
   {
    "path": "sections/shared/faq.php",
-   "size": 2512,
-   "sha1": "5db245af4294ec577f95d2ce2aa949026bf607ca"
+   "size": 2492,
+   "sha1": "12b0308506faf31ad2745cff80c78fbd19e469df"
   },
   {
    "path": "sections/shared/related.php",
-   "size": 1272,
-   "sha1": "400c8bfa6c4ba953eaa212f61f66cb7b28ff4bd1"
+   "size": 1261,
+   "sha1": "cd47e60a32cf886b4a9ce1d67cfd7e1e7ccfcd43"
   },
   {
    "path": "sections/stores/hero.php",
-   "size": 5160,
-   "sha1": "749318e47a8db02a3d3638533be1221c51fad9e3"
+   "size": 5194,
+   "sha1": "ef0942420a2cd69235de9002c16495dd4ced06e1"
   },
   {
    "path": "sections/stores/journey.php",
-   "size": 10205,
-   "sha1": "f6d38c49251f48ac3d43dd7d08ad1dca82f1310e"
+   "size": 9701,
+   "sha1": "b36beb81a28c7346b446802e66b182788d5d2ca9"
   },
   {
    "path": "sections/stores/phases.php",
-   "size": 2560,
-   "sha1": "fc7df7f387ff288a310b6411b6eb5eeaf8422df2"
+   "size": 2233,
+   "sha1": "09f4e9831f6e8580624b9c98f080b186a3827c14"
   },
   {
    "path": "sections/stores/platforms.php",
-   "size": 6782,
-   "sha1": "0574a8aedfd0952885f0eb78ea9538a8ad628259"
+   "size": 6643,
+   "sha1": "1c4bc8c834f4b5ba36d5a049137787f0da00c739"
   },
   {
    "path": "sections/stores-salla/hero.php",
-   "size": 5192,
-   "sha1": "ff311a74731c88a19e23b1c7150b0869bf08ff6d"
+   "size": 5323,
+   "sha1": "4df560362b89ea864198ec4667cb4c3078d0595d"
   },
   {
    "path": "sections/stores-salla/limits.php",
-   "size": 2353,
-   "sha1": "cd02a0d2f613f92905bbdc7d3b44125d7b630884"
+   "size": 2329,
+   "sha1": "4559127b4abf47f0595ed9dd51dbc5138d950b84"
   },
   {
    "path": "sections/stores-salla/phases.php",
-   "size": 2306,
-   "sha1": "025b8cc443d336d4557111b4e0cce632fb30938f"
+   "size": 2273,
+   "sha1": "da2f465b5fca6d839408de6c157d111fb0a23840"
   },
   {
    "path": "sections/stores-salla/setup.php",
-   "size": 1812,
-   "sha1": "ef540b34f9eb3c2796ff60caa47c0afa8986c4b3"
+   "size": 1793,
+   "sha1": "a0ef286e34bfedae1fd955b36e8982d17d3a2638"
   },
   {
    "path": "sections/stores-shopify/apps.php",
-   "size": 3101,
-   "sha1": "5d714f6ab35b1dc0067132f7db6bb0de8ad1ae9d"
+   "size": 3129,
+   "sha1": "c32eab7afe04d4cf45783d1269e1825fb4425362"
   },
   {
    "path": "sections/stores-shopify/build.php",
-   "size": 1956,
-   "sha1": "f61f1a8c0454acefe046340be33ac8a365c19d13"
+   "size": 1933,
+   "sha1": "b1da461ce80b4df5cf0521196c289d5aea2acf59"
   },
   {
    "path": "sections/stores-shopify/care.php",
-   "size": 2119,
-   "sha1": "0c427f5a6b98a3a4f39bb036687ae67c4e5976b3"
+   "size": 2099,
+   "sha1": "e7fe2180e16e2cc7cf9f75d374dda41c795fba11"
   },
   {
    "path": "sections/stores-shopify/hero.php",
-   "size": 5266,
-   "sha1": "3c5729cbb906713a0db0ceb6ad4da88afe87e47d"
+   "size": 5407,
+   "sha1": "5262de1f2e558635de4bd99078c4c10844ef9579"
   },
   {
    "path": "sections/stores-woocommerce/build.php",
-   "size": 2264,
-   "sha1": "e85f85a462f1d4e0ee3a320dcca6767c2d042cce"
+   "size": 1983,
+   "sha1": "04c4f0de45d8e23bb98d0df857e05a226cb175e4"
   },
   {
    "path": "sections/stores-woocommerce/fit.php",
-   "size": 2121,
-   "sha1": "f8adbaec97ddba43775534d5725eba6902c0bc67"
+   "size": 2101,
+   "sha1": "9cb0a346d7f45ed52356c68912de6946d0665147"
   },
   {
    "path": "sections/stores-woocommerce/hero.php",
-   "size": 4889,
-   "sha1": "5d528290bff780466686a7ee023bb5f2e68637bc"
+   "size": 5029,
+   "sha1": "e053ef810324034076527ca84f5e81df3ad7358e"
   },
   {
    "path": "sections/stores-woocommerce/phases.php",
-   "size": 3137,
-   "sha1": "ab2754997be519988390aff78a238376de0fe905"
+   "size": 2927,
+   "sha1": "89a88767f56b018d4904cc75938a1d21f0151841"
   },
   {
    "path": "sections/stores-zid/fit.php",
-   "size": 2113,
-   "sha1": "cb57c2b6eac677e78f745ce997b0763702b0418d"
+   "size": 2093,
+   "sha1": "e8573a6c1b15195a07cccb64e53d496e76e4d9ff"
   },
   {
    "path": "sections/stores-zid/hero.php",
-   "size": 3896,
-   "sha1": "d329a6a11dedf0b96fd60165230b4ad803475a20"
+   "size": 3935,
+   "sha1": "27772a83f99f5cb2f119d77d736645315f9d22c1"
   },
   {
    "path": "sections/stores-zid/ops.php",
-   "size": 2531,
-   "sha1": "b5b9d58fa89b2dc7767d2d7f9a9a1d606294039d"
+   "size": 2398,
+   "sha1": "479ea4955a10959d342e18e45d755f3f868dec18"
   },
   {
    "path": "sections/stores-zid/phases.php",
-   "size": 3106,
-   "sha1": "9d15356afcbe526b21946c10e4b24f1b7d03d982"
+   "size": 2945,
+   "sha1": "aa92158067c3ad0b05cdde9ce058551bbd4aa39b"
   },
   {
    "path": "sections/team/collab.php",
-   "size": 2240,
-   "sha1": "16be96643e99dda9edf77ed7f7bb49463c295b87"
+   "size": 2205,
+   "sha1": "804a73dda902a4b2d3140d96d2716a406d874b6a"
   },
   {
    "path": "sections/team/directory.php",
-   "size": 2005,
-   "sha1": "612ea41c2a0abe2b75d21d11c968236a63c2adf7"
+   "size": 1684,
+   "sha1": "cc5ee5b285063726b233eece186e4641716fe40a"
   },
   {
    "path": "sections/team/hero.php",
-   "size": 1718,
-   "sha1": "6529e1c5b463158fca379131cc487415e71f2419"
+   "size": 1855,
+   "sha1": "6a12cbe5ff39fcf9fc51f49802e5f9126ea63a40"
   },
   {
    "path": "sections/team/remote.php",
-   "size": 2320,
-   "sha1": "cd0062b310a5f9be80489506bf16b58c1ffc32aa"
+   "size": 2276,
+   "sha1": "c7e52c9135ae8761af43696b2780c3606dc6b0ec"
   },
   {
    "path": "sections/terms/document.php",
-   "size": 3141,
-   "sha1": "52e66c004b75e10ccf21b06fb18b2190ca5d8168"
+   "size": 3130,
+   "sha1": "9e9bc03e1391a88dfaebf802d279edf0cc1e6bc0"
   },
   {
    "path": "sections/terms/hero.php",
-   "size": 2014,
-   "sha1": "6f8a749a1008fc57ef9777aef5e36f30db55116f"
+   "size": 2131,
+   "sha1": "b2ea164444d30357283a801b76ea512d7fed897b"
   },
   {
    "path": "sections/thank-you/hero.php",
-   "size": 3287,
-   "sha1": "3d0af6fd459166009df8714acbd77d675b73bb2d"
+   "size": 3275,
+   "sha1": "1cf793b93a50b111f1f6fb63d9e0ab4264d88d20"
   },
   {
    "path": "sections/web-custom-dev/cases.php",
-   "size": 2285,
-   "sha1": "584d76fa008135f6c843158eec00115939085684"
+   "size": 2253,
+   "sha1": "fb341cd077b6217e7d88704787af3a686163b7f0"
   },
   {
    "path": "sections/web-custom-dev/fit.php",
-   "size": 3188,
-   "sha1": "225dd32d5c4de2af12492856aef693d9a126d0cf"
+   "size": 3286,
+   "sha1": "4517193e5daa758900e81ae6fbe21eb6138d3637"
   },
   {
    "path": "sections/web-custom-dev/hero.php",
-   "size": 4861,
-   "sha1": "2b0567cde927ea27e185f3dadd10597b82ed0379"
+   "size": 5009,
+   "sha1": "1991f4a1fd61618df87c5d2b0c6f920b8a5042e5"
   },
   {
    "path": "sections/web-custom-dev/phases.php",
-   "size": 2565,
-   "sha1": "e8fe2183b8fd8fe9980d4b63d3f3f4c3af1f54e2"
+   "size": 2238,
+   "sha1": "cc2b3726c4aaf2cf7dfc3a0453b823875a2f489c"
   },
   {
    "path": "sections/web-design/deliverables.php",
-   "size": 13307,
-   "sha1": "9e64e1679f881d1b58603efec79e6891bfaba90f"
+   "size": 12797,
+   "sha1": "e13fc4979cab409907ab196566649543d756921e"
   },
   {
    "path": "sections/web-design/hero.php",
-   "size": 4374,
-   "sha1": "a69c737f25899392955b1082008778c1a8134daf"
+   "size": 4524,
+   "sha1": "14223808891287972d5264ec647fd59b837b549b"
   },
   {
    "path": "sections/web-design/phases.php",
-   "size": 2557,
-   "sha1": "30d6b5ddc4ef54aca6a15e2e8d8a6107d3d30373"
+   "size": 2230,
+   "sha1": "b2208679f9672225a181d159cb6f4afccc4fb5b7"
   },
   {
    "path": "sections/web-design/platforms.php",
-   "size": 5914,
-   "sha1": "a0c3fbc4c23c18e3b9fdd8b42d9faa3a5e7e28a8"
+   "size": 5871,
+   "sha1": "9e71480d2b1d3b975d6ca4aaa2821a166d0d2213"
   },
   {
    "path": "sections/web-react-next/deliver.php",
-   "size": 2128,
-   "sha1": "933412d0fb44377c3b2c013ae1f388bb36a1ef2b"
+   "size": 2108,
+   "sha1": "2a5e3d8c6c0a6aee61b8feafa6415f4cf9d49395"
   },
   {
    "path": "sections/web-react-next/hero.php",
-   "size": 5115,
-   "sha1": "3f283eff1c10ca177ff28d859bb64cf3989aa19f"
+   "size": 5119,
+   "sha1": "8c11f2ff7fb53817a14b61896732482faaaf129a"
   },
   {
    "path": "sections/web-react-next/render.php",
-   "size": 2450,
-   "sha1": "334960b64cb6b7873de14a22330e297e6e3ba63f"
+   "size": 2274,
+   "sha1": "162b9ac9ff4c1f00414bdf99b96629c231941216"
   },
   {
    "path": "sections/web-react-next/when.php",
-   "size": 1814,
-   "sha1": "384316d4442bc76aeb9b5a9346982d62ddef7fe4"
+   "size": 1795,
+   "sha1": "3665969acb5f2d3ee5d4e83530f6cfa6c05d9eb8"
   },
   {
    "path": "sections/web-webflow/build.php",
-   "size": 2028,
-   "sha1": "ef3f065c79b8491c0e942f00341baf16ebad1b7e"
+   "size": 2007,
+   "sha1": "5c20e596928d33dfb6c00a3d8cf6a6ea63ca0403"
   },
   {
    "path": "sections/web-webflow/care.php",
-   "size": 2119,
-   "sha1": "3ca1468d7e1c31ffa8c506feb9272a8a77f56d0a"
+   "size": 2099,
+   "sha1": "cd90fffed812f7b714be77f5373f96ec346790ab"
   },
   {
    "path": "sections/web-webflow/hero.php",
-   "size": 5798,
-   "sha1": "25b623abb19b2027ae605bc2b9c8283e49d7826c"
+   "size": 5626,
+   "sha1": "b32a53f01262118d395689bd032e27f98cf23913"
   },
   {
    "path": "sections/web-webflow/launch.php",
-   "size": 2554,
-   "sha1": "efbe29e5ffdb40b871f501b9bf79e248f9cdb32b"
+   "size": 2227,
+   "sha1": "f8eb456de376d6d88cbc05024884746b0f4bf3e8"
   },
   {
    "path": "sections/web-wordpress/fit.php",
-   "size": 3124,
-   "sha1": "f6ddb8c8ea7bb97701e19666f71cdc3ea2ec3316"
+   "size": 3072,
+   "sha1": "8cd4c2e4811d4103ffef972ccb7a62c102adb509"
   },
   {
    "path": "sections/web-wordpress/hero.php",
-   "size": 5524,
-   "sha1": "67db7d778d7b65f8d1ca3b3361d16001a79463d2"
+   "size": 5654,
+   "sha1": "ad0595de3b28ed22db0c9fae5840600eb3a51846"
   },
   {
    "path": "sections/web-wordpress/ops.php",
-   "size": 1679,
-   "sha1": "49027a573a643e381868f14c47068400483c8187"
+   "size": 1664,
+   "sha1": "07c07d7a98ed5fd857712194772b61255f626b83"
   },
   {
    "path": "sections/web-wordpress/system.php",
-   "size": 2033,
-   "sha1": "7a3b4d738c4598c79a93daf1e056319fa50b87ff"
+   "size": 2012,
+   "sha1": "4d7edde0534179765376adc471061296c7e4ee9c"
   }
  ]
 }

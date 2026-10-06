@@ -17,8 +17,8 @@ foreach ( $paths as $p ) {
 	}
 }
 $chip = 'buttons' === ( $args['style'] ?? 'chips' )
-	? 'min-height: 50px; display: inline-flex; align-items: center; padding: 0px 20px; border-radius: 14px; color: var(--sh-crumb-current); background: rgba(255, 255, 255, 0.05);'
-	: 'font-size: 14.5px; color: var(--sh-crumb-current); background: rgba(255, 255, 255, 0.05); border-radius: 999px; padding: 10px 16px;';
+	? 'min-height: 50px; display: inline-flex; align-items: center; padding: 0px 20px; border-radius: 14px; color: rgb(255, 255, 255); background: rgba(255, 255, 255, 0.05);' // on the blue hero (404)
+	: 'font-size: 14.5px; color: var(--sh-ink); background: var(--sh-surface); border: 1px solid var(--sh-line); border-radius: 999px; padding: 10px 16px;';
 foreach ( $links as $l ) {
 	printf( '<a href="%s" class="sh-hv-chip" style="%s">%s</a>', esc_url( $l[0] ), esc_attr( $chip ), esc_html( $l[1] ) );
 }

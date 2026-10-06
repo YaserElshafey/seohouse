@@ -18,3 +18,4 @@
 [data-bk-row] { grid-template-columns:1fr 1fr; }
 @media (max-width:899px) { [data-bk-grid] { grid-template-columns:1fr; } }
 @media (max-width:559px) { [data-bk-row] { grid-template-columns:1fr; } }
+[data-tm-img], [data-tm-hero-img] { filter:grayscale(1) contrast(1.02) !important; }

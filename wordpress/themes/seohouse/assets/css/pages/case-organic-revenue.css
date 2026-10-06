@@ -6,7 +6,7 @@
 [data-cs-top] { grid-template-columns:auto minmax(0,1fr); }
 [data-cs-meta] { grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); }
 @media (max-width:599px) { [data-cs-top] { grid-template-columns:1fr; } [data-cs-meta] { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-[data-cs-steps]::before { content:""; position:absolute; top:16px; bottom:36px; inset-inline-start:15.5px; width:1px; background:rgba(var(--sh-blue-rgb), .28); }
+[data-cs-steps]::before { content:""; position:absolute; top:16px; bottom:36px; inset-inline-start:15.5px; width:1px; background:rgba(40,84,232,.28); }
 [data-cs-metrics] { grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
 [data-cs-gallery] { grid-template-columns:1fr; }
 [data-cs-gallery]:not([data-count="1"]) { grid-template-columns:repeat(2,minmax(0,1fr)); }

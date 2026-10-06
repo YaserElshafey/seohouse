@@ -9,8 +9,8 @@
 [data-screen-label="Hero"] { position:relative; overflow:hidden; }
 [data-hero-grid] ~ *:not([aria-hidden="true"]) { position:relative; }
 [data-eg-journey] { grid-template-columns:repeat(3,minmax(0,1fr)); }
-[data-eg-jrail] { position:absolute; top:8px; inset-inline:10px; height:1px; background:linear-gradient(90deg, rgba(var(--sh-lime-rgb), .5), rgba(var(--sh-sky-rgb), .4), rgba(var(--sh-sky-rgb), .12)); }
-@media (max-width:899px) { [data-eg-journey] { grid-template-columns:1fr; gap:0 !important; } [data-eg-jrail] { top:14px; bottom:14px; height:auto; inset-inline:auto; inset-inline-start:8px; width:1px; background:linear-gradient(180deg, rgba(var(--sh-lime-rgb), .5), rgba(var(--sh-sky-rgb), .4), rgba(var(--sh-sky-rgb), .12)); } [data-eg-stage] { padding-inline-start:32px; padding-block:16px; } [data-eg-stage] [data-eg-jdot] { position:absolute; inset-inline-start:0; top:20px; margin-top:0 !important; } }
+[data-eg-jrail] { position:absolute; top:8px; inset-inline:10px; height:1px; background:linear-gradient(90deg, rgba(40,84,232,.5), rgba(40,84,232,.4), rgba(40,84,232,.12)); }
+@media (max-width:899px) { [data-eg-journey] { grid-template-columns:1fr; gap:0 !important; } [data-eg-jrail] { top:14px; bottom:14px; height:auto; inset-inline:auto; inset-inline-start:8px; width:1px; background:linear-gradient(180deg, rgba(40,84,232,.5), rgba(40,84,232,.4), rgba(40,84,232,.12)); } [data-eg-stage] { padding-inline-start:32px; padding-block:16px; } [data-eg-stage] [data-eg-jdot] { position:absolute; inset-inline-start:0; top:20px; margin-top:0 !important; } }
 [data-eg-why] { grid-template-columns:repeat(2,minmax(0,1fr)); }
 @media (max-width:719px) { [data-eg-why] { grid-template-columns:1fr; } }
 [data-eg-first] { grid-template-columns:repeat(5,minmax(0,1fr)); }
@@ -24,11 +24,11 @@
 @media (max-width:1023px) { [data-eg-case] { grid-template-columns:1fr; } }
 [data-eg-meta] { grid-template-columns:repeat(3,1fr); }
 [data-eg-meta-item] { position:relative; padding-inline-end:20px; }
-[data-eg-meta-item]:not(:last-child)::after { content:""; position:absolute; inset-inline-end:0; top:2px; bottom:2px; width:1px; background:rgba(var(--sh-ink-rgb), .1); }
+[data-eg-meta-item]:not(:last-child)::after { content:""; position:absolute; inset-inline-end:0; top:2px; bottom:2px; width:1px; background:var(--sh-line); }
 @media (max-width:1023px) { [data-eg-meta] { grid-template-columns:repeat(2,1fr); } [data-eg-meta-item]:not(:last-child)::after { display:none; } }
 [data-eg-phases] { grid-template-columns:repeat(4,minmax(0,1fr)); }
-[data-eg-rail] { position:absolute; top:9px; inset-inline:10px; height:1px; background:linear-gradient(90deg, rgba(var(--sh-lime-rgb), .55), rgba(var(--sh-sky-rgb), .4), rgba(var(--sh-sky-rgb), .1)); }
-@media (max-width:899px) { [data-eg-phases] { grid-template-columns:1fr; gap:0 !important; } [data-eg-rail] { top:14px; bottom:14px; height:auto; inset-inline:auto; inset-inline-start:9px; width:1px; background:linear-gradient(180deg, rgba(var(--sh-lime-rgb), .55), rgba(var(--sh-sky-rgb), .4), rgba(var(--sh-sky-rgb), .1)); } [data-eg-phase] { padding-inline-start:34px; padding-block:14px; } [data-eg-phase] [data-eg-dot] { position:absolute; inset-inline-start:0; top:18px; } }
+[data-eg-rail] { position:absolute; top:9px; inset-inline:10px; height:1px; background:linear-gradient(90deg, rgba(40,84,232,.55), rgba(40,84,232,.4), rgba(40,84,232,.1)); }
+@media (max-width:899px) { [data-eg-phases] { grid-template-columns:1fr; gap:0 !important; } [data-eg-rail] { top:14px; bottom:14px; height:auto; inset-inline:auto; inset-inline-start:9px; width:1px; background:linear-gradient(180deg, rgba(40,84,232,.55), rgba(40,84,232,.4), rgba(40,84,232,.1)); } [data-eg-phase] { padding-inline-start:34px; padding-block:14px; } [data-eg-phase] [data-eg-dot] { position:absolute; inset-inline-start:0; top:18px; } }
 [data-eg-split] { grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); }
 [data-eg-acc] { display:none; }
 @media (max-width:899px) { [data-eg-split] { display:none !important; } [data-eg-acc] { display:block; } }

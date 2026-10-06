@@ -9,11 +9,11 @@
 defined( 'ABSPATH' ) || exit;
 $f = $args['f'] ?? array();
 ?>
-<section data-screen-label="Platforms" style="position: relative; overflow: hidden; background: var(--sh-paper-2); color: var(--sh-ink);">
-    <div aria-hidden="true" style="position: absolute; inset: 0px; opacity: 0.5; background-image: radial-gradient(rgba(var(--sh-blue-rgb), 0.16) 1px, transparent 1px); background-size: 24px 24px; mask-image: radial-gradient(70% 80%, rgb(0, 0, 0), transparent 80%); pointer-events: none;"></div>
+<section data-screen-label="Platforms" style="position: relative; overflow: hidden; background: var(--sh-surface); color: var(--sh-ink);">
+    <div aria-hidden="true" style="position: absolute; inset: 0px; opacity: 0.5; background-image: radial-gradient(rgba(40, 84, 232, 0.05) 1px, transparent 1px); background-size: 24px 24px; mask-image: radial-gradient(70% 80%, rgb(0, 0, 0), transparent 80%); pointer-events: none;"></div>
     <div style="position: relative; max-width: 1200px; margin: 0px auto; padding: clamp(34px, 4vw, 56px) 20px;">
       <div style="text-align: center;">
-        <?php if (!empty($f['eyebrow'])) : ?><div style="font-size: 13px; font-weight: 600; color: var(--sh-blue);"><?= esc_html($f['eyebrow'] ?? '') ?></div><?php endif; ?>
+        <?php if (!empty($f['eyebrow'])) : ?><div style="font-size: 13px; font-weight: 600; color: var(--sh-link);"><?= esc_html($f['eyebrow'] ?? '') ?></div><?php endif; ?>
         <?php if (!empty($f['title'])) : ?><h2 data-h2 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); margin: 10px 0px 0px; line-height: 1.3;"><?= esc_html($f['title'] ?? '') ?></h2><?php endif; ?>
       </div>
       <div style="margin-top: 28px;">

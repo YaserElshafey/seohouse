@@ -9,9 +9,9 @@
 defined( 'ABSPATH' ) || exit;
 $f = $args['f'] ?? array();
 ?>
-<section data-screen-label="Client logos" style="border-top: 1px solid rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(255, 255, 255, 0.1); background: var(--sh-surface); padding: 24px 0px 28px;">
+<section data-screen-label="Client logos" style="border-top: 1px solid var(--sh-line); border-bottom: 1px solid var(--sh-line); background: var(--sh-bg); padding: 24px 0px 28px;">
     <div style="max-width: 1200px; margin: 0px auto; padding: 0px 20px 18px; display: flex; flex-direction: column; align-items: center; gap: 12px;">
-      <?php if (!empty($f['text'])) : ?><div style="font-weight: 600; font-size: 15.5px; color: var(--sh-muted);"><?= esc_html($f['text'] ?? '') ?></div><?php endif; ?>
+      <?php if (!empty($f['text'])) : ?><div style="font-weight: 600; font-size: 15.5px; color: var(--sh-ink);"><?= esc_html($f['text'] ?? '') ?></div><?php endif; ?>
       
     </div>
     <div style="overflow: hidden; mask-image: linear-gradient(90deg, transparent, rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, transparent);">

@@ -165,6 +165,8 @@ function sh_icon( $id ): string {
 function sh_icon_choices(): array {
 	$file  = SH_THEME_DIR . '/inc/generated/icons.php';
 	$icons = file_exists( $file ) ? include $file : array();
+	// aliases keep saved values of an older design working; they are not offered as new choices
+	$icons = array_filter( $icons, static fn( $icon ) => empty( $icon['alias_of'] ) );
 	return wp_list_pluck( $icons, 'label' );
 }
 
@@ -178,6 +180,18 @@ function sh_logo_url(): string {
 		}
 	}
 	return SH_THEME_URI . '/assets/img/logo-white.webp';
+}
+
+/** Logo for light backgrounds (header): options «الشعار على الخلفية الفاتحة» → theme default. */
+function sh_logo_light_url(): string {
+	$id = (int) sh_option( 'sh_logo_light', 0 );
+	if ( $id ) {
+		$src = wp_get_attachment_image_url( $id, 'full' );
+		if ( $src ) {
+			return $src;
+		}
+	}
+	return SH_THEME_URI . '/assets/img/logo-blue.webp';
 }
 
 function sh_site_name(): string {

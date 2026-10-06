@@ -10,4 +10,4 @@
 [data-screen-label="Hero"] { position:relative; overflow:hidden; }
 [data-hero-grid] ~ *:not([aria-hidden="true"]) { position:relative; }
 #booking input, #booking select, #booking textarea { transition:border-color .2s ease, box-shadow .2s ease, background .2s ease; }
-#booking input:focus, #booking select:focus, #booking textarea:focus { outline:none; border-color:var(--sh-blue) !important; background:#ffffff !important; box-shadow:0 0 0 4px rgba(var(--sh-blue-rgb), .14); }
+#booking input:focus, #booking select:focus, #booking textarea:focus { outline:none; border-color:var(--sh-blue) !important; background:#ffffff !important; box-shadow:0 0 0 4px rgba(40,84,232,.14); }
