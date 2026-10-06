@@ -776,6 +776,23 @@
           "required": 0
         },
         {
+          "key": "field_sh_home_reviews_all_link",
+          "label": "رابط جميع المراجعات على Google",
+          "name": "all_link",
+          "type": "url",
+          "instructions": "رابط صفحة مراجعات سيو هاوس على خرائط Google (من ملف النشاط التجاري ← «مشاركة» أو «اقرأ المراجعات»). يظهر الرابط أسفل القسم ويفتح في نافذة جديدة؛ عند الإفراغ لا يظهر.",
+          "required": 0
+        },
+        {
+          "key": "field_sh_home_reviews_all_label",
+          "label": "نص رابط جميع المراجعات",
+          "name": "all_label",
+          "type": "text",
+          "instructions": "",
+          "placeholder": "شاهد جميع المراجعات على Google",
+          "required": 0
+        },
+        {
           "key": "field_e3d8872c5bb83",
           "label": "العناصر: صورة اسم العميل تقييم Google ★★★★★ ن…",
           "name": "items",

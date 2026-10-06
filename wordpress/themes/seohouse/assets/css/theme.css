@@ -135,3 +135,36 @@ img { height: auto; }
 [data-hero-blue] [style*="color: rgb(255, 255, 255)"][style*="background: rgba(var(--sh-blue-rgb), 0.1)"] { color: var(--sh-link) !important; }
 /* dark section titles and labels on the blue fields */
 [data-blue-field] h2[data-sec-h] { color: #fff; }
+
+/* ---------------------------------------------------------------- 2.7.1 fixes */
+
+/* «منصات وأدوات نعمل عليها»: logos alone, one chip size, logo scaled to fit (never cropped) */
+[data-plat-chip][data-plat-logo-only] { gap: 0; justify-content: center; min-width: 96px; height: 64px; padding: 0 24px; text-decoration: none; transition: box-shadow .2s ease; }
+[data-plat-chip][data-plat-logo-only] img[data-plat-logo] { width: auto; height: 34px; max-width: 132px; object-fit: contain; display: block; }
+a[data-plat-chip][data-plat-logo-only]:hover { box-shadow: 0 10px 26px -18px rgba(37,43,51,.45), 0 0 0 1px var(--sh-blue); }
+a[data-plat-chip][data-plat-logo-only]:focus-visible { outline: 2px solid var(--sh-blue); outline-offset: 3px; }
+@media (max-width: 767px) { [data-plat-chip][data-plat-logo-only] { min-width: 80px; height: 56px; padding: 0 18px; } [data-plat-chip][data-plat-logo-only] img[data-plat-logo] { height: 28px; max-width: 108px; } }
+
+/* clickable cards never move on hover/focus (approved: colour only). Generated hover classes on some
+   cards (e.g. «قطاعات نعمل معها») lift the card 3px; at its edge the card then slides out from under
+   the pointer, loses :hover, drops back and re-enters it — the jitter. [class] raises specificity
+   above the generated .hv-*:hover rules. */
+[data-hcard][class]:hover, [data-hcard][class]:focus-visible, [data-hcard][class]:focus-within { transform: none !important; }
+
+/* Hero text block of the listing / legal / company pages: centred title, description and buttons; the
+   description uses the hero's width (short sentences stay on one line on desktop, long ones wrap
+   naturally; no balance-wrapping that splits short lines). Scope: the block that holds the H1 only —
+   breadcrumbs, article bodies and long content are not affected. */
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) {
+	text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+}
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) > :is(h1, p) {
+	max-width: min(100%, 62em) !important; margin-inline: auto !important; text-wrap: pretty !important;
+}
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) > :is(div, nav, form) {
+	justify-content: center; margin-inline: auto;
+}
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) > nav[aria-label="مسار التنقل"] {
+	align-self: flex-start; margin-inline: 0;
+}
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) [role="list"] { justify-content: center; }

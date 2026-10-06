@@ -172,6 +172,23 @@
 		});
 	});
 
+	/* ---------------------------------------------------------------- lead forms: fill time + one id per fill
+	   The fill time is measured here, not from the time printed in the (possibly cached) page;
+	   the id lets the server store a request once however many times it is sent. */
+	function leadData(form) {
+		var data = new FormData(form);
+		var shown = Number(form.getAttribute('data-shown') || 0);
+		data.set('elapsed', String(shown ? Date.now() - shown : 0));
+		if (!form.getAttribute('data-sid')) form.setAttribute('data-sid', (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Date.now()) + '-' + Math.random().toString(36).slice(2));
+		data.set('sid', form.getAttribute('data-sid'));
+		return data;
+	}
+	function leadBusy(form, on) {
+		if (on) form.setAttribute('aria-busy', 'true'); else form.removeAttribute('aria-busy');
+		$$('button[type="submit"]', form).forEach(function (b) { b.disabled = !!on; });
+	}
+	$$('[data-ct-form], [data-bk-form]').forEach(function (f) { f.setAttribute('data-shown', String(Date.now())); });
+
 	/* ---------------------------------------------------------------- contact page form (same endpoint as booking, source "contact") */
 	$$('[data-sh-contact]').forEach(function (box) {
 		var form = box.querySelector('[data-ct-form]'), sent = box.querySelector('[data-ct-sent]');
@@ -189,12 +206,13 @@
 			if (!val('phone')) return showErr('أدخل رقم الهاتف أو واتساب.');
 			if (!val('goal')) return showErr('اكتب الهدف أو التحدي الأساسي.');
 			if (form.getAttribute('aria-busy') === 'true') return;
-			form.setAttribute('aria-busy', 'true');
-			fetch((cfg.rest || '/wp-json/seohouse/v1/') + 'lead', { method: 'POST', body: new FormData(form), credentials: 'same-origin' })
-				.then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+			leadBusy(form, true);
+			fetch((cfg.rest || '/wp-json/seohouse/v1/') + 'lead', { method: 'POST', body: leadData(form), credentials: 'same-origin', cache: 'no-store' })
+				.then(function (r) { return r.json().catch(function () { return null; }).then(function (j) { return { ok: r.ok, j: j }; }); })
 				.then(function (res) {
-					form.removeAttribute('aria-busy');
+					leadBusy(form, false);
 					if (!res.ok || !res.j || !res.j.ok) return showErr((res.j && res.j.message) || (cfg.i18n && cfg.i18n.failed));
+					form.removeAttribute('data-sid');
 					var sum = box.querySelector('[data-ct-summary]');
 					if (sum) sum.textContent = 'السوق: ' + optText('market') + ' · الخدمة: ' + optText('service');
 					var bk = cfg.booking || {}, embed = box.querySelector('[data-bk-embed]'), receipt = box.querySelector('[data-ct-receipt]');
@@ -210,7 +228,7 @@
 					var t = sent.querySelector('[data-ct-sent-title]'); if (t) t.focus();
 					if (window.dataLayer) window.dataLayer.push({ event: 'sh_lead_submitted', sh_source: 'contact', sh_service: val('service') });
 				})
-				.catch(function () { form.removeAttribute('aria-busy'); showErr(cfg.i18n && cfg.i18n.failed); });
+				.catch(function () { leadBusy(form, false); showErr(cfg.i18n && cfg.i18n.failed); });
 		});
 		var reset = box.querySelector('[data-ct-reset]');
 		if (reset) reset.addEventListener('click', function () {
@@ -305,13 +323,13 @@
 			if (!name) return showErr('اكتب اسمك.');
 			if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact) && !/^\+?[0-9\s-]{8,}$/.test(contact)) return showErr('اكتب رقم جوال أو بريدًا إلكترونيًا صحيحًا.');
 			if (form.getAttribute('aria-busy') === 'true') return;
-			form.setAttribute('aria-busy', 'true');
-			var data = new FormData(form);
-			fetch((cfg.rest || '/wp-json/seohouse/v1/') + 'lead', { method: 'POST', body: data, credentials: 'same-origin' })
-				.then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+			leadBusy(form, true);
+			fetch((cfg.rest || '/wp-json/seohouse/v1/') + 'lead', { method: 'POST', body: leadData(form), credentials: 'same-origin', cache: 'no-store' })
+				.then(function (r) { return r.json().catch(function () { return null; }).then(function (j) { return { ok: r.ok, j: j }; }); })
 				.then(function (res) {
-					form.removeAttribute('aria-busy');
+					leadBusy(form, false);
 					if (!res.ok || !res.j || !res.j.ok) return showErr((res.j && res.j.message) || (cfg.i18n && cfg.i18n.failed));
+					form.removeAttribute('data-sid');
 					stage(2);
 					var bk = cfg.booking || {};
 					var embed = box.querySelector('[data-bk-embed]'), receipt = box.querySelector('[data-bk-receipt]');
@@ -326,7 +344,7 @@
 					}
 					if (window.dataLayer) window.dataLayer.push({ event: 'sh_lead_submitted', sh_source: 'booking', sh_service: svc.value });
 				})
-				.catch(function () { form.removeAttribute('aria-busy'); showErr(cfg.i18n && cfg.i18n.failed); });
+				.catch(function () { leadBusy(form, false); showErr(cfg.i18n && cfg.i18n.failed); });
 		});
 	});
 

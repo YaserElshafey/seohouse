@@ -1,0 +1,18 @@
+[
+ {
+  "scenario": "contact-double",
+  "requests": 1,
+  "responses": [
+   {
+    "status": 200,
+    "body": {
+     "ok": true,
+     "code": "stored",
+     "message": "وصلنا طلبك."
+    }
+   }
+  ],
+  "successShown": true,
+  "error": ""
+ }
+]

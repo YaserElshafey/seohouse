@@ -83,8 +83,8 @@ while ( have_posts() ) :
 			<?php if ( $articles ) : ?>
 			<div data-pf-mates style="margin-top: 18px;">
 				<?php foreach ( $articles as $p ) : ?>
-				<a href="<?php echo esc_url( get_permalink( $p ) ); ?>" data-hcard class="sh-hv-mate" style="display: flex; flex-direction: column; gap: 4px; border-radius: 14px; background: rgba(255, 255, 255, 0.035); padding: 14px 16px; color: var(--sh-ink);">
-					<span style="display: block; font-weight: 600; font-size: 15.5px; line-height: 1.6;"><?php echo esc_html( get_the_title( $p ) ); ?></span>
+				<a href="<?php echo esc_url( get_permalink( $p ) ); ?>" data-hcard data-pf-article style="display: flex; flex-direction: column; gap: 4px; min-width: 0; border-radius: 14px; background: rgb(255, 255, 255); box-shadow: 0 0 0 1px var(--sh-line); padding: 14px 16px; color: var(--sh-ink);">
+					<span style="display: block; font-weight: 600; font-size: 15.5px; line-height: 1.6; overflow-wrap: anywhere;"><?php echo esc_html( get_the_title( $p ) ); ?></span>
 					<span style="display: block; font-size: 13.5px; color: var(--sh-text);"><?php echo esc_html( sh_post_date( $p ) ); ?></span>
 				</a>
 				<?php endforeach; ?>
@@ -102,7 +102,7 @@ while ( have_posts() ) :
 			<h2 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); line-height: 1.35; margin: 0px;"><?php esc_html_e( 'زملاء في الفريق', 'seohouse' ); ?></h2>
 			<div data-pf-mates style="margin-top: 18px;">
 				<?php foreach ( $mates as $m ) : ?>
-				<a href="<?php echo esc_url( get_permalink( $m ) ); ?>" data-hcard class="sh-hv-mate" style="display: flex; align-items: center; gap: 12px; border-radius: 14px; background: rgba(255, 255, 255, 0.035); padding: 10px; color: var(--sh-ink);">
+				<a href="<?php echo esc_url( get_permalink( $m ) ); ?>" data-hcard style="display: flex; align-items: center; gap: 12px; border-radius: 14px; background: rgb(255, 255, 255); box-shadow: 0 0 0 1px var(--sh-line); padding: 10px; color: var(--sh-ink);">
 					<?php echo get_the_post_thumbnail( $m, 'thumbnail', array( 'alt' => '', 'loading' => 'lazy', 'data-tm-img' => '', 'style' => 'flex: 0 0 auto; width: 64px; height: 64px; border-radius: 10px; object-fit: cover; object-position: center top;' ) ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 					<span style="min-width: 0px;"><span style="display: block; font-weight: 600; font-size: 15.5px;"><?php echo esc_html( get_the_title( $m ) ); ?></span><span style="display: block; font-size: 13.5px; color: var(--sh-text); margin-top: 3px;"><?php echo esc_html( (string) sh_field( 'role', $m->ID, '' ) ); ?></span></span>
 				</a>

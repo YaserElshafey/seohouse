@@ -1,8 +1,10 @@
 <?php
 /**
  * Section "Reviews" — SEO House - Homepage.
- * Generated from the approved design by tools/design-import/convert.js.
- * To maintain this file by hand add the tag sh-manual (prefixed with @) as its own line here.
+ * Generated from the approved design by tools/design-import/convert.js; maintained by hand since 2.7.1:
+ * link to all Google reviews under the section (fields all_link / all_label of the section, else a Google
+ * Maps link saved in the social links; shown only when a link is saved — no link is guessed). The reviews widget (Trustindex shortcode) is unchanged.
+ * @sh-manual
  *
  * @var array $args { f: layout values }
  */
@@ -48,5 +50,10 @@ $f = $args['f'] ?? array();
           <button type="button" aria-label="التقييم 4" style="width: 28px; height: 5px; border-radius: 999px; border: 0px; cursor: pointer; background: rgba(6, 11, 31, 0.2);"></button>
         
       </div>
+      <?php $all_url = sh_google_reviews_url( $f ); if ( '' !== $all_url ) : ?>
+      <div style="margin-top: 22px; text-align: center;">
+        <a href="<?= esc_url( $all_url ) ?>" target="_blank" rel="noopener" data-reviews-all class="hv-54a5cb" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 15px; font-weight: 600; color: var(--sh-link); border-bottom: 1px solid rgba(40, 84, 232, 0.45);"><?= esc_html( '' !== trim( (string) ( $f['all_label'] ?? '' ) ) ? $f['all_label'] : __( 'شاهد جميع المراجعات على Google', 'seohouse' ) ) ?> <span aria-hidden="true">↗</span><span class="screen-reader-text"><?php esc_html_e( '(يفتح في نافذة جديدة)', 'seohouse' ); ?></span></a>
+      </div>
+      <?php endif; ?>
     </div>
   </section>

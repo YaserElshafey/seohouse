@@ -222,3 +222,69 @@ function sh_attrs( array $attrs ): string {
 function sh_tab_style( bool $on, string $style_on, string $style_off ): string {
 	return sprintf( ' style="%s" data-style-on="%s" data-style-off="%s"', esc_attr( $on ? $style_on : $style_off ), esc_attr( $style_on ), esc_attr( $style_off ) );
 }
+
+/** Official sites of the platforms and tools shipped with the design (fallback when the library has no link). */
+const SH_PLATFORM_SITES = array(
+	'wordpress.svg'     => 'https://wordpress.org/',
+	'woocommerce.svg'   => 'https://woocommerce.com/',
+	'shopify.svg'       => 'https://www.shopify.com/',
+	'salla.svg'         => 'https://salla.sa/',
+	'webflow.svg'       => 'https://webflow.com/',
+	'react.svg'         => 'https://react.dev/',
+	'nextjs.svg'        => 'https://nextjs.org/',
+	'gsc.svg'           => 'https://search.google.com/search-console/about',
+	'ga4.svg'           => 'https://marketingplatform.google.com/about/analytics/',
+	'looker.svg'        => 'https://lookerstudio.google.com/',
+	'screamingfrog.svg' => 'https://www.screamingfrog.co.uk/seo-spider/',
+);
+
+/**
+ * One logo of the «منصات وأدوات نعمل عليها» track: the logo alone, linked to the platform.
+ * Link: the platform's link in the library («إعدادات سيو هاوس ← المنصات والأدوات»), else its official site.
+ * The name (section label, else library name) is the link's accessible name; an item without a logo
+ * keeps its name visible. Copies in the duplicate half of the track are hidden from assistive tech.
+ */
+function sh_platform_logo_link( string $logo, int $image, string $label, bool $dup = false ): string {
+	$p    = ( '' !== $logo && function_exists( 'sh_core_platform' ) ) ? sh_core_platform( ltrim( $logo, '/' ) ) : null;
+	$name = '' !== trim( $label ) ? trim( $label ) : (string) ( $p['name'] ?? '' );
+	$url  = $p ? (string) $p['url'] : '';
+	if ( '' === $url ) {
+		$url = SH_PLATFORM_SITES[ basename( '' !== $logo ? $logo : (string) ( $p['value'] ?? '' ) ) ] ?? '';
+	}
+	$src = '';
+	if ( $image ) {
+		$src = (string) wp_get_attachment_url( $image );
+	}
+	if ( '' === $src && $p ) {
+		$src = sh_core_platform_logo_url( $p );
+	}
+	if ( '' === $src && preg_match( '#^assets/platforms/[a-z0-9/_-]+\.svg$#i', ltrim( $logo, '/' ) ) && file_exists( SH_THEME_DIR . '/' . ltrim( $logo, '/' ) ) ) {
+		$src = SH_THEME_URI . '/' . ltrim( $logo, '/' );
+	}
+	$inner = '' !== $src
+		? '<img src="' . esc_url( $src ) . '" alt="" loading="lazy" decoding="async" data-plat-logo>'
+		: '<span>' . esc_html( $name ) . '</span>';
+	$tag   = '' !== $url ? 'a' : 'span';
+	$attrs = '' !== $url ? ' href="' . esc_url( $url ) . '" target="_blank" rel="noopener"' . ( $dup ? ' tabindex="-1"' : '' ) : '';
+	$a11y  = '' !== $src ? ( '' !== $url ? ' aria-label="' . esc_attr( $name ) . '"' : ' role="img" aria-label="' . esc_attr( $name ) . '"' ) : '';
+	return '<' . $tag . ' data-plat-chip data-plat-logo-only' . $attrs . $a11y . ( '' !== $name ? ' title="' . esc_attr( $name ) . '"' : '' ) . '>' . $inner . '</' . $tag . '>';
+}
+
+/**
+ * Link of the «شاهد جميع المراجعات على Google» button: the section's own field, else a Google Maps /
+ * Business Profile link already saved in «إعدادات سيو هاوس ← الروابط الاجتماعية». Never guessed: empty
+ * when neither holds one (the button is then not shown).
+ */
+function sh_google_reviews_url( array $f ): string {
+	$own = trim( (string) ( $f['all_link'] ?? '' ) );
+	if ( '' !== $own ) {
+		return $own;
+	}
+	foreach ( (array) sh_option( 'sh_socials', array() ) as $row ) {
+		$url = trim( (string) ( is_array( $row ) ? ( $row['url'] ?? '' ) : '' ) );
+		if ( preg_match( '#^https?://(?:maps\.app\.goo\.gl|goo\.gl/maps|g\.page|share\.google|(?:www\.|maps\.)?google\.[a-z.]+/maps|search\.google\.com/local|g\.co/kgs)/#i', $url ) ) {
+			return $url;
+		}
+	}
+	return '';
+}

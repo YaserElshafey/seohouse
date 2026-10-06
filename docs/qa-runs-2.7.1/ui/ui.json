@@ -1,0 +1,1368 @@
+{
+ "hero": {
+  "1440/privacy-policy/": {
+   "hero": true,
+   "vw": 1440,
+   "scrollX": false,
+   "h1": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "38px"
+   },
+   "p": null,
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "1440/terms/": {
+   "hero": true,
+   "vw": 1440,
+   "scrollX": false,
+   "h1": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "38px"
+   },
+   "p": {
+    "center": 720,
+    "align": "center",
+    "lines": 2,
+    "width": 992,
+    "ws": "normal",
+    "fs": "16px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": "start",
+   "status": 200
+  },
+  "1440/about/": {
+   "hero": true,
+   "vw": 1440,
+   "scrollX": false,
+   "h1": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "44px"
+   },
+   "p": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "width": 612,
+    "ws": "normal",
+    "fs": "18px",
+    "br": 0
+   },
+   "btnCenter": 720,
+   "articleP": null,
+   "status": 200
+  },
+  "1440/team/": {
+   "hero": true,
+   "vw": 1440,
+   "scrollX": false,
+   "h1": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "40px"
+   },
+   "p": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "width": 298,
+    "ws": "normal",
+    "fs": "16.5px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "1440/sectors/": {
+   "hero": true,
+   "vw": 1440,
+   "scrollX": false,
+   "h1": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "44px"
+   },
+   "p": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "width": 989,
+    "ws": "normal",
+    "fs": "17px",
+    "br": 0
+   },
+   "btnCenter": 720,
+   "articleP": null,
+   "status": 200
+  },
+  "1440/contact/": {
+   "hero": true,
+   "vw": 1440,
+   "scrollX": false,
+   "h1": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "44px"
+   },
+   "p": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "width": 674,
+    "ws": "normal",
+    "fs": "17px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "1440/blog/": {
+   "hero": true,
+   "vw": 1440,
+   "scrollX": false,
+   "h1": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "40px"
+   },
+   "p": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "width": 363,
+    "ws": "normal",
+    "fs": "17px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "1440/results/": {
+   "hero": true,
+   "vw": 1440,
+   "scrollX": false,
+   "h1": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "44px"
+   },
+   "p": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "width": 297,
+    "ws": "normal",
+    "fs": "17.5px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "1440/category/seo/": {
+   "hero": true,
+   "vw": 1440,
+   "scrollX": false,
+   "h1": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "40px"
+   },
+   "p": null,
+   "btnCenter": 720,
+   "articleP": null,
+   "status": 404
+  },
+  "1440/?s=seo": {
+   "hero": true,
+   "vw": 1440,
+   "scrollX": false,
+   "h1": {
+    "center": 720,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "34px"
+   },
+   "p": null,
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "768/privacy-policy/": {
+   "hero": true,
+   "vw": 768,
+   "scrollX": false,
+   "h1": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "26px"
+   },
+   "p": null,
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "768/terms/": {
+   "hero": true,
+   "vw": 768,
+   "scrollX": false,
+   "h1": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "26px"
+   },
+   "p": {
+    "center": 384,
+    "align": "center",
+    "lines": 2,
+    "width": 728,
+    "ws": "normal",
+    "fs": "16px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": "start",
+   "status": 200
+  },
+  "768/about/": {
+   "hero": true,
+   "vw": 768,
+   "scrollX": false,
+   "h1": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28px"
+   },
+   "p": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "width": 612,
+    "ws": "normal",
+    "fs": "18px",
+    "br": 0
+   },
+   "btnCenter": 384,
+   "articleP": null,
+   "status": 200
+  },
+  "768/team/": {
+   "hero": true,
+   "vw": 768,
+   "scrollX": false,
+   "h1": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28px"
+   },
+   "p": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "width": 298,
+    "ws": "normal",
+    "fs": "16.5px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "768/sectors/": {
+   "hero": true,
+   "vw": 768,
+   "scrollX": false,
+   "h1": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28px"
+   },
+   "p": {
+    "center": 384,
+    "align": "center",
+    "lines": 2,
+    "width": 728,
+    "ws": "normal",
+    "fs": "17px",
+    "br": 0
+   },
+   "btnCenter": 384,
+   "articleP": null,
+   "status": 200
+  },
+  "768/contact/": {
+   "hero": true,
+   "vw": 768,
+   "scrollX": false,
+   "h1": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28px"
+   },
+   "p": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "width": 674,
+    "ws": "normal",
+    "fs": "17px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "768/blog/": {
+   "hero": true,
+   "vw": 768,
+   "scrollX": false,
+   "h1": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28px"
+   },
+   "p": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "width": 363,
+    "ws": "normal",
+    "fs": "17px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "768/results/": {
+   "hero": true,
+   "vw": 768,
+   "scrollX": false,
+   "h1": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28px"
+   },
+   "p": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "width": 297,
+    "ws": "normal",
+    "fs": "17.5px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "768/category/seo/": {
+   "hero": true,
+   "vw": 768,
+   "scrollX": false,
+   "h1": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "26px"
+   },
+   "p": null,
+   "btnCenter": 384,
+   "articleP": null,
+   "status": 404
+  },
+  "768/?s=seo": {
+   "hero": true,
+   "vw": 768,
+   "scrollX": false,
+   "h1": {
+    "center": 384,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "24px"
+   },
+   "p": null,
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "390/privacy-policy/": {
+   "hero": true,
+   "vw": 390,
+   "scrollX": false,
+   "h1": {
+    "center": 195,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28.08px"
+   },
+   "p": null,
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "390/terms/": {
+   "hero": true,
+   "vw": 390,
+   "scrollX": false,
+   "h1": {
+    "center": 195,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28.08px"
+   },
+   "p": {
+    "center": 195,
+    "align": "center",
+    "lines": 5,
+    "width": 350,
+    "ws": "normal",
+    "fs": "16px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": "start",
+   "status": 200
+  },
+  "390/about/": {
+   "hero": true,
+   "vw": 390,
+   "scrollX": false,
+   "h1": {
+    "center": 195,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28.08px"
+   },
+   "p": {
+    "center": 195,
+    "align": "center",
+    "lines": 2,
+    "width": 350,
+    "ws": "normal",
+    "fs": "16px",
+    "br": 0
+   },
+   "btnCenter": 195,
+   "articleP": null,
+   "status": 200
+  },
+  "390/team/": {
+   "hero": true,
+   "vw": 390,
+   "scrollX": false,
+   "h1": {
+    "center": 195,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28.08px"
+   },
+   "p": {
+    "center": 195,
+    "align": "center",
+    "lines": 1,
+    "width": 289,
+    "ws": "normal",
+    "fs": "16px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "390/sectors/": {
+   "hero": true,
+   "vw": 390,
+   "scrollX": false,
+   "h1": {
+    "center": 195,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28.08px"
+   },
+   "p": {
+    "center": 195,
+    "align": "center",
+    "lines": 3,
+    "width": 350,
+    "ws": "normal",
+    "fs": "16px",
+    "br": 0
+   },
+   "btnCenter": 195,
+   "articleP": null,
+   "status": 200
+  },
+  "390/contact/": {
+   "hero": true,
+   "vw": 390,
+   "scrollX": false,
+   "h1": {
+    "center": 195,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28.08px"
+   },
+   "p": {
+    "center": 195,
+    "align": "center",
+    "lines": 2,
+    "width": 350,
+    "ws": "normal",
+    "fs": "16px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "390/blog/": {
+   "hero": true,
+   "vw": 390,
+   "scrollX": false,
+   "h1": {
+    "center": 195,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28.08px"
+   },
+   "p": {
+    "center": 195,
+    "align": "center",
+    "lines": 1,
+    "width": 342,
+    "ws": "normal",
+    "fs": "16px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "390/results/": {
+   "hero": true,
+   "vw": 390,
+   "scrollX": false,
+   "h1": {
+    "center": 195,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28.08px"
+   },
+   "p": {
+    "center": 195,
+    "align": "center",
+    "lines": 1,
+    "width": 272,
+    "ws": "normal",
+    "fs": "16px",
+    "br": 0
+   },
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  },
+  "390/category/seo/": {
+   "hero": true,
+   "vw": 390,
+   "scrollX": false,
+   "h1": {
+    "center": 195,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28.08px"
+   },
+   "p": null,
+   "btnCenter": 195,
+   "articleP": null,
+   "status": 404
+  },
+  "390/?s=seo": {
+   "hero": true,
+   "vw": 390,
+   "scrollX": false,
+   "h1": {
+    "center": 195,
+    "align": "center",
+    "lines": 1,
+    "ws": "normal",
+    "fs": "28.08px"
+   },
+   "p": null,
+   "btnCenter": null,
+   "articleP": null,
+   "status": 200
+  }
+ },
+ "home-1440": {
+  "chips": 28,
+  "visibleText": 0,
+  "noName": 0,
+  "links": 28,
+  "blank": 28,
+  "distorted": 0,
+  "clipped": 0,
+  "sizes": [
+   "ووردبريس:34x34",
+   "شوبيفاي:34x34",
+   "سلة:34x34",
+   "سيرش كونسول:34x34",
+   "ويب فلو:34x34",
+   "ووكومرس:132x34",
+   "جوجل أناليتكس:34x34",
+   "ووردبريس:34x34",
+   "شوبيفاي:34x34",
+   "سلة:34x34",
+   "سيرش كونسول:34x34"
+  ],
+  "animation": "dr1 running",
+  "reviewsLink": {
+   "href": "https://maps.example.test/place-reviews",
+   "target": "_blank",
+   "text": "شاهد جميع المراجعات على Google\n↗\n(يفتح في نافذة جديدة)",
+   "afterWidget": true
+  }
+ },
+ "sectors-1440": [
+  {
+   "card": 0,
+   "samples": 100,
+   "distinctTops": [
+    325.4
+   ],
+   "transforms": [
+    "none"
+   ],
+   "hoverBgs": [
+    "rgb(131, 157, 242)",
+    "rgb(113, 142, 240)",
+    "rgb(105, 135, 239)",
+    "rgb(101, 132, 238)",
+    "rgb(99, 131, 238)",
+    "rgb(98, 130, 238)",
+    "rgb(88, 122, 237)",
+    "rgb(93, 126, 238)",
+    "rgb(40, 84, 232)",
+    "rgb(74, 111, 236)",
+    "rgb(86, 121, 237)",
+    "rgb(92, 125, 238)",
+    "rgb(95, 127, 238)",
+    "rgb(96, 129, 238)",
+    "rgb(97, 129, 238)",
+    "rgb(123, 150, 241)",
+    "rgb(109, 139, 239)",
+    "rgb(103, 134, 239)",
+    "rgb(42, 85, 232)",
+    "rgb(94, 127, 238)",
+    "rgb(131, 156, 242)",
+    "rgb(48, 91, 233)"
+   ],
+   "restBgs": [
+    "rgb(255, 255, 255)",
+    "rgb(221, 228, 251)",
+    "rgb(209, 218, 250)",
+    "rgb(203, 214, 249)",
+    "rgb(200, 211, 249)",
+    "rgb(199, 211, 249)",
+    "rgb(185, 199, 247)",
+    "rgb(191, 204, 248)",
+    "rgb(164, 182, 245)",
+    "rgb(182, 197, 247)",
+    "rgb(190, 204, 248)",
+    "rgb(194, 207, 249)",
+    "rgb(196, 208, 249)",
+    "rgb(197, 209, 249)",
+    "rgb(198, 209, 249)",
+    "rgb(198, 210, 249)",
+    "rgb(254, 254, 255)",
+    "rgb(237, 240, 253)",
+    "rgb(215, 223, 251)",
+    "rgb(206, 216, 250)",
+    "rgb(164, 183, 245)",
+    "rgb(190, 203, 248)",
+    "rgb(194, 207, 248)"
+   ],
+   "flipsWhileStill": 0
+  },
+  {
+   "card": 1,
+   "samples": 100,
+   "distinctTops": [
+    325.4
+   ],
+   "transforms": [
+    "none"
+   ],
+   "hoverBgs": [
+    "rgb(131, 157, 242)",
+    "rgb(113, 142, 240)",
+    "rgb(105, 136, 239)",
+    "rgb(91, 124, 237)",
+    "rgb(94, 127, 238)",
+    "rgb(95, 128, 238)",
+    "rgb(96, 129, 238)",
+    "rgb(97, 129, 238)",
+    "rgb(41, 85, 232)",
+    "rgb(74, 111, 236)",
+    "rgb(86, 121, 237)",
+    "rgb(92, 125, 238)",
+    "rgb(95, 127, 238)",
+    "rgb(96, 128, 238)",
+    "rgb(76, 112, 236)",
+    "rgb(131, 156, 242)",
+    "rgb(105, 135, 239)",
+    "rgb(101, 132, 239)",
+    "rgb(42, 85, 232)",
+    "rgb(109, 139, 239)",
+    "rgb(49, 91, 233)",
+    "rgb(40, 84, 232)"
+   ],
+   "restBgs": [
+    "rgb(255, 255, 255)",
+    "rgb(221, 228, 251)",
+    "rgb(209, 218, 250)",
+    "rgb(188, 202, 248)",
+    "rgb(193, 206, 248)",
+    "rgb(196, 208, 249)",
+    "rgb(197, 209, 249)",
+    "rgb(164, 183, 245)",
+    "rgb(182, 197, 247)",
+    "rgb(190, 203, 248)",
+    "rgb(194, 207, 248)",
+    "rgb(198, 209, 249)",
+    "rgb(198, 210, 249)",
+    "rgb(184, 199, 247)",
+    "rgb(252, 252, 255)",
+    "rgb(220, 227, 251)",
+    "rgb(203, 214, 249)",
+    "rgb(164, 182, 245)",
+    "rgb(190, 204, 248)",
+    "rgb(226, 232, 252)"
+   ],
+   "flipsWhileStill": 0
+  },
+  {
+   "card": 2,
+   "samples": 100,
+   "distinctTops": [
+    325.4
+   ],
+   "transforms": [
+    "none"
+   ],
+   "hoverBgs": [
+    "rgb(131, 157, 242)",
+    "rgb(113, 142, 240)",
+    "rgb(91, 125, 237)",
+    "rgb(109, 139, 239)",
+    "rgb(103, 134, 239)",
+    "rgb(105, 136, 239)",
+    "rgb(114, 143, 240)",
+    "rgb(82, 117, 236)",
+    "rgb(40, 84, 232)",
+    "rgb(73, 110, 236)",
+    "rgb(87, 121, 237)",
+    "rgb(107, 137, 239)",
+    "rgb(63, 103, 235)",
+    "rgb(82, 118, 237)",
+    "rgb(64, 103, 235)",
+    "rgb(98, 130, 238)",
+    "rgb(111, 141, 240)",
+    "rgb(42, 86, 232)",
+    "rgb(123, 150, 241)",
+    "rgb(94, 127, 238)",
+    "rgb(74, 111, 236)",
+    "rgb(68, 106, 235)",
+    "rgb(131, 156, 242)",
+    "rgb(44, 87, 232)"
+   ],
+   "restBgs": [
+    "rgb(255, 255, 255)",
+    "rgb(221, 228, 251)",
+    "rgb(228, 233, 252)",
+    "rgb(217, 225, 251)",
+    "rgb(206, 216, 250)",
+    "rgb(211, 220, 250)",
+    "rgb(224, 230, 252)",
+    "rgb(209, 219, 250)",
+    "rgb(192, 205, 248)",
+    "rgb(193, 206, 248)",
+    "rgb(182, 197, 247)",
+    "rgb(214, 222, 251)",
+    "rgb(204, 215, 250)",
+    "rgb(176, 192, 247)",
+    "rgb(202, 213, 249)",
+    "rgb(220, 227, 251)",
+    "rgb(208, 217, 250)",
+    "rgb(209, 218, 250)",
+    "rgb(239, 242, 253)",
+    "rgb(194, 206, 248)",
+    "rgb(196, 208, 249)",
+    "rgb(183, 198, 247)",
+    "rgb(179, 194, 247)",
+    "rgb(250, 251, 255)",
+    "rgb(164, 182, 245)"
+   ],
+   "flipsWhileStill": 0
+  }
+ ],
+ "member-1440/team/maha-ali/": [
+  {
+   "normal": {
+    "bg": "rgb(255, 255, 255)",
+    "title": "rgb(37, 43, 51)",
+    "date": "rgb(76, 89, 107)",
+    "titleText": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزان",
+    "overflow": false
+   },
+   "hover": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزان",
+    "overflow": false
+   },
+   "focus": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزان",
+    "overflow": false
+   }
+  }
+ ],
+ "member-1440/team/mohamed-moawad/": [
+  {
+   "normal": {
+    "bg": "rgb(255, 255, 255)",
+    "title": "rgb(37, 43, 51)",
+    "date": "rgb(76, 89, 107)",
+    "titleText": "عنوان اختبار طويل جدًا لمقال يشرح بالتفصيل خطوات تحسين محركا",
+    "overflow": false
+   },
+   "hover": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "عنوان اختبار طويل جدًا لمقال يشرح بالتفصيل خطوات تحسين محركا",
+    "overflow": false
+   },
+   "focus": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "عنوان اختبار طويل جدًا لمقال يشرح بالتفصيل خطوات تحسين محركا",
+    "overflow": false
+   }
+  },
+  {
+   "normal": {
+    "bg": "rgb(255, 255, 255)",
+    "title": "rgb(37, 43, 51)",
+    "date": "rgb(76, 89, 107)",
+    "titleText": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول",
+    "overflow": false
+   },
+   "hover": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول",
+    "overflow": false
+   },
+   "focus": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول",
+    "overflow": false
+   }
+  },
+  {
+   "normal": {
+    "bg": "rgb(255, 255, 255)",
+    "title": "rgb(37, 43, 51)",
+    "date": "rgb(76, 89, 107)",
+    "titleText": "كيف تبني روابط خلفية لموقعك بطريقة صحيحة",
+    "overflow": false
+   },
+   "hover": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "كيف تبني روابط خلفية لموقعك بطريقة صحيحة",
+    "overflow": false
+   },
+   "focus": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "كيف تبني روابط خلفية لموقعك بطريقة صحيحة",
+    "overflow": false
+   }
+  }
+ ],
+ "home-768": {
+  "chips": 28,
+  "visibleText": 0,
+  "noName": 0,
+  "links": 28,
+  "blank": 28,
+  "distorted": 0,
+  "clipped": 0,
+  "sizes": [
+   "ووردبريس:34x34",
+   "شوبيفاي:34x34",
+   "سلة:34x34",
+   "سيرش كونسول:34x34",
+   "ويب فلو:34x34",
+   "ووكومرس:132x34",
+   "جوجل أناليتكس:34x34",
+   "ووردبريس:34x34",
+   "شوبيفاي:34x34",
+   "سلة:34x34",
+   "سيرش كونسول:34x34"
+  ],
+  "animation": "dr1 running",
+  "reviewsLink": {
+   "href": "https://maps.example.test/place-reviews",
+   "target": "_blank",
+   "text": "شاهد جميع المراجعات على Google\n↗\n(يفتح في نافذة جديدة)",
+   "afterWidget": true
+  }
+ },
+ "sectors-768": [
+  {
+   "card": 0,
+   "samples": 113,
+   "distinctTops": [
+    337.1
+   ],
+   "transforms": [
+    "none"
+   ],
+   "hoverBgs": [
+    "rgb(131, 157, 242)",
+    "rgb(113, 142, 240)",
+    "rgb(105, 136, 239)",
+    "rgb(101, 132, 239)",
+    "rgb(99, 131, 238)",
+    "rgb(98, 130, 238)",
+    "rgb(97, 130, 238)",
+    "rgb(41, 85, 232)",
+    "rgb(74, 111, 236)",
+    "rgb(86, 121, 237)",
+    "rgb(92, 125, 238)",
+    "rgb(94, 127, 238)",
+    "rgb(96, 128, 238)",
+    "rgb(97, 129, 238)",
+    "rgb(79, 115, 236)",
+    "rgb(40, 84, 232)",
+    "rgb(49, 91, 233)"
+   ],
+   "restBgs": [
+    "rgb(255, 255, 255)",
+    "rgb(221, 228, 251)",
+    "rgb(209, 218, 250)",
+    "rgb(203, 214, 249)",
+    "rgb(201, 212, 249)",
+    "rgb(199, 211, 249)",
+    "rgb(199, 210, 249)",
+    "rgb(198, 210, 249)",
+    "rgb(164, 183, 245)",
+    "rgb(182, 197, 247)",
+    "rgb(190, 203, 248)",
+    "rgb(194, 207, 248)",
+    "rgb(196, 208, 249)",
+    "rgb(197, 209, 249)",
+    "rgb(198, 209, 249)",
+    "rgb(219, 227, 251)",
+    "rgb(164, 182, 245)",
+    "rgb(254, 254, 255)"
+   ],
+   "flipsWhileStill": 0
+  },
+  {
+   "card": 1,
+   "samples": 113,
+   "distinctTops": [
+    337.1
+   ],
+   "transforms": [
+    "none"
+   ],
+   "hoverBgs": [
+    "rgb(131, 156, 242)",
+    "rgb(113, 142, 240)",
+    "rgb(105, 135, 239)",
+    "rgb(114, 143, 240)",
+    "rgb(105, 136, 239)",
+    "rgb(101, 132, 239)",
+    "rgb(77, 113, 236)",
+    "rgb(88, 122, 237)",
+    "rgb(40, 84, 232)",
+    "rgb(74, 111, 236)",
+    "rgb(86, 121, 237)",
+    "rgb(92, 125, 238)",
+    "rgb(86, 120, 237)",
+    "rgb(95, 127, 238)",
+    "rgb(131, 157, 242)",
+    "rgb(101, 132, 238)",
+    "rgb(42, 85, 232)",
+    "rgb(75, 112, 236)",
+    "rgb(87, 121, 237)",
+    "rgb(49, 91, 233)"
+   ],
+   "restBgs": [
+    "rgb(255, 255, 255)",
+    "rgb(221, 228, 251)",
+    "rgb(209, 218, 250)",
+    "rgb(223, 230, 252)",
+    "rgb(209, 219, 250)",
+    "rgb(203, 214, 249)",
+    "rgb(200, 212, 249)",
+    "rgb(185, 199, 248)",
+    "rgb(164, 182, 245)",
+    "rgb(182, 197, 247)",
+    "rgb(190, 204, 248)",
+    "rgb(194, 207, 249)",
+    "rgb(183, 197, 247)",
+    "rgb(181, 197, 247)",
+    "rgb(190, 203, 248)",
+    "rgb(194, 207, 248)",
+    "rgb(196, 208, 249)",
+    "rgb(254, 254, 255)",
+    "rgb(164, 183, 245)"
+   ],
+   "flipsWhileStill": 0
+  },
+  {
+   "card": 2,
+   "samples": 113,
+   "distinctTops": [
+    576.3
+   ],
+   "transforms": [
+    "none"
+   ],
+   "hoverBgs": [
+    "rgb(131, 157, 242)",
+    "rgb(113, 142, 240)",
+    "rgb(105, 135, 239)",
+    "rgb(101, 132, 239)",
+    "rgb(99, 131, 238)",
+    "rgb(41, 85, 232)",
+    "rgb(74, 111, 236)",
+    "rgb(86, 121, 237)",
+    "rgb(92, 125, 238)",
+    "rgb(95, 127, 238)",
+    "rgb(110, 139, 239)",
+    "rgb(116, 144, 240)",
+    "rgb(106, 136, 239)",
+    "rgb(101, 133, 239)",
+    "rgb(103, 134, 239)",
+    "rgb(98, 130, 238)",
+    "rgb(40, 84, 232)",
+    "rgb(94, 127, 238)",
+    "rgb(49, 91, 233)"
+   ],
+   "restBgs": [
+    "rgb(255, 255, 255)",
+    "rgb(221, 228, 251)",
+    "rgb(209, 218, 250)",
+    "rgb(220, 228, 251)",
+    "rgb(203, 214, 249)",
+    "rgb(200, 212, 249)",
+    "rgb(164, 182, 245)",
+    "rgb(182, 197, 247)",
+    "rgb(190, 203, 248)",
+    "rgb(194, 207, 248)",
+    "rgb(218, 226, 251)",
+    "rgb(226, 232, 252)",
+    "rgb(210, 220, 250)",
+    "rgb(204, 214, 250)",
+    "rgb(201, 212, 249)",
+    "rgb(199, 211, 249)",
+    "rgb(254, 254, 255)",
+    "rgb(196, 208, 249)"
+   ],
+   "flipsWhileStill": 0
+  }
+ ],
+ "member-768/team/maha-ali/": [
+  {
+   "normal": {
+    "bg": "rgb(255, 255, 255)",
+    "title": "rgb(37, 43, 51)",
+    "date": "rgb(76, 89, 107)",
+    "titleText": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزان",
+    "overflow": false
+   },
+   "hover": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزان",
+    "overflow": false
+   },
+   "focus": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزان",
+    "overflow": false
+   }
+  }
+ ],
+ "member-768/team/mohamed-moawad/": [
+  {
+   "normal": {
+    "bg": "rgb(255, 255, 255)",
+    "title": "rgb(37, 43, 51)",
+    "date": "rgb(76, 89, 107)",
+    "titleText": "عنوان اختبار طويل جدًا لمقال يشرح بالتفصيل خطوات تحسين محركا",
+    "overflow": false
+   },
+   "hover": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "عنوان اختبار طويل جدًا لمقال يشرح بالتفصيل خطوات تحسين محركا",
+    "overflow": false
+   },
+   "focus": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "عنوان اختبار طويل جدًا لمقال يشرح بالتفصيل خطوات تحسين محركا",
+    "overflow": false
+   }
+  },
+  {
+   "normal": {
+    "bg": "rgb(255, 255, 255)",
+    "title": "rgb(37, 43, 51)",
+    "date": "rgb(76, 89, 107)",
+    "titleText": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول",
+    "overflow": false
+   },
+   "hover": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول",
+    "overflow": false
+   },
+   "focus": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول",
+    "overflow": false
+   }
+  },
+  {
+   "normal": {
+    "bg": "rgb(255, 255, 255)",
+    "title": "rgb(37, 43, 51)",
+    "date": "rgb(76, 89, 107)",
+    "titleText": "كيف تبني روابط خلفية لموقعك بطريقة صحيحة",
+    "overflow": false
+   },
+   "hover": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "كيف تبني روابط خلفية لموقعك بطريقة صحيحة",
+    "overflow": false
+   },
+   "focus": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "كيف تبني روابط خلفية لموقعك بطريقة صحيحة",
+    "overflow": false
+   }
+  }
+ ],
+ "home-390": {
+  "chips": 28,
+  "visibleText": 0,
+  "noName": 0,
+  "links": 28,
+  "blank": 28,
+  "distorted": 0,
+  "clipped": 0,
+  "sizes": [
+   "ووردبريس:28x28",
+   "شوبيفاي:28x28",
+   "سلة:28x28",
+   "سيرش كونسول:28x28",
+   "ويب فلو:28x28",
+   "ووكومرس:108x28",
+   "جوجل أناليتكس:28x28",
+   "ووردبريس:28x28",
+   "شوبيفاي:28x28",
+   "سلة:28x28",
+   "سيرش كونسول:28x28"
+  ],
+  "animation": "dr1 running",
+  "reviewsLink": {
+   "href": "https://maps.example.test/place-reviews",
+   "target": "_blank",
+   "text": "شاهد جميع المراجعات على Google\n↗\n(يفتح في نافذة جديدة)",
+   "afterWidget": true
+  }
+ },
+ "member-390/team/maha-ali/": [
+  {
+   "normal": {
+    "bg": "rgb(255, 255, 255)",
+    "title": "rgb(37, 43, 51)",
+    "date": "rgb(76, 89, 107)",
+    "titleText": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزان",
+    "overflow": false
+   },
+   "hover": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزان",
+    "overflow": false
+   },
+   "focus": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزان",
+    "overflow": false
+   }
+  }
+ ],
+ "member-390/team/mohamed-moawad/": [
+  {
+   "normal": {
+    "bg": "rgb(255, 255, 255)",
+    "title": "rgb(37, 43, 51)",
+    "date": "rgb(76, 89, 107)",
+    "titleText": "عنوان اختبار طويل جدًا لمقال يشرح بالتفصيل خطوات تحسين محركا",
+    "overflow": false
+   },
+   "hover": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "عنوان اختبار طويل جدًا لمقال يشرح بالتفصيل خطوات تحسين محركا",
+    "overflow": false
+   },
+   "focus": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "عنوان اختبار طويل جدًا لمقال يشرح بالتفصيل خطوات تحسين محركا",
+    "overflow": false
+   }
+  },
+  {
+   "normal": {
+    "bg": "rgb(255, 255, 255)",
+    "title": "rgb(37, 43, 51)",
+    "date": "rgb(76, 89, 107)",
+    "titleText": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول",
+    "overflow": false
+   },
+   "hover": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول",
+    "overflow": false
+   },
+   "focus": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول",
+    "overflow": false
+   }
+  },
+  {
+   "normal": {
+    "bg": "rgb(255, 255, 255)",
+    "title": "rgb(37, 43, 51)",
+    "date": "rgb(76, 89, 107)",
+    "titleText": "كيف تبني روابط خلفية لموقعك بطريقة صحيحة",
+    "overflow": false
+   },
+   "hover": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "كيف تبني روابط خلفية لموقعك بطريقة صحيحة",
+    "overflow": false
+   },
+   "focus": {
+    "bg": "rgb(40, 84, 232)",
+    "title": "rgb(255, 255, 255)",
+    "date": "rgb(255, 255, 255)",
+    "titleText": "كيف تبني روابط خلفية لموقعك بطريقة صحيحة",
+    "overflow": false
+   }
+  }
+ ]
+}

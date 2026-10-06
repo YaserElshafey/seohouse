@@ -1,7 +1,7 @@
 {
  "theme": "seohouse",
- "version": "2.7.0",
- "count": 357,
+ "version": "2.7.1",
+ "count": 359,
  "files": [
   {
    "path": "404.php",
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 984,
-   "sha1": "45bb23872ce955559ce70598f4ae52ea1605d1b0"
+   "sha1": "cad2a7a9ea65e3d5a8c9c8abfc0c5883178e2372"
   },
   {
    "path": "header.php",
@@ -60,8 +60,8 @@
   },
   {
    "path": "single-team_member.php",
-   "size": 8534,
-   "sha1": "9d70ac73061ea4f4270a512a983b9cfbbf3be385"
+   "size": 8611,
+   "sha1": "dd86bd9119ec7f1235fdca99ea406a0d6985accb"
   },
   {
    "path": "single.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 545,
-   "sha1": "396edbd2b2140c2b9e1a359cf472ec1b3636979c"
+   "sha1": "b9005bc019582d83797fb56e9775059b403ace65"
   },
   {
    "path": "theme.json",
@@ -84,14 +84,19 @@
    "sha1": "d5d67471e3ba1b245bcd0e008e3d3e690b98d42e"
   },
   {
+   "path": "assets/css/editor.css",
+   "size": 1051,
+   "sha1": "f3b045c96f05bb45634c637584810b1f01dd3a53"
+  },
+  {
    "path": "assets/css/fonts.css",
    "size": 6218,
    "sha1": "9950344195b58b18ea391e4acbd73f77a8f29c47"
   },
   {
    "path": "assets/css/theme.css",
-   "size": 11513,
-   "sha1": "4e59939c30e4b0e542b032f3d303fa75197c24c3"
+   "size": 15228,
+   "sha1": "9655f8eb42c07628d6e263ddb61a9412189becbd"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -415,8 +420,8 @@
   },
   {
    "path": "assets/js/site.js",
-   "size": 19568,
-   "sha1": "cbe72a0c1aeaa5a0d5a47297a3f0134552c15e06"
+   "size": 20695,
+   "sha1": "a2454897a413c28096ebbd24a6d052c9e4d40c52"
   },
   {
    "path": "assets/platforms/ga4.svg",
@@ -540,8 +545,8 @@
   },
   {
    "path": "inc/helpers.php",
-   "size": 7653,
-   "sha1": "87f636d2dc2c81d8a6355d1d6df8b18e99500668"
+   "size": 11223,
+   "sha1": "0093dc6c2b76e8ea0ffc40298308b049055f5b53"
   },
   {
    "path": "inc/navigation.php",
@@ -769,6 +774,11 @@
    "sha1": "abeb46507e86d6ea62d749e55227c172ea652395"
   },
   {
+   "path": "parts/legal-document.php",
+   "size": 7889,
+   "sha1": "a6c295434cb665519d756a056c141c2fbe52a706"
+  },
+  {
    "path": "parts/quick-links.php",
    "size": 1215,
    "sha1": "24605b8fa0a707ce5a10a988c6b2f11e0bd31ed1"
@@ -885,8 +895,8 @@
   },
   {
    "path": "sections/home/platforms.php",
-   "size": 2261,
-   "sha1": "b2393206c43c722bb78cfa141f6b258f076b0d78"
+   "size": 2345,
+   "sha1": "9e1fc95e2f2e0af8cede7414b2068619d949b400"
   },
   {
    "path": "sections/home/results.php",
@@ -895,8 +905,8 @@
   },
   {
    "path": "sections/home/reviews.php",
-   "size": 4690,
-   "sha1": "148894e1f130795ff6f1899f004e2b7bf56b6c7c"
+   "size": 5687,
+   "sha1": "ed27f2ce023ab1db266cdcaab2b1bf70cd376c93"
   },
   {
    "path": "sections/home/sectors.php",
@@ -935,8 +945,8 @@
   },
   {
    "path": "sections/privacy-policy/document.php",
-   "size": 2947,
-   "sha1": "71922996f32c98b30db3e47137de420d79cb2fc4"
+   "size": 522,
+   "sha1": "f9f08cc85bd41812ed0521cd0fc167aa3f2ee5b6"
   },
   {
    "path": "sections/privacy-policy/hero.php",
@@ -1675,8 +1685,8 @@
   },
   {
    "path": "sections/terms/document.php",
-   "size": 3130,
-   "sha1": "9e9bc03e1391a88dfaebf802d279edf0cc1e6bc0"
+   "size": 512,
+   "sha1": "8438c203e8c15b4210515a9e7594271d3c72a839"
   },
   {
    "path": "sections/terms/hero.php",

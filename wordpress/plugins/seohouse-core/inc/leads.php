@@ -5,7 +5,19 @@
  * - No-JS fallback: POST admin-post.php?action=sh_lead, then redirect back with ?sh_lead=ok|error#booking.
  * Server-side validation, honeypot + time trap + per-IP rate limit, duplicate suppression.
  * A request is "received" only after it is stored as a private sh_lead post; the email
- * notification result is recorded on the request.
+ * notification result (and the mailer's error) is recorded on the request and can be retried
+ * from the requests list.
+ *
+ * 2.7.0
+ * - Time trap measured in the browser (`elapsed`, ms since the form was shown). The hidden `ts`
+ *   printed in the page is only used without JavaScript and has no upper limit: a page served
+ *   from a page cache for days must still accept requests (the home page failed this way).
+ * - Repeated clicks / retries of the same fill carry the same `sid` and are stored once.
+ *   The content duplicate check is per form source, so a contact-page request no longer hides a
+ *   home-page request with the same contact and service.
+ * - Source recorded and shown: «نموذج الاستشارة — <page>» or «نموذج اتصل بنا».
+ * - Notification recipient: «بريد استلام الطلبات», default info@seohouse.agency (not the site's
+ *   admin email).
  *
  * @package SEOHouseCore
  */
@@ -31,6 +43,66 @@ function sh_lead_services(): array {
 	return $out ? $out : SH_LEAD_SERVICES;
 }
 
+/** Default recipient when «بريد استلام الطلبات» is empty. */
+const SH_LEAD_DEFAULT_TO = 'info@seohouse.agency';
+
+/** Notification recipients: «بريد استلام الطلبات» (comma separated), else info@seohouse.agency. */
+function sh_lead_recipients(): array {
+	$to = array_values( array_filter( array_map( 'trim', explode( ',', (string) sh_core_option( 'sh_lead_to', '' ) ) ), 'is_email' ) );
+	return $to ? $to : array( SH_LEAD_DEFAULT_TO );
+}
+
+/** Human label of where a request came from. */
+function sh_lead_source_label( int $id ): string {
+	$page = (int) get_post_meta( $id, '_sh_page', true );
+	if ( 'contact' === get_post_meta( $id, '_sh_source', true ) ) {
+		return __( 'نموذج اتصل بنا', 'seohouse-core' );
+	}
+	$where = $page ? ( (int) get_option( 'page_on_front' ) === $page ? __( 'الرئيسية', 'seohouse-core' ) : get_the_title( $page ) ) : '';
+	return $where ? sprintf( /* translators: %s: page */ __( 'نموذج الاستشارة — %s', 'seohouse-core' ), $where ) : __( 'نموذج الاستشارة', 'seohouse-core' );
+}
+
+/**
+ * Sends (or re-sends) the notification of a stored request with the site's current mail settings.
+ * Records the result on the request: _sh_mail sent|failed, _sh_mail_error, _sh_mail_to, _sh_mail_time.
+ */
+function sh_lead_notify( int $id ): bool {
+	$m        = static fn( $k ) => (string) get_post_meta( $id, '_sh_' . $k, true );
+	$services = sh_lead_services();
+	$service  = $services[ $m( 'service' ) ] ?? $m( 'service' );
+	$source   = sh_lead_source_label( $id );
+	$page     = (int) $m( 'page' );
+	$contact  = $m( 'contact' );
+	$body     = "طلب استشارة جديد\n\n";
+	$body    .= "المصدر: {$source}\n";
+	$body    .= 'الاسم: ' . $m( 'name' ) . "\nالتواصل: {$contact}\nالخدمة: {$service}\n";
+	foreach ( array( 'company' => 'الشركة', 'phone' => 'الهاتف', 'market' => 'السوق', 'goal' => 'الهدف' ) as $k => $label ) {
+		if ( '' !== $m( $k ) ) {
+			$body .= "{$label}: " . $m( $k ) . "\n";
+		}
+	}
+	$body .= 'الموقع: ' . ( $m( 'site' ) ? $m( 'site' ) : '—' ) . "\n";
+	$body .= 'الصفحة: ' . ( $page ? get_permalink( $page ) : '—' ) . "\n";
+	$body .= 'التاريخ: ' . get_the_date( 'Y-m-d H:i', $id ) . "\n";
+	$body .= 'في لوحة التحكم: ' . admin_url( 'post.php?post=' . $id . '&action=edit' ) . "\n";
+	$headers = is_email( $contact ) ? array( 'Reply-To: ' . $contact ) : array();
+	$to      = sh_lead_recipients();
+
+	$error   = '';
+	$catch   = static function ( $e ) use ( &$error ) {
+		$error = is_wp_error( $e ) ? $e->get_error_message() : 'wp_mail';
+	};
+	add_action( 'wp_mail_failed', $catch );
+	$sent = (bool) wp_mail( $to, '[' . wp_specialchars_decode( get_bloginfo( 'name' ) ) . '] طلب استشارة (' . $source . '): ' . $service, $body, $headers );
+	remove_action( 'wp_mail_failed', $catch );
+
+	update_post_meta( $id, '_sh_mail', $sent ? 'sent' : 'failed' );
+	update_post_meta( $id, '_sh_mail_error', $sent ? '' : ( $error ? $error : __( 'لم يقبل خادم البريد الرسالة.', 'seohouse-core' ) ) );
+	update_post_meta( $id, '_sh_mail_to', implode( ', ', $to ) );
+	update_post_meta( $id, '_sh_mail_time', current_time( 'mysql' ) );
+	return $sent;
+}
+
 /**
  * Validate and store a request.
  *
@@ -44,9 +116,17 @@ function sh_lead_handle( array $in ): array {
 	if ( ! empty( $in['company_website'] ) ) {
 		return $fail( 'spam', __( 'تعذر إرسال الطلب.', 'seohouse-core' ) );
 	}
-	$ts = (int) ( $in['ts'] ?? 0 );
-	if ( $ts && ( time() - $ts < 3 || time() - $ts > DAY_IN_SECONDS ) ) {
-		return $fail( 'timing', __( 'انتهت صلاحية النموذج، حدّث الصفحة وحاول مرة أخرى.', 'seohouse-core' ) );
+	if ( isset( $in['elapsed'] ) && '' !== (string) $in['elapsed'] ) {
+		// measured in the browser: time from showing the form to sending it
+		if ( (int) $in['elapsed'] < 2500 ) {
+			return $fail( 'timing', __( 'تعذر إرسال الطلب. انتظر لحظة ثم حاول مرة أخرى.', 'seohouse-core' ) );
+		}
+	} else {
+		// without JavaScript: the time printed in the page; no upper limit (cached pages)
+		$ts = (int) ( $in['ts'] ?? 0 );
+		if ( $ts && time() - $ts < 3 ) {
+			return $fail( 'timing', __( 'تعذر إرسال الطلب. انتظر لحظة ثم حاول مرة أخرى.', 'seohouse-core' ) );
+		}
 	}
 
 	$services = sh_lead_services();
@@ -56,6 +136,8 @@ function sh_lead_handle( array $in ): array {
 	$site     = esc_url_raw( trim( (string) ( $in['site'] ?? '' ) ) );
 	$page_id  = absint( $in['page_id'] ?? 0 );
 	$source   = sanitize_key( (string) ( $in['source'] ?? 'booking' ) );
+	$source   = in_array( $source, array( 'booking', 'contact' ), true ) ? $source : 'booking';
+	$sid      = preg_replace( '/[^a-zA-Z0-9-]/', '', substr( (string) ( $in['sid'] ?? '' ), 0, 64 ) );
 
 	// contact page form: name, company, email, phone, site, market, service, goal
 	$extra = array();
@@ -97,16 +179,14 @@ function sh_lead_handle( array $in ): array {
 		return $fail( 'site', __( 'رابط الموقع غير صحيح.', 'seohouse-core' ) );
 	}
 
-	// rate limit: 5 requests / 10 minutes per IP (hashed, not stored in clear)
-	$ip   = (string) ( $_SERVER['REMOTE_ADDR'] ?? '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
-	$bkey = 'sh_lead_rl_' . substr( hash_hmac( 'sha256', $ip, wp_salt( 'nonce' ) ), 0, 20 );
-	$hits = (int) get_transient( $bkey );
-	if ( $hits >= 5 ) {
-		return $fail( 'rate', __( 'استلمنا عدة طلبات من هذا الجهاز. حاول بعد قليل.', 'seohouse-core' ) );
+	// the same fill sent again (double click, retry after a network error): already stored
+	if ( '' !== $sid ) {
+		$same = get_posts( array( 'post_type' => 'sh_lead', 'post_status' => 'private', 'posts_per_page' => 1, 'fields' => 'ids', 'meta_key' => '_sh_sid', 'meta_value' => $sid ) ); // phpcs:ignore WordPress.DB.SlowDBQuery
+		if ( $same ) {
+			return array( 'ok' => true, 'code' => 'duplicate', 'message' => __( 'طلبك مسجل لدينا بالفعل.', 'seohouse-core' ), 'id' => (int) $same[0] );
+		}
 	}
-	set_transient( $bkey, $hits + 1, 10 * MINUTE_IN_SECONDS );
-
-	// duplicate within 10 minutes → same request, no second notification
+	// the same request from the same form within 10 minutes (e.g. sent again after a reload)
 	$dup = get_posts(
 		array(
 			'post_type'      => 'sh_lead',
@@ -117,11 +197,21 @@ function sh_lead_handle( array $in ): array {
 			'meta_query'     => array(
 				array( 'key' => '_sh_contact', 'value' => $contact ),
 				array( 'key' => '_sh_service', 'value' => $service ),
+				array( 'key' => '_sh_source', 'value' => $source ),
+				array( 'key' => '_sh_page', 'value' => (string) $page_id ),
 			),
 		)
 	);
 	if ( $dup ) {
 		return array( 'ok' => true, 'code' => 'duplicate', 'message' => __( 'طلبك مسجل لدينا بالفعل.', 'seohouse-core' ), 'id' => (int) $dup[0] );
+	}
+
+	// rate limit: 5 new requests / 10 minutes per IP (hashed, not stored in clear)
+	$ip   = (string) ( $_SERVER['REMOTE_ADDR'] ?? '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+	$bkey = 'sh_lead_rl_' . substr( hash_hmac( 'sha256', $ip, wp_salt( 'nonce' ) ), 0, 20 );
+	$hits = (int) get_transient( $bkey );
+	if ( $hits >= 5 ) {
+		return $fail( 'rate', __( 'استلمنا عدة طلبات من هذا الجهاز. حاول بعد قليل.', 'seohouse-core' ) );
 	}
 
 	$id = wp_insert_post(
@@ -136,6 +226,7 @@ function sh_lead_handle( array $in ): array {
 				'_sh_service' => $service,
 				'_sh_page'    => $page_id,
 				'_sh_source'  => $source,
+				'_sh_sid'     => $sid,
 				'_sh_status'  => 'new',
 			) + ( $extra ? array(
 				'_sh_company' => $extra['company'],
@@ -150,21 +241,8 @@ function sh_lead_handle( array $in ): array {
 		return $fail( 'store', __( 'تعذر حفظ الطلب الآن. حاول مرة أخرى أو تواصل معنا عبر صفحة التواصل.', 'seohouse-core' ) );
 	}
 
-	$to = array_filter( array_map( 'trim', explode( ',', (string) sh_core_option( 'sh_lead_to', '' ) ) ), 'is_email' );
-	if ( ! $to ) {
-		$to = array( get_option( 'admin_email' ) );
-	}
-	$body  = "طلب استشارة جديد\n\n";
-	$body .= "الاسم: {$name}\nالتواصل: {$contact}\nالخدمة: {$services[ $service ]}\n";
-	if ( $extra ) {
-		$body .= "الشركة: {$extra['company']}\nالهاتف: {$extra['phone']}\nالسوق: {$extra['market']}\nالهدف: {$extra['goal']}\n";
-	}
-	$body .= 'الموقع: ' . ( $site ? $site : '—' ) . "\n";
-	$body .= 'الصفحة: ' . ( $page_id ? get_permalink( $page_id ) : '—' ) . "\n";
-	$body .= 'في لوحة التحكم: ' . admin_url( 'post.php?post=' . $id . '&action=edit' ) . "\n";
-	$headers = $is_email ? array( 'Reply-To: ' . $contact ) : array();
-	$sent    = wp_mail( $to, '[' . wp_specialchars_decode( get_bloginfo( 'name' ) ) . '] طلب استشارة: ' . $services[ $service ], $body, $headers );
-	update_post_meta( $id, '_sh_mail', $sent ? 'sent' : 'failed' );
+	set_transient( $bkey, $hits + 1, 10 * MINUTE_IN_SECONDS );
+	sh_lead_notify( (int) $id );
 
 	do_action( 'sh_lead_stored', $id, compact( 'name', 'contact', 'site', 'service', 'page_id', 'source' ) );
 
@@ -207,6 +285,7 @@ add_filter(
 	static fn( $c ) => array(
 		'cb'         => $c['cb'],
 		'title'      => __( 'الطلب', 'seohouse-core' ),
+		'sh_source'  => __( 'المصدر', 'seohouse-core' ),
 		'sh_contact' => __( 'التواصل', 'seohouse-core' ),
 		'sh_site'    => __( 'الموقع', 'seohouse-core' ),
 		'sh_page'    => __( 'الصفحة', 'seohouse-core' ),
@@ -229,8 +308,11 @@ add_action(
 				$p = (int) get_post_meta( $id, '_sh_page', true );
 				echo $p ? esc_html( get_the_title( $p ) ) : '—';
 				break;
+			case 'sh_source':
+				echo esc_html( sh_lead_source_label( (int) $id ) );
+				break;
 			case 'sh_mail':
-				echo 'sent' === get_post_meta( $id, '_sh_mail', true ) ? esc_html__( 'أُرسل', 'seohouse-core' ) : '<strong style="color:#b32d2e">' . esc_html__( 'فشل الإرسال — راجع إعدادات البريد', 'seohouse-core' ) . '</strong>';
+				echo sh_lead_mail_status_html( (int) $id ); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside
 				break;
 		}
 	},
@@ -245,6 +327,7 @@ add_action(
 			__( 'بيانات الطلب', 'seohouse-core' ),
 			static function ( $post ) {
 				$rows = array(
+					'المصدر'  => sh_lead_source_label( (int) $post->ID ),
 					'الاسم'   => get_post_meta( $post->ID, '_sh_name', true ),
 					'التواصل' => get_post_meta( $post->ID, '_sh_contact', true ),
 					'الخدمة'  => sh_lead_services()[ get_post_meta( $post->ID, '_sh_service', true ) ] ?? '',
@@ -254,17 +337,65 @@ add_action(
 					'السوق'   => get_post_meta( $post->ID, '_sh_market', true ),
 					'الهدف'   => get_post_meta( $post->ID, '_sh_goal', true ),
 					'الصفحة'  => ( $p = (int) get_post_meta( $post->ID, '_sh_page', true ) ) ? get_permalink( $p ) : '',
-					'الإشعار' => get_post_meta( $post->ID, '_sh_mail', true ),
 				);
 				echo '<table class="widefat striped"><tbody>';
 				foreach ( array_filter( $rows, static fn( $v ) => '' !== (string) $v ) as $k => $v ) {
 					echo '<tr><th style="width:120px">' . esc_html( $k ) . '</th><td>' . esc_html( (string) $v ) . '</td></tr>';
 				}
 				echo '</tbody></table>';
+				echo '<p><strong>' . esc_html__( 'الإشعار بالبريد:', 'seohouse-core' ) . '</strong> ' . sh_lead_mail_status_html( (int) $post->ID ) . '</p>'; // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside
 			},
 			'sh_lead',
 			'normal',
 			'high'
 		);
+	}
+);
+
+/* ------------------------------------------------------------------ notification status + retry */
+
+/** Status of the email notification, with the reason and a resend link when it failed. */
+function sh_lead_mail_status_html( int $id ): string {
+	$state = (string) get_post_meta( $id, '_sh_mail', true );
+	$to    = (string) get_post_meta( $id, '_sh_mail_to', true );
+	$when  = (string) get_post_meta( $id, '_sh_mail_time', true );
+	$retry = current_user_can( 'edit_post', $id )
+		? '<br><a href="' . esc_url( wp_nonce_url( admin_url( 'admin-post.php?action=sh_lead_resend&lead=' . $id ), 'sh_lead_resend_' . $id ) ) . '">' . esc_html__( 'إعادة الإرسال', 'seohouse-core' ) . '</a>'
+		: '';
+	if ( 'sent' === $state ) {
+		return esc_html__( 'أُرسل', 'seohouse-core' ) . ( $to ? '<br><small dir="ltr">' . esc_html( $to ) . '</small>' : '' ) . ( $when ? '<br><small>' . esc_html( $when ) . '</small>' : '' ) . $retry;
+	}
+	$err = (string) get_post_meta( $id, '_sh_mail_error', true );
+	return '<strong style="color:#b32d2e">' . esc_html__( 'فشل الإرسال', 'seohouse-core' ) . '</strong>'
+		. ( $err ? '<br><small>' . esc_html( $err ) . '</small>' : '' )
+		. ( $to ? '<br><small dir="ltr">' . esc_html( $to ) . '</small>' : '' )
+		. '<br><small>' . esc_html__( 'الطلب محفوظ. راجع إعدادات البريد (SMTP) ثم أعد الإرسال.', 'seohouse-core' ) . '</small>'
+		. $retry;
+}
+
+add_action(
+	'admin_post_sh_lead_resend',
+	static function () {
+		$id = absint( $_GET['lead'] ?? 0 ); // phpcs:ignore WordPress.Security.NonceVerification -- verified below
+		check_admin_referer( 'sh_lead_resend_' . $id );
+		if ( ! $id || 'sh_lead' !== get_post_type( $id ) || ! current_user_can( 'edit_post', $id ) ) {
+			wp_die( esc_html__( 'غير مسموح.', 'seohouse-core' ) );
+		}
+		$ok   = sh_lead_notify( $id );
+		$back = wp_get_referer() ? wp_get_referer() : admin_url( 'edit.php?post_type=sh_lead' );
+		wp_safe_redirect( add_query_arg( 'sh_resent', $ok ? 'ok' : 'failed', remove_query_arg( 'sh_resent', $back ) ) );
+		exit;
+	}
+);
+
+add_action(
+	'admin_notices',
+	static function () {
+		$r = sanitize_key( $_GET['sh_resent'] ?? '' ); // phpcs:ignore WordPress.Security.NonceVerification -- display only
+		if ( 'ok' === $r ) {
+			echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__( 'أُعيد إرسال إشعار الطلب.', 'seohouse-core' ) . '</p></div>';
+		} elseif ( 'failed' === $r ) {
+			echo '<div class="notice notice-error is-dismissible"><p>' . esc_html__( 'تعذر إرسال الإشعار مرة أخرى. الطلب ما زال محفوظًا. راجع إعدادات البريد (SMTP) على الاستضافة.', 'seohouse-core' ) . '</p></div>';
+		}
 	}
 );

@@ -1,8 +1,10 @@
 <?php
 /**
  * Section "Platforms" — SEO House - Homepage.
- * Generated from the approved design by tools/design-import/convert.js.
- * To maintain this file by hand add the tag sh-manual (prefixed with @) as its own line here.
+ * Generated from the approved design by tools/design-import/convert.js; maintained by hand since 2.7.1:
+ * logos only (the name stays as the link's accessible name), each logo links to the platform —
+ * the link from «إعدادات سيو هاوس ← المنصات والأدوات», else the platform's official site.
+ * @sh-manual
  *
  * @var array $args { f: layout values }
  */
@@ -21,7 +23,7 @@ $f = $args['f'] ?? array();
           <div data-plat-track>
             
               <?php foreach ( array( false, true ) as $dup2 ) : ?><?php $r2_list = $r1['items'] ?? []; $i2_n = is_array($r2_list) ? count($r2_list) : 0; foreach ((array) $r2_list as $i2 => $r2) : ?><div data-plat aria-hidden="<?= $dup2 ? 'true' : 'false' ?>">
-                <span data-plat-chip><?= sh_svg_img($r2['logo'] ?? '', '', ['data-wide' => 'false'], (int) ($r2['logo_image'] ?? 0)) ?><?php if (!empty($r2['label'])) : ?><span><?= esc_html($r2['label'] ?? '') ?></span><?php endif; ?></span>
+                <?= sh_platform_logo_link( (string) ( $r2['logo'] ?? '' ), (int) ( $r2['logo_image'] ?? 0 ), (string) ( $r2['label'] ?? '' ), $dup2 ) ?>
               </div><?php endforeach; ?><?php endforeach; ?>
             
           </div>
