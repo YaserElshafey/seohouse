@@ -317,3 +317,32 @@ function sh_google_reviews_button( int $post_id = 0 ): string {
 	}
 	return '<div style="margin-top: 22px; text-align: center;"><a href="' . esc_url( $l['url'] ) . '" target="_blank" rel="noopener" data-reviews-all class="hv-54a5cb" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 15px; font-weight: 600; color: var(--sh-link); border-bottom: 1px solid rgba(40, 84, 232, 0.45);">' . esc_html( $l['label'] ) . ' <span aria-hidden="true">↗</span><span class="screen-reader-text">' . esc_html__( '(يفتح في نافذة جديدة)', 'seohouse' ) . '</span></a></div>';
 }
+
+/**
+ * Footer «نبذة الفوتر» (text from «إعدادات سيو هاوس ← الهوية»): escaped, with its first «شركة سيو»
+ * linked to the general SEO page (get_permalink of /services/seo/, when published).
+ */
+function sh_footer_about_html( string $text ): string {
+	$html   = esc_html( $text );
+	$phrase = esc_html__( 'شركة سيو', 'seohouse' );
+	$page   = get_page_by_path( 'services/seo', OBJECT, 'page' );
+	$pos    = mb_strpos( $html, $phrase );
+	if ( ! $page || 'publish' !== $page->post_status || false === $pos ) {
+		return $html;
+	}
+	$link = '<a href="' . esc_url( get_permalink( $page ) ) . '" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">' . $phrase . '</a>';
+	return mb_substr( $html, 0, $pos ) . $link . mb_substr( $html, $pos + mb_strlen( $phrase ) );
+}
+
+/** One line after the article body: «تبحث عن شركة سيو …؟» linking to the general SEO page. */
+function sh_article_seo_line(): string {
+	$page = get_page_by_path( 'services/seo', OBJECT, 'page' );
+	if ( ! $page || 'publish' !== $page->post_status ) {
+		return '';
+	}
+	return '<p data-art-seo-line>' . sprintf(
+		/* translators: %s: link «شركة سيو» */
+		esc_html__( 'تبحث عن %s لتحسين أداء موقعك؟ تعرّف على خدمات سيو هاوس.', 'seohouse' ),
+		'<a href="' . esc_url( get_permalink( $page ) ) . '">' . esc_html__( 'شركة سيو', 'seohouse' ) . '</a>'
+	) . '</p>';
+}

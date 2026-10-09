@@ -1,7 +1,7 @@
 {
  "theme": "seohouse",
- "version": "2.7.3",
- "count": 359,
+ "version": "2.7.4",
+ "count": 361,
  "files": [
   {
    "path": "404.php",
@@ -20,8 +20,8 @@
   },
   {
    "path": "functions.php",
-   "size": 984,
-   "sha1": "d6939c115b75bb88064afdda43bdf1758b92922f"
+   "size": 1032,
+   "sha1": "1b9ee9607cd39c11da366148f41e5a1b08b9038a"
   },
   {
    "path": "header.php",
@@ -65,13 +65,13 @@
   },
   {
    "path": "single.php",
-   "size": 10626,
-   "sha1": "503e6f071470257cdd06d241add96b4960a84d42"
+   "size": 10733,
+   "sha1": "64c3d680cb46c88c03599c23a143053af8a185c8"
   },
   {
    "path": "style.css",
    "size": 545,
-   "sha1": "ca37ad5a2c36edad54a337bdfff3398e52b822d9"
+   "sha1": "067fda39423ff4f4501e8d46ea68eadb1d7002ae"
   },
   {
    "path": "theme.json",
@@ -545,8 +545,8 @@
   },
   {
    "path": "inc/helpers.php",
-   "size": 12773,
-   "sha1": "a603a399fe69bcb785ab2213fd9686b493a154d1"
+   "size": 14244,
+   "sha1": "787d6cf6e9822bc886c28114a9142028947df463"
   },
   {
    "path": "inc/navigation.php",
@@ -560,8 +560,13 @@
   },
   {
    "path": "inc/render.php",
-   "size": 2755,
-   "sha1": "671d188cd618e3ed3bd1fb15e6bf8187bb0514c3"
+   "size": 3116,
+   "sha1": "b103a3e634bab2038e618fdc2ed8977030c13e52"
+  },
+  {
+   "path": "inc/seo-hreflang.php",
+   "size": 2766,
+   "sha1": "7d70e47e2d4a783f141e25d89b1a6bd3090abc60"
   },
   {
    "path": "inc/setup.php",
@@ -784,9 +789,14 @@
    "sha1": "24605b8fa0a707ce5a10a988c6b2f11e0bd31ed1"
   },
   {
+   "path": "parts/seo-other-markets.php",
+   "size": 2528,
+   "sha1": "f36249d714d7ffcfc7254f9445da77a1a9474af2"
+  },
+  {
    "path": "parts/site-footer.php",
-   "size": 4323,
-   "sha1": "bd681edfa598b32e880b41634bfee965f6d051a0"
+   "size": 4401,
+   "sha1": "7b0e375e4354366a650f654718af3d6be53d0336"
   },
   {
    "path": "parts/site-header.php",

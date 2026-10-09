@@ -50,11 +50,16 @@ function sh_render_sections( string $key ): void {
 		return;
 	}
 	echo '<main id="main" class="sh-main">';
+	$other_markets = in_array( $key, array( 'seo-ksa', 'seo-egypt', 'seo-uae' ), true ); // «أسواق أخرى نخدمها» before the FAQ
 	foreach ( $rows as $i => $row ) {
 		if ( ! is_array( $row ) || ! empty( $row['sh_hide'] ) ) {
 			continue;
 		}
 		$layout = (string) ( $row['acf_fc_layout'] ?? '' );
+		if ( $other_markets && ( str_starts_with( $layout, 'faq' ) || str_starts_with( $layout, 'booking' ) ) ) {
+			get_template_part( 'parts/seo-other-markets', null, array( 'key' => $key ) );
+			$other_markets = false;
+		}
 		if ( str_starts_with( $layout, 'reviews' ) && '' === sh_reviews_code() ) {
 			continue; // no reviews source connected: no example testimonials
 		}

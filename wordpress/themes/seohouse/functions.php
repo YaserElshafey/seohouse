@@ -12,7 +12,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SH_THEME_VERSION', '2.7.3' );
+define( 'SH_THEME_VERSION', '2.7.4' );
 define( 'SH_THEME_DIR', get_template_directory() );
 define( 'SH_THEME_URI', get_template_directory_uri() );
 
@@ -25,3 +25,4 @@ require SH_THEME_DIR . '/inc/navigation.php';
 require SH_THEME_DIR . '/inc/breadcrumbs.php';
 require SH_THEME_DIR . '/inc/render.php';
 require SH_THEME_DIR . '/inc/dynamic.php';
+require SH_THEME_DIR . '/inc/seo-hreflang.php';

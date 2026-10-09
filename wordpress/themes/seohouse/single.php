@@ -84,6 +84,7 @@ while ( have_posts() ) :
 		<div data-art-layout style="max-width: 1160px; margin: 0px auto; padding: 32px 20px clamp(40px, 5vw, 64px); display: grid; gap: 24px 40px; align-items: start;">
 			<article data-art-body style="grid-area: body; min-width: 0px; background: rgb(255, 255, 255); border-radius: 18px; padding: clamp(20px, 3.2vw, 44px); box-shadow: 0 1px 0 var(--sh-line), 0 18px 40px -34px rgba(6,11,31,.35);">
 				<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput -- the_content output. ?>
+				<?php echo sh_article_seo_line(); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside ?>
 			</article>
 			<?php if ( $toc ) : ?>
 			<aside data-art-toc aria-label="<?php esc_attr_e( 'محتوى المقال', 'seohouse' ); ?>" style="grid-area: toc; min-width: 0px;">

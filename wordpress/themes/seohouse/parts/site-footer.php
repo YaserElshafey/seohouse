@@ -24,7 +24,7 @@ $socials   = (array) sh_option( 'sh_socials', array() );
 		<div>
 			<img src="<?php echo esc_url( sh_logo_url() ); ?>" alt="<?php echo esc_attr( sh_site_name() ); ?>" width="154" height="36" loading="lazy" style="height: 36px; width: auto; display: block;">
 			<?php if ( $about ) : ?>
-			<p style="color: rgb(255, 255, 255); font-size: 15px; line-height: 1.85; margin: 16px 0px 0px; max-width: 26em; text-wrap: pretty;"><?php echo esc_html( $about ); ?></p>
+			<p style="color: rgb(255, 255, 255); font-size: 15px; line-height: 1.85; margin: 16px 0px 0px; max-width: 26em; text-wrap: pretty;"><?php echo sh_footer_about_html( $about ); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside ?></p>
 			<?php endif; ?>
 			<?php if ( $show_cta ) : ?>
 			<a href="<?php echo esc_url( $cta['url'] ); ?>" data-foot-cta style="display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-size: 15px; font-weight: 700; color: rgb(33, 72, 216); background: rgb(255, 255, 255); min-height: 46px; padding: 0px 20px; border-radius: 12px; box-shadow: rgba(10, 20, 80, 0.5) 0px 10px 22px -14px;"><?php echo esc_html( $cta['label'] ); ?> <span aria-hidden="true">←</span></a>
