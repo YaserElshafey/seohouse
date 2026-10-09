@@ -1,6 +1,6 @@
 {
  "theme": "seohouse",
- "version": "2.7.5",
+ "version": "2.7.6",
  "count": 361,
  "files": [
   {
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 1032,
-   "sha1": "757ffb915750dd2fb3d3658e5318e86a70881138"
+   "sha1": "c5f5d4e7fd57feb794fda2df0a0bf2ce294546a6"
   },
   {
    "path": "header.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 545,
-   "sha1": "a4288202b9e6c9dcba2dc7f6bb809a5e2a1d75e6"
+   "sha1": "bd63b7d63f3c3166ef44201a27578cd5d877d534"
   },
   {
    "path": "theme.json",
@@ -95,8 +95,8 @@
   },
   {
    "path": "assets/css/theme.css",
-   "size": 17064,
-   "sha1": "1dc497df3fb2b596dec8ff761beeff75ed569528"
+   "size": 19076,
+   "sha1": "c95ee8df3e31233b0bf05a65dc4421b62f9d5fb7"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -790,8 +790,8 @@
   },
   {
    "path": "parts/seo-other-markets.php",
-   "size": 2665,
-   "sha1": "08de6f351ca79bd8870df7d1a8ae4c1f52f1a3be"
+   "size": 2048,
+   "sha1": "70783282037e3ea88fec8b74c2291c9506ee1c2a"
   },
   {
    "path": "parts/site-footer.php",

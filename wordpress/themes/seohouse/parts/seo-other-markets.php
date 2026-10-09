@@ -1,8 +1,9 @@
 <?php
 /**
  * «خدماتنا في الأسواق العربية» on the Saudi, Egyptian and UAE SEO pages (before the FAQ): links to
- * the two other country pages and to the general SEO page. Same card component as «خبرة في ثلاثة أسواق
- * عربية» (sections/seo/markets.php). Links come from get_permalink() of the pages found by path;
+ * the two other country pages and to the general SEO page. Card colours, top bar and hover are those of
+ * «خبرة في ثلاثة أسواق عربية» (sections/seo/markets.php); size and alignment are the block's own
+ * (.sh-other-markets in assets/css/theme.css). Links come from get_permalink() of the pages found by path;
  * a page that is not published is left out.
  *
  * @package SEOHouse
@@ -16,7 +17,7 @@ $targets = array(
 	'seo-ksa'   => array( 'services/seo/ksa', __( 'تحسين محركات البحث في السعودية', 'seohouse' ) ),
 	'seo-egypt' => array( 'services/seo/egypt', __( 'تحسين محركات البحث في مصر', 'seohouse' ) ),
 	'seo-uae'   => array( 'services/seo/uae', __( 'تحسين محركات البحث في الإمارات', 'seohouse' ) ),
-	'seo'       => array( 'services/seo', __( 'تعرّف على خدمة تحسين محركات البحث', 'seohouse' ) ),
+	'seo'       => array( 'services/seo', __( 'خدمات تحسين محركات البحث', 'seohouse' ) ),
 );
 unset( $targets[ $current ] );
 $cards = array();
@@ -30,17 +31,12 @@ if ( ! $cards ) {
 	return;
 }
 ?>
-<section data-screen-label="Other markets" style="border-bottom: 1px solid var(--sh-line);">
-	<div style="max-width: 1200px; margin: 0px auto; padding: clamp(32px, 4.4vw, 60px) 20px;">
-		<h2 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); margin: 0px; line-height: 1.3;"><?php esc_html_e( 'خدماتنا في الأسواق العربية', 'seohouse' ); ?></h2>
-		<div style="margin-top: 28px; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));">
+<section data-screen-label="Other markets" class="sh-other-markets">
+	<div class="sh-other-markets__inner">
+		<h2 class="sh-other-markets__title"><?php esc_html_e( 'خدماتنا في الأسواق العربية', 'seohouse' ); ?></h2>
+		<div class="sh-other-markets__grid">
 			<?php foreach ( $cards as $c ) : ?>
-			<a data-hcard href="<?php echo esc_url( $c[0] ); ?>" style="display: flex; flex-direction: column; border-radius: 20px; overflow: hidden; background: var(--sh-surface); border: 1px solid var(--sh-line); color: var(--sh-ink);">
-				<span aria-hidden="true" style="display: block; height: 4px; background: linear-gradient(90deg, var(--sh-sky), rgba(40, 84, 232, 0.6));"></span>
-				<span style="display: flex; flex-direction: column; gap: 10px; padding: clamp(20px, 2.2vw, 28px); flex: 1 1 auto;">
-					<span style="font-family: Alexandria, sans-serif; font-weight: 800; font-size: 22px; color: var(--sh-ink);"><?php echo esc_html( $c[1] ); ?></span>
-				</span>
-			</a>
+			<a data-hcard class="sh-other-markets__card" href="<?php echo esc_url( $c[0] ); ?>"><span aria-hidden="true" class="sh-other-markets__bar"></span><span class="sh-other-markets__label"><?php echo esc_html( $c[1] ); ?></span></a>
 			<?php endforeach; ?>
 		</div>
 	</div>

@@ -25,7 +25,7 @@
     <link rel="alternate" hreflang="ar" href="http://127.0.0.1:8090/services/seo/" />
     <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:8090/services/seo/" />
   self-reference matches canonical: True
-  other markets block: [('تحسين محركات البحث في مصر', '/services/seo/egypt/'), ('تحسين محركات البحث في الإمارات', '/services/seo/uae/'), ('تعرّف على خدمة تحسين محركات البحث', '/services/seo/')] | before FAQ: True
+  other markets block: [] | before FAQ: True
   footer about link: ('/services/seo/', 'سيو هاوس شركة سيو متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكت')
   footer market links: [('السعودية', '/services/seo/ksa/'), ('مصر', '/services/seo/egypt/'), ('الإمارات', '/services/seo/uae/')]
 ===== /services/seo/egypt/ [200]
@@ -40,7 +40,7 @@
     <link rel="alternate" hreflang="ar" href="http://127.0.0.1:8090/services/seo/" />
     <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:8090/services/seo/" />
   self-reference matches canonical: True
-  other markets block: [('تحسين محركات البحث في السعودية', '/services/seo/ksa/'), ('تحسين محركات البحث في الإمارات', '/services/seo/uae/'), ('تعرّف على خدمة تحسين محركات البحث', '/services/seo/')] | before FAQ: True
+  other markets block: [] | before FAQ: True
   footer about link: ('/services/seo/', 'سيو هاوس شركة سيو متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكت')
   footer market links: [('السعودية', '/services/seo/ksa/'), ('مصر', '/services/seo/egypt/'), ('الإمارات', '/services/seo/uae/')]
 ===== /services/seo/uae/ [200]
@@ -55,7 +55,7 @@
     <link rel="alternate" hreflang="ar" href="http://127.0.0.1:8090/services/seo/" />
     <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:8090/services/seo/" />
   self-reference matches canonical: True
-  other markets block: [('تحسين محركات البحث في السعودية', '/services/seo/ksa/'), ('تحسين محركات البحث في مصر', '/services/seo/egypt/'), ('تعرّف على خدمة تحسين محركات البحث', '/services/seo/')] | before FAQ: True
+  other markets block: [] | before FAQ: True
   footer about link: ('/services/seo/', 'سيو هاوس شركة سيو متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكت')
   footer market links: [('السعودية', '/services/seo/ksa/'), ('مصر', '/services/seo/egypt/'), ('الإمارات', '/services/seo/uae/')]
 ===== / [200]
