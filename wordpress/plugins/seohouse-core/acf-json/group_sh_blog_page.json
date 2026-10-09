@@ -1,0 +1,40 @@
+{
+  "key": "group_sh_blog_page",
+  "title": "صفحة المدونة",
+  "fields": [
+    {
+      "key": "field_sh_blog_intro",
+      "label": "وصف المدونة تحت العنوان",
+      "name": "sh_blog_intro",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "rows": 2,
+      "new_lines": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_type",
+        "operator": "==",
+        "value": "posts_page"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "acf_after_title",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments"
+  ],
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

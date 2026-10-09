@@ -1,0 +1,62 @@
+{
+  "key": "group_sh_page_reviews",
+  "title": "التقييمات في هذه الصفحة",
+  "fields": [
+    {
+      "key": "field_sh_rv_shortcode",
+      "label": "شورت كود التقييمات لهذه الصفحة (اختياري)",
+      "name": "sh_reviews_shortcode_page",
+      "type": "text",
+      "instructions": "فارغ = الشورت كود العام من «سيو هاوس ← تقييمات جوجل». يُعرض في مكان قسم التقييمات بنفس تصميمه. بلا شورت كود لا يظهر القسم.",
+      "required": 0,
+      "placeholder": "[trustindex no-registration=google]"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/home.php"
+      }
+    ],
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/seo.php"
+      }
+    ],
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/seo-ksa.php"
+      }
+    ],
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/seo-egypt.php"
+      }
+    ],
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/seo-uae.php"
+      }
+    ]
+  ],
+  "menu_order": 40,
+  "position": "side",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

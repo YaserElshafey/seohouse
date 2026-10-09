@@ -1,0 +1,22 @@
+[
+ {
+  "n": "2.2.0 broken state reproduces the reported message",
+  "ok": true
+ },
+ {
+  "n": "WordPress offers replace (2.2.0 → 2.2.1)",
+  "ok": true
+ },
+ {
+  "n": "after replace: setup screen sees the bundled pack",
+  "ok": true
+ },
+ {
+  "n": "stale uploads/seohouse-content file ignored",
+  "ok": true
+ },
+ {
+  "n": "dry-run import works",
+  "ok": true
+ }
+]

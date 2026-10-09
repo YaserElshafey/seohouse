@@ -1,0 +1,35 @@
+PASS  WordPress offers to replace the installed theme with seohouse-theme.zip  — منصّبالمرفوعاسم القالبSEO HouseSEO Houseالنسخة2.1.02.3.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5نسخة PHP المطلوبة8.18.1
+PASS  theme replaced
+PASS  WordPress offers to replace the installed plugin with seohouse-core.zip  — الحاليةالمرفوعةاسم الإضافةSEO House CoreSEO House Coreالنسخة2.2.52.3.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5نسخة PHP المطلوبة8.18.1
+PASS  plugin replaced
+PASS  Plugins screen: SEO House Core 2.3.0 active
+PASS  Themes screen: SEO House 2.3.0 active
+PASS  dashboard: «تحديث محتوى التصميم 2.3.0 متاح» notice
+PASS  setup screen: bundled pack 2.3.0 found and intact  — حزمة المحتوى2.3.0 — مضمّنة في SEO House Core sha256:8b521594e8dc8695/srv/shwpnew/new/wp-content/plugins/seohouse-core/content-pack — 126 ملفًا / 125 متوقعة، سليمةالحالةهُيّ
+PASS  setup screen: newer pack notice (2.3.0 > 2.2.1)
+PASS  preview (dry run) completes without failures  — تشغيل تجريبي — لم يُكتب شيء.أُنشئ: 1 حُدّث: 4 بلا تغيير: 73 محمي: 1 فشل: 0السجل (7)معلومةsourceحزمة المحتوى 2.3.0 — بصمة التصميم: sha256:8b521594e8dc8695 — تشغيل تجريبي (بدون كتابة)محمي (صفحة سابقة أو
+PASS  update run completes without failures  — اكتملت التهيئة.أُنشئ: 11 حُدّث: 4 بلا تغيير: 73 محمي: 2 فشل: 0 (9 s)
+PASS  check: الصفحة الرئيسية  — الرئيسية — http://127.0.0.1:8097/new/
+PASS  check: صفحة المقالات  — http://127.0.0.1:8097/new/blog/
+PASS  check: صفحات التصميم المنشورة  — 38
+PASS  check: مطابقة نصوص وصور وروابط الأقسام مع التصميم  — مطابقة؛ 1 صفحة عدّلتها من لوحة التحكم وبقيت كما هي
+PASS  check: القائمة الرئيسية  — 21 عنصر
+PASS  check: قائمة الفوتر  — 24 عنصر
+PASS  check: روابط أسفل الفوتر  — 2 عنصر
+PASS  check: الصور في مكتبة الوسائط  — 45 / 45
+PASS  check: إعدادات سيو هاوس  — اسم الشركة: سيو هاوس · شعارات العملاء: 8
+PASS  check: الروابط الدائمة (unchanged by the update; reported)  — الحالية /%postname%/ — روابط المقالات المنشورة سابقًا (/blog/…) لن تعمل حتى تُطبَّق بنية المشروع. تطبيق بنية روابط المشروع
+PASS  check: الصفحات القانونية والمقالات غير المعتمدة  — مسودة، مسودة، مسودة، مسودة، مسودة
+PASS  after the update: no newer-pack notice
+PASS  second run creates and updates nothing  — اكتملت التهيئة.أُنشئ: 0 حُدّث: 0 بلا تغيير: 73 محمي: 2 فشل: 0
+PASS  «نقل السيو إلى Rank Math»: nothing left to move, editor value kept  — سيُنقل: 0 — مطابق: 105 — يبقى: 1
+PASS  page editor: Core SEO box shows no title/description/image/noindex fields with Rank Math  — 0 duplicate field(s)
+PASS  page editor: breadcrumb name field kept
+PASS  page editor: Rank Math box present
+PASS  page editor: «التقييمات في هذه الصفحة» field
+PASS  page editor: example testimonials hidden in the reviews section  — محتوى القسم من شورت كود التقييمات («التقييمات في هذه الصفحة» في الشريط الجانبي، أو الشورت كود العام من «إعدادات سيو هاوس ← التكاملات»). بلا شورت كود لا يظهر الق
+PASS  settings: «المنصات والأدوات» list with 10 entries  — 10
+PASS  settings: internal reference field not shown
+PASS  no JavaScript errors in the admin
+
+33/33 passed

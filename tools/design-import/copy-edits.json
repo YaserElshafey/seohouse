@@ -1,0 +1,21 @@
+{
+  "_about": "Approved wording changes applied on top of the design export before conversion (convert.js). Each 'from' must still exist in the page's extract, or the build stops. Field keys come from section paths, so wording changes never change ACF keys.",
+  "edits": [
+    { "page": "seo-egypt", "from": "خدمات السيو في مصر", "to": "خدمات تحسين محركات البحث في مصر", "note": "H1 and FAQ heading (round 2026-10-03)" },
+    { "page": "seo-egypt", "from": "استكشف خدمات السيو", "to": "استكشف خدمات تحسين محركات البحث" },
+    { "page": "seo-egypt", "from": "ما الذي ننفذه داخل مشروع السيو في مصر؟", "to": "ما الذي ننفذه داخل مشروع تحسين محركات البحث في مصر؟" },
+    { "page": "seo-egypt", "from": "كيف تُحدد تكلفة خدمات السيو؟", "to": "كيف تُحدَّد تكلفة خدمات تحسين محركات البحث؟" },
+
+    { "page": "seo-ksa", "from": "خدمات السيو في السعودية", "to": "خدمات تحسين محركات البحث في السعودية", "note": "H1 and FAQ heading" },
+
+    { "page": "seo-uae", "from": "خدمات السيو في الإمارات", "to": "خدمات تحسين محركات البحث في الإمارات", "note": "H1 and FAQ heading" },
+    { "page": "seo-uae", "from": "خدمة السيو الكاملة", "to": "خدمة تحسين محركات البحث الكاملة" },
+
+    { "page": "web-react-next", "from": "تطوير مواقع رياكت ونكست", "to": "تطوير مواقع باستخدام رياكت ونكست", "note": "H1: both technologies stay in the visible title" },
+    { "page": "web-react-next", "from": "نبني واجهات على رياكت ونكست مع اختيار طريقة العرض المناسبة لكل صفحة، وربطها بأنظمتك ومصادر بياناتك، ببنية تتحمل التوسع.", "to": "نبني واجهات المواقع بمكتبة رياكت وإطار نكست المبني عليها، ونختار طريقة العرض المناسبة لكل صفحة، ونربطها بأنظمتك ومصادر بياناتك، ببنية تتحمل التوسع." },
+    { "page": "web-react-next", "from": "ليست كل صفحة تحتاج المعالجة نفسها. صفحات المحتوى تُولَّد مسبقًا لتفتح فورًا وتُقرأ بموثوقية، والصفحات المعتمدة على المستخدم تُعرض عند الطلب.", "to": "ليست كل صفحة تحتاج المعالجة نفسها. يتيح نكست اختيار طريقة العرض لكل صفحة: صفحات المحتوى تُولَّد مسبقًا لتفتح بسرعة وتُقرأ بموثوقية، والصفحات المعتمدة على بيانات المستخدم تُعرض عند الطلب.", "note": "static generation, server rendering and incremental regeneration are Next.js features" },
+    { "page": "web-react-next", "from": "صفحات المحتوى والخدمات: أسرع فتح وأفضل قراءة لمحركات البحث.", "to": "صفحات المحتوى والخدمات: تفتح بسرعة وتصل كاملة إلى محركات البحث.", "note": "no superlative claim" },
+    { "page": "web-react-next", "from": "أسئلة عن رياكت ونكست", "to": "أسئلة عن تطوير المواقع باستخدام رياكت ونكست" },
+    { "page": "web-react-next", "from": "كيف تضمنون الأداء؟", "to": "كيف تتحققون من الأداء؟", "note": "the answer describes measurement, not a guarantee" }
+  ]
+}

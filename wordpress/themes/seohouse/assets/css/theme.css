@@ -1,0 +1,219 @@
+/* SEO House — theme components that sit around the generated design sections. */
+
+[hidden] { display: none !important; }
+
+.sh-skip { position: absolute; inset-inline-start: 12px; top: -60px; z-index: 100; background: var(--sh-blue); color: #fff; padding: 10px 16px; border-radius: 10px; font-weight: 700; }
+.sh-skip:focus { top: 12px; }
+
+.sh-main { display: block; }
+.sh-admin-hint { max-width: 1200px; margin: 40px auto; padding: 18px 20px; border: 1px dashed rgba(40, 84, 232, .6); border-radius: 12px; color: var(--sh-link); font-size: 15px; }
+
+/* hover states of shared components (design style-hover values) */
+.sh-hv-cta:hover { background: var(--sh-blue-hover) !important; }
+.sh-hv-nav:hover { color: var(--sh-link) !important; background: var(--sh-surface) !important; }
+.sh-hv-mega:hover { background: rgba(171, 182, 194, 0.1) !important; }
+.sh-hv-link:hover { color: var(--sh-link) !important; }
+.sh-hv-onblue:hover, .sh-hv-onblue:focus-visible { background: var(--sh-blue-tint) !important; color: #1A3AB0 !important; }
+/* search field on the blue heroes: the design's grey placeholder is ~2:1 on blue */
+[data-sh-q]::placeholder { color: rgba(255, 255, 255, .78); }
+.sh-hv-foot:hover { color: #fff !important; text-decoration: underline !important; text-underline-offset: 4px !important; }
+
+/* header: open mega-menu button */
+[data-sh-menu] button[aria-expanded="true"] { color: var(--sh-link) !important; }
+[data-sh-menu] button[aria-expanded="true"] [data-chev] { transform: rotate(180deg); }
+
+/* booking */
+[data-bk-grid] { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
+@media (max-width: 899px) { [data-bk-grid] { grid-template-columns: 1fr; } }
+[data-bk-row] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 559px) { [data-bk-row] { grid-template-columns: 1fr; } }
+[data-bk-pick] { border: 1px solid var(--sh-line); background: #fff; color: var(--sh-ink); }
+[data-bk-pick][aria-pressed="true"] { border-color: var(--sh-blue); background: var(--sh-blue); color: #fff; }
+/* service choices: centred rows, wrap inside the form (long labels wrap instead of overflowing) */
+[data-bk-pick] { max-width: 100%; white-space: normal; line-height: 1.5; padding-block: 8px !important; text-align: center; }
+@media (max-width: 559px) { [data-bk-services] > div { gap: 6px !important; } [data-bk-pick] { padding-inline: 12px !important; font-size: 13.5px !important; } }
+[data-sh-booking] form[aria-busy="true"] button[type="submit"] { opacity: .7; cursor: progress; }
+
+/* accessibility: pause long animations on request */
+[data-sh-paused] *, [data-sh-paused] { animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* WordPress content (articles, legal pages) */
+.sh-prose { font-size: 17px; line-height: 1.95; color: var(--sh-text); }
+.sh-prose > * + * { margin-top: 1.1em; }
+.sh-prose h2 { font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(22px, 2vw, 28px); line-height: 1.4; color: var(--sh-ink); margin: 1.8em 0 0; scroll-margin-top: 96px; }
+.sh-prose h3 { font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(19px, 1.6vw, 22px); line-height: 1.45; color: var(--sh-ink); margin: 1.5em 0 0; scroll-margin-top: 96px; }
+.sh-prose h4 { font-weight: 700; font-size: 18px; color: var(--sh-ink); }
+.sh-prose a { color: var(--sh-link); text-decoration: underline; text-underline-offset: 3px; }
+.sh-prose a:hover { color: var(--sh-link-hover); }
+.sh-prose ul, .sh-prose ol { padding-inline-start: 1.3em; }
+.sh-prose li + li { margin-top: .4em; }
+.sh-prose strong { color: var(--sh-ink); }
+.sh-prose blockquote { margin-inline: 0; padding: 14px 20px; border-inline-start: 3px solid var(--sh-blue); background: var(--sh-surface); border-radius: 0 12px 12px 0; color: var(--sh-ink); }
+.sh-prose img { max-width: 100%; height: auto; border-radius: 14px; }
+.sh-prose figure { margin: 1.6em 0; }
+.sh-prose figcaption { font-size: 14px; color: var(--sh-text); margin-top: 8px; text-align: center; }
+.sh-prose table { width: 100%; border-collapse: collapse; font-size: 15.5px; display: block; overflow-x: auto; }
+.sh-prose th, .sh-prose td { border: 1px solid var(--sh-line); padding: 10px 12px; text-align: start; }
+.sh-prose th { color: var(--sh-ink); background: var(--sh-surface); }
+.sh-prose code { font-size: .92em; background: rgba(37, 43, 51, .06); padding: 2px 6px; border-radius: 6px; direction: ltr; unicode-bidi: isolate; }
+.sh-prose pre { direction: ltr; overflow-x: auto; background: #252B33; color: #fff; padding: 16px; border-radius: 12px; }
+.sh-prose.is-light { color: var(--sh-text); }
+.sh-prose.is-light h2, .sh-prose.is-light h3, .sh-prose.is-light h4, .sh-prose.is-light strong { color: var(--sh-ink); }
+.sh-prose.is-light a { color: var(--sh-link); }
+.sh-prose.is-light th, .sh-prose.is-light td { border-color: var(--sh-line); }
+
+/* pagination */
+.sh-pagination { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 36px; }
+.sh-pagination .page-numbers { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 12px; border-radius: 10px; border: 1px solid var(--sh-line); background: var(--sh-surface); color: var(--sh-ink); font-weight: 600; }
+.sh-pagination .page-numbers.current { background: var(--sh-blue); color: #fff; border-color: var(--sh-blue); }
+.sh-pagination a.page-numbers:hover { border-color: var(--sh-blue); color: var(--sh-link); }
+
+/* lightbox (case study gallery) */
+.sh-lightbox { position: fixed; inset: 0; z-index: 90; background: rgba(37, 43, 51, .94); display: flex; align-items: center; justify-content: center; padding: 20px; }
+.sh-lightbox img { max-width: min(1200px, 100%); max-height: 88vh; width: auto; height: auto; border-radius: 12px; }
+.sh-lightbox button { position: absolute; top: 16px; inset-inline-end: 16px; width: 44px; height: 44px; border-radius: 10px; border: 1px solid rgba(255,255,255,.3); background: none; color: #fff; font-size: 20px; cursor: pointer; }
+
+.screen-reader-text { border: 0; clip: rect(1px,1px,1px,1px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; word-wrap: normal !important; }
+
+/* hover states of WordPress-driven cards (design style-hover values) */
+.sh-hv-case:hover { box-shadow: rgba(40, 84, 232, 0.5) 0px 18px 40px -26px, rgba(40, 84, 232, 0.4) 0px 0px 0px 1px !important; }
+.sh-hv-lead:hover { box-shadow: rgba(40, 84, 232, 0.9) 0px 24px 48px -28px !important; }
+.sh-hv-row:hover { box-shadow: rgba(40, 84, 232, 0.45) 0px 0px 0px 1px, rgba(40, 84, 232, 0.6) 0px 16px 32px -24px !important; color: var(--sh-link) !important; }
+.sh-hv-tmcard:hover { border-color: rgba(40, 84, 232, 0.6) !important; box-shadow: rgba(40, 84, 232, 0.6) 0px 18px 40px -28px !important; }
+.sh-hv-in:hover { background: var(--sh-blue) !important; color: #fff !important; }
+.sh-hv-blue:hover { color: var(--sh-link) !important; }
+img { height: auto; }
+[data-sh-filter] { border: 1px solid var(--sh-line); background: #fff; color: var(--sh-ink); }
+[data-sh-filter][aria-pressed="true"] { border-color: var(--sh-blue); background: var(--sh-blue); color: #fff; }
+
+/* breadcrumb on light surfaces (case study, article) */
+.sh-crumbs-light nav, .sh-crumbs-light nav a { color: var(--sh-text) !important; }
+.sh-crumbs-light nav [aria-current] { color: var(--sh-ink) !important; }
+.sh-crumbs-light nav a:hover { color: var(--sh-link) !important; }
+.sh-hv-next:hover { background: rgba(40, 84, 232, 0.32) !important; }
+.sh-cs-text p { margin: 0; }
+.sh-cs-text p + p { margin-top: 1em; }
+.sh-hv-outline:hover { border-color: var(--sh-blue) !important; color: var(--sh-link) !important; }
+.sh-hv-mate:hover { background: rgba(40, 84, 232, 0.08) !important; }
+
+/* Gutenberg blocks inside the article body follow the design's article components */
+[data-art-body] .wp-block-table { margin: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; box-shadow: 0 0 0 1px var(--sh-line); background: #fff; }
+[data-art-body] .wp-block-table table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 15px; line-height: 1.75; }
+[data-art-body] .wp-block-table th { text-align: start; background: #EEF2FB; color: var(--sh-ink); font-weight: 700; padding: 12px 14px; border: 0; }
+[data-art-body] .wp-block-table td { padding: 12px 14px; border: 0; border-top: 1px solid var(--sh-line); vertical-align: top; }
+[data-art-body] .wp-block-quote p { margin: 0; }
+[data-art-body] .wp-block-image img { border-radius: 12px; }
+[data-art-body] ol { margin: 0; padding: 0 22px 0 0; display: flex; flex-direction: column; gap: 6px; }
+.sh-hv-blrow:hover { background: rgba(40, 84, 232, 0.04) !important; }
+.sh-hv-chip:hover { background: rgba(40, 84, 232, 0.12) !important; color: var(--sh-link) !important; }
+[data-hero-blue] .sh-hv-chip:hover { background: rgba(255, 255, 255, 0.12) !important; color: #fff !important; }
+.sh-hv-chip[aria-current]:hover { background: var(--sh-blue) !important; color: #fff !important; }
+[data-hero-blue] .sh-hv-chip[aria-current]:hover { background: #fff !important; color: var(--sh-link) !important; }
+[data-sh-booking] label { min-width: 0; }
+[data-sh-booking] input { width: 100%; min-width: 0; box-sizing: border-box; }
+
+/* Reviews from the connected plugin (shortcode) replace the example cards: the design's
+   carousel arrows and dots belong to those cards, so they are hidden; the plugin's own
+   controls inside the widget stay. */
+[data-screen-label="Reviews"]:has([data-reviews-live]) button[aria-label]:not([data-reviews-live] *) { display: none; }
+.sh-reviews-live { margin-top: 24px; min-width: 0; max-width: 100%; overflow-x: clip; }
+
+/* ---------------------------------------------------------------------------------------------
+   Readability on top of the approved v5 design (2.7.0). The design export still carries a few
+   colours of the earlier dark design on what are now light surfaces (white text on a white card)
+   and dark headings on the blue fields. Measured on the export itself (<1.5:1 white-on-white,
+   ~2.4:1 ink-on-blue); each rule targets only those elements and uses the design's own roles.
+   --------------------------------------------------------------------------------------------- */
+/* white text inside the light cards of the sector hero panel and the «رحلة العميل» widget
+   (not inside the panel's navy boxes, not on its own blue fill) */
+[data-sx-panel] [style*="color: rgb(255, 255, 255)"]:not([style*="background: rgb(6, 11, 31)"] *):not([style*="background: var(--sh-blue)"]):not([style*="background: rgb(40, 84, 232)"]),
+[data-sj-panel] [style*="background: rgb(255, 255, 255); color: rgb(6, 11, 31)"] [style*="color: rgb(255, 255, 255)"]:not([style*="background: var(--sh-blue)"]):not([style*="background: rgb(40, 84, 232)"]):not([style*="background: linear-gradient"]) { color: var(--sh-ink) !important; }
+:is([data-sx-panel], [data-sj-panel] [style*="background: rgb(255, 255, 255); color: rgb(6, 11, 31)"]) [style*="color: rgb(255, 255, 255)"][style*="background: rgba(var(--sh-blue-rgb)"] { color: var(--sh-link) !important; }
+/* small badges on light tints inside the hero cards (products, Salla, SEO) */
+[data-hero-blue] [style*="color: rgb(255, 255, 255)"][style*="background: rgba(var(--sh-blue-rgb), 0.08)"],
+[data-hero-blue] [style*="color: rgb(255, 255, 255)"][style*="background: rgba(var(--sh-blue-rgb), 0.1)"] { color: var(--sh-link) !important; }
+/* dark section titles and labels on the blue fields */
+[data-blue-field] h2[data-sec-h] { color: #fff; }
+
+/* ---------------------------------------------------------------- 2.7.1 fixes */
+
+/* «منصات وأدوات نعمل عليها»: logos alone, one chip size, logo scaled to fit (never cropped) */
+[data-plat-chip][data-plat-logo-only] { gap: 0; justify-content: center; min-width: 96px; height: 64px; padding: 0 24px; text-decoration: none; transition: box-shadow .2s ease; }
+[data-plat-chip][data-plat-logo-only] img[data-plat-logo] { width: auto; height: 34px; max-width: 132px; object-fit: contain; display: block; }
+a[data-plat-chip][data-plat-logo-only]:hover { box-shadow: 0 10px 26px -18px rgba(37,43,51,.45), 0 0 0 1px var(--sh-blue); }
+a[data-plat-chip][data-plat-logo-only]:focus-visible { outline: 2px solid var(--sh-blue); outline-offset: 3px; }
+@media (max-width: 767px) { [data-plat-chip][data-plat-logo-only] { min-width: 80px; height: 56px; padding: 0 18px; } [data-plat-chip][data-plat-logo-only] img[data-plat-logo] { height: 28px; max-width: 108px; } }
+
+/* clickable cards never move on hover/focus (approved: colour only). Generated hover classes on some
+   cards (e.g. «قطاعات نعمل معها») lift the card 3px; at its edge the card then slides out from under
+   the pointer, loses :hover, drops back and re-enters it — the jitter. [class] raises specificity
+   above the generated .hv-*:hover rules. */
+[data-hcard][class]:hover, [data-hcard][class]:focus-visible, [data-hcard][class]:focus-within { transform: none !important; }
+
+/* Hero text block of the listing / legal / company pages: centred title, description and buttons; the
+   description uses the hero's width (short sentences stay on one line on desktop, long ones wrap
+   naturally; no balance-wrapping that splits short lines). Scope: the block that holds the H1 only —
+   breadcrumbs, article bodies and long content are not affected. */
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) {
+	text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+}
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) > :is(h1, p) {
+	max-width: min(100%, 62em) !important; margin-inline: auto !important; text-wrap: pretty !important;
+}
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) > :is(div, nav, form) {
+	justify-content: center; margin-inline: auto;
+}
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) > nav[aria-label="مسار التنقل"] {
+	align-self: flex-start; margin-inline: 0;
+}
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) [role="list"] { justify-content: center; }
+
+/* ------------------------------------------------------------------ sticky header (2.7.3)
+   The header was already position: sticky, but .sh-root had overflow-x: hidden, which makes it the
+   scroll container, so the header scrolled away. overflow-x: clip keeps wide decorations clipped
+   without creating a scroll container (hidden stays as the fallback for old browsers). The header
+   stays in the flow, so nothing jumps; anchors land below it (scroll-padding). */
+.sh-root { overflow-x: hidden; }
+@supports (overflow: clip) { .sh-root { overflow-x: clip; } }
+[data-sh-header] { position: sticky !important; top: 0; z-index: 60; }
+html { scroll-padding-top: 88px; }
+/* WordPress admin bar: fixed 32px (46px below 783px); below 601px it scrolls away with the page */
+body.admin-bar [data-sh-header] { top: 32px !important; }
+html:has(body.admin-bar) { scroll-padding-top: 120px; }
+body.admin-bar #sh-drawer { top: 32px !important; }
+@media screen and (max-width: 782px) {
+	body.admin-bar [data-sh-header] { top: 46px !important; }
+	html:has(body.admin-bar) { scroll-padding-top: 134px; }
+	body.admin-bar #sh-drawer { top: 46px !important; }
+}
+@media screen and (max-width: 600px) {
+	body.admin-bar [data-sh-header] { top: 0 !important; }
+	body.admin-bar #sh-drawer { top: 0 !important; }
+	html:has(body.admin-bar) { scroll-padding-top: 88px; }
+}
+/* one offset for every anchor: html scroll-padding (header + admin bar) instead of per-element margins */
+[style*="scroll-margin-top"], .sh-prose h2, .sh-prose h3 { scroll-margin-top: 12px !important; }
+
+/* ------------------------------------------------------------------ «خدماتنا في الأسواق العربية» (country SEO pages only)
+   Compact one-line link cards: centred title and labels, equal cards. Three across from 1180px (the
+   longest label is ~311px at 19px, so each card keeps room for one line); below that they stack in one
+   centred column instead of squeezing the text. Labels may still wrap when the text is enlarged (no
+   nowrap). Colours, top bar and hover come from the markets cards ([data-hcard]). */
+.sh-other-markets { border-bottom: 1px solid var(--sh-line); }
+.sh-other-markets__inner { max-width: 1200px; margin: 0 auto; padding: clamp(32px, 4.4vw, 60px) 20px; }
+.sh-other-markets__title { font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); line-height: 1.3; margin: 0; text-align: center; color: var(--sh-ink); }
+.sh-other-markets__grid { margin-top: 24px; display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.sh-other-markets__card { position: relative; display: flex; align-items: center; justify-content: center; min-height: 68px; padding: 16px; border-radius: 16px; overflow: hidden; background: var(--sh-surface); border: 1px solid var(--sh-line); color: var(--sh-ink); text-align: center; text-decoration: none; }
+.sh-other-markets__bar { position: absolute; inset-inline: 0; top: 0; height: 4px; background: linear-gradient(90deg, var(--sh-sky), rgba(40, 84, 232, .6)); }
+.sh-other-markets__label { font-family: Alexandria, sans-serif; font-weight: 500; font-size: 19px; line-height: 1.45; text-wrap: balance; min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 1179px) {
+	.sh-other-markets__grid { grid-template-columns: minmax(0, 1fr); max-width: 520px; margin-inline: auto; gap: 12px; }
+	.sh-other-markets__card { min-height: 64px; padding: 14px 18px; }
+	.sh-other-markets__label { font-size: 18px; }
+}
+@media (max-width: 599px) {
+	.sh-other-markets__label { font-size: 17px; }
+}

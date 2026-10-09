@@ -1,0 +1,24 @@
+PASS  login
+PASS  classic edit screen with ACF sections (no block editor)
+PASS  sections rendered as ACF Group fields  — 8 sections
+PASS  a section list (sh_rows) is present  — s_hero.items
+PASS  add item: new row appended and open
+PASS  reorder: ↑ moves the item up
+PASS  remove item: row removed
+PASS  save: no JS errors on the edit screen
+PASS  saved: section text field
+PASS  saved: item count  — 3/3
+PASS  saved: new order (moved item first)
+PASS  saved: removed item is gone
+PASS  saved: added item kept at the end
+PASS  public page: edited title shown
+PASS  public page: added item shown
+PASS  public page: hidden FAQ section not rendered
+PASS  settings: WordPress admin page renders the ACF group with tabs
+PASS  settings: saved notice
+PASS  settings: no JS errors
+PASS  settings: text field persisted
+PASS  settings: list item persisted
+PASS  public page: footer text from settings
+
+22/22 passed

@@ -1,0 +1,138 @@
+{
+  "key": "group_sh_seo",
+  "title": "السيو ومسار التنقل",
+  "fields": [
+    {
+      "key": "field_sh_seo_rankmath_msg",
+      "label": "Rank Math",
+      "name": "rankmath_msg",
+      "type": "message",
+      "instructions": "",
+      "required": 0,
+      "message": "Rank Math مفعّلة: عنوان البحث ووصفه وصورة المشاركة ومنع الفهرسة تُحرَّر من صندوق Rank Math في هذه الصفحة. الحقول هنا لمسار التنقل ونوع الصفحة في البيانات المنظمة."
+    },
+    {
+      "key": "field_sh_seo_title",
+      "label": "عنوان SEO",
+      "name": "sh_seo_title",
+      "type": "text",
+      "instructions": "فارغ = عنوان الصفحة + اسم الموقع. منفصل عن H1 ونص القائمة.",
+      "required": 0,
+      "maxlength": 70
+    },
+    {
+      "key": "field_sh_seo_description",
+      "label": "وصف SEO",
+      "name": "sh_seo_description",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "rows": 2,
+      "maxlength": 170,
+      "new_lines": ""
+    },
+    {
+      "key": "field_sh_seo_noindex",
+      "label": "منع الفهرسة (noindex)",
+      "name": "sh_seo_noindex",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "ui": 1,
+      "default_value": 0
+    },
+    {
+      "key": "field_sh_seo_og_image",
+      "label": "صورة المشاركة",
+      "name": "sh_seo_og_image",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "return_format": "id",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_sh_seo_crumb",
+      "label": "الاسم في مسار التنقل",
+      "name": "sh_crumb",
+      "type": "text",
+      "instructions": "فارغ = عنوان الصفحة.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_seo_crumb_parent",
+      "label": "الاسم عندما تظهر الصفحة كأب في مسار التنقل",
+      "name": "sh_crumb_ancestor",
+      "type": "text",
+      "instructions": "مثال: صفحة «تحسين محركات البحث» تظهر كـ«خدمات السيو» في مسار صفحاتها الفرعية.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_seo_schema_service",
+      "label": "اسم الخدمة في Schema",
+      "name": "sh_schema_service",
+      "type": "text",
+      "instructions": "لصفحات الخدمات والقطاعات والدول: يصف الخدمة المقدمة (serviceType).",
+      "required": 0
+    },
+    {
+      "key": "field_sh_seo_schema_type",
+      "label": "نوع الصفحة في Schema",
+      "name": "sh_schema_type",
+      "type": "select",
+      "instructions": "",
+      "required": 0,
+      "choices": {
+        "auto": "تلقائي حسب القالب",
+        "webpage": "WebPage",
+        "service": "WebPage + Service",
+        "about": "AboutPage",
+        "contact": "ContactPage",
+        "collection": "CollectionPage",
+        "none": "بدون"
+      },
+      "default_value": "auto",
+      "return_format": "value"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "page"
+      }
+    ],
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "post"
+      }
+    ],
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "case_study"
+      }
+    ],
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "team_member"
+      }
+    ]
+  ],
+  "menu_order": 50,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}
