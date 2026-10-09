@@ -18,16 +18,6 @@ foreach ( $pages as $id => $v ) {
 	update_post_meta( $id, 'rank_math_description', $v['rm_desc'] );
 }
 update_post_meta( 6, 'rank_math_description', 'سيو هاوس تساعد الشركات والمتاجر على النمو عبر تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية، بخطة واضحة ونتائج قابلة للقياس.' );
-$names = array( 35 => 'شركة سيو في السعودية ←', 36 => 'شركة سيو في مصر ←', 37 => 'شركة سيو في الإمارات ←' );
-foreach ( array( 6 => 'eyebrow', 18 => 'label' ) as $pid => $key ) {
-	foreach ( (array) get_post_meta( $pid, 's_markets_items', true ) as $row ) {
-		$target = url_to_postid( sh_link( get_post_meta( $row, 'link', true ) ) ) ?: (int) get_post_meta( $row, 'link', true );
-		if ( isset( $names[ $target ] ) ) { update_post_meta( $row, $key, $names[ $target ] ); echo "row $row ($pid) -> {$names[$target]}\n"; }
-	}
-}
-foreach ( wp_get_nav_menu_items( get_nav_menu_locations()['footer'] ) as $it ) {
-	$map = array( 35 => 'شركة سيو في السعودية', 36 => 'شركة سيو في مصر', 37 => 'شركة سيو في الإمارات' );
-	if ( isset( $map[ (int) $it->object_id ] ) && 'page' === $it->object ) { wp_update_post( array( 'ID' => $it->ID, 'post_title' => $map[ (int) $it->object_id ] ) ); echo "menu {$it->ID} -> {$map[(int)$it->object_id]}\n"; }
-}
+// 2.7.5: market cards («اعرف المزيد ←») and footer menu labels («السعودية/مصر/الإمارات») stay unchanged.
 update_field( 'field_sh_opt_footer_text', 'سيو هاوس شركة سيو متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.', 'option' );
 echo "footer: ", get_option( 'options_sh_footer_text' ), "\n";

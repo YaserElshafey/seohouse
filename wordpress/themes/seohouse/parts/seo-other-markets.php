@@ -1,7 +1,7 @@
 <?php
 /**
- * «أسواق أخرى نخدمها» on the Saudi, Egyptian and UAE SEO pages (before the FAQ): links to the two
- * other country pages and to the general SEO page. Same card component as «خبرة في ثلاثة أسواق
+ * «خدماتنا في الأسواق العربية» on the Saudi, Egyptian and UAE SEO pages (before the FAQ): links to
+ * the two other country pages and to the general SEO page. Same card component as «خبرة في ثلاثة أسواق
  * عربية» (sections/seo/markets.php). Links come from get_permalink() of the pages found by path;
  * a page that is not published is left out.
  *
@@ -13,10 +13,10 @@ defined( 'ABSPATH' ) || exit;
 
 $current = (string) ( $args['key'] ?? '' );
 $targets = array(
-	'seo-ksa'   => array( 'services/seo/ksa', __( 'شركة سيو في السعودية', 'seohouse' ) ),
-	'seo-egypt' => array( 'services/seo/egypt', __( 'شركة سيو في مصر', 'seohouse' ) ),
-	'seo-uae'   => array( 'services/seo/uae', __( 'شركة سيو في الإمارات', 'seohouse' ) ),
-	'seo'       => array( 'services/seo', __( 'شركة سيو', 'seohouse' ) ),
+	'seo-ksa'   => array( 'services/seo/ksa', __( 'تحسين محركات البحث في السعودية', 'seohouse' ) ),
+	'seo-egypt' => array( 'services/seo/egypt', __( 'تحسين محركات البحث في مصر', 'seohouse' ) ),
+	'seo-uae'   => array( 'services/seo/uae', __( 'تحسين محركات البحث في الإمارات', 'seohouse' ) ),
+	'seo'       => array( 'services/seo', __( 'تعرّف على خدمة تحسين محركات البحث', 'seohouse' ) ),
 );
 unset( $targets[ $current ] );
 $cards = array();
@@ -32,7 +32,7 @@ if ( ! $cards ) {
 ?>
 <section data-screen-label="Other markets" style="border-bottom: 1px solid var(--sh-line);">
 	<div style="max-width: 1200px; margin: 0px auto; padding: clamp(32px, 4.4vw, 60px) 20px;">
-		<h2 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); margin: 0px; line-height: 1.3;"><?php esc_html_e( 'أسواق أخرى نخدمها', 'seohouse' ); ?></h2>
+		<h2 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); margin: 0px; line-height: 1.3;"><?php esc_html_e( 'خدماتنا في الأسواق العربية', 'seohouse' ); ?></h2>
 		<div style="margin-top: 28px; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));">
 			<?php foreach ( $cards as $c ) : ?>
 			<a data-hcard href="<?php echo esc_url( $c[0] ); ?>" style="display: flex; flex-direction: column; border-radius: 20px; overflow: hidden; background: var(--sh-surface); border: 1px solid var(--sh-line); color: var(--sh-ink);">

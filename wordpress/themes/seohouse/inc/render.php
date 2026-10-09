@@ -50,7 +50,7 @@ function sh_render_sections( string $key ): void {
 		return;
 	}
 	echo '<main id="main" class="sh-main">';
-	$other_markets = in_array( $key, array( 'seo-ksa', 'seo-egypt', 'seo-uae' ), true ); // «أسواق أخرى نخدمها» before the FAQ
+	$other_markets = in_array( $key, array( 'seo-ksa', 'seo-egypt', 'seo-uae' ), true ); // «خدماتنا في الأسواق العربية» before the FAQ
 	foreach ( $rows as $i => $row ) {
 		if ( ! is_array( $row ) || ! empty( $row['sh_hide'] ) ) {
 			continue;
