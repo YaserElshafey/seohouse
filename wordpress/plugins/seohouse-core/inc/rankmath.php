@@ -324,33 +324,47 @@ add_action(
 );
 
 /**
- * Who owns which node when Rank Math is active (one source per node):
+ * Rank Math's graph completed in place (one node per entity, existing @ids and links kept):
  *
- * | Node                         | Source                                                        |
- * |------------------------------|---------------------------------------------------------------|
- * | Organization/Person (publisher), WebSite | Rank Math (Titles & Meta ← Local SEO)             |
- * | WebPage                      | Rank Math; Core sets its type (AboutPage, ContactPage,        |
- * |                              | CollectionPage, ProfilePage) and mainEntity                   |
- * | BreadcrumbList               | Core: the trail shown on the page (replaces Rank Math's)      |
- * | Article / BlogPosting        | Rank Math for posts (and case studies when its schema is on   |
- * |                              | for them); when Rank Math adds no graph to a post type (its   |
- * |                              | default for case studies and team profiles) Core's own graph  |
- * |                              | is used for that page                                         |
- * | Service                      | Core, for service, sector and country pages                   |
- * | FAQPage                      | Core, from the visible FAQ section                            |
- * | ItemList                     | Core, for the results, team and blog listings                 |
- * | Person (team profile)        | Core, for team pages and as the author of articles            |
+ * | Node                    | Source                                                              |
+ * |-------------------------|---------------------------------------------------------------------|
+ * | Organization            | Rank Math's company node (Titles & Meta ← Local SEO), kept as it is; |
+ * |                         | its @id is home_url('/#organization') and its type Organization;    |
+ * |                         | properties Rank Math leaves empty come from «إعدادات سيو هاوس»     |
+ * |                         | (sh_schema_organization()). No rating or review on it.              |
+ * | WebSite                 | Rank Math, without the SearchAction                                 |
+ * | WebPage                 | Rank Math; Core sets its type (AboutPage, ContactPage,             |
+ * |                         | CollectionPage, ProfilePage) and mainEntity                         |
+ * | BreadcrumbList          | Core: the trail shown on the page (replaces Rank Math's)            |
+ * | BlogPosting             | Rank Math; Core sets the headline to the H1, the author to the      |
+ * |                         | credited team profile, and keeps only the article's real image      |
+ * | Article (case study)    | Rank Math when its schema is on for case studies, completed the     |
+ * |                         | same way; otherwise Core's (sh_schema_case_article())               |
+ * | Service                 | Core, for service, sector and SEO country pages                     |
+ * | ItemList                | Core, the listing shown on each collection page                     |
+ * | FAQPage                 | Core, from the visible FAQ section                                  |
+ * | Person (team profile)   | Core, on the profile page and as the author of articles             |
  *
- * A schema the editor added in Rank Math's Schema tab always wins: Core then adds no node of
- * that type and leaves the editor's node as it is.
+ * When Rank Math adds no graph to a post type (its default for case studies and team profiles),
+ * Core's graph for that page is merged in. A schema the editor added in Rank Math's Schema tab
+ * always wins: Core then adds no node of that type and leaves the editor's node as it is.
  */
 function sh_rankmath_graph( $data, $jsonld = null ) {
-	if ( ! is_array( $data ) || is_404() || is_feed() ) {
+	if ( ! is_array( $data ) || is_feed() ) {
 		return $data;
 	}
+	$data = sh_rankmath_company( $data, $jsonld );
+	foreach ( $data as $k => $node ) {
+		if ( is_array( $node ) && in_array( 'WebSite', (array) ( $node['@type'] ?? array() ), true ) ) {
+			unset( $data[ $k ]['potentialAction'] ); // no SearchAction
+			if ( empty( $node['url'] ) ) {
+				$data[ $k ]['url'] = home_url( '/' );
+			}
+		}
+	}
 	$url = function_exists( 'sh_seo_canonical' ) ? sh_seo_canonical() : '';
-	if ( ! $url || ( ! is_singular() && ! is_home() && ! is_front_page() ) ) {
-		return $data;
+	if ( is_404() || ! $url || ( ! is_singular() && ! is_home() && ! is_front_page() ) ) {
+		return sh_schema_merge_by_id( $data );
 	}
 
 	// Rank Math adds no graph for a post type whose schema it has switched off (its default for
@@ -360,7 +374,7 @@ function sh_rankmath_graph( $data, $jsonld = null ) {
 		foreach ( sh_schema_graph() as $i => $node ) {
 			$data[ 'sh' . $i ] = $node;
 		}
-		return $data;
+		return sh_schema_merge_by_id( $data );
 	}
 
 	// schemas the editor set in Rank Math (stored as "schema-<id>")
@@ -372,14 +386,14 @@ function sh_rankmath_graph( $data, $jsonld = null ) {
 	}
 	$has = static fn( string $type ) => in_array( $type, $editor_types, true );
 
-	$org_ref = ! empty( $data['publisher']['@id'] ) ? array( '@id' => $data['publisher']['@id'] ) : array( '@id' => sh_schema_id( 'organization' ) );
+	$org_ref = sh_schema_org_ref();
 	$id      = is_home() ? (int) get_option( 'page_for_posts' ) : ( is_front_page() ? (int) get_option( 'page_on_front' ) : (int) get_queried_object_id() );
 	$post    = get_post( $id );
 	if ( ! $post ) {
-		return $data;
+		return sh_schema_merge_by_id( $data );
 	}
 	if ( 'page' === $post->post_type && 'none' === sh_schema_page_type( $id ) ) {
-		return $data;
+		return sh_schema_merge_by_id( $data );
 	}
 
 	// Rank Math's default Article for pages and team profiles describes them wrongly
@@ -403,88 +417,200 @@ function sh_rankmath_graph( $data, $jsonld = null ) {
 	$add  = array();
 	$main = null;
 	if ( 'page' === $post->post_type ) {
-		$type  = is_home() ? 'collection' : sh_schema_page_type( $id );
+		$type  = sh_schema_page_type( $id );
 		$types = array( 'about' => 'AboutPage', 'contact' => 'ContactPage', 'collection' => 'CollectionPage' );
-		if ( isset( $types[ $type ] ) && ! empty( $data['WebPage'] ) ) {
-			$data['WebPage']['@type'] = $types[ $type ];
+		if ( ! empty( $data['WebPage'] ) ) {
+			$data['WebPage']['@type'] = $types[ $type ] ?? 'WebPage';
+			if ( is_front_page() || in_array( $type, array( 'about', 'contact' ), true ) ) {
+				$data['WebPage']['about'] = $org_ref;
+			}
 		}
-		if ( ! empty( $data['WebPage'] ) && ( is_front_page() || in_array( $type, array( 'about', 'contact' ), true ) ) ) {
-			$data['WebPage']['about'] = $org_ref;
+		if ( 'about' === $type ) {
+			$main = $org_ref['@id'];
 		}
 		if ( 'service' === $type && ! $has( 'Service' ) ) {
-			$name    = sh_core_plain( sh_core_field( 'sh_schema_service', $id, '' ) );
-			$service = sh_schema_clean(
-				array(
-					'@type'       => 'Service',
-					'@id'         => $url . '#service',
-					'name'        => sh_core_plain( get_the_title( $id ) ),
-					'serviceType' => $name ? $name : sh_core_plain( get_the_title( $id ) ),
-					'url'         => $url,
-					'description' => (string) ( $data['WebPage']['description'] ?? '' ),
-					'provider'    => $org_ref,
-					'areaServed'  => sh_schema_organization()['areaServed'] ?? array(),
-				)
-			);
+			$service        = sh_schema_service( $id, $url, $org_ref );
 			$add['Service'] = $service;
 			$main           = $service['@id'];
 		}
-		if ( 'collection' === $type ) {
-			$key = sh_core_page_key( $id );
-			$ids = array();
-			if ( is_home() ) {
-				$ids = wp_list_pluck( $GLOBALS['wp_query']->posts, 'ID' );
-			} elseif ( in_array( $key, array( 'results', 'team' ), true ) ) {
-				$ids = get_posts(
-					array(
-						'post_type'      => 'results' === $key ? 'case_study' : 'team_member',
-						'posts_per_page' => 50,
-						'fields'         => 'ids',
-						'orderby'        => array( 'menu_order' => 'ASC', 'date' => 'DESC' ),
-					)
-				);
-			}
-			$list = sh_schema_item_list( $ids, $url );
-			if ( $list && ! $has( 'ItemList' ) ) {
+		if ( 'collection' === $type && ! $has( 'ItemList' ) ) {
+			$list = sh_schema_item_list( sh_schema_listing( $id ), $url );
+			if ( $list ) {
 				$add['ItemList'] = $list;
 				$main            = $list['@id'];
 			}
 		}
-		$faq = $has( 'FAQPage' ) ? array() : sh_schema_faq( $id, $url );
+		// one FAQ source: none when the editor or Rank Math already has one
+		$faq_found = $has( 'FAQPage' ) || array_filter( $data, static fn( $n ) => is_array( $n ) && in_array( 'FAQPage', (array) ( $n['@type'] ?? array() ), true ) );
+		$faq       = $faq_found ? array() : sh_schema_faq( $id, $url );
 		if ( $faq ) {
 			$add['FAQPage'] = $faq;
 		}
 	} elseif ( 'team_member' === $post->post_type && ! $has( 'Person' ) ) {
-		$person        = sh_schema_person( $id );
-		$add['Person'] = $person;
-		$main          = $person['@id'];
-		if ( ! empty( $data['WebPage'] ) ) {
-			$data['WebPage']['@type'] = 'ProfilePage';
-		}
-	} elseif ( 'post' === $post->post_type ) {
-		$m = sh_schema_author_member( $post );
-		if ( $m ) {
-			$person = sh_schema_person( $m );
-			foreach ( $data as $k => $node ) {
-				if ( ! is_array( $node ) || empty( $node['author']['@id'] ) || ! array_intersect( (array) ( $node['@type'] ?? array() ), array( 'Article', 'BlogPosting', 'NewsArticle' ) ) ) {
-					continue;
-				}
-				$old = $node['author']['@id'];
-				$data[ $k ]['author'] = array( '@id' => $person['@id'] );
-				// the WordPress user node Rank Math added for that author is replaced by the team profile
-				foreach ( $data as $k2 => $n2 ) {
-					if ( is_array( $n2 ) && ( $n2['@id'] ?? '' ) === $old && in_array( 'Person', (array) ( $n2['@type'] ?? array() ), true ) ) {
-						unset( $data[ $k2 ] );
-					}
-				}
+		$person = sh_schema_person( $id );
+		if ( $person ) {
+			$add['Person'] = $person;
+			$main          = $person['@id'];
+			if ( ! empty( $data['WebPage'] ) ) {
+				$data['WebPage']['@type'] = 'ProfilePage';
 			}
-			$add['AuthorPerson'] = $person;
 		}
+	} elseif ( in_array( $post->post_type, array( 'post', 'case_study' ), true ) ) {
+		$data = sh_rankmath_article( $data, $post, $url, $add );
 	}
 	if ( $main && ! empty( $data['WebPage'] ) ) {
 		$data['WebPage']['mainEntity'] = array( '@id' => $main );
 	}
 	foreach ( $add as $k => $node ) {
 		$data[ 'sh' . $k ] = $node;
+	}
+	return sh_schema_merge_by_id( $data );
+}
+
+/**
+ * Rank Math's company node as the company: @id home_url('/#organization') (references follow when
+ * Rank Math used another one, e.g. "/#person" while its Local SEO type is "Person"), type
+ * Organization, no rating or review. Rank Math's own values stay; what it leaves empty comes from
+ * «إعدادات سيو هاوس»; sameAs lists are joined. Pages where Rank Math prints no company node (archives
+ * drop its logo; case studies and team profiles get no Rank Math graph) receive the same name, logo
+ * and profiles from Rank Math's settings, so the company reads the same on every page.
+ */
+function sh_rankmath_company( array $data, $jsonld = null ): array {
+	$org_id = sh_schema_id( 'organization' );
+	$ref    = '';
+	foreach ( $data as $node ) {
+		if ( is_array( $node ) && in_array( 'WebSite', (array) ( $node['@type'] ?? array() ), true ) && ! empty( $node['publisher']['@id'] ) ) {
+			$ref = (string) $node['publisher']['@id'];
+		}
+	}
+	$key = null;
+	foreach ( $data as $k => $node ) {
+		if ( is_array( $node ) && isset( $node['@type'] ) && ( ( $ref && ( $node['@id'] ?? '' ) === $ref ) || ( ! $ref && 'publisher' === $k ) ) ) {
+			$key = $k;
+			break;
+		}
+	}
+	// what Rank Math's own company node carries on every page (name, logo, profiles)
+	$rm = array();
+	if ( is_object( $jsonld ) ) {
+		if ( method_exists( $jsonld, 'get_organization_name' ) ) {
+			$rm['name'] = (string) $jsonld->get_organization_name();
+		}
+		if ( method_exists( $jsonld, 'add_prop' ) ) {
+			$jsonld->add_prop( 'image', $rm );
+		}
+		if ( method_exists( $jsonld, 'get_social_profiles' ) ) {
+			$rm['sameAs'] = (array) $jsonld->get_social_profiles();
+		}
+		$rm = sh_schema_clean( $rm );
+	}
+	$core = $rm + sh_schema_organization();
+	if ( isset( $rm['sameAs'] ) ) {
+		$core['sameAs'] = array_values( array_unique( array_merge( $rm['sameAs'], sh_schema_profiles() ) ) );
+	}
+	if ( null === $key ) {
+		$data['publisher'] = array( '@type' => 'Organization', '@id' => $org_id ) + $core;
+		return $data;
+	}
+	$old = (string) ( $data[ $key ]['@id'] ?? '' );
+	if ( '' !== $old && $old !== $org_id ) {
+		$data = sh_schema_replace_id( $data, $old, $org_id );
+	}
+	$node          = $data[ $key ];
+	$node['@id']   = $org_id;
+	$node['@type'] = 'Organization';
+	unset( $node['aggregateRating'], $node['review'] );
+	foreach ( $core as $p => $v ) {
+		if ( '@' === $p[0] ) {
+			continue;
+		}
+		if ( ! isset( $node[ $p ] ) || '' === $node[ $p ] || array() === $node[ $p ] ) {
+			$node[ $p ] = $v;
+		} elseif ( 'sameAs' === $p ) {
+			$node[ $p ] = array_values( array_unique( array_merge( (array) $node[ $p ], (array) $v ) ) );
+		}
+	}
+	$data[ $key ] = $node;
+	return $data;
+}
+
+/**
+ * Article / BlogPosting of a post or case study, completed in place: headline = the H1 shown,
+ * author = what the page credits, image = the article's real image only.
+ */
+function sh_rankmath_article( array $data, WP_Post $post, string $url, array &$add ): array {
+	$org_ref = sh_schema_org_ref();
+	$keys    = array();
+	foreach ( $data as $k => $node ) {
+		if ( is_array( $node ) && ! ( is_string( $k ) && str_starts_with( $k, 'schema-' ) ) && array_intersect( (array) ( $node['@type'] ?? array() ), array( 'Article', 'BlogPosting', 'NewsArticle' ) ) ) {
+			$keys[] = $k;
+		}
+	}
+	if ( ! $keys ) {
+		if ( 'case_study' === $post->post_type ) {
+			$add['Article'] = sh_schema_case_article( $post, $url, $org_ref, (string) ( $data['WebPage']['description'] ?? '' ) );
+		}
+		return $data;
+	}
+
+	// author
+	$author = null; // null = keep Rank Math's; array() = none
+	if ( 'case_study' === $post->post_type ) {
+		$author = $org_ref;
+	} else {
+		[ $member, $linked ] = sh_schema_post_writer( $post );
+		if ( $member ) {
+			$person              = sh_schema_person( $member );
+			$add['AuthorPerson'] = $person;
+			$author              = array( '@id' => $person['@id'] );
+		} elseif ( $linked ) {
+			$author = array(); // the article points to a deleted or hidden profile: no author is made up
+		} elseif ( '' === trim( (string) get_the_author_meta( 'display_name', (int) $post->post_author ) ) ) {
+			$author = $org_ref; // the page credits the company's team
+		}
+	}
+
+	$real    = sh_schema_post_image( $post );
+	$real_id = $real ? (int) attachment_url_to_postid( $real ) : 0;
+	foreach ( $keys as $k ) {
+		$title                    = sh_core_plain( get_the_title( $post ) );
+		$data[ $k ]['headline']   = $title;
+		$data[ $k ]['name']       = $title;
+		$data[ $k ]['publisher']  = $org_ref;
+		if ( 'case_study' === $post->post_type ) {
+			$summary = sh_core_plain( sh_core_field( 'summary', $post->ID, '' ) );
+			if ( '' !== $summary ) {
+				$data[ $k ]['description'] = $summary;
+			}
+		}
+		if ( null !== $author ) {
+			$old = (string) ( $data[ $k ]['author']['@id'] ?? '' );
+			if ( $author ) {
+				$data[ $k ]['author'] = $author;
+			} else {
+				unset( $data[ $k ]['author'] );
+			}
+			$data = sh_schema_drop_unreferenced( $data, $old );
+		}
+		// image: the article's own image, never a site-wide default
+		$img = $data[ $k ]['image'] ?? null;
+		$cur = is_array( $img ) ? (string) ( $img['@id'] ?? ( $img['url'] ?? '' ) ) : (string) $img;
+		if ( '' !== $cur ) {
+			$same = $real && ( $cur === $real || ( $real_id && (int) attachment_url_to_postid( $cur ) === $real_id ) );
+			if ( ! $same ) {
+				unset( $data[ $k ]['image'] );
+				if ( ( $data['WebPage']['primaryImageOfPage']['@id'] ?? '' ) === $cur ) {
+					unset( $data['WebPage']['primaryImageOfPage'] );
+				}
+				$data = sh_schema_drop_unreferenced( $data, $cur );
+			}
+		}
+		if ( empty( $data[ $k ]['image'] ) && $real ) {
+			$data[ $k ]['image'] = array(
+				'@type' => 'ImageObject',
+				'url'   => $real,
+			);
+		}
 	}
 	return $data;
 }
@@ -556,7 +682,8 @@ function sh_rankmath_admin_page(): void {
 		echo '<tr><td><a href="' . esc_url( (string) get_edit_post_link( $r['id'] ) ) . '">' . esc_html( $r['title'] ) . '</a> <small>(' . esc_html( $r['type'] ) . ')</small></td><td>' . esc_html( $r['label'] ) . '</td><td>' . esc_html( $fmt( $r['core'] ) ) . '</td><td>' . esc_html( $fmt( $r['rank_math'] ) ) . '</td><td>' . esc_html( $names[ $r['action'] ] ) . '</td></tr>';
 	}
 	echo '</tbody></table>';
-	echo '<h2>' . esc_html__( 'البيانات المنظمة', 'seohouse-core' ) . '</h2><p style="max-width:62em">' . esc_html__( 'Rank Math يخرج Organization وWebSite وWebPage والمقالات. سيو هاوس يضيف إلى نفس المخطط: Service لصفحات الخدمات والقطاعات والدول، وFAQPage من قسم الأسئلة الظاهر، وBreadcrumbList من مسار التنقل الظاهر، وPerson لصفحات الفريق وكاتب المقال، وItemList لصفحات القوائم. أي Schema تضيفه من تبويب Schema في Rank Math يبقى ولا يُضاف مقابله من سيو هاوس. اضبط نوع الكيان (مؤسسة) واسمها وشعارها من Rank Math ← العناوين والوصف ← Local SEO.', 'seohouse-core' ) . '</p></div>';
+	echo '<h2 id="sh-schema">' . esc_html__( 'البيانات المنظمة', 'seohouse-core' ) . '</h2><p style="max-width:62em">' . esc_html__( 'Rank Math يخرج الشركة وWebSite وWebPage والمقالات، وسيو هاوس يكمّلها داخل نفس المخطط: نوع الصفحة (عن الشركة، اتصل بنا، صفحات التجميع، الملف الشخصي)، وService لصفحات الخدمات والقطاعات والدول، وItemList للقوائم الظاهرة، وFAQPage من قسم الأسئلة الظاهر، وBreadcrumbList من مسار التنقل، وPerson لأعضاء الفريق وكتّاب المقالات. بيانات الشركة التي يتركها Rank Math فارغة تُكمل من «إعدادات سيو هاوس»، وما يحدده Rank Math يبقى كما هو. أي Schema تضيفه من تبويب Schema في Rank Math يبقى ولا يُضاف مقابله.', 'seohouse-core' ) . '</p>';
+	echo '<p><a class="button" href="' . esc_url( admin_url( 'admin.php?page=seohouse-schema' ) ) . '">' . esc_html__( 'فحص البيانات المنظمة', 'seohouse-core' ) . '</a></p></div>';
 }
 
 /* ------------------------------------------------------------------ sitemap cache after a move or an update */

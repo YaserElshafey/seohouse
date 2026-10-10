@@ -186,3 +186,33 @@ function sh_core_reviews_page(): void {
 	submit_button( __( 'حفظ', 'seohouse-core' ), 'primary', 'sh_reviews_save' );
 	echo '</form></div>';
 }
+
+/**
+ * The reviews stay visible, but the company does not describe itself with ratings: a JSON-LD block
+ * that the reviews plugin prints inside its shortcode output and that carries AggregateRating or
+ * Review is left out (the widget's HTML is untouched). Schema that the plugin adds elsewhere in the
+ * page (its own setting) is not reachable here — «فحص البيانات المنظمة» reports it.
+ */
+add_filter(
+	'do_shortcode_tag',
+	static function ( $output, $tag ) {
+		if ( ! is_string( $output ) || false === stripos( $output, 'application/ld+json' ) ) {
+			return $output;
+		}
+		$code = sh_core_reviews_for( (int) get_queried_object_id() )['code'];
+		$tags = array( 'trustindex' );
+		if ( preg_match( '/^\[\s*([\w-]+)/', $code, $m ) ) {
+			$tags[] = $m[1];
+		}
+		if ( ! in_array( $tag, $tags, true ) ) {
+			return $output;
+		}
+		return (string) preg_replace_callback(
+			'#<script\b[^>]*application/ld\+json[^>]*>.*?</script>#is',
+			static fn( $s ) => preg_match( '/"@type"\s*:\s*"(AggregateRating|Review)"|"(aggregateRating|review)"\s*:/', $s[0] ) ? '' : $s[0],
+			$output
+		);
+	},
+	10,
+	2
+);

@@ -80,7 +80,7 @@
       "label": "نوع الصفحة في Schema",
       "name": "sh_schema_type",
       "type": "select",
-      "instructions": "",
+      "instructions": "صفحات التجميع (الخدمات، القطاعات، نتائج الأعمال، الفريق، المدونة) تُخرج CollectionPage دائمًا مع قائمة العناصر الظاهرة فيها. «بدون» يوقف البيانات المنظمة للصفحة.",
       "required": 0,
       "choices": {
         "auto": "تلقائي حسب القالب",
