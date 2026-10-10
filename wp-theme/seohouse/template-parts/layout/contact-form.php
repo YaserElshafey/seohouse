@@ -11,16 +11,20 @@
  *   custom_content (string) — optional HTML; replaces the <form> if non-empty
  *   expect_title   (string) — heading for the expectations card (shown below form)
  *   expect_items   (array)  — array of ['exp_text' => '...'] items; card hidden if empty
+ *   submit_text    (string) — submit button label
  *
  * The form submits to the existing sh_handle_contact() AJAX handler.
  * The hidden plan_selected field carries the chosen pricing plan (empty on the
  * regular contact page; filled by pricing-page JS).
+ * Spam protection: a hidden honeypot field (sh_hp) and a signed render
+ * timestamp (sh_ts) checked server-side in sh_handle_contact().
  */
 $form_title    = $args['form_title']    ?? sh_option( 'contact_form_title',    'أرسل لنا طلبك' );
-$form_sub      = $args['form_sub']      ?? sh_option( 'contact_form_sub',      'سنتواصل معك خلال 24 ساعة لتأكيد موعد الاستشارة.' );
-$form_note     = $args['form_note']     ?? sh_option( 'contact_form_note',     'أو تواصل معنا على واتساب مباشرةً — سنردّ في أقرب وقت' );
-$success_title = $args['success_title'] ?? sh_option( 'contact_success_title', 'تم الإرسال بنجاح!' );
-$success_desc  = $args['success_desc']  ?? sh_option( 'contact_success_desc',  'شكراً على تواصلك — سيتصل بك أحد متخصصينا خلال 24 ساعة لتحديد موعد الاستشارة.' );
+$form_sub      = $args['form_sub']      ?? sh_option( 'contact_form_sub',      'سنتواصل معك خلال يوم عمل لتحديد موعد الاستشارة.' );
+$form_note     = $args['form_note']     ?? sh_option( 'contact_form_note',     'أو تواصل معنا مباشرةً عبر الهاتف أو البريد الإلكتروني.' );
+$success_title = $args['success_title'] ?? sh_option( 'contact_success_title', 'تم استلام طلبك' );
+$success_desc  = $args['success_desc']  ?? sh_option( 'contact_success_desc',  'وصلنا طلبك، وسيتواصل معك فريقنا لتحديد موعد الاستشارة.' );
+$submit_text   = $args['submit_text']   ?? 'إرسال الطلب';
 $custom_content = $args['custom_content'] ?? '';
 $expect_title  = $args['expect_title']  ?? '';
 $expect_items  = $args['expect_items']  ?? [];
@@ -34,6 +38,11 @@ $expect_items  = $args['expect_items']  ?? [];
       <?php if ( ! trim( wp_strip_all_tags( $custom_content ) ) ) : ?>
       <form id="conForm">
         <input type="hidden" name="plan_selected" id="planSelected" value="">
+        <input type="hidden" name="sh_ts" value="<?php echo esc_attr( sh_contact_form_token() ); ?>">
+        <div class="form-hp" aria-hidden="true">
+          <label for="shHp">اترك هذا الحقل فارغًا</label>
+          <input type="text" name="sh_hp" id="shHp" value="" tabindex="-1" autocomplete="off">
+        </div>
         <div class="form-row">
           <div class="form-group">
             <label>الاسم <span>*</span></label>
@@ -73,9 +82,9 @@ $expect_items  = $args['expect_items']  ?? [];
         </div>
         <button type="submit" class="form-submit">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-          أرسل الطلب
+          <?php echo esc_html( $submit_text ); ?>
         </button>
-        <p id="conFormError" class="form-error"></p>
+        <p id="conFormError" class="form-error" role="alert" aria-live="polite"></p>
         <p class="form-note"><?php echo esc_html( $form_note ); ?></p>
       </form>
       <?php else : ?>
@@ -83,7 +92,7 @@ $expect_items  = $args['expect_items']  ?? [];
       <?php endif; ?>
     </div>
 
-    <div class="form-success" id="formSuccess">
+    <div class="form-success" id="formSuccess" role="status" aria-live="polite">
       <div class="success-ico">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
       </div>

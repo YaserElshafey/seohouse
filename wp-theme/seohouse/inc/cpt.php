@@ -126,47 +126,79 @@ add_action( 'init', function () {
         'show_in_rest'        => true,
     ] );
 
-    // ── Bookings (contact page form submissions) ──────────────────
+    // ── Contact requests (contact form submissions) ──────────────
+    // Post type slug kept as sh_booking so earlier entries stay in the same list.
     register_post_type( 'sh_booking', [
         'labels'       => [
-            'name'          => 'الحجوزات',
-            'singular_name' => 'حجز',
-            'all_items'     => 'جميع الحجوزات',
-            'edit_item'     => 'تفاصيل الحجز',
-            'not_found'     => 'لا توجد حجوزات بعد',
+            'name'          => 'طلبات التواصل',
+            'menu_name'     => 'طلبات التواصل',
+            'singular_name' => 'طلب تواصل',
+            'all_items'     => 'جميع الطلبات',
+            'edit_item'     => 'تفاصيل الطلب',
+            'search_items'  => 'بحث في الطلبات',
+            'not_found'     => 'لا توجد طلبات بعد',
         ],
         'public'       => false,
         'show_ui'      => true,
         'show_in_menu' => true,
         'supports'     => [ 'title' ],
-        'menu_icon'    => 'dashicons-calendar-alt',
+        'menu_icon'    => 'dashicons-email-alt',
         'capabilities' => [ 'create_posts' => 'do_not_allow' ],
         'map_meta_cap' => true,
     ] );
 
 } );
 
-// ── Booking admin columns ─────────────────────────────────────────
+// ── Contact request admin columns ─────────────────────────────────
 add_filter( 'manage_sh_booking_posts_columns', function ( $cols ) {
     return [
         'cb'             => $cols['cb'],
         'title'          => 'الاسم',
         'bk_phone'       => 'الجوال',
         'bk_email'       => 'البريد',
-        'bk_date'        => 'التاريخ',
-        'bk_time'        => 'الوقت',
+        'bk_service'     => 'الخدمة',
         'date_submitted' => 'وقت الإرسال',
     ];
 } );
 
 add_action( 'manage_sh_booking_posts_custom_column', function ( $col, $post_id ) {
-    if ( in_array( $col, [ 'bk_phone', 'bk_email', 'bk_date', 'bk_time' ], true ) ) {
+    if ( in_array( $col, [ 'bk_phone', 'bk_email', 'bk_service' ], true ) ) {
         echo esc_html( get_post_meta( $post_id, $col, true ) );
     }
     if ( 'date_submitted' === $col ) {
         echo esc_html( get_the_date( 'Y-m-d H:i', $post_id ) );
     }
 }, 10, 2 );
+
+// ── Contact request details (read-only box on the edit screen) ────
+add_action( 'add_meta_boxes_sh_booking', function () {
+    add_meta_box( 'sh_booking_details', 'بيانات الطلب', function ( $post ) {
+        $rows = [
+            'bk_phone'   => 'الجوال',
+            'bk_email'   => 'البريد',
+            'bk_website' => 'الموقع',
+            'bk_service' => 'الخدمة',
+            'bk_plan'    => 'الباقة المختارة',
+            'bk_message' => 'الرسالة',
+            'bk_source'  => 'صفحة الإرسال',
+            'bk_date'    => 'التاريخ المطلوب',
+            'bk_time'    => 'الوقت المطلوب',
+        ];
+        echo '<table class="widefat striped"><tbody>';
+        foreach ( $rows as $key => $label ) {
+            $val = (string) get_post_meta( $post->ID, $key, true );
+            if ( '' === $val ) {
+                continue;
+            }
+            echo '<tr><th style="width:160px">' . esc_html( $label ) . '</th><td>' . nl2br( esc_html( $val ) ) . '</td></tr>';
+        }
+        echo '<tr><th>وقت الإرسال</th><td>' . esc_html( get_the_date( 'Y-m-d H:i', $post ) ) . '</td></tr>';
+        if ( get_post_meta( $post->ID, 'bk_mail_failed', true ) ) {
+            echo '<tr><th>تنبيه</th><td style="color:#b32d2e">تعذّر إرسال إشعار البريد لهذا الطلب — راجع إعدادات البريد في الموقع.</td></tr>';
+        }
+        echo '</tbody></table>';
+    }, 'sh_booking', 'normal', 'high' );
+} );
 
 // ════════════════════════════════════════════════════════════════
 // Taxonomies

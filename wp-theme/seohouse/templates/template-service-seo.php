@@ -17,11 +17,11 @@ $seo_why_raw        = sh_field( 'seo_why_title',       null, "السيو ليس 
 $seo_why_desc       = sh_field( 'seo_why_desc',        null, 'كل عميل يأتي عبر البحث العضوي يكلّفك أقل من نظيره عبر الإعلان. والأهم — يبقى يأتي حتى بعد توقفك عن الإنفاق.' );
 $seo_why_title      = nl2br( esc_html( $seo_why_raw ) );
 $seo_wwd_title      = sh_field( 'seo_wwd_title',       null, 'ستة محاور تنفيذية تشكّل خدمة السيو' );
-$seo_wwd_desc       = sh_field( 'seo_wwd_desc',        null, 'السيو ليس مهمة واحدة — هو منظومة من ستة محاور كل واحد منها يدعم الآخر.' );
+$seo_wwd_desc       = sh_field( 'seo_wwd_desc',        null, 'لكل محور مُخرَج واضح تستلمه، ويُنفَّذ بالترتيب الذي تحتاجه حالة موقعك.' );
 $seo_sub_title      = sh_field( 'seo_sub_title',       null, 'اختر الخدمة التي يحتاجها عملك' );
 $seo_reporting_raw  = sh_field( 'seo_reporting_title', null, "تقارير تتكلم لغة عملك\n— لا لغة المطورين" );
 $seo_reporting_title = nl2br( esc_html( $seo_reporting_raw ) );
-$seo_reporting_desc  = sh_field( 'seo_reporting_desc', null, 'في معظم الوكالات تأتيك تقارير ممتلئة بمصطلحات جوجل لا تفهم منها شيئاً. عندنا التقرير يُظهر لك بوضوح: كم ليد جاء من البحث، كم بيع، وأين تذهب ميزانيتك.' );
+$seo_reporting_desc  = sh_field( 'seo_reporting_desc', null, 'التقرير الشهري يوضح ما نفّذناه، وما تغيّر في الظهور والزيارات، وكم استفساراً أو طلباً جاء من البحث العضوي — بالقدر الذي يسمح به التتبّع المُعدّ على موقعك.' );
 $seo_proof_title    = sh_field( 'seo_proof_title',     null, 'نتائج حقيقية لعملاء حقيقيين' );
 $seo_cta_title      = sh_field( 'seo_cta_title',       null, 'ابدأ بكسب عملاء يبحثون عنك فعلاً' );
 
@@ -33,7 +33,17 @@ $seo_why_items    = sh_field( 'seo_why_items',    null, [] );
 $seo_impact_rows  = sh_field( 'seo_impact_rows',  null, [] );
 $seo_sub_desc     = sh_field( 'seo_sub_desc',     null, 'كل خدمة يمكن تنفيذها مستقلة أو ضمن باقة سيو متكاملة — حسب وضع موقعك ومرحلتك.' );
 $seo_method_title = sh_field( 'seo_method_title', null, 'منهجية شفافة من اليوم الأول' );
-$seo_method_desc  = sh_field( 'seo_method_desc',  null, 'كل مرحلة لها هدف واضح ومؤشر قياس — لا خطوات غامضة، لا وعود بدون تنفيذ.' );
+$seo_method_desc  = sh_field( 'seo_method_desc',  null, 'كل مرحلة لها مُخرَج واضح، وترتيب العمل يتحدد حسب حالة موقعك وأهدافك — لا قالب واحد لكل المواقع.' );
+$seo_resp_tag     = sh_field( 'seo_resp_tag',     null, 'توزيع الأدوار' );
+$seo_resp_title   = sh_field( 'seo_resp_title',   null, 'ما نتولاه، وما نحتاجه منك' );
+$seo_resp_desc    = sh_field( 'seo_resp_desc',    null, 'وضوح الأدوار من البداية يمنع تعطّل التنفيذ، خصوصاً في التعديلات التقنية التي تحتاج مطوّر الموقع.' );
+$seo_resp_team_t  = sh_field( 'seo_resp_team_title',   null, 'مسؤولية فريقنا' );
+$seo_resp_team    = sh_field( 'seo_resp_team_items',   null, "التدقيق وتحديد الأولويات وخطة العمل المكتوبة\nتحسين الصفحات والمحتوى ونشره عند توفّر صلاحية لوحة التحكم\nكتابة مواصفات واضحة لأي تعديل برمجي ومراجعته بعد التطبيق\nإعداد تتبّع الاستفسارات وإعداد التقرير الشهري" );
+$seo_resp_client_t = sh_field( 'seo_resp_client_title', null, 'ما نحتاجه منك أو من مطوّرك' );
+$seo_resp_client  = sh_field( 'seo_resp_client_items', null, "صلاحيات Search Console وGoogle Analytics ولوحة تحكم الموقع\nتنفيذ التعديلات البرمجية عبر مطوّرك، أو منحنا وصولاً لتنفيذها\nمراجعة المحتوى واعتماده من ناحية دقة المعلومات والأسعار\nمشاركة نتيجة الاستفسارات أو المبيعات لربطها بمصدرها" );
+$seo_resp_lines   = fn( $raw ) => array_values( array_filter( array_map( 'trim', explode( "\n", (string) $raw ) ) ) );
+$seo_resp_team    = $seo_resp_lines( $seo_resp_team );
+$seo_resp_client  = $seo_resp_lines( $seo_resp_client );
 $seo_proof_desc   = sh_field( 'seo_proof_desc',   null, 'نماذج من نتائج عملاء سابقين — أرقام موثّقة من Search Console وAnalytics، لا ادعاءات.' );
 $seo_proof_cards  = sh_field( 'seo_proof_cards',  null, [] );
 $seo_ind_title    = sh_field( 'seo_ind_title',    null, 'السيو يختلف من قطاع إلى آخر — ونحن نفهم ذلك' );
@@ -193,12 +203,12 @@ if ( empty( $seo_proof_cards ) ) {
     <div class="wwd-grid">
       <?php
       $wwd_defaults = [
-          [ 'n' => '01', 'title' => 'تحليل تقني عميق',     'desc' => 'فحص بنية الموقع، السرعة، الزحف، Core Web Vitals — نكشف ما يُعيق ترتيبك.', 'svg' => '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' ],
-          [ 'n' => '02', 'title' => 'بحث الكلمات الذكي',   'desc' => 'الكلمات التي يبحث بها عملاؤك الجادون — لا الكلمات العامة الواسعة.', 'svg' => '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>' ],
-          [ 'n' => '03', 'title' => 'تحسين الصفحات',        'desc' => 'عناوين، أوصاف، روابط داخلية، بيانات هيكلية — كل صفحة تُعامَل كصفحة هبوط.', 'svg' => '<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>' ],
-          [ 'n' => '04', 'title' => 'محتوى يستحق الترتيب', 'desc' => 'محتوى يستهدف نية البحث الصحيحة ويُقنع القارئ بالتحرك.', 'svg' => '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>' ],
-          [ 'n' => '05', 'title' => 'روابط موثوقة',          'desc' => 'روابط طبيعية من مصادر ذات سلطة حقيقية — تُعزز ترتيبك بدون مخاطر.', 'svg' => '<path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>' ],
-          [ 'n' => '06', 'title' => 'تقارير تربط بعملك',   'desc' => 'تقرير شهري يربط الزيارات بالليدز والمبيعات وقرارات النمو.', 'svg' => '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>' ],
+          [ 'n' => '01', 'title' => 'تحليل تقني عميق',     'desc' => 'نفحص الزحف والفهرسة والسرعة وبنية الروابط. تستلم قائمة إصلاحات مرتّبة حسب الأثر، محدَّد فيها من ينفّذ كل بند.', 'svg' => '<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>' ],
+          [ 'n' => '02', 'title' => 'بحث الكلمات الذكي',   'desc' => 'نحدد عبارات الباحثين الأقرب للشراء ونربط كل مجموعة بصفحة واحدة. تستلم خريطة كلمات وصفحات تمنع تنافس صفحاتك فيما بينها.', 'svg' => '<circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>' ],
+          [ 'n' => '03', 'title' => 'تحسين الصفحات',        'desc' => 'عناوين وأوصاف وهيكلة العناوين والروابط الداخلية والبيانات المنظمة. ننفّذها مباشرة متى توفّرت صلاحية لوحة التحكم.', 'svg' => '<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>' ],
+          [ 'n' => '04', 'title' => 'محتوى يستحق الترتيب', 'desc' => 'صفحات خدمات ومقالات تستهدف نية بحث محددة. تستلم خطة محتوى ونصوصاً جاهزة للنشر بعد مراجعتك لدقة المعلومات.', 'svg' => '<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>' ],
+          [ 'n' => '05', 'title' => 'روابط موثوقة',          'desc' => 'روابط من مواقع ذات صلة بمجالك، دون شبكات روابط أو أساليب مخالفة لإرشادات جوجل. تستلم سجلاً بكل رابط ومصدره.', 'svg' => '<path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>' ],
+          [ 'n' => '06', 'title' => 'تقارير تربط بعملك',   'desc' => 'نُعدّ تتبّع الاستفسارات والمبيعات، ثم تقرير شهري يوضح ما نُفّذ وما تغيّر والخطوة التالية.', 'svg' => '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>' ],
       ];
       $dcs = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ];
       $items = ! empty( $features ) ? $features : $wwd_defaults;
@@ -267,10 +277,10 @@ if ( empty( $seo_proof_cards ) ) {
         <h2 class="h2" style="margin-bottom:16px"><?php echo wp_kses_post( $seo_reporting_title ); ?></h2>
         <p class="bod" style="margin-bottom:18px"><?php echo esc_html( $seo_reporting_desc ); ?></p>
         <div class="chklist sr d1" style="margin-bottom:24px">
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>الترافيك</strong> — مصدره، جودته، وسلوكه على موقعك</span></div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>الليدز</strong> — كم نموذج تُعبّأ، كم مكالمة، وتكلفة كل واحد</span></div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>المبيعات</strong> — للمتاجر نربط البحث بالمنتج المباع وقيمته</span></div>
-          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>الأداء اللحظي</strong> — لوحة تحكم حية تتابعها وقتما شئت</span></div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>الظهور</strong> — مرات الظهور والنقرات ومتوسط الترتيب من Search Console</span></div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>الزيارات</strong> — الزيارات العضوية لكل صفحة، وسلوك الزائر عليها</span></div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>الاستفسارات</strong> — النماذج والمكالمات ونقرات التواصل، بعد إعداد تتبّعها في GA4</span></div>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><strong>المبيعات</strong> — للمتاجر عبر تتبّع التجارة الإلكترونية، ولغيرها بمطابقة الاستفسارات مع سجل مبيعاتك</span></div>
         </div>
       </div>
       <div class="sr d1">
@@ -306,12 +316,12 @@ if ( empty( $seo_proof_cards ) ) {
     <div class="method-grid">
       <?php
       $method_items = ! empty( $steps ) ? array_slice( $steps, 0, 6 ) : [
-          [ 'title' => 'استكشاف وفهم العمل',      'desc' => 'نتعرف على نشاطك، جمهورك، منافسيك، وأهدافك التجارية الفعلية' ],
-          [ 'title' => 'تدقيق سيو شامل',           'desc' => 'تحليل تقني ومحتوى وروابط — نكشف فجوات الأداء والفرص الكامنة' ],
-          [ 'title' => 'الاستراتيجية والخطة',      'desc' => 'خارطة طريق مخصصة بأولويات وجداول زمنية — قابلة للتنفيذ والمتابعة' ],
-          [ 'title' => 'التنفيذ الدقيق',           'desc' => 'تطبيق التحسينات بالترتيب الصحيح — تقني ثم محتوى ثم روابط' ],
-          [ 'title' => 'القياس والربط بالأعمال',  'desc' => 'تقرير شهري يربط السيو بالليدز والمبيعات — لا أرقام مجردة' ],
-          [ 'title' => 'التحسين المستمر',          'desc' => 'كل شهر يبني على السابق — السيو لعبة طويلة المدى تتراكم بالوقت' ],
+          [ 'title' => 'فهم العمل والأهداف',       'desc' => 'نحدد ما يعنيه النجاح لعملك: استفسارات أو طلبات أو مبيعات، والخدمات والمناطق ذات الأولوية.' ],
+          [ 'title' => 'تدقيق سيو شامل',           'desc' => 'تقني ومحتوى وروابط ومنافسون. المُخرَج: قائمة مشكلات وفرص مرتّبة حسب الأثر والجهد.' ],
+          [ 'title' => 'ترتيب الأولويات',          'desc' => 'موقع جديد: البنية والصفحات الأساسية أولاً. موقع قائم: ما يعيق الفهرسة والصفحات القريبة من الصفحة الأولى. متجر: الأقسام والمنتجات الأعلى طلباً.' ],
+          [ 'title' => 'التنفيذ',                  'desc' => 'ننفّذ ما يقع ضمن صلاحياتنا مباشرة، ونسلّم المطوّر مواصفات مكتوبة لما يحتاج تعديلاً برمجياً، ثم نتحقق من التطبيق.' ],
+          [ 'title' => 'القياس والربط بالأعمال',  'desc' => 'نراجع أو نُعدّ تتبّع النماذج والمكالمات والمبيعات في GA4 مع Search Console، ليُقاس الأثر على العمل لا على الزيارات وحدها.' ],
+          [ 'title' => 'المراجعة الشهرية',         'desc' => 'نراجع ما تحقق كل شهر ونعيد ترتيب الأولويات حسب ما يعمل فعلاً، لا حسب خطة ثابتة.' ],
       ];
       $dcs = [ '', 'd1', 'd2', 'd1', 'd2', 'd3' ];
       foreach ( $method_items as $idx => $mi ) :
@@ -325,6 +335,36 @@ if ( empty( $seo_proof_cards ) ) {
     </div>
   </div>
 </section>
+
+<?php if ( $seo_resp_team || $seo_resp_client ) : ?>
+<!-- Roles: what our team handles vs. what the client / developer provides -->
+<section class="sec sec-surface">
+  <div class="wrap">
+    <div class="sh c sr"><span class="tag"><?php echo esc_html( $seo_resp_tag ); ?></span><h2 class="h2"><?php echo esc_html( $seo_resp_title ); ?></h2><p class="bod"><?php echo esc_html( $seo_resp_desc ); ?></p></div>
+    <div class="seo-resp-grid">
+      <?php
+      foreach ( [
+          [ 'title' => $seo_resp_team_t,   'items' => $seo_resp_team,   'dc' => '',   'svg' => '<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>' ],
+          [ 'title' => $seo_resp_client_t, 'items' => $seo_resp_client, 'dc' => ' d1', 'svg' => '<path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>' ],
+      ] as $rc ) :
+          if ( empty( $rc['items'] ) ) continue;
+      ?>
+      <div class="wwd-card seo-resp-card sr<?php echo esc_attr( $rc['dc'] ); ?>">
+        <div class="seo-resp-head">
+          <div class="wwd-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="19" height="19"><?php echo $rc['svg']; // phpcs:ignore -- static markup ?></svg></div>
+          <h3><?php echo esc_html( $rc['title'] ); ?></h3>
+        </div>
+        <div class="chklist">
+          <?php foreach ( $rc['items'] as $ri ) : ?>
+          <div class="chk-item"><div class="chk-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span><?php echo esc_html( $ri ); ?></span></div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
 
 <!-- Proof / Results -->
 <section class="sec sec-white">
@@ -419,7 +459,8 @@ if ( empty( $seo_proof_cards ) ) {
         <div class="faq-list sr d1">
           <?php
           $faq_data = ! empty( $faqs ) ? $faqs : [
-              [ 'question' => 'كم يستغرق السيو حتى أرى نتائج في عملي؟', 'answer' => 'المؤشرات الأولى تظهر خلال 30–60 يوم. الترافيك الفعلي والليدز يبدآن في الظهور بين الشهر الثالث والسادس. أما النتائج الكبيرة فتأتي بعد 6–12 شهر — السيو لعبة تراكم.' ],
+              [ 'question' => 'كم يستغرق السيو حتى أرى نتائج في عملي؟', 'answer' => 'لا يوجد موعد ثابت يمكن ضمانه؛ فالوقت يتأثر بحالة الموقع التقنية وتاريخه في جوجل، وقوة المنافسة على الكلمات المستهدفة، وحجم المحتوى المطلوب بناؤه، وسرعة تنفيذ التعديلات من جانبكم أو من المطوّر. عادةً تظهر أولاً مؤشرات مبكرة في Search Console مثل تحسّن الفهرسة ومرات الظهور، ثم الزيارات، ثم الاستفسارات والمبيعات. نوضّح التوقع الواقعي لموقعك بعد التدقيق، لا قبله.' ],
+              [ 'question' => 'هل تضمنون الوصول إلى الصفحة الأولى؟', 'answer' => 'لا. ترتيب نتائج جوجل لا تتحكم فيه أي جهة خارجه، ومن يضمن مركزاً محدداً في وقت محدد يبالغ. ما نلتزم به: خطة مكتوبة بأولويات واضحة، وتنفيذ موثّق لكل بند، وتقرير يقيس الظهور والزيارات والاستفسارات كما هي.' ],
               [ 'question' => 'كيف أفرّق بين شركة سيو حقيقية وأخرى تبيع وعوداً؟', 'answer' => 'شركة السيو الحقيقية: تطلب وصولاً لـ Search Console، تُقدّم تدقيقاً تفصيلياً قبل البيع، تربط تقاريرها بنتائج عملك، ولا تَعِد بمراتب محددة في وقت محدد.' ],
               [ 'question' => 'هل السيو يحلّ محل إعلانات Google Ads؟', 'answer' => 'لا — يُكمّلها. الإعلانات تجلب زيارات فورية، السيو يبني أصلاً مستداماً. الاستراتيجية الذكية: الإعلانات للحاجة الفورية، والسيو للمدى البعيد.' ],
               [ 'question' => 'هل أحتاج عقداً طويلاً؟', 'answer' => 'لا. نعمل بدون عقود ملزمة. نُثبت قيمتنا شهراً بعد شهر — وأنت من يُقرّر الاستمرار.' ],

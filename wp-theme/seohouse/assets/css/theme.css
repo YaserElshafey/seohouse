@@ -1194,3 +1194,48 @@ a.svc-card,a.svc-hub-card{text-decoration:none;color:inherit}
 /* ─ Typography — body text on wide cards remains RTL-aligned ─ */
 /* Centered text-align is only set on cards with explicitly short content (market-card, who-card on dark) */
 /* All other card body text (.feat-card p, .wwd-card p, .svc-hub-card p, etc.) inherits RTL default = right-aligned */
+
+/* ─ Contact page — company details, mobile order, location map (v1.5.0) ─ */
+/* All rules scoped to contact-page classes; the pricing page shares .con-layout and is unaffected. */
+.form-hp{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0}
+.con-info-card h2.info-card-label{font-family:inherit;line-height:1.4}
+.con-layout--contact .con-details{font-style:normal}
+.con-layout--contact .con-detail>div:last-child{min-width:0}
+.con-layout--contact .con-d-sub{color:rgba(255,255,255,.55);margin-bottom:3px}
+.con-layout--contact .con-d-t{font-size:13.5px;color:rgba(255,255,255,.85);line-height:1.65;overflow-wrap:anywhere}
+.con-layout--contact .con-detail--static{cursor:default}
+.con-layout--contact .con-detail--static:hover{background:rgba(255,255,255,.04)}
+.con-ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+@media(max-width:860px){
+  /* Contact details above the form on mobile; optional booking card stays below it */
+  .con-layout--contact .info-panel{display:contents}
+  .con-layout--contact .con-info-card{order:-1}
+  .con-layout--contact .con-cal-card{order:1}
+}
+
+.con-map-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+.con-map-layout.has-map{grid-template-columns:minmax(0,1fr) minmax(0,2fr);align-items:start}
+.con-map-layout:not(.has-map) .con-map-info{max-width:560px}
+.con-map-info{background:var(--surface);border:1px solid var(--line);border-radius:var(--r3);padding:24px;display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.con-map-addr{display:flex;align-items:flex-start;gap:12px}
+.con-map-label{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:4px}
+.con-map-text{font-size:15px;font-weight:600;color:var(--ink);line-height:1.8}
+.con-map-frame{border:1px solid var(--line);border-radius:var(--r3);overflow:hidden;background:var(--surface);min-height:360px}
+.con-map-frame iframe{display:block;width:100%;height:100%;min-height:360px;border:0}
+@media(max-width:860px){
+  .con-map-layout.has-map{grid-template-columns:minmax(0,1fr)}
+  .con-map-frame,.con-map-frame iframe{min-height:300px}
+}
+@media(max-width:600px){
+  .con-map-info{padding:20px 18px}
+  .con-map-btn{width:100%;justify-content:center}
+  .con-map-frame,.con-map-frame iframe{min-height:260px}
+}
+
+/* ─ SEO service page — roles section (reuses .wwd-card / .wwd-ico / .chklist) ─ */
+.seo-resp-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;max-width:980px;margin-inline:auto}
+.seo-resp-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.seo-resp-head .wwd-ico{width:40px;height:40px;border-radius:11px;margin-bottom:0;flex-shrink:0}
+.seo-resp-head .wwd-ico svg{width:19px;height:19px}
+.seo-resp-card h3{margin-bottom:0}
+@media(max-width:860px){.seo-resp-grid{grid-template-columns:minmax(0,1fr)}}

@@ -220,3 +220,86 @@ function sh_get_platforms(): WP_Query {
         ],
     ] );
 }
+
+/**
+ * Build a tel: href from a display phone number ("+20 105 086 1791" → "+201050861791").
+ */
+function sh_tel_href( string $phone ): string {
+    $digits = preg_replace( '/\D/', '', $phone );
+    if ( '' === $digits ) {
+        return '';
+    }
+    return 'tel:' . ( str_starts_with( ltrim( $phone ), '+' ) ? '+' : '' ) . $digits;
+}
+
+/**
+ * Parse a URL and check it is https on one of the allowed hosts.
+ * Returns the parsed parts, or null when the URL is not acceptable.
+ */
+function sh_parse_allowed_url( string $url, array $hosts ): ?array {
+    $url = trim( html_entity_decode( $url, ENT_QUOTES | ENT_HTML5, 'UTF-8' ) );
+    if ( '' === $url || preg_match( '/[\s"\'<>`]/', $url ) ) {
+        return null;
+    }
+    $parts = wp_parse_url( $url );
+    if ( empty( $parts['scheme'] ) || 'https' !== strtolower( $parts['scheme'] ) || empty( $parts['host'] ) ) {
+        return null;
+    }
+    if ( ! empty( $parts['user'] ) || ! empty( $parts['pass'] ) || ! empty( $parts['port'] ) ) {
+        return null;
+    }
+    $parts['host'] = strtolower( $parts['host'] );
+    if ( ! in_array( $parts['host'], $hosts, true ) ) {
+        return null;
+    }
+    $parts['url'] = $url;
+    return $parts;
+}
+
+/**
+ * Validate a Google Maps embed URL entered in the admin.
+ *
+ * Accepts either the bare embed URL or the full <iframe> code copied from
+ * Google Maps → Share → Embed a map; only the src is extracted and only a
+ * https://www.google.com/maps/embed… URL is accepted. Anything else returns ''.
+ * The caller builds the <iframe> itself — the raw field HTML is never output.
+ */
+function sh_maps_embed_src( string $raw ): string {
+    $raw = trim( $raw );
+    if ( '' === $raw ) {
+        return '';
+    }
+    if ( stripos( $raw, '<iframe' ) !== false ) {
+        if ( ! preg_match( '/\ssrc\s*=\s*(["\'])(.*?)\1/is', $raw, $m ) ) {
+            return '';
+        }
+        $raw = $m[2];
+    }
+    $parts = sh_parse_allowed_url( $raw, [ 'www.google.com', 'google.com', 'maps.google.com' ] );
+    if ( ! $parts ) {
+        return '';
+    }
+    $path  = $parts['path'] ?? '';
+    $query = $parts['query'] ?? '';
+    $is_embed = str_starts_with( $path, '/maps/embed' )
+        || ( '/maps' === rtrim( $path, '/' ) && preg_match( '/(^|&)output=embed(&|$)/', $query ) );
+    return $is_embed ? esc_url_raw( $parts['url'], [ 'https' ] ) : '';
+}
+
+/**
+ * Validate a Google Maps directions / place link entered in the admin.
+ * Accepts google.com/maps…, maps.google.com, maps.app.goo.gl and goo.gl/maps links.
+ */
+function sh_maps_link_url( string $raw ): string {
+    $parts = sh_parse_allowed_url( $raw, [ 'www.google.com', 'google.com', 'maps.google.com', 'maps.app.goo.gl', 'goo.gl' ] );
+    if ( ! $parts ) {
+        return '';
+    }
+    $path = $parts['path'] ?? '';
+    $ok   = match ( $parts['host'] ) {
+        'maps.google.com', 'maps.app.goo.gl' => true,
+        'goo.gl'                             => str_starts_with( $path, '/maps' ),
+        default                              => str_starts_with( $path, '/maps' ),
+    };
+    return $ok ? esc_url_raw( $parts['url'], [ 'https' ] ) : '';
+}

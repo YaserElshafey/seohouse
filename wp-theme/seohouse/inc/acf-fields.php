@@ -91,8 +91,13 @@ add_action( 'acf/init', function () {
         'fields'   => [
             [ 'key' => 'field_logo_white',       'label' => 'الشعار (أبيض / للخلفيات الداكنة)', 'name' => 'logo_white',       'type' => 'image', 'return_format' => 'array' ],
             [ 'key' => 'field_logo_color',       'label' => 'الشعار (ملوّن / للخلفيات الفاتحة)', 'name' => 'logo_color',       'type' => 'image', 'return_format' => 'array' ],
-            [ 'key' => 'field_contact_email',    'label' => 'البريد الإلكتروني',               'name' => 'contact_email',    'type' => 'email' ],
-            [ 'key' => 'field_contact_phone',    'label' => 'رقم الهاتف / واتساب',             'name' => 'contact_phone',    'type' => 'text' ],
+            [
+                'key'     => 'field_brand_contact_moved',
+                'label'   => 'الهاتف والبريد والعنوان',
+                'name'    => '',
+                'type'    => 'message',
+                'message' => 'انتقلت حقول الهاتف والبريد الإلكتروني والعنوان ومواعيد العمل والخريطة إلى: إعدادات الموقع ← صفحة التواصل (تبويب «بيانات التواصل»). القيم المحفوظة سابقاً لم تتغيّر.',
+            ],
             [ 'key' => 'field_social_twitter',   'label' => 'رابط تويتر / X',                  'name' => 'social_twitter',   'type' => 'url' ],
             [ 'key' => 'field_social_linkedin',  'label' => 'رابط لينكد إن',                   'name' => 'social_linkedin',  'type' => 'url' ],
             [ 'key' => 'field_social_instagram', 'label' => 'رابط إنستغرام',                   'name' => 'social_instagram', 'type' => 'url' ],
@@ -914,10 +919,10 @@ add_action( 'acf/init', function () {
             [ 'key' => 'field_seo_why_title',        'label' => 'عنوان قسم لماذا السيو تجارياً', 'name' => 'seo_why_title',        'type' => 'textarea', 'rows' => 2, 'default_value' => "السيو ليس بنداً في الميزانية —\nهو خفض في تكلفة العميل" ],
             [ 'key' => 'field_seo_why_desc',         'label' => 'وصف قسم لماذا السيو تجارياً',  'name' => 'seo_why_desc',         'type' => 'textarea', 'rows' => 2, 'default_value' => 'كل عميل يأتي عبر البحث العضوي يكلّفك أقل من نظيره عبر الإعلان. والأهم — يبقى يأتي حتى بعد توقفك عن الإنفاق.' ],
             [ 'key' => 'field_seo_wwd_title',        'label' => 'عنوان قسم ماذا نفعل',          'name' => 'seo_wwd_title',        'type' => 'text',     'default_value' => 'ستة محاور تنفيذية تشكّل خدمة السيو' ],
-            [ 'key' => 'field_seo_wwd_desc',         'label' => 'وصف قسم ماذا نفعل',           'name' => 'seo_wwd_desc',         'type' => 'textarea', 'rows' => 2, 'default_value' => 'السيو ليس مهمة واحدة — هو منظومة من ستة محاور كل واحد منها يدعم الآخر.' ],
+            [ 'key' => 'field_seo_wwd_desc',         'label' => 'وصف قسم ماذا نفعل',           'name' => 'seo_wwd_desc',         'type' => 'textarea', 'rows' => 2, 'default_value' => 'لكل محور مُخرَج واضح تستلمه، ويُنفَّذ بالترتيب الذي تحتاجه حالة موقعك.' ],
             [ 'key' => 'field_seo_sub_title',        'label' => 'عنوان قسم الخدمات الفرعية',    'name' => 'seo_sub_title',        'type' => 'text',     'default_value' => 'اختر الخدمة التي يحتاجها عملك' ],
             [ 'key' => 'field_seo_reporting_title',  'label' => 'عنوان قسم التقارير',           'name' => 'seo_reporting_title',  'type' => 'textarea', 'rows' => 2, 'default_value' => "تقارير تتكلم لغة عملك\n— لا لغة المطورين" ],
-            [ 'key' => 'field_seo_reporting_desc',   'label' => 'وصف قسم التقارير',             'name' => 'seo_reporting_desc',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'في معظم الوكالات تأتيك تقارير ممتلئة بمصطلحات جوجل لا تفهم منها شيئاً. عندنا التقرير يُظهر لك بوضوح: كم ليد جاء من البحث، كم بيع، وأين تذهب ميزانيتك.' ],
+            [ 'key' => 'field_seo_reporting_desc',   'label' => 'وصف قسم التقارير',             'name' => 'seo_reporting_desc',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'التقرير الشهري يوضح ما نفّذناه، وما تغيّر في الظهور والزيارات، وكم استفساراً أو طلباً جاء من البحث العضوي — بالقدر الذي يسمح به التتبّع المُعدّ على موقعك.' ],
             [ 'key' => 'field_seo_proof_title',      'label' => 'عنوان قسم النتائج',            'name' => 'seo_proof_title',      'type' => 'text',     'default_value' => 'نتائج حقيقية لعملاء حقيقيين' ],
             [ 'key' => 'field_seo_cta_title',        'label' => 'عنوان CTA',                     'name' => 'seo_cta_title',        'type' => 'text',     'default_value' => 'ابدأ بكسب عملاء يبحثون عنك فعلاً' ],
             [ 'key' => 'field_seo_hero_cta1',        'label' => 'نص زر الهيرو الأول',            'name' => 'seo_hero_cta1',        'type' => 'text',     'default_value' => 'احجز استشارة مجانية — 30 دقيقة' ],
@@ -978,7 +983,14 @@ add_action( 'acf/init', function () {
             ],
             [ 'key' => 'field_seo_sub_desc',     'label' => 'وصف قسم الخدمات الفرعية',    'name' => 'seo_sub_desc',     'type' => 'textarea', 'rows' => 2, 'default_value' => 'كل خدمة يمكن تنفيذها مستقلة أو ضمن باقة سيو متكاملة — حسب وضع موقعك ومرحلتك.' ],
             [ 'key' => 'field_seo_method_title', 'label' => 'عنوان قسم المنهجية',          'name' => 'seo_method_title', 'type' => 'text',     'default_value' => 'منهجية شفافة من اليوم الأول' ],
-            [ 'key' => 'field_seo_method_desc',  'label' => 'وصف قسم المنهجية',           'name' => 'seo_method_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'كل مرحلة لها هدف واضح ومؤشر قياس — لا خطوات غامضة، لا وعود بدون تنفيذ.' ],
+            [ 'key' => 'field_seo_method_desc',  'label' => 'وصف قسم المنهجية',           'name' => 'seo_method_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'كل مرحلة لها مُخرَج واضح، وترتيب العمل يتحدد حسب حالة موقعك وأهدافك — لا قالب واحد لكل المواقع.' ],
+            [ 'key' => 'field_seo_resp_tag',          'label' => 'قسم الأدوار — التصنيف',             'name' => 'seo_resp_tag',          'type' => 'text',     'default_value' => 'توزيع الأدوار' ],
+            [ 'key' => 'field_seo_resp_title',        'label' => 'قسم الأدوار — العنوان',             'name' => 'seo_resp_title',        'type' => 'text',     'default_value' => 'ما نتولاه، وما نحتاجه منك' ],
+            [ 'key' => 'field_seo_resp_desc',         'label' => 'قسم الأدوار — الوصف',               'name' => 'seo_resp_desc',         'type' => 'textarea', 'rows' => 2, 'default_value' => 'وضوح الأدوار من البداية يمنع تعطّل التنفيذ، خصوصاً في التعديلات التقنية التي تحتاج مطوّر الموقع.' ],
+            [ 'key' => 'field_seo_resp_team_title',   'label' => 'قسم الأدوار — عنوان بطاقة فريقنا',   'name' => 'seo_resp_team_title',   'type' => 'text',     'default_value' => 'مسؤولية فريقنا' ],
+            [ 'key' => 'field_seo_resp_team_items',   'label' => 'قسم الأدوار — بنود فريقنا (بند في كل سطر)', 'name' => 'seo_resp_team_items', 'type' => 'textarea', 'rows' => 4, 'new_lines' => '', 'default_value' => "التدقيق وتحديد الأولويات وخطة العمل المكتوبة\nتحسين الصفحات والمحتوى ونشره عند توفّر صلاحية لوحة التحكم\nكتابة مواصفات واضحة لأي تعديل برمجي ومراجعته بعد التطبيق\nإعداد تتبّع الاستفسارات وإعداد التقرير الشهري" ],
+            [ 'key' => 'field_seo_resp_client_title', 'label' => 'قسم الأدوار — عنوان بطاقة العميل',   'name' => 'seo_resp_client_title', 'type' => 'text',     'default_value' => 'ما نحتاجه منك أو من مطوّرك' ],
+            [ 'key' => 'field_seo_resp_client_items', 'label' => 'قسم الأدوار — بنود العميل (بند في كل سطر)', 'name' => 'seo_resp_client_items', 'type' => 'textarea', 'rows' => 4, 'new_lines' => '', 'default_value' => "صلاحيات Search Console وGoogle Analytics ولوحة تحكم الموقع\nتنفيذ التعديلات البرمجية عبر مطوّرك، أو منحنا وصولاً لتنفيذها\nمراجعة المحتوى واعتماده من ناحية دقة المعلومات والأسعار\nمشاركة نتيجة الاستفسارات أو المبيعات لربطها بمصدرها" ],
             [ 'key' => 'field_seo_proof_desc',   'label' => 'وصف قسم نتائج العملاء',      'name' => 'seo_proof_desc',   'type' => 'textarea', 'rows' => 2, 'default_value' => 'نماذج من نتائج عملاء سابقين — أرقام موثّقة من Search Console وAnalytics، لا ادعاءات.' ],
             [
                 'key'          => 'field_seo_proof_cards',
@@ -1009,25 +1021,78 @@ add_action( 'acf/init', function () {
         'title'    => 'محتوى صفحة: التواصل',
         'location' => [ [ [ 'param' => 'options_page', 'operator' => '==', 'value' => 'seohouse-contact' ] ] ],
         'fields'   => [
+            // ── Tab: company contact details (single source for the whole site) ──
+            [ 'key' => 'field_con_tab_info', 'label' => 'بيانات التواصل', 'name' => '', 'type' => 'tab', 'placement' => 'top' ],
+            [
+                'key'          => 'field_contact_phone',
+                'label'        => 'رقم الهاتف',
+                'name'         => 'contact_phone',
+                'type'         => 'text',
+                'placeholder'  => '+201000000000',
+                'instructions' => 'يُعرض في صفحة التواصل كرابط اتصال مباشر (tel). اكتبه بالصيغة الدولية مع +.',
+            ],
+            [
+                'key'          => 'field_contact_email',
+                'label'        => 'البريد الإلكتروني',
+                'name'         => 'contact_email',
+                'type'         => 'email',
+                'instructions' => 'يُعرض في صفحة التواصل (mailto)، وإليه تُرسل إشعارات طلبات نموذج التواصل.',
+            ],
+            [
+                'key'          => 'field_contact_address',
+                'label'        => 'العنوان',
+                'name'         => 'contact_address',
+                'type'         => 'textarea',
+                'rows'         => 2,
+                'new_lines'    => '',
+                'instructions' => 'يظهر في بطاقة بيانات التواصل وفي قسم «موقعنا». اتركه فارغاً لإخفائه.',
+            ],
+            [
+                'key'          => 'field_contact_hours',
+                'label'        => 'مواعيد العمل',
+                'name'         => 'contact_hours',
+                'type'         => 'textarea',
+                'rows'         => 2,
+                'new_lines'    => '',
+                'instructions' => 'مثال: من الأحد إلى الخميس، من 9 صباحًا إلى 5 مساءً بتوقيت مصر.',
+            ],
+
+            // ── Tab: location / map ──
+            [ 'key' => 'field_con_tab_map', 'label' => 'الموقع والخريطة', 'name' => '', 'type' => 'tab', 'placement' => 'top' ],
+            [ 'key' => 'field_con_map_tag',   'label' => 'التصنيف فوق عنوان القسم', 'name' => 'contact_map_tag',   'type' => 'text', 'default_value' => 'موقعنا' ],
+            [ 'key' => 'field_con_map_title', 'label' => 'عنوان قسم الموقع',        'name' => 'contact_map_title', 'type' => 'text', 'default_value' => 'أين تجدنا' ],
+            [
+                'key'          => 'field_con_map_embed',
+                'label'        => 'رابط تضمين خريطة Google',
+                'name'         => 'contact_map_embed',
+                'type'         => 'textarea',
+                'rows'         => 3,
+                'new_lines'    => '',
+                'placeholder'  => 'https://www.google.com/maps/embed?pb=...',
+                'instructions' => 'من Google Maps: افتح موقع الشركة ← مشاركة ← تضمين خريطة ← انسخ HTML والصقه هنا (أو الصق رابط src فقط). يُقبل رابط تضمين من google.com/maps/embed فقط، ولا يُنفَّذ أي كود آخر. إذا كان الحقل فارغاً تُخفى الخريطة.',
+            ],
+            [
+                'key'          => 'field_con_map_link',
+                'label'        => 'رابط الاتجاهات',
+                'name'         => 'contact_map_link',
+                'type'         => 'url',
+                'placeholder'  => 'https://maps.app.goo.gl/...',
+                'instructions' => 'من Google Maps: مشاركة ← نسخ الرابط. يُستخدم لزر «الاتجاهات». إذا كان الحقل فارغاً يُخفى الزر.',
+            ],
+
+            // ── Tab: hero ──
+            [ 'key' => 'field_con_tab_hero', 'label' => 'الهيرو', 'name' => '', 'type' => 'tab', 'placement' => 'top' ],
             [ 'key' => 'field_con_hero_tag',      'label' => 'تصنيف الهيرو',               'name' => 'contact_hero_tag',      'type' => 'text',     'default_value' => 'استشارة مجانية' ],
             [ 'key' => 'field_con_hero_title',    'label' => 'عنوان الهيرو (سطر في كل سطر)', 'name' => 'contact_hero_title',  'type' => 'textarea', 'rows' => 2, 'default_value' => "30 دقيقة قد تغيّر\nمسار موقعك" ],
             [ 'key' => 'field_con_hero_em',       'label' => 'الكلمة المُبرَزة',            'name' => 'contact_hero_em',       'type' => 'text',     'default_value' => 'موقعك' ],
             [ 'key' => 'field_con_hero_desc',     'label' => 'وصف الهيرو',                  'name' => 'contact_hero_desc',     'type' => 'textarea', 'rows' => 2, 'default_value' => 'أخبرنا عن موقعك ونشاطك — وسنخبرك بصدق أين أنت وما الذي يمكن تحقيقه. مجاناً، وبدون التزام.' ],
+            // ── Tab: form ──
+            [ 'key' => 'field_con_tab_form', 'label' => 'النموذج', 'name' => '', 'type' => 'tab', 'placement' => 'top' ],
             [ 'key' => 'field_con_form_title',    'label' => 'عنوان النموذج',               'name' => 'contact_form_title',    'type' => 'text',     'default_value' => 'أرسل لنا طلبك' ],
-            [ 'key' => 'field_con_form_sub',      'label' => 'وصف تحت عنوان النموذج',       'name' => 'contact_form_sub',      'type' => 'textarea', 'rows' => 2, 'default_value' => 'سنتواصل معك خلال 24 ساعة لتأكيد موعد الاستشارة.' ],
-            [ 'key' => 'field_con_form_note',     'label' => 'الملاحظة تحت زر الإرسال',    'name' => 'contact_form_note',     'type' => 'text',     'default_value' => 'أو تواصل معنا على واتساب مباشرةً — سنردّ في أقرب وقت' ],
-            [ 'key' => 'field_con_success_title', 'label' => 'عنوان رسالة الإرسال الناجح', 'name' => 'contact_success_title', 'type' => 'text',     'default_value' => 'تم الإرسال بنجاح!' ],
-            [ 'key' => 'field_con_success_desc',  'label' => 'نص رسالة الإرسال الناجح',    'name' => 'contact_success_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'شكراً على تواصلك — سيتصل بك أحد متخصصينا خلال 24 ساعة لتحديد موعد الاستشارة.' ],
-            [ 'key' => 'field_con_cal_title',     'label' => 'عنوان بطاقة الحجز',          'name' => 'contact_cal_title',     'type' => 'text',     'default_value' => 'احجز وقتك مباشرةً' ],
-            [
-                'key'          => 'field_con_calendly_embed',
-                'label'        => 'كود Calendly للحجز (Inline Embed)',
-                'name'         => 'calendly_embed',
-                'type'         => 'textarea',
-                'rows'         => 5,
-                'placeholder'  => '<div class="calendly-inline-widget" data-url="https://calendly.com/username/30min" style="min-width:320px;height:700px;"></div>' . "\n" . '<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>',
-                'instructions' => 'الصق كود Calendly الكامل (Inline Widget) هنا كما هو من موقع Calendly. إذا كان الحقل فارغاً، لن تظهر بطاقة الحجز.',
-            ],
+            [ 'key' => 'field_con_form_sub',      'label' => 'وصف تحت عنوان النموذج',       'name' => 'contact_form_sub',      'type' => 'textarea', 'rows' => 2, 'default_value' => 'سنتواصل معك خلال يوم عمل لتحديد موعد الاستشارة.' ],
+            [ 'key' => 'field_con_form_note',     'label' => 'الملاحظة تحت زر الإرسال',    'name' => 'contact_form_note',     'type' => 'text',     'default_value' => 'أو تواصل معنا مباشرةً عبر الهاتف أو البريد الإلكتروني.' ],
+            [ 'key' => 'field_con_success_title', 'label' => 'عنوان رسالة الإرسال الناجح', 'name' => 'contact_success_title', 'type' => 'text',     'default_value' => 'تم استلام طلبك' ],
+            [ 'key' => 'field_con_success_desc',  'label' => 'نص رسالة الإرسال الناجح',    'name' => 'contact_success_desc',  'type' => 'textarea', 'rows' => 2, 'default_value' => 'وصلنا طلبك، وسيتواصل معك فريقنا لتحديد موعد الاستشارة.' ],
             [ 'key' => 'field_con_expect_title',  'label' => 'عنوان قسم "ماذا تتوقع"',     'name' => 'contact_expect_title',  'type' => 'text',     'default_value' => 'ماذا تتوقع بعد التواصل' ],
             [
                 'key'          => 'field_con_expect_items',
@@ -1040,6 +1105,19 @@ add_action( 'acf/init', function () {
                 'sub_fields'   => [
                     [ 'key' => 'field_con_exp_text', 'label' => 'النص', 'name' => 'exp_text', 'type' => 'text' ],
                 ],
+            ],
+
+            // ── Tab: online booking (optional) ──
+            [ 'key' => 'field_con_tab_cal', 'label' => 'الحجز الإلكتروني (اختياري)', 'name' => '', 'type' => 'tab', 'placement' => 'top' ],
+            [ 'key' => 'field_con_cal_title',     'label' => 'عنوان بطاقة الحجز',          'name' => 'contact_cal_title',     'type' => 'text',     'default_value' => 'احجز وقتك مباشرةً' ],
+            [
+                'key'          => 'field_con_calendly_embed',
+                'label'        => 'كود Calendly للحجز (Inline Embed)',
+                'name'         => 'calendly_embed',
+                'type'         => 'textarea',
+                'rows'         => 5,
+                'placeholder'  => '<div class="calendly-inline-widget" data-url="https://calendly.com/username/30min" style="min-width:320px;height:700px;"></div>' . "\n" . '<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>',
+                'instructions' => 'الصق كود Calendly الكامل (Inline Widget) هنا كما هو من موقع Calendly. إذا كان الحقل فارغاً، لن تظهر بطاقة الحجز.',
             ],
         ],
     ] );
@@ -1181,4 +1259,82 @@ add_action( 'acf/init', function () {
         ],
     ] );
 
+} );
+
+// ═══════════════════════════════════════════════════════════
+// Contact page — map field validation (admin)
+// Front end re-validates through sh_maps_embed_src() / sh_maps_link_url(),
+// so an invalid value can never be output even if saved by other means.
+// ═══════════════════════════════════════════════════════════
+add_filter( 'acf/validate_value/key=field_con_map_embed', function ( $valid, $value ) {
+    if ( true !== $valid || '' === trim( (string) $value ) ) {
+        return $valid;
+    }
+    return sh_maps_embed_src( (string) $value )
+        ? true
+        : 'رابط التضمين غير صالح. استخدم Google Maps ← مشاركة ← تضمين خريطة، والصق الكود أو رابط https://www.google.com/maps/embed?... فقط.';
+}, 10, 2 );
+
+add_filter( 'acf/validate_value/key=field_con_map_link', function ( $valid, $value ) {
+    if ( true !== $valid || '' === trim( (string) $value ) ) {
+        return $valid;
+    }
+    return sh_maps_link_url( (string) $value )
+        ? true
+        : 'رابط الاتجاهات غير صالح. استخدم رابط Google Maps (مثل https://maps.app.goo.gl/... أو https://www.google.com/maps/...).';
+}, 10, 2 );
+
+// ═══════════════════════════════════════════════════════════
+// One-time update: contact form texts that referred to WhatsApp or to
+// picking an online booking slot. A saved value is replaced ONLY when it is
+// still exactly the old default — any text the admin edited is left as is.
+// ═══════════════════════════════════════════════════════════
+add_action( 'admin_init', function () {
+    if ( get_option( 'seohouse_contact_texts_v2' ) || ! function_exists( 'update_field' ) ) {
+        return;
+    }
+    $legacy = [
+        'contact_form_sub'      => [ 'سنتواصل معك خلال 24 ساعة لتأكيد موعد الاستشارة.', 'سنتواصل معك خلال يوم عمل لتحديد موعد الاستشارة.' ],
+        'contact_form_note'     => [ 'أو تواصل معنا على واتساب مباشرةً — سنردّ في أقرب وقت', 'أو تواصل معنا مباشرةً عبر الهاتف أو البريد الإلكتروني.' ],
+        'contact_success_title' => [ 'تم الإرسال بنجاح!', 'تم استلام طلبك' ],
+        'contact_success_desc'  => [ 'شكراً على تواصلك — سيتصل بك أحد متخصصينا خلال 24 ساعة لتحديد موعد الاستشارة.', 'وصلنا طلبك، وسيتواصل معك فريقنا لتحديد موعد الاستشارة.' ],
+    ];
+    foreach ( $legacy as $name => [ $old, $new ] ) {
+        if ( trim( (string) get_option( 'options_' . $name, '' ) ) === $old ) {
+            update_field( $name, $new, 'option' );
+        }
+    }
+    update_option( 'seohouse_contact_texts_v2', '1' );
+} );
+
+// ═══════════════════════════════════════════════════════════
+// One-time update: SEO service page section descriptions.
+// Replaces a saved value ONLY when it is still exactly the old default
+// (ACF stores defaults on first save); edited text is left untouched.
+// ═══════════════════════════════════════════════════════════
+add_action( 'admin_init', function () {
+    if ( get_option( 'seohouse_seo_page_texts_v2' ) ) {
+        return;
+    }
+    $legacy = [
+        'seo_wwd_desc'       => [ 'السيو ليس مهمة واحدة — هو منظومة من ستة محاور كل واحد منها يدعم الآخر.', 'لكل محور مُخرَج واضح تستلمه، ويُنفَّذ بالترتيب الذي تحتاجه حالة موقعك.' ],
+        'seo_reporting_desc' => [ 'في معظم الوكالات تأتيك تقارير ممتلئة بمصطلحات جوجل لا تفهم منها شيئاً. عندنا التقرير يُظهر لك بوضوح: كم ليد جاء من البحث، كم بيع، وأين تذهب ميزانيتك.', 'التقرير الشهري يوضح ما نفّذناه، وما تغيّر في الظهور والزيارات، وكم استفساراً أو طلباً جاء من البحث العضوي — بالقدر الذي يسمح به التتبّع المُعدّ على موقعك.' ],
+        'seo_method_desc'    => [ 'كل مرحلة لها هدف واضح ومؤشر قياس — لا خطوات غامضة، لا وعود بدون تنفيذ.', 'كل مرحلة لها مُخرَج واضح، وترتيب العمل يتحدد حسب حالة موقعك وأهدافك — لا قالب واحد لكل المواقع.' ],
+    ];
+    $pages = get_posts( [
+        'post_type'      => 'page',
+        'post_status'    => 'any',
+        'posts_per_page' => -1,
+        'fields'         => 'ids',
+        'meta_key'       => '_wp_page_template',
+        'meta_value'     => 'templates/template-service-seo.php',
+    ] );
+    foreach ( $pages as $pid ) {
+        foreach ( $legacy as $name => [ $old, $new ] ) {
+            if ( trim( (string) get_post_meta( $pid, $name, true ) ) === $old ) {
+                update_post_meta( $pid, $name, $new );
+            }
+        }
+    }
+    update_option( 'seohouse_seo_page_texts_v2', '1' );
 } );
