@@ -15,7 +15,6 @@ $cta       = sh_header_cta();
 $show_cta  = 'thank-you' !== sh_view_key() && $cta['label'];
 $copyright = (string) sh_option( 'sh_copyright', '' );
 $copyright = $copyright ? str_replace( '{year}', wp_date( 'Y' ), $copyright ) : '© ' . wp_date( 'Y' ) . ' ' . sh_site_name();
-$socials   = (array) sh_option( 'sh_socials', array() );
 ?>
 <footer data-foot-blue style="position: relative; background: linear-gradient(rgb(40, 84, 232) 0%, rgb(36, 76, 214) 100%); color: rgb(255, 255, 255); overflow: hidden;">
 	<div aria-hidden="true" style="position: absolute; inset-inline: 0px; top: 0px; height: 2px; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35) 30%, rgba(255, 255, 255, 0.55) 55%, transparent);"></div>
@@ -26,17 +25,9 @@ $socials   = (array) sh_option( 'sh_socials', array() );
 			<?php if ( $about ) : ?>
 			<p style="color: rgb(255, 255, 255); font-size: 15px; line-height: 1.85; margin: 16px 0px 0px; max-width: 26em; text-wrap: pretty;"><?php echo sh_footer_about_html( $about ); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside ?></p>
 			<?php endif; ?>
+			<?php echo sh_footer_social_icons(); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside ?>
 			<?php if ( $show_cta ) : ?>
 			<a href="<?php echo esc_url( $cta['url'] ); ?>" data-foot-cta style="display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-size: 15px; font-weight: 700; color: rgb(33, 72, 216); background: rgb(255, 255, 255); min-height: 46px; padding: 0px 20px; border-radius: 12px; box-shadow: rgba(10, 20, 80, 0.5) 0px 10px 22px -14px;"><?php echo esc_html( $cta['label'] ); ?> <span aria-hidden="true">←</span></a>
-			<?php endif; ?>
-			<?php if ( $socials ) : ?>
-			<div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 18px;">
-				<?php foreach ( $socials as $s ) : ?>
-					<?php if ( ! empty( $s['url'] ) && ! empty( $s['label'] ) ) : ?>
-				<a href="<?php echo esc_url( $s['url'] ); ?>" rel="noopener me" target="_blank" class="sh-hv-foot" style="color: rgb(255, 255, 255); font-size: 14px;"><?php echo esc_html( $s['label'] ); ?></a>
-					<?php endif; ?>
-				<?php endforeach; ?>
-			</div>
 			<?php endif; ?>
 		</div>
 		<?php foreach ( $cols as $col ) : ?>

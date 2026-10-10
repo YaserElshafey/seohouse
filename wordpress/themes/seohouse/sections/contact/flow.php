@@ -3,26 +3,14 @@
  * Section "Flow" — SEO House - Contact.
  * Generated from the approved design by tools/design-import/convert.js, then wired by hand:
  * the form posts to SEO House Core (seohouse/v1/lead, source "contact"; no-JS fallback admin-post).
- * 2.7.7: «بيانات التواصل» card (phone, email, address, hours from «إعدادات سيو هاوس ← بيانات الشركة») next to
- * the form on wide screens and above it on small ones (.sh-ct-layout); one success message, no
- * «choose a time» step.
+ * 2.7.7: one success message, no «choose a time» step. 2.7.8: the «بيانات التواصل» card moved to the
+ * next section, next to the map (sections/contact/location.php).
  * @sh-manual
  *
  * @var array $args { f: layout values }
  */
 defined( 'ABSPATH' ) || exit;
 $f = $args['f'] ?? array();
-// company contact data: «إعدادات سيو هاوس ← بيانات الشركة» (one source, also used by the structured data)
-$ct_company = sh_company_contact();
-$ct_rows    = array_filter(
-	array(
-		'phone'   => array( __( 'الهاتف', 'seohouse' ), $ct_company['phone'], sh_tel_href( $ct_company['phone'] ) ),
-		'email'   => array( __( 'البريد الإلكتروني', 'seohouse' ), $ct_company['email'], $ct_company['email'] ? 'mailto:' . $ct_company['email'] : '' ),
-		'address' => array( __( 'العنوان', 'seohouse' ), $ct_company['address'], '' ),
-		'hours'   => array( __( 'مواعيد العمل', 'seohouse' ), $ct_company['hours'], '' ),
-	),
-	static fn( $r ) => '' !== $r[1]
-);
 // message after a stored request: «إعدادات سيو هاوس ← الاستشارة ← رسالة الاستلام في صفحة اتصل بنا»
 $ct_bk   = (array) sh_option( 'sh_booking', array() );
 $ct_done = trim( (string) ( $ct_bk['step2']['text'] ?? '' ) );
@@ -31,25 +19,7 @@ $ct_done = '' !== $ct_done ? $ct_done : __( 'وصلنا طلبك، وسيتوا�
 <section data-screen-label="Flow" style="position: relative; overflow: hidden; border-bottom: 1px solid var(--sh-line);">
     <div aria-hidden="true" style="position: absolute; inset: 0px; background: radial-gradient(45% 60% at 85% 30%, rgba(40, 84, 232, 0.22), transparent 72%), radial-gradient(35% 50% at 10% 90%, rgba(40, 84, 232, 0.12), transparent 70%); pointer-events: none;"></div>
     <div style="position: relative; max-width: 1200px; margin: 0px auto; padding: clamp(32px, 4.4vw, 60px) 20px;">
-      <div data-ct-grid class="sh-ct-layout<?= $ct_rows ? '' : ' sh-ct-layout--nocard' ?>" style="display: grid; gap: clamp(26px, 3.2vw, 52px);">
-        <?php if ( $ct_rows ) : ?>
-        <div class="sh-ct-contact">
-          <h2 class="sh-ct-contact__title"><?= esc_html( '' !== trim( (string) ( $f['contact_title'] ?? '' ) ) ? $f['contact_title'] : __( 'بيانات التواصل', 'seohouse' ) ) ?></h2>
-          <ul class="sh-ct-contact__list">
-            <?php foreach ( $ct_rows as $kind => $r ) : ?>
-            <li class="sh-ct-contact__row">
-              <span class="sh-ct-contact__icon" aria-hidden="true"><?= sh_contact_icon( $kind ) // phpcs:ignore WordPress.Security.EscapeOutput -- static SVG ?></span>
-              <span class="sh-ct-contact__text">
-                <span class="sh-ct-contact__label"><?= esc_html( $r[0] ) ?></span>
-                <?php if ( $r[2] ) : ?><a class="sh-ct-contact__value sh-ct-contact__value--link" href="<?= esc_url( $r[2], array( 'tel', 'mailto' ) ) ?>" dir="ltr"><?= esc_html( $r[1] ) ?></a>
-                <?php elseif ( 'phone' === $kind || 'email' === $kind ) : ?><span class="sh-ct-contact__value" dir="ltr"><?= esc_html( $r[1] ) ?></span>
-                <?php else : ?><span class="sh-ct-contact__value"><?= nl2br( esc_html( $r[1] ) ) ?></span><?php endif; ?>
-              </span>
-            </li>
-            <?php endforeach; ?>
-          </ul>
-        </div>
-        <?php endif; ?>
+      <div data-ct-grid class="sh-ct-layout" style="display: grid; gap: clamp(26px, 3.2vw, 52px);">
         <div class="sh-ct-steps">
           <?php if (!empty($f['eyebrow'])) : ?><div style="font-size: 13.5px; font-weight: 600; color: var(--sh-link);"><?= esc_html($f['eyebrow'] ?? '') ?></div><?php endif; ?>
           <div style="margin-top: 20px; display: flex; flex-direction: column;">

@@ -51,24 +51,6 @@
       "preview_size": "medium"
     },
     {
-      "key": "field_sh_opt_footer_text",
-      "label": "نبذة الفوتر",
-      "name": "sh_footer_text",
-      "type": "textarea",
-      "instructions": "",
-      "required": 0,
-      "rows": 3,
-      "new_lines": ""
-    },
-    {
-      "key": "field_sh_opt_copyright",
-      "label": "سطر الحقوق",
-      "name": "sh_copyright",
-      "type": "text",
-      "instructions": "استخدم {year} للسنة الحالية. مثال: © {year} سيو هاوس",
-      "required": 0
-    },
-    {
       "key": "field_sh_opt_tab_design",
       "label": "التصميم",
       "name": "tab_design",
@@ -205,6 +187,62 @@
       "message": "عناصر القائمة والميجا مينيو وأيقوناتها تُدار من المظهر ← القوائم (القائمة الرئيسية، أعمدة الفوتر، روابط أسفل الفوتر)."
     },
     {
+      "key": "field_sh_opt_tab_footer",
+      "label": "الفوتر",
+      "name": "tab_footer",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_opt_footer_text",
+      "label": "نبذة الفوتر",
+      "name": "sh_footer_text",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "rows": 3,
+      "new_lines": ""
+    },
+    {
+      "key": "field_sh_opt_copyright",
+      "label": "سطر الحقوق",
+      "name": "sh_copyright",
+      "type": "text",
+      "instructions": "استخدم {year} للسنة الحالية. مثال: © {year} سيو هاوس",
+      "required": 0
+    },
+    {
+      "key": "field_sh_opt_socials",
+      "label": "روابط التواصل في الفوتر",
+      "name": "sh_socials",
+      "type": "sh_rows",
+      "instructions": "تظهر أيقونات أسفل نبذة الشركة في الفوتر بكل الصفحات، وتفتح في تبويب جديد. تُعرف المنصة من الرابط: فيسبوك، إنستجرام، لينكدإن. «الاسم» يُقرأ لقارئ الشاشة. الروابط الأخرى (مثل رابط خرائط Google) لا تظهر في الفوتر، وتبقى مستخدمة في البيانات المنظمة وزر المراجعات.",
+      "required": 0,
+      "layout": "table",
+      "button_label": "إضافة رابط",
+      "sub_fields": [
+        {
+          "name": "label",
+          "label": "الاسم",
+          "type": "text",
+          "instructions": "مثل: فيسبوك",
+          "required": 0,
+          "key": "field_sh_opt_socials__label"
+        },
+        {
+          "name": "url",
+          "label": "الرابط",
+          "type": "url",
+          "instructions": "الرابط الكامل للصفحة، مثل https://www.facebook.com/…",
+          "required": 0,
+          "key": "field_sh_opt_socials__url"
+        }
+      ]
+    },
+    {
       "key": "field_sh_opt_tab_company",
       "label": "بيانات الشركة",
       "name": "tab_company",
@@ -273,34 +311,6 @@
       "instructions": "تُستخدم في areaServed داخل Schema. الخدمة عن بُعد؛ لا تُضاف عناوين مكاتب غير حقيقية.",
       "required": 0,
       "default_value": "السعودية، مصر، الإمارات"
-    },
-    {
-      "key": "field_sh_opt_socials",
-      "label": "الروابط الاجتماعية",
-      "name": "sh_socials",
-      "type": "sh_rows",
-      "instructions": "",
-      "required": 0,
-      "layout": "table",
-      "button_label": "إضافة رابط",
-      "sub_fields": [
-        {
-          "name": "label",
-          "label": "الاسم",
-          "type": "text",
-          "instructions": "",
-          "required": 0,
-          "key": "field_sh_opt_socials__label"
-        },
-        {
-          "name": "url",
-          "label": "الرابط",
-          "type": "url",
-          "instructions": "",
-          "required": 0,
-          "key": "field_sh_opt_socials__url"
-        }
-      ]
     },
     {
       "key": "field_sh_opt_tab_booking",

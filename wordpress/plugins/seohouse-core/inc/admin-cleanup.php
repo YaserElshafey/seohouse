@@ -11,7 +11,9 @@
  *   inside «تهيئة الموقع» when the tools are switched on).
  * - Settings that no longer affect the site are hidden from «إعدادات سيو هاوس»; their field
  *   definitions and saved values are kept (export / import of settings still carries them):
- *   the 2.x colour tab, the unused WhatsApp number, the booking-tool fields (no calendar since 2.7.3).
+ *   the 2.x colour tab, the unused WhatsApp number, the booking-tool fields (no calendar since 2.7.3),
+ *   and on the contact page (2.7.8) the old card title in «المسار», the «موقعنا» heading and the
+ *   directions button fields.
  *
  * @package SEOHouseCore
  */
@@ -57,6 +59,11 @@ const SH_HIDDEN_SETTING_KEYS = array(
 	'field_sh_opt_booking_duration',
 	'field_sh_opt_booking_token',
 	'field_sh_opt_booking__step2__title',
+	// contact page (2.7.8): the card moved next to the map; no external directions button
+	'field_sh_contact_flow_title',
+	'field_sh_contact_location_title',
+	'field_sh_contact_location_directions',
+	'field_sh_contact_location_directions_label',
 );
 
 add_filter(

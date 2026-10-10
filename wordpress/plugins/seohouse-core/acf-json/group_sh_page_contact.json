@@ -93,15 +93,6 @@
           }
         },
         {
-          "key": "field_sh_contact_flow_msg",
-          "label": "بيانات التواصل",
-          "name": "",
-          "type": "message",
-          "message": "الهاتف والبريد والعنوان ومواعيد العمل تُعدَّل من <a href=\"admin.php?page=seohouse-settings\">إعدادات سيو هاوس ← بيانات الشركة</a> (مصدر واحد تستخدمه صفحة التواصل والبيانات المنظمة). تظهر هنا في بطاقة بجوار النموذج.",
-          "new_lines": "",
-          "esc_html": 0
-        },
-        {
           "key": "field_sh_contact_flow_title",
           "label": "عنوان بطاقة بيانات التواصل",
           "name": "contact_title",
@@ -362,7 +353,7 @@
     },
     {
       "key": "field_sh_contact_acc_location",
-      "label": "موقعنا",
+      "label": "بيانات التواصل والخريطة",
       "name": "",
       "type": "accordion",
       "open": 0,
@@ -389,6 +380,23 @@
           "default_value": 0
         },
         {
+          "key": "field_sh_contact_location_card_title",
+          "name": "contact_title",
+          "label": "عنوان بطاقة بيانات التواصل",
+          "type": "text",
+          "default_value": "بيانات التواصل",
+          "placeholder": "بيانات التواصل"
+        },
+        {
+          "key": "field_sh_contact_location_msg2",
+          "name": "",
+          "label": "البيانات المعروضة",
+          "type": "message",
+          "message": "الهاتف والبريد والعنوان ومواعيد العمل تُعدَّل من <a href=\"admin.php?page=seohouse-settings\">إعدادات سيو هاوس ← بيانات الشركة</a> (مصدر واحد تستخدمه صفحة التواصل والبيانات المنظمة). تظهر في بطاقة بجوار الخريطة.",
+          "new_lines": "",
+          "esc_html": 0
+        },
+        {
           "key": "field_sh_contact_location_title",
           "name": "title",
           "label": "العنوان",
@@ -397,21 +405,12 @@
           "placeholder": "موقعنا"
         },
         {
-          "key": "field_sh_contact_location_msg",
-          "name": "",
-          "label": "العنوان ومواعيد العمل",
-          "type": "message",
-          "message": "يظهر عنوان الشركة من <a href=\"admin.php?page=seohouse-settings\">إعدادات سيو هاوس ← بيانات الشركة</a>. الخريطة وزر الاتجاهات لا يظهران حتى تضيف رابطيهما أدناه.",
-          "new_lines": "",
-          "esc_html": 0
-        },
-        {
           "key": "field_sh_contact_location_embed",
           "name": "map_embed",
           "label": "رابط تضمين الخريطة (Google Maps)",
           "type": "textarea",
           "rows": 3,
-          "instructions": "من خرائط Google: افتح موقع الشركة ← مشاركة ← «تضمين خريطة» ← «نسخ HTML»، ثم الصقه هنا كما هو، أو الصق الرابط الذي يبدأ بـ https://www.google.com/maps/embed. تُقبل روابط تضمين خرائط Google فقط، ولا يُنفَّذ أي كود آخر.",
+          "instructions": "من خرائط Google: افتح موقع الشركة ← مشاركة ← «تضمين خريطة» ← «نسخ HTML»، ثم الصقه هنا كما هو، أو الصق الرابط الذي يبدأ بـ https://www.google.com/maps/embed. تُقبل روابط تضمين خرائط Google فقط، ولا يُنفَّذ أي كود آخر. بلا رابط تظهر بطاقة البيانات وحدها.",
           "placeholder": "https://www.google.com/maps/embed?pb=…"
         },
         {
