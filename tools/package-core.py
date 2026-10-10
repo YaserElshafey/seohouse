@@ -35,6 +35,7 @@ bad = [e for e in entries if not e.isascii()]
 if bad:
     sys.exit('non-ASCII names: ' + ', '.join(bad))
 
+FIXED_TIME = (2020, 1, 1, 0, 0, 0)
 if os.path.exists(OUT):
     os.remove(OUT)
 with zipfile.ZipFile(OUT, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
@@ -46,5 +47,7 @@ with zipfile.ZipFile(OUT, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
             if dname not in done:
                 z.writestr(zipfile.ZipInfo(dname), '')
                 done.add(dname)
-        z.write(os.path.join(PLUGIN, e[len('seohouse-core/'):]), e)
+        zi = zipfile.ZipInfo(e, FIXED_TIME)  # fixed time and mode: the same files give the same zip
+        zi.compress_type, zi.external_attr = zipfile.ZIP_DEFLATED, 0o644 << 16
+        z.writestr(zi, open(os.path.join(PLUGIN, e[len('seohouse-core/'):]), 'rb').read(), compresslevel=9)
 subprocess.run([sys.executable, os.path.join(REPO, 'tools/verify-core-zip.py'), OUT, '--folder', PLUGIN], check=True)

@@ -6,7 +6,7 @@ seo-by-rank-math	active	1.0.279
 seohouse-core	active	2.7.3
 test-rankmath-autoload	must-use	
 == 2. snapshot + crawl before
-Success: 1468 posts, 13973 meta, 6 terms, 215 options → /home/claude/wptest-fixture/runs/upgrade-277-to-278/before.json
+Success: 1468 posts, 13973 meta, 6 terms, 215 options → /home/claude/wptest-fixture/runs/upgrade-277-to-278-release/before.json
 63 urls; non-200: {}; php errors in page: []
 == 3A. Core: replace with seohouse-core.zip
 Success: Installed 1 of 1 plugins.
@@ -18,7 +18,7 @@ name	version
 seohouse	2.7.8
 seohouse-core	active	2.7.4
 == 4. snapshot after + compare
-Success: 1468 posts, 13973 meta, 6 terms, 215 options → /home/claude/wptest-fixture/runs/upgrade-277-to-278/after.json
+Success: 1468 posts, 13973 meta, 6 terms, 215 options → /home/claude/wptest-fixture/runs/upgrade-277-to-278-release/after.json
 posts    before   1468  after   1468  removed   0  added   0  changed   0
 meta     before  13973  after  13973  removed   0  added   0  changed   0
 terms    before      6  after      6  removed   0  added   0  changed   0
@@ -173,5 +173,5 @@ CONTENT UNCHANGED
    total lines lost: 64
 RESULT: PASS
 == 6. PHP log after the update (ACF 6.3.12's own textdomain notice on WP 7.1 filtered; counted below)
-ACF textdomain notices (not from SEO House): 76
+ACF textdomain notices (not from SEO House): 75
 (end of log)

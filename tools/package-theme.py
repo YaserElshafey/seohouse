@@ -18,6 +18,7 @@ paths = sorted(p for p in paths if p not in last) + ['theme-files.json'] + [p fo
 bad = [p for p in paths if not p.isascii()]
 if bad:
     sys.exit('non-ASCII names: ' + ', '.join(bad))
+FIXED_TIME = (2020, 1, 1, 0, 0, 0)
 if os.path.exists(OUT):
     os.remove(OUT)
 with zipfile.ZipFile(OUT, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
@@ -29,7 +30,9 @@ with zipfile.ZipFile(OUT, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
             if d not in done:
                 z.writestr(zipfile.ZipInfo(d), '')
                 done.add(d)
-        z.write(os.path.join(THEME, p), 'seohouse/' + p)
+        zi = zipfile.ZipInfo('seohouse/' + p, FIXED_TIME)  # fixed time and mode: the same files give the same zip
+        zi.compress_type, zi.external_attr = zipfile.ZIP_DEFLATED, 0o644 << 16
+        z.writestr(zi, open(os.path.join(THEME, p), 'rb').read(), compresslevel=9)
 # verify
 z = zipfile.ZipFile(OUT)
 names = [n for n in z.namelist() if not n.endswith('/')]
