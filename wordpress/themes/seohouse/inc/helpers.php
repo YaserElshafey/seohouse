@@ -346,3 +346,78 @@ function sh_article_seo_line(): string {
 		'<a href="' . esc_url( get_permalink( $page ) ) . '">' . esc_html__( 'شركة سيو', 'seohouse' ) . '</a>'
 	) . '</p>';
 }
+
+/**
+ * Company contact data, one source: «إعدادات سيو هاوس ← بيانات الشركة» (also used by the structured data).
+ *
+ * @return array{phone:string,email:string,address:string,hours:string}
+ */
+function sh_company_contact(): array {
+	$email = sanitize_email( (string) sh_option( 'sh_email', '' ) );
+	return array(
+		'phone'   => trim( (string) sh_option( 'sh_phone', '' ) ),
+		'email'   => is_email( $email ) ? $email : '',
+		'address' => trim( (string) sh_option( 'sh_address', '' ) ),
+		'hours'   => trim( (string) sh_option( 'sh_hours', '' ) ),
+	);
+}
+
+/** tel: link of a phone number as typed (Arabic-Indic digits converted; only + and digits kept). */
+function sh_tel_href( string $phone ): string {
+	$phone = strtr( $phone, array_combine( array( '٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩' ), range( 0, 9 ) ) );
+	$num   = preg_replace( '/[^0-9+]/', '', $phone );
+	$num   = '+' === substr( $num, 0, 1 ) ? '+' . str_replace( '+', '', substr( $num, 1 ) ) : str_replace( '+', '', $num );
+	return strlen( preg_replace( '/\D/', '', $num ) ) >= 6 ? 'tel:' . $num : '';
+}
+
+/**
+ * Google Maps embed URL from the «رابط تضمين الخريطة» field: the embed link itself, or the src of the
+ * <iframe> code Google gives («تضمين خريطة ← نسخ HTML»). Only https Google Maps embed URLs are accepted;
+ * nothing else from the field is ever printed.
+ */
+function sh_map_embed_src( string $raw ): string {
+	$raw = trim( $raw );
+	if ( '' === $raw ) {
+		return '';
+	}
+	if ( stripos( $raw, '<iframe' ) !== false ) {
+		if ( ! preg_match( '/\ssrc\s*=\s*(["\'])(.*?)\1/is', $raw, $m ) ) {
+			return '';
+		}
+		$raw = html_entity_decode( $m[2], ENT_QUOTES );
+	}
+	$p = wp_parse_url( $raw );
+	if ( ! $p || 'https' !== strtolower( (string) ( $p['scheme'] ?? '' ) ) ) {
+		return '';
+	}
+	$host  = strtolower( (string) ( $p['host'] ?? '' ) );
+	$path  = (string) ( $p['path'] ?? '' );
+	$query = (string) ( $p['query'] ?? '' );
+	$ok    = ( in_array( $host, array( 'www.google.com', 'google.com' ), true ) && str_starts_with( $path, '/maps/embed' ) )
+		|| ( 'maps.google.com' === $host && ( str_starts_with( $path, '/maps/embed' ) || ( str_starts_with( $path, '/maps' ) && preg_match( '/(^|&)output=embed(&|$)/', $query ) ) ) );
+	return $ok ? esc_url_raw( $raw, array( 'https' ) ) : '';
+}
+
+/** «رابط الاتجاهات»: an https Google Maps link (google.TLD/maps, maps.app.goo.gl, goo.gl/maps, g.page), else ''. */
+function sh_map_directions_url( string $raw ): string {
+	$raw = trim( $raw );
+	$p   = wp_parse_url( $raw );
+	if ( ! $p || 'https' !== strtolower( (string) ( $p['scheme'] ?? '' ) ) ) {
+		return '';
+	}
+	$host = strtolower( (string) ( $p['host'] ?? '' ) );
+	$path = (string) ( $p['path'] ?? '' );
+	$ok   = 'maps.app.goo.gl' === $host || 'g.page' === $host || 'maps.google.com' === $host
+		|| ( 'goo.gl' === $host && str_starts_with( $path, '/maps' ) )
+		|| ( preg_match( '/^(www\.)?google\.[a-z.]+$/', $host ) && str_starts_with( $path, '/maps' ) );
+	return $ok ? esc_url_raw( $raw, array( 'https' ) ) : '';
+}
+
+/** Small line icon for the contact card (the theme icon library has no telephone icon; same 24px grid and stroke). */
+function sh_contact_icon( string $kind ): string {
+	$library = array( 'email' => 'i817572ba', 'address' => 'i8a72afdc', 'hours' => 'i5b10b0a6' );
+	if ( isset( $library[ $kind ] ) ) {
+		return sh_icon( $library[ $kind ] );
+	}
+	return '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5h2.6l1.5 4.2-2 1.4a12 12 0 0 0 6.2 6.2l1.4-2 4.2 1.5v2.6a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg>';
+}

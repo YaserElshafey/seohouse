@@ -1,7 +1,7 @@
 {
  "theme": "seohouse",
- "version": "2.7.6",
- "count": 361,
+ "version": "2.7.7",
+ "count": 362,
  "files": [
   {
    "path": "404.php",
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 1032,
-   "sha1": "c5f5d4e7fd57feb794fda2df0a0bf2ce294546a6"
+   "sha1": "1cc9cad85fc718ab990291818982f7251f1337c5"
   },
   {
    "path": "header.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 545,
-   "sha1": "bd63b7d63f3c3166ef44201a27578cd5d877d534"
+   "sha1": "7645952aef7bd211fb9393bc9a259fcf4c9d1a7c"
   },
   {
    "path": "theme.json",
@@ -95,8 +95,8 @@
   },
   {
    "path": "assets/css/theme.css",
-   "size": 19076,
-   "sha1": "c95ee8df3e31233b0bf05a65dc4421b62f9d5fb7"
+   "size": 23139,
+   "sha1": "b01b01ae057e290ab075037357ba0ab764a5830a"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -545,8 +545,8 @@
   },
   {
    "path": "inc/helpers.php",
-   "size": 14244,
-   "sha1": "787d6cf6e9822bc886c28114a9142028947df463"
+   "size": 17975,
+   "sha1": "a8a5166120c2401721316b83e0781a423df26268"
   },
   {
    "path": "inc/navigation.php",
@@ -870,13 +870,18 @@
   },
   {
    "path": "sections/contact/flow.php",
-   "size": 11191,
-   "sha1": "c4b4bbfd967a8c22adb77f64c957fdf3be3cda7c"
+   "size": 13341,
+   "sha1": "a64141d2ae3cebcf9596813fb1f7376689c0e2b6"
   },
   {
    "path": "sections/contact/hero.php",
    "size": 2007,
    "sha1": "ffd74483c895ff788370967df265aa12754c7c00"
+  },
+  {
+   "path": "sections/contact/location.php",
+   "size": 3191,
+   "sha1": "5b7ca526e578614494c2b581ef96d3d8484a2d4c"
   },
   {
    "path": "sections/home/about.php",

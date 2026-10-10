@@ -3,18 +3,54 @@
  * Section "Flow" — SEO House - Contact.
  * Generated from the approved design by tools/design-import/convert.js, then wired by hand:
  * the form posts to SEO House Core (seohouse/v1/lead, source "contact"; no-JS fallback admin-post).
+ * 2.7.7: «بيانات التواصل» card (phone, email, address, hours from «إعدادات سيو هاوس ← بيانات الشركة») next to
+ * the form on wide screens and above it on small ones (.sh-ct-layout); one success message, no
+ * «choose a time» step.
  * @sh-manual
  *
  * @var array $args { f: layout values }
  */
 defined( 'ABSPATH' ) || exit;
 $f = $args['f'] ?? array();
+// company contact data: «إعدادات سيو هاوس ← بيانات الشركة» (one source, also used by the structured data)
+$ct_company = sh_company_contact();
+$ct_rows    = array_filter(
+	array(
+		'phone'   => array( __( 'الهاتف', 'seohouse' ), $ct_company['phone'], sh_tel_href( $ct_company['phone'] ) ),
+		'email'   => array( __( 'البريد الإلكتروني', 'seohouse' ), $ct_company['email'], $ct_company['email'] ? 'mailto:' . $ct_company['email'] : '' ),
+		'address' => array( __( 'العنوان', 'seohouse' ), $ct_company['address'], '' ),
+		'hours'   => array( __( 'مواعيد العمل', 'seohouse' ), $ct_company['hours'], '' ),
+	),
+	static fn( $r ) => '' !== $r[1]
+);
+// message after a stored request: «إعدادات سيو هاوس ← الاستشارة ← رسالة الاستلام في صفحة اتصل بنا»
+$ct_bk   = (array) sh_option( 'sh_booking', array() );
+$ct_done = trim( (string) ( $ct_bk['step2']['text'] ?? '' ) );
+$ct_done = '' !== $ct_done ? $ct_done : __( 'وصلنا طلبك، وسيتواصل معك فريقنا لتحديد موعد الاستشارة', 'seohouse' );
 ?>
 <section data-screen-label="Flow" style="position: relative; overflow: hidden; border-bottom: 1px solid var(--sh-line);">
     <div aria-hidden="true" style="position: absolute; inset: 0px; background: radial-gradient(45% 60% at 85% 30%, rgba(40, 84, 232, 0.22), transparent 72%), radial-gradient(35% 50% at 10% 90%, rgba(40, 84, 232, 0.12), transparent 70%); pointer-events: none;"></div>
     <div style="position: relative; max-width: 1200px; margin: 0px auto; padding: clamp(32px, 4.4vw, 60px) 20px;">
-      <div data-ct-grid style="display: grid; gap: clamp(26px, 3.2vw, 52px); align-items: center;">
-        <div>
+      <div data-ct-grid class="sh-ct-layout<?= $ct_rows ? '' : ' sh-ct-layout--nocard' ?>" style="display: grid; gap: clamp(26px, 3.2vw, 52px);">
+        <?php if ( $ct_rows ) : ?>
+        <div class="sh-ct-contact">
+          <h2 class="sh-ct-contact__title"><?= esc_html( '' !== trim( (string) ( $f['contact_title'] ?? '' ) ) ? $f['contact_title'] : __( 'بيانات التواصل', 'seohouse' ) ) ?></h2>
+          <ul class="sh-ct-contact__list">
+            <?php foreach ( $ct_rows as $kind => $r ) : ?>
+            <li class="sh-ct-contact__row">
+              <span class="sh-ct-contact__icon" aria-hidden="true"><?= sh_contact_icon( $kind ) // phpcs:ignore WordPress.Security.EscapeOutput -- static SVG ?></span>
+              <span class="sh-ct-contact__text">
+                <span class="sh-ct-contact__label"><?= esc_html( $r[0] ) ?></span>
+                <?php if ( $r[2] ) : ?><a class="sh-ct-contact__value sh-ct-contact__value--link" href="<?= esc_url( $r[2], array( 'tel', 'mailto' ) ) ?>" dir="ltr"><?= esc_html( $r[1] ) ?></a>
+                <?php elseif ( 'phone' === $kind || 'email' === $kind ) : ?><span class="sh-ct-contact__value" dir="ltr"><?= esc_html( $r[1] ) ?></span>
+                <?php else : ?><span class="sh-ct-contact__value"><?= nl2br( esc_html( $r[1] ) ) ?></span><?php endif; ?>
+              </span>
+            </li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+        <?php endif; ?>
+        <div class="sh-ct-steps">
           <?php if (!empty($f['eyebrow'])) : ?><div style="font-size: 13.5px; font-weight: 600; color: var(--sh-link);"><?= esc_html($f['eyebrow'] ?? '') ?></div><?php endif; ?>
           <div style="margin-top: 20px; display: flex; flex-direction: column;">
             <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><div style="display: flex; align-items: flex-start; gap: 16px; padding: 16px 0px; border-top: 1px solid var(--sh-line);">
@@ -27,7 +63,7 @@ $f = $args['f'] ?? array();
           </div>
         </div>
 
-        <div id="booking" data-sh-contact style="scroll-margin-top: 88px; background: rgb(251, 252, 254); color: var(--sh-ink); border-radius: 18px; box-shadow: rgba(0, 0, 0, 0.75) 0px 30px 64px -38px; padding: clamp(20px, 2.4vw, 32px);">
+        <div id="booking" data-sh-contact class="sh-ct-form" style="scroll-margin-top: 88px; background: rgb(251, 252, 254); color: var(--sh-ink); border-radius: 18px; box-shadow: rgba(0, 0, 0, 0.75) 0px 30px 64px -38px; padding: clamp(20px, 2.4vw, 32px);">
           <?php
           $ct_status = isset( $_GET['sh_lead'] ) ? sanitize_key( wp_unslash( $_GET['sh_lead'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification -- display only.
           $ct_inputs = array( 'v1' => array( 'text', 'rtl', 'الاسم الكامل', 'name', 'name' ), 'v2' => array( 'text', 'rtl', 'اسم الشركة', 'company', 'organization' ), 'v3' => array( 'email', 'ltr', 'name@company.com', 'email', 'email' ), 'v4' => array( 'tel', 'ltr', '', 'phone', 'tel' ), 'v5' => array( 'url', 'ltr', 'https://', 'site', 'url' ) );
@@ -66,9 +102,7 @@ $f = $args['f'] ?? array();
 
             <div data-ct-sent<?= 'ok' === $ct_status ? '' : ' hidden' ?>>
               <div aria-hidden="true" style="width: 52px; height: 52px; border-radius: 999px; background: var(--sh-blue); color: rgb(255, 255, 255); display: flex; align-items: center; justify-content: center; font-size: 23px;">✓</div>
-              <div style="font-family: Alexandria, sans-serif; font-weight: 800; font-size: 23px; margin-top: 16px;" tabindex="-1" data-ct-sent-title><?php esc_html_e( 'استلمنا بياناتك', 'seohouse' ); ?></div>
-              <p style="font-size: 16px; color: var(--sh-text); margin: 12px 0px 0px;"><?php esc_html_e( 'الخطوة التالية اختيار موعد المكالمة.', 'seohouse' ); ?></p>
-              <div data-ct-receipt style="margin-top: 18px; border: 1px dashed rgba(40, 84, 232, 0.3); border-radius: 16px; background: var(--sh-surface); padding: 22px; text-align: center; font-size: 14.5px; color: var(--sh-text);"><?php $bk = (array) sh_option( 'sh_booking', array() ); echo esc_html( $bk['step2']['text'] ?? __( 'سجّلنا طلبك. نراجع موقعك ونتواصل معك لتحديد موعد المكالمة.', 'seohouse' ) ); ?></div>
+              <div style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: 20px; line-height: 1.6; margin-top: 16px; text-wrap: pretty;" tabindex="-1" data-ct-sent-title><?= esc_html( $ct_done ) ?></div>
               <div data-ct-summary style="margin-top: 14px; font-size: 14px; color: var(--sh-text);"></div>
               <button type="button" data-ct-reset style="margin-top: 20px; background: none; border: 1.5px solid var(--sh-line); color: var(--sh-ink); font-weight: 600; min-height: 50px; padding: 0px 20px; border-radius: 14px; cursor: pointer;"><?php esc_html_e( 'إرسال طلب آخر', 'seohouse' ); ?></button>
             </div>

@@ -93,6 +93,25 @@
           }
         },
         {
+          "key": "field_sh_contact_flow_msg",
+          "label": "بيانات التواصل",
+          "name": "",
+          "type": "message",
+          "message": "الهاتف والبريد والعنوان ومواعيد العمل تُعدَّل من <a href=\"admin.php?page=seohouse-settings\">إعدادات سيو هاوس ← بيانات الشركة</a> (مصدر واحد تستخدمه صفحة التواصل والبيانات المنظمة). تظهر هنا في بطاقة بجوار النموذج.",
+          "new_lines": "",
+          "esc_html": 0
+        },
+        {
+          "key": "field_sh_contact_flow_title",
+          "label": "عنوان بطاقة بيانات التواصل",
+          "name": "contact_title",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "default_value": "بيانات التواصل",
+          "placeholder": "بيانات التواصل"
+        },
+        {
           "key": "field_8e3e80364adec",
           "label": "الوسم: ماذا سيحدث؟",
           "name": "eyebrow",
@@ -338,6 +357,78 @@
           "type": "text",
           "instructions": "",
           "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_sh_contact_acc_location",
+      "label": "موقعنا",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_contact_location",
+      "label": "",
+      "name": "s_location",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_sh_contact_location_hide",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0
+        },
+        {
+          "key": "field_sh_contact_location_title",
+          "name": "title",
+          "label": "العنوان",
+          "type": "text",
+          "default_value": "موقعنا",
+          "placeholder": "موقعنا"
+        },
+        {
+          "key": "field_sh_contact_location_msg",
+          "name": "",
+          "label": "العنوان ومواعيد العمل",
+          "type": "message",
+          "message": "يظهر عنوان الشركة من <a href=\"admin.php?page=seohouse-settings\">إعدادات سيو هاوس ← بيانات الشركة</a>. الخريطة وزر الاتجاهات لا يظهران حتى تضيف رابطيهما أدناه.",
+          "new_lines": "",
+          "esc_html": 0
+        },
+        {
+          "key": "field_sh_contact_location_embed",
+          "name": "map_embed",
+          "label": "رابط تضمين الخريطة (Google Maps)",
+          "type": "textarea",
+          "rows": 3,
+          "instructions": "من خرائط Google: افتح موقع الشركة ← مشاركة ← «تضمين خريطة» ← «نسخ HTML»، ثم الصقه هنا كما هو، أو الصق الرابط الذي يبدأ بـ https://www.google.com/maps/embed. تُقبل روابط تضمين خرائط Google فقط، ولا يُنفَّذ أي كود آخر.",
+          "placeholder": "https://www.google.com/maps/embed?pb=…"
+        },
+        {
+          "key": "field_sh_contact_location_directions",
+          "name": "directions_url",
+          "label": "رابط الاتجاهات",
+          "type": "url",
+          "instructions": "من خرائط Google: مشاركة ← «نسخ الرابط» (مثل https://maps.app.goo.gl/…). يفتح في تبويب جديد.",
+          "placeholder": "https://maps.app.goo.gl/…"
+        },
+        {
+          "key": "field_sh_contact_location_directions_label",
+          "name": "directions_label",
+          "label": "نص زر الاتجاهات",
+          "type": "text",
+          "default_value": "الاتجاهات",
+          "placeholder": "الاتجاهات"
         }
       ]
     },

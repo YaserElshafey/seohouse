@@ -219,7 +219,7 @@
       "label": "البريد الإلكتروني",
       "name": "sh_email",
       "type": "email",
-      "instructions": "",
+      "instructions": "يظهر في صفحة التواصل (رابط mailto) وفي البيانات المنظمة.",
       "required": 0
     },
     {
@@ -227,7 +227,25 @@
       "label": "الهاتف",
       "name": "sh_phone",
       "type": "text",
-      "instructions": "بالصيغة الدولية، مثال +9665xxxxxxx. يظهر فقط بعد اعتماده.",
+      "instructions": "يظهر في صفحة التواصل (رابط اتصال) وفي البيانات المنظمة. بالصيغة الدولية، مثال +201050861791.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_opt_address",
+      "label": "العنوان",
+      "name": "sh_address",
+      "type": "textarea",
+      "instructions": "عنوان مقر الشركة كما يظهر في صفحة التواصل وقسم «موقعنا».",
+      "required": 0,
+      "rows": 2,
+      "new_lines": ""
+    },
+    {
+      "key": "field_sh_opt_hours",
+      "label": "مواعيد العمل",
+      "name": "sh_hours",
+      "type": "text",
+      "instructions": "تظهر في صفحة التواصل، مثل: من الأحد إلى الخميس، من 9 صباحًا إلى 5 مساءً بتوقيت مصر.",
       "required": 0
     },
     {
