@@ -1,0 +1,37 @@
+المصدر الوحيد للبيانات المنظمة: SEO House Core — مخطط واحد في <head> (class="seohouse-schema") من إعدادات سيو هاوس وحقول المحتوى. وحدة Schema في Rank Math تعمل، وإخراجها للبيانات المنظمة موقوف من Core دون تغيير إعداداتها. العنوان والوصف وcanonical وrobots وOpen Graph وخرائط الموقع تبقى من Rank Math.
+page     ok        core=1 companies=1 الرئيسية http://127.0.0.1:8090/
+page     ok        core=1 companies=1 عن الشركة http://127.0.0.1:8090/about/
+page     ok        core=1 companies=1 اتصل بنا http://127.0.0.1:8090/contact/
+page     ok        core=1 companies=1 الخدمات http://127.0.0.1:8090/services/
+page     ok        core=1 companies=1 خدمة السيو http://127.0.0.1:8090/services/seo/
+page     ok        core=1 companies=1 السيو في السعودية http://127.0.0.1:8090/services/seo/ksa/
+page     ok        core=1 companies=1 القطاعات http://127.0.0.1:8090/sectors/
+page     ok        core=1 companies=1 نتائج الأعمال http://127.0.0.1:8090/results/
+page     ok        core=1 companies=1 الفريق http://127.0.0.1:8090/team/
+page     ok        core=1 companies=1 قطاع http://127.0.0.1:8090/sectors/ecommerce/
+page     ok        core=1 companies=1 المدونة http://127.0.0.1:8090/blog/
+page     ok        core=1 companies=1 مقال http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/
+page     ok        core=1 companies=1 دراسة حالة http://127.0.0.1:8090/results/%d8%aa%d8%b3%d8%aa%d8%aa%d8%b3%d8%aa/
+page     ok        core=1 companies=1 عضو فريق http://127.0.0.1:8090/team/eman-farid/
+company  ok       الاسم | printed: سيو هاوس | settings: سيو هاوس
+company  ok       الاسم اللاتيني | printed: SEO House | settings: SEO House
+company  ok       الرابط | printed: http://127.0.0.1:8090/ | settings: http://127.0.0.1:8090/
+company  ok       الشعار | printed: http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp | settings: http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp
+company  ok       الصورة | printed: http://127.0.0.1:8090/#logo | settings: http://127.0.0.1:8090/#logo
+company  ok       الوصف | printed: سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017. | settings: سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.
+company  ok       سنة التأسيس | printed: 2017 | settings: 2017
+company  ok       الهاتف | printed: +201050861791 | settings: +201050861791
+company  ok       البريد | printed: info@seohouse.agency | settings: info@seohouse.agency
+company  ok       العنوان | printed: 234 شارع عبد السلام عارف، لوران، الإسكندرية، الإسكندرية، EG | settings: 234 شارع عبد السلام عارف، لوران، الإسكندرية، الإسكندرية، EG
+company  ok       الأسواق | printed: السعودية، مصر، الإمارات | settings: السعودية، مصر، الإمارات
+company  ok       الحسابات الرسمية | printed: https://www.facebook.com/seohouse.agency | settings: https://www.facebook.com/seohouse.agency
+rankmath same     اسم الشركة | Rank Math: سيو هاوس | SEO House: سيو هاوس
+review   اختياري: «الرمز البريدي» فارغ، فلا يُطبع postalCode وقد يبقى تحذيرًا اختياريًا في Rich Results Test. أدخله فقط إن كان الرمز الصحيح للمقر معروفًا.
+review   image للشركة = الشعار نفسه («صورة الشركة في البيانات المنظمة» فارغة). أضف صورة تمثل الشركة بمقاس أكبر إن توفرت.
+review   الشعار في Schema 290x68 بكسل؛ Google يطلب 112x112 على الأقل. ارفع «الشعار على الخلفية الفاتحة» بمقاس أكبر يظهر على خلفية بيضاء.
+review   المقال «هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة» مرتبط بعضو فريق محذوف أو غير منشور (#50): لا يُطبع له مؤلف، ويظهر «بقلم» بلا اسم. اختر كاتبًا منشورًا في حقل «الكاتب» أو أفرغه.
+review   دراسة الحالة «قطاع التعليم والتدريب» بلا صورة بارزة ولا لقطة موثقة: لا يُطبع image.
+review   دراسة الحالة «قطاع الصحة والطب» بلا صورة بارزة ولا لقطة موثقة: لا يُطبع image.
+review   دراسة الحالة «قطاع التجارة الإلكترونية» بلا صورة بارزة ولا لقطة موثقة: لا يُطبع image.
+review   صفحة «السيو في السعودية»: «اسم الخدمة في Schema» فارغ، فلا يُطبع serviceType.
+Success: 14 page(s) checked, 0 with missing/duplicate/invalid schema, 0 company value(s) differing, 0 Rank Math value(s) to move or decide, 8 case(s), 0 page(s) with ratings

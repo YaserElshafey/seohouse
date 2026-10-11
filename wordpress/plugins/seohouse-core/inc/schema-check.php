@@ -261,6 +261,7 @@ function sh_schema_check(): array {
 		'alternateName' => 'الاسم اللاتيني',
 		'url'           => 'الرابط',
 		'logo'          => 'الشعار',
+		'image'         => 'الصورة',
 		'description'   => 'الوصف',
 		'foundingDate'  => 'سنة التأسيس',
 		'telephone'     => 'الهاتف',
@@ -301,7 +302,43 @@ function sh_schema_check(): array {
 	if ( ! preg_match( '/^\d{4}$/', trim( (string) sh_core_option( 'sh_founded', '' ) ) ) ) {
 		$out['cases'][] = '«سنة التأسيس» ليست سنة من 4 أرقام، فلا يُطبع foundingDate.';
 	}
-	$logo = sh_schema_logo();
+	$address = sh_schema_address();
+	if ( is_string( $address ) ) {
+		$out['cases'][] = 'العنوان يُطبع نصًا واحدًا، فيظهر في أدوات جوجل تحت name دون أجزاء. املأ «بيانات الشركة ← العنوان المنظم» (الشارع والمنطقة، المدينة، المحافظة، رمز الدولة).';
+	} else {
+		$names = array( 'streetAddress' => 'الشارع والمنطقة', 'addressLocality' => 'المدينة', 'addressRegion' => 'المحافظة', 'addressCountry' => 'رمز الدولة (حرفان مثل EG)' );
+		$miss  = array_values( array_diff_key( $names, $address ) );
+		if ( $miss ) {
+			$out['cases'][] = 'العنوان المنظم ناقص: ' . implode( '، ', $miss ) . '.';
+		}
+		if ( empty( $address['postalCode'] ) ) {
+			$out['cases'][] = 'اختياري: «الرمز البريدي» فارغ، فلا يُطبع postalCode وقد يبقى تحذيرًا اختياريًا في Rich Results Test. أدخله فقط إن كان الرمز الصحيح للمقر معروفًا.';
+		}
+	}
+	$raw_country = trim( (string) sh_core_option( 'sh_address_country', '' ) );
+	if ( '' !== $raw_country && ! preg_match( '/^[A-Za-z]{2}$/', $raw_country ) ) {
+		$out['cases'][] = sprintf( '«رمز الدولة» «%s» ليس حرفين حسب ISO 3166 (مثل EG)، فلا يُطبع addressCountry.', $raw_country );
+	}
+	// the company image: a real image file reachable like a visitor
+	$logo  = sh_schema_logo();
+	$image = sh_schema_company_image( $logo );
+	$img   = isset( $image['url'] ) ? $image : ( ( $image['@id'] ?? '' ) === ( $logo['@id'] ?? '-' ) ? $logo : array() );
+	if ( ! $img ) {
+		$out['cases'][] = 'لا صورة للشركة ولا شعار: أضف «صورة الشركة في البيانات المنظمة» أو «الشعار على الخلفية الفاتحة».';
+	} else {
+		if ( ! isset( $image['url'] ) ) {
+			$out['cases'][] = 'image للشركة = الشعار نفسه («صورة الشركة في البيانات المنظمة» فارغة). أضف صورة تمثل الشركة بمقاس أكبر إن توفرت.';
+		}
+		$r    = wp_remote_head( (string) $img['url'], array( 'timeout' => 15, 'sslverify' => false, 'redirection' => 3 ) );
+		$code = is_wp_error( $r ) ? 0 : (int) wp_remote_retrieve_response_code( $r );
+		$type = is_wp_error( $r ) ? '' : (string) wp_remote_retrieve_header( $r, 'content-type' );
+		if ( 200 !== $code || ! str_starts_with( strtolower( $type ), 'image/' ) ) {
+			$out['cases'][] = sprintf( 'رابط صورة الشركة لا يعيد صورة (HTTP %s، %s): %s', $code ? $code : ( is_wp_error( $r ) ? $r->get_error_message() : '?' ), $type ? $type : 'بلا نوع', $img['url'] );
+		}
+		if ( empty( $img['width'] ) || empty( $img['height'] ) ) {
+			$out['cases'][] = 'تعذرت قراءة أبعاد صورة الشركة من الملف، فلا تُطبع width وheight.';
+		}
+	}
 	if ( $logo && ( (int) ( $logo['width'] ?? 0 ) < 112 || (int) ( $logo['height'] ?? 0 ) < 112 ) ) {
 		$out['cases'][] = sprintf( 'الشعار في Schema %dx%d بكسل؛ Google يطلب 112x112 على الأقل. ارفع «الشعار على الخلفية الفاتحة» بمقاس أكبر يظهر على خلفية بيضاء.', (int) ( $logo['width'] ?? 0 ), (int) ( $logo['height'] ?? 0 ) );
 	}

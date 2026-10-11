@@ -11,9 +11,11 @@
  *
  * Sources — nothing is written in the code:
  * - Organization (@id home_url('/#organization')): «إعدادات سيو هاوس» ← الهوية (name, Latin name,
- *   logo on light background), الفوتر (description = the footer about text; sameAs = the official
- *   profiles in «روابط التواصل في الفوتر», never a map, directions, embed or chat link), بيانات
- *   الشركة (phone, email, address, founding year, markets → areaServed as Country).
+ *   logo on light background; image = «صورة الشركة في البيانات المنظمة», else the logo), الفوتر
+ *   (description = the footer about text; sameAs = the official profiles in «روابط التواصل في الفوتر»,
+ *   never a map, directions, embed or chat link), بيانات
+ *   الشركة (phone, email, head office address as PostalAddress from «العنوان المنظم», founding year,
+ *   markets → areaServed as Country; the markets are service areas, never branch addresses).
  * - Service: the page's hero (H1 → name, intro paragraph → description), «اسم الخدمة في Schema»
  *   (serviceType), the market of the SEO country pages (areaServed), the sector name (audience).
  * - ItemList: the links shown in the listing of a collection page, in the same order.
@@ -221,15 +223,63 @@ function sh_schema_logo(): array {
 			'@id'        => sh_schema_id( 'logo' ),
 			'url'        => $url,
 			'contentUrl' => $url,
-			'width'      => (int) $w,
-			'height'     => (int) $h,
+			'width'      => (int) $w > 0 ? (int) $w : null, // size from the file; none when unknown
+			'height'     => (int) $h > 0 ? (int) $h : null,
 		)
 	) : array();
+}
+
+/**
+ * Image of the company: «صورة الشركة في البيانات المنظمة» (an image from the media library, size read
+ * from the file's metadata); empty → the logo itself, referenced by its @id so the same ImageObject
+ * serves both properties.
+ */
+function sh_schema_company_image( array $logo ): array {
+	$id = (int) sh_core_option( 'sh_company_image', 0 );
+	if ( $id ) {
+		$src = wp_get_attachment_image_src( $id, 'full' );
+		if ( $src && ! empty( $src[0] ) ) {
+			return sh_schema_clean(
+				array(
+					'@type'      => 'ImageObject',
+					'@id'        => sh_schema_id( 'image' ),
+					'url'        => $src[0],
+					'contentUrl' => $src[0],
+					'width'      => (int) $src[1] > 0 ? (int) $src[1] : null, // size from the file; none when unknown
+					'height'     => (int) $src[2] > 0 ? (int) $src[2] : null,
+				)
+			);
+		}
+	}
+	return ! empty( $logo['@id'] ) ? array( '@id' => $logo['@id'] ) : array();
+}
+
+/**
+ * Head office address. The parts in «بيانات الشركة ← العنوان المنظم» make a PostalAddress (a part left
+ * empty is not printed; the country only as a two-letter ISO code). Until any part is filled, the
+ * address text shown on the contact page is printed as before.
+ *
+ * @return array|string
+ */
+function sh_schema_address() {
+	$country = strtoupper( trim( (string) sh_core_option( 'sh_address_country', '' ) ) );
+	$parts   = array(
+		'streetAddress'   => sh_core_plain( sh_core_option( 'sh_address_street', '' ) ),
+		'addressLocality' => sh_core_plain( sh_core_option( 'sh_address_locality', '' ) ),
+		'addressRegion'   => sh_core_plain( sh_core_option( 'sh_address_region', '' ) ),
+		'postalCode'      => sh_core_plain( sh_core_option( 'sh_address_postal', '' ) ),
+		'addressCountry'  => preg_match( '/^[A-Z]{2}$/', $country ) ? $country : '',
+	);
+	if ( ! array_filter( $parts ) ) {
+		return sh_core_plain( sh_core_option( 'sh_address', '' ) );
+	}
+	return sh_schema_clean( array( '@type' => 'PostalAddress' ) + $parts );
 }
 
 /** The company from «إعدادات سيو هاوس». Always type Organization. */
 function sh_schema_organization(): array {
 	$founded = trim( (string) sh_core_option( 'sh_founded', '' ) );
+	$logo    = sh_schema_logo();
 	return sh_schema_clean(
 		array(
 			'@type'         => 'Organization',
@@ -237,13 +287,14 @@ function sh_schema_organization(): array {
 			'name'          => sh_core_plain( sh_core_option( 'sh_company_name', get_bloginfo( 'name' ) ) ),
 			'alternateName' => sh_core_plain( sh_core_option( 'sh_company_name_en', '' ) ),
 			'url'           => home_url( '/' ),
-			'logo'          => sh_schema_logo(),
+			'logo'          => $logo,
+			'image'         => sh_schema_company_image( $logo ),
 			'description'   => sh_core_plain( sh_core_option( 'sh_footer_text', '' ) ),
 			// a year alone is a valid ISO 8601 date; no day or month is made up
 			'foundingDate'  => preg_match( '/^\d{4}$/', $founded ) ? $founded : '',
 			'telephone'     => sh_core_plain( sh_core_option( 'sh_phone', '' ) ),
 			'email'         => sanitize_email( (string) sh_core_option( 'sh_email', '' ) ),
-			'address'       => sh_core_plain( sh_core_option( 'sh_address', '' ) ),
+			'address'       => sh_schema_address(),
 			'areaServed'    => sh_schema_country_nodes(),
 			'sameAs'        => sh_schema_profiles(),
 		)

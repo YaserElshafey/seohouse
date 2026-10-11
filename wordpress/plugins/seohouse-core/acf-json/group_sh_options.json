@@ -273,10 +273,85 @@
       "label": "العنوان",
       "name": "sh_address",
       "type": "textarea",
-      "instructions": "عنوان مقر الشركة كما يظهر في صفحة التواصل وقسم «موقعنا».",
+      "instructions": "عنوان مقر الشركة كما يظهر في صفحة التواصل (بطاقة «بيانات التواصل»).",
       "required": 0,
       "rows": 2,
       "new_lines": ""
+    },
+    {
+      "key": "field_sh_opt_address_schema_msg",
+      "label": "العنوان المنظم للبيانات المنظمة",
+      "name": "address_schema_msg",
+      "type": "message",
+      "message": "أجزاء عنوان المقر نفسه، تُطبع في البيانات المنظمة (PostalAddress) فقط ولا تظهر في الموقع؛ العنوان الظاهر في صفحة التواصل هو حقل «العنوان» أعلاه ولا يتغير. هذا عنوان الشركة في مصر على كل الصفحات، والدول المستهدفة تبقى في «الأسواق المخدومة». ما يُترك فارغًا لا يُطبع.",
+      "new_lines": "",
+      "esc_html": 0
+    },
+    {
+      "key": "field_sh_opt_address_street",
+      "label": "الشارع والمنطقة",
+      "name": "sh_address_street",
+      "type": "text",
+      "instructions": "مثل: 234 شارع عبد السلام عارف، لوران",
+      "required": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_sh_opt_address_locality",
+      "label": "المدينة",
+      "name": "sh_address_locality",
+      "type": "text",
+      "instructions": "مثل: الإسكندرية",
+      "required": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_sh_opt_address_region",
+      "label": "المحافظة",
+      "name": "sh_address_region",
+      "type": "text",
+      "instructions": "مثل: الإسكندرية",
+      "required": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_sh_opt_address_postal",
+      "label": "الرمز البريدي (اختياري)",
+      "name": "sh_address_postal",
+      "type": "text",
+      "instructions": "اكتبه فقط إن كان الرمز الصحيح لعنوان المقر معروفًا؛ يبقى فارغًا ولا يُطبع حتى ذلك.",
+      "required": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
+    },
+    {
+      "key": "field_sh_opt_address_country",
+      "label": "رمز الدولة",
+      "name": "sh_address_country",
+      "type": "text",
+      "instructions": "حرفان حسب ISO 3166، مثل: EG",
+      "required": 0,
+      "maxlength": 2,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      }
     },
     {
       "key": "field_sh_opt_hours",
@@ -311,6 +386,18 @@
       "instructions": "تُستخدم في areaServed داخل Schema. الخدمة عن بُعد؛ لا تُضاف عناوين مكاتب غير حقيقية.",
       "required": 0,
       "default_value": "السعودية، مصر، الإمارات"
+    },
+    {
+      "key": "field_sh_opt_company_image",
+      "label": "صورة الشركة في البيانات المنظمة",
+      "name": "sh_company_image",
+      "type": "image",
+      "instructions": "صورة تمثل الشركة نفسها (مثل شعارها بمقاس كبير أو صورة لمقرها أو فريقها)، لا صورة خدمة أو عميل أو موظف واحد. تُطبع في image للشركة. عند الإفراغ يُستخدم «الشعار على الخلفية الفاتحة».",
+      "required": 0,
+      "return_format": "id",
+      "preview_size": "medium",
+      "library": "all",
+      "mime_types": "jpg,jpeg,png,webp"
     },
     {
       "key": "field_sh_opt_tab_booking",
