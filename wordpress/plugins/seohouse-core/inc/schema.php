@@ -2,9 +2,12 @@
 /**
  * Structured data: the nodes Core builds from fields and visible content.
  *
- * With Rank Math active (the live site) these builders complete Rank Math's own graph through
- * rank_math/json_ld (sh_rankmath_graph() in inc/rankmath.php); Core prints no script of its own.
- * Without an SEO plugin Core prints the same graph itself (sh_schema_output()).
+ * Core is the site's only source of structured data: one complete graph printed in wp_head
+ * (sh_schema_output()), whether or not an SEO plugin is active. Rank Math keeps the title,
+ * description, canonical, robots, Open Graph and sitemaps; its own JSON-LD stays off even if its
+ * Schema module is switched on (inc/rankmath.php). Nothing here reads Rank Math's objects or
+ * settings: company, logo, people and content come from SEO House's fields. The page name and
+ * description are the title and description the head prints (whichever plugin prints them).
  *
  * Sources — nothing is written in the code:
  * - Organization (@id home_url('/#organization')): «إعدادات سيو هاوس» ← الهوية (name, Latin name,
@@ -28,8 +31,7 @@ defined( 'ABSPATH' ) || exit;
 add_action( 'wp_head', 'sh_schema_output', 30 );
 
 function sh_schema_output(): void {
-	$enabled = ! sh_seo_plugin_active() && ! is_404() && ! is_feed();
-	if ( ! apply_filters( 'sh_schema_enabled', $enabled ) ) {
+	if ( ! apply_filters( 'sh_schema_enabled', ! is_404() && ! is_feed() ) ) {
 		return;
 	}
 	$graph = sh_schema_graph();
@@ -43,7 +45,7 @@ function sh_schema_output(): void {
 		),
 		JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES
 	);
-	echo "<script type=\"application/ld+json\">" . str_replace( '</', '<\/', (string) $json ) . "</script>\n"; // phpcs:ignore WordPress.Security.EscapeOutput
+	echo '<script type="application/ld+json" class="seohouse-schema">' . str_replace( '</', '<\/', (string) $json ) . "</script>\n"; // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
 /** Removes empty values so no node carries placeholders. */
@@ -584,7 +586,29 @@ function sh_schema_page_type( int $id ): string {
 	return 'webpage';
 }
 
-/* ------------------------------------------------------------------ Core's own graph (no SEO plugin) */
+/* ------------------------------------------------------------------ the graph */
+
+/**
+ * The page description as the head prints it. With Rank Math active that is the description Rank
+ * Math prints (read as it passes through its rank_math/frontend/description filter, before this
+ * graph is built); otherwise Core's own.
+ */
+function sh_schema_page_description(): string {
+	$printed = $GLOBALS['sh_schema_printed_description'] ?? null;
+	if ( is_string( $printed ) ) {
+		return sh_core_plain( $printed );
+	}
+	return function_exists( 'sh_seo_description' ) ? sh_seo_description() : '';
+}
+
+add_filter(
+	'rank_math/frontend/description',
+	static function ( $desc ) {
+		$GLOBALS['sh_schema_printed_description'] = (string) $desc;
+		return $desc;
+	},
+	PHP_INT_MAX
+);
 
 /**
  * @return array<int,array> Graph nodes for the current view.
@@ -596,7 +620,7 @@ function sh_schema_graph(): array {
 	if ( ! $url ) {
 		$url = is_search() ? (string) get_search_link() : home_url( add_query_arg( array() ) );
 	}
-	$desc = function_exists( 'sh_seo_description' ) ? sh_seo_description() : '';
+	$desc = sh_schema_page_description();
 	$page = array(
 		'@type'       => 'WebPage',
 		'@id'         => $url . '#webpage',
@@ -606,6 +630,13 @@ function sh_schema_graph(): array {
 		'inLanguage'  => 'ar',
 		'isPartOf'    => array( '@id' => sh_schema_id( 'website' ) ),
 	);
+	if ( is_singular() || is_front_page() || is_home() ) {
+		$obj = is_home() ? get_post( (int) get_option( 'page_for_posts' ) ) : ( is_front_page() ? get_post( (int) get_option( 'page_on_front' ) ) : get_queried_object() );
+		if ( $obj instanceof WP_Post ) {
+			$page['datePublished'] = get_the_date( 'c', $obj );
+			$page['dateModified']  = get_the_modified_date( 'c', $obj );
+		}
+	}
 	$crumbs = sh_schema_breadcrumbs( $url );
 	if ( $crumbs ) {
 		$page['breadcrumb'] = array( '@id' => $crumbs['@id'] );
@@ -714,7 +745,7 @@ function sh_schema_graph(): array {
 	if ( $crumbs ) {
 		$graph[] = $crumbs;
 	}
-	return (array) apply_filters( 'sh_schema_graph', array_values( array_filter( array_merge( $graph, $extra ) ) ) );
+	return (array) apply_filters( 'sh_schema_graph', array_values( sh_schema_merge_by_id( array_values( array_filter( array_merge( $graph, $extra ) ) ) ) ) );
 }
 
 /* ------------------------------------------------------------------ graph helpers */
