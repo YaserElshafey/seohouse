@@ -674,6 +674,25 @@
               "required": 0
             },
             {
+              "key": "field_sh_seo_results_case_study",
+              "name": "case_study",
+              "label": "دراسة الحالة لهذه البطاقة",
+              "type": "post_object",
+              "instructions": "اختر دراسة الحالة المنشورة لنفس هذا المشروع من «نتائج الأعمال». الرابط يؤخذ من صفحة الدراسة نفسها. عند الإفراغ لا يظهر رابط «دراسة الحالة» في هذه البطاقة.",
+              "required": 0,
+              "post_type": [
+                "case_study"
+              ],
+              "post_status": [
+                "publish"
+              ],
+              "taxonomy": "",
+              "return_format": "id",
+              "multiple": 0,
+              "allow_null": 1,
+              "ui": 1
+            },
+            {
               "key": "field_8ca00a58b2e1c",
               "name": "link",
               "label": "الرابط",

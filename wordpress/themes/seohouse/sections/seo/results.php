@@ -1,7 +1,9 @@
 <?php
 /**
  * Section "Results" — SEO service page: result highlights as tabs (design caseTabs).
- * One repeater drives the tabs and their panels.
+ * One repeater drives the tabs and their panels. Each card's «دراسة الحالة ←» links to the case study
+ * chosen for it («دراسة الحالة لهذه البطاقة»), and is left out when none is chosen; «كل النتائج ←»
+ * keeps its own link.
  *
  * @sh-manual
  * @package SEOHouse
@@ -32,7 +34,7 @@ $tab_off = 'flex: 0 0 auto; min-height: 48px; padding: 0px 20px; border-radius: 
 			<button type="button" role="tab" id="<?php echo esc_attr( "$uid-t$i" ); ?>" aria-controls="<?php echo esc_attr( "$uid-p$i" ); ?>" aria-selected="<?php echo 0 === $i ? 'true' : 'false'; ?>" tabindex="<?php echo 0 === $i ? '0' : '-1'; ?>" data-sh-tab<?php echo sh_tab_style( 0 === $i, $tab_on, $tab_off ); // phpcs:ignore ?>><?php echo esc_html( $c['tab'] ); ?></button>
 			<?php endforeach; ?>
 		</div>
-			<?php foreach ( $cases as $i => $c ) : ?>
+			<?php foreach ( $cases as $i => $c ) : $case_url = sh_case_study_url( $c['case_study'] ?? 0 ); // the case study chosen for this card; none → no link ?>
 		<div data-case role="tabpanel" id="<?php echo esc_attr( "$uid-p$i" ); ?>" aria-labelledby="<?php echo esc_attr( "$uid-t$i" ); ?>"<?php echo 0 === $i ? '' : ' hidden'; ?> style="margin-top: 18px; display: grid; gap: clamp(22px, 2.6vw, 40px); align-items: center; border-radius: 24px; background: rgb(255, 255, 255); padding: clamp(22px, 2.6vw, 34px); box-shadow: rgba(37, 43, 51, 0.35) 0px 14px 34px -26px;">
 			<div style="min-width: 0px;">
 				<div style="display: flex; flex-wrap: wrap; gap: 8px;">
@@ -47,8 +49,8 @@ $tab_off = 'flex: 0 0 auto; min-height: 48px; padding: 0px 20px; border-radius: 
 					<?php if ( ! empty( $c['period'] ) ) : ?><span><?php echo esc_html( __( 'الفترة:', 'seohouse' ) . ' ' . $c['period'] ); ?></span><?php endif; ?>
 					<?php if ( ! empty( $c['source'] ) ) : ?><span><?php echo esc_html( __( 'المصدر:', 'seohouse' ) . ' ' . $c['source'] ); ?></span><?php endif; ?>
 				</div>
-				<?php if ( ! empty( $c['link'] ) && ! empty( $c['link_label'] ) ) : ?>
-				<a href="<?php echo esc_url( sh_link( $c['link'] ) ); ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 15px; font-weight: 600; color: var(--sh-link); border-bottom: 1px solid rgba(40, 84, 232, 0.45); padding-bottom: 3px;"><?php echo esc_html( $c['link_label'] ); ?> <span aria-hidden="true">←</span></a>
+				<?php if ( $case_url && ! empty( $c['link_label'] ) ) : ?>
+				<a href="<?php echo esc_url( $case_url ); ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 15px; font-weight: 600; color: var(--sh-link); border-bottom: 1px solid rgba(40, 84, 232, 0.45); padding-bottom: 3px;"><?php echo esc_html( $c['link_label'] ); ?> <span aria-hidden="true">←</span></a>
 				<?php endif; ?>
 			</div>
 			<?php if ( ! empty( $c['proof'] ) ) : ?>

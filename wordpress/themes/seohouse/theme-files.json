@@ -1,6 +1,6 @@
 {
  "theme": "seohouse",
- "version": "2.7.8",
+ "version": "2.7.9",
  "count": 362,
  "files": [
   {
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 1032,
-   "sha1": "877135baf43e8ae23118c380417bd6fee30e36e8"
+   "sha1": "1fc7a9085afb4a9d3f0fbb1f820f175df7383e62"
   },
   {
    "path": "header.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 545,
-   "sha1": "04c2e6dd811ed3532c2bc2b9728d5ef4ebef0118"
+   "sha1": "6aec15d4670c49fa59c24f3881ed4f065b4a6056"
   },
   {
    "path": "theme.json",
@@ -535,8 +535,8 @@
   },
   {
    "path": "inc/dynamic.php",
-   "size": 6453,
-   "sha1": "0bf3983e9e54abf5c0b0b4e6614eb12c1b285ed7"
+   "size": 7042,
+   "sha1": "24c43532524695f8e46527aa9a1a0598fed31a95"
   },
   {
    "path": "inc/enqueue.php",
@@ -1255,8 +1255,8 @@
   },
   {
    "path": "sections/seo/results.php",
-   "size": 6411,
-   "sha1": "21ee9811dfbb8dac0a8b578aecb72296cd8943a3"
+   "size": 6728,
+   "sha1": "0c7bb2710427ac147606b168679a041f855d381d"
   },
   {
    "path": "sections/seo/reviews.php",

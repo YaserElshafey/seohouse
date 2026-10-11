@@ -64,6 +64,9 @@ const SH_HIDDEN_SETTING_KEYS = array(
 	'field_sh_contact_location_title',
 	'field_sh_contact_location_directions',
 	'field_sh_contact_location_directions_label',
+	// «نتائج موثقة من مشاريع السيو»: the card's old free link (pointed to /results/); the card now links only to the
+	// case study chosen in «دراسة الحالة لهذه البطاقة». The old value is kept, not deleted.
+	'field_8ca00a58b2e1c',
 );
 
 add_filter(

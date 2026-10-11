@@ -113,6 +113,18 @@ function sh_case_studies( int $limit = 0 ): array {
 	);
 }
 
+/**
+ * Link of a case study chosen in a field (post ID or post object): its own permalink, only when it is a
+ * published, public case study («نتائج الأعمال»); '' otherwise (empty choice, draft, deleted, another type).
+ */
+function sh_case_study_url( $value ): string {
+	$id = $value instanceof WP_Post ? (int) $value->ID : (int) ( is_array( $value ) ? ( $value['ID'] ?? 0 ) : $value );
+	if ( ! $id || 'case_study' !== get_post_type( $id ) || 'publish' !== get_post_status( $id ) || post_password_required( $id ) ) {
+		return '';
+	}
+	return (string) get_permalink( $id );
+}
+
 /** Team member profile linked to a post (explicit field → author's linked profile → none). */
 function sh_post_author_member( $post = null ): int {
 	$post = get_post( $post );
