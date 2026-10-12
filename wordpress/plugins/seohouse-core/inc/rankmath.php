@@ -437,3 +437,58 @@ add_action(
 		}
 	}
 );
+
+/* ------------------------------------------------------------------ sitemap switch of the site's own post types */
+
+/**
+ * Rank Math stores no sitemap setting for a post type registered after its own setup (case studies
+ * and team profiles): its Sitemap screen shows «Include in Sitemap» switched on (the field's default)
+ * while nothing is stored, and the sitemap treats a type without a stored switch as excluded —
+ * team_member-sitemap.xml and ?sitemap=team_member answer 404 and the type is missing from
+ * sitemap_index.xml. A missing switch is stored as the value the screen shows ('on'); a switch saved
+ * on that screen (on or off) is never changed, and nothing else (noindex, excluded items, canonical)
+ * is touched. The sitemap cache is then emptied so the index lists the types.
+ */
+function sh_rankmath_sitemap_types(): array {
+	return array( 'case_study', 'team_member' );
+}
+
+/** Rank Math's stored sitemap switch of a type: 'on' | 'off' | '' (nothing stored). */
+function sh_rankmath_sitemap_switch( string $type ): string {
+	$o = get_option( 'rank-math-options-sitemap' );
+	if ( ! is_array( $o ) || ! array_key_exists( "pt_{$type}_sitemap", $o ) ) {
+		return '';
+	}
+	$v = $o[ "pt_{$type}_sitemap" ];
+	return ( true === $v || 'on' === $v || '1' === (string) $v ) ? 'on' : 'off'; // Rank Math stores 'on' / 'off'
+}
+
+/** Stores the missing switches; returns the types stored. */
+function sh_rankmath_sitemap_store_missing(): array {
+	$o = get_option( 'rank-math-options-sitemap' );
+	if ( ! is_array( $o ) || ! in_array( 'sitemap', (array) get_option( 'rank_math_modules', array() ), true ) ) {
+		return array(); // sitemap module off or never set up: nothing to complete
+	}
+	$stored = array();
+	foreach ( sh_rankmath_sitemap_types() as $type ) {
+		if ( post_type_exists( $type ) && ! array_key_exists( "pt_{$type}_sitemap", $o ) ) {
+			$o[ "pt_{$type}_sitemap" ] = 'on';
+			$stored[]                  = $type;
+		}
+	}
+	if ( $stored ) {
+		update_option( 'rank-math-options-sitemap', $o );
+		sh_rankmath_sitemap_cache_clear();
+	}
+	return $stored;
+}
+
+add_action(
+	'admin_init',
+	static function () {
+		if ( sh_rankmath_active() && current_user_can( 'manage_options' ) ) {
+			sh_rankmath_sitemap_store_missing();
+		}
+	},
+	20
+);

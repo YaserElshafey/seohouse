@@ -8,6 +8,7 @@
  * - The company printed compared with «إعدادات سيو هاوس» (the values shown on the site).
  * - Company values saved only in Rank Math (its stored settings are read for this report only; the
  *   graph never uses them): listed for a manual move, nothing is copied.
+ * - Rank Math sitemaps of case studies and team profiles: stored switch, counts, HTTP status, index.
  * - Records needing an editor's decision (an article pointing to a deleted profile, a footer link that
  *   is not a profile, an empty «اسم الخدمة في Schema», an article without a real image, ratings).
  *
@@ -179,6 +180,51 @@ function sh_schema_check_rankmath_values(): array {
 }
 
 /**
+ * Rank Math sitemaps of the case studies and team profiles, read like a crawler.
+ *
+ * @return array<int,array{type:string,label:string,switch:string,published:int,indexable:int,excluded:int,url:string,status:int,urls:int,in_index:bool}>
+ */
+function sh_schema_check_sitemaps(): array {
+	if ( ! function_exists( 'sh_rankmath_sitemap_types' ) || ! sh_rankmath_active() || ! in_array( 'sitemap', (array) get_option( 'rank_math_modules', array() ), true ) ) {
+		return array();
+	}
+	global $wpdb;
+	$fetch   = static function ( string $url ): array {
+		$r = wp_remote_get( $url, array( 'timeout' => 20, 'sslverify' => false, 'redirection' => 0, 'headers' => array( 'Cache-Control' => 'no-cache' ) ) );
+		return is_wp_error( $r ) ? array( 0, '' ) : array( (int) wp_remote_retrieve_response_code( $r ), (string) wp_remote_retrieve_body( $r ) );
+	};
+	[ , $index ] = $fetch( home_url( '/sitemap_index.xml' ) );
+	$sm          = (array) get_option( 'rank-math-options-sitemap', array() );
+	$excluded    = array_filter( array_map( 'intval', explode( ',', (string) ( $sm['exclude_posts'] ?? '' ) ) ) );
+	$rows        = array();
+	foreach ( sh_rankmath_sitemap_types() as $type ) {
+		$obj = get_post_type_object( $type );
+		if ( ! $obj ) {
+			continue;
+		}
+		$published = (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM {$wpdb->posts} WHERE post_type = %s AND post_status = 'publish' AND post_password = ''", $type ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		// the same rule Rank Math counts with: no stored noindex, no custom canonical elsewhere
+		$hidden = (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(DISTINCT p.ID) FROM {$wpdb->posts} p JOIN {$wpdb->postmeta} m ON m.post_id = p.ID WHERE p.post_type = %s AND p.post_status = 'publish' AND ( ( m.meta_key = 'rank_math_robots' AND m.meta_value LIKE %s ) OR ( m.meta_key = 'rank_math_canonical_url' AND m.meta_value <> '' ) )", $type, '%noindex%' ) ); // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+		$ex_ids = $excluded ? array_filter( $excluded, static fn( $id ) => get_post_type( $id ) === $type ) : array();
+		$url    = home_url( "/{$type}-sitemap.xml" );
+		[ $status, $body ] = $fetch( $url );
+		$rows[] = array(
+			'type'      => $type,
+			'label'     => (string) $obj->labels->name,
+			'switch'    => sh_rankmath_sitemap_switch( $type ),
+			'published' => $published,
+			'indexable' => max( 0, $published - $hidden ),
+			'excluded'  => count( $ex_ids ),
+			'url'       => $url,
+			'status'    => $status,
+			'urls'      => 200 === $status ? substr_count( $body, '<url>' ) : 0,
+			'in_index'  => str_contains( $index, "{$type}-sitemap" ),
+		);
+	}
+	return $rows;
+}
+
+/**
  * @return array{state:array,pages:array,company:array,rankmath:array,cases:array,ratings:string[]}
  *   pages rows: [label, url, core blocks, other blocks (text), company nodes, status]; status ok | missing | duplicate | invalid | error
  *   company rows: [label, printed, settings, status]; status ok | conflict | missing | review
@@ -189,6 +235,7 @@ function sh_schema_check(): array {
 		'pages'    => array(),
 		'company'  => array(),
 		'rankmath' => sh_schema_check_rankmath_values(),
+		'sitemaps' => sh_schema_check_sitemaps(),
 		'cases'    => array(),
 		'ratings'  => array(),
 	);
@@ -436,6 +483,19 @@ function sh_schema_check_page(): void {
 		echo '<p>' . esc_html__( 'لا توجد قيم شركة محفوظة في Rank Math.', 'seohouse-core' ) . '</p>';
 	}
 
+	if ( $c['sitemaps'] ) {
+		$sw = array(
+			'on'  => 'مفعّل (محفوظ)',
+			'off' => 'مستبعد بإعداد محفوظ',
+			''    => 'غير محفوظ — يُعامل كمستبعد',
+		);
+		echo '<h2>' . esc_html__( 'خرائط الموقع: دراسات الحالة والفريق (Rank Math)', 'seohouse-core' ) . '</h2><table class="widefat striped" style="max-width:90em">' . $th( array( 'النوع', '«Include in Sitemap» المحفوظ', 'منشور', 'قابل للفهرسة', 'مستبعد يدويًا', 'الخريطة', 'في sitemap_index.xml' ) ) . '<tbody>'; // phpcs:ignore WordPress.Security.EscapeOutput
+		foreach ( $c['sitemaps'] as $r ) {
+			echo '<tr>' . $td( $r['label'] ) . '<td>' . ( 'on' === $r['switch'] ? esc_html( $sw['on'] ) : '<strong>' . esc_html( $sw[ $r['switch'] ] ) . '</strong>' ) . '</td>' . $td( $r['published'] ) . $td( $r['indexable'] ) . $td( $r['excluded'] ) . $td( 'HTTP ' . $r['status'] . ( 200 === $r['status'] ? ' — ' . $r['urls'] . ' رابط' : '' ) . ' — ' . $r['url'], true ) . $td( $r['in_index'] ? 'نعم' : 'لا' ) . '</tr>'; // phpcs:ignore WordPress.Security.EscapeOutput
+		}
+		echo '</tbody></table>';
+	}
+
 	$cases = $c['cases'];
 	foreach ( $c['ratings'] as $u ) {
 		$cases[] = 'تقييمات (AggregateRating أو Review) في البيانات المنظمة: ' . $u . ' — أوقف خيار Schema/Rich snippet في إضافة التقييمات؛ التقييمات الظاهرة تبقى.';
@@ -459,6 +519,9 @@ if ( defined( 'WP_CLI' ) && WP_CLI ) {
 			}
 			foreach ( $c['rankmath'] as $r ) {
 				WP_CLI::log( sprintf( 'rankmath %-8s %s | Rank Math: %s | SEO House: %s', $r[3], $r[0], $r[1], $r[2] ) );
+			}
+			foreach ( $c['sitemaps'] as $r ) {
+				WP_CLI::log( sprintf( 'sitemap  %-11s switch=%s published=%d indexable=%d excluded=%d %s → HTTP %d (%d urls) in_index=%s', $r['type'], '' === $r['switch'] ? 'missing' : $r['switch'], $r['published'], $r['indexable'], $r['excluded'], $r['url'], $r['status'], $r['urls'], $r['in_index'] ? 'yes' : 'no' ) );
 			}
 			foreach ( $c['ratings'] as $r ) {
 				WP_CLI::log( 'rating   ' . $r );
