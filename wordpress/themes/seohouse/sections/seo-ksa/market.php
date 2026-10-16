@@ -3,7 +3,6 @@
  * Section "Market" — SEO House - Saudi SEO Page.
  * Generated from the approved design by tools/design-import/convert.js.
  * To maintain this file by hand add the tag sh-manual (prefixed with @) as its own line here.
-
  * @sh-manual
  * Maintained by hand since 2.7.12: the card uses the shared white surface ([data-card], theme.css)
  * instead of the dark design's 3.5% white, which vanished on the light field. Content unchanged.

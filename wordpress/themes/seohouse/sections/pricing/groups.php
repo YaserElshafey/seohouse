@@ -3,6 +3,8 @@
  * Section "Groups" — SEO House - Pricing.
  * Generated from the approved design by tools/design-import/convert.js.
  * To maintain this file by hand add the tag sh-manual (prefixed with @) as its own line here.
+ * @sh-manual
+ * 2.7.13: service cards use the shared white-card hover ([data-lcard], theme.css) instead of the blue fill.
  *
  * @var array $args { f: layout values }
  */
@@ -16,9 +18,9 @@ $f = $args['f'] ?? array();
         <?php if (!empty($f['title'])) : ?><h2 data-sec-h style="font-family: Alexandria, sans-serif; font-weight: 700; line-height: 1.28;"><?= esc_html($f['title'] ?? '') ?></h2><?php endif; ?>
       </div>
       <div data-pr-four style="margin-top: 22px; display: grid; gap: 14px;">
-        <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><?php if (!empty(sh_link($r1['link'] ?? ''))) : ?><a data-hcard href="<?= esc_url(sh_link($r1['link'] ?? '')) ?>" class="hv-71de80" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; border-radius: 14px; background: var(--sh-surface); padding: 18px 20px; color: var(--sh-ink);">
+        <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><?php if (!empty(sh_link($r1['link'] ?? ''))) : ?><a data-lcard href="<?= esc_url(sh_link($r1['link'] ?? '')) ?>" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; border-radius: 14px; background: var(--sh-surface); padding: 18px 20px; color: var(--sh-ink);">
           <?php if (!empty($r1['heading'])) : ?><span style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: 16.5px;"><?= esc_html($r1['heading'] ?? '') ?></span><?php endif; ?>
-          <span aria-hidden="true" style="color: var(--sh-link);">←</span>
+          <span aria-hidden="true" data-lcard-arrow style="color: var(--sh-link);">←</span>
         </a><?php endif; ?><?php endforeach; ?>
       </div>
     </div>

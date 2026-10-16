@@ -36,7 +36,7 @@ if ( ! $cards ) {
 		<h2 class="sh-other-markets__title"><?php esc_html_e( 'خدماتنا في الأسواق العربية', 'seohouse' ); ?></h2>
 		<div class="sh-other-markets__grid">
 			<?php foreach ( $cards as $c ) : ?>
-			<a data-hcard class="sh-other-markets__card" href="<?php echo esc_url( $c[0] ); ?>"><span aria-hidden="true" class="sh-other-markets__bar"></span><span class="sh-other-markets__label"><?php echo esc_html( $c[1] ); ?></span></a>
+			<a data-lcard class="sh-other-markets__card" href="<?php echo esc_url( $c[0] ); ?>"><span aria-hidden="true" class="sh-other-markets__bar"></span><span class="sh-other-markets__label" data-lcard-text><?php echo esc_html( $c[1] ); ?></span></a>
 			<?php endforeach; ?>
 		</div>
 	</div>
