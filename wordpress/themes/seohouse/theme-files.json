@@ -1,6 +1,6 @@
 {
  "theme": "seohouse",
- "version": "2.7.9",
+ "version": "2.7.10",
  "count": 362,
  "files": [
   {
@@ -20,8 +20,8 @@
   },
   {
    "path": "functions.php",
-   "size": 1032,
-   "sha1": "1fc7a9085afb4a9d3f0fbb1f820f175df7383e62"
+   "size": 1033,
+   "sha1": "f2bc634866faf04b998abe6ccfa92fcdfd0fde01"
   },
   {
    "path": "header.php",
@@ -70,8 +70,8 @@
   },
   {
    "path": "style.css",
-   "size": 545,
-   "sha1": "6aec15d4670c49fa59c24f3881ed4f065b4a6056"
+   "size": 546,
+   "sha1": "73006f4167a1ac3cc64e1d66db081c6f2fa6105f"
   },
   {
    "path": "theme.json",
@@ -840,8 +840,8 @@
   },
   {
    "path": "parts/dynamic/team-track.php",
-   "size": 961,
-   "sha1": "0f1fff5d1c438224b1e57fd4040c5275463ad623"
+   "size": 1692,
+   "sha1": "2a024b4006d3cfc65a43bebf8446191a4db7b0cb"
   },
   {
    "path": "sections/about/client_logos.php",
@@ -900,8 +900,8 @@
   },
   {
    "path": "sections/home/hero.php",
-   "size": 5919,
-   "sha1": "f741dcab0e1e1a38beef8375a0ec7acc3d635b5e"
+   "size": 5956,
+   "sha1": "59d958414853e755719571bfd7670d71e8e59686"
   },
   {
    "path": "sections/home/markets.php",

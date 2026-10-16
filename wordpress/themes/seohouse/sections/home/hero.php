@@ -36,7 +36,7 @@ $f = $args['f'] ?? array();
 
         <div data-hero-mob>
           <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><div style="<?= esc_attr($i1 === 0 ? 'overflow: auto hidden; scrollbar-width: none; mask-image: linear-gradient(90deg, transparent, rgb(0, 0, 0) 6%, rgb(0, 0, 0) 94%, transparent);' : 'overflow: auto hidden; scrollbar-width: none; margin-top: 8px; mask-image: linear-gradient(90deg, transparent, rgb(0, 0, 0) 6%, rgb(0, 0, 0) 94%, transparent);') ?>">
-            <div data-mob-track style="display: flex; width: max-content; animation: 44s linear 0s infinite normal none running shRtl;"><?php get_template_part( 'parts/dynamic/team-track', null, array( 'track' => 0, 'img_style' => 'flex: 0 0 auto; width: 112px; height: 112px; margin-inline-end: 8px; object-fit: cover; object-position: center 20%; display: block; border-radius: 14px; filter: saturate(0.85);' ) ); ?></div>
+            <div data-mob-track style="display: flex; width: max-content; animation: 44s linear 0s infinite normal none running shRtl;"><?php get_template_part( 'parts/dynamic/team-track', null, array( 'track' => $i1, 'item_px' => 120, 'min_px' => 860, 'img_style' => 'flex: 0 0 auto; width: 112px; height: 112px; margin-inline-end: 8px; object-fit: cover; object-position: center 20%; display: block; border-radius: 14px; filter: saturate(0.85);' ) ); ?></div>
           </div><?php endforeach; ?>
         </div>
 
