@@ -1,0 +1,17 @@
+permalinks → /blog/%postname%/
+info       source — 4 مقالًا منشورًا في https://seohouse.agency (shwpsrc / sh7_)
+info       author:admin — اسم العرض ← Yasser Youssef (كما في الموقع الأساسي)
+created    image:مشكلة-404-not-found.jpg — 6 ملفات (كل المقاسات)
+replaced   fix-404-not-found — استُبدلت المسودة (نسختها محفوظة) — http://127.0.0.1:8097/new/blog/fix-404-not-found/
+created    image:d1db1390-8654-45ed-bc23-1acc93638886.png — 10 ملفات (كل المقاسات)
+created    image:2618eeea-5510-4a06-aeea-a91470ccab47.png — 9 ملفات (كل المقاسات)
+replaced   how-to-build-backlinks-correctly — استُبدلت المسودة (نسختها محفوظة) — http://127.0.0.1:8097/new/blog/how-to-build-backlinks-correctly/
+created    image:لماذا-لا-يظهر-موقعك-في-محركات-البحث.png — 10 ملفات (كل المقاسات)
+replaced   why-is-my-website-not-showing-in-search-engines — استُبدلت المسودة (نسختها محفوظة) — http://127.0.0.1:8097/new/blog/why-is-my-website-not-showing-in-search-engines/
+created    author:Mona — كاتب (دور: كاتب)، كلمة مرور عشوائية
+created    image:ChatGPT-Image-3-يونيو-2026،-05_07_09-م.png — 10 ملفات (كل المقاسات)
+replaced   هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء — استُبدلت المسودة (نسختها محفوظة) — http://127.0.0.1:8097/new/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/
+info       rank-math — نُسخ كيان الموقع من Rank Math في الموقع الأساسي: knowledgegraph_type، knowledgegraph_logo
+info       backup — نسخة المسودات المستبدلة: wp-content/uploads/seohouse-backups/drafts-before-migration-20261003-144628-dTREHV.json
+{"created":6,"replaced":4,"updated":0,"skipped":0,"protected":0,"failed":0}
+Success: اكتمل النقل.

@@ -1,0 +1,14 @@
+[
+ {
+  "key": "cat:technical-seo",
+  "name": "سيو تقني",
+  "slug": "technical-seo",
+  "description": ""
+ },
+ {
+  "key": "cat:off-page-seo",
+  "name": "السيو الخارجي",
+  "slug": "off-page-seo",
+  "description": ""
+ }
+]

@@ -1,0 +1,18 @@
+/* SEO House - Salla.dc.html — page-specific rules from the approved design (generated). */
+[data-sa-hero] { grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); }
+@media (max-width:1023px) { [data-sa-hero] { grid-template-columns:1fr; } }
+[data-sa-steps] { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:719px) { [data-sa-steps] { grid-template-columns:1fr; } }
+[data-bk-grid] { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); }
+[data-bk-row] { grid-template-columns:1fr 1fr; }
+@media (max-width:899px) { [data-bk-grid] { grid-template-columns:1fr; } }
+@media (max-width:559px) { [data-bk-row] { grid-template-columns:1fr; } }
+[data-screen-label="Hero"] { position:relative; overflow:hidden; }
+[data-hero-grid] ~ *:not([aria-hidden="true"]) { position:relative; }
+[data-sh-center] { text-align:center; }
+[data-sh-center] > p { margin-inline:auto !important; max-width:44em; }
+[data-sh-center] h2 { text-wrap:balance; }
+[data-sec-head][data-center] { text-align:center; margin-inline:auto; }
+[data-sec-head][data-center] > div:first-child { justify-content:center; }
+p[data-center] { margin-inline:auto !important; text-align:center; }
+@media (max-width:859px) { [data-pts] { grid-template-columns:1fr !important; } }

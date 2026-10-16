@@ -1,0 +1,331 @@
+[
+  {
+    "key": "team:yasser-youssef",
+    "slug": "yasser-youssef",
+    "name": "ياسر يوسف",
+    "role": "المدير التنفيذي",
+    "experience": "+12 سنة خبرة",
+    "specialties": [],
+    "linkedin": "https://www.linkedin.com/in/yasser-youssef7/",
+    "photo": "uploads/pasted-1789463270111-0.webp",
+    "order": 0
+  },
+  {
+    "key": "team:mohamed-moawad",
+    "slug": "mohamed-moawad",
+    "name": "محمد معوض",
+    "role": "مدير تحسين محركات البحث",
+    "experience": "+10 سنوات خبرة",
+    "specialties": [
+      {
+        "label": "سيو"
+      },
+      {
+        "label": "تقني"
+      },
+      {
+        "label": "تحليل"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/moawwad96/",
+    "photo": "uploads/pasted-1789463278866-0.webp",
+    "order": 1
+  },
+  {
+    "key": "team:maha-ali",
+    "slug": "maha-ali",
+    "name": "مها علي",
+    "role": "قائد الفريق",
+    "experience": "+6 سنوات خبرة",
+    "specialties": [
+      {
+        "label": "سيو"
+      },
+      {
+        "label": "محتوى"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/maha-ali-7b7510184/",
+    "photo": "uploads/pasted-1789463282905-0.webp",
+    "order": 2
+  },
+  {
+    "key": "team:mennatallah-said",
+    "slug": "mennatallah-said",
+    "name": "منةالله سعيد",
+    "role": "قائد تحسين المتاجر الإلكترونية",
+    "experience": "+6 سنوات خبرة",
+    "specialties": [
+      {
+        "label": "منتجات"
+      },
+      {
+        "label": "تحليل"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/mennatallah-said-0040b11b8",
+    "photo": "uploads/pasted-1789463286768-0.webp",
+    "order": 3
+  },
+  {
+    "key": "team:mona-ali",
+    "slug": "mona-ali",
+    "name": "منى علي",
+    "role": "قائد منصات التواصل الاجتماعي",
+    "experience": "+2 سنة خبرة",
+    "specialties": [
+      {
+        "label": "محتوى"
+      },
+      {
+        "label": "إعلانات"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/mona-ali-a18028254/",
+    "photo": "uploads/pasted-1789463290373-0.webp",
+    "order": 4
+  },
+  {
+    "key": "team:esraa-kamal",
+    "slug": "esraa-kamal",
+    "name": "إسراء كمال",
+    "role": "قائد علاقات العملاء",
+    "experience": "+4 سنوات خبرة",
+    "specialties": [
+      {
+        "label": "سيو"
+      },
+      {
+        "label": "تواصل"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/esraa-kamal-151b46193",
+    "photo": "uploads/pasted-1789463294080-0.webp",
+    "order": 5
+  },
+  {
+    "key": "team:heba-geneedy",
+    "slug": "heba-geneedy",
+    "name": "هبه جنيدي",
+    "role": "قائد الموارد البشرية",
+    "experience": "+7 سنوات خبرة",
+    "specialties": [
+      {
+        "label": "إدارة"
+      },
+      {
+        "label": "تطوير"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/heba-geneedy-506409116/",
+    "photo": "uploads/pasted-1789463297756-0.webp",
+    "order": 6
+  },
+  {
+    "key": "team:mohamed-hassan",
+    "slug": "mohamed-hassan",
+    "name": "محمد حسن",
+    "role": "متخصص تحسين محركات البحث",
+    "experience": "+3 سنوات خبرة",
+    "specialties": [
+      {
+        "label": "سيو"
+      },
+      {
+        "label": "محتوى"
+      },
+      {
+        "label": "تقني"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/mohamed-hassan-7a95322a9",
+    "photo": "uploads/pasted-1789463301137-0.webp",
+    "order": 7
+  },
+  {
+    "key": "team:mustafa-mahmoud",
+    "slug": "mustafa-mahmoud",
+    "name": "مصطفي محمود",
+    "role": "متخصص تحسين محركات البحث",
+    "experience": "+3 سنوات خبرة",
+    "specialties": [
+      {
+        "label": "سيو"
+      },
+      {
+        "label": "محتوى"
+      },
+      {
+        "label": "تحليل"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/mustafa-mahmoud-shaapan-69b3a1320",
+    "photo": "uploads/pasted-1789463304330-0.webp",
+    "order": 8
+  },
+  {
+    "key": "team:ahmed-sanad",
+    "slug": "ahmed-sanad",
+    "name": "أحمد سند",
+    "role": "متخصص تحسين محركات البحث",
+    "experience": "+2 سنة خبرة",
+    "specialties": [
+      {
+        "label": "سيو"
+      },
+      {
+        "label": "تحليل"
+      }
+    ],
+    "linkedin": "",
+    "photo": "uploads/pasted-1789463309884-0.webp",
+    "order": 9
+  },
+  {
+    "key": "team:esraa-mohamed",
+    "slug": "esraa-mohamed",
+    "name": "إسراء محمد",
+    "role": "متخصص تحسين المتاجر الإلكترونية",
+    "experience": "+1 سنة خبرة",
+    "specialties": [
+      {
+        "label": "منتجات"
+      },
+      {
+        "label": "محتوى"
+      }
+    ],
+    "linkedin": "",
+    "photo": "uploads/pasted-1789463312814-0.webp",
+    "order": 10
+  },
+  {
+    "key": "team:nada-mahmoud",
+    "slug": "nada-mahmoud",
+    "name": "ندى محمود",
+    "role": "متخصص تحسين محركات البحث",
+    "experience": "+1 سنة خبرة",
+    "specialties": [
+      {
+        "label": "سيو"
+      },
+      {
+        "label": "تحليل"
+      }
+    ],
+    "linkedin": "",
+    "photo": "uploads/pasted-1789463316318-0.webp",
+    "order": 11
+  },
+  {
+    "key": "team:adham-hesham",
+    "slug": "adham-hesham",
+    "name": "أدهم هشام",
+    "role": "متخصص تحسين محركات البحث",
+    "experience": "+1 سنة خبرة",
+    "specialties": [
+      {
+        "label": "سيو"
+      },
+      {
+        "label": "محتوى"
+      },
+      {
+        "label": "باك لينك"
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/adham-hesham-mohamed-51a221213/",
+    "photo": "uploads/pasted-1789463320135-0.webp",
+    "order": 12
+  },
+  {
+    "key": "team:mariam-hesham",
+    "slug": "mariam-hesham",
+    "name": "مريم هشام",
+    "role": "متخصص تحسين المتاجر الإلكترونية",
+    "experience": "+1 سنة خبرة",
+    "specialties": [
+      {
+        "label": "محتوى"
+      },
+      {
+        "label": "منتجات"
+      }
+    ],
+    "linkedin": "",
+    "photo": "uploads/pasted-1789463324129-0.webp",
+    "order": 13
+  },
+  {
+    "key": "team:seif-sanad",
+    "slug": "seif-sanad",
+    "name": "سيف سند",
+    "role": "متخصص تحسين محركات البحث",
+    "experience": "+1 سنة خبرة",
+    "specialties": [
+      {
+        "label": "سيو"
+      },
+      {
+        "label": "محتوى"
+      }
+    ],
+    "linkedin": "",
+    "photo": "uploads/pasted-1789463327303-0.webp",
+    "order": 14
+  },
+  {
+    "key": "team:morad-salah",
+    "slug": "morad-salah",
+    "name": "مراد صلاح",
+    "role": "متخصص تحسين محركات البحث",
+    "experience": "+1 سنة خبرة",
+    "specialties": [
+      {
+        "label": "سيو"
+      },
+      {
+        "label": "محتوى"
+      }
+    ],
+    "linkedin": "",
+    "photo": "uploads/pasted-1789463331172-0.webp",
+    "order": 15
+  },
+  {
+    "key": "team:noha-elmahdy",
+    "slug": "noha-elmahdy",
+    "name": "نهى المهدي",
+    "role": "متخصص تحسين محركات البحث",
+    "experience": "+1 سنة خبرة",
+    "specialties": [
+      {
+        "label": "سيو"
+      },
+      {
+        "label": "محتوى"
+      }
+    ],
+    "linkedin": "",
+    "photo": "uploads/pasted-1789463334083-0.webp",
+    "order": 16
+  },
+  {
+    "key": "team:eman-farid",
+    "slug": "eman-farid",
+    "name": "إيمان فريد",
+    "role": "قائد المحتوى",
+    "experience": "+2 سنة خبرة",
+    "specialties": [
+      {
+        "label": "سيو"
+      },
+      {
+        "label": "محتوى"
+      }
+    ],
+    "linkedin": "",
+    "photo": "uploads/pasted-1789463337592-0.webp",
+    "order": 17
+  }
+]

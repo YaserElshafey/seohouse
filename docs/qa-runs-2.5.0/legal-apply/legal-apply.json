@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-03T22:26:33.240Z",
+  "results": [
+    {
+      "name": "box lists both pages: terms already carry the pack text",
+      "ok": true,
+      "detail": "الشروط والأحكام#17 — منشورة — النص الحالي هو نص الحزمة 2.5.0"
+    },
+    {
+      "name": "privacy (published, document emptied) → «بلا نص», button offered",
+      "ok": true,
+      "detail": "سياسة الخصوصية#3 — منشورة — بلا نص (فارغة أو نص مؤقت)تطبيق نص الحزمة"
+    },
+    {
+      "name": "apply: success message, page still published, copy kept",
+      "ok": true,
+      "detail": "طُبّق النص على «سياسة الخصوصية». حالتها: منشورة. حُفظت نسخة من قيمها السابقة."
+    },
+    {
+      "name": "privacy now carries the pack text",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "privacy still published",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "copy of previous values in _sh_pre_legal_text",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public page shows the sections and the date",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no other page changed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no JavaScript errors",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

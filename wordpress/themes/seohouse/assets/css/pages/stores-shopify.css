@@ -1,0 +1,17 @@
+/* SEO House - Shopify.dc.html — page-specific rules from the approved design (generated). */
+[data-sh-def] { grid-template-columns:minmax(0,.4fr) minmax(0,1.6fr); align-items:baseline; }
+@media (max-width:719px) { [data-sh-def] { grid-template-columns:1fr; } }
+[data-sh-apps] { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:859px) { [data-sh-apps] { grid-template-columns:1fr; } }
+[data-sh-grid] { grid-template-columns:repeat(3,minmax(0,1fr)); }
+@media (max-width:639px) { [data-sh-grid] { grid-template-columns:1fr; } }
+[data-bk-grid] { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); }
+[data-bk-row] { grid-template-columns:1fr 1fr; }
+@media (max-width:899px) { [data-bk-grid] { grid-template-columns:1fr; } }
+@media (max-width:559px) { [data-bk-row] { grid-template-columns:1fr; } }
+[data-screen-label="Hero"] { position:relative; overflow:hidden; }
+[data-hero-grid] ~ *:not([aria-hidden="true"]) { position:relative; }
+[data-sec-head][data-center] { text-align:center; margin-inline:auto; }
+[data-sec-head][data-center] > div:first-child { justify-content:center; }
+p[data-center] { margin-inline:auto !important; text-align:center; }
+@media (max-width:859px) { [data-pts] { grid-template-columns:1fr !important; } }

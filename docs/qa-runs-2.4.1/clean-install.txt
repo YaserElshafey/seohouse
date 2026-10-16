@@ -1,0 +1,25 @@
+PASS  before setup: home shows the WordPress default post
+PASS  ACF (from WordPress.org) active
+PASS  upload seohouse-theme.zip through the admin
+PASS  upload final-core.zip through the admin
+PASS  activating Core opens «تهيئة الموقع»  — /wp-admin/admin.php?page=seohouse-content-setup
+PASS  setup screen: bundled content pack found, 125 files / 125 expected, complete  — حزمة المحتوى2.3.0 — مضمّنة في SEO House Core sha256:8b521594e8dc8695/srv/shwpnew/new/wp-content/plugins/seohouse-core/content-pack — 125 ملفًا / 125 متوقعة — كاملة وسليمةالحالةلم يُهيّأ بعد
+PASS  dashboard shows the «تهيئة الموقع الآن» notice
+PASS  preview (dry run) completes  — تشغيل تجريبي — لم يُكتب شيء.أُنشئ: 91 حُدّث: 5 بلا تغيير: 0 محمي: 0 فشل: 0
+PASS  preview wrote nothing  — 1 published page(s)
+PASS  initialisation completes without failures  — اكتملت التهيئة.أُنشئ: 117 حُدّث: 5 بلا تغيير: 0 محمي: 0 فشل: 0 (38 s)
+PASS  check: الصفحة الرئيسية  — الرئيسية — http://127.0.0.1:8097/new/
+PASS  check: صفحة المقالات  — http://127.0.0.1:8097/new/blog/
+PASS  check: صفحات التصميم المنشورة  — 38
+PASS  check: مطابقة نصوص وصور وروابط الأقسام مع التصميم  — مطابقة
+PASS  check: القائمة الرئيسية  — 21 عنصر
+PASS  check: قائمة الفوتر  — 24 عنصر
+PASS  check: روابط أسفل الفوتر  — 2 عنصر
+PASS  check: الصور في مكتبة الوسائط  — 45 / 45
+PASS  check: إعدادات سيو هاوس  — اسم الشركة: سيو هاوس · شعارات العملاء: 9
+PASS  check: الروابط الدائمة  — /blog/%postname%/ — المقالات على /blog/… والتصنيفات على /blog/category/…
+PASS  check: الصفحات القانونية والمقالات غير المعتمدة  — مسودة، مسودة، مسودة، مسودة، مسودة
+PASS  second run creates nothing  — اكتملت التهيئة.أُنشئ: 0 حُدّث: 0 بلا تغيير: 74 محمي: 0 فشل: 0
+PASS  no JavaScript errors in the admin
+
+23/23 passed

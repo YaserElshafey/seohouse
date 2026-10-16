@@ -1,0 +1,96 @@
+===== /services/seo/ [200]
+  title: شركة سيو لتحسين محركات البحث | سيو هاوس
+  desc : سيو هاوس شركة سيو تساعدك على تحسين ظهور موقعك في نتائج البحث عبر السيو التقني والمحتوى وتحسين الصفحات وبناء الروابط، مع قياس الأثر على الزيارات والمبيعات.
+  canonical: http://127.0.0.1:8090/services/seo/ | robots: index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large
+  H1 x1: ['شركة سيو لتحسين محركات البحث']
+  hreflang lines: 5 (all hreflang attrs in page: 5)
+    <link rel="alternate" hreflang="ar-SA" href="http://127.0.0.1:8090/services/seo/ksa/" />
+    <link rel="alternate" hreflang="ar-EG" href="http://127.0.0.1:8090/services/seo/egypt/" />
+    <link rel="alternate" hreflang="ar-AE" href="http://127.0.0.1:8090/services/seo/uae/" />
+    <link rel="alternate" hreflang="ar" href="http://127.0.0.1:8090/services/seo/" />
+    <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:8090/services/seo/" />
+  self-reference matches canonical: True
+  market card links: [('/services/seo/ksa/', []), ('/services/seo/egypt/', []), ('/services/seo/uae/', [])]
+  footer about link: ('/services/seo/', 'سيو هاوس شركة سيو متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكت')
+  footer market links: [('السعودية', '/services/seo/ksa/'), ('مصر', '/services/seo/egypt/'), ('الإمارات', '/services/seo/uae/')]
+===== /services/seo/ksa/ [200]
+  title: شركة سيو في السعودية لتحسين محركات البحث | سيو هاوس
+  desc : تبحث عن شركة سيو في السعودية؟ تساعد سيو هاوس الشركات والمتاجر في السوق السعودي على تحسين ظهورها في نتائج البحث بخطة واضحة ومتابعة عن بُعد وقياس للنتائج.
+  canonical: http://127.0.0.1:8090/services/seo/ksa/ | robots: index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large
+  H1 x1: ['شركة سيو في السعودية']
+  hreflang lines: 5 (all hreflang attrs in page: 5)
+    <link rel="alternate" hreflang="ar-SA" href="http://127.0.0.1:8090/services/seo/ksa/" />
+    <link rel="alternate" hreflang="ar-EG" href="http://127.0.0.1:8090/services/seo/egypt/" />
+    <link rel="alternate" hreflang="ar-AE" href="http://127.0.0.1:8090/services/seo/uae/" />
+    <link rel="alternate" hreflang="ar" href="http://127.0.0.1:8090/services/seo/" />
+    <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:8090/services/seo/" />
+  self-reference matches canonical: True
+  other markets block: [] | before FAQ: True
+  footer about link: ('/services/seo/', 'سيو هاوس شركة سيو متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكت')
+  footer market links: [('السعودية', '/services/seo/ksa/'), ('مصر', '/services/seo/egypt/'), ('الإمارات', '/services/seo/uae/')]
+===== /services/seo/egypt/ [200]
+  title: شركة سيو في مصر لتحسين محركات البحث | سيو هاوس
+  desc : سيو هاوس شركة سيو في مصر تساعد الشركات والمتاجر على تحسين ظهور مواقعها في نتائج البحث عبر السيو التقني والمحتوى وتحسين الصفحات، مع قياس الأثر على العملاء.
+  canonical: http://127.0.0.1:8090/services/seo/egypt/ | robots: index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large
+  H1 x1: ['شركة سيو في مصر']
+  hreflang lines: 5 (all hreflang attrs in page: 5)
+    <link rel="alternate" hreflang="ar-SA" href="http://127.0.0.1:8090/services/seo/ksa/" />
+    <link rel="alternate" hreflang="ar-EG" href="http://127.0.0.1:8090/services/seo/egypt/" />
+    <link rel="alternate" hreflang="ar-AE" href="http://127.0.0.1:8090/services/seo/uae/" />
+    <link rel="alternate" hreflang="ar" href="http://127.0.0.1:8090/services/seo/" />
+    <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:8090/services/seo/" />
+  self-reference matches canonical: True
+  other markets block: [] | before FAQ: True
+  footer about link: ('/services/seo/', 'سيو هاوس شركة سيو متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكت')
+  footer market links: [('السعودية', '/services/seo/ksa/'), ('مصر', '/services/seo/egypt/'), ('الإمارات', '/services/seo/uae/')]
+===== /services/seo/uae/ [200]
+  title: شركة سيو في الإمارات لتحسين محركات البحث | سيو هاوس
+  desc : تبحث عن شركة سيو في الإمارات؟ تخدم سيو هاوس الشركات العاملة في السوق الإماراتي بتحليل المنافسة وتحسين الصفحات والمحتوى والجوانب التقنية وقياس أثر العمل.
+  canonical: http://127.0.0.1:8090/services/seo/uae/ | robots: index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large
+  H1 x1: ['شركة سيو في الإمارات']
+  hreflang lines: 5 (all hreflang attrs in page: 5)
+    <link rel="alternate" hreflang="ar-SA" href="http://127.0.0.1:8090/services/seo/ksa/" />
+    <link rel="alternate" hreflang="ar-EG" href="http://127.0.0.1:8090/services/seo/egypt/" />
+    <link rel="alternate" hreflang="ar-AE" href="http://127.0.0.1:8090/services/seo/uae/" />
+    <link rel="alternate" hreflang="ar" href="http://127.0.0.1:8090/services/seo/" />
+    <link rel="alternate" hreflang="x-default" href="http://127.0.0.1:8090/services/seo/" />
+  self-reference matches canonical: True
+  other markets block: [] | before FAQ: True
+  footer about link: ('/services/seo/', 'سيو هاوس شركة سيو متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكت')
+  footer market links: [('السعودية', '/services/seo/ksa/'), ('مصر', '/services/seo/egypt/'), ('الإمارات', '/services/seo/uae/')]
+===== / [200]
+  title: عنوان Rank Math معدّل 6
+  desc : سيو هاوس تساعد الشركات والمتاجر على النمو عبر تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية، بخطة واضحة ونتائج قابلة للقياس.
+  canonical: http://127.0.0.1:8090/ | robots: index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large
+  H1 x1: ['نحسّن ظهور موقعك في محركات البحث']
+  hreflang lines: 0 (all hreflang attrs in page: 0)
+  market card links: [('/services/seo/ksa/', []), ('/services/seo/egypt/', []), ('/services/seo/uae/', [])]
+  footer about link: ('/services/seo/', 'سيو هاوس شركة سيو متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكت')
+  footer market links: [('السعودية', '/services/seo/ksa/'), ('مصر', '/services/seo/egypt/'), ('الإمارات', '/services/seo/uae/')]
+===== /services/seo/technical/ [200]
+  title: خدمة السيو التقني وتدقيق الموقع | سيو هاوس
+  desc : نفحص الزحف والفهرسة والسرعة وبنية الموقع والبيانات المنظمة، ونرتب المشكلات حسب أثرها، ثم ننفّذ التعديلات ونتابع الفهرسة والأداء.
+  canonical: http://127.0.0.1:8090/services/seo/technical/ | robots: index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large
+  H1 x1: ['السيو التقني لموقعك']
+  hreflang lines: 0 (all hreflang attrs in page: 0)
+  footer about link: ('/services/seo/', 'سيو هاوس شركة سيو متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكت')
+  footer market links: [('السعودية', '/services/seo/ksa/'), ('مصر', '/services/seo/egypt/'), ('الإمارات', '/services/seo/uae/')]
+===== /about/ [200]
+  title: عن سيو هاوس ومبادئ عملنا | سيو هاوس
+  desc : تأسست سيو هاوس عام 2017 لتقديم عمل يمكن قياسه: تنفيذ داخل الموقع لا توصيات فقط، ونتائج تُعرض بمصدرها. نخدم الشركات في السعودية ومصر والإمارات.
+  canonical: http://127.0.0.1:8090/about/ | robots: index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large
+  H1 x1: ['عن سيو هاوس']
+  hreflang lines: 0 (all hreflang attrs in page: 0)
+  footer about link: ('/services/seo/', 'سيو هاوس شركة سيو متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكت')
+  footer market links: [('السعودية', '/services/seo/ksa/'), ('مصر', '/services/seo/egypt/'), ('الإمارات', '/services/seo/uae/')]
+===== /blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/ [200]
+  title: هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة - سيو هاوس
+  desc : مع تغير شكل نتائج البحث في Google، لم يعد ظهور الموقع مقتصرًا على الروابط التقليدية التي اعتاد المستخدمون رؤيتها في صفحة النتائج.
+  canonical: http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/ | robots: index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large
+  H1 x1: ['هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة']
+  hreflang lines: 0 (all hreflang attrs in page: 0)
+  footer about link: ('/services/seo/', 'سيو هاوس شركة سيو متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكت')
+  footer market links: [('السعودية', '/services/seo/ksa/'), ('مصر', '/services/seo/egypt/'), ('الإمارات', '/services/seo/uae/')]
+  article line: تبحث عن شركة سيو لتحسين أداء موقعك؟ تعرّف على خدمات سيو هاوس. | link: /services/seo/ | inside article body: True
+
+identical block on the 4 pages: True

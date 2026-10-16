@@ -1,0 +1,76 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "نتائج الأعمال",
+   "href": null
+  }
+ ],
+ "key": "results",
+ "route": "/results/",
+ "kind": "page",
+ "title": "نتائج الأعمال",
+ "file": "SEO House - Results.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "نتائج ودراسات حالة من مشاريع سيو هاوس | سيو هاوس",
+  "description": "نتائج موثقة من حسابات العملاء بمصادرها وفتراتها: نمو إيرادات عضوية، ونمو نقرات في Search Console، مع شرح لطريقة قراءة الأرقام.",
+  "robots": "",
+  "schema_type": "collection",
+  "schema_service": ""
+ },
+ "template": "page-templates/results.php",
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "title": "نتائج الأعمال",
+   "text": "نتائج من مشاريعنا، موثقة بالأرقام وتقارير الأداء."
+  },
+  {
+   "acf_fc_layout": "cases",
+   "text": "كل نتيجة معروضة بمصدرها وفترتها كما تظهر في حساب العميل."
+  },
+  {
+   "acf_fc_layout": "related",
+   "lead": "صفحات مرتبطة:",
+   "links": [
+    {
+     "label": "خدمة السيو",
+     "link": {
+      "__route": "/services/seo/"
+     }
+    },
+    {
+     "label": "قطاع التجارة الإلكترونية",
+     "link": {
+      "__route": "/sectors/ecommerce/"
+     }
+    },
+    {
+     "label": "قطاع الصحة والطب",
+     "link": {
+      "__route": "/sectors/health/"
+     }
+    },
+    {
+     "label": "الأسعار",
+     "link": {
+      "__route": "/pricing/"
+     }
+    }
+   ],
+   "_variant": "wide"
+  },
+  {
+   "acf_fc_layout": "booking",
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

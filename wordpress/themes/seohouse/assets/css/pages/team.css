@@ -1,0 +1,39 @@
+/* SEO House - Team.dc.html — page-specific rules from the approved design (generated). */
+[data-sc-row] { grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) minmax(0,.7fr); }
+@media (max-width:899px) { [data-sc-row] { grid-template-columns:1fr; } }
+[data-sc-pick] { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:719px) { [data-sc-pick] { grid-template-columns:1fr; } }
+[data-tm-hero] { grid-template-columns:minmax(0,1fr) minmax(0,1.05fr); }
+@media (max-width:1023px) { [data-tm-hero] { grid-template-columns:1fr; } }
+[data-tm-wall] { grid-template-columns:repeat(3,minmax(0,1fr)); height:clamp(380px,44vw,520px); }
+@keyframes tmUp { from { transform:translateY(0); } to { transform:translateY(-50%); } }
+@keyframes tmDown { from { transform:translateY(-50%); } to { transform:translateY(0); } }
+[data-tm-col="a"] { animation:tmUp 64s linear infinite; }
+[data-tm-col="b"] { animation:tmDown 72s linear infinite; }
+[data-tm-col="c"] { animation:tmUp 80s linear infinite; }
+@media (max-width:639px) { [data-tm-wall] { grid-template-columns:none; grid-auto-flow:column; grid-auto-columns:128px; height:auto; overflow-x:auto; scrollbar-width:none; mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); -webkit-mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); } [data-tm-col] { animation:none !important; flex-direction:row !important; } [data-face] { width:128px; } }
+[data-tm-four] { grid-template-columns:repeat(4,minmax(0,1fr)); }
+@media (max-width:1023px) { [data-tm-four] { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:559px) { [data-tm-four] { grid-template-columns:1fr; } }
+[data-tm-three] { grid-template-columns:repeat(3,minmax(0,1fr)); }
+@media (max-width:859px) { [data-tm-three] { grid-template-columns:1fr; } }
+[data-tm-grid] { grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px !important; }
+[data-tm-ph] { width:100%; aspect-ratio:4/5; }
+[data-tm-card]:focus-within { outline:2px solid #2854E8; outline-offset:3px; }
+[data-tm-card] { height:100%; }
+[data-tm-img] { object-position:center 18%; }
+@media (max-width:1100px) { [data-tm-grid] { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media (max-width:767px) { [data-tm-grid] { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:419px) { [data-tm-grid] { grid-template-columns:1fr; } [data-tm-ph] { aspect-ratio:4/4.4; } }
+[data-bk-grid] { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); }
+[data-bk-row] { grid-template-columns:1fr 1fr; }
+@media (max-width:899px) { [data-bk-grid] { grid-template-columns:1fr; } }
+@media (max-width:559px) { [data-bk-row] { grid-template-columns:1fr; } }
+[data-screen-label="Hero"] { position:relative; overflow:hidden; }
+[data-hero-grid] ~ *:not([aria-hidden="true"]) { position:relative; }
+@media (max-width:639px) { [data-screen-label="Hero"] h1 { text-align:center !important; margin-inline:auto !important; max-width:none !important; font-size:clamp(25px,7vw,30px) !important; line-height:1.36 !important; text-wrap:balance; } [data-screen-label="Hero"] :has(+ h1) { text-align:center !important; justify-content:center !important; margin-inline:auto; } [data-screen-label="Hero"] h1 + p { text-align:center !important; margin-inline:auto !important; max-width:34em !important; } [data-screen-label="Hero"] h1 ~ div:has(a[href="#booking"]), [data-screen-label="Hero"] h1 ~ div:has(a[href="/contact/"]) { justify-content:center !important; align-items:stretch !important; } [data-screen-label="Hero"] h1 ~ div:has(a[href="#booking"]) > a, [data-screen-label="Hero"] h1 ~ div:has(a[href="/contact/"]) > a { justify-content:center; } }
+[data-tm-card][data-hcard]:hover [data-tm-ph], [data-tm-card][data-hcard]:focus-within [data-tm-ph] { background:var(--sh-surface) !important; }
+[data-tm-card][data-hcard]:hover [data-tm-img] { transform:none !important; filter:grayscale(1) contrast(1.02) !important; }
+[data-tm-card][data-hcard]:focus-within { background:var(--sh-blue) !important; border-color:var(--sh-blue) !important; }
+[data-tm-card][data-hcard]:focus-within *:not(img) { color:#FFFFFF !important; }
+[data-tm-img], [data-tm-hero-img] { filter:grayscale(1) contrast(1.02) !important; }

@@ -1,0 +1,13 @@
+== re-run behaviour (local copy of the main site; the live site is never written)
+1) edited here, unchanged on the main site:
+skipped    fix-404-not-found — بلا تغيير في الموقع الأساسي
+2) changed on the main site; 208 also edited here, 261 not:
+protected  fix-404-not-found — عُدّل هنا بعد النقل؛ لم يُكتب فوقه (--force للكتابة)
+updated    how-to-build-backlinks-correctly — حُدّث — http://127.0.0.1:8097/new/blog/how-to-build-backlinks-correctly/
+{"created":0,"replaced":0,"updated":1,"skipped":2,"protected":1,"failed":0}
+   title kept here: عنوان عدّله المحرر في /new/
+   excerpt applied to 261: ملخص جديد في نسخة الموقع الأساسي المحلية
+3) run again:
+protected  fix-404-not-found — عُدّل هنا بعد النقل؛ لم يُكتب فوقه (--force للكتابة)
+{"created":0,"replaced":0,"updated":0,"skipped":3,"protected":1,"failed":0}
+published posts: 4; attachments: 50

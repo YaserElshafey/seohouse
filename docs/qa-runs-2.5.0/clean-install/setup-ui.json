@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-03T22:27:44.783Z",
+  "wp": "http://127.0.0.1:8095",
+  "results": [
+    {
+      "name": "before setup: home shows the WordPress default post",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "upload advanced-custom-fields.zip through the admin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "upload seohouse-theme.zip through the admin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "upload seohouse-core.zip through the admin",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "activating Core opens «تهيئة الموقع»",
+      "ok": true,
+      "detail": "/wp-admin/admin.php?page=seohouse-content-setup"
+    },
+    {
+      "name": "setup screen: bundled content pack found, 125 files / 125 expected, complete",
+      "ok": true,
+      "detail": "حزمة المحتوى2.5.0 — مضمّنة في SEO House Core sha256:8b521594e8dc8695/srv/shwpclean25/wp-content/plugins/seohouse-core/content-pack — 125 ملفًا / 125 متوقعة — كاملة وسليمةالحالةلم يُهيّأ بعد"
+    },
+    {
+      "name": "dashboard shows the «تهيئة الموقع الآن» notice",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "preview (dry run) completes",
+      "ok": true,
+      "detail": "تشغيل تجريبي — لم يُكتب شيء.أُنشئ: 91 حُدّث: 5 بلا تغيير: 0 محمي: 0 فشل: 0"
+    },
+    {
+      "name": "preview wrote nothing",
+      "ok": true,
+      "detail": "1 published page(s)"
+    },
+    {
+      "name": "initialisation completes without failures",
+      "ok": true,
+      "detail": "اكتملت التهيئة.أُنشئ: 117 حُدّث: 5 بلا تغيير: 0 محمي: 0 فشل: 0 (39 s)"
+    },
+    {
+      "name": "check: الصفحة الرئيسية",
+      "ok": true,
+      "detail": "الرئيسية — http://127.0.0.1:8095/"
+    },
+    {
+      "name": "check: صفحة المقالات",
+      "ok": true,
+      "detail": "http://127.0.0.1:8095/blog/"
+    },
+    {
+      "name": "check: صفحات التصميم المنشورة",
+      "ok": true,
+      "detail": "38"
+    },
+    {
+      "name": "check: مطابقة نصوص وصور وروابط الأقسام مع التصميم",
+      "ok": true,
+      "detail": "مطابقة"
+    },
+    {
+      "name": "check: القائمة الرئيسية",
+      "ok": true,
+      "detail": "21 عنصر"
+    },
+    {
+      "name": "check: قائمة الفوتر",
+      "ok": true,
+      "detail": "24 عنصر"
+    },
+    {
+      "name": "check: روابط أسفل الفوتر",
+      "ok": true,
+      "detail": "2 عنصر"
+    },
+    {
+      "name": "check: الصور في مكتبة الوسائط",
+      "ok": true,
+      "detail": "45 / 45"
+    },
+    {
+      "name": "check: إعدادات سيو هاوس",
+      "ok": true,
+      "detail": "اسم الشركة: سيو هاوس · شعارات العملاء: 9"
+    },
+    {
+      "name": "check: الروابط الدائمة",
+      "ok": true,
+      "detail": "/blog/%postname%/ — المقالات على /blog/… والتصنيفات على /blog/category/…"
+    },
+    {
+      "name": "check: الصفحات القانونية والمقالات غير المعتمدة",
+      "ok": true,
+      "detail": "مسودة، مسودة، مسودة، مسودة، مسودة"
+    },
+    {
+      "name": "second run creates nothing",
+      "ok": true,
+      "detail": "اكتملت التهيئة.أُنشئ: 0 حُدّث: 0 بلا تغيير: 74 محمي: 0 فشل: 0"
+    },
+    {
+      "name": "no JavaScript errors in the admin",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

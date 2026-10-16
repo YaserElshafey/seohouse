@@ -1,0 +1,20 @@
+PASS  theme folder: release files over the old theme, old front-page.php present  — 391 files
+PASS  /: 200 with the release templates (old front-page.php / archives not used)  — 200
+PASS  /services/seo/: 200 with the release templates (old front-page.php / archives not used)  — 200
+PASS  /sectors/ecommerce/: 200 with the release templates (old front-page.php / archives not used)  — 200
+PASS  /blog/: 200 with the release templates (old front-page.php / archives not used)  — 200
+PASS  /results/: 200 with the release templates (old front-page.php / archives not used)  — 200
+PASS  /about/: 200 with the release templates (old front-page.php / archives not used)  — 200
+PASS  no PHP error while the old files are in the folder
+PASS  page template list holds release templates only  — page-templates/about.php,page-templates/contact.php,page-templates/home.php,page-templates/pricing.php,page-templates/privacy-policy.php,page-templates/products
+PASS  dashboard notice lists the leftovers  — 34 leftovers
+PASS  «نقل الملفات القديمة»: done message with the backup archive  — نُقل 34 ملفًا قديمًا من مجلد القالب إلى نسخة احتياطية: wp-content/uploads/seohouse-backups/theme-leftovers-20261003-233739-qdqKX96tBCi3Pu3g.zipإخفاء هذه الملاحظة.
+PASS  theme folder now = release files + theme-files.json  — 357
+PASS  release files untouched
+PASS  archive holds every moved file (front-page.php included)  — 34 in archive
+PASS  backup folder carries its deny rules (.htaccess, index.php); archive name is random  — theme-leftovers-20261003-233739-qdqKX96tBCi3Pu3g.zip
+PASS  home still 200 after the cleanup
+PASS  no notice once the folder is clean
+PASS  no JavaScript errors
+
+18/18 passed

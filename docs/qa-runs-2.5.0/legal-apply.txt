@@ -1,0 +1,11 @@
+PASS  box lists both pages: terms already carry the pack text  — الشروط والأحكام#17 — منشورة — النص الحالي هو نص الحزمة 2.5.0
+PASS  privacy (published, document emptied) → «بلا نص», button offered  — سياسة الخصوصية#3 — منشورة — بلا نص (فارغة أو نص مؤقت)تطبيق نص الحزمة
+PASS  apply: success message, page still published, copy kept  — طُبّق النص على «سياسة الخصوصية». حالتها: منشورة. حُفظت نسخة من قيمها السابقة.
+PASS  privacy now carries the pack text
+PASS  privacy still published
+PASS  copy of previous values in _sh_pre_legal_text
+PASS  public page shows the sections and the date
+PASS  no other page changed
+PASS  no JavaScript errors
+
+9/9 passed

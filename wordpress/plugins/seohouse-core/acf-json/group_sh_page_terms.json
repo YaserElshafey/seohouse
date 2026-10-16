@@ -1,0 +1,205 @@
+{
+  "key": "group_sh_page_terms",
+  "title": "أقسام الصفحة — الشروط والأحكام",
+  "fields": [
+    {
+      "key": "field_ab1b01ddf6ec6",
+      "label": "الواجهة (Hero)",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_6c1aec90578d5",
+      "label": "",
+      "name": "s_hero",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_d88a35e59096d",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_4a5b587c438bf",
+          "label": "العنوان: الشروط والأحكام",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_8b21b8cb45929",
+          "label": "النص: شروط استخدام الموقع وطلب الخدمات. ال…",
+          "name": "text",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_3e2bcb61322cc",
+          "label": "الرابط: سياسة الخصوصية ←",
+          "name": "link",
+          "type": "page_link",
+          "instructions": "",
+          "required": 0,
+          "post_type": [
+            "page",
+            "case_study",
+            "team_member",
+            "post"
+          ],
+          "allow_null": 1,
+          "allow_archives": 1,
+          "multiple": 0
+        },
+        {
+          "key": "field_daa8b5439a796",
+          "label": "نص الرابط: سياسة الخصوصية ←",
+          "name": "link_label",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_15de28b625ef9",
+      "label": "قسم: المحتويات",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_7a5320f7e9231",
+      "label": "",
+      "name": "s_document",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_bde84b0fd4ac3",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_2fb138dbe2ca7",
+          "label": "عنوان قائمة المحتويات",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "تُبنى القائمة تلقائيًا من عناوين الأقسام أدناه.",
+          "required": 0
+        },
+        {
+          "key": "field_fdf7750bd221e",
+          "label": "نص قبل التاريخ",
+          "name": "label",
+          "type": "text",
+          "instructions": "مثل: آخر تحديث:",
+          "required": 0
+        },
+        {
+          "key": "field_a53ac4599d8f1",
+          "label": "تاريخ آخر تحديث",
+          "name": "updated",
+          "type": "text",
+          "instructions": "مثل: 3 أكتوبر 2026. يظهر بعد «آخر تحديث:».",
+          "required": 0
+        },
+        {
+          "key": "field_d2cde4329728b",
+          "label": "الأقسام",
+          "name": "items_2",
+          "type": "sh_rows",
+          "instructions": "كل قسم: عنوان ونص. القسم بلا عنوان يظهر نصه دون أن يدخل قائمة المحتويات (مثل المقدمة). سطر فارغ يبدأ فقرة جديدة، والسطر الذي يبدأ بـ «- » عنصر في قائمة. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_af9d7fa1f94af",
+              "label": "عنوان القسم",
+              "name": "title",
+              "type": "textarea",
+              "instructions": "يمكن استخدام وسوم نصية بسيطة مثل <bdi> و<strong> و<br>.",
+              "required": 0,
+              "rows": 3,
+              "new_lines": ""
+            },
+            {
+              "key": "field_044edb582521b",
+              "label": "نص القسم",
+              "name": "body",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 10,
+              "new_lines": ""
+            }
+          ],
+          "collapsed": "field_af9d7fa1f94af"
+        }
+      ]
+    },
+    {
+      "key": "field_c8d8b88c08985",
+      "label": "",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 1
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/terms.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments",
+    "format",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "حقول قالب الشروط والأحكام — مولدة من SEO House - Terms.dc.html. الأقسام بترتيب التصميم؛ يمكن إخفاء أي قسم.",
+  "show_in_rest": 0,
+  "modified": 1790600000
+}

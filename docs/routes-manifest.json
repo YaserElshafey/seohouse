@@ -1,0 +1,619 @@
+{
+  "generated": "2026-10-02",
+  "permalinks": {
+    "posts": "/blog/%postname%/",
+    "category_base": "blog/category",
+    "case_study": "/results/{slug}/",
+    "team_member": "/team/{slug}/",
+    "search": "/?s=",
+    "search_path_blocked": "/search/ → 404"
+  },
+  "routes": [
+    {
+      "route": "/",
+      "key": "home",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/home.php",
+      "http": 200
+    },
+    {
+      "route": "/services/",
+      "key": "services",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/services.php",
+      "http": 200
+    },
+    {
+      "route": "/services/seo/",
+      "key": "seo",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/seo.php",
+      "http": 200
+    },
+    {
+      "route": "/services/seo/technical/",
+      "key": "seo-technical",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/seo-technical.php",
+      "http": 200
+    },
+    {
+      "route": "/services/seo/on-page/",
+      "key": "seo-on-page",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/seo-on-page.php",
+      "http": 200
+    },
+    {
+      "route": "/services/seo/content/",
+      "key": "seo-content",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/seo-content.php",
+      "http": 200
+    },
+    {
+      "route": "/services/seo/backlinks/",
+      "key": "seo-backlinks",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/seo-backlinks.php",
+      "http": 200
+    },
+    {
+      "route": "/services/seo/consulting/",
+      "key": "seo-consulting",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/seo-consulting.php",
+      "http": 200
+    },
+    {
+      "route": "/services/seo/ksa/",
+      "key": "seo-ksa",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/seo-ksa.php",
+      "http": 200
+    },
+    {
+      "route": "/services/seo/egypt/",
+      "key": "seo-egypt",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/seo-egypt.php",
+      "http": 200
+    },
+    {
+      "route": "/services/seo/uae/",
+      "key": "seo-uae",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/seo-uae.php",
+      "http": 200
+    },
+    {
+      "route": "/services/web-design/",
+      "key": "web-design",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/web-design.php",
+      "http": 200
+    },
+    {
+      "route": "/services/web-design/wordpress/",
+      "key": "web-wordpress",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/web-wordpress.php",
+      "http": 200
+    },
+    {
+      "route": "/services/web-design/webflow/",
+      "key": "web-webflow",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/web-webflow.php",
+      "http": 200
+    },
+    {
+      "route": "/services/web-design/react-next/",
+      "key": "web-react-next",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/web-react-next.php",
+      "http": 200
+    },
+    {
+      "route": "/services/web-design/custom-dev/",
+      "key": "web-custom-dev",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/web-custom-dev.php",
+      "http": 200
+    },
+    {
+      "route": "/services/stores/",
+      "key": "stores",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/stores.php",
+      "http": 200
+    },
+    {
+      "route": "/services/stores/shopify/",
+      "key": "stores-shopify",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/stores-shopify.php",
+      "http": 200
+    },
+    {
+      "route": "/services/stores/salla/",
+      "key": "stores-salla",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/stores-salla.php",
+      "http": 200
+    },
+    {
+      "route": "/services/stores/zid/",
+      "key": "stores-zid",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/stores-zid.php",
+      "http": 200
+    },
+    {
+      "route": "/services/stores/woocommerce/",
+      "key": "stores-woocommerce",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/stores-woocommerce.php",
+      "http": 200
+    },
+    {
+      "route": "/services/products/",
+      "key": "products",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/products.php",
+      "http": 200
+    },
+    {
+      "route": "/sectors/",
+      "key": "sectors",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/sectors.php",
+      "http": 200
+    },
+    {
+      "route": "/sectors/ecommerce/",
+      "key": "sector-ecommerce",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/sector-ecommerce.php",
+      "http": 200
+    },
+    {
+      "route": "/sectors/health/",
+      "key": "sector-health",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/sector-health.php",
+      "http": 200
+    },
+    {
+      "route": "/sectors/real-estate/",
+      "key": "sector-real-estate",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/sector-real-estate.php",
+      "http": 200
+    },
+    {
+      "route": "/sectors/education/",
+      "key": "sector-education",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/sector-education.php",
+      "http": 200
+    },
+    {
+      "route": "/sectors/tourism/",
+      "key": "sector-tourism",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/sector-tourism.php",
+      "http": 200
+    },
+    {
+      "route": "/sectors/tech/",
+      "key": "sector-tech",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/sector-tech.php",
+      "http": 200
+    },
+    {
+      "route": "/sectors/legal/",
+      "key": "sector-legal",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/sector-legal.php",
+      "http": 200
+    },
+    {
+      "route": "/sectors/food/",
+      "key": "sector-food",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/sector-food.php",
+      "http": 200
+    },
+    {
+      "route": "/results/",
+      "key": "results",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/results.php",
+      "http": 200
+    },
+    {
+      "route": "/about/",
+      "key": "about",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/about.php",
+      "http": 200
+    },
+    {
+      "route": "/team/",
+      "key": "team",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/team.php",
+      "http": 200
+    },
+    {
+      "route": "/pricing/",
+      "key": "pricing",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/pricing.php",
+      "http": 200
+    },
+    {
+      "route": "/contact/",
+      "key": "contact",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/contact.php",
+      "http": 200
+    },
+    {
+      "route": "/thank-you/",
+      "key": "thank-you",
+      "object": "page",
+      "status": "publish",
+      "template": "page-templates/thank-you.php",
+      "http": 200
+    },
+    {
+      "route": "/privacy-policy/",
+      "key": "privacy-policy",
+      "object": "page",
+      "status": "draft",
+      "template": "page-templates/privacy-policy.php",
+      "http": 404
+    },
+    {
+      "route": "/terms/",
+      "key": "terms",
+      "object": "page",
+      "status": "draft",
+      "template": "page-templates/terms.php",
+      "http": 404
+    },
+    {
+      "route": "/blog/",
+      "key": "blog",
+      "object": "template",
+      "status": "publish",
+      "template": "",
+      "http": 200
+    },
+    {
+      "route": "قالب: /blog/category/seo/",
+      "key": "blog-category",
+      "object": "template",
+      "status": "template",
+      "template": "archive.php"
+    },
+    {
+      "route": "قالب: /blog/sample-article/",
+      "key": "single-post",
+      "object": "template",
+      "status": "template",
+      "template": "single.php"
+    },
+    {
+      "route": "قالب: /results/case-study-template/",
+      "key": "case-template",
+      "object": "template",
+      "status": "template",
+      "template": "single-case_study.php"
+    },
+    {
+      "route": "/results/قطاع-الصحة-والطب/",
+      "key": "case-health",
+      "object": "case_study",
+      "status": "publish",
+      "template": "single-case_study.php",
+      "http": 200
+    },
+    {
+      "route": "/results/قطاع-التجارة-الإلكترونية/",
+      "key": "case-ecommerce",
+      "object": "case_study",
+      "status": "publish",
+      "template": "single-case_study.php",
+      "http": 200
+    },
+    {
+      "route": "/results/تستتست/",
+      "key": "case-education",
+      "object": "case_study",
+      "status": "publish",
+      "template": "single-case_study.php",
+      "http": 200
+    },
+    {
+      "route": "/results/organic-revenue-growth/",
+      "key": "case-organic-revenue",
+      "object": "case_study",
+      "status": "draft",
+      "template": "single-case_study.php",
+      "http": 404
+    },
+    {
+      "route": "/results/medical-search-growth/",
+      "key": "case-medical-search",
+      "object": "case_study",
+      "status": "draft",
+      "template": "single-case_study.php",
+      "http": 404
+    },
+    {
+      "route": "قالب: /team/{slug}/",
+      "key": "team-member",
+      "object": "template",
+      "status": "template",
+      "template": "single-team_member.php"
+    },
+    {
+      "route": "/?s=",
+      "key": "search",
+      "object": "template",
+      "status": "publish",
+      "template": "search.php",
+      "http": 200
+    },
+    {
+      "route": "(404)",
+      "key": "404",
+      "object": "template",
+      "status": "publish",
+      "template": "404.php",
+      "http": 404
+    },
+    {
+      "route": "/team/yasser-youssef/",
+      "key": "team:yasser-youssef",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/mohamed-moawad/",
+      "key": "team:mohamed-moawad",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/maha-ali/",
+      "key": "team:maha-ali",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/mennatallah-said/",
+      "key": "team:mennatallah-said",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/mona-ali/",
+      "key": "team:mona-ali",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/esraa-kamal/",
+      "key": "team:esraa-kamal",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/heba-geneedy/",
+      "key": "team:heba-geneedy",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/mohamed-hassan/",
+      "key": "team:mohamed-hassan",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/mustafa-mahmoud/",
+      "key": "team:mustafa-mahmoud",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/ahmed-sanad/",
+      "key": "team:ahmed-sanad",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/esraa-mohamed/",
+      "key": "team:esraa-mohamed",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/nada-mahmoud/",
+      "key": "team:nada-mahmoud",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/adham-hesham/",
+      "key": "team:adham-hesham",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/mariam-hesham/",
+      "key": "team:mariam-hesham",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/seif-sanad/",
+      "key": "team:seif-sanad",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/morad-salah/",
+      "key": "team:morad-salah",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/noha-elmahdy/",
+      "key": "team:noha-elmahdy",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/team/eman-farid/",
+      "key": "team:eman-farid",
+      "object": "team_member",
+      "status": "publish",
+      "template": "single-team_member.php",
+      "http": 200
+    },
+    {
+      "route": "/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+      "key": "post:هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء",
+      "object": "post",
+      "status": "publish",
+      "template": "single.php",
+      "http": 200
+    },
+    {
+      "route": "/blog/fix-404-not-found/",
+      "key": "post:fix-404-not-found",
+      "object": "post",
+      "status": "publish",
+      "template": "single.php",
+      "http": 404
+    },
+    {
+      "route": "/blog/how-to-build-backlinks-correctly/",
+      "key": "post:how-to-build-backlinks-correctly",
+      "object": "post",
+      "status": "publish",
+      "template": "single.php",
+      "http": 404
+    },
+    {
+      "route": "/blog/why-is-my-website-not-showing-in-search-engines/",
+      "key": "post:why-is-my-website-not-showing-in-search-engines",
+      "object": "post",
+      "status": "publish",
+      "template": "single.php",
+      "http": 404
+    },
+    {
+      "route": "/blog/category/technical-seo/",
+      "key": "category:technical-seo",
+      "object": "category",
+      "status": "publish",
+      "template": "archive.php",
+      "http": 200
+    },
+    {
+      "route": "/blog/category/off-page-seo/",
+      "key": "category:off-page-seo",
+      "object": "category",
+      "status": "publish",
+      "template": "archive.php",
+      "http": 200
+    }
+  ],
+  "pending_decision": [
+    {
+      "route": "/services/seo/stores-seo/",
+      "note": "موجود في الموقع الحالي ولا يوجد له تصميم في الإصدار المعتمد — لم يُنشأ."
+    },
+    {
+      "route": "/blog/how-to-build-backlinks-correctly/",
+      "note": "مقال في الموقع الحالي بلا محتوى في التصميم — لم يُنشأ."
+    }
+  ]
+}

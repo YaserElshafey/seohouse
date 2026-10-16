@@ -1,0 +1,16 @@
+PASS  upload seohouse-theme.zip: WordPress offers «استبدال الحالي بالمرفوع» (2.4 → 2.5.0)  — منصّبالمرفوعاسم القالبSEO HouseSEO Houseالنسخة2.5.02.5.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5نسخة PHP المطلوبة8.18.1
+PASS  theme replaced
+PASS  upload seohouse-core.zip: WordPress offers «استبدال الحالي بالمرفوع» (2.4 → 2.5.0)  — الحاليةالمرفوعةاسم الإضافةSEO House CoreSEO House Coreالنسخة2.4.12.5.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5نسخة PHP المطلوبة8.18.1
+PASS  plugin replaced
+PASS  SEO House Core 2.5.0 active
+PASS  theme 2.5.0 active files
+PASS  setup screen: pack 2.5.0, 125/125 complete  — حزمة المحتوى2.5.0 — مضمّنة في SEO House Core sha256:8b521594e8dc8695/srv/shwpseo/new/wp-content/plugins/seohouse-core/content-pack — 125 ملفًا / 125 متوقعة — كاملة وسليمةال
+PASS  setup screen: newer pack notice
+PASS  preview: no failures  — تشغيل تجريبي — لم يُكتب شيء.أُنشئ: 0 حُدّث: 2 بلا تغيير: 74 محمي: 0 فشل: 0السجل (3)معلومةsourceحزمة المحتوى 2.5.0 — بصمة التصميم: sha256:8b521594e8dc8695 — تشغيل تجريبي (بدون كتابة)حُدّثpage:privacy-p
+PASS  update run: no failures  — اكتملت التهيئة.أُنشئ: 0 حُدّث: 2 بلا تغيير: 74 محمي: 0 فشل: 0
+PASS  only the privacy policy and terms pages updated  — page:privacy-policy page:terms
+PASS  no page reported as protected
+PASS  post-update checks all «سليم»
+PASS  no JavaScript errors
+
+14/14 passed

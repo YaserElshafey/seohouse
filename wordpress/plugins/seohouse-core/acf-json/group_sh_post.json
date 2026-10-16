@@ -1,0 +1,88 @@
+{
+  "key": "group_sh_post",
+  "title": "خيارات المقال",
+  "fields": [
+    {
+      "key": "field_sh_post_intro",
+      "label": "مقدمة المقال",
+      "name": "intro",
+      "type": "textarea",
+      "instructions": "تظهر تحت العنوان. فارغة = مقتطف المقال.",
+      "required": 0,
+      "rows": 3,
+      "new_lines": ""
+    },
+    {
+      "key": "field_sh_post_author_member",
+      "label": "الكاتب من فريق العمل",
+      "name": "author_member",
+      "type": "post_object",
+      "instructions": "فارغ = يُستخدم ملف الفريق المرتبط بحساب كاتب المقال، أو «فريق سيو هاوس».",
+      "required": 0,
+      "post_type": [
+        "team_member"
+      ],
+      "allow_null": 1,
+      "return_format": "id"
+    },
+    {
+      "key": "field_sh_post_reading",
+      "label": "مدة القراءة (بالدقائق)",
+      "name": "reading",
+      "type": "number",
+      "instructions": "فارغة = تُحسب تلقائيًا من طول المقال.",
+      "required": 0,
+      "min": 1,
+      "max": 90
+    },
+    {
+      "key": "field_sh_post_toc",
+      "label": "إظهار فهرس المحتوى",
+      "name": "toc",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "ui": 1,
+      "default_value": 1
+    },
+    {
+      "key": "field_sh_post_sidebar_cta",
+      "label": "إظهار دعوة الاستشارة الجانبية",
+      "name": "sidebar_cta",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "ui": 1,
+      "default_value": 1
+    },
+    {
+      "key": "field_sh_post_updated_label",
+      "label": "إظهار تاريخ آخر تحديث",
+      "name": "updated_label",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "ui": 1,
+      "default_value": 1
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "post"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "side",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}
