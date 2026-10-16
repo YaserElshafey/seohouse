@@ -1,6 +1,6 @@
 {
  "theme": "seohouse",
- "version": "2.7.11",
+ "version": "2.7.12",
  "count": 362,
  "files": [
   {
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 1033,
-   "sha1": "7aca44aa31c8cfd4e99e70d9f8b4cdbd855bfbb5"
+   "sha1": "d3eba239ed44e861b9bbff8e97cc81dfa4393187"
   },
   {
    "path": "header.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 546,
-   "sha1": "6edc2a2d35e97c7b5546673af56b0ea17196c4cc"
+   "sha1": "2460b28a0a833e7a349fbf3cf8b8451f95f30cc9"
   },
   {
    "path": "theme.json",
@@ -95,8 +95,8 @@
   },
   {
    "path": "assets/css/theme.css",
-   "size": 23636,
-   "sha1": "ed33bc434998dbd2f4f194a3fc207bc6bf592a01"
+   "size": 28324,
+   "sha1": "c8ee7d173298859063996bdced2f8623cc88cf19"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -155,8 +155,8 @@
   },
   {
    "path": "assets/css/pages/home.css",
-   "size": 11538,
-   "sha1": "95d6200f62acc40d5ff4786473aac8695e84bb6f"
+   "size": 10479,
+   "sha1": "7968bcbf1ff42b7d744ac6885f0053e5ed4e543c"
   },
   {
    "path": "assets/css/pages/pricing.css",
@@ -545,8 +545,8 @@
   },
   {
    "path": "inc/helpers.php",
-   "size": 22751,
-   "sha1": "dbc883ef86c3f7e4adcbaec9cc4f5cb894082848"
+   "size": 23340,
+   "sha1": "27ef2cd3e5454d11a163edc040848f746d787a4f"
   },
   {
    "path": "inc/navigation.php",
@@ -905,8 +905,8 @@
   },
   {
    "path": "sections/home/markets.php",
-   "size": 3732,
-   "sha1": "80f00d56f642b5e848472bc90c192e190b94dd6a"
+   "size": 3562,
+   "sha1": "909b640c6b8738b707531f3d0d03a44beae24bb2"
   },
   {
    "path": "sections/home/platforms.php",
@@ -930,8 +930,8 @@
   },
   {
    "path": "sections/home/services.php",
-   "size": 5424,
-   "sha1": "cca8b7643d03549256c1970baf434dd8a3f63358"
+   "size": 4319,
+   "sha1": "9a22128ddd6a0e75cfefc6c7188f9e9c1559c0f9"
   },
   {
    "path": "sections/pricing/before.php",
@@ -1415,8 +1415,8 @@
   },
   {
    "path": "sections/seo-ksa/market.php",
-   "size": 6018,
-   "sha1": "a5083972fa10ccb7137a7fcb9c88db95e58dbaf7"
+   "size": 6158,
+   "sha1": "260b9a2539b7245695f4925931f6928aa0f7e912"
   },
   {
    "path": "sections/seo-ksa/reviews.php",
@@ -1495,8 +1495,8 @@
   },
   {
    "path": "sections/seo-uae/first_month.php",
-   "size": 4314,
-   "sha1": "ce10e2c197d3a910ffbf519d48e832b77527bbf7"
+   "size": 4497,
+   "sha1": "83fd1f1c5a589263ba9240708dca7f5cbc99f024"
   },
   {
    "path": "sections/seo-uae/gulf_case.php",
@@ -1545,8 +1545,8 @@
   },
   {
    "path": "sections/services/families.php",
-   "size": 7598,
-   "sha1": "2edf47a84ffa499a9c190a4e7779978ddcb4720d"
+   "size": 7401,
+   "sha1": "5e9039c46461a7b9d3ecaf5dbb41b6f41da5a87c"
   },
   {
    "path": "sections/services/hero.php",
@@ -1670,8 +1670,8 @@
   },
   {
    "path": "sections/stores-zid/ops.php",
-   "size": 2398,
-   "sha1": "479ea4955a10959d342e18e45d755f3f868dec18"
+   "size": 2619,
+   "sha1": "8978fadf1f4269c280f27d61bab88035ebc7230c"
   },
   {
    "path": "sections/stores-zid/phases.php",

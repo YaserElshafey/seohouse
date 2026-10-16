@@ -3,6 +3,10 @@
  * Section "First month" — SEO House - UAE SEO Page.
  * Generated from the approved design by tools/design-import/convert.js.
  * To maintain this file by hand add the tag sh-manual (prefixed with @) as its own line here.
+
+ * @sh-manual
+ * Maintained by hand since 2.7.12: the card uses the shared white surface ([data-card], theme.css)
+ * instead of the dark design's 3.5% white, which vanished on the light field. Content unchanged.
  *
  * @var array $args { f: layout values }
  */
@@ -17,7 +21,7 @@ $f = $args['f'] ?? array();
       </div>
       <?php if (!empty($f['text'])) : ?><p data-center style="font-size: 16.5px; color: var(--sh-ink); margin: 14px 0px 0px; max-width: 48em; text-wrap: pretty;"><?= esc_html($f['text'] ?? '') ?></p><?php endif; ?>
 
-      <div style="margin-top: clamp(24px, 2.8vw, 38px); border-radius: 18px; background: rgba(255, 255, 255, 0.035); overflow: hidden;">
+      <div style="margin-top: clamp(24px, 2.8vw, 38px); border-radius: 18px; overflow: hidden;" data-card>
         <div data-ua-prow data-ua-phead style="display: grid; align-items: center; gap: 14px 20px; padding: 14px 20px; background: rgba(40, 84, 232, 0.1); font-size: 12.5px; font-weight: 600; color: var(--sh-text);">
           <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><?php if (!empty($r1['label'])) : ?><span><?= esc_html($r1['label'] ?? '') ?></span><?php endif; ?><?php endforeach; ?><?php if (!empty($f['label'])) : ?><span data-ua-pweight><?= esc_html($f['label'] ?? '') ?></span><?php endif; ?>
         </div>

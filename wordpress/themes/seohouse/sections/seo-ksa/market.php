@@ -3,6 +3,10 @@
  * Section "Market" — SEO House - Saudi SEO Page.
  * Generated from the approved design by tools/design-import/convert.js.
  * To maintain this file by hand add the tag sh-manual (prefixed with @) as its own line here.
+
+ * @sh-manual
+ * Maintained by hand since 2.7.12: the card uses the shared white surface ([data-card], theme.css)
+ * instead of the dark design's 3.5% white, which vanished on the light field. Content unchanged.
  *
  * @var array $args { f: layout values }
  */
@@ -32,7 +36,7 @@ $f = $args['f'] ?? array();
           
         </div>
 
-        <div style="border-radius: 18px; background: rgba(255, 255, 255, 0.035); border: 1px solid rgba(40, 84, 232, 0.16); padding: clamp(18px, 2.2vw, 26px);">
+        <div data-card style="border-radius: 18px; padding: clamp(18px, 2.2vw, 26px);">
           <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 14px; padding-bottom: 14px; border-bottom: 1px solid var(--sh-line);">
             <?php if (!empty($f['heading'])) : ?><div style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: 16.5px;"><?= esc_html($f['heading'] ?? '') ?></div><?php endif; ?>
             <?php if (!empty($f['label'])) : ?><div style="font-size: 12px; color: var(--sh-text);"><?= esc_html($f['label'] ?? '') ?></div><?php endif; ?>

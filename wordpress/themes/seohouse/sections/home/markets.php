@@ -3,6 +3,9 @@
  * Section "Markets" — SEO House - Homepage.
  * Generated from the approved design by tools/design-import/convert.js.
  * To maintain this file by hand add the tag sh-manual (prefixed with @) as its own line here.
+ * @sh-manual
+ * Maintained by hand since 2.7.12: the cards use the shared white card ([data-lcard], theme.css) with a
+ * white surface on hover/focus; the map's dotted field and outline are styled there. Content unchanged.
  *
  * @var array $args { f: layout values }
  */
@@ -19,14 +22,14 @@ $f = $args['f'] ?? array();
       </div>
       <div data-grid="mkt" style="margin-top: 28px; display: grid; gap: 16px;">
         
-          <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><?php if (!empty(sh_link($r1['link'] ?? ''))) : ?><a data-hcard href="<?= esc_url(sh_link($r1['link'] ?? '')) ?>" data-mkt-card style="position: relative; display: flex; flex-direction: column; border-radius: 20px; overflow: hidden; background: linear-gradient(165deg,var(--sh-surface) 0%,#FFFFFF 70%); border: 1px solid rgba(255, 255, 255, 0.55); color: var(--sh-ink); box-shadow: rgba(6, 11, 31, 0.55) 0px 18px 40px -30px; transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;">
-            <span aria-hidden="true" data-mkt-map style="position: relative; display: block; height: clamp(150px, 15vw, 190px); background-image: radial-gradient(rgba(171, 182, 194, 0.16) 1px, transparent 1px); background-size: 14px 14px;">
+          <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><?php if (!empty(sh_link($r1['link'] ?? ''))) : ?><a data-lcard href="<?= esc_url(sh_link($r1['link'] ?? '')) ?>" data-mkt-card style="position: relative; display: flex; flex-direction: column; border-radius: 20px; overflow: hidden;">
+            <span aria-hidden="true" data-mkt-map style="position: relative; display: block; height: clamp(150px, 15vw, 190px);">
               <?= sh_icon($r1['icon'] ?? 'i53d74919') ?>
             </span>
             <span style="display: flex; flex-direction: column; flex: 1 1 auto; padding: 0px clamp(18px, 2vw, 24px) clamp(18px, 2vw, 22px); text-align: center; align-items: center;">
               <?php if (!empty($r1['heading'])) : ?><span style="font-family: Alexandria, sans-serif; font-weight: 800; font-size: clamp(21px, 2vw, 25px); color: var(--sh-ink);"><?= esc_html($r1['heading'] ?? '') ?></span><?php endif; ?>
               <?php if (!empty($r1['label'])) : ?><span style="color: var(--sh-text); font-size: 14.5px; line-height: 1.8; margin-top: 8px; max-width: 24em;"><?= esc_html($r1['label'] ?? '') ?></span><?php endif; ?>
-              <?php if (!empty($r1['eyebrow'])) : ?><span style="margin-top: auto; padding-top: 14px; font-size: 14px; font-weight: 600; color: var(--sh-link);"><?= esc_html($r1['eyebrow'] ?? '') ?></span><?php endif; ?>
+              <?php if (!empty($r1['eyebrow'])) : ?><span data-lcard-more style="margin-top: auto; padding-top: 14px; font-size: 14px;"><?= sh_more_label($r1['eyebrow'] ?? '') ?></span><?php endif; ?>
             </span>
           </a><?php endif; ?><?php endforeach; ?>
         

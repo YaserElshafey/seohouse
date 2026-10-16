@@ -151,6 +151,19 @@ function sh_svg_img( $file, string $alt = '', array $attrs = array(), int $image
 	return $out;
 }
 
+/**
+ * «تفاصيل الخدمة ←»-style card link text, escaped. The words go in <span data-lcard-text> (underlined on
+ * hover/focus) and a trailing arrow typed in the field in <span data-lcard-arrow> (nudged forward); the
+ * text itself is unchanged.
+ */
+function sh_more_label( $text ): string {
+	$text = (string) $text;
+	if ( preg_match( '/^(.*?)(\s*)([←→])$/u', $text, $m ) ) {
+		return '<span data-lcard-text>' . esc_html( $m[1] ) . '</span>' . $m[2] . '<span data-lcard-arrow>' . $m[3] . '</span>';
+	}
+	return '<span data-lcard-text>' . esc_html( $text ) . '</span>';
+}
+
 /** Inline SVG icon from the design icon library (inc/generated/icons.php). */
 function sh_icon( $id ): string {
 	static $icons = null;
