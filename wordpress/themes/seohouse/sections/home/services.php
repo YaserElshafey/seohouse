@@ -4,8 +4,9 @@
  * Generated from the approved design by tools/design-import/convert.js.
  * To maintain this file by hand add the tag sh-manual (prefixed with @) as its own line here.
  * @sh-manual
- * Maintained by hand since 2.7.12: white cards ([data-lcard], theme.css) instead of the generated
+ * Maintained by hand since 2.7.12: white cards ([data-card], theme.css) instead of the generated
  * translucent ones; the first card is the lead service ([data-card-lead]). Content and links unchanged.
+ * 2.7.14: hover is the site's blue card hover again ([data-hcard], as before 2.7.12), on the white cards.
  *
  * @var array $args { f: layout values }
  */
@@ -21,12 +22,12 @@ $f = $args['f'] ?? array();
       </div>
       <div data-grid="services4" style="margin-top: 36px; display: grid; gap: 16px;">
         
-          <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><?php if (!empty(sh_link($r1['link'] ?? ''))) : ?><a data-lcard<?= 0 === $i1 ? ' data-card-lead' : '' ?> href="<?= esc_url(sh_link($r1['link'] ?? '')) ?>" style="display: flex; flex-direction: column; gap: 12px; padding: clamp(22px, 2.4vw, 30px); border-radius: 6px 22px 22px;">
+          <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><?php if (!empty(sh_link($r1['link'] ?? ''))) : ?><a data-card data-hcard<?= 0 === $i1 ? ' data-card-lead' : '' ?> href="<?= esc_url(sh_link($r1['link'] ?? '')) ?>" style="display: flex; flex-direction: column; gap: 12px; padding: clamp(22px, 2.4vw, 30px); border-radius: 6px 22px 22px;">
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
               <span aria-hidden="true" data-lcard-icon>
                 <?= sh_icon($r1['icon'] ?? 'i9db3f4c7') ?>
               </span>
-              <?php if (!empty($r1['eyebrow'])) : ?><span style="<?= esc_attr($i1 === 0 ? 'display: inline-block; font-size: 12.5px; font-weight: 600; color: rgb(255, 255, 255); background: var(--sh-blue); border-radius: 999px; padding: 6px 12px;' : 'display: none; font-size: 12.5px; font-weight: 600; color: rgb(255, 255, 255); background: var(--sh-blue); border-radius: 999px; padding: 6px 12px;') ?>"><?= esc_html($r1['eyebrow'] ?? '') ?></span><?php endif; ?>
+              <?php if (!empty($r1['eyebrow'])) : ?><span data-svc-badge style="<?= esc_attr($i1 === 0 ? 'display: inline-block; font-size: 12.5px; font-weight: 600; color: rgb(255, 255, 255); background: var(--sh-blue); border-radius: 999px; padding: 6px 12px;' : 'display: none; font-size: 12.5px; font-weight: 600; color: rgb(255, 255, 255); background: var(--sh-blue); border-radius: 999px; padding: 6px 12px;') ?>"><?= esc_html($r1['eyebrow'] ?? '') ?></span><?php endif; ?>
             </div>
             <?php if (!empty($r1['heading'])) : ?><h3 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: 20px; margin: 0px; color: var(--sh-ink);"><?= esc_html($r1['heading'] ?? '') ?></h3><?php endif; ?>
             <?php if (!empty($r1['text'])) : ?><p style="font-size: 15.5px; line-height: 1.75; color: var(--sh-text); margin: 0px;"><?= esc_html($r1['text'] ?? '') ?></p><?php endif; ?>

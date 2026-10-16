@@ -1,6 +1,6 @@
 {
  "theme": "seohouse",
- "version": "2.7.13",
+ "version": "2.7.14",
  "count": 362,
  "files": [
   {
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 1033,
-   "sha1": "4b63cfc90c8de77e08fabbcd36b67190e8170a35"
+   "sha1": "b54b646fd374c4fa16fac3b0477366f5ff2b795e"
   },
   {
    "path": "header.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 546,
-   "sha1": "10d2f96a1126add56bc22d8fe5e1a6bd5ad73ec4"
+   "sha1": "ccb0dadcd029790c654cee60c26daf80abc6f23c"
   },
   {
    "path": "theme.json",
@@ -95,8 +95,8 @@
   },
   {
    "path": "assets/css/theme.css",
-   "size": 28973,
-   "sha1": "e8531e49bc49a838570040f7253e7e36f74fdb39"
+   "size": 29776,
+   "sha1": "81c3f0488f87523e6b05171ff142cc269667832c"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -790,8 +790,8 @@
   },
   {
    "path": "parts/seo-other-markets.php",
-   "size": 2064,
-   "sha1": "eb542915e537c428a3f7e0381fbebc6524fd5dbb"
+   "size": 2048,
+   "sha1": "70783282037e3ea88fec8b74c2291c9506ee1c2a"
   },
   {
    "path": "parts/site-footer.php",
@@ -930,8 +930,8 @@
   },
   {
    "path": "sections/home/services.php",
-   "size": 4319,
-   "sha1": "9a22128ddd6a0e75cfefc6c7188f9e9c1559c0f9"
+   "size": 4450,
+   "sha1": "3c5280aec3928da23145c931670f2407663a8874"
   },
   {
    "path": "sections/pricing/before.php",
@@ -950,8 +950,8 @@
   },
   {
    "path": "sections/pricing/groups.php",
-   "size": 1988,
-   "sha1": "8ccca2221a903504d0f673d01797fed0cd0dc3f7"
+   "size": 2010,
+   "sha1": "2ac17e8f7d2ba936fb687708d16bd46b27b96941"
   },
   {
    "path": "sections/pricing/hero.php",
@@ -985,8 +985,8 @@
   },
   {
    "path": "sections/products/platforms.php",
-   "size": 4909,
-   "sha1": "f8b5c2d0ed08cacc4c9d8de3bc3e459489665152"
+   "size": 5089,
+   "sha1": "0081a75b6aa2f043b1f33922fb42d924b86bd90f"
   },
   {
    "path": "sections/products/process.php",
@@ -1240,8 +1240,8 @@
   },
   {
    "path": "sections/seo/markets.php",
-   "size": 2595,
-   "sha1": "8605405f3f87bb2b8b30c07272e7b0e9f2f5dc51"
+   "size": 2451,
+   "sha1": "ce44e6ad8d5947d8a77f4bf76d0335895d338c1c"
   },
   {
    "path": "sections/seo/pricing_strip.php",
@@ -1270,8 +1270,8 @@
   },
   {
    "path": "sections/seo/seo_system.php",
-   "size": 5999,
-   "sha1": "bec7b637034b749dc9742cfa25b62eb842cff8a5"
+   "size": 6253,
+   "sha1": "a7936df03147201c8d06c1d8bc9521a17826000b"
   },
   {
    "path": "sections/seo/tools.php",
@@ -1550,8 +1550,8 @@
   },
   {
    "path": "sections/services/hero.php",
-   "size": 6568,
-   "sha1": "4c3fdce2776734493a0de457e67e4fd0e69266d6"
+   "size": 6507,
+   "sha1": "dffa25416eafcd4a3a9b871365e61337e72e365d"
   },
   {
    "path": "sections/services/path.php",
@@ -1595,8 +1595,8 @@
   },
   {
    "path": "sections/stores/platforms.php",
-   "size": 6463,
-   "sha1": "f2a6e2f3d6cb86394004f2419d7cd2276efca1b5"
+   "size": 6643,
+   "sha1": "1c4bc8c834f4b5ba36d5a049137787f0da00c739"
   },
   {
    "path": "sections/stores-salla/hero.php",
@@ -1750,8 +1750,8 @@
   },
   {
    "path": "sections/web-design/platforms.php",
-   "size": 5859,
-   "sha1": "acf464414fe9a9a8cf05d48d632477c8e98290cf"
+   "size": 5979,
+   "sha1": "41b6365ffc77fbe4aa1632b73c07496b0a2545cf"
   },
   {
    "path": "sections/web-react-next/deliver.php",
