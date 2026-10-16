@@ -34,9 +34,14 @@ const widths = (process.argv.slice(3).length ? process.argv.slice(3) : ['360', '
             if (tb.left > box.left + 0.5 || tb.right < box.right - 0.5) gaps++;
           }
           // loop seam: frame at the very end equals the frame at the start shifted by one copy
-          anim.currentTime = 0; const x0 = imgs[0].getBoundingClientRect().left;
-          anim.currentTime = dur - 0.001; const xEnd = imgs[n].getBoundingClientRect().left;
-          var seam = Math.abs(xEnd - x0);
+          // (either direction: the end frame equals the start frame with the copies swapped)
+          anim.currentTime = 0; const a0 = imgs[0].getBoundingClientRect().left, b0 = imgs[n].getBoundingClientRect().left;
+          anim.currentTime = dur - 0.001; const a1 = imgs[0].getBoundingClientRect().left, b1 = imgs[n].getBoundingClientRect().left;
+          var seam = Math.min(Math.abs(b1 - a0), Math.abs(a1 - b0));
+          // direction on screen: where the first photo moves between two moments of the cycle
+          anim.currentTime = dur * 0.2; const xa = imgs[0].getBoundingClientRect().left;
+          anim.currentTime = dur * 0.3; const xb = imgs[0].getBoundingClientRect().left;
+          var dir = xb > xa ? 'right' : (xb < xa ? 'left' : 'still');
           anim.play();
         }
         const copyW = imgs.slice(0, n).reduce((s, i) => s + i.getBoundingClientRect().width + parseFloat(getComputedStyle(i).marginInlineEnd), 0);
@@ -45,16 +50,16 @@ const widths = (process.argv.slice(3).length ? process.argv.slice(3) : ['360', '
           alts: imgs.filter(i => i.alt).map(i => i.alt),
           photos: imgs.length, copyIdentical: JSON.stringify(copyA) === JSON.stringify(copyB),
           copyW: Math.round(copyW), trackW: Math.round(t.scrollWidth || t.getBoundingClientRect().width), rowW: Math.round(box.width),
-          dur, gaps, samples, seam: Math.round((seam || 0) * 100) / 100, playing: anim ? anim.playState : 'none',
+          dur, gaps, samples, seam: Math.round((seam || 0) * 100) / 100, dir, playing: anim ? anim.playState : 'none',
         };
       });
     });
     const [a, c] = r;
     const overlap = a && c ? a.faces.filter(f => c.faces.includes(f)) : [];
-    const ok = r.length === 2 && overlap.length === 0 && r.every(x => x.copyIdentical && x.gaps === 0 && x.copyW >= x.rowW && x.seam < 1);
+    const ok = r.length === 2 && overlap.length === 0 && r[0].dir === 'right' && r[1].dir === 'left' && r.every(x => x.copyIdentical && x.gaps === 0 && x.copyW >= x.rowW && x.seam < 1);
     if (!ok) fail++;
     console.log(`${w}px  rows=${r.length}  overlap=${overlap.length} ${ok ? 'OK' : 'FAIL'}`);
-    r.forEach((x, i) => console.log(`   row${i + 1}: ${x.faces.length} people, ${x.photos} imgs, copy ${x.copyW}px vs row ${x.rowW}px, identical copies=${x.copyIdentical}, gaps ${x.gaps}/${x.samples}, seam ${x.seam}px, ${x.playing}, names read: ${x.alts.length}`));
+    r.forEach((x, i) => console.log(`   row${i + 1}: ${x.faces.length} people, ${x.photos} imgs, copy ${x.copyW}px vs row ${x.rowW}px, identical copies=${x.copyIdentical}, gaps ${x.gaps}/${x.samples}, seam ${x.seam}px, moves ${x.dir}, ${x.playing}, names read: ${x.alts.length}`));
     await p.locator('[data-hero-mob]').screenshot({ path: `${label}-${w}.png` });
     await ctx.close();
   }

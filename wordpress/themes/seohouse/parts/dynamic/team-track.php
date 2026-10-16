@@ -1,7 +1,8 @@
 <?php
 /**
  * Homepage hero (mobile): horizontal photo tracks. Track 0 shows the first half of the team,
- * track 1 the second half, so the two rows never show the same people. The track moves by half its
+ * track 1 the second half, so the two rows never show the same people; the hero runs the second row
+ * in the opposite direction (the same shRtl, reversed). The track moves by half its
  * width (shRtl), so it holds two identical copies; when a half of the team is too short to cover the
  * widest mobile row (min_px, at item_px per photo), its photos repeat inside each copy, so no gap
  * opens while it moves.

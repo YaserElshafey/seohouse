@@ -12,7 +12,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'SH_THEME_VERSION', '2.7.10' );
+define( 'SH_THEME_VERSION', '2.7.11' );
 define( 'SH_THEME_DIR', get_template_directory() );
 define( 'SH_THEME_URI', get_template_directory_uri() );
 
