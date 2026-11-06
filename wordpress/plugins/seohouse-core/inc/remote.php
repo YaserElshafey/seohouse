@@ -11,6 +11,7 @@
  * the Application Password ends remote access.
  *
  * Routes (namespace seohouse/v1):
+ *   GET  ping               public: whether the X-SeoHouse-Auth header arrived and was accepted (no data)
  *   GET  site               versions and settings that matter for publishing and indexing (read-only): front
  *                           and posts page, environment type, Rank Math state, category counts, case studies
  *   POST deploy             kind=theme|core, package=<zip upload>, sha256=<hex>
@@ -44,34 +45,96 @@ add_action( 'rest_api_init', 'sh_remote_routes' );
  * hosts which drop the Authorization header still pass. REST requests over HTTPS only (or a local test
  * site); WordPress validates the password exactly as for Basic authentication.
  */
+add_filter( 'determine_current_user', 'sh_remote_header_auth', 25 );
+
+/** Why the X-SeoHouse-Auth header was not accepted on this request ('' when it was, or was not sent). */
+function sh_remote_auth_problem( ?string $set = null ): string {
+	static $problem = '';
+	if ( null !== $set ) {
+		$problem = $set;
+	}
+	return $problem;
+}
+
+function sh_remote_header_auth( $user_id ) {
+	if ( $user_id || empty( $_SERVER['HTTP_X_SEOHOUSE_AUTH'] ) ) {
+		return $user_id;
+	}
+	$uri = (string) ( $_SERVER['REQUEST_URI'] ?? '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+	if ( false === strpos( $uri, '/' . rest_get_url_prefix() . '/' ) && false === strpos( $uri, 'rest_route=' ) ) {
+		return $user_id;
+	}
+	if ( ! is_ssl() && 'local' !== wp_get_environment_type() ) {
+		sh_remote_auth_problem( 'not_https' );
+		return $user_id;
+	}
+	if ( ! wp_is_application_passwords_available() ) {
+		sh_remote_auth_problem( 'unavailable' );
+		return $user_id;
+	}
+	$raw = trim( wp_unslash( (string) $_SERVER['HTTP_X_SEOHOUSE_AUTH'] ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+	if ( 0 === stripos( $raw, 'basic ' ) ) {
+		$raw = (string) base64_decode( substr( $raw, 6 ), true ); // the Basic form works too
+	} elseif ( 0 === stripos( $raw, 'bearer ' ) ) {
+		$raw = trim( substr( $raw, 7 ) ); // a prefix left in the secret's settings
+	}
+	if ( false === strpos( $raw, ':' ) ) {
+		sh_remote_auth_problem( 'format' );
+		return $user_id;
+	}
+	[ $login, $pass ] = explode( ':', $raw, 2 );
+	$user             = wp_authenticate_application_password( null, trim( $login ), trim( $pass ) );
+	if ( $user instanceof WP_User ) {
+		return $user->ID;
+	}
+	$code = is_wp_error( $user ) ? $user->get_error_code() : '';
+	sh_remote_auth_problem( 'application_passwords_disabled_for_user' === $code ? 'disabled_for_user' : 'invalid' );
+	return $user_id;
+}
+
+/**
+ * A request that sent X-SeoHouse-Auth and was not accepted gets the reason instead of a bare 401. The
+ * reasons never tell whether a username exists (wrong user and wrong password read the same).
+ */
 add_filter(
-	'determine_current_user',
-	static function ( $user_id ) {
-		if ( $user_id || empty( $_SERVER['HTTP_X_SEOHOUSE_AUTH'] ) || ! wp_is_application_passwords_available() ) {
-			return $user_id;
+	'rest_authentication_errors',
+	static function ( $result ) {
+		if ( null !== $result ) {
+			return $result;
 		}
-		if ( ! is_ssl() && 'local' !== wp_get_environment_type() ) {
-			return $user_id;
+		get_current_user_id(); // make sure the header was looked at
+		$problem = sh_remote_auth_problem();
+		if ( '' === $problem || is_user_logged_in() ) {
+			return $result;
 		}
-		$uri = (string) ( $_SERVER['REQUEST_URI'] ?? '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
-		if ( false === strpos( $uri, '/' . rest_get_url_prefix() . '/' ) && false === strpos( $uri, 'rest_route=' ) ) {
-			return $user_id;
-		}
-		$raw = trim( wp_unslash( (string) $_SERVER['HTTP_X_SEOHOUSE_AUTH'] ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
-		if ( 0 === stripos( $raw, 'basic ' ) ) {
-			$raw = (string) base64_decode( substr( $raw, 6 ), true ); // the Basic form works too
-		}
-		if ( false === strpos( $raw, ':' ) ) {
-			return $user_id;
-		}
-		[ $login, $pass ] = explode( ':', $raw, 2 );
-		$user             = wp_authenticate_application_password( null, trim( $login ), trim( $pass ) );
-		return $user instanceof WP_User ? $user->ID : $user_id;
+		$why = array(
+			'not_https'         => 'وصل الطلب إلى ووردبريس على أنه ليس HTTPS، فلا تُقبل كلمات مرور التطبيقات.',
+			'unavailable'       => 'كلمات مرور التطبيقات غير متاحة على الموقع (عطّلتها إضافة أمان أو إعداد في الاستضافة).',
+			'format'            => 'قيمة X-SeoHouse-Auth ليست بالشكل اسم-المستخدم:كلمة-مرور-التطبيق.',
+			'disabled_for_user' => 'كلمات مرور التطبيقات معطلة لهذا الحساب.',
+			'invalid'           => 'اسم المستخدم أو كلمة مرور التطبيق غير صحيحين، أو أُلغيت كلمة المرور.',
+		);
+		return new WP_Error( 'sh_auth_' . $problem, $why[ $problem ] ?? $problem, array( 'status' => 401 ) );
 	},
-	25
+	99
 );
 
 function sh_remote_routes(): void {
+	register_rest_route(
+		SH_REMOTE_NS,
+		'/ping',
+		array(
+			'methods'             => 'GET',
+			'callback'            => static fn() => new WP_REST_Response(
+				array(
+					'ok'          => true,
+					'auth_header' => ! empty( $_SERVER['HTTP_X_SEOHOUSE_AUTH'] ),
+					'signed_in'   => is_user_logged_in(),
+				)
+			),
+			'permission_callback' => '__return_true',
+		)
+	);
 	register_rest_route(
 		SH_REMOTE_NS,
 		'/site',
