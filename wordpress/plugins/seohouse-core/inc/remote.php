@@ -4,7 +4,8 @@
  * link writers, without logging in to wp-admin.
  *
  * Who can call it: an administrator, authenticated as WordPress allows for REST (an Application Password
- * created in «المستخدمون ← الملف الشخصي ← كلمات مرور التطبيقات», over HTTPS). Each route checks the same
+ * created in «المستخدمون ← الملف الشخصي ← كلمات مرور التطبيقات», over HTTPS), sent as Basic authentication or
+ * as `X-SeoHouse-Auth: user:password`. Each route checks the same
  * capabilities wp-admin asks for the same action (uploading a theme or plugin, switching the theme,
  * editing others' posts), so it allows nothing an administrator cannot already do in wp-admin. Revoking
  * the Application Password ends remote access.
@@ -36,6 +37,39 @@ const SH_REMOTE_MAX_BYTES   = 60 * 1024 * 1024;
 const SH_REMOTE_KEEP_BACKUP = 3;
 
 add_action( 'rest_api_init', 'sh_remote_routes' );
+
+/**
+ * The same Application Password, also accepted in an `X-SeoHouse-Auth: <user>:<application password>` header
+ * (2.8.1): a plain value the cloud environment's network secret can send as is (no base64), and one that
+ * hosts which drop the Authorization header still pass. REST requests over HTTPS only (or a local test
+ * site); WordPress validates the password exactly as for Basic authentication.
+ */
+add_filter(
+	'determine_current_user',
+	static function ( $user_id ) {
+		if ( $user_id || empty( $_SERVER['HTTP_X_SEOHOUSE_AUTH'] ) || ! wp_is_application_passwords_available() ) {
+			return $user_id;
+		}
+		if ( ! is_ssl() && 'local' !== wp_get_environment_type() ) {
+			return $user_id;
+		}
+		$uri = (string) ( $_SERVER['REQUEST_URI'] ?? '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+		if ( false === strpos( $uri, '/' . rest_get_url_prefix() . '/' ) && false === strpos( $uri, 'rest_route=' ) ) {
+			return $user_id;
+		}
+		$raw = trim( wp_unslash( (string) $_SERVER['HTTP_X_SEOHOUSE_AUTH'] ) ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+		if ( 0 === stripos( $raw, 'basic ' ) ) {
+			$raw = (string) base64_decode( substr( $raw, 6 ), true ); // the Basic form works too
+		}
+		if ( false === strpos( $raw, ':' ) ) {
+			return $user_id;
+		}
+		[ $login, $pass ] = explode( ':', $raw, 2 );
+		$user             = wp_authenticate_application_password( null, trim( $login ), trim( $pass ) );
+		return $user instanceof WP_User ? $user->ID : $user_id;
+	},
+	25
+);
 
 function sh_remote_routes(): void {
 	register_rest_route(
