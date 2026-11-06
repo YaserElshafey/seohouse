@@ -125,26 +125,33 @@ function sh_case_study_url( $value ): string {
 	return (string) get_permalink( $id );
 }
 
-/** Team member profile linked to a post (explicit field → author's linked profile → none). */
+/**
+ * Team member profile credited for a post: its own «الكاتب من فريق العمل» field, else the profile linked to
+ * its WordPress author (Core «حساب الكاتب في ووردبريس»). Only published, public profiles count, so an
+ * article never links to a deleted or hidden member.
+ */
 function sh_post_author_member( $post = null ): int {
+	if ( function_exists( 'sh_core_member_for_post' ) ) {
+		return sh_core_member_for_post( $post );
+	}
 	$post = get_post( $post );
 	if ( ! $post ) {
 		return 0;
 	}
 	$m = (int) sh_field( 'author_member', $post->ID, 0 );
-	if ( $m ) {
-		return $m;
+	if ( ! $m ) {
+		$found = get_posts(
+			array(
+				'post_type'      => 'team_member',
+				'posts_per_page' => 1,
+				'fields'         => 'ids',
+				'meta_key'       => 'author', // phpcs:ignore WordPress.DB.SlowDBQuery
+				'meta_value'     => (int) $post->post_author, // phpcs:ignore WordPress.DB.SlowDBQuery
+			)
+		);
+		$m     = $found ? (int) $found[0] : 0;
 	}
-	$found = get_posts(
-		array(
-			'post_type'      => 'team_member',
-			'posts_per_page' => 1,
-			'fields'         => 'ids',
-			'meta_key'       => 'author', // phpcs:ignore WordPress.DB.SlowDBQuery
-			'meta_value'     => (int) $post->post_author, // phpcs:ignore WordPress.DB.SlowDBQuery
-		)
-	);
-	return $found ? (int) $found[0] : 0;
+	return ( $m && 'publish' === get_post_status( $m ) && '' === (string) get_post_field( 'post_password', $m ) ) ? $m : 0;
 }
 
 /** Reading time in minutes (field override or ~200 Arabic words/minute). */

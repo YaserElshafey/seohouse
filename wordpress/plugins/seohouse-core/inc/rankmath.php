@@ -318,6 +318,30 @@ add_action(
 				return $d ? $d : $desc;
 			}
 		);
+		// «منع الفهرسة» (e.g. the thank-you page) counts too until the move copies it into Rank Math's robots
+		add_filter(
+			'rank_math/frontend/robots',
+			static function ( $robots ) {
+				$id = sh_seo_object_id();
+				if ( ! $id || sh_rankmath_migrated() || array() !== array_filter( (array) get_post_meta( $id, 'rank_math_robots', true ) ) || ! sh_core_field( 'sh_seo_noindex', $id, false ) ) {
+					return $robots;
+				}
+				$robots          = (array) $robots;
+				$robots['index'] = 'noindex';
+				return $robots;
+			}
+		);
+		add_filter(
+			'rank_math/sitemap/entry',
+			static function ( $url, $type, $object ) {
+				if ( 'post' !== $type || ! is_object( $object ) || empty( $object->ID ) || sh_rankmath_migrated() || array() !== array_filter( (array) get_post_meta( $object->ID, 'rank_math_robots', true ) ) ) {
+					return $url;
+				}
+				return sh_core_field( 'sh_seo_noindex', $object->ID, false ) ? false : $url;
+			},
+			10,
+			3
+		);
 	},
 	20
 );

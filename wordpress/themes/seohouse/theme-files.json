@@ -1,7 +1,7 @@
 {
  "theme": "seohouse",
- "version": "2.7.14",
- "count": 362,
+ "version": "2.7.15",
+ "count": 363,
  "files": [
   {
    "path": "404.php",
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 1033,
-   "sha1": "b54b646fd374c4fa16fac3b0477366f5ff2b795e"
+   "sha1": "50a70e740c42cbcc17885acd8e899132dde73e1c"
   },
   {
    "path": "header.php",
@@ -45,8 +45,8 @@
   },
   {
    "path": "search.php",
-   "size": 4910,
-   "sha1": "f4271190a059394de7470e95d2e9b9793874de28"
+   "size": 4972,
+   "sha1": "f962b80675b0a7152d8839575a73c7abb14d29e7"
   },
   {
    "path": "searchform.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 546,
-   "sha1": "ccb0dadcd029790c654cee60c26daf80abc6f23c"
+   "sha1": "e3b223a8ea283b4899cfc083eec36cb2d927d162"
   },
   {
    "path": "theme.json",
@@ -404,6 +404,11 @@
    "sha1": "9e002e656ff8bade0ba6e6c0dc6b726de1d90182"
   },
   {
+   "path": "assets/img/logo-blue-1400.webp",
+   "size": 11430,
+   "sha1": "a9703c34a02acf3cc225c68ec728ac31a55c9bbc"
+  },
+  {
    "path": "assets/img/logo-blue.webp",
    "size": 11762,
    "sha1": "037b99b669bfa57f5b2ea44ff0a21238d5a0f4df"
@@ -535,18 +540,18 @@
   },
   {
    "path": "inc/dynamic.php",
-   "size": 7042,
-   "sha1": "24c43532524695f8e46527aa9a1a0598fed31a95"
+   "size": 7481,
+   "sha1": "41966a77956cc74346532f5befdcabd0650210ed"
   },
   {
    "path": "inc/enqueue.php",
-   "size": 6995,
-   "sha1": "35615e457e740423d576f2eb5441d2c534cfaedb"
+   "size": 7049,
+   "sha1": "6ac4c5c616d9baf49412cee15835ec2792330583"
   },
   {
    "path": "inc/helpers.php",
-   "size": 23340,
-   "sha1": "27ef2cd3e5454d11a163edc040848f746d787a4f"
+   "size": 24653,
+   "sha1": "048e3a6fbc07d3f0296be065df59c143ed7a5c6b"
   },
   {
    "path": "inc/navigation.php",
@@ -1005,8 +1010,8 @@
   },
   {
    "path": "sections/sector-ecommerce/case.php",
-   "size": 3727,
-   "sha1": "f61f8ea299b65af77177fafdae6dda97a3535de1"
+   "size": 3819,
+   "sha1": "aa2cd7e1e2d08d2e6b8944eeec5430e1126bc5a4"
   },
   {
    "path": "sections/sector-ecommerce/hero.php",
@@ -1085,8 +1090,8 @@
   },
   {
    "path": "sections/sector-health/case.php",
-   "size": 5674,
-   "sha1": "cbbe3f24d8bf2c2dd8f88dc2a8a71cd726248615"
+   "size": 5766,
+   "sha1": "8ce8f24e2ae71102c3458aad7c895886446711e5"
   },
   {
    "path": "sections/sector-health/hero.php",
@@ -1355,8 +1360,8 @@
   },
   {
    "path": "sections/seo-egypt/egypt_case.php",
-   "size": 3684,
-   "sha1": "1e01f9d916035fababcb5838afde036c9b8b1c35"
+   "size": 3776,
+   "sha1": "4583f52f80d414a29ab25c34faa3ece72682fc9b"
   },
   {
    "path": "sections/seo-egypt/first_month.php",
@@ -1425,8 +1430,8 @@
   },
   {
    "path": "sections/seo-ksa/saudi_case.php",
-   "size": 3992,
-   "sha1": "5da47dff68d6ff5941364ea50e4d8b05bea5a100"
+   "size": 4084,
+   "sha1": "91cf1fa4133f055105c36a0ae3d111cff47ba77b"
   },
   {
    "path": "sections/seo-ksa/scope.php",
@@ -1500,8 +1505,8 @@
   },
   {
    "path": "sections/seo-uae/gulf_case.php",
-   "size": 3885,
-   "sha1": "ca5c2729a03593047d6320162a51e3548d0e2b35"
+   "size": 3977,
+   "sha1": "392d79de2240418a065ac966af0557416c33cc57"
   },
   {
    "path": "sections/seo-uae/hero.php",

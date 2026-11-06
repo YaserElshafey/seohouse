@@ -75,7 +75,38 @@ function sh_link( $value ): string {
 	if ( '/' === $value[0] ) {
 		return home_url( $value );
 	}
+	if ( preg_match( '#^uploads/([A-Za-z0-9._-]+)$#', $value, $m ) ) {
+		// a design-pack file reference («uploads/<file>», e.g. a report screenshot opened full size): the
+		// imported media file of that name; without it, no link rather than a broken one
+		return sh_upload_url_by_name( $m[1] );
+	}
 	return $value;
+}
+
+/** Report screenshot cards: the card's link, else the screenshot itself at full size. */
+function sh_report_link( array $f ): string {
+	$link = sh_link( $f['link'] ?? '' );
+	if ( '' === $link && ! empty( $f['image'] ) ) {
+		$link = (string) wp_get_attachment_url( is_array( $f['image'] ) ? (int) ( $f['image']['ID'] ?? 0 ) : (int) $f['image'] );
+	}
+	return $link;
+}
+
+/** URL of the media file whose stored name is $name (first match), '' when none. */
+function sh_upload_url_by_name( string $name ): string {
+	static $cache = array();
+	if ( ! isset( $cache[ $name ] ) ) {
+		global $wpdb;
+		$id             = (int) $wpdb->get_var( // phpcs:ignore WordPress.DB.DirectDatabaseQuery
+			$wpdb->prepare(
+				"SELECT post_id FROM {$wpdb->postmeta} WHERE meta_key = '_wp_attached_file' AND ( meta_value = %s OR meta_value LIKE %s ) ORDER BY post_id ASC LIMIT 1",
+				$name,
+				'%/' . $wpdb->esc_like( $name )
+			)
+		);
+		$cache[ $name ] = $id ? (string) wp_get_attachment_url( $id ) : '';
+	}
+	return $cache[ $name ];
 }
 
 /** Section anchor id: editor override or the design default. */

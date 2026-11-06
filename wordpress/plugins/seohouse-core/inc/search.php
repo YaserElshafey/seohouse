@@ -77,7 +77,9 @@ add_filter(
 				$like
 			);
 		}
-		return ' AND (' . implode( ' AND ', $and ) . ') ';
+		// WordPress adds this to its own search clause for visitors; replacing the clause must keep it
+		$protected = is_user_logged_in() ? '' : " AND {$wpdb->posts}.post_password = ''";
+		return ' AND (' . implode( ' AND ', $and ) . ')' . $protected . ' ';
 	},
 	10,
 	2

@@ -3,6 +3,8 @@
  * Section "Case" — SEO House - Sector Health.
  * Generated from the approved design by tools/design-import/convert.js.
  * To maintain this file by hand add the tag sh-manual (prefixed with @) as its own line here.
+ * @sh-manual
+ * 2.7.15: the report link is sh_report_link() (the link, else the image itself full size).
  *
  * @var array $args { f: layout values }
  */
@@ -47,7 +49,7 @@ $f = $args['f'] ?? array();
           <span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 999px; background: var(--sh-line);"></span>
           <?php if (!empty($f['label_6'])) : ?><span style="margin-inline-start: auto;"><?= esc_html($f['label_6'] ?? '') ?></span><?php endif; ?>
         </div>
-        <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" target="_blank" rel="noopener" style="display: block; border-radius: 10px; overflow: hidden;">
+        <?php if (!empty(sh_report_link($f))) : ?><a href="<?= esc_url(sh_report_link($f)) ?>" target="_blank" rel="noopener" style="display: block; border-radius: 10px; overflow: hidden;">
           <?= sh_image($f['image'] ?? 0, ['style' => 'width: 100%; height: clamp(200px, 20vw, 280px); object-fit: contain; display: block; background: rgb(255, 255, 255);'], 'لوحة سيرش كونسول تظهر 12.9 ألف نقرة خلال 28 يومًا مقابل 825 نقرة في الفترة السابقة') ?>
         </a><?php endif; ?>
       </div>

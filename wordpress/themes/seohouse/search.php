@@ -41,8 +41,8 @@ $types = array(
 						the_post();
 						$type    = get_post_type();
 						$excerpt = function_exists( 'sh_seo_description' ) ? '' : '';
-						$excerpt = (string) sh_field( 'sh_seo_description', get_the_ID(), '' );
-						if ( ! $excerpt ) {
+						$excerpt = post_password_required() ? '' : (string) sh_field( 'sh_seo_description', get_the_ID(), '' );
+						if ( ! $excerpt && ! post_password_required() ) {
 							$excerpt = 'case_study' === $type ? (string) sh_field( 'summary', get_the_ID(), '' ) : get_the_excerpt();
 						}
 						$path = rawurldecode( (string) wp_parse_url( get_permalink(), PHP_URL_PATH ) );

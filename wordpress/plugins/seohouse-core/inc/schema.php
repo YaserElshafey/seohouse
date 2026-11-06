@@ -210,11 +210,14 @@ function sh_schema_logo(): array {
 			[ $url, $w, $h ] = $src;
 		}
 	}
-	if ( ! $url && defined( 'SH_THEME_DIR' ) && defined( 'SH_THEME_URI' ) && is_readable( SH_THEME_DIR . '/assets/img/logo-blue.webp' ) ) {
-		$url  = SH_THEME_URI . '/assets/img/logo-blue.webp';
-		$size = @getimagesize( SH_THEME_DIR . '/assets/img/logo-blue.webp' ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
-		if ( $size ) {
-			[ $w, $h ] = $size;
+	// theme's logo: the 1400px copy (theme 2.7.15+; Google asks for at least 112px on each side), else the header's 290px file
+	foreach ( array( 'logo-blue-1400.webp', 'logo-blue.webp' ) as $file ) {
+		if ( ! $url && defined( 'SH_THEME_DIR' ) && defined( 'SH_THEME_URI' ) && is_readable( SH_THEME_DIR . '/assets/img/' . $file ) ) {
+			$url  = SH_THEME_URI . '/assets/img/' . $file;
+			$size = @getimagesize( SH_THEME_DIR . '/assets/img/' . $file ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
+			if ( $size ) {
+				[ $w, $h ] = $size;
+			}
 		}
 	}
 	return $url ? sh_schema_clean(

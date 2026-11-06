@@ -168,9 +168,10 @@ function sh_lead_handle( array $in ): array {
 			return $fail( 'timing', __( 'تعذر إرسال الطلب. انتظر لحظة ثم حاول مرة أخرى.', 'seohouse-core' ) );
 		}
 	} else {
-		// without JavaScript: the time printed in the page; no upper limit (cached pages)
+		// without JavaScript: the time printed in the page; no upper limit (cached pages). Both forms
+		// always send one of the two, so a request with neither did not come from the site's forms.
 		$ts = (int) ( $in['ts'] ?? 0 );
-		if ( $ts && time() - $ts < 3 ) {
+		if ( ! $ts || time() - $ts < 3 ) {
 			return $fail( 'timing', __( 'تعذر إرسال الطلب. انتظر لحظة ثم حاول مرة أخرى.', 'seohouse-core' ) );
 		}
 	}
@@ -262,7 +263,9 @@ function sh_lead_handle( array $in ): array {
 		)
 	);
 	if ( $dup ) {
-		return array( 'ok' => true, 'code' => 'duplicate', 'message' => __( 'طلبك مسجل لدينا بالفعل.', 'seohouse-core' ), 'id' => (int) $dup[0], 'ref' => (string) get_post_meta( (int) $dup[0], '_sh_ref', true ) );
+		// matched by its content, not by this browser's form session: say it is recorded, without the
+		// earlier request's id or reference (they belong to whoever sent it)
+		return array( 'ok' => true, 'code' => 'duplicate', 'message' => __( 'طلبك مسجل لدينا بالفعل.', 'seohouse-core' ) );
 	}
 
 	// rate limit: 5 new requests / 10 minutes per IP (hashed, not stored in clear)

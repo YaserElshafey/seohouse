@@ -3,6 +3,8 @@
  * Section "Saudi case" — SEO House - Saudi SEO Page.
  * Generated from the approved design by tools/design-import/convert.js.
  * To maintain this file by hand add the tag sh-manual (prefixed with @) as its own line here.
+ * @sh-manual
+ * 2.7.15: the report link is sh_report_link() (the link, else the image itself full size).
  *
  * @var array $args { f: layout values }
  */
@@ -34,7 +36,7 @@ $f = $args['f'] ?? array();
           <span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 999px; background: var(--sh-line);"></span>
           <?php if (!empty($f['label'])) : ?><span style="margin-inline-start: auto; font-size: 11.5px; color: var(--sh-text);"><?= esc_html($f['label'] ?? '') ?></span><?php endif; ?>
         </div>
-        <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" target="_blank" rel="noopener" title="افتح التقرير بالحجم الكامل" style="display: block; border-radius: 10px; overflow: hidden;">
+        <?php if (!empty(sh_report_link($f))) : ?><a href="<?= esc_url(sh_report_link($f)) ?>" target="_blank" rel="noopener" title="افتح التقرير بالحجم الكامل" style="display: block; border-radius: 10px; overflow: hidden;">
           <?= sh_image($f['image'] ?? 0, ['style' => 'width: 100%; height: clamp(220px, 23vw, 300px); object-fit: contain; display: block; background: rgb(255, 255, 255);'], 'تقرير جوجل أناليتكس يوضح ارتفاع إيرادات القناة العضوية من 19,956 إلى 106,274 ريالًا') ?>
         </a><?php endif; ?>
       </div>
