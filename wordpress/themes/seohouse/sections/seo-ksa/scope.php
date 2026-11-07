@@ -25,11 +25,11 @@ $f = $args['f'] ?? array();
               <?php if (!empty($r1['heading'])) : ?><span style="display: block; font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(18px, 1.8vw, 21px);"><?= esc_html($r1['heading'] ?? '') ?></span><?php endif; ?>
               <?php if (!empty($r1['text'])) : ?><span style="display: block; font-size: 15.5px; color: var(--sh-ink); margin-top: 6px; max-width: 44em;"><?= esc_html($r1['text'] ?? '') ?></span><?php endif; ?>
             </span>
-            <span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; color: var(--sh-link);">←</span>
+            <span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; color: var(--sh-link);"><?= esc_html(sh_arrow()) ?></span>
           </a><?php endif; ?><?php endforeach; ?>
         
       </div>
 
-      <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-size: 15px; font-weight: 600; border-bottom: 1px solid rgba(40, 84, 232, 0.5); padding-bottom: 3px;"><?= esc_html($f['link_label'] ?? '') ?> <span aria-hidden="true">←</span></a><?php endif; ?>
+      <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-size: 15px; font-weight: 600; border-bottom: 1px solid rgba(40, 84, 232, 0.5); padding-bottom: 3px;"><?= esc_html($f['link_label'] ?? '') ?> <span aria-hidden="true"><?= esc_html(sh_arrow()) ?></span></a><?php endif; ?>
     </div>
   </section>

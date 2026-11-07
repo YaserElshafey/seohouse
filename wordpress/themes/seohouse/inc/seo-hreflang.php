@@ -1,13 +1,16 @@
 <?php
 /**
- * hreflang for the regional versions of the SEO service (Rank Math does not print hreflang).
+ * hreflang (Rank Math does not print hreflang; Polylang's own is switched off in Core's inc/i18n.php).
  *
- * The group: /services/seo/ (ar + x-default) and its Saudi, Egyptian and UAE versions. Pages are
- * found by path, links come from get_permalink() of their IDs. The same five lines are printed on
- * each of the four pages and nowhere else. Nothing is printed unless every page of the group is
- * published, public, indexable and canonical to itself (a page with a custom Rank Math canonical or
- * noindex would make the set invalid; such a conflict is left for the editor, the canonical is never
- * changed here).
+ * The regional group: /services/seo/ (ar + x-default) and its Saudi, Egyptian and UAE versions. Pages are
+ * found by path, links come from get_permalink() of their IDs. The same lines are printed on every page of
+ * the group and nowhere else. Nothing is printed unless every Arabic page of the group is published,
+ * public, indexable and canonical to itself (a page with a custom Rank Math canonical or noindex would
+ * make the set invalid; such a conflict is left for the editor, the canonical is never changed here).
+ * The English version of a group page joins the set (en-SA, en-EG, en-AE, en) once it is indexable.
+ *
+ * Any other page with an indexable translation (Polylang): ar, en and x-default (the Arabic page).
+ * English pages kept noindex while under review are never announced.
  *
  * @package SEOHouse
  */
@@ -52,22 +55,51 @@ function sh_hreflang_group(): array {
 		$links[ $lang ] = $url;
 		$ids[]          = (int) $page->ID;
 	}
+	// English versions that are released (indexable), in the same order
+	if ( function_exists( 'sh_translation' ) && function_exists( 'sh_i18n_indexable' ) ) {
+		foreach ( SH_HREFLANG_GROUP as $lang => $path ) {
+			if ( 'x-default' === $lang ) {
+				continue;
+			}
+			$en = sh_translation( (int) get_page_by_path( $path, OBJECT, 'page' )->ID, 'en' );
+			if ( $en && sh_i18n_indexable( $en ) ) {
+				$links[ str_replace( 'ar', 'en', $lang ) ] = (string) get_permalink( $en );
+				$ids[]                                       = $en;
+			}
+		}
+	}
 	return $cache = array( 'links' => $links, 'ids' => array_values( array_unique( $ids ) ), 'problem' => '' );
 }
 
 add_action(
 	'wp_head',
 	static function () {
-		if ( ! is_page() || is_paged() ) {
+		if ( ! is_singular() || is_paged() ) {
 			return;
 		}
 		$g = sh_hreflang_group();
-		if ( ! $g['links'] || ! in_array( (int) get_queried_object_id(), $g['ids'], true ) ) {
+		if ( $g['links'] && in_array( (int) get_queried_object_id(), $g['ids'], true ) ) {
+			foreach ( $g['links'] as $lang => $url ) {
+				printf( '<link rel="alternate" hreflang="%s" href="%s" />' . "\n", esc_attr( $lang ), esc_url( $url ) );
+			}
 			return;
 		}
-		foreach ( $g['links'] as $lang => $url ) {
-			printf( '<link rel="alternate" hreflang="%s" href="%s" />' . "\n", esc_attr( $lang ), esc_url( $url ) );
-		}
+		sh_hreflang_translations();
 	},
 	2
 );
+
+/** ar / en / x-default for a page with an indexable translation outside the regional group. */
+function sh_hreflang_translations(): void {
+	if ( ! function_exists( 'sh_i18n_alternates' ) || ! is_singular() ) {
+		return;
+	}
+	$alts = sh_i18n_alternates( (int) get_queried_object_id() );
+	if ( ! $alts || ! isset( $alts['ar'] ) ) {
+		return;
+	}
+	foreach ( $alts as $lang => $alt ) {
+		printf( '<link rel="alternate" hreflang="%s" href="%s" />' . "\n", esc_attr( $lang ), esc_url( $alt[1] ) );
+	}
+	printf( '<link rel="alternate" hreflang="x-default" href="%s" />' . "\n", esc_url( $alts['ar'][1] ) );
+}

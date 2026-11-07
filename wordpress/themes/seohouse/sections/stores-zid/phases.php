@@ -20,7 +20,7 @@ $f = $args['f'] ?? array();
           <span style="font-family: Alexandria, sans-serif; font-weight: 800; font-size: 12px; color: var(--sh-link);"><?= esc_html(sprintf('%02d', $i1 + 1)) ?></span>
           <?php if (!empty($r1['heading'])) : ?><span style="display: block; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 16.5px; margin-top: 8px;"><?= esc_html($r1['heading'] ?? '') ?></span><?php endif; ?>
           <?php if (!empty($r1['label'])) : ?><span style="display: block; font-size: 14px; color: var(--sh-ink); margin-top: 6px;"><?= esc_html($r1['label'] ?? '') ?></span><?php endif; ?>
-          <span aria-hidden="true" style="position: absolute; inset-inline-start: -11px; top: 50%; transform: translateY(-50%); color: var(--sh-link); font-size: 15px;">←</span>
+          <span aria-hidden="true" style="position: absolute; inset-inline-start: -11px; top: 50%; transform: translateY(-50%); color: var(--sh-link); font-size: 15px;"><?= esc_html(sh_arrow()) ?></span>
         </div><?php endforeach; ?>
         <div style="position: relative; border-radius: 14px; background: var(--sh-surface); padding: 16px 18px;">
           <?php if (!empty($f['eyebrow_2'])) : ?><span style="font-family: Alexandria, sans-serif; font-weight: 800; font-size: 12px; color: var(--sh-link);"><?= esc_html($f['eyebrow_2'] ?? '') ?></span><?php endif; ?>

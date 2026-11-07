@@ -19,7 +19,7 @@ $f = $args['f'] ?? array();
             <span style="min-width: 0px;">
               <?php if (!empty($r1['heading'])) : ?><span style="display: block; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 17.5px; line-height: 1.5;"><?= esc_html($r1['heading'] ?? '') ?></span><?php endif; ?>
               <?php if (!empty($r1['text'])) : ?><span style="display: block; font-size: 15px; color: var(--sh-ink); margin-top: 8px;"><?= esc_html($r1['text'] ?? '') ?></span><?php endif; ?>
-              <?php if (!empty(sh_link($r1['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($r1['link'] ?? '')) ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 14.5px; font-weight: 600;"><?= esc_html($r1['link_label'] ?? '') ?> <span aria-hidden="true">←</span></a><?php endif; ?>
+              <?php if (!empty(sh_link($r1['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($r1['link'] ?? '')) ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 14.5px; font-weight: 600;"><?= esc_html($r1['link_label'] ?? '') ?> <span aria-hidden="true"><?= esc_html(sh_arrow()) ?></span></a><?php endif; ?>
             </span>
           </div><?php endforeach; ?>
         

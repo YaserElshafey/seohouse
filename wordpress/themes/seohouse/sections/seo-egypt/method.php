@@ -59,6 +59,6 @@ $f = $args['f'] ?? array();
         </div>
       </div>
 
-      <?php if (!empty(sh_link($f['link_3'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link_3'] ?? '')) ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 26px; font-size: 15px; font-weight: 600; border-bottom: 1px solid rgba(40, 84, 232, 0.5); padding-bottom: 3px;"><?= esc_html($f['link_label_3'] ?? '') ?> <span aria-hidden="true">←</span></a><?php endif; ?>
+      <?php if (!empty(sh_link($f['link_3'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link_3'] ?? '')) ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 26px; font-size: 15px; font-weight: 600; border-bottom: 1px solid rgba(40, 84, 232, 0.5); padding-bottom: 3px;"><?= esc_html($f['link_label_3'] ?? '') ?> <span aria-hidden="true"><?= esc_html(sh_arrow()) ?></span></a><?php endif; ?>
     </div>
   </section>

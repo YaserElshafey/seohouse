@@ -27,7 +27,7 @@ $copyright = $copyright ? str_replace( '{year}', wp_date( 'Y' ), $copyright ) : 
 			<?php endif; ?>
 			<?php echo sh_footer_social_icons(); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside ?>
 			<?php if ( $show_cta ) : ?>
-			<a href="<?php echo esc_url( $cta['url'] ); ?>" data-foot-cta style="display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-size: 15px; font-weight: 700; color: rgb(33, 72, 216); background: rgb(255, 255, 255); min-height: 46px; padding: 0px 20px; border-radius: 12px; box-shadow: rgba(10, 20, 80, 0.5) 0px 10px 22px -14px;"><?php echo esc_html( $cta['label'] ); ?> <span aria-hidden="true">←</span></a>
+			<a href="<?php echo esc_url( $cta['url'] ); ?>" data-foot-cta style="display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-size: 15px; font-weight: 700; color: rgb(33, 72, 216); background: rgb(255, 255, 255); min-height: 46px; padding: 0px 20px; border-radius: 12px; box-shadow: rgba(10, 20, 80, 0.5) 0px 10px 22px -14px;"><?php echo esc_html( $cta['label'] ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></a>
 			<?php endif; ?>
 		</div>
 		<?php foreach ( $cols as $col ) : ?>

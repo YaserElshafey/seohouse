@@ -33,7 +33,7 @@ $f = $args['f'] ?? array();
             <?php if (!empty($f['label'])) : ?><span style="margin-inline-start: auto; font-size: 11.5px; color: var(--sh-text);"><?= esc_html($f['label'] ?? '') ?></span><?php endif; ?>
           </div>
           <?php if (!empty(sh_report_link($f))) : ?><a href="<?= esc_url(sh_report_link($f)) ?>" target="_blank" rel="noopener" style="display: block; border-radius: 10px; overflow: hidden;">
-            <?= sh_image($f['image'] ?? 0, ['style' => 'width: 100%; height: clamp(220px, 23vw, 300px); object-fit: contain; display: block; background: rgb(255, 255, 255);'], 'تقرير جوجل أناليتكس يوضح ارتفاع إيرادات البحث العضوي إلى 106,274 ريالًا') ?>
+            <?= sh_image($f['image'] ?? 0, ['style' => 'width: 100%; height: clamp(220px, 23vw, 300px); object-fit: contain; display: block; background: rgb(255, 255, 255);'], __('تقرير جوجل أناليتكس يوضح ارتفاع إيرادات البحث العضوي إلى 106,274 ريالًا', 'seohouse')) ?>
           </a><?php endif; ?>
         </div>
       </div>

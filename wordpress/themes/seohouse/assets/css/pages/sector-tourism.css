@@ -21,7 +21,7 @@
 @media (max-width:899px) { [data-bk-grid] { grid-template-columns:1fr; } }
 @media (max-width:559px) { [data-bk-row] { grid-template-columns:1fr; } }
 [data-tr-pair] { grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr); }
-@media (max-width:719px) { [data-tr-pair] { grid-template-columns:1fr; } [data-tr-arrow] { transform:rotate(-90deg); padding:6px 0; } }
+@media (max-width:719px) { [data-tr-pair] { grid-template-columns:1fr; } [data-tr-arrow] { transform:rotate(-90deg); padding:6px 0; } [dir="ltr"] [data-tr-arrow] { transform:rotate(90deg); } }
 [data-tr-split] { grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); }
 @media (max-width:899px) { [data-tr-split] { grid-template-columns:1fr; } }
 [data-screen-label="Hero"] { position:relative; overflow:hidden; }

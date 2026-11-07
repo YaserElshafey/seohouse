@@ -114,7 +114,7 @@ while ( have_posts() ) :
 						</a>
 						<?php endforeach; ?>
 					</div>
-					<a href="<?php echo esc_url( get_permalink( (int) get_option( 'page_for_posts' ) ) ); ?>" style="display: inline-block; margin-top: 10px; font-size: 13.5px; font-weight: 600; color: var(--sh-link);"><?php esc_html_e( 'كل المقالات', 'seohouse' ); ?> <span aria-hidden="true">←</span></a>
+					<a href="<?php echo esc_url( get_permalink( (int) get_option( 'page_for_posts' ) ) ); ?>" style="display: inline-block; margin-top: 10px; font-size: 13.5px; font-weight: 600; color: var(--sh-link);"><?php esc_html_e( 'كل المقالات', 'seohouse' ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></a>
 				</div>
 				<?php endif; ?>
 				<?php if ( sh_field( 'sidebar_cta', $id, true ) && ! empty( $cta['title'] ) ) : ?>

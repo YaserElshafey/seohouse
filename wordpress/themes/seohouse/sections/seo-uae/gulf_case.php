@@ -38,8 +38,8 @@ $f = $args['f'] ?? array();
           <span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 999px; background: var(--sh-line);"></span>
           <?php if (!empty($f['label'])) : ?><span style="margin-inline-start: auto; font-size: 11.5px; color: var(--sh-text);"><?= esc_html($f['label'] ?? '') ?></span><?php endif; ?>
         </div>
-        <?php if (!empty(sh_report_link($f))) : ?><a href="<?= esc_url(sh_report_link($f)) ?>" target="_blank" rel="noopener" title="افتح التقرير بالحجم الكامل" style="display: block; border-radius: 10px; overflow: hidden;">
-          <?= sh_image($f['image'] ?? 0, ['style' => 'width: 100%; height: clamp(220px, 23vw, 300px); object-fit: contain; display: block; background: rgb(255, 255, 255);'], 'تقرير جوجل أناليتكس يوضح نمو الإيرادات العضوية بنسبة 253.05%') ?>
+        <?php if (!empty(sh_report_link($f))) : ?><a href="<?= esc_url(sh_report_link($f)) ?>" target="_blank" rel="noopener" title="<?= esc_attr__('افتح التقرير بالحجم الكامل', 'seohouse') ?>" style="display: block; border-radius: 10px; overflow: hidden;">
+          <?= sh_image($f['image'] ?? 0, ['style' => 'width: 100%; height: clamp(220px, 23vw, 300px); object-fit: contain; display: block; background: rgb(255, 255, 255);'], __('تقرير جوجل أناليتكس يوضح نمو الإيرادات العضوية بنسبة 253.05%', 'seohouse')) ?>
         </a><?php endif; ?>
         </div>
       </div>

@@ -22,7 +22,7 @@ $f = $args['f'] ?? array();
           <?php if (!empty($f['heading'])) : ?><div style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: 17px; color: var(--sh-ink); margin-top: 6px;"><?= esc_html($f['heading'] ?? '') ?></div><?php endif; ?>
           <?php if (!empty($f['label_2'])) : ?><div style="font-size: 14.5px; color: var(--sh-ink); margin-top: 8px; line-height: 1.8;"><?= esc_html($f['label_2'] ?? '') ?></div><?php endif; ?>
         </div>
-        <div aria-hidden="true" data-tr-arrow style="display: flex; align-items: center; justify-content: center; color: var(--sh-link); font-size: 20px;">←</div>
+        <div aria-hidden="true" data-tr-arrow style="display: flex; align-items: center; justify-content: center; color: var(--sh-link); font-size: 20px;"><?= esc_html(sh_arrow()) ?></div>
         <div style="border-radius: 16px; padding: 20px; background: rgba(40, 84, 232, 0.06); border: 1px solid rgba(40, 84, 232, 0.3);">
           <?php if (!empty($f['eyebrow_2'])) : ?><div style="font-size: 12.5px; font-weight: 600; color: var(--sh-link);"><?= esc_html($f['eyebrow_2'] ?? '') ?></div><?php endif; ?>
           <?php if (!empty($f['heading_2'])) : ?><div style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: 17px; color: var(--sh-ink); margin-top: 6px;"><?= esc_html($f['heading_2'] ?? '') ?></div><?php endif; ?>

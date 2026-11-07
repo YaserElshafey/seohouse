@@ -28,17 +28,17 @@ $f = $args['f'] ?? array();
       </div>
 
       <div style="animation: 0.7s ease 0.12s 1 normal both running fadeUp;">
-        <svg viewBox="0 0 340 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="مخطط نظام يربط المستخدمين بالعمليات والبيانات والتكاملات" style="width: 100%; height: auto; display: block;">
+        <svg viewBox="0 0 340 300" preserveAspectRatio="xMidYMid meet" role="img" aria-label="<?= esc_attr__('مخطط نظام يربط المستخدمين بالعمليات والبيانات والتكاملات', 'seohouse') ?>" style="width: 100%; height: auto; display: block;">
           <g stroke="rgba(76,172,255,.35)" stroke-width="1.2" fill="none">
             <path d="M170 150 L170 58"></path><path d="M170 150 L64 214"></path><path d="M170 150 L276 214"></path><path d="M170 150 L170 254"></path>
           </g>
           <rect x="110" y="126" width="120" height="48" rx="12" fill="rgba(255,255,255,.12)" stroke="#FFFFFF" stroke-width="1.4"></rect>
-          <text x="170" y="156" text-anchor="middle" font-family="'IBM Plex Sans Arabic',sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">النظام</text>
+          <text x="170" y="156" text-anchor="middle" font-family="'IBM Plex Sans Arabic',sans-serif" font-size="14" font-weight="700" fill="#FFFFFF"><?= esc_html__('النظام', 'seohouse') ?></text>
           <g font-family="'IBM Plex Sans Arabic',sans-serif" font-size="13" fill="#D6DEF0" text-anchor="middle">
-            <rect x="108" y="30" width="124" height="42" rx="11" fill="rgba(255,255,255,.05)" stroke="rgba(76,172,255,.35)" stroke-width="1.1"></rect><text x="170" y="56">المستخدمون</text>
-            <rect x="8" y="192" width="112" height="42" rx="11" fill="rgba(255,255,255,.05)" stroke="rgba(76,172,255,.35)" stroke-width="1.1"></rect><text x="64" y="218">العمليات</text>
-            <rect x="220" y="192" width="112" height="42" rx="11" fill="rgba(255,255,255,.05)" stroke="rgba(76,172,255,.35)" stroke-width="1.1"></rect><text x="276" y="218">البيانات</text>
-            <rect x="108" y="248" width="124" height="42" rx="11" fill="rgba(255,255,255,.05)" stroke="rgba(76,172,255,.35)" stroke-width="1.1"></rect><text x="170" y="274">التكاملات</text>
+            <rect x="108" y="30" width="124" height="42" rx="11" fill="rgba(255,255,255,.05)" stroke="rgba(76,172,255,.35)" stroke-width="1.1"></rect><text x="170" y="56"><?= esc_html__('المستخدمون', 'seohouse') ?></text>
+            <rect x="8" y="192" width="112" height="42" rx="11" fill="rgba(255,255,255,.05)" stroke="rgba(76,172,255,.35)" stroke-width="1.1"></rect><text x="64" y="218"><?= esc_html__('العمليات', 'seohouse') ?></text>
+            <rect x="220" y="192" width="112" height="42" rx="11" fill="rgba(255,255,255,.05)" stroke="rgba(76,172,255,.35)" stroke-width="1.1"></rect><text x="276" y="218"><?= esc_html__('البيانات', 'seohouse') ?></text>
+            <rect x="108" y="248" width="124" height="42" rx="11" fill="rgba(255,255,255,.05)" stroke="rgba(76,172,255,.35)" stroke-width="1.1"></rect><text x="170" y="274"><?= esc_html__('التكاملات', 'seohouse') ?></text>
           </g>
         </svg>
       </div>

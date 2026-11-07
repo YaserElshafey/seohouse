@@ -25,7 +25,7 @@ $tab_off = 'flex: 0 0 auto; min-height: 48px; padding: 0px 20px; border-radius: 
 				<?php if ( ! empty( $f['title'] ) ) : ?><h2 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); margin: 12px 0px 0px; line-height: 1.3;"><?php echo esc_html( $f['title'] ); ?></h2><?php endif; ?>
 			</div>
 			<?php if ( ! empty( $f['all_label'] ) && ! empty( $f['all_link'] ) ) : ?>
-			<a href="<?php echo esc_url( sh_link( $f['all_link'] ) ); ?>" style="font-size: 15px; font-weight: 600;"><?php echo esc_html( $f['all_label'] ); ?> <span aria-hidden="true">←</span></a>
+			<a href="<?php echo esc_url( sh_link( $f['all_link'] ) ); ?>" style="font-size: 15px; font-weight: 600;"><?php echo esc_html( $f['all_label'] ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></a>
 			<?php endif; ?>
 		</div>
 		<?php if ( $cases ) : ?>
@@ -50,7 +50,7 @@ $tab_off = 'flex: 0 0 auto; min-height: 48px; padding: 0px 20px; border-radius: 
 					<?php if ( ! empty( $c['source'] ) ) : ?><span><?php echo esc_html( __( 'المصدر:', 'seohouse' ) . ' ' . $c['source'] ); ?></span><?php endif; ?>
 				</div>
 				<?php if ( $case_url && ! empty( $c['link_label'] ) ) : ?>
-				<a href="<?php echo esc_url( $case_url ); ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 15px; font-weight: 600; color: var(--sh-link); border-bottom: 1px solid rgba(40, 84, 232, 0.45); padding-bottom: 3px;"><?php echo esc_html( $c['link_label'] ); ?> <span aria-hidden="true">←</span></a>
+				<a href="<?php echo esc_url( $case_url ); ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 15px; font-weight: 600; color: var(--sh-link); border-bottom: 1px solid rgba(40, 84, 232, 0.45); padding-bottom: 3px;"><?php echo esc_html( $c['link_label'] ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></a>
 				<?php endif; ?>
 			</div>
 			<?php if ( ! empty( $c['proof'] ) ) : ?>

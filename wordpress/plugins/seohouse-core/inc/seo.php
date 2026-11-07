@@ -56,7 +56,8 @@ function sh_seo_description_for( WP_Post $p ): string {
 			return wp_html_excerpt( $bio, 160, '…' );
 		}
 		$role = sh_core_plain( sh_core_field( 'role', $id, '' ) );
-		return $role ? sprintf( '%s — %s، %s', get_the_title( $p ), $role, sh_core_option( 'sh_company_name', get_bloginfo( 'name' ) ) ) : '';
+		/* translators: 1: member name, 2: role, 3: company name */
+		return $role ? sprintf( __( '%s — %s، %s', 'seohouse-core' ), get_the_title( $p ), $role, sh_core_option( 'sh_company_name', get_bloginfo( 'name' ) ) ) : '';
 	}
 	if ( 'post' === $p->post_type ) {
 		$intro = sh_core_field( 'intro', $id, '' );

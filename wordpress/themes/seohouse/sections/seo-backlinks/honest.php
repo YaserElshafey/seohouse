@@ -17,6 +17,6 @@ $f = $args['f'] ?? array();
           <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><div style="display: flex; gap: 11px; font-size: 15.5px; color: var(--sh-ink);"><span aria-hidden="true" style="flex: 0 0 auto; margin-top: 7px; width: 7px; height: 7px; border-radius: 999px; background: var(--sh-blue);"></span><?php if (!empty($r1['label'])) : ?><span style="text-wrap: pretty;"><?= esc_html($r1['label'] ?? '') ?></span><?php endif; ?></div><?php endforeach; ?>
         </div>
       </div>
-      <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; font-size: 15px; font-weight: 600; border-bottom: 1px solid rgba(40, 84, 232, 0.5); padding-bottom: 3px;"><?= esc_html($f['link_label'] ?? '') ?> <span aria-hidden="true">←</span></a><?php endif; ?>
+      <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; font-size: 15px; font-weight: 600; border-bottom: 1px solid rgba(40, 84, 232, 0.5); padding-bottom: 3px;"><?= esc_html($f['link_label'] ?? '') ?> <span aria-hidden="true"><?= esc_html(sh_arrow()) ?></span></a><?php endif; ?>
     </div>
   </section>

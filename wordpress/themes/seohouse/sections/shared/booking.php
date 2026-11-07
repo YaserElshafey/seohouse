@@ -19,11 +19,11 @@ $title    = ! empty( $f['title'] ) ? $f['title'] : ( $defaults['title'] ?? '' );
 $text     = ! empty( $f['text'] ) ? $f['text'] : ( $defaults['text'] ?? '' );
 $points   = ! empty( $f['points'] ) ? $f['points'] : ( $defaults['points'] ?? array() );
 $services = ! empty( $defaults['services'] ) ? $defaults['services'] : array(
-	array( 'key' => 'seo', 'label' => 'تحسين محركات البحث' ),
-	array( 'key' => 'web', 'label' => 'تصميم وتطوير موقع' ),
-	array( 'key' => 'stores', 'label' => 'تصميم متجر إلكتروني' ),
-	array( 'key' => 'products', 'label' => 'إضافة المنتجات' ),
-	array( 'key' => 'unsure', 'label' => 'لم أحدد بعد' ),
+	array( 'key' => 'seo', 'label' => __( 'تحسين محركات البحث', 'seohouse' ) ),
+	array( 'key' => 'web', 'label' => __( 'تصميم وتطوير موقع', 'seohouse' ) ),
+	array( 'key' => 'stores', 'label' => __( 'تصميم متجر إلكتروني', 'seohouse' ) ),
+	array( 'key' => 'products', 'label' => __( 'إضافة المنتجات', 'seohouse' ) ),
+	array( 'key' => 'unsure', 'label' => __( 'لم أحدد بعد', 'seohouse' ) ),
 );
 $picked   = (string) ( $f['service'] ?? 'seo' );
 $status   = isset( $_GET['sh_lead'] ) ? sanitize_key( wp_unslash( $_GET['sh_lead'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification -- display only.

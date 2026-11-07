@@ -80,10 +80,21 @@ add_action(
 			'SH',
 			array(
 				'rest'     => esc_url_raw( rest_url( 'seohouse/v1/' ) ),
-				'contact'  => esc_url_raw( home_url( '/contact/' ) ),
+				'contact'  => esc_url_raw( sh_page_url( 'contact' ) ? sh_page_url( 'contact' ) : home_url( '/contact/' ) ),
+				'lang'     => sh_lang(),
 				'i18n'     => array(
-					'sending' => __( 'جارٍ الإرسال…', 'seohouse' ),
-					'failed'  => __( 'تعذر إرسال الطلب الآن. حاول مرة أخرى أو تواصل معنا عبر صفحة التواصل.', 'seohouse' ),
+					'sending'    => __( 'جارٍ الإرسال…', 'seohouse' ),
+					'failed'     => __( 'تعذر إرسال الطلب الآن. حاول مرة أخرى أو تواصل معنا عبر صفحة التواصل.', 'seohouse' ),
+					'nameCo'     => __( 'أدخل الاسم واسم الشركة للمتابعة.', 'seohouse' ),
+					'email'      => __( 'أدخل بريدًا إلكترونيًا صحيحًا.', 'seohouse' ),
+					'phone'      => __( 'أدخل رقم هاتف صحيحًا.', 'seohouse' ),
+					'goal'       => __( 'اكتب الهدف أو التحدي الأساسي.', 'seohouse' ),
+					'market'     => __( 'السوق:', 'seohouse' ),
+					'service'    => __( 'الخدمة:', 'seohouse' ),
+					'close'      => __( 'إغلاق', 'seohouse' ),
+					'pick'       => __( 'اختر الخدمة المطلوبة.', 'seohouse' ),
+					'name'       => __( 'اكتب اسمك.', 'seohouse' ),
+					'contact'    => __( 'اكتب رقم جوال أو بريدًا إلكترونيًا صحيحًا.', 'seohouse' ),
 				),
 			)
 		);

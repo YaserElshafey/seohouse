@@ -25,7 +25,7 @@ $f = $args['f'] ?? array();
               <?php if (!empty($r1['heading'])) : ?><span style="display: block; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 18.5px;"><?= esc_html($r1['heading'] ?? '') ?></span><?php endif; ?>
               <?php if (!empty($r1['text'])) : ?><span style="display: block; font-size: 15px; color: var(--sh-ink); margin-top: 7px; max-width: 46em; text-wrap: pretty;"><?= esc_html($r1['text'] ?? '') ?></span><?php endif; ?>
             </span>
-            <span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; color: var(--sh-link);">←</span>
+            <span aria-hidden="true" style="flex: 0 0 auto; margin-top: 6px; color: var(--sh-link);"><?= esc_html(sh_arrow()) ?></span>
           </a><?php endif; ?><?php endforeach; ?>
         
       </div>

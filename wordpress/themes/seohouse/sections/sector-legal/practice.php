@@ -17,7 +17,7 @@ $f = $args['f'] ?? array();
           <div style="display: flex; align-items: center; gap: 10px; font-size: 13.5px; font-weight: 600; color: var(--sh-link);"><span aria-hidden="true" data-sx-ico style="flex: 0 0 auto; width: 30px; height: 30px; border-radius: 9px; background: rgba(40, 84, 232, 0.22); display: inline-flex; align-items: center; justify-content: center;"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#2854E8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 21h14M6 7h12"></path><path d="m6 7-3 7a3 3 0 0 0 6 0zM18 7l-3 7a3 3 0 0 0 6 0z"></path></svg></span><?php if (!empty($f['label'])) : ?><span><?= esc_html($f['label'] ?? '') ?></span><?php endif; ?></div>
         <?php if (!empty($f['title'])) : ?><h2 data-sec-h style="font-family: Alexandria, sans-serif; font-weight: 700; line-height: 1.35;"><?= esc_html($f['title'] ?? '') ?></h2><?php endif; ?>
       </div>
-      <div role="table" aria-label="الفرق بين المقال وصفحة الخدمة" style="margin-top: 22px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(40, 84, 232, 0.2);">
+      <div role="table" aria-label="<?= esc_attr__('الفرق بين المقال وصفحة الخدمة', 'seohouse') ?>" style="margin-top: 22px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(40, 84, 232, 0.2);">
         <div role="row" data-lg-row style="display: grid; background: rgba(40, 84, 232, 0.14);">
           <span role="columnheader"></span>
           <?php if (!empty($f['eyebrow'])) : ?><span role="columnheader" style="padding: 12px 16px; font-size: 13.5px; font-weight: 600; color: var(--sh-link);"><?= esc_html($f['eyebrow'] ?? '') ?></span><?php endif; ?>

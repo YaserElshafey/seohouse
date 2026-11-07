@@ -309,8 +309,8 @@ function sh_schema_website(): array {
 		'@type'      => 'WebSite',
 		'@id'        => sh_schema_id( 'website' ),
 		'url'        => home_url( '/' ),
-		'name'       => sh_core_plain( sh_core_option( 'sh_company_name', get_bloginfo( 'name' ) ) ),
-		'inLanguage' => 'ar',
+		'name'       => sh_core_plain( sh_is_en() ? sh_core_option( 'sh_company_name_en', 'SEO House' ) : sh_core_option( 'sh_company_name', get_bloginfo( 'name' ) ) ),
+		'inLanguage' => sh_lang(),
 		'publisher'  => sh_schema_org_ref(),
 	);
 }
@@ -599,7 +599,7 @@ function sh_schema_case_article( WP_Post $post, string $url, array $org_ref, str
 			'description'      => '' !== $summary ? $summary : $desc,
 			'datePublished'    => get_the_date( 'c', $post ),
 			'dateModified'     => get_the_modified_date( 'c', $post ),
-			'inLanguage'       => 'ar',
+			'inLanguage'       => sh_lang(),
 			'image'            => sh_schema_post_image( $post ),
 			'author'           => $org_ref,
 			'publisher'        => $org_ref,
@@ -681,7 +681,7 @@ function sh_schema_graph(): array {
 		'url'         => $url,
 		'name'        => sh_core_plain( wp_get_document_title() ),
 		'description' => $desc,
-		'inLanguage'  => 'ar',
+		'inLanguage'  => sh_lang(),
 		'isPartOf'    => array( '@id' => sh_schema_id( 'website' ) ),
 	);
 	if ( is_singular() || is_front_page() || is_home() ) {
@@ -774,7 +774,7 @@ function sh_schema_graph(): array {
 				'description'      => $desc,
 				'datePublished'    => get_the_date( 'c', $post ),
 				'dateModified'     => get_the_modified_date( 'c', $post ),
-				'inLanguage'       => 'ar',
+				'inLanguage'       => sh_lang(),
 				'image'            => sh_schema_post_image( $post ),
 				'articleSection'   => $cats ? $cats[0]->name : '',
 				'author'           => $author, // none when the article points to a deleted or hidden profile

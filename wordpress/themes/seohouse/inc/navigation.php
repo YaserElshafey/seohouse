@@ -13,10 +13,10 @@ defined( 'ABSPATH' ) || exit;
 /** Icon paths used in the services mega menu (from the design). */
 function sh_nav_icons(): array {
 	return array(
-		'search' => array( 'label' => 'بحث', 'd' => 'M10 3a7 7 0 1 0 0 14 7 7 0 0 0 0-14M15.5 15.5 21 21' ),
-		'window' => array( 'label' => 'موقع', 'd' => 'M3 5h18v14H3zM3 9.5h18M6.5 7h.01' ),
-		'bag'    => array( 'label' => 'متجر', 'd' => 'M4 8h16l-1.2 11H5.2zM9 8V5.5h6V8' ),
-		'upload' => array( 'label' => 'رفع', 'd' => 'M12 16V6m-3.5 3.5L12 6l3.5 3.5M5 18.5h14' ),
+		'search' => array( 'label' => __( 'بحث', 'seohouse' ), 'd' => 'M10 3a7 7 0 1 0 0 14 7 7 0 0 0 0-14M15.5 15.5 21 21' ),
+		'window' => array( 'label' => __( 'موقع', 'seohouse' ), 'd' => 'M3 5h18v14H3zM3 9.5h18M6.5 7h.01' ),
+		'bag'    => array( 'label' => __( 'متجر', 'seohouse' ), 'd' => 'M4 8h16l-1.2 11H5.2zM9 8V5.5h6V8' ),
+		'upload' => array( 'label' => __( 'رفع', 'seohouse' ), 'd' => 'M12 16V6m-3.5 3.5L12 6l3.5 3.5M5 18.5h14' ),
 	);
 }
 
@@ -120,15 +120,15 @@ function sh_nav_default(): array {
 		return array_merge( array( 'id' => ++$i, 'label' => $label, 'url' => $u( $path ), 'desc' => '', 'icon' => '', 'all_label' => '', 'layout' => '', 'children' => $children ), $extra );
 	};
 	return array(
-		$mk( 'الرئيسية', '/' ),
-		$mk( 'الخدمات', '/services/', array(), array( 'all_label' => 'جميع الخدمات' ) ),
-		$mk( 'نتائج الأعمال', '/results/' ),
-		$mk( 'عن الشركة', '/about/' ),
-		$mk( 'فريق العمل', '/team/' ),
-		$mk( 'القطاعات', '/sectors/' ),
-		$mk( 'المدونة', '/blog/' ),
-		$mk( 'الأسعار', '/pricing/' ),
-		$mk( 'اتصل بنا', '/contact/' ),
+		$mk( __( 'الرئيسية', 'seohouse' ), '/' ),
+		$mk( __( 'الخدمات', 'seohouse' ), '/services/', array(), array( 'all_label' => __( 'جميع الخدمات', 'seohouse' ) ) ),
+		$mk( __( 'نتائج الأعمال', 'seohouse' ), '/results/' ),
+		$mk( __( 'عن الشركة', 'seohouse' ), '/about/' ),
+		$mk( __( 'فريق العمل', 'seohouse' ), '/team/' ),
+		$mk( __( 'القطاعات', 'seohouse' ), '/sectors/' ),
+		$mk( __( 'المدونة', 'seohouse' ), '/blog/' ),
+		$mk( __( 'الأسعار', 'seohouse' ), '/pricing/' ),
+		$mk( __( 'اتصل بنا', 'seohouse' ), '/contact/' ),
 	);
 }
 
@@ -145,8 +145,8 @@ function sh_nav_legal(): array {
 
 /** Header CTA: points to the booking section when the page has one, otherwise to the contact page. */
 function sh_header_cta(): array {
-	$label  = (string) sh_option( 'sh_cta_label', 'احجز استشارة مجانية' );
+	$label  = (string) sh_option( 'sh_cta_label', __( 'احجز استشارة مجانية', 'seohouse' ) );
 	$target = (string) sh_option( 'sh_cta_fallback', '' );
-	$url    = sh_page_has_booking() ? '#booking' : ( $target ? sh_link( $target ) : home_url( '/contact/' ) );
+	$url    = sh_page_has_booking() ? '#booking' : ( $target ? sh_link( $target ) : ( sh_page_url( 'contact' ) ? sh_page_url( 'contact' ) : home_url( '/contact/' ) ) );
 	return array( 'label' => $label, 'url' => $url );
 }

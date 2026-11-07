@@ -50,7 +50,7 @@ $f = $args['f'] ?? array();
           <?php if (!empty($f['label_6'])) : ?><span style="margin-inline-start: auto;"><?= esc_html($f['label_6'] ?? '') ?></span><?php endif; ?>
         </div>
         <?php if (!empty(sh_report_link($f))) : ?><a href="<?= esc_url(sh_report_link($f)) ?>" target="_blank" rel="noopener" style="display: block; border-radius: 10px; overflow: hidden;">
-          <?= sh_image($f['image'] ?? 0, ['style' => 'width: 100%; height: clamp(200px, 20vw, 280px); object-fit: contain; display: block; background: rgb(255, 255, 255);'], 'لوحة سيرش كونسول تظهر 12.9 ألف نقرة خلال 28 يومًا مقابل 825 نقرة في الفترة السابقة') ?>
+          <?= sh_image($f['image'] ?? 0, ['style' => 'width: 100%; height: clamp(200px, 20vw, 280px); object-fit: contain; display: block; background: rgb(255, 255, 255);'], __('لوحة سيرش كونسول تظهر 12.9 ألف نقرة خلال 28 يومًا مقابل 825 نقرة في الفترة السابقة', 'seohouse')) ?>
         </a><?php endif; ?>
       </div>
     </div>

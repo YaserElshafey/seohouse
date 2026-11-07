@@ -21,7 +21,7 @@ if ( ! $links ) {
 			<span style="font-size: 15px; color: var(--sh-text);"><?php echo esc_html( $f['lead'] ); ?></span>
 			<?php endif; ?>
 			<?php foreach ( $links as $l ) : ?>
-			<a href="<?php echo esc_url( sh_link( $l['link'] ) ); ?>" style="font-size: 15px; font-weight: 600;"><?php echo esc_html( $l['label'] ); ?> <span aria-hidden="true">←</span></a>
+			<a href="<?php echo esc_url( sh_link( $l['link'] ) ); ?>" style="font-size: 15px; font-weight: 600;"><?php echo esc_html( $l['label'] ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></a>
 			<?php endforeach; ?>
 		</nav>
 	</div>

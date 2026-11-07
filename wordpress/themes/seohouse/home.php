@@ -56,7 +56,7 @@ $cats    = get_categories( array( 'hide_empty' => true ) );
 					<?php endif; ?>
 				</span>
 				<span data-bl-lead-meta style="display: flex; flex-direction: column; gap: 6px; font-size: 13.5px; color: var(--sh-text); border-inline-start: 1px solid var(--sh-line); padding-inline-start: 22px;">
-					<span><?php echo esc_html( sh_post_date( $lead ) ); ?></span><span><?php esc_html_e( 'بقلم', 'seohouse' ); ?> <b style="font-weight: 600; color: var(--sh-ink);"><?php echo esc_html( $member ? get_the_title( $member ) : sprintf( /* translators: %s: company */ __( 'فريق %s', 'seohouse' ), sh_site_name() ) ); ?></b></span><span style="font-weight: 600; color: var(--sh-link); margin-top: 6px;"><?php esc_html_e( 'اقرأ المقال', 'seohouse' ); ?> ←</span>
+					<span><?php echo esc_html( sh_post_date( $lead ) ); ?></span><span><?php esc_html_e( 'بقلم', 'seohouse' ); ?> <b style="font-weight: 600; color: var(--sh-ink);"><?php echo esc_html( $member ? get_the_title( $member ) : sprintf( /* translators: %s: company */ __( 'فريق %s', 'seohouse' ), sh_site_name() ) ); ?></b></span><span style="font-weight: 600; color: var(--sh-link); margin-top: 6px;"><?php esc_html_e( 'اقرأ المقال', 'seohouse' ); ?> <?php echo esc_html( sh_arrow() ); ?></span>
 				</span>
 			</a>
 					<?php

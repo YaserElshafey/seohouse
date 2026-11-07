@@ -239,6 +239,9 @@ function sh_logo_light_url(): string {
 }
 
 function sh_site_name(): string {
+	if ( sh_is_en() ) {
+		return (string) sh_option( 'sh_company_name_en', 'SEO House' );
+	}
 	return (string) sh_option( 'sh_company_name', get_bloginfo( 'name' ) );
 }
 

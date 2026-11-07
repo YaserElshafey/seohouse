@@ -4,6 +4,8 @@
 	var d = document;
 	var $$ = function (sel, root) { return Array.prototype.slice.call((root || d).querySelectorAll(sel)); };
 	var cfg = window.SH || {};
+	// visitor messages in the page language (inc/enqueue.php); the Arabic text is the fallback
+	function t(k, ar) { return (cfg.i18n && cfg.i18n[k]) || ar; }
 
 	/* ---------------------------------------------------------------- mega menu */
 	var menus = $$('[data-sh-menu]');
@@ -179,6 +181,7 @@
 		var data = new FormData(form);
 		var shown = Number(form.getAttribute('data-shown') || 0);
 		data.set('elapsed', String(shown ? Date.now() - shown : 0));
+		if (cfg.lang) data.set('lang', cfg.lang);
 		if (!form.getAttribute('data-sid')) form.setAttribute('data-sid', (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Date.now()) + '-' + Math.random().toString(36).slice(2));
 		data.set('sid', form.getAttribute('data-sid'));
 		return data;
@@ -208,10 +211,10 @@
 		function optText(n) { var el = form[n]; return el && el.selectedIndex >= 0 ? el.options[el.selectedIndex].text : ''; }
 		form.addEventListener('submit', function (e) {
 			e.preventDefault();
-			if (!val('name') || !val('company')) return showErr('أدخل الاسم واسم الشركة للمتابعة.');
-			if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val('email'))) return showErr('أدخل بريدًا إلكترونيًا صحيحًا.');
-			if (!isPhone(val('phone'))) return showErr('أدخل رقم هاتف صحيحًا.');
-			if (!val('goal')) return showErr('اكتب الهدف أو التحدي الأساسي.');
+			if (!val('name') || !val('company')) return showErr(t('nameCo', 'أدخل الاسم واسم الشركة للمتابعة.'));
+			if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val('email'))) return showErr(t('email', 'أدخل بريدًا إلكترونيًا صحيحًا.'));
+			if (!isPhone(val('phone'))) return showErr(t('phone', 'أدخل رقم هاتف صحيحًا.'));
+			if (!val('goal')) return showErr(t('goal', 'اكتب الهدف أو التحدي الأساسي.'));
 			if (form.getAttribute('aria-busy') === 'true') return;
 			leadBusy(form, true);
 			fetch((cfg.rest || '/wp-json/seohouse/v1/') + 'lead', { method: 'POST', body: leadData(form), credentials: 'same-origin', cache: 'no-store' })
@@ -221,7 +224,7 @@
 					if (!res.ok || !res.j || !res.j.ok) return showErr((res.j && res.j.message) || (cfg.i18n && cfg.i18n.failed));
 					form.removeAttribute('data-sid');
 					var sum = box.querySelector('[data-ct-summary]');
-					if (sum) sum.textContent = 'السوق: ' + optText('market') + ' · الخدمة: ' + optText('service');
+					if (sum) sum.textContent = t('market', 'السوق:') + ' ' + optText('market') + ' · ' + t('service', 'الخدمة:') + ' ' + optText('service');
 					form.hidden = true; sent.hidden = false;
 					var t = sent.querySelector('[data-ct-sent-title]'); if (t) t.focus();
 					if (window.dataLayer) window.dataLayer.push({ event: 'sh_lead_submitted', sh_source: 'contact', sh_service: val('service') });
@@ -241,7 +244,9 @@
 		if (!grid) return;
 		var cards = $$(':scope > [data-rev]', grid);
 		var n = cards.length, start = 0;
-		var dots = $$('button[aria-label^="التقييم "]', sec).filter(function (b) { return !/السابق|التالي/.test(b.getAttribute('aria-label')); });
+		// buttons are told apart by their labels, in Arabic or English
+		var PREV = /السابق|previous/i, NEXT = /التالي|next/i;
+		var dots = $$('button[aria-label]', sec).filter(function (b) { var l = b.getAttribute('aria-label'); return /^(التقييم|review) /i.test(l) && !PREV.test(l) && !NEXT.test(l); });
 		var onDot = dots[0] ? dots[0].getAttribute('style') : '', offDot = dots[1] ? dots[1].getAttribute('style') : '';
 		function show(k) {
 			start = (k + n) % n;
@@ -250,14 +255,14 @@
 		}
 		$$('button', sec).forEach(function (b) {
 			var l = b.getAttribute('aria-label') || '';
-			if (/السابق/.test(l)) b.addEventListener('click', function () { show(start - 1); });
-			else if (/التالي/.test(l)) b.addEventListener('click', function () { show(start + 1); });
+			if (PREV.test(l)) b.addEventListener('click', function () { show(start - 1); });
+			else if (NEXT.test(l)) b.addEventListener('click', function () { show(start + 1); });
 		});
 		dots.forEach(function (d, i) { d.addEventListener('click', function () { show(i % n); }); });
 		// swipe on touch screens
 		var x0 = null;
 		grid.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
-		grid.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) show(start + (dx > 0 ? 1 : -1)); x0 = null; });
+		grid.addEventListener('touchend', function (e) { if (x0 === null) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) show(start + ((dx > 0) === (getComputedStyle(grid).direction === 'rtl') ? 1 : -1)); x0 = null; });
 	});
 
 	/* ---------------------------------------------------------------- list filters (results index) */
@@ -279,7 +284,8 @@
 			e.preventDefault();
 			var box = d.createElement('div');
 			box.className = 'sh-lightbox'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true');
-			box.innerHTML = '<button type="button" aria-label="إغلاق">✕</button><img alt="">';
+			box.innerHTML = '<button type="button">✕</button><img alt="">';
+			box.querySelector('button').setAttribute('aria-label', t('close', 'إغلاق'));
 			box.querySelector('img').src = a.getAttribute('href');
 			box.querySelector('img').alt = a.getAttribute('data-alt') || '';
 			box.addEventListener('click', function (ev) { if (ev.target === box || ev.target.tagName === 'BUTTON') { box.remove(); a.focus(); } });
@@ -307,15 +313,15 @@
 		form.addEventListener('submit', function (e) {
 			e.preventDefault();
 			var name = form.name.value.trim(), email = form.email ? form.email.value.trim() : '';
-			if (!svc.value) return showErr('اختر الخدمة المطلوبة.');
-			if (!name) { form.name.focus(); return showErr('اكتب اسمك.'); }
+			if (!svc.value) return showErr(t('pick', 'اختر الخدمة المطلوبة.'));
+			if (!name) { form.name.focus(); return showErr(t('name', 'اكتب اسمك.')); }
 			if (!form.email && form.contact) {
 				// markup of a page cached before 2.7.2 (single «contact» field): accepted as before
 				var c = form.contact.value.trim();
-				if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c) && !isPhone(c)) return showErr('اكتب رقم جوال أو بريدًا إلكترونيًا صحيحًا.');
+				if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c) && !isPhone(c)) return showErr(t('contact', 'اكتب رقم جوال أو بريدًا إلكترونيًا صحيحًا.'));
 			} else {
-				if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { form.email.focus(); return showErr('أدخل بريدًا إلكترونيًا صحيحًا.'); }
-				if (!isPhone(form.phone.value)) { form.phone.focus(); return showErr('أدخل رقم هاتف صحيحًا.'); }
+				if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { form.email.focus(); return showErr(t('email', 'أدخل بريدًا إلكترونيًا صحيحًا.')); }
+				if (!isPhone(form.phone.value)) { form.phone.focus(); return showErr(t('phone', 'أدخل رقم هاتف صحيحًا.')); }
 			}
 			if (form.getAttribute('aria-busy') === 'true') return;
 			leadBusy(form, true);

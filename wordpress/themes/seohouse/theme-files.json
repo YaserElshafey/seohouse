@@ -1,7 +1,7 @@
 {
  "theme": "seohouse",
- "version": "2.7.15",
- "count": 363,
+ "version": "2.8.0",
+ "count": 365,
  "files": [
   {
    "path": "404.php",
@@ -20,18 +20,18 @@
   },
   {
    "path": "functions.php",
-   "size": 1033,
-   "sha1": "50a70e740c42cbcc17885acd8e899132dde73e1c"
+   "size": 1072,
+   "sha1": "1fb0501e56900982933ef307087b05bd5a5f6385"
   },
   {
    "path": "header.php",
-   "size": 863,
-   "sha1": "858b8a0e03fa72b9c7844e119072cb6671560334"
+   "size": 895,
+   "sha1": "78f25d75158d08cfda070f8350d6d2e19f363619"
   },
   {
    "path": "home.php",
-   "size": 5997,
-   "sha1": "74012987ec59b90436215375fd89eef6ca8f20ab"
+   "size": 6031,
+   "sha1": "3a9ff931d0e42e7b1ab11f1fa449dfe96ace6817"
   },
   {
    "path": "index.php",
@@ -55,23 +55,23 @@
   },
   {
    "path": "single-case_study.php",
-   "size": 17178,
-   "sha1": "da48a5584d70c6e8e63c1fdb9219dbc40af431bd"
+   "size": 17246,
+   "sha1": "9584e660ed8e4285702b779bb48fa719d6fe0401"
   },
   {
    "path": "single-team_member.php",
-   "size": 8611,
-   "sha1": "dd86bd9119ec7f1235fdca99ea406a0d6985accb"
+   "size": 8679,
+   "sha1": "8b4a92b6e04ce0c44e6cd9598f4551ab0f248955"
   },
   {
    "path": "single.php",
-   "size": 10733,
-   "sha1": "64c3d680cb46c88c03599c23a143053af8a185c8"
+   "size": 10767,
+   "sha1": "6587e5b0303f9c0f52bb7a662f6bc5b72878414f"
   },
   {
    "path": "style.css",
-   "size": 546,
-   "sha1": "e3b223a8ea283b4899cfc083eec36cb2d927d162"
+   "size": 545,
+   "sha1": "bac74f271748b3579ab72a43fa1aface02ad95c5"
   },
   {
    "path": "theme.json",
@@ -95,8 +95,8 @@
   },
   {
    "path": "assets/css/theme.css",
-   "size": 29776,
-   "sha1": "81c3f0488f87523e6b05171ff142cc269667832c"
+   "size": 30170,
+   "sha1": "255ac0d538a0afa4fdd7a74f67061bf17e94b587"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -220,8 +220,8 @@
   },
   {
    "path": "assets/css/pages/sector-tourism.css",
-   "size": 7175,
-   "sha1": "ed9b49b199350190f31c39d93d550a26706794ff"
+   "size": 7232,
+   "sha1": "9319dfbc77703730cbaa75f9b2a7192c5feb41aa"
   },
   {
    "path": "assets/css/pages/sectors.css",
@@ -425,8 +425,8 @@
   },
   {
    "path": "assets/js/site.js",
-   "size": 20094,
-   "sha1": "114e8c33cd7e1d849eed68cb9741c6c65639a224"
+   "size": 20696,
+   "sha1": "4b47e7a5ab94f224d3bfa8655fe0a281ecdad30a"
   },
   {
    "path": "assets/platforms/ga4.svg",
@@ -530,8 +530,8 @@
   },
   {
    "path": "inc/breadcrumbs.php",
-   "size": 1176,
-   "sha1": "67a1d53ed4bfcd1fe5e48c70cb7a3118de0e8e98"
+   "size": 1253,
+   "sha1": "b68744d7e4b714503746563751c1e483b99cbe95"
   },
   {
    "path": "inc/dependencies.php",
@@ -540,23 +540,28 @@
   },
   {
    "path": "inc/dynamic.php",
-   "size": 7481,
-   "sha1": "41966a77956cc74346532f5befdcabd0650210ed"
+   "size": 7595,
+   "sha1": "9811112c04eb014b16981e9b6ea48ede8e468d4f"
   },
   {
    "path": "inc/enqueue.php",
-   "size": 7049,
-   "sha1": "6ac4c5c616d9baf49412cee15835ec2792330583"
+   "size": 7942,
+   "sha1": "7a513dd060208ac2fbd8f5d4cc032a66366f3c99"
   },
   {
    "path": "inc/helpers.php",
-   "size": 24653,
-   "sha1": "048e3a6fbc07d3f0296be065df59c143ed7a5c6b"
+   "size": 24743,
+   "sha1": "a7d2156dc1e56c8df1b40169c9571bfd6721b10d"
+  },
+  {
+   "path": "inc/i18n.php",
+   "size": 2533,
+   "sha1": "b3b60e717736dab6c47d4572959d21ebce656680"
   },
   {
    "path": "inc/navigation.php",
-   "size": 5532,
-   "sha1": "38d9188144b471406740bbbeff7a262f167c0a95"
+   "size": 5860,
+   "sha1": "12907158bfd0b9d3ca333d757cc41322995f750e"
   },
   {
    "path": "inc/release-files.php",
@@ -570,8 +575,8 @@
   },
   {
    "path": "inc/seo-hreflang.php",
-   "size": 2766,
-   "sha1": "7d70e47e2d4a783f141e25d89b1a6bd3090abc60"
+   "size": 4234,
+   "sha1": "90b47879401f4569957a892631d1726861d78094"
   },
   {
    "path": "inc/setup.php",
@@ -582,6 +587,11 @@
    "path": "inc/generated/icons.php",
    "size": 50895,
    "sha1": "8143d0491f5a8acaa583c397e02356b9e7eb1158"
+  },
+  {
+   "path": "languages/en_US.l10n.php",
+   "size": 13629,
+   "sha1": "4cecfb61aca9cea336ed9ffca8c807a0417596ff"
   },
   {
    "path": "page-templates/about.php",
@@ -780,8 +790,8 @@
   },
   {
    "path": "parts/drawer.php",
-   "size": 3232,
-   "sha1": "abeb46507e86d6ea62d749e55227c172ea652395"
+   "size": 3537,
+   "sha1": "9cd82ca9eeabc48e424cb806e8cad00b744911d1"
   },
   {
    "path": "parts/legal-document.php",
@@ -795,43 +805,43 @@
   },
   {
    "path": "parts/seo-other-markets.php",
-   "size": 2048,
-   "sha1": "70783282037e3ea88fec8b74c2291c9506ee1c2a"
+   "size": 2199,
+   "sha1": "cb7af5b587405edd918ef4eeb055767aa37448da"
   },
   {
    "path": "parts/site-footer.php",
-   "size": 3960,
-   "sha1": "ace73e50f2511e874a2067a91600836cfc9deb64"
+   "size": 3994,
+   "sha1": "a2229a9ee1a47d7913d4961ba6c6bcac836e22e4"
   },
   {
    "path": "parts/site-header.php",
-   "size": 7036,
-   "sha1": "6f9be297df3cffb33fd757649e0594e86ddd1e13"
+   "size": 7391,
+   "sha1": "6df39179a20d0ada759dd87eae2c50822e1d9c25"
   },
   {
    "path": "parts/blog/empty.php",
-   "size": 786,
-   "sha1": "24038775168903f008c1b2b17e7b4e5ca711ddf0"
+   "size": 820,
+   "sha1": "a2cf3b20b69b6030350ea953d2b801b578560e68"
   },
   {
    "path": "parts/blog/rows.php",
-   "size": 3228,
-   "sha1": "8d2b35f4ea14206a741c5c5e1bdb9a90a5865506"
+   "size": 3338,
+   "sha1": "b5a56ba42dad7fad1f51091edb0fe893851c999d"
   },
   {
    "path": "parts/dynamic/case-filters.php",
-   "size": 1190,
-   "sha1": "4d6d3360f1bc0a7ca6e652e4916d6748b8b8d42f"
+   "size": 1334,
+   "sha1": "15e684669422490a948fc71a745252a16df49f75"
   },
   {
    "path": "parts/dynamic/case-list.php",
-   "size": 2915,
-   "sha1": "f5fbcbf0b2521b2575d16dc65ff6be8400c6e0ee"
+   "size": 2949,
+   "sha1": "e59555c8c5680e9285edf397622de36d965f9560"
   },
   {
    "path": "parts/dynamic/posts-home.php",
-   "size": 4406,
-   "sha1": "602df426f54ef62617a2c67dabd310e062cec23c"
+   "size": 4474,
+   "sha1": "a5ebb78d79a0724eaa6efe09f841b184addb2d1e"
   },
   {
    "path": "parts/dynamic/team-columns.php",
@@ -840,8 +850,8 @@
   },
   {
    "path": "parts/dynamic/team-directory.php",
-   "size": 3162,
-   "sha1": "4d22e81add0926e09ee7fcd1bf85f86e71d0f7a1"
+   "size": 3261,
+   "sha1": "b86d7b3a541ddddfbf47e6249d5eda6141c36a8b"
   },
   {
    "path": "parts/dynamic/team-track.php",
@@ -860,13 +870,13 @@
   },
   {
    "path": "sections/about/nopromise.php",
-   "size": 2710,
-   "sha1": "99016377ab5cf343cc57f88957e49deb1704b79b"
+   "size": 2734,
+   "sha1": "eb06bece4c68db6aa4d12beb48d67f67096eee43"
   },
   {
    "path": "sections/about/now.php",
-   "size": 2532,
-   "sha1": "c1de3c177b3d39637f50280419c2e5a5dc601ca3"
+   "size": 2556,
+   "sha1": "6476b46a7b5c3b2db6201df8f58d99b8b767f05b"
   },
   {
    "path": "sections/about/principles.php",
@@ -875,8 +885,8 @@
   },
   {
    "path": "sections/contact/flow.php",
-   "size": 11182,
-   "sha1": "d301145cf5958e2e31e1022d88c7b2d6d7c32e31"
+   "size": 11257,
+   "sha1": "90c22e4cdb3d8a5fb7a21243aa28c295d71bfbc6"
   },
   {
    "path": "sections/contact/hero.php",
@@ -890,13 +900,13 @@
   },
   {
    "path": "sections/home/about.php",
-   "size": 2456,
-   "sha1": "738b8cfd2fdc415f1e2e364f83d105d3fda2e39a"
+   "size": 2480,
+   "sha1": "41757c29168135dcac4afa05f5bf7729c2f6e8c0"
   },
   {
    "path": "sections/home/articles.php",
-   "size": 1667,
-   "sha1": "8a3d9e3bca0d63a1a5df3ebd1ea60d87bdadeb78"
+   "size": 1691,
+   "sha1": "4fa3a0854083aa49784abfcf3b7c379d3da67348"
   },
   {
    "path": "sections/home/client_logos.php",
@@ -905,8 +915,8 @@
   },
   {
    "path": "sections/home/hero.php",
-   "size": 6009,
-   "sha1": "8756e5957efd597e1751d82d280b1fe0d8de5bc9"
+   "size": 6057,
+   "sha1": "f78f96aa1724a6c0d07cb09f268f1da210c9fa96"
   },
   {
    "path": "sections/home/markets.php",
@@ -925,13 +935,13 @@
   },
   {
    "path": "sections/home/reviews.php",
-   "size": 4881,
-   "sha1": "d390855c34c5e3756395c77652089c7fcd53874f"
+   "size": 5341,
+   "sha1": "21c569dcf2e0281b9edce5fc202d439f8b99182a"
   },
   {
    "path": "sections/home/sectors.php",
-   "size": 3538,
-   "sha1": "74032e6d3ec0b192d1b994c88ca51ccfdae867dd"
+   "size": 3562,
+   "sha1": "9decf586855130ee22d72494c5b6c7e5a0dd366f"
   },
   {
    "path": "sections/home/services.php",
@@ -955,8 +965,8 @@
   },
   {
    "path": "sections/pricing/groups.php",
-   "size": 2010,
-   "sha1": "2ac17e8f7d2ba936fb687708d16bd46b27b96941"
+   "size": 2034,
+   "sha1": "47501c9a2dfa0ea25e15fe5a37ec4d8d7b82992e"
   },
   {
    "path": "sections/pricing/hero.php",
@@ -985,13 +995,13 @@
   },
   {
    "path": "sections/products/hero.php",
-   "size": 6747,
-   "sha1": "1d5e936f2422740ec304a0b7ddc8af7212730ddf"
+   "size": 6846,
+   "sha1": "bb5e4599c3a6bcc2931f01dbb36177cebb7579ba"
   },
   {
    "path": "sections/products/platforms.php",
-   "size": 5089,
-   "sha1": "0081a75b6aa2f043b1f33922fb42d924b86bd90f"
+   "size": 5122,
+   "sha1": "7d2a35935c204666db0969adab0c3d53376718a7"
   },
   {
    "path": "sections/products/process.php",
@@ -1000,8 +1010,8 @@
   },
   {
    "path": "sections/results/cases.php",
-   "size": 1187,
-   "sha1": "5df87357174fc005067b45be6083dbf652566885"
+   "size": 1220,
+   "sha1": "4c0739560ac534155a26913f76e95fea814fdd2e"
   },
   {
    "path": "sections/results/hero.php",
@@ -1010,8 +1020,8 @@
   },
   {
    "path": "sections/sector-ecommerce/case.php",
-   "size": 3819,
-   "sha1": "aa2cd7e1e2d08d2e6b8944eeec5430e1126bc5a4"
+   "size": 3835,
+   "sha1": "6b517aa9014af7d2a96896806d4623296bdacbc6"
   },
   {
    "path": "sections/sector-ecommerce/hero.php",
@@ -1060,13 +1070,13 @@
   },
   {
    "path": "sections/sector-education/sector_journey.php",
-   "size": 6832,
-   "sha1": "3efdcf6401c0a674944f06f8b53f3d5cd88c7eb6"
+   "size": 6856,
+   "sha1": "3e84128fdcc2ca591529153815f78128f6fe36da"
   },
   {
    "path": "sections/sector-food/branch.php",
-   "size": 3350,
-   "sha1": "5585ced2c2cb5006224ce11210fe625249202eec"
+   "size": 3383,
+   "sha1": "0af5adba52cbd67f9bdba70370ddce722572a9a5"
   },
   {
    "path": "sections/sector-food/hero.php",
@@ -1090,8 +1100,8 @@
   },
   {
    "path": "sections/sector-health/case.php",
-   "size": 5766,
-   "sha1": "8ce8f24e2ae71102c3458aad7c895886446711e5"
+   "size": 5782,
+   "sha1": "11d9a5be89e992043b3bbf95d034899fe87091ba"
   },
   {
    "path": "sections/sector-health/hero.php",
@@ -1130,8 +1140,8 @@
   },
   {
    "path": "sections/sector-legal/practice.php",
-   "size": 3617,
-   "sha1": "a671116d6e51a19cb2d9de5bace578c2fcfef3ed"
+   "size": 3650,
+   "sha1": "194be193110450abf409a74b0af24e56e04e5234"
   },
   {
    "path": "sections/sector-legal/sector_journey.php",
@@ -1145,8 +1155,8 @@
   },
   {
    "path": "sections/sector-real-estate/lifecycle.php",
-   "size": 3182,
-   "sha1": "26853d9113854acf958673c503aaa31c833b8003"
+   "size": 3215,
+   "sha1": "577bfe942fe1a178202342a18ad7ad8c95b36d3f"
   },
   {
    "path": "sections/sector-real-estate/measure.php",
@@ -1160,8 +1170,8 @@
   },
   {
    "path": "sections/sector-real-estate/structure.php",
-   "size": 3354,
-   "sha1": "d2c9908131eab38f78779fe8012522eb7440b246"
+   "size": 3387,
+   "sha1": "bbfddb5cde5fd33182d46cb098c77903288dd694"
   },
   {
    "path": "sections/sector-tech/hero.php",
@@ -1190,8 +1200,8 @@
   },
   {
    "path": "sections/sector-tourism/choose.php",
-   "size": 3592,
-   "sha1": "bff016b56e2d2332264d8a0fbdbf8fb077c3d66d"
+   "size": 3616,
+   "sha1": "ebdc7e63283b2e4deadb5c5d52561ee137cc9f3a"
   },
   {
    "path": "sections/sector-tourism/hero.php",
@@ -1220,13 +1230,13 @@
   },
   {
    "path": "sections/sectors/list.php",
-   "size": 3462,
-   "sha1": "ec8682026b076f4f21b679f65ab7007b9d651891"
+   "size": 3510,
+   "sha1": "a2a74a92654a029c76e1f9784982c7e123f80d92"
   },
   {
    "path": "sections/sectors/pick.php",
-   "size": 2891,
-   "sha1": "276ba1e8bbcc15fe4c17ed1d6faacecd13951d4d"
+   "size": 2915,
+   "sha1": "5ba3d0d327a8e273cc7c48392db4ee524614e0e3"
   },
   {
    "path": "sections/seo/client_logos.php",
@@ -1255,23 +1265,23 @@
   },
   {
    "path": "sections/seo/process.php",
-   "size": 9984,
-   "sha1": "96d4d4edd9c3721f184b76cb6a9257efbb311878"
+   "size": 10018,
+   "sha1": "1741f60c896285fdee1360eed545875e79ee6fe7"
   },
   {
    "path": "sections/seo/results.php",
-   "size": 6728,
-   "sha1": "0c7bb2710427ac147606b168679a041f855d381d"
+   "size": 6796,
+   "sha1": "6b7604a7546272a2f74730bf8248834084286415"
   },
   {
    "path": "sections/seo/reviews.php",
-   "size": 4733,
-   "sha1": "e78b3c673c788913208c89ac1c24c9bfe7148077"
+   "size": 5193,
+   "sha1": "8cc1d1dc7183b7adf77c923e22e2862ca9b8aa35"
   },
   {
    "path": "sections/seo/sectors.php",
-   "size": 3064,
-   "sha1": "eff011f575e61182a88c9d817aa11bdc44814907"
+   "size": 3088,
+   "sha1": "dd0ce330b6038349ee259b02deea4d1e8e0f04bf"
   },
   {
    "path": "sections/seo/seo_system.php",
@@ -1300,8 +1310,8 @@
   },
   {
    "path": "sections/seo-backlinks/honest.php",
-   "size": 1949,
-   "sha1": "6aef27c97f3c2ec71ea64320eb4158f6c3f17696"
+   "size": 1973,
+   "sha1": "e702662ae9a7e72fac33e3d50be6168ed41046e5"
   },
   {
    "path": "sections/seo-backlinks/quality.php",
@@ -1310,13 +1320,13 @@
   },
   {
    "path": "sections/seo-consulting/chain.php",
-   "size": 3574,
-   "sha1": "f55fd9957846212a228de1cf12b3c9da1c0f2f71"
+   "size": 3598,
+   "sha1": "e1aa81eb752f76ad1dfbc44d8c57fe908e74a79a"
   },
   {
    "path": "sections/seo-consulting/deliver.php",
-   "size": 2112,
-   "sha1": "db3f847d06adccd44d412557e33badf8987c085f"
+   "size": 2136,
+   "sha1": "e512dd4511b7de16f0877a752bbe8e9398482747"
   },
   {
    "path": "sections/seo-consulting/hero.php",
@@ -1345,8 +1355,8 @@
   },
   {
    "path": "sections/seo-content/proof.php",
-   "size": 2020,
-   "sha1": "51aafbeecb15364d5d39e2fa8daeceb100770904"
+   "size": 2044,
+   "sha1": "ed5b1bf68b8f448087941db13b2ff79649b6c44f"
   },
   {
    "path": "sections/seo-content/types.php",
@@ -1360,8 +1370,8 @@
   },
   {
    "path": "sections/seo-egypt/egypt_case.php",
-   "size": 3776,
-   "sha1": "4583f52f80d414a29ab25c34faa3ece72682fc9b"
+   "size": 3825,
+   "sha1": "7d68b47b709cbbe45f0167486193dbfedf402809"
   },
   {
    "path": "sections/seo-egypt/first_month.php",
@@ -1370,18 +1380,18 @@
   },
   {
    "path": "sections/seo-egypt/hero.php",
-   "size": 6479,
-   "sha1": "50e19d72ba12daa1b242fc8525adb20326efc8db"
+   "size": 6512,
+   "sha1": "db1ed734d96da1a53a6127d948feac6c3aa58a21"
   },
   {
    "path": "sections/seo-egypt/market.php",
-   "size": 4330,
-   "sha1": "1956e4f73a1a6c9a7891b452f8915cdd76875fc3"
+   "size": 4354,
+   "sha1": "350f1ec861c67ab29940f4b514ff264151653bac"
   },
   {
    "path": "sections/seo-egypt/method.php",
-   "size": 6028,
-   "sha1": "7b06b5a5d16cd0f17f7b32d180c1c0d50557659b"
+   "size": 6052,
+   "sha1": "ef92589282b97c0a2636faadf90500c0b1af8576"
   },
   {
    "path": "sections/seo-egypt/reviews.php",
@@ -1390,13 +1400,13 @@
   },
   {
    "path": "sections/seo-egypt/scope.php",
-   "size": 2714,
-   "sha1": "82ba0bb518de7cb5fbed168dab48edfcbf45eefe"
+   "size": 2738,
+   "sha1": "fc56477ae1274f60c75381de2380983619a3f6dd"
   },
   {
    "path": "sections/seo-egypt/sectors.php",
-   "size": 7072,
-   "sha1": "15d1cd7dcb42d40598672cff33a207124be8721d"
+   "size": 7208,
+   "sha1": "2779b0036692422538193672cbbddb5da1e0ad0e"
   },
   {
    "path": "sections/seo-egypt/why.php",
@@ -1415,8 +1425,8 @@
   },
   {
    "path": "sections/seo-ksa/hero.php",
-   "size": 6702,
-   "sha1": "a37f8bda171a0dff33d73f3a2d6e1d94f148a2de"
+   "size": 6783,
+   "sha1": "eaf7680484790ff9ebff7639d80bc4bf313e3971"
   },
   {
    "path": "sections/seo-ksa/market.php",
@@ -1425,23 +1435,23 @@
   },
   {
    "path": "sections/seo-ksa/reviews.php",
-   "size": 4380,
-   "sha1": "df95e251f8811bedb8282921efc058b86f65eb4a"
+   "size": 4755,
+   "sha1": "d933be06016cce930a66e88de5dd983f0a47492a"
   },
   {
    "path": "sections/seo-ksa/saudi_case.php",
-   "size": 4084,
-   "sha1": "91cf1fa4133f055105c36a0ae3d111cff47ba77b"
+   "size": 4133,
+   "sha1": "d615caeeff406d5131eda934fd20e12adc0c36fd"
   },
   {
    "path": "sections/seo-ksa/scope.php",
-   "size": 3212,
-   "sha1": "b6ece2cfefce893c344db418e6f4b67d436f9843"
+   "size": 3260,
+   "sha1": "76b9255bcab7ad2bb1dd580ab55c9d15ac33a6aa"
   },
   {
    "path": "sections/seo-ksa/sectors.php",
-   "size": 3008,
-   "sha1": "7cb540f820af65d636720fc5231698caa6c977e8"
+   "size": 3032,
+   "sha1": "8ee1134a78e3d258091c6ce1a4656b1ef3931b89"
   },
   {
    "path": "sections/seo-ksa/why.php",
@@ -1450,13 +1460,13 @@
   },
   {
    "path": "sections/seo-on-page/deliverables.php",
-   "size": 2121,
-   "sha1": "5fa757595d70812810b65b72eec94b4437243f33"
+   "size": 2145,
+   "sha1": "7494f2ac80fea81587bf700fa6221cf22847b385"
   },
   {
    "path": "sections/seo-on-page/flow.php",
-   "size": 4667,
-   "sha1": "320a3088bd6f9596dc0f43842bbcd5d085b56d87"
+   "size": 4739,
+   "sha1": "e62bc458ba32f6eabf5f94426fd6eb3852b371fe"
   },
   {
    "path": "sections/seo-on-page/hero.php",
@@ -1480,8 +1490,8 @@
   },
   {
    "path": "sections/seo-technical/levels.php",
-   "size": 2770,
-   "sha1": "f4f35c896722a5a88a6a4122f293a36f853a7db4"
+   "size": 2794,
+   "sha1": "33087bc5d0acc435cc3af97f92ed404f8dd7ccd0"
   },
   {
    "path": "sections/seo-technical/scope.php",
@@ -1505,13 +1515,13 @@
   },
   {
    "path": "sections/seo-uae/gulf_case.php",
-   "size": 3977,
-   "sha1": "392d79de2240418a065ac966af0557416c33cc57"
+   "size": 4026,
+   "sha1": "2604c68aa9ad13fc054dac1bf963ece3d24aea29"
   },
   {
    "path": "sections/seo-uae/hero.php",
-   "size": 9491,
-   "sha1": "147392224a15bed3cb8e715763b2f4ab97fca2c0"
+   "size": 9605,
+   "sha1": "d6c0f4542c55d24db315b10858028d0416f23767"
   },
   {
    "path": "sections/seo-uae/market.php",
@@ -1525,13 +1535,13 @@
   },
   {
    "path": "sections/seo-uae/needs.php",
-   "size": 2395,
-   "sha1": "d78018441a6ee04d9aa1796fbfc5ea512d794496"
+   "size": 2419,
+   "sha1": "4ed253401d708d2f2eeabb1a465634b8a7079d4b"
   },
   {
    "path": "sections/seo-uae/opportunities.php",
-   "size": 6238,
-   "sha1": "cb4fa105129be7970127ae2aefc039bcac26d821"
+   "size": 6272,
+   "sha1": "d2b443e82d5b1c6465519f9555738169b4416b09"
   },
   {
    "path": "sections/seo-uae/reviews.php",
@@ -1540,8 +1550,8 @@
   },
   {
    "path": "sections/seo-uae/sectors.php",
-   "size": 2912,
-   "sha1": "377adadd794288cb1cf2a9d996a470c035208734"
+   "size": 2936,
+   "sha1": "7ee06b49e7999c43adbf99288b3c4666ead50bb5"
   },
   {
    "path": "sections/seo-uae/why.php",
@@ -1550,18 +1560,18 @@
   },
   {
    "path": "sections/services/families.php",
-   "size": 7400,
-   "sha1": "17856818504235475f71dc49f0f57c7f91dc5729"
+   "size": 7544,
+   "sha1": "7b8539b6f4811d41b63a56886667a46ecd2bb30d"
   },
   {
    "path": "sections/services/hero.php",
-   "size": 6507,
-   "sha1": "dffa25416eafcd4a3a9b871365e61337e72e365d"
+   "size": 6588,
+   "sha1": "3fe9d90d6d36da4bd1bce7d5279011a5fa2549c4"
   },
   {
    "path": "sections/services/path.php",
-   "size": 2809,
-   "sha1": "856d53450816ff01612702b6c02af6d0121a64f7"
+   "size": 2833,
+   "sha1": "c7e1cb3c5c585f5419f270b9fdabf4be2e3dbbae"
   },
   {
    "path": "sections/services/sectors.php",
@@ -1570,8 +1580,8 @@
   },
   {
    "path": "sections/shared/booking.php",
-   "size": 8585,
-   "sha1": "963191e02335601c49de5020101cef12b4a43509"
+   "size": 8675,
+   "sha1": "e6ad89cf3cce8b1cafac3260794dddff9603b9f5"
   },
   {
    "path": "sections/shared/faq.php",
@@ -1580,8 +1590,8 @@
   },
   {
    "path": "sections/shared/related.php",
-   "size": 1261,
-   "sha1": "cd47e60a32cf886b4a9ce1d67cfd7e1e7ccfcd43"
+   "size": 1295,
+   "sha1": "565e766563d63fe56a2b22c4d565d8a24da1c5b1"
   },
   {
    "path": "sections/stores/hero.php",
@@ -1605,13 +1615,13 @@
   },
   {
    "path": "sections/stores-salla/hero.php",
-   "size": 5323,
-   "sha1": "4df560362b89ea864198ec4667cb4c3078d0595d"
+   "size": 5339,
+   "sha1": "3b93d7a164114a3a95beb2318ed0abd22aed3d3c"
   },
   {
    "path": "sections/stores-salla/limits.php",
-   "size": 2329,
-   "sha1": "4559127b4abf47f0595ed9dd51dbc5138d950b84"
+   "size": 2353,
+   "sha1": "7352f1f739d4576209d45f1f8426083486669d34"
   },
   {
    "path": "sections/stores-salla/phases.php",
@@ -1635,13 +1645,13 @@
   },
   {
    "path": "sections/stores-shopify/care.php",
-   "size": 2099,
-   "sha1": "e7fe2180e16e2cc7cf9f75d374dda41c795fba11"
+   "size": 2123,
+   "sha1": "ecc828d8fd8bbda0a747e9e7f6fc4ca28c2bdda0"
   },
   {
    "path": "sections/stores-shopify/hero.php",
-   "size": 5407,
-   "sha1": "5262de1f2e558635de4bd99078c4c10844ef9579"
+   "size": 5423,
+   "sha1": "7486f4047e12de946ffef6d23f6bdf59be1a3b78"
   },
   {
    "path": "sections/stores-woocommerce/build.php",
@@ -1650,13 +1660,13 @@
   },
   {
    "path": "sections/stores-woocommerce/fit.php",
-   "size": 2101,
-   "sha1": "9cb0a346d7f45ed52356c68912de6946d0665147"
+   "size": 2125,
+   "sha1": "85f214625ffb2525b9e57f99ddee9bfd6dfc95c7"
   },
   {
    "path": "sections/stores-woocommerce/hero.php",
-   "size": 5029,
-   "sha1": "e053ef810324034076527ca84f5e81df3ad7358e"
+   "size": 5045,
+   "sha1": "c64a1dbf17448493dc636aeca59ab1fb7bce4ed8"
   },
   {
    "path": "sections/stores-woocommerce/phases.php",
@@ -1665,8 +1675,8 @@
   },
   {
    "path": "sections/stores-zid/fit.php",
-   "size": 2093,
-   "sha1": "e8573a6c1b15195a07cccb64e53d496e76e4d9ff"
+   "size": 2117,
+   "sha1": "10aeb02de8b1bf8e7582dccf5080cf038c0f085d"
   },
   {
    "path": "sections/stores-zid/hero.php",
@@ -1680,8 +1690,8 @@
   },
   {
    "path": "sections/stores-zid/phases.php",
-   "size": 2945,
-   "sha1": "aa92158067c3ad0b05cdde9ce058551bbd4aa39b"
+   "size": 2969,
+   "sha1": "295cbeaf696068d894024308e7ac3a1bfe06a3a0"
   },
   {
    "path": "sections/team/collab.php",
@@ -1720,8 +1730,8 @@
   },
   {
    "path": "sections/web-custom-dev/cases.php",
-   "size": 2253,
-   "sha1": "fb341cd077b6217e7d88704787af3a686163b7f0"
+   "size": 2277,
+   "sha1": "05ad2931693af008e102da6e6342795a7125f6b9"
   },
   {
    "path": "sections/web-custom-dev/fit.php",
@@ -1730,8 +1740,8 @@
   },
   {
    "path": "sections/web-custom-dev/hero.php",
-   "size": 5009,
-   "sha1": "1991f4a1fd61618df87c5d2b0c6f920b8a5042e5"
+   "size": 5207,
+   "sha1": "ce90fe61bbb07d1dc77e76b1c863dc4e11efba1f"
   },
   {
    "path": "sections/web-custom-dev/phases.php",
@@ -1760,8 +1770,8 @@
   },
   {
    "path": "sections/web-react-next/deliver.php",
-   "size": 2108,
-   "sha1": "2a5e3d8c6c0a6aee61b8feafa6415f4cf9d49395"
+   "size": 2132,
+   "sha1": "543feb79414a21525178c185bb5d1e3f26fab8f0"
   },
   {
    "path": "sections/web-react-next/hero.php",
@@ -1785,13 +1795,13 @@
   },
   {
    "path": "sections/web-webflow/care.php",
-   "size": 2099,
-   "sha1": "cd90fffed812f7b714be77f5373f96ec346790ab"
+   "size": 2123,
+   "sha1": "00328fa68ed62ece6b4715863215c2af015442f4"
   },
   {
    "path": "sections/web-webflow/hero.php",
-   "size": 5626,
-   "sha1": "b32a53f01262118d395689bd032e27f98cf23913"
+   "size": 5642,
+   "sha1": "73562d791fc7ef3b8ad5fc17f708c29255315c0d"
   },
   {
    "path": "sections/web-webflow/launch.php",
@@ -1800,13 +1810,13 @@
   },
   {
    "path": "sections/web-wordpress/fit.php",
-   "size": 3072,
-   "sha1": "8cd4c2e4811d4103ffef972ccb7a62c102adb509"
+   "size": 3096,
+   "sha1": "cc2bb2b271d961cb4bf3fdd6ea2a82ef0b42b817"
   },
   {
    "path": "sections/web-wordpress/hero.php",
-   "size": 5654,
-   "sha1": "ad0595de3b28ed22db0c9fae5840600eb3a51846"
+   "size": 5670,
+   "sha1": "77e32316bd816bd43099d71c78ee4822c31b38bb"
   },
   {
    "path": "sections/web-wordpress/ops.php",

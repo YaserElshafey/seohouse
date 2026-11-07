@@ -137,7 +137,7 @@ while ( have_posts() ) :
 					<div style="margin-top: 8px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px;">
 						<?php if ( '' !== ( $m['before'] ?? '' ) ) : ?>
 						<span style="display: inline; font-size: 15px; color: rgb(255, 255, 255);"><bdi><?php echo esc_html( $m['before'] . ( $m['unit'] ? ' ' . $m['unit'] : '' ) ); ?></bdi></span>
-						<span aria-hidden="true" style="display: inline; color: rgb(255, 255, 255);">←</span>
+						<span aria-hidden="true" style="display: inline; color: rgb(255, 255, 255);"><?php echo esc_html( sh_arrow() ); ?></span>
 						<?php endif; ?>
 						<?php if ( '' !== ( $m['after'] ?? '' ) ) : ?>
 						<span style="font-family: Alexandria, sans-serif; font-weight: 800; font-size: clamp(24px, 2.4vw, 30px); color: rgb(255, 255, 255);"><bdi><?php echo esc_html( $m['after'] . ( $m['unit'] ? ' ' . $m['unit'] : '' ) ); ?></bdi></span>
@@ -206,7 +206,7 @@ while ( have_posts() ) :
 			<div style="min-width: 0px;">
 				<?php if ( $g( 'service_page' ) ) : ?>
 				<div style="font-size: 13px; color: var(--sh-text);"><?php echo esc_html( $g( 'cta_title' ) ? $g( 'cta_title' ) : __( 'الخدمة المرتبطة', 'seohouse' ) ); ?></div>
-				<a class="sh-hv-link" href="<?php echo esc_url( sh_link( $g( 'service_page' ) ) ); ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 19px; color: var(--sh-ink);"><?php echo esc_html( $g( 'service_label' ) ? $g( 'service_label' ) : get_the_title( url_to_postid( sh_link( $g( 'service_page' ) ) ) ) ); ?> <span aria-hidden="true" style="color: var(--sh-link);">←</span></a>
+				<a class="sh-hv-link" href="<?php echo esc_url( sh_link( $g( 'service_page' ) ) ); ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 19px; color: var(--sh-ink);"><?php echo esc_html( $g( 'service_label' ) ? $g( 'service_label' ) : get_the_title( url_to_postid( sh_link( $g( 'service_page' ) ) ) ) ); ?> <span aria-hidden="true" style="color: var(--sh-link);"><?php echo esc_html( sh_arrow() ); ?></span></a>
 				<?php endif; ?>
 				<?php if ( $g( 'cta_text' ) ) : ?>
 				<p style="margin: 8px 0 0; color: var(--sh-text); font-size: 15px;"><?php echo esc_html( $g( 'cta_text' ) ); ?></p>

@@ -28,7 +28,7 @@ $intro  = $intro ? $intro : get_the_excerpt( $lead );
 	<?php endif; ?>
 	<span style="position: relative; margin-top: auto; padding-top: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-size: 13px; color: rgb(255, 255, 255);">
 		<span style="white-space: nowrap;"><?php echo esc_html( $member ? get_the_title( $member ) : __( 'فريق سيو هاوس', 'seohouse' ) ); ?></span><span aria-hidden="true" style="width: 4px; height: 4px; border-radius: 999px; background: rgba(255, 255, 255, 0.5);"></span><span style="white-space: nowrap;"><?php echo esc_html( sh_post_date( $lead ) ); ?></span><span aria-hidden="true" style="width: 4px; height: 4px; border-radius: 999px; background: rgba(255, 255, 255, 0.5);"></span><span style="white-space: nowrap;"><?php echo esc_html( sh_reading_label( sh_reading_minutes( $lead ) ) ); ?></span>
-		<span style="margin-inline-start: auto; font-weight: 700; color: rgb(255, 255, 255);"><?php esc_html_e( 'اقرأ المقال', 'seohouse' ); ?> <span aria-hidden="true">←</span></span>
+		<span style="margin-inline-start: auto; font-weight: 700; color: rgb(255, 255, 255);"><?php esc_html_e( 'اقرأ المقال', 'seohouse' ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></span>
 	</span>
 </a>
 <?php if ( $articles ) : ?>
@@ -40,7 +40,7 @@ $intro  = $intro ? $intro : get_the_excerpt( $lead );
 	<a href="<?php echo esc_url( get_permalink( $p ) ); ?>" data-hcard data-blog-row class="sh-hv-row" style="display: flex; flex-direction: column; gap: 8px; flex: 1 1 0px; background: rgb(255, 255, 255); border-radius: 16px; padding: 18px 20px; box-shadow: rgba(37, 43, 51, 0.06) 0px 0px 0px 1px; color: var(--sh-ink); transition: box-shadow 0.2s, color 0.2s;">
 		<?php if ( $c ) : ?><span style="font-size: 12.5px; font-weight: 600; color: var(--sh-link);"><?php echo esc_html( $c->name ); ?></span><?php endif; ?>
 		<span style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 16.5px; line-height: 1.55;"><?php echo esc_html( get_the_title( $p ) ); ?></span>
-		<span style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 12.5px; color: var(--sh-text);"><span><?php echo esc_html( sh_post_date( $p ) ); ?></span><span aria-hidden="true" style="color: var(--sh-link); font-weight: 700;">←</span></span>
+		<span style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 12.5px; color: var(--sh-text);"><span><?php echo esc_html( sh_post_date( $p ) ); ?></span><span aria-hidden="true" style="color: var(--sh-link); font-weight: 700;"><?php echo esc_html( sh_arrow() ); ?></span></span>
 	</a>
 	<?php endforeach; ?>
 </div>

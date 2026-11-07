@@ -15,7 +15,7 @@ $f = $args['f'] ?? array();
         <?php if (!empty($f['eyebrow'])) : ?><div style="font-size: 13px; font-weight: 600; color: var(--sh-link);"><?= esc_html($f['eyebrow'] ?? '') ?></div><?php endif; ?>
         <?php if (!empty($f['title'])) : ?><h2 data-h2 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); margin: 10px 0px 0px; line-height: 1.3;"><?= esc_html($f['title'] ?? '') ?></h2><?php endif; ?>
         <?php if (!empty($f['text'])) : ?><p style="font-size: 17px; color: var(--sh-text); margin: 16px 0px 0px; max-width: 38em; text-wrap: pretty;"><?= esc_html($f['text'] ?? '') ?></p><?php endif; ?>
-        <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-size: 14.5px; font-weight: 600; border-bottom: 1px solid var(--sh-line); padding-bottom: 3px;"><?= esc_html($f['link_label'] ?? '') ?> <span>←</span></a><?php endif; ?>
+        <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-size: 14.5px; font-weight: 600; border-bottom: 1px solid var(--sh-line); padding-bottom: 3px;"><?= esc_html($f['link_label'] ?? '') ?> <span><?= esc_html(sh_arrow()) ?></span></a><?php endif; ?>
       </div>
       <div style="display: flex; flex-direction: column; gap: 2px;">
         

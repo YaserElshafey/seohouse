@@ -318,6 +318,7 @@ add_action(
 				'methods'             => 'POST',
 				'permission_callback' => '__return_true', // public form; protected by honeypot, timing and rate limit.
 				'callback'            => static function ( WP_REST_Request $r ) {
+					sh_i18n_locale_for( $r->get_params() );
 					$res = sh_lead_handle( $r->get_params() );
 					unset( $res['id'] );
 					return new WP_REST_Response( $res, $res['ok'] ? 200 : 422 );
@@ -331,6 +332,7 @@ add_action(
 				'methods'             => 'POST',
 				'permission_callback' => '__return_true', // the random request reference is the key; Calendly's API confirms the booking.
 				'callback'            => static function ( WP_REST_Request $r ) {
+					sh_i18n_locale_for( $r->get_params() );
 					$res = sh_lead_booking_report( $r->get_params() );
 					return new WP_REST_Response( $res, $res['ok'] ? 200 : 422 );
 				},
@@ -341,6 +343,7 @@ add_action(
 
 /** No-JS fallback. */
 $sh_lead_post = static function () {
+	sh_i18n_locale_for( wp_unslash( $_POST ) ); // phpcs:ignore WordPress.Security.NonceVerification
 	$res  = sh_lead_handle( wp_unslash( $_POST ) ); // phpcs:ignore WordPress.Security.NonceVerification -- public form, see spam checks.
 	$back = wp_get_referer() ? wp_get_referer() : home_url( '/' );
 	$back = remove_query_arg( 'sh_lead', $back );

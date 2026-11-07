@@ -16,7 +16,7 @@ $f = $args['f'] ?? array();
           <?php if (!empty($f['eyebrow'])) : ?><div style="font-size: 13px; font-weight: 600; color: var(--sh-link);"><?= esc_html($f['eyebrow'] ?? '') ?></div><?php endif; ?>
           <?php if (!empty($f['title'])) : ?><h2 data-h2 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); margin: 10px 0px 0px; line-height: 1.3;"><?= esc_html($f['title'] ?? '') ?></h2><?php endif; ?>
         </div>
-        <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" style="font-size: 15px; font-weight: 600; color: var(--sh-link); display: inline-flex; align-items: center; gap: 8px; min-height: 44px;"><?= esc_html($f['link_label'] ?? '') ?> <span aria-hidden="true">←</span></a><?php endif; ?>
+        <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" style="font-size: 15px; font-weight: 600; color: var(--sh-link); display: inline-flex; align-items: center; gap: 8px; min-height: 44px;"><?= esc_html($f['link_label'] ?? '') ?> <span aria-hidden="true"><?= esc_html(sh_arrow()) ?></span></a><?php endif; ?>
       </div>
       <div data-grid="blog2" style="margin-top: 20px; display: grid; gap: 16px; align-items: stretch;"><?php get_template_part( 'parts/dynamic/posts-home', null, array(  ) ); ?></div>
     </div>

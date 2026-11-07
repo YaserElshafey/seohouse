@@ -31,7 +31,7 @@ $f = $args['f'] ?? array();
         </div>
       </div>
 
-      <div role="img" aria-label="مخطط يوضح انتقال الباحث من عبارة البحث إلى الصفحة المناسبة ثم طلب الخدمة" style="position: relative; display: flex; flex-direction: column; gap: 12px; animation: 0.7s ease 0.12s 1 normal both running fadeUp;">
+      <div role="img" aria-label="<?= esc_attr__('مخطط يوضح انتقال الباحث من عبارة البحث إلى الصفحة المناسبة ثم طلب الخدمة', 'seohouse') ?>" style="position: relative; display: flex; flex-direction: column; gap: 12px; animation: 0.7s ease 0.12s 1 normal both running fadeUp;">
         <div style="background: rgb(11, 20, 56); border-radius: 16px; padding: 14px 16px; display: flex; align-items: center; gap: 12px; box-shadow: rgba(0, 0, 0, 0.9) 0px 20px 44px -32px;">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#8494B5" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
           <?php if (!empty($f['text_2'])) : ?><span style="font-size: 16px; color: rgb(255, 255, 255);"><?= esc_html($f['text_2'] ?? '') ?></span><?php endif; ?>

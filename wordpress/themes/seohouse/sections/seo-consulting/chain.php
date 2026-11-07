@@ -22,7 +22,7 @@ $f = $args['f'] ?? array();
           <span style="font-family: Alexandria, sans-serif; font-weight: 800; font-size: 12.5px; color: var(--sh-link);"><?= esc_html(sprintf('%02d', $i1 + 1)) ?></span>
           <?php if (!empty($r1['heading'])) : ?><h3 style="margin: 10px 0px 0px; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 17.5px;"><?= esc_html($r1['heading'] ?? '') ?></h3><?php endif; ?>
           <?php if (!empty($r1['text'])) : ?><p style="margin: 6px 0px 0px; font-size: 15px; line-height: 1.8; color: var(--sh-ink);"><?= esc_html($r1['text'] ?? '') ?></p><?php endif; ?>
-          <span aria-hidden="true" data-cn-arrow style="position: absolute; top: 50%; inset-inline-end: -12px; transform: translateY(-50%); width: 10px; color: var(--sh-link); font-size: 14px;">←</span>
+          <span aria-hidden="true" data-cn-arrow style="position: absolute; top: 50%; inset-inline-end: -12px; transform: translateY(-50%); width: 10px; color: var(--sh-link); font-size: 14px;"><?= esc_html(sh_arrow()) ?></span>
         </li><?php endforeach; ?>
         <li style="position: relative; border-radius: 16px; background: var(--sh-surface); box-shadow: rgba(40, 84, 232, 0.18) 0px 0px 0px 1px inset; padding: 18px 18px 20px;">
           <?php if (!empty($f['eyebrow_2'])) : ?><span style="font-family: Alexandria, sans-serif; font-weight: 800; font-size: 12.5px; color: var(--sh-link);"><?= esc_html($f['eyebrow_2'] ?? '') ?></span><?php endif; ?>

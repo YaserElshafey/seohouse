@@ -22,7 +22,7 @@ $chip    = 'font-size: 14px; color: var(--sh-ink); background: var(--sh-surface)
 				<?php if ( ! empty( $f['title'] ) ) : ?><h2 data-sec-h style="font-family: Alexandria, sans-serif; font-weight: 700; line-height: 1.28;"><?php echo esc_html( $f['title'] ); ?></h2><?php endif; ?>
 			</div>
 			<?php if ( ! empty( $f['all_link'] ) && ! empty( $f['all_label'] ) ) : ?>
-			<a href="<?php echo esc_url( sh_link( $f['all_link'] ) ); ?>" style="font-size: 15px; font-weight: 600;"><?php echo esc_html( $f['all_label'] ); ?> <span aria-hidden="true">←</span></a>
+			<a href="<?php echo esc_url( sh_link( $f['all_link'] ) ); ?>" style="font-size: 15px; font-weight: 600;"><?php echo esc_html( $f['all_label'] ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></a>
 			<?php endif; ?>
 		</div>
 		<?php if ( $sectors ) : ?>
@@ -34,7 +34,7 @@ $chip    = 'font-size: 14px; color: var(--sh-ink); background: var(--sh-surface)
 					?>
 				<button type="button" role="tab" id="<?php echo esc_attr( "$uid-t$i" ); ?>" aria-controls="<?php echo esc_attr( "$uid-p$i" ); ?>" aria-selected="<?php echo $on ? 'true' : 'false'; ?>" tabindex="<?php echo $on ? '0' : '-1'; ?>" data-sh-tab<?php echo sh_tab_style( $on, 'text-align: start; cursor: pointer; background: none; border-width: 1px 0px 0px; border-style: solid none none; border-color: var(--sh-line); display: flex; align-items: center; gap: 14px; padding: 16px 4px; color: rgb(33, 72, 216); transition: color 0.25s, padding 0.25s; padding-inline-start: 10px;', 'text-align: start; cursor: pointer; background: none; border-width: 1px 0px 0px; border-style: solid none none; border-color: var(--sh-line); display: flex; align-items: center; gap: 14px; padding: 16px 4px; color: rgb(37, 43, 51); transition: color 0.25s, padding 0.25s; padding-inline-start: 4px;' ); // phpcs:ignore ?>>
 					<span style="flex: 1 1 auto; font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(17px, 1.7vw, 20px);"><?php echo esc_html( $x['label'] ); ?></span>
-					<span aria-hidden="true"<?php echo sh_tab_style( $on, 'flex: 0 0 auto; color: var(--sh-link);', 'flex: 0 0 auto; color: var(--sh-link);' ); // phpcs:ignore ?>>←</span>
+					<span aria-hidden="true"<?php echo sh_tab_style( $on, 'flex: 0 0 auto; color: var(--sh-link);', 'flex: 0 0 auto; color: var(--sh-link);' ); // phpcs:ignore ?>><?php echo esc_html( sh_arrow() ); ?></span>
 				</button>
 				<?php endforeach; ?>
 			</div>
@@ -51,7 +51,7 @@ $chip    = 'font-size: 14px; color: var(--sh-ink); background: var(--sh-surface)
 				</div>
 				<?php endif; ?>
 				<?php if ( ! empty( $x['link'] ) && ! empty( $f['link_label'] ) ) : ?>
-				<a href="<?php echo esc_url( sh_link( $x['link'] ) ); ?>" style="margin-top: auto; align-self: flex-start; font-size: 15px; font-weight: 600; color: var(--sh-link); border-bottom: 1px solid rgba(40, 84, 232, 0.45); padding-bottom: 3px;"><?php echo esc_html( $f['link_label'] ); ?> <span aria-hidden="true">←</span></a>
+				<a href="<?php echo esc_url( sh_link( $x['link'] ) ); ?>" style="margin-top: auto; align-self: flex-start; font-size: 15px; font-weight: 600; color: var(--sh-link); border-bottom: 1px solid rgba(40, 84, 232, 0.45); padding-bottom: 3px;"><?php echo esc_html( $f['link_label'] ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></a>
 				<?php endif; ?>
 			</div>
 			<?php endforeach; ?>
@@ -71,7 +71,7 @@ $chip    = 'font-size: 14px; color: var(--sh-ink); background: var(--sh-surface)
 						<?php endforeach; ?>
 					</div>
 					<?php if ( ! empty( $x['link'] ) && ! empty( $f['link_label'] ) ) : ?>
-					<a href="<?php echo esc_url( sh_link( $x['link'] ) ); ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 14.5px; font-weight: 600;"><?php echo esc_html( $f['link_label'] ); ?> <span aria-hidden="true">←</span></a>
+					<a href="<?php echo esc_url( sh_link( $x['link'] ) ); ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-size: 14.5px; font-weight: 600;"><?php echo esc_html( $f['link_label'] ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></a>
 					<?php endif; ?>
 				</div>
 			</div>

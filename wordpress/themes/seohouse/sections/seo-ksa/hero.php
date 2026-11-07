@@ -26,7 +26,7 @@ $f = $args['f'] ?? array();
         </div>
       </div>
 
-      <div data-journey dir="ltr" role="img" aria-label="خريطة السعودية بحدودها الحقيقية، وعليها مسار يوضح انتقال الباحث من نية البحث إلى الصفحة المناسبة ثم الزيارة المؤهلة والاستفسار" style="animation: 0.7s ease 0.12s 1 normal both running fadeUp;">
+      <div data-journey dir="ltr" role="img" aria-label="<?= esc_attr__('خريطة السعودية بحدودها الحقيقية، وعليها مسار يوضح انتقال الباحث من نية البحث إلى الصفحة المناسبة ثم الزيارة المؤهلة والاستفسار', 'seohouse') ?>" style="animation: 0.7s ease 0.12s 1 normal both running fadeUp;">
         <svg viewBox="0 0 640 540" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="position: absolute; inset: 0px; width: 100%; height: 100%;">
           <defs>
             <linearGradient id="ksaEdge" x1="0" y1="0" x2="1" y2="1">
@@ -58,8 +58,8 @@ $f = $args['f'] ?? array();
           </g>
 
         </svg>
-        <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><?php $vt_880e92b1 = ['v1' => ['left: 28.38%; bottom: 77.63%;'], 'v2' => ['left: 58.95%; bottom: 69.69%;'], 'v3' => ['left: 51.97%; bottom: 43.57%;']]; $vk_880e92b1 = $vt_880e92b1[$r1['variant'] ?? 'v1'] ?? $vt_880e92b1['v1']; ?><div data-jlabel dir="rtl" style="<?= esc_attr($vk_880e92b1[0] ?? '') ?>"><i></i><?= esc_html($r1['label'] ?? '') ?></div><?php endforeach; ?>
-        <div data-jlabel data-final="true" dir="rtl" style="left: 42.36%; top: 81.09%;"><i></i><?= esc_html($f['label'] ?? '') ?></div>
+        <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><?php $vt_880e92b1 = ['v1' => ['left: 28.38%; bottom: 77.63%;'], 'v2' => ['left: 58.95%; bottom: 69.69%;'], 'v3' => ['left: 51.97%; bottom: 43.57%;']]; $vk_880e92b1 = $vt_880e92b1[$r1['variant'] ?? 'v1'] ?? $vt_880e92b1['v1']; ?><div data-jlabel dir="<?= esc_attr( sh_dir() ) ?>" style="<?= esc_attr($vk_880e92b1[0] ?? '') ?>"><i></i><?= esc_html($r1['label'] ?? '') ?></div><?php endforeach; ?>
+        <div data-jlabel data-final="true" dir="<?= esc_attr( sh_dir() ) ?>" style="left: 42.36%; top: 81.09%;"><i></i><?= esc_html($f['label'] ?? '') ?></div>
       </div>
     </div>
   </section>

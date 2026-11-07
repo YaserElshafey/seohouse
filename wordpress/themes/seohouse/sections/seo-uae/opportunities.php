@@ -40,7 +40,7 @@ $rows = static function ( $o ) use ( $f ) {
 				<button type="button" role="tab" id="<?php echo esc_attr( "$uid-t$i" ); ?>" aria-controls="<?php echo esc_attr( "$uid-p$i" ); ?>" aria-selected="<?php echo $on ? 'true' : 'false'; ?>" tabindex="<?php echo $on ? '0' : '-1'; ?>" data-sh-tab<?php echo sh_tab_style( $on, sprintf( $base, 'rgb(40, 84, 232)', 'rgba(40, 84, 232, 0.07)', 'var(--sh-ink)' ), sprintf( $base, 'transparent', 'transparent', 'rgb(37, 43, 51)' ) ); // phpcs:ignore ?>>
 					<span<?php echo sh_tab_style( $on, 'flex: 0 0 auto; font-family: Alexandria, sans-serif; font-weight: 800; font-size: 12.5px; color: rgb(33, 72, 216);', 'flex: 0 0 auto; font-family: Alexandria, sans-serif; font-weight: 800; font-size: 12.5px; color: rgb(33, 72, 216);' ); // phpcs:ignore ?>><?php echo esc_html( $o['num'] ?? '' ); ?></span>
 					<span style="flex: 1 1 auto; min-width: 0px; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 16.5px;"><?php echo esc_html( $o['label'] ); ?></span>
-					<span aria-hidden="true"<?php echo sh_tab_style( $on, 'flex: 0 0 auto; color: var(--sh-link);', 'flex: 0 0 auto; color: var(--sh-link);' ); // phpcs:ignore ?>>←</span>
+					<span aria-hidden="true"<?php echo sh_tab_style( $on, 'flex: 0 0 auto; color: var(--sh-link);', 'flex: 0 0 auto; color: var(--sh-link);' ); // phpcs:ignore ?>><?php echo esc_html( sh_arrow() ); ?></span>
 				</button>
 				<?php endforeach; ?>
 			</div>

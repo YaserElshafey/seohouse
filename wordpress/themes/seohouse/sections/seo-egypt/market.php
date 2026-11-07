@@ -34,7 +34,7 @@ $f = $args['f'] ?? array();
                   <?php $r2_list = $r1['items'] ?? []; $i2_n = is_array($r2_list) ? count($r2_list) : 0; foreach ((array) $r2_list as $i2 => $r2) : ?><span style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--sh-ink); background: var(--sh-surface); border: 1px solid rgba(40, 84, 232, 0.28); border-radius: 999px; padding: 8px 14px;"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#8494B5" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg><?= esc_html($r2['label'] ?? '') ?></span><?php endforeach; ?>
                 
               </div>
-              <div style="display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 13.5px; font-weight: 600; color: rgb(255, 255, 255); background: var(--sh-blue); border-radius: 10px; padding: 7px 12px;"><span aria-hidden="true">←</span><?= esc_html($r1['eyebrow'] ?? '') ?></div>
+              <div style="display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 13.5px; font-weight: 600; color: rgb(255, 255, 255); background: var(--sh-blue); border-radius: 10px; padding: 7px 12px;"><span aria-hidden="true"><?= esc_html(sh_arrow()) ?></span><?= esc_html($r1['eyebrow'] ?? '') ?></div>
               <?php if (!empty($r1['text'])) : ?><p style="font-size: 15px; color: var(--sh-ink); margin: 12px 0px 0px; max-width: 26em; text-wrap: pretty;"><?= esc_html($r1['text'] ?? '') ?></p><?php endif; ?>
             </div><?php endforeach; ?>
           

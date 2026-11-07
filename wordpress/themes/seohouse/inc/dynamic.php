@@ -168,12 +168,13 @@ function sh_reading_minutes( $post = null ): int {
 /** "9 دقائق قراءة" with Arabic number agreement. */
 function sh_reading_label( int $m ): string {
 	if ( 1 === $m ) {
-		return 'دقيقة قراءة';
+		return __( 'دقيقة قراءة', 'seohouse' );
 	}
 	if ( 2 === $m ) {
-		return 'دقيقتان قراءة';
+		return __( 'دقيقتان قراءة', 'seohouse' );
 	}
-	return $m . ( $m <= 10 ? ' دقائق قراءة' : ' دقيقة قراءة' );
+	/* translators: %d: minutes */
+	return sprintf( $m <= 10 ? __( '%d دقائق قراءة', 'seohouse' ) : __( '%d دقيقة قراءة', 'seohouse' ), $m );
 }
 
 function sh_post_date( $post = null, string $which = 'published' ): string {

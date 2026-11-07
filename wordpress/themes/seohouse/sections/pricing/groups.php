@@ -20,7 +20,7 @@ $f = $args['f'] ?? array();
       <div data-pr-four style="margin-top: 22px; display: grid; gap: 14px;">
         <?php $r1_list = $f['items'] ?? []; $i1_n = is_array($r1_list) ? count($r1_list) : 0; foreach ((array) $r1_list as $i1 => $r1) : ?><?php if (!empty(sh_link($r1['link'] ?? ''))) : ?><a data-hcard href="<?= esc_url(sh_link($r1['link'] ?? '')) ?>" style="display: flex; align-items: center; justify-content: space-between; gap: 12px; border-radius: 14px; background: var(--sh-surface); padding: 18px 20px; color: var(--sh-ink);">
           <?php if (!empty($r1['heading'])) : ?><span style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: 16.5px;"><?= esc_html($r1['heading'] ?? '') ?></span><?php endif; ?>
-          <span aria-hidden="true" style="color: var(--sh-link);">←</span>
+          <span aria-hidden="true" style="color: var(--sh-link);"><?= esc_html(sh_arrow()) ?></span>
         </a><?php endif; ?><?php endforeach; ?>
       </div>
     </div>

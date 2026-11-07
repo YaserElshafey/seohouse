@@ -24,7 +24,7 @@ $f = $args['f'] ?? array();
         <?php if (!empty($f['text'])) : ?><p data-hero-lead style="font-size: 17.5px; line-height: 1.85; color: rgb(255, 255, 255); margin: 16px 0px 0px; text-wrap: pretty;"><?= esc_html($f['text'] ?? '') ?></p><?php endif; ?>
         <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px 20px; margin-top: 28px;">
           <?php if (!empty($f['link_label'])) : ?><a href="#booking" data-hero-cta style="background: rgb(255, 255, 255); color: rgb(33, 72, 216); font-weight: 700; font-size: 16.5px; min-height: 56px; display: inline-flex; align-items: center; justify-content: center; padding: 0px 28px; border-radius: 14px; box-shadow: rgba(10, 20, 80, 0.55) 0px 10px 24px -14px;"><?= esc_html($f['link_label'] ?? '') ?></a><?php endif; ?>
-          <a href="#results" data-hero-sec style="min-height: 56px; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: rgb(255, 255, 255); padding: 0px 22px; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.55); background: rgba(255, 255, 255, 0.06); text-decoration: none;"><?php if (!empty($f['link_label_2'])) : ?><span data-hs-txt><?= esc_html($f['link_label_2'] ?? '') ?></span><?php endif; ?> <span aria-hidden="true">←</span></a>
+          <a href="#results" data-hero-sec style="min-height: 56px; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: rgb(255, 255, 255); padding: 0px 22px; border-radius: 14px; border: 1px solid rgba(255, 255, 255, 0.55); background: rgba(255, 255, 255, 0.06); text-decoration: none;"><?php if (!empty($f['link_label_2'])) : ?><span data-hs-txt><?= esc_html($f['link_label_2'] ?? '') ?></span><?php endif; ?> <span aria-hidden="true"><?= esc_html(sh_arrow()) ?></span></a>
         </div>
 
       </div>
@@ -41,7 +41,7 @@ $f = $args['f'] ?? array();
         </div>
 
         <div data-team-link style="display: flex; justify-content: flex-start; align-items: center; gap: 12px; margin-top: 16px;">
-          <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 600; color: rgb(255, 255, 255); border-bottom: 1px solid rgba(255, 255, 255, 0.5); padding-bottom: 2px;"><?= esc_html($f['link_label_3'] ?? '') ?> <span>←</span></a><?php endif; ?>
+          <?php if (!empty(sh_link($f['link'] ?? ''))) : ?><a href="<?= esc_url(sh_link($f['link'] ?? '')) ?>" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14.5px; font-weight: 600; color: rgb(255, 255, 255); border-bottom: 1px solid rgba(255, 255, 255, 0.5); padding-bottom: 2px;"><?= esc_html($f['link_label_3'] ?? '') ?> <span><?= esc_html(sh_arrow()) ?></span></a><?php endif; ?>
         </div>
 
       </div>

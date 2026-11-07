@@ -318,3 +318,8 @@ footer[data-foot-blue] a:focus-visible { outline: 2px solid #fff !important; out
 /* keyboard focus ring on the blue fields: white (the homepage's site-wide ring is blue) */
 :is([data-mkt-blue], [data-hero-blue], [data-blue-field], footer[data-foot-blue]) { --sh-focus: #fff; }
 @media (prefers-reduced-motion: reduce) { [data-lcard-arrow] { transition: none; } }
+
+/* English (LTR): the header keeps the Arabic arrangement — logo on the left, booking button on the right —
+   which is also the usual English one. Arabic (RTL) is untouched. */
+[dir="ltr"] [data-sh-bar] { flex-direction: row-reverse; }
+[dir="ltr"] [data-sh-bar] > a[aria-label]:last-child { margin-inline-start: 0 !important; margin-inline-end: auto; } /* beats the inline auto margin */

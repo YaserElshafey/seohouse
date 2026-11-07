@@ -43,7 +43,7 @@ $chev  = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="cu
 					?>
 			<div data-sh-menu style="position: relative;">
 				<button type="button" id="sh-btn-<?php echo esc_attr( $n['id'] ); ?>" aria-expanded="false" aria-controls="<?php echo esc_attr( $panel_id ); ?>" class="sh-hv-nav" style="display: flex; align-items: center; gap: 6px; background: none; border: 0px; cursor: pointer; padding: 10px; font-size: 14.5px; font-weight: 500; white-space: nowrap; color: <?php echo esc_attr( $color ); ?>; border-radius: 10px; transition: color 0.2s, background 0.2s;"><?php echo esc_html( $n['label'] ); ?><?php echo $chev; // phpcs:ignore WordPress.Security.EscapeOutput ?></button>
-				<div id="<?php echo esc_attr( $panel_id ); ?>" data-sh-panel hidden style="position: absolute; top: 100%; inset-inline-start: <?php echo $grid ? '50%' : '0px'; ?>; transform: <?php echo $grid ? 'translateX(50%)' : 'none'; ?>; padding-top: 10px; z-index: 70;">
+				<div id="<?php echo esc_attr( $panel_id ); ?>" data-sh-panel hidden style="position: absolute; top: 100%; inset-inline-start: <?php echo $grid ? '50%' : '0px'; ?>; transform: <?php echo $grid ? ( 'rtl' === sh_dir() ? 'translateX(50%)' : 'translateX(-50%)' ) : 'none'; ?>; padding-top: 10px; z-index: 70;">
 					<div style="width: <?php echo $grid ? '460px' : '390px'; ?>; max-width: calc(-32px + 100vw); background: rgb(255, 255, 255); border: 1px solid var(--sh-line); border-radius: 16px; box-shadow: rgba(0, 0, 0, 0.85) 0px 26px 60px -24px; padding: 8px; display: grid; grid-template-columns: <?php echo $grid ? '1fr 1fr' : '1fr'; ?>; gap: 2px;">
 						<?php foreach ( $n['children'] as $c ) : ?>
 						<a href="<?php echo esc_url( $c['url'] ); ?>" class="sh-hv-mega" style="display: flex; align-items: flex-start; gap: 12px; padding: 11px 12px; border-radius: 11px; color: var(--sh-ink); transition: background 0.18s;">
@@ -54,7 +54,7 @@ $chev  = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="cu
 						</a>
 						<?php endforeach; ?>
 						<?php if ( $n['all_label'] ) : ?>
-						<a href="<?php echo esc_url( $n['url'] ); ?>" class="sh-hv-link" style="grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; margin-top: 4px; padding: 11px 12px; border-top: 1px solid var(--sh-line); font-size: 14px; font-weight: 600; color: var(--sh-link);"><?php echo esc_html( $n['all_label'] ); ?><span aria-hidden="true">←</span></a>
+						<a href="<?php echo esc_url( $n['url'] ); ?>" class="sh-hv-link" style="grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; margin-top: 4px; padding: 11px 12px; border-top: 1px solid var(--sh-line); font-size: 14px; font-weight: 600; color: var(--sh-link);"><?php echo esc_html( $n['all_label'] ); ?><span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></a>
 						<?php endif; ?>
 					</div>
 				</div>
@@ -64,6 +64,7 @@ $chev  = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="cu
 			endforeach;
 			?>
 		</nav>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php echo esc_attr( sh_site_name() . ' — ' . __( 'الرئيسية', 'seohouse' ) ); ?>" style="display: flex; align-items: center; flex: 0 0 auto; margin-inline-start: auto;"><img src="<?php echo esc_url( sh_logo_light_url() ); ?>" alt="<?php echo esc_attr( sh_site_name() ); ?>" width="145" height="34" fetchpriority="high" style="height: 34px; width: auto; display: block;"></a>
+		<?php echo sh_lang_switch_html( 'flex: 0 0 auto; font-size: 14px; font-weight: 600; color: var(--sh-ink); padding: 8px 12px; border: 1px solid var(--sh-line); border-radius: 999px; white-space: nowrap;' ); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside ?>
+		<a href="<?php echo esc_url( sh_home_url() ); ?>" aria-label="<?php echo esc_attr( sh_site_name() . ' — ' . __( 'الرئيسية', 'seohouse' ) ); ?>" style="display: flex; align-items: center; flex: 0 0 auto; margin-inline-start: auto;"><img src="<?php echo esc_url( sh_logo_light_url() ); ?>" alt="<?php echo esc_attr( sh_site_name() ); ?>" width="145" height="34" fetchpriority="high" style="height: 34px; width: auto; display: block;"></a>
 	</div>
 </header>

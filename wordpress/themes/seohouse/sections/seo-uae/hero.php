@@ -28,11 +28,11 @@ $f = $args['f'] ?? array();
         </div>
       </div>
 
-      <div role="img" aria-label="لوحة توضح ترتيب نتائج البحث وانتقال صفحة الموقع إلى موضع أفضل ثم تحولها إلى زيارة مؤهلة واستفسار" style="position: relative; animation: 0.7s ease 0.12s 1 normal both running fadeUp;">
+      <div role="img" aria-label="<?= esc_attr__('لوحة توضح ترتيب نتائج البحث وانتقال صفحة الموقع إلى موضع أفضل ثم تحولها إلى زيارة مؤهلة واستفسار', 'seohouse') ?>" style="position: relative; animation: 0.7s ease 0.12s 1 normal both running fadeUp;">
         <div style="display: flex; align-items: center; gap: 10px; background: rgb(11, 20, 56); border-radius: 14px; padding: 13px 16px; box-shadow: rgba(0, 0, 0, 0.9) 0px 20px 44px -34px;">
           <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#8494B5" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
           <?php if (!empty($f['text_2'])) : ?><span style="font-size: 15.5px; color: rgb(255, 255, 255);"><?= esc_html($f['text_2'] ?? '') ?></span><?php endif; ?>
-          <span aria-hidden="true" style="margin-inline-start: auto; font-size: 12px; color: rgb(255, 255, 255);">نتائج البحث</span>
+          <span aria-hidden="true" style="margin-inline-start: auto; font-size: 12px; color: rgb(255, 255, 255);"><?= esc_html__('نتائج البحث', 'seohouse') ?></span>
         </div>
 
         <div data-ua-serp style="margin-top: 12px;">
@@ -77,9 +77,9 @@ $f = $args['f'] ?? array();
 
         <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px;">
           <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 14.5px; color: rgb(255, 255, 255); background: rgba(255, 255, 255, 0.05); border-radius: 999px; padding: 9px 15px;"><i aria-hidden="true" style="width: 8px; height: 8px; border-radius: 999px; background: var(--sh-sky); animation: 3s ease-in-out 0s infinite normal none running uaeDot;"></i><?= esc_html($f['label_5'] ?? '') ?></span>
-          <span aria-hidden="true" style="color: rgb(255, 255, 255);">←</span>
+          <span aria-hidden="true" style="color: rgb(255, 255, 255);"><?= esc_html(sh_arrow()) ?></span>
           <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 14.5px; color: rgb(255, 255, 255); background: rgba(255, 255, 255, 0.05); border-radius: 999px; padding: 9px 15px;"><i aria-hidden="true" style="width: 8px; height: 8px; border-radius: 999px; background: var(--sh-sky); animation: 3s ease-in-out 0.6s infinite normal none running uaeDot;"></i><?= esc_html($f['label_6'] ?? '') ?></span>
-          <span aria-hidden="true" style="color: rgb(255, 255, 255);">←</span>
+          <span aria-hidden="true" style="color: rgb(255, 255, 255);"><?= esc_html(sh_arrow()) ?></span>
           <?php if (!empty($f['label_7'])) : ?><span style="font-size: 14.5px; font-weight: 600; color: rgb(6, 11, 31); background: rgb(255, 255, 255); border-radius: 999px; padding: 9px 15px;"><?= esc_html($f['label_7'] ?? '') ?></span><?php endif; ?>
         </div>
       </div>

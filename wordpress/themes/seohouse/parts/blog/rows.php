@@ -26,7 +26,7 @@ if ( $rows ) :
 			<span data-bl-cat style="font-size: 13px; font-weight: 600; color: var(--sh-link);"><?php echo $cat ? esc_html( $cat->name ) : ''; ?></span>
 			<span style="min-width: 0px; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 16.5px; line-height: 1.6; text-wrap: pretty;"><?php echo esc_html( get_the_title( $p ) ); ?></span>
 			<span data-bl-meta style="font-size: 13px; color: var(--sh-text); display: flex; flex-wrap: wrap; gap: 2px 8px;"><span><?php echo esc_html( $member ? get_the_title( $member ) : sprintf( /* translators: %s: company */ __( 'فريق %s', 'seohouse' ), sh_site_name() ) ); ?></span><span aria-hidden="true">·</span><span><?php echo esc_html( sh_post_date( $p ) ); ?></span></span>
-			<span data-bl-go aria-hidden="true" style="color: var(--sh-link); font-size: 18px;">←</span>
+			<span data-bl-go aria-hidden="true" style="color: var(--sh-link); font-size: 18px;"><?php echo esc_html( sh_arrow() ); ?></span>
 		</a>
 	</li>
 	<?php endforeach; ?>
@@ -42,7 +42,7 @@ if ( $total > 1 ) :
 	?>
 <nav aria-label="<?php esc_attr_e( 'ترقيم الصفحات', 'seohouse' ); ?>" style="margin-top: 26px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px;">
 	<?php if ( $cur > 1 ) : ?>
-	<a href="<?php echo esc_url( get_pagenum_link( $cur - 1 ) ); ?>" rel="prev" style="<?php echo esc_attr( $link ); ?> padding: 0px 14px;">→ <?php esc_html_e( 'السابق', 'seohouse' ); ?></a>
+	<a href="<?php echo esc_url( get_pagenum_link( $cur - 1 ) ); ?>" rel="prev" style="<?php echo esc_attr( $link ); ?> padding: 0px 14px;"><?php echo esc_html( sh_arrow( 'back' ) ); ?> <?php esc_html_e( 'السابق', 'seohouse' ); ?></a>
 	<?php endif; ?>
 	<?php for ( $i = 1; $i <= $total; $i++ ) : ?>
 		<?php if ( $i === $cur ) : ?>
@@ -52,7 +52,7 @@ if ( $total > 1 ) :
 		<?php endif; ?>
 	<?php endfor; ?>
 	<?php if ( $cur < $total ) : ?>
-	<a href="<?php echo esc_url( get_pagenum_link( $cur + 1 ) ); ?>" rel="next" style="<?php echo esc_attr( $link ); ?> padding: 0px 14px;"><?php esc_html_e( 'التالي', 'seohouse' ); ?> ←</a>
+	<a href="<?php echo esc_url( get_pagenum_link( $cur + 1 ) ); ?>" rel="next" style="<?php echo esc_attr( $link ); ?> padding: 0px 14px;"><?php esc_html_e( 'التالي', 'seohouse' ); ?> <?php echo esc_html( sh_arrow() ); ?></a>
 	<?php endif; ?>
 </nav>
 	<?php

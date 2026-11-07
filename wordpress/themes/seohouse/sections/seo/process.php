@@ -103,7 +103,7 @@ $check  = '<span aria-hidden="true" style="flex: 0 0 auto; color: var(--sh-link)
 					<?php if ( ! empty( $f['team_sub'] ) ) : ?><div style="font-size: 14.5px; color: var(--sh-text); margin-top: 6px;"><?php echo esc_html( $f['team_sub'] ); ?></div><?php endif; ?>
 				</div>
 				<?php if ( ! empty( $f['team_link'] ) && ! empty( $f['team_link_label'] ) ) : ?>
-				<a href="<?php echo esc_url( sh_link( $f['team_link'] ) ); ?>" style="font-size: 14.5px; font-weight: 600;"><?php echo esc_html( $f['team_link_label'] ); ?> <span aria-hidden="true">←</span></a>
+				<a href="<?php echo esc_url( sh_link( $f['team_link'] ) ); ?>" style="font-size: 14.5px; font-weight: 600;"><?php echo esc_html( $f['team_link_label'] ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></a>
 				<?php endif; ?>
 			</div>
 			<div data-team-strip style="margin-top: 18px;">

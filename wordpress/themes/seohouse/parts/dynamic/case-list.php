@@ -47,7 +47,7 @@ foreach ( $cases as $c ) :
 			</span>
 			<?php endif; ?>
 		</span>
-		<span data-res-go style="font-size: 14.5px; font-weight: 600; color: var(--sh-link); white-space: nowrap;"><?php esc_html_e( 'دراسة الحالة', 'seohouse' ); ?> <span aria-hidden="true">←</span></span>
+		<span data-res-go style="font-size: 14.5px; font-weight: 600; color: var(--sh-link); white-space: nowrap;"><?php esc_html_e( 'دراسة الحالة', 'seohouse' ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></span>
 	</a>
 </li>
 	<?php

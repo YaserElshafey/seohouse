@@ -17,8 +17,8 @@ $f = $args['f'] ?? array();
           <?php if (!empty($f['title'])) : ?><h2 data-h2 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); margin: 10px 0px 0px; line-height: 1.3;"><?= esc_html($f['title'] ?? '') ?></h2><?php endif; ?>
         </div>
         <div style="display: flex; gap: 8px;">
-          <button type="button" aria-label="السابق" class="hv-3fbe92" style="width: 48px; height: 48px; border-radius: 999px; border: 1px solid var(--sh-line); background: rgb(255, 255, 255); cursor: pointer; color: var(--sh-ink); font-size: 16px;">→</button>
-          <button type="button" aria-label="التالي" class="hv-3fbe92" style="width: 48px; height: 48px; border-radius: 999px; border: 1px solid var(--sh-line); background: rgb(255, 255, 255); cursor: pointer; color: var(--sh-ink); font-size: 16px;">←</button>
+          <button type="button" aria-label="<?= esc_attr__('السابق', 'seohouse') ?>" class="hv-3fbe92" style="width: 48px; height: 48px; border-radius: 999px; border: 1px solid var(--sh-line); background: rgb(255, 255, 255); cursor: pointer; color: var(--sh-ink); font-size: 16px;"><?= esc_html(sh_arrow('back')) ?></button>
+          <button type="button" aria-label="<?= esc_attr__('التالي', 'seohouse') ?>" class="hv-3fbe92" style="width: 48px; height: 48px; border-radius: 999px; border: 1px solid var(--sh-line); background: rgb(255, 255, 255); cursor: pointer; color: var(--sh-ink); font-size: 16px;"><?= esc_html(sh_arrow()) ?></button>
         </div>
       </div>
       <?php if ( ! sh_dynamic_slot( 'reviews-slot' ) ) : ?><div data-grid="reviews" style="margin-top: 28px; display: grid; gap: 16px;">
@@ -39,13 +39,13 @@ $f = $args['f'] ?? array();
       </div><?php endif; ?>
       <div style="margin-top: 16px; display: flex; gap: 6px;">
         
-          <button type="button" aria-label="التقييم 1" style="width: 28px; height: 5px; border-radius: 999px; border: 0px; cursor: pointer; background: rgb(40, 84, 232);"></button>
+          <button type="button" aria-label="<?= esc_attr(sprintf(/* translators: %d: review number */ __('التقييم %d', 'seohouse'), 1)) ?>" style="width: 28px; height: 5px; border-radius: 999px; border: 0px; cursor: pointer; background: rgb(40, 84, 232);"></button>
         
-          <button type="button" aria-label="التقييم 2" style="width: 28px; height: 5px; border-radius: 999px; border: 0px; cursor: pointer; background: rgba(6, 11, 31, 0.2);"></button>
+          <button type="button" aria-label="<?= esc_attr(sprintf(/* translators: %d: review number */ __('التقييم %d', 'seohouse'), 2)) ?>" style="width: 28px; height: 5px; border-radius: 999px; border: 0px; cursor: pointer; background: rgba(6, 11, 31, 0.2);"></button>
         
-          <button type="button" aria-label="التقييم 3" style="width: 28px; height: 5px; border-radius: 999px; border: 0px; cursor: pointer; background: rgba(6, 11, 31, 0.2);"></button>
+          <button type="button" aria-label="<?= esc_attr(sprintf(/* translators: %d: review number */ __('التقييم %d', 'seohouse'), 3)) ?>" style="width: 28px; height: 5px; border-radius: 999px; border: 0px; cursor: pointer; background: rgba(6, 11, 31, 0.2);"></button>
         
-          <button type="button" aria-label="التقييم 4" style="width: 28px; height: 5px; border-radius: 999px; border: 0px; cursor: pointer; background: rgba(6, 11, 31, 0.2);"></button>
+          <button type="button" aria-label="<?= esc_attr(sprintf(/* translators: %d: review number */ __('التقييم %d', 'seohouse'), 4)) ?>" style="width: 28px; height: 5px; border-radius: 999px; border: 0px; cursor: pointer; background: rgba(6, 11, 31, 0.2);"></button>
         
       </div>
     </div>

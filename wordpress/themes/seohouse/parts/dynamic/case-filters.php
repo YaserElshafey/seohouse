@@ -8,14 +8,14 @@
 defined( 'ABSPATH' ) || exit;
 
 $labels = array(
-	'ecommerce'   => 'التجارة الإلكترونية',
-	'health'      => 'الصحة والطب',
-	'education'   => 'التعليم والتدريب',
-	'real-estate' => 'العقارات',
-	'tourism'     => 'السياحة',
-	'tech'        => 'التقنية',
-	'legal'       => 'القانون',
-	'food'        => 'الأغذية والمطاعم',
+	'ecommerce'   => __( 'التجارة الإلكترونية', 'seohouse' ),
+	'health'      => __( 'الصحة والطب', 'seohouse' ),
+	'education'   => __( 'التعليم والتدريب', 'seohouse' ),
+	'real-estate' => __( 'العقارات', 'seohouse' ),
+	'tourism'     => __( 'السياحة', 'seohouse' ),
+	'tech'        => __( 'التقنية', 'seohouse' ),
+	'legal'       => __( 'القانون', 'seohouse' ),
+	'food'        => __( 'الأغذية والمطاعم', 'seohouse' ),
 );
 $present = array();
 foreach ( sh_case_studies() as $c ) {

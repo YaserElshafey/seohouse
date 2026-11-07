@@ -36,7 +36,7 @@ $ct_done = '' !== $ct_done ? $ct_done : __( 'وصلنا طلبك، وسيتوا�
         <div id="booking" data-sh-contact class="sh-ct-form" style="scroll-margin-top: 88px; background: rgb(251, 252, 254); color: var(--sh-ink); border-radius: 18px; box-shadow: rgba(0, 0, 0, 0.75) 0px 30px 64px -38px; padding: clamp(20px, 2.4vw, 32px);">
           <?php
           $ct_status = isset( $_GET['sh_lead'] ) ? sanitize_key( wp_unslash( $_GET['sh_lead'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification -- display only.
-          $ct_inputs = array( 'v1' => array( 'text', 'rtl', 'الاسم الكامل', 'name', 'name' ), 'v2' => array( 'text', 'rtl', 'اسم الشركة', 'company', 'organization' ), 'v3' => array( 'email', 'ltr', 'name@company.com', 'email', 'email' ), 'v4' => array( 'tel', 'ltr', '', 'phone', 'tel' ), 'v5' => array( 'url', 'ltr', 'https://', 'site', 'url' ) );
+          $ct_inputs = array( 'v1' => array( 'text', sh_dir(), __( 'الاسم الكامل', 'seohouse' ), 'name', 'name' ), 'v2' => array( 'text', sh_dir(), __( 'اسم الشركة', 'seohouse' ), 'company', 'organization' ), 'v3' => array( 'email', 'ltr', 'name@company.com', 'email', 'email' ), 'v4' => array( 'tel', 'ltr', '', 'phone', 'tel' ), 'v5' => array( 'url', 'ltr', 'https://', 'site', 'url' ) );
           // market options keep their label as value; service options map to the lead service keys
           $ct_service_keys = array( 'v5' => 'seo', 'v6' => 'web', 'v7' => 'stores', 'v8' => 'products', 'v9' => 'unsure' );
           $ct_fstyle = 'min-height: 52px; border: 1.5px solid var(--sh-line); background: var(--sh-surface); padding: 0px 14px; font-size: 16px; border-radius: 13px; color: var(--sh-ink);';
@@ -62,7 +62,7 @@ $ct_done = '' !== $ct_done ? $ct_done : __( 'وصلنا طلبك، وسيتوا�
                 </label><?php endforeach; ?>
                 <label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 600; color: var(--sh-ink); grid-column: 1 / -1;">
                   <?php if (!empty($f['label'])) : ?><span><?= esc_html($f['label'] ?? '') ?></span><?php endif; ?>
-                  <textarea name="goal" rows="4" placeholder="اكتب باختصار ما تريد تحقيقه أو ما يعطّل موقعك حاليًا" style="border: 1.5px solid var(--sh-line); background: var(--sh-surface); padding: 12px 14px; font-size: 16px; border-radius: 13px; color: var(--sh-ink); resize: vertical; text-align: start;"></textarea>
+                  <textarea name="goal" rows="4" placeholder="<?= esc_attr__('اكتب باختصار ما تريد تحقيقه أو ما يعطّل موقعك حاليًا', 'seohouse') ?>" style="border: 1.5px solid var(--sh-line); background: var(--sh-surface); padding: 12px 14px; font-size: 16px; border-radius: 13px; color: var(--sh-ink); resize: vertical; text-align: start;"></textarea>
                 </label>
               </div>
               <div role="alert" data-ct-error<?= 'error' === $ct_status ? '' : ' hidden' ?> style="margin-top: 16px; display: flex; align-items: flex-start; gap: 10px; background: #FDECEC; box-shadow: inset 0 0 0 1px rgba(198,40,40,.2); color: #8E1B1B; border-radius: 13px; padding: 12px 16px; font-size: 14.5px; font-weight: 600;"><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#C62828" stroke-width="1.8" stroke-linecap="round" style="flex: 0 0 auto; margin-top: 2px;"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.5"/></svg><span data-ct-error-text><?= 'error' === $ct_status ? esc_html__( 'تعذر إرسال الطلب. راجع البيانات وحاول مرة أخرى.', 'seohouse' ) : '' ?></span></div>

@@ -70,7 +70,7 @@ while ( have_posts() ) :
 					<a href="<?php echo esc_url( $l['url'] ); ?>" target="_blank" rel="noopener me" class="sh-hv-outline" style="display: inline-flex; align-items: center; min-height: 46px; padding: 0px 18px; border-radius: 12px; border: 1px solid var(--sh-line); color: var(--sh-ink); font-size: 14.5px; font-weight: 600;"><?php echo esc_html( $l['label'] ); ?> <span aria-hidden="true">↗</span></a>
 					<?php endforeach; ?>
 					<?php if ( $team ) : ?>
-					<a href="<?php echo esc_url( get_permalink( $team ) ); ?>" class="sh-hv-link" style="font-size: 14.5px; font-weight: 600; color: var(--sh-link);"><?php esc_html_e( 'كل أعضاء الفريق', 'seohouse' ); ?> <span aria-hidden="true">←</span></a>
+					<a href="<?php echo esc_url( get_permalink( $team ) ); ?>" class="sh-hv-link" style="font-size: 14.5px; font-weight: 600; color: var(--sh-link);"><?php esc_html_e( 'كل أعضاء الفريق', 'seohouse' ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></a>
 					<?php endif; ?>
 				</div>
 			</div>
@@ -92,7 +92,7 @@ while ( have_posts() ) :
 			<?php else : ?>
 			<p style="font-size: 15.5px; color: var(--sh-ink); margin: 12px 0px 0px;"><?php esc_html_e( 'لا توجد مقالات منشورة لهذا العضو حتى الآن.', 'seohouse' ); ?></p>
 			<?php endif; ?>
-			<a href="<?php echo esc_url( get_permalink( (int) get_option( 'page_for_posts' ) ) ); ?>" class="sh-hv-link" style="display: inline-block; margin-top: 12px; font-size: 14.5px; font-weight: 600; color: var(--sh-link);"><?php esc_html_e( 'تصفح المدونة', 'seohouse' ); ?> <span aria-hidden="true">←</span></a>
+			<a href="<?php echo esc_url( get_permalink( (int) get_option( 'page_for_posts' ) ) ); ?>" class="sh-hv-link" style="display: inline-block; margin-top: 12px; font-size: 14.5px; font-weight: 600; color: var(--sh-link);"><?php esc_html_e( 'تصفح المدونة', 'seohouse' ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></a>
 		</div>
 	</section>
 

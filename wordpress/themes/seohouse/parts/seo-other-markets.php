@@ -23,9 +23,14 @@ unset( $targets[ $current ] );
 $cards = array();
 foreach ( $targets as $t ) {
 	$page = get_page_by_path( $t[0], OBJECT, 'page' );
-	if ( $page && 'publish' === $page->post_status ) {
-		$cards[] = array( (string) get_permalink( $page ), $t[1] );
+	if ( ! $page || 'publish' !== $page->post_status ) {
+		continue;
 	}
+	$id = sh_tr_id( (int) $page->ID );
+	if ( sh_is_en() && $id === (int) $page->ID ) {
+		continue; // no English version of that market yet
+	}
+	$cards[] = array( (string) get_permalink( $id ), $t[1] );
 }
 if ( ! $cards ) {
 	return;

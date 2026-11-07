@@ -35,7 +35,7 @@ function sh_breadcrumb_trail(): array {
 	if ( null !== $trail ) {
 		return $trail;
 	}
-	$home  = array( 'label' => __( 'الرئيسية', 'seohouse-core' ), 'url' => home_url( '/' ) );
+	$home  = array( 'label' => __( 'الرئيسية', 'seohouse-core' ), 'url' => sh_home_url() );
 	$trail = array( $home );
 
 	$page_crumb = static function ( $id, $ancestor ) {
@@ -43,7 +43,7 @@ function sh_breadcrumb_trail(): array {
 	};
 	$by_path = static function ( $path ) {
 		$p = get_page_by_path( trim( $path, '/' ) );
-		return $p ? $p->ID : 0;
+		return $p ? sh_tr_id( (int) $p->ID ) : 0;
 	};
 
 	if ( is_front_page() ) {
