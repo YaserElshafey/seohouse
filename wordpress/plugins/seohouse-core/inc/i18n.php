@@ -136,6 +136,110 @@ function sh_i18n_locale_for( array $in ): void {
 // one hreflang set, printed by the theme from sh_i18n_alternates() (Polylang's would include noindex drafts)
 add_filter( 'pll_rel_hreflang_attributes', '__return_empty_array', 99 );
 
+/**
+ * English page addresses mirror the Arabic ones: the English version of /services/seo/ksa/ is
+ * /en/services/seo/ksa/ (Polylang's free version cannot give two pages the same slug, so the English
+ * pages keep their own slugs in the database and their public address is built from the Arabic page).
+ * An English page without a published Arabic page, and the English front page (/en/), keep Polylang's.
+ */
+function sh_i18n_mirror_link( int $id ): string {
+	if ( ! sh_i18n_active() || 'en' !== (string) pll_get_post_language( $id ) ) {
+		return '';
+	}
+	$front = (int) get_option( 'page_on_front' );
+	if ( $front && (int) pll_get_post( $front, 'en' ) === $id ) {
+		return '';
+	}
+	$ar = (int) pll_get_post( $id, 'ar' );
+	if ( ! $ar || 'publish' !== get_post_status( $ar ) ) {
+		return '';
+	}
+	$home = trailingslashit( (string) get_option( 'home' ) );
+	$ar_link = (string) get_permalink( $ar );
+	if ( ! str_starts_with( $ar_link, $home ) ) {
+		return '';
+	}
+	return $home . 'en/' . ltrim( substr( $ar_link, strlen( $home ) ), '/' );
+}
+
+add_filter(
+	'page_link',
+	static function ( $link, $id ) {
+		$mirror = sh_i18n_mirror_link( (int) $id );
+		return '' !== $mirror ? $mirror : $link;
+	},
+	30,
+	2
+);
+
+// /en/<Arabic path>/ opens the English version of that Arabic page.
+add_filter(
+	'request',
+	static function ( $qv ) {
+		if ( ! sh_i18n_active() || empty( $qv['pagename'] ) ) {
+			return $qv;
+		}
+		$lang = (string) ( $qv['lang'] ?? '' );
+		if ( 'en' !== $lang && 'en' !== (string) pll_current_language() ) {
+			return $qv;
+		}
+		$ar = get_page_by_path( (string) $qv['pagename'], OBJECT, 'page' );
+		if ( ! $ar || 'ar' !== (string) pll_get_post_language( $ar->ID ) ) {
+			return $qv; // not an Arabic path (e.g. an older English address): WordPress finds the page and redirects to its address
+		}
+		$en = (int) pll_get_post( $ar->ID, 'en' );
+		if ( ! $en || 'publish' !== get_post_status( $en ) ) {
+			return $qv;
+		}
+		unset( $qv['pagename'] );
+		$qv['page_id'] = $en;
+		return $qv;
+	},
+	20
+);
+
+// Older English addresses (before the mirrored structure, e.g. /en/seo/saudi-arabia/ or /en/about-us/)
+// move permanently to the page's address. English requests only; Arabic URLs are never redirected here.
+add_action(
+	'template_redirect',
+	static function () {
+		if ( ! sh_i18n_active() || 'en' !== sh_lang() || is_admin() ) {
+			return;
+		}
+		$uri  = isset( $_SERVER['REQUEST_URI'] ) ? (string) wp_unslash( $_SERVER['REQUEST_URI'] ) : ''; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+		$path = rawurldecode( (string) wp_parse_url( $uri, PHP_URL_PATH ) );
+		$qs   = (string) wp_parse_url( $uri, PHP_URL_QUERY );
+		$to   = '';
+		if ( is_404() ) {
+			$segs = array_values( array_filter( explode( '/', trim( $path, '/' ) ) ) );
+			if ( count( $segs ) < 2 || 'en' !== $segs[0] ) {
+				return;
+			}
+			$found = get_posts(
+				array(
+					'post_type'   => 'page',
+					'name'        => sanitize_title( end( $segs ) ),
+					'post_status' => 'publish',
+					'lang'        => 'en',
+					'numberposts' => 1,
+					'fields'      => 'ids',
+				)
+			);
+			$to = $found ? (string) get_permalink( (int) $found[0] ) : '';
+		} elseif ( is_page() ) {
+			$want = sh_i18n_mirror_link( (int) get_queried_object_id() );
+			if ( '' !== $want && untrailingslashit( rawurldecode( (string) wp_parse_url( $want, PHP_URL_PATH ) ) ) !== untrailingslashit( $path ) ) {
+				$to = $want;
+			}
+		}
+		if ( '' !== $to ) {
+			wp_safe_redirect( '' !== $qs ? $to . '?' . $qs : $to, 301, 'SEO House Core' );
+			exit;
+		}
+	},
+	1
+);
+
 // a page link stored as an Arabic page ID opens the English page on English pages, once that page is published
 add_filter(
 	'acf/load_value/type=page_link',

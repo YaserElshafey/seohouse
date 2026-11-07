@@ -257,14 +257,15 @@ body.admin-bar #sh-drawer { top: 32px !important; }
 /* ------------------------------------------------------------------ footer social icons (2.7.8)
    «إعدادات سيو هاوس ← الفوتر ← روابط التواصل في الفوتر». White brand marks on the blue footer, 44px tap
    targets, calm hover (background only, no movement), visible keyboard focus. */
-.sh-foot-social { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
-.sh-foot-social a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; color: #fff; background: rgba(255, 255, 255, .12); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .22); transition: background-color .2s ease, box-shadow .2s ease; }
-.sh-foot-social a:hover { background: rgba(255, 255, 255, .24); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .45); }
-.sh-foot-social a:focus-visible { background: rgba(255, 255, 255, .24); }
+.sh-foot-social { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px; }
+.sh-foot-social a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; color: #fff; background: transparent; transition: background-color .2s ease; }
+.sh-foot-social a:hover { background: rgba(255, 255, 255, .14); }
+.sh-foot-social a:focus-visible { background: rgba(255, 255, 255, .14); }
 /* keyboard focus on the blue footer: white ring (a site-wide :focus-visible rule with !important made it blue on blue) */
 footer[data-foot-blue] a:focus-visible { outline: 2px solid #fff !important; outline-offset: 3px; }
-.sh-foot-social svg { width: 21px; height: 21px; fill: currentColor; display: block; }
-@media (max-width: 639px) { .sh-foot-social { justify-content: center; } }
+.sh-foot-social svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; display: block; }
+/* the icons start where the footer text starts, on phones too (one direction for the whole footer) */
+.sh-foot-social { margin-inline-start: -10px; }
 
 /* ------------------------------------------------------------------ white cards (2.7.12)
    One white card for the light and blue fields: an opaque white surface that stands apart from the
@@ -325,3 +326,5 @@ footer[data-foot-blue] a:focus-visible { outline: 2px solid #fff !important; out
    which is also the usual English one. Arabic (RTL) is untouched. */
 [dir="ltr"] [data-sh-bar] { flex-direction: row-reverse; }
 [dir="ltr"] [data-sh-bar] > a[aria-label]:last-child { margin-inline-start: 0 !important; margin-inline-end: auto; } /* beats the inline auto margin */
+
+[data-foot-copy] bdi { white-space: nowrap; } /* numbers never break across lines */

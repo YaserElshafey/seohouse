@@ -15,25 +15,19 @@ $cta       = sh_header_cta();
 $show_cta  = 'thank-you' !== sh_view_key() && $cta['label'];
 $copyright = (string) sh_option( 'sh_copyright', '' );
 $copyright = $copyright ? str_replace( '{year}', wp_date( 'Y' ), $copyright ) : '© ' . wp_date( 'Y' ) . ' ' . sh_site_name();
-// legal identity under the copyright (from «إعدادات سيو هاوس ← بيانات الشركة»): name, commercial register, tax number
-$legal_bits = array();
+// with the legal name set, the copyright line names it (the brand is not repeated) and carries the
+// commercial register and tax numbers (from «إعدادات سيو هاوس ← بيانات الشركة»)
 $legal_name = trim( (string) sh_option( 'sh_legal_name', '' ) );
 $cr_number  = trim( (string) sh_option( 'sh_cr_number', '' ) );
-$cr_office  = trim( (string) sh_option( 'sh_cr_office', '' ) );
 $tax_number = trim( (string) sh_option( 'sh_tax_number', '' ) );
-if ( '' !== $legal_name ) {
-	$legal_bits[] = esc_html( $legal_name );
-}
+$copy_html  = esc_html( '' !== $legal_name ? '© ' . wp_date( 'Y' ) . ' ' . $legal_name : $copyright );
 if ( '' !== $cr_number ) {
-	$legal_bits[] = '' !== $cr_office
-		/* translators: 1: commercial register number, 2: register office */
-		? sprintf( esc_html__( 'سجل تجاري رقم %1$s (%2$s)', 'seohouse' ), '<bdi>' . esc_html( $cr_number ) . '</bdi>', esc_html( $cr_office ) )
-		/* translators: %s: commercial register number */
-		: sprintf( esc_html__( 'سجل تجاري رقم %s', 'seohouse' ), '<bdi>' . esc_html( $cr_number ) . '</bdi>' );
+	/* translators: %s: commercial register number */
+	$copy_html .= ' · ' . sprintf( esc_html__( 'سجل تجاري رقم %s', 'seohouse' ), '<bdi dir="ltr">' . esc_html( $cr_number ) . '</bdi>' );
 }
 if ( '' !== $tax_number ) {
 	/* translators: %s: tax registration number */
-	$legal_bits[] = sprintf( esc_html__( 'رقم التسجيل الضريبي %s', 'seohouse' ), '<bdi>' . esc_html( $tax_number ) . '</bdi>' );
+	$copy_html .= ' · ' . sprintf( esc_html__( 'رقم التسجيل الضريبي %s', 'seohouse' ), '<bdi dir="ltr">' . esc_html( $tax_number ) . '</bdi>' );
 }
 ?>
 <footer data-foot-blue style="position: relative; background: linear-gradient(rgb(40, 84, 232) 0%, rgb(36, 76, 214) 100%); color: rgb(255, 255, 255); overflow: hidden;">
@@ -62,10 +56,10 @@ if ( '' !== $tax_number ) {
 		<?php endforeach; ?>
 	</div>
 	<div style="position: relative; border-top: 1px solid rgba(255, 255, 255, 0.2);">
-		<div style="max-width: 1200px; margin: 0px auto; padding: 18px 20px; display: flex; flex-wrap: wrap; gap: 12px 20px; justify-content: space-between; font-size: 13px; color: rgb(255, 255, 255);">
-			<span><?php echo esc_html( $copyright ); ?><?php if ( $legal_bits ) : ?><span data-foot-legal style="display: block; margin-top: 4px; font-size: 12.5px; opacity: 0.9;"><?php echo implode( ' · ', $legal_bits ); // phpcs:ignore WordPress.Security.EscapeOutput -- each part escaped above ?></span><?php endif; ?></span>
+		<div data-foot-bar style="max-width: 1200px; margin: 0px auto; padding: 18px 20px; display: flex; flex-wrap: wrap; gap: 12px 20px; justify-content: space-between; align-items: center; font-size: 13px; color: rgb(255, 255, 255);">
+			<span data-foot-copy><?php echo $copy_html; // phpcs:ignore WordPress.Security.EscapeOutput -- escaped above ?></span>
 			<?php if ( $legal ) : ?>
-			<span style="display: flex; gap: 20px;">
+			<span data-foot-links style="display: flex; gap: 20px;">
 				<?php foreach ( $legal as $l ) : ?>
 				<a href="<?php echo esc_url( $l['url'] ); ?>" class="sh-hv-foot" style="color: rgb(255, 255, 255);"><?php echo esc_html( $l['label'] ); ?></a>
 				<?php endforeach; ?>
