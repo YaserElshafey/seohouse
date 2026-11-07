@@ -1,0 +1,203 @@
+{
+ "id": 47,
+ "key": "sectors",
+ "title": "Industries",
+ "slug": "sectors",
+ "parent": 0,
+ "path": "/sectors/",
+ "template": "page-templates/sectors.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "Industries We Serve: SEO by Industry | SEO House",
+  "sh_seo_description": "SEO for online stores, clinics, real estate, education, tourism, tech, law firms and restaurants, planned around how each industry's customers search.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "collection",
+  "sh_schema_service": "",
+  "sh_crumb": "",
+  "rank_math_title": "Industries We Serve: SEO by Industry | SEO House",
+  "rank_math_description": "SEO for online stores, clinics, real estate, education, tourism, tech, law firms and restaurants, planned around how each industry's customers search.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "industries we serve"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Industries",
+   "title": "Industries we serve",
+   "text": "A shopper searches for a product, a patient for a symptom, an investor for a location. Choose your industry to see how we build pages and content around the way your customers search.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "Browse industries"
+  },
+  {
+   "acf_fc_layout": "list",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Eight industries",
+   "title": "Choose the industry closest to your business",
+   "items": [
+    {
+     "link": 31,
+     "icon": "i16f2d875",
+     "heading": "E-commerce",
+     "label": "Catalog, categories, products and the purchase path",
+     "eyebrow": "Product search",
+     "eyebrow_2": "Comparison",
+     "eyebrow_3": "Order"
+    },
+    {
+     "link": 37,
+     "icon": "i48978950",
+     "heading": "Health & medical",
+     "label": "Specialties, services, doctors and booking",
+     "eyebrow": "Symptom or service",
+     "eyebrow_2": "Trust",
+     "eyebrow_3": "Booking"
+    },
+    {
+     "link": 41,
+     "icon": "i366ade6b",
+     "heading": "Real estate & construction",
+     "label": "Projects, areas and units",
+     "eyebrow": "Area",
+     "eyebrow_2": "Project",
+     "eyebrow_3": "Viewing"
+    },
+    {
+     "link": 33,
+     "icon": "iaea0fd57",
+     "heading": "Education & training",
+     "label": "Programs, courses and registration",
+     "eyebrow": "Field of study",
+     "eyebrow_2": "Comparison",
+     "eyebrow_3": "Registration"
+    },
+    {
+     "link": 45,
+     "icon": "id6b9f2d6",
+     "heading": "Tourism & travel",
+     "label": "Destinations, packages and booking",
+     "eyebrow": "Destination",
+     "eyebrow_2": "Package",
+     "eyebrow_3": "Booking"
+    },
+    {
+     "link": 43,
+     "icon": "ifb294bd7",
+     "heading": "Technology & software",
+     "label": "Solutions, use cases and integrations",
+     "eyebrow": "Problem",
+     "eyebrow_2": "Solution",
+     "eyebrow_3": "Demo request"
+    },
+    {
+     "link": 39,
+     "icon": "i703a2206",
+     "heading": "Legal & consulting",
+     "label": "Legal services and expertise",
+     "eyebrow": "Service",
+     "eyebrow_2": "Expertise",
+     "eyebrow_3": "Consultation"
+    },
+    {
+     "link": 35,
+     "icon": "ic4999d32",
+     "heading": "Food & restaurants",
+     "label": "Branches, menu and local ordering",
+     "eyebrow": "Local search",
+     "eyebrow_2": "Menu",
+     "eyebrow_3": "Order"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "pick",
+   "sh_hide": 0,
+   "eyebrow": "How to choose",
+   "title": "Your industry shapes the pages, not just the keywords",
+   "text": "We start with one question: what does your customer need to decide before getting in touch? The answer shapes the page structure, the content and how we measure results.",
+   "items": [
+    {
+     "heading": "You sell a product",
+     "text": "Start with category and product pages and your catalog data.",
+     "variant": "v1"
+    },
+    {
+     "heading": "You sell a service",
+     "text": "Start with the service page and the questions customers ask before getting in touch.",
+     "variant": "v1"
+    },
+    {
+     "heading": "Your customers take time to decide",
+     "text": "Invest in content that compares and explains before the inquiry.",
+     "variant": "v2"
+    },
+    {
+     "heading": "Your customers decide locally",
+     "text": "Start with local search and branch and area pages.",
+     "variant": "v2"
+    }
+   ],
+   "link": 23,
+   "link_label": "See price ranges"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "SEO services",
+     "link": 65
+    },
+    {
+     "label": "Online store design & development",
+     "link": 77
+    },
+    {
+     "label": "All services",
+     "link": 67
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Questions about SEO by industry",
+   "items": [
+    {
+     "question": "Why does the plan differ from one industry to another?",
+     "answer": "Because search behavior and the decision path differ. An online store relies on its product pages, while a service company relies on its service pages and the content people read before getting in touch."
+    },
+    {
+     "question": "What if my business isn't one of the eight industries?",
+     "answer": "The industries listed are the ones we work with most often. We also work with other industries, after reviewing how your customers search and how your site is structured."
+    },
+    {
+     "question": "Does the timeline vary by industry?",
+     "answer": "It depends more on the competition, the size of your site and the condition of its pages than on the industry itself."
+    },
+    {
+     "question": "Can you cover more than one industry for the same company?",
+     "answer": "Yes, when a company has more than one line of business. We keep the pages and content for each one separate so they don't compete with each other."
+    },
+    {
+     "question": "How is the cost determined?",
+     "answer": "It depends on the scope of work, the size of your site and the level of competition. Check our pricing page, then book a call to discuss your case."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

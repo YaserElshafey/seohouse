@@ -1,0 +1,223 @@
+{
+ "id": 33,
+ "key": "sector-education",
+ "title": "Education & Training",
+ "slug": "education",
+ "parent": 47,
+ "path": "/sectors/education/",
+ "template": "page-templates/sector-education.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "SEO for Education & Training Centers | SEO House",
+  "sh_seo_description": "SEO for education and training centers and learning platforms: clear subject and course pages that turn people searching for a course into registrations.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Search engine optimization for education and training",
+  "sh_crumb": "Education & training",
+  "rank_math_title": "SEO for Education & Training Centers | SEO House",
+  "rank_math_description": "SEO for education and training centers and learning platforms: clear subject and course pages that turn people searching for a course into registrations.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo for education and training centers"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Education & training",
+   "title": "SEO for education and training centers",
+   "text": "Someone looking for a course wants to know what they'll learn, who it's for, when it starts and how to register. Others search for a whole field or learning path before choosing a single program. We build clear pages for fields, learning paths and courses, and connect them so applicants find the information they need, without duplicates or conflicts between the in-person, live online and self-paced versions.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "Program structure",
+   "eyebrow_2": "The learner's search path",
+   "label": "Illustrative example",
+   "label_2": "Data analysis course for beginners",
+   "items": [
+    {
+     "icon": "i715283b5",
+     "heading": "Field",
+     "label": "What it covers and where learners start"
+    },
+    {
+     "icon": "ia14d7ede",
+     "heading": "Learning path",
+     "label": "Courses in order of level"
+    },
+    {
+     "icon": "i2028415d",
+     "heading": "Course",
+     "label": "Content, duration and start date"
+    }
+   ],
+   "label_3": "The action we measure",
+   "heading": "Registration"
+  },
+  {
+   "acf_fc_layout": "sector_journey",
+   "sh_hide": 0,
+   "eyebrow": "Illustrative example: a training provider",
+   "title": "From field to course to registration",
+   "eyebrow_2": "1",
+   "heading": "Field",
+   "items": [
+    {
+     "label": "Digital marketing"
+    },
+    {
+     "label": "Project management"
+    },
+    {
+     "label": "Programming"
+    }
+   ],
+   "eyebrow_3": "2",
+   "heading_2": "Course page",
+   "eyebrow_4": "Digital Marketing Fundamentals",
+   "eyebrow_5": "In person",
+   "eyebrow_6": "Online",
+   "label": "Topics · Trainer · Next cohort date",
+   "eyebrow_7": "3",
+   "heading_3": "Registration",
+   "items_2": [
+    {
+     "label": "Name"
+    },
+    {
+     "label": "Email"
+    },
+    {
+     "label": "Preferred cohort"
+    }
+   ],
+   "eyebrow_8": "Register now"
+  },
+  {
+   "acf_fc_layout": "levels",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Field, path or course?",
+   "title": "Every level of learning gets its own page",
+   "text": "One learner may search for a whole field before they know a course name; another may search for a specific program and its dates. We distinguish between the field page, which presents the options; the learning path page, which sets out the order of study; and the course page, which holds the details needed to register. That way, users find what they want without lots of pages competing for the same description.",
+   "items": [
+    {
+     "eyebrow": "Broader",
+     "heading": "Field page",
+     "label": "Presents the options to those who haven't chosen a course yet",
+     "variant": "v1"
+    },
+    {
+     "eyebrow": "More specific",
+     "heading": "Learning path page",
+     "label": "Shows the learning sequence from beginner to advanced",
+     "variant": "v2"
+    },
+    {
+     "eyebrow": "Ready to register",
+     "heading": "Course page",
+     "label": "Contains the details needed to register",
+     "variant": "v3"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "info",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Information that settles the decision",
+   "title": "What applicants need to know before registering",
+   "text": "When a provider offers the same course in person, live online or self-paced, we check whether each format really offers a different experience and content before deciding to give it its own page. Past dates are updated, and visitors find a suitable alternative instead of a form for a closed cohort.",
+   "items": [
+    {
+     "text": "Who it's for"
+    },
+    {
+     "text": "Prerequisites"
+    },
+    {
+     "text": "What applicants will learn"
+    },
+    {
+     "text": "Duration"
+    },
+    {
+     "text": "Training format"
+    },
+    {
+     "text": "Dates"
+    },
+    {
+     "text": "Price, if published"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "measure",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Measuring registrations",
+   "title": "From search to enrollment request",
+   "text": "We track the pages where an applicant's visit begins, then their move to the course details, the start of registration and the submitted application.",
+   "items": [
+    {
+     "text": "We don't treat reading an introductory article the same as an enrollment request; each plays a different role."
+    },
+    {
+     "text": "We explain our measurement tools and their limits clearly, and we don't credit registrations to SEO unless the channel or the form is tracked correctly."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "SEO services",
+     "link": 65
+    },
+    {
+     "label": "SEO content",
+     "link": 53
+    },
+    {
+     "label": "All industries",
+     "link": 47
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Questions about SEO for education and training",
+   "items": [
+    {
+     "question": "Does every course need its own page?",
+     "answer": "Yes, for courses with real search demand and details that set them apart. Similar courses can be presented on a single learning path page, which is clearer for learners."
+    },
+    {
+     "question": "What happens when a course date has passed?",
+     "answer": "We update the page with the next date if the course runs again, or point visitors to a suitable alternative instead of a form for a closed cohort."
+    },
+    {
+     "question": "How do you avoid duplicate versions of the same course?",
+     "answer": "We create a separate page for the in-person or online format only when the content or experience genuinely differs, not just because the delivery format changes."
+    },
+    {
+     "question": "How do you measure registrations?",
+     "answer": "We track registration starts and submitted applications from organic search for each course, as long as the form is connected to tracking."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

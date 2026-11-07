@@ -1,0 +1,216 @@
+{
+ "id": 23,
+ "key": "pricing",
+ "title": "Pricing",
+ "slug": "pricing",
+ "parent": 0,
+ "path": "/pricing/",
+ "template": "page-templates/pricing.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "SEO and Web Design Pricing from SAR 1,500 | SEO House",
+  "sh_seo_description": "SEO and web design pricing from SAR 1,500 to 7,000. Your final price depends on your site's condition, page count, market, competition, scope and platform.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "webpage",
+  "sh_schema_service": "",
+  "sh_crumb": "",
+  "rank_math_title": "SEO and Web Design Pricing from SAR 1,500 | SEO House",
+  "rank_math_description": "SEO and web design pricing from SAR 1,500 to 7,000. Your final price depends on your site's condition, page count, market, competition, scope and platform.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo and web design pricing"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Pricing",
+   "title": "Our pricing",
+   "text": "We don't offer fixed packages, because the price follows the scope of work. Here we explain the range we work within and the factors that decide where you fall in it.",
+   "link_label": "Book a consultation",
+   "link_label_2": "What sets the price",
+   "label": "Our working range",
+   "heading": "1,500 – 7,000",
+   "text_2": "SAR",
+   "items": [
+    {
+     "label": "Wider scope"
+    },
+    {
+     "label": "Narrower scope"
+    }
+   ],
+   "text_3": "The final price is set after we review your site and agree on the scope of work. We don't commit to a number before that review."
+  },
+  {
+   "acf_fc_layout": "factors",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Factors",
+   "title": "Six factors that decide where you fall in the range",
+   "items": [
+    {
+     "icon": "i16a8b069",
+     "heading": "Site condition",
+     "text": "A technically sound site gets started faster. A site that needs basic fixes uses up part of the effort before any optimization begins."
+    },
+    {
+     "icon": "i73a2c82d",
+     "heading": "Number of pages or products",
+     "text": "Ten service pages and a catalog of thousands of products are very different to audit, implement and monitor."
+    },
+    {
+     "icon": "if49c3cf4",
+     "heading": "Market and competition",
+     "text": "Competing for a commercial keyword in a crowded market takes longer work on content and authority."
+    },
+    {
+     "icon": "i08579eae",
+     "heading": "Scope of implementation",
+     "text": "An audit and recommendations only, full implementation on your site, or implementation plus monthly follow-up."
+    },
+    {
+     "icon": "i3ea58866",
+     "heading": "Content and development",
+     "text": "Are writing and technical changes part of our scope, or will your team handle them?"
+    },
+    {
+     "icon": "i96b7bf13",
+     "heading": "Platform",
+     "text": "Customization limits differ between WordPress, Shopify, Salla, Zid and WooCommerce."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "direction",
+   "sh_hide": 0,
+   "eyebrow": "Cost drivers",
+   "title": "What raises the cost and what lowers it",
+   "heading": "Raises the cost",
+   "items": [
+    {
+     "label": "A large catalog or a high page count."
+    },
+    {
+     "label": "Strong competition for commercial keywords."
+    },
+    {
+     "label": "A need for larger volumes of new content."
+    },
+    {
+     "label": "Accumulated technical issues that must be fixed first."
+    },
+    {
+     "label": "More than one market or language."
+    }
+   ],
+   "heading_2": "Lowers the cost",
+   "items_2": [
+    {
+     "label": "A technically sound, relatively modern site."
+    },
+    {
+     "label": "A defined scope that starts with fewer pages."
+    },
+    {
+     "label": "An in-house team that handles changes and content."
+    },
+    {
+     "label": "A platform that allows changes without custom development."
+    },
+    {
+     "label": "One clear goal instead of an open-ended scope."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "before",
+   "sh_hide": 0,
+   "eyebrow": "Before we agree",
+   "title": "What you get free of charge",
+   "text": "Before any financial commitment, you get an initial review and a call that clarifies where things stand and what to prioritize. If the work isn't right for you right now, we'll tell you.",
+   "items": [
+    {
+     "heading": "Initial site review",
+     "label": "A quick read of its condition and what's holding back its visibility."
+    },
+    {
+     "heading": "Free 30-minute call",
+     "label": "We discuss your goal and the core problem."
+    },
+    {
+     "heading": "Written scope and price",
+     "label": "A proposal that sets out what's included and what isn't."
+    }
+   ],
+   "link_label": "Book a consultation",
+   "label": "We agree on the scope and cost with you after the call."
+  },
+  {
+   "acf_fc_layout": "groups",
+   "sh_hide": 0,
+   "eyebrow": "Service groups",
+   "title": "Review the scope of each group",
+   "items": [
+    {
+     "link": 65,
+     "heading": "SEO services"
+    },
+    {
+     "link": 87,
+     "heading": "Website design & development"
+    },
+    {
+     "link": 77,
+     "heading": "Online store design & development"
+    },
+    {
+     "link": 27,
+     "heading": "Product upload & content management"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Pricing FAQ",
+   "items": [
+    {
+     "question": "Is the price monthly or a one-time fee?",
+     "answer": "That depends on the type and scope of work. A build or audit project is priced differently from ongoing work, and we make this clear in the written proposal before we agree."
+    },
+    {
+     "question": "Why don't you offer fixed packages?",
+     "answer": "Because a fixed package imposes a scope that may not suit your site. We define the scope after reviewing your situation, so the price is tied to the actual work."
+    },
+    {
+     "question": "What is the minimum budget to get started?",
+     "answer": "Our published range starts at SAR 1,500, but the actual scope of work and what it includes are set after we review your site and your project's needs."
+    },
+    {
+     "question": "Does the price include content and development?",
+     "answer": "It includes whatever we explicitly agree on. Content and technical changes can be part of our scope, or your team can handle them."
+    },
+    {
+     "question": "Does the price change over time?",
+     "answer": "It changes when the scope changes, such as adding pages, markets or new services. We never change it without a written agreement."
+    },
+    {
+     "question": "How do I get a scope that fits my website?",
+     "answer": "Send your website details through the consultation form. We review your situation, then set the right scope and price with you on the call."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

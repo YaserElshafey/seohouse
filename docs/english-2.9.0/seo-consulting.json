@@ -1,0 +1,210 @@
+{
+ "id": 51,
+ "key": "seo-consulting",
+ "title": "SEO Consulting",
+ "slug": "consulting",
+ "parent": 65,
+ "path": "/services/seo/consulting/",
+ "template": "page-templates/seo-consulting.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "SEO Consulting & Website Performance Analysis | SEO House",
+  "sh_seo_description": "SEO consulting that turns Search Console and Analytics data into decisions: diagnosing traffic drops, migration plans and clear priorities for your team.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "SEO consulting and performance analysis",
+  "sh_crumb": "",
+  "rank_math_title": "SEO Consulting & Website Performance Analysis | SEO House",
+  "rank_math_description": "SEO consulting that turns Search Console and Analytics data into decisions: diagnosing traffic drops, migration plans and clear priorities for your team.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo consulting"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Consulting & performance analysis",
+   "title": "SEO Consulting",
+   "text": "We read what your analytics tools are telling you, identify what changed and why, then set priorities and a roadmap your team can implement and track.",
+   "link_label": "Book a consultation",
+   "link_label_2": "When you need consulting",
+   "items": [
+    {
+     "label": "From data to decision"
+    },
+    {
+     "label": "Decision room"
+    }
+   ],
+   "items_2": [
+    {
+     "heading": "Data",
+     "label": "Impressions, clicks, visits, conversions",
+     "variant": "v1"
+    },
+    {
+     "heading": "Insight",
+     "label": "What changed and why",
+     "variant": "v1"
+    },
+    {
+     "heading": "Decision",
+     "label": "What we do and what comes first",
+     "variant": "v2"
+    },
+    {
+     "heading": "Execution",
+     "label": "Who implements it and when it's measured",
+     "variant": "v2"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "when",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "When you need consulting",
+   "title": "When an outside view beats trial and error",
+   "items": [
+    {
+     "heading": "You have an in-house team",
+     "label": "It needs a plan, priorities and regular reviews instead of individual guesswork."
+    },
+    {
+     "heading": "A second opinion",
+     "label": "You want an independent assessment of ongoing work or of another agency's proposal."
+    },
+    {
+     "heading": "Migration or restructuring",
+     "label": "Changing platforms or URL structure needs a plan that prevents lost visibility."
+    },
+    {
+     "heading": "A sudden drop",
+     "label": "A decline in visibility or traffic needs a diagnosis before any changes are made."
+    },
+    {
+     "heading": "Expansion or a new market",
+     "label": "Adding services or entering a new market means organizing pages and content."
+    },
+    {
+     "heading": "Unreliable measurement",
+     "label": "Conflicting data across tools gets in the way of making the right call."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "chain",
+   "sh_hide": 0,
+   "eyebrow": "How we work",
+   "title": "Data alone doesn't make a decision",
+   "text": "A report full of numbers changes nothing. Our job is to turn what the data shows into a clear decision and a plan your team can implement.",
+   "items": [
+    {
+     "heading": "Data",
+     "text": "What the tools say: impressions, clicks, visits, conversions."
+    },
+    {
+     "heading": "Insight",
+     "text": "What actually changed, where, and since when."
+    },
+    {
+     "heading": "Decision",
+     "text": "What we do first and what we put off."
+    }
+   ],
+   "eyebrow_2": "04",
+   "heading": "Execution & measurement",
+   "text_2": "Who implements it, and which metric we review afterward."
+  },
+  {
+   "acf_fc_layout": "deliver",
+   "sh_hide": 0,
+   "eyebrow": "Deliverables",
+   "title": "What you get from the consultation",
+   "items": [
+    {
+     "label": "An audit of your site's technical health, content and authority."
+    },
+    {
+     "label": "A priority list ranked by impact and effort."
+    },
+    {
+     "label": "A roadmap for the coming months, with clear phases."
+    },
+    {
+     "label": "A walkthrough session with your team to discuss the plan and answer questions."
+    },
+    {
+     "label": "Defined KPIs and a baseline to measure against."
+    },
+    {
+     "label": "Regular progress reviews and updated priorities."
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Full SEO service",
+     "link": 65
+    },
+    {
+     "label": "Technical SEO",
+     "link": 63
+    },
+    {
+     "label": "On-page SEO",
+     "link": 61
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "SEO consulting FAQs",
+   "items": [
+    {
+     "question": "What's the difference between SEO consulting and a full SEO project?",
+     "answer": "Consulting gives your team the diagnosis, priorities and roadmap, while a full SEO project includes ongoing implementation on your site."
+    },
+    {
+     "question": "Do you work with in-house marketing teams?",
+     "answer": "Yes. We handle the analysis and set the priorities, and your team implements them, with regular follow-up and reviews from us."
+    },
+    {
+     "question": "What do you need to get started?",
+     "answer": "Read access to Search Console and Google Analytics, an understanding of your business goals, and the dates of any major changes to the site."
+    },
+    {
+     "question": "Can you review another agency's work?",
+     "answer": "Yes. We give an independent assessment of what has been done and what is being proposed, with no obligation to switch to us."
+    },
+    {
+     "question": "Does consulting cover sudden traffic drops?",
+     "answer": "Yes. We start by pinpointing when the drop happened and which changes or updates coincided with it before recommending any action."
+    },
+    {
+     "question": "Does it include a site migration plan?",
+     "answer": "Yes. We plan redirects, URL structure and measurement before the migration, and monitor indexing afterward."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "seo",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

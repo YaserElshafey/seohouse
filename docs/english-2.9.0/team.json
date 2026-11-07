@@ -1,0 +1,116 @@
+{
+ "id": 79,
+ "key": "team",
+ "title": "Our Team",
+ "slug": "team",
+ "parent": 0,
+ "path": "/team/",
+ "template": "page-templates/team.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "Our Team – SEO, Content & Analytics Experts | SEO House",
+  "sh_seo_description": "Meet the SEO House team: content, analytics and digital growth specialists for websites and online stores, with hands-on experience and market insight.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "collection",
+  "sh_schema_service": "",
+  "sh_crumb": "",
+  "rank_math_title": "Our Team – SEO, Content & Analytics Experts | SEO House",
+  "rank_math_description": "Meet the SEO House team: content, analytics and digital growth specialists for websites and online stores, with hands-on experience and market insight.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "our team"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Our team",
+   "title": "The SEO House team",
+   "text": "Meet the people who work on your website, and open each member's page to see their role and professional links."
+  },
+  {
+   "acf_fc_layout": "directory",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "title": "Team members",
+   "text": "Are you an SEO specialist who'd like to join the team?",
+   "link": 21,
+   "link_label": "Contact us →"
+  },
+  {
+   "acf_fc_layout": "collab",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "How we collaborate",
+   "title": "Four specialties working on your site together",
+   "text": "A small team with different specialties works on your project. We read the data first, then each specialist handles their part, and we review the result together before deciding on the next step.",
+   "items": [
+    {
+     "heading": "SEO",
+     "label": "We identify what your customers search for and which pages deserve work first."
+    },
+    {
+     "heading": "Content",
+     "label": "We write pages and articles that answer customers' questions and lead them to get in touch."
+    },
+    {
+     "heading": "Technical",
+     "label": "We implement changes on the site and fix whatever stops Google from reading your pages."
+    },
+    {
+     "heading": "Performance analysis",
+     "label": "We set up tracking tools and monitor the impact of our work on inquiries and orders."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "remote",
+   "sh_hide": 0,
+   "eyebrow": "Our approach",
+   "title": "How we work with you",
+   "text": "We work with companies in Saudi Arabia, Egypt and the UAE. With companies in Saudi Arabia and the UAE, we work remotely, and your project has one point of contact throughout.",
+   "items": [
+    {
+     "heading": "One point of contact",
+     "text": "They know the details of your website and answer your questions without you having to explain again."
+    },
+    {
+     "heading": "We start by understanding your site and goals",
+     "text": "In the first meeting, we review the site with you and agree on the goal, the access we need and how results will be measured."
+    },
+    {
+     "heading": "Regular reports on what changed",
+     "text": "What we've done, what changed in the results, and what we'll work on next."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "About us",
+     "link": 19
+    },
+    {
+     "label": "Results",
+     "link": 29
+    },
+    {
+     "label": "Contact us",
+     "link": 21
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

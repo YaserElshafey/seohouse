@@ -1,0 +1,259 @@
+{
+ "id": 49,
+ "key": "seo-backlinks",
+ "title": "Link Building",
+ "slug": "backlinks",
+ "parent": 65,
+ "path": "/services/seo/backlinks/",
+ "template": "page-templates/seo-backlinks.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "Link Building & Backlink Services | SEO House",
+  "sh_seo_description": "Link building services: backlinks from relevant sites with real audiences. We vet every source, document every link and track its impact. No link networks.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Link building",
+  "sh_crumb": "",
+  "rank_math_title": "Link Building & Backlink Services | SEO House",
+  "rank_math_description": "Link building services: backlinks from relevant sites with real audiences. We vet every source, document every link and track its impact. No link networks.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "link building services"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Link building",
+   "title": "Link Building Services",
+   "text": "We vet every source before any work begins, based on its relevance to your industry, its real audience and where the link will sit, then document what gets published and track its impact on the target page.",
+   "link_label": "Book a consultation",
+   "link_label_2": "How we evaluate sources",
+   "eyebrow_2": "Evaluating a proposed source",
+   "label": "Illustrative example",
+   "items": [
+    {
+     "icon": "i33c65835",
+     "label": "Source is relevant to your industry",
+     "eyebrow": "Match",
+     "variant": "v1"
+    },
+    {
+     "icon": "i33c65835",
+     "label": "Source has a real audience and traffic",
+     "eyebrow": "Match",
+     "variant": "v1"
+    },
+    {
+     "icon": "i33c65835",
+     "label": "Link placed within useful content",
+     "eyebrow": "Match",
+     "variant": "v1"
+    },
+    {
+     "icon": "i1a581cdb",
+     "label": "Natural, non-repetitive anchor text",
+     "eyebrow": "Under review",
+     "variant": "v2"
+    },
+    {
+     "icon": "i1a581cdb",
+     "label": "Clear publishing policy",
+     "eyebrow": "Under review",
+     "variant": "v2"
+    }
+   ],
+   "label_2": "Proposed link placement",
+   "eyebrow_3": "Anchor text",
+   "label_3": "Accepted",
+   "label_4": "Needs review",
+   "label_5": "Rejected"
+  },
+  {
+   "acf_fc_layout": "quality",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Evaluation criteria",
+   "title": "What makes a link helpful or harmful",
+   "text": "We don't measure links by quantity. We vet every source before any work begins and rule out anything that would harm your site, even if it's available and quick.",
+   "items": [
+    {
+     "heading": "Industry relevance",
+     "text": "A site that covers a field close to yours, not a general blog that publishes anything.",
+     "eyebrow": "Essential",
+     "variant": "v1"
+    },
+    {
+     "heading": "Real traffic and audience",
+     "text": "A source with actual readers, not a site built only to sell links.",
+     "eyebrow": "Essential",
+     "variant": "v1"
+    },
+    {
+     "heading": "Placement within the text",
+     "text": "A link inside a useful paragraph, not in a footer or a crowded list of links.",
+     "eyebrow": "Important",
+     "variant": "v2"
+    },
+    {
+     "heading": "Anchor text variety",
+     "text": "A natural mix of brand name and descriptive phrases, with no automated repetition.",
+     "eyebrow": "Important",
+     "variant": "v2"
+    },
+    {
+     "heading": "Publishing policy",
+     "text": "How transparent the source is about publishing sponsored content and how it reviews it.",
+     "eyebrow": "Important",
+     "variant": "v2"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "compare",
+   "sh_hide": 0,
+   "eyebrow": "Comparison",
+   "title": "A good link vs. a harmful link",
+   "heading": "Good link",
+   "items": [
+    {
+     "label": "From a site close to your industry with a real audience."
+    },
+    {
+     "label": "Within content that serves the reader and mentions your site in context."
+    },
+    {
+     "label": "Natural anchor text that describes the target page."
+    },
+    {
+     "label": "Points to a page that genuinely deserves to rank."
+    }
+   ],
+   "heading_2": "Harmful link",
+   "items_2": [
+    {
+     "label": "From a network of sites built to sell links."
+    },
+    {
+     "label": "In a footer or a list of links unrelated to the content."
+    },
+    {
+     "label": "Repeated anchor text using a single commercial phrase."
+    },
+    {
+     "label": "Points to a page unrelated to the source's topic."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "flow",
+   "sh_hide": 0,
+   "eyebrow": "How we work",
+   "title": "Our link building process",
+   "items": [
+    {
+     "heading": "Profile analysis",
+     "label": "Reviewing your current backlinks to find what's harmful or missing."
+    },
+    {
+     "heading": "Page selection",
+     "label": "Choosing the pages that deserve support and are close to competing."
+    },
+    {
+     "heading": "Source evaluation",
+     "label": "Vetting each source for relevance, audience and publishing policy."
+    },
+    {
+     "heading": "Execution",
+     "label": "Preparing the content, coordinating with the source and publishing the link in context."
+    },
+    {
+     "heading": "Documentation & tracking",
+     "label": "Logging every link and tracking whether it stays live and how it affects the page."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "honest",
+   "sh_hide": 0,
+   "heading": "What we don't promise",
+   "items": [
+    {
+     "label": "We don't commit to a fixed number of links per month before reviewing your site and its competition."
+    },
+    {
+     "label": "We don't promise a specific ranking or a guaranteed timeframe in return for links."
+    },
+    {
+     "label": "We don't claim every link is earned naturally; some placements are arranged with the source, and we say so."
+    },
+    {
+     "label": "We don't use link networks or sources that violate search engine guidelines."
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Full SEO service",
+     "link": 65
+    },
+    {
+     "label": "SEO content",
+     "link": 53
+    },
+    {
+     "label": "Consulting & performance analysis",
+     "link": 51
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Link building FAQs",
+   "items": [
+    {
+     "question": "How many backlinks will we get per month?",
+     "answer": "The number is set after reviewing your site, your competitors and the agreed scope of work. We don't commit to a figure before that review."
+    },
+    {
+     "question": "Are the links paid or earned?",
+     "answer": "Some placements are arranged with the source, and some come from content that's worth referencing. We state the nature of each source in our documentation."
+    },
+    {
+     "question": "Can backlinks hurt my website?",
+     "answer": "Yes, if they come from link networks or irrelevant sources. That's why we vet every source before any work begins and review your existing backlinks first."
+    },
+    {
+     "question": "Do you deal with existing toxic backlinks?",
+     "answer": "We review your link profile and identify what needs to be addressed, whether through removal requests or other measures, depending on the case."
+    },
+    {
+     "question": "When will I see the impact of link building?",
+     "answer": "It varies by page and competition. Links support pages that are already well prepared; they don't make up for weak content or technical issues."
+    },
+    {
+     "question": "Do you share the list of sources?",
+     "answer": "Yes. Every link is logged in a report showing the source, the target page and the publication date."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "seo",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

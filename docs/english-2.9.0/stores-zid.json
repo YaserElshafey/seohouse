@@ -1,0 +1,199 @@
+{
+ "id": 75,
+ "key": "stores-zid",
+ "title": "Zid",
+ "slug": "zid",
+ "parent": 77,
+ "path": "/services/stores/zid/",
+ "template": "page-templates/stores-zid.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "Zid Store Design, Ready to Sell | SEO House",
+  "sh_seo_description": "Zid store design with an organized catalog, orders and customers, plus shipping, payment and invoicing via Zid-supported providers and less manual work.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Zid store development",
+  "sh_crumb": "",
+  "rank_math_title": "Zid Store Design, Ready to Sell | SEO House",
+  "rank_math_description": "Zid store design with an organized catalog, orders and customers, plus shipping, payment and invoicing via Zid-supported providers and less manual work.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "zid store design"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "title": "Zid store design",
+   "text": "We set up your catalog, pages and categories inside Zid and connect orders, shipping and invoicing, so your store runs day to day without repetitive manual work.",
+   "link_label": "Book a consultation",
+   "link_label_2": "Operations dashboard",
+   "items": [
+    {
+     "heading": "Catalog",
+     "label": "Products, options & inventory",
+     "eyebrow": "Organized"
+    },
+    {
+     "heading": "Orders",
+     "label": "Statuses & follow-up path",
+     "eyebrow": "Running"
+    },
+    {
+     "heading": "Customers",
+     "label": "Data & communication",
+     "eyebrow": "Connected"
+    },
+    {
+     "heading": "Integrations",
+     "label": "Shipping, payment & invoicing",
+     "eyebrow": "Enabled"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "ops",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Operations dashboard",
+   "title": "Four areas that shape how well your store runs every day",
+   "text": "A store is more than a storefront. We organize the catalog, orders, customers and integrations so there's less manual work and fewer errors.",
+   "items": [
+    {
+     "heading": "Catalog",
+     "label": "A product, option and inventory structure that can grow."
+    },
+    {
+     "heading": "Orders",
+     "label": "Clear statuses and a follow-up path from order to delivery."
+    },
+    {
+     "heading": "Customers",
+     "label": "Organized data that makes communication and follow-up easier."
+    },
+    {
+     "heading": "Integrations",
+     "label": "Shipping, payment and invoicing within what the platform supports."
+    },
+    {
+     "heading": "Pages",
+     "label": "Categories and supporting pages that explain shipping and returns."
+    },
+    {
+     "heading": "Measurement",
+     "label": "Connecting Google Analytics and tracking the order path."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "phases",
+   "sh_hide": 0,
+   "eyebrow": "Project phases",
+   "title": "From setup to day-to-day operation",
+   "items": [
+    {
+     "heading": "Setup",
+     "label": "Account, domain and settings."
+    },
+    {
+     "heading": "Catalog",
+     "label": "Categories, products and options."
+    },
+    {
+     "heading": "Storefront",
+     "label": "Brand and supporting pages."
+    },
+    {
+     "heading": "Integrations",
+     "label": "Payment, shipping, invoicing and testing."
+    }
+   ],
+   "eyebrow_2": "05",
+   "heading": "Handover",
+   "label": "Measurement and training, then launch."
+  },
+  {
+   "acf_fc_layout": "fit",
+   "sh_hide": 0,
+   "eyebrow": "When it fits",
+   "title": "And what we make clear up front",
+   "items": [
+    {
+     "label": "A good fit when local operations and local support are a priority."
+    },
+    {
+     "label": "A good fit for mid-sized catalogs that need simple day-to-day management."
+    },
+    {
+     "label": "Customization works within the platform's capabilities and themes."
+    },
+    {
+     "label": "Integrations are limited to supported providers."
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Online store design & development",
+     "link": 77
+    },
+    {
+     "label": "Salla",
+     "link": 69
+    },
+    {
+     "label": "Product upload & content management",
+     "link": 27
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Zid store FAQ",
+   "items": [
+    {
+     "question": "When is Zid the right choice?",
+     "answer": "When local operations are a priority: orders, shipping, payment and invoicing in one dashboard, with local support."
+    },
+    {
+     "question": "What's the difference between building on Zid and on Salla?",
+     "answer": "Both are local platforms, but they differ in theme structure, catalog management and integrations, so the setup plan is different for each."
+    },
+    {
+     "question": "Do you connect inventory and invoicing systems?",
+     "answer": "We connect the integrations the platform offers, and we identify alternatives when the integration you need isn't available."
+    },
+    {
+     "question": "Can you optimize my Zid store's pages for search?",
+     "answer": "Yes, within the platform's capabilities: the category structure, descriptions, titles and meta tags."
+    },
+    {
+     "question": "Do you upload the products?",
+     "answer": "Product upload and product data organization is a separate service that can be added to your project."
+    },
+    {
+     "question": "Can you migrate my store from another platform?",
+     "answer": "Yes. We move your products and categories and put a redirect plan in place for your old URLs."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "stores",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

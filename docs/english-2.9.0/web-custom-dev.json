@@ -1,0 +1,194 @@
+{
+ "id": 85,
+ "key": "web-custom-dev",
+ "title": "Custom Development",
+ "slug": "custom-dev",
+ "parent": 87,
+ "path": "/services/web-design/custom-dev/",
+ "template": "page-templates/web-custom-dev.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "Custom Web Development for Portals & Systems | SEO House",
+  "sh_seo_description": "Custom web development for portals, bookings, memberships and dashboards, with payment, shipping and accounting integrations, tested on real data.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Custom web and systems development",
+  "sh_crumb": "",
+  "rank_math_title": "Custom Web Development for Portals & Systems | SEO House",
+  "rank_math_description": "Custom web development for portals, bookings, memberships and dashboards, with payment, shipping and accounting integrations, tested on real data.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "custom web development"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Custom development",
+   "title": "Custom systems development",
+   "text": "When ready-made platforms don't fit the way you work, we build the system from your requirements: users, processes, data and integrations, in clear phases with testing before handover.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "When it's necessary"
+  },
+  {
+   "acf_fc_layout": "fit",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "The decision",
+   "title": "When custom development is necessary, and when it isn't",
+   "heading": "Necessary when",
+   "items": [
+    {
+     "label": "Your process is genuinely different and ready-made platforms don't cover it."
+    },
+    {
+     "label": "You need to connect multiple systems in a single workflow."
+    },
+    {
+     "label": "Your team does a repetitive task by hand that could be automated."
+    },
+    {
+     "label": "You need permissions and approval workflows specific to your organization."
+    }
+   ],
+   "heading_2": "Not necessary when",
+   "items_2": [
+    {
+     "label": "A ready-made platform covers 80% of the need with light customization."
+    },
+    {
+     "label": "The goal is a company profile website or a standard online store."
+    },
+    {
+     "label": "The requirements are still unclear and change every week."
+    },
+    {
+     "label": "The budget can't support ongoing development and maintenance."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "phases",
+   "sh_hide": 0,
+   "eyebrow": "Delivery phases",
+   "title": "From requirements to a working system",
+   "items": [
+    {
+     "heading": "Requirements",
+     "label": "Sessions with process owners, documenting workflows and data."
+    },
+    {
+     "heading": "Technical design",
+     "label": "System architecture, data models, integrations and permissions."
+    },
+    {
+     "heading": "Build",
+     "label": "Phased development with regular reviews with you."
+    },
+    {
+     "heading": "Testing",
+     "label": "Functional testing and acceptance testing on realistic data."
+    },
+    {
+     "heading": "Handover & go-live",
+     "label": "Deployment, documentation and training, then a stabilization period."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "cases",
+   "sh_hide": 0,
+   "eyebrow": "Example systems",
+   "title": "Areas we work on",
+   "items": [
+    {
+     "heading": "Portals & platforms",
+     "label": "A public interface with accounts and dashboards for stakeholders."
+    },
+    {
+     "heading": "Internal systems",
+     "label": "Automating team processes and reducing manual work."
+    },
+    {
+     "heading": "Bookings & appointments",
+     "label": "Schedules, availability, notifications and payment."
+    },
+    {
+     "heading": "Memberships & subscriptions",
+     "label": "Tiers, permissions and renewals."
+    },
+    {
+     "heading": "Data dashboards",
+     "label": "Bringing data from multiple sources into a single report."
+    },
+    {
+     "heading": "Integrations",
+     "label": "Connecting payment, shipping, accounting and messaging systems."
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Website design & development",
+     "link": 87
+    },
+    {
+     "label": "React & Next.js",
+     "link": 91
+    },
+    {
+     "label": "All services",
+     "link": 67
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Custom development FAQ",
+   "items": [
+    {
+     "question": "How do you define the project scope?",
+     "answer": "We start with requirements sessions to define the users, processes, data and integrations, then produce a written scope and delivery phases."
+    },
+    {
+     "question": "Is custom development always more expensive?",
+     "answer": "Not always. It becomes the more economical choice when ready-made solutions cost you ongoing manual work, or multiple subscriptions that still don't cover what you need."
+    },
+    {
+     "question": "Can we start with a limited first version?",
+     "answer": "Yes, and we recommend it. We launch the core that solves the main problem, then expand based on actual usage."
+    },
+    {
+     "question": "Who owns the code?",
+     "answer": "You do. The code is handed over with documentation, access to the repository and the production environment."
+    },
+    {
+     "question": "How do you test the system?",
+     "answer": "We run functional tests on every workflow, plus acceptance testing with your team on near-real data before launch."
+    },
+    {
+     "question": "What happens after handover?",
+     "answer": "A stabilization period to address feedback, followed by an optional agreement for maintenance and ongoing development."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "web",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

@@ -1,0 +1,466 @@
+{
+ "id": 55,
+ "key": "seo-egypt",
+ "title": "Egypt SEO",
+ "slug": "egypt",
+ "parent": 65,
+ "path": "/services/seo/egypt/",
+ "template": "page-templates/seo-egypt.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "SEO Company in Egypt | SEO Services | SEO House",
+  "sh_seo_description": "SEO House is an SEO company in Egypt helping businesses and online stores rank on Google, with competitor analysis, content, technical fixes and tracking.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Search engine optimization services",
+  "sh_crumb": "Egypt",
+  "rank_math_title": "SEO Company in Egypt | SEO Services | SEO House",
+  "rank_math_description": "SEO House is an SEO company in Egypt helping businesses and online stores rank on Google, with competitor analysis, content, technical fixes and tracking.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo company in egypt"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "SEO services in Egypt",
+   "title": "SEO Company in Egypt",
+   "text": "SEO House is an SEO company in Egypt that helps businesses and online stores reach their customers through search engines, from improving the website and content to tracking inquiries and sales.",
+   "link_label": "Book a consultation",
+   "link_label_2": "Explore SEO services",
+   "text_2": "Service name",
+   "items": [
+    {
+     "label": "Service + price"
+    },
+    {
+     "label": "Compare options"
+    },
+    {
+     "label": "Best option near me"
+    }
+   ],
+   "eyebrow_2": "The right page",
+   "text_3": "A service page that answers the question and leads to the next step",
+   "text_4": "Request the service",
+   "label": "Contact or order recorded on the site"
+  },
+  {
+   "acf_fc_layout": "client_logos",
+   "sh_hide": 0,
+   "text": "Companies that trust us"
+  },
+  {
+   "acf_fc_layout": "market",
+   "sh_hide": 0,
+   "eyebrow": "Understanding the Egyptian market",
+   "title": "Search in Egypt doesn't follow a single pattern",
+   "text": "A customer might search by the service name, use a different expression, or compare price, location and options before getting in touch. That's why we rely on real search data to decide which keywords and pages are worth the work.",
+   "text_2": "We review both Modern Standard Arabic and the phrasing people actually use in search, without stuffing content with forced dialect.",
+   "items": [
+    {
+     "heading": "Searching for a service",
+     "items": [
+      {
+       "label": "Service name"
+      },
+      {
+       "label": "Service + city"
+      },
+      {
+       "label": "Service + specialty"
+      }
+     ],
+     "eyebrow": "Service page",
+     "text": "Direct phrases that express a clear need and call for a service page that answers them without distraction."
+    },
+    {
+     "heading": "Comparing options",
+     "items": [
+      {
+       "label": "Service + price"
+      },
+      {
+       "label": "Compare options"
+      },
+      {
+       "label": "Difference between alternatives"
+      }
+     ],
+     "eyebrow": "Comparison or pricing page",
+     "text": "The customer is still deciding, so the content here helps them understand the differences and choose the right solution."
+    },
+    {
+     "heading": "Ready to get in touch or order",
+     "items": [
+      {
+       "label": "Request the service"
+      },
+      {
+       "label": "Contact number"
+      },
+      {
+       "label": "Book an appointment"
+      }
+     ],
+     "eyebrow": "Contact or booking form",
+     "text": "Intent to act is high, and every extra step or unclear CTA can cost the site a customer who is ready to buy."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "egypt_case",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "A verified result from Search Console",
+   "title": "From 825 to 12.9K clicks in 28 days",
+   "text": "A medical services website reached 12.9K organic clicks in 28 days, compared with 825 clicks in the previous period, after we improved its pages and content and connected search to the right path through the site.",
+   "items": [
+    {
+     "label": "Sector",
+     "heading": "Medical services"
+    },
+    {
+     "label": "Source",
+     "heading": "Search Console"
+    },
+    {
+     "label": "Period",
+     "heading": "Two 28-day periods"
+    }
+   ],
+   "label": "Search Console",
+   "link": "uploads/03-case-gsc-clicks-12900.webp",
+   "image": 102
+  },
+  {
+   "acf_fc_layout": "method",
+   "sh_hide": 0,
+   "eyebrow": "From search to results",
+   "title": "A plan that starts with how customers search",
+   "eyebrow_2": "01",
+   "heading": "Discovering demand",
+   "text": "We review the keywords and pages that bring in real visibility, and the opportunities the site hasn't captured yet.",
+   "link": 51,
+   "link_label": "Consulting & performance analysis →",
+   "items": [
+    {
+     "heading": "Identifying opportunity pages",
+     "text": "We match each search intent to the right page and decide what needs improving or creating.",
+     "items": [
+      {
+       "link": 61,
+       "link_label": "On-page SEO →"
+      },
+      {
+       "link": 53,
+       "link_label": "Content writing →"
+      }
+     ]
+    },
+    {
+     "heading": "Implementation",
+     "text": "We handle technical issues, pages, content and links in order of priority.",
+     "items": [
+      {
+       "link": 63,
+       "link_label": "Technical SEO →"
+      },
+      {
+       "link": 49,
+       "link_label": "Off-page SEO →"
+      }
+     ]
+    }
+   ],
+   "eyebrow_3": "04",
+   "heading_2": "Measurement & optimization",
+   "text_2": "We measure the impact on qualified traffic, inquiries and orders.",
+   "link_2": 51,
+   "link_label_2": "Consulting & performance analysis →",
+   "link_3": 23,
+   "link_label_3": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "scope",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Scope of work",
+   "title": "What does an SEO project in Egypt include?",
+   "text": "We address everything that affects your site's visibility together, from its technical foundation and pages to its content, authority and the way results are measured.",
+   "items": [
+    {
+     "link": 63,
+     "heading": "Technical SEO",
+     "text": "Crawling, indexing, speed, site architecture, and the issues that stop search engines from reading your pages correctly."
+    },
+    {
+     "link": 61,
+     "heading": "On-page optimization",
+     "text": "Optimizing titles, content and internal links, and tying each page to a clear search goal."
+    },
+    {
+     "link": 53,
+     "heading": "SEO content",
+     "text": "Creating and developing content that answers customer questions and supports your services and business decisions."
+    },
+    {
+     "link": 49,
+     "heading": "Authority & link building",
+     "text": "Supporting target pages with suitable sources and links, and tracking their impact on visibility."
+    },
+    {
+     "link": 51,
+     "heading": "Consulting & measurement",
+     "text": "Setting priorities, tracking performance, and tying the work to qualified traffic, inquiries and orders."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "first_month",
+   "sh_hide": 0,
+   "eyebrow": "Month one",
+   "title": "A clear picture of what your site needs first",
+   "text": "In the first month, we identify how your customers search, which pages are worth developing, and which issues are keeping the site from competing.",
+   "items": [
+    {
+     "text": "A review of your search data and the pages currently showing in results."
+    },
+    {
+     "text": "An analysis of the search phrasing, questions and comparisons related to your service."
+    },
+    {
+     "text": "A review of technical factors and indexing."
+    },
+    {
+     "text": "A map of keywords to existing and needed pages."
+    },
+    {
+     "text": "An implementation order based on opportunities for visibility, inquiries and orders."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "sectors",
+   "sh_hide": 0,
+   "eyebrow": "Industries",
+   "title": "SEO by industry",
+   "all_label": "All industries",
+   "all_link": 47,
+   "path_label": "Search path to decision",
+   "link_label": "Industry page",
+   "sectors": [
+    {
+     "label": "E-commerce",
+     "desc": "Category and product pages are the main source of visibility, and a store needs a clear structure and descriptions that answer the buyer's questions before they order.",
+     "link": 31,
+     "path": [
+      {
+       "step": "Searching for the product"
+      },
+      {
+       "step": "Comparing prices and specs"
+      },
+      {
+       "step": "Completing the order"
+      }
+     ]
+    },
+    {
+     "label": "Health & medical",
+     "desc": "Patients search for a service or symptoms, then compare providers and locations before booking, so service pages need clarity and trusted sources.",
+     "link": 37,
+     "path": [
+      {
+       "step": "Searching for a service or symptoms"
+      },
+      {
+       "step": "Comparing providers and locations"
+      },
+      {
+       "step": "Booking an appointment"
+      }
+     ]
+    },
+    {
+     "label": "Real estate & construction",
+     "desc": "A long decision that moves between projects, areas and prices, so the site needs well-organized project and area pages.",
+     "link": 41,
+     "path": [
+      {
+       "step": "Searching for an area or project"
+      },
+      {
+       "step": "Comparing units and prices"
+      },
+      {
+       "step": "Requesting a viewing"
+      }
+     ]
+    },
+    {
+     "label": "Education & training",
+     "desc": "Students search for a field or skill, then compare content, duration and certification, and course pages are where the decision is made.",
+     "link": 33,
+     "path": [
+      {
+       "step": "Searching for a field"
+      },
+      {
+       "step": "Comparing courses and certificates"
+      },
+      {
+       "step": "Registering"
+      }
+     ]
+    },
+    {
+     "label": "Tourism & travel",
+     "desc": "Search is seasonal and starts with a destination or activity, so itinerary and destination pages need regular updates and a clear path to booking.",
+     "link": 45,
+     "path": [
+      {
+       "step": "Searching for a destination"
+      },
+      {
+       "step": "Comparing itineraries"
+      },
+      {
+       "step": "Booking"
+      }
+     ]
+    },
+    {
+     "label": "Technology & software",
+     "desc": "Customers search for the problem or use case before the product name, so solution and use-case pages need precise coverage.",
+     "link": 43,
+     "path": [
+      {
+       "step": "Searching for the problem"
+      },
+      {
+       "step": "Comparing solutions and integrations"
+      },
+      {
+       "step": "Requesting a demo or trial"
+      }
+     ]
+    },
+    {
+     "label": "Legal & consulting",
+     "desc": "Trust is the deciding factor, so the site needs clear service pages and sources that establish expertise.",
+     "link": 39,
+     "path": [
+      {
+       "step": "Searching for a legal service"
+      },
+      {
+       "step": "Reviewing expertise and sources"
+      },
+      {
+       "step": "Requesting a consultation"
+      }
+     ]
+    },
+    {
+     "label": "Food & restaurants",
+     "desc": "Search is local and decisions are quick, so branch and menu pages need to be clear and make ordering easy.",
+     "link": 35,
+     "path": [
+      {
+       "step": "Local search"
+      },
+      {
+       "step": "Checking the menu and branches"
+      },
+      {
+       "step": "Ordering or visiting"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "why",
+   "sh_hide": 0,
+   "title": "Clear execution that doesn't stop at recommendations",
+   "items": [
+    {
+     "label": "Experience since 2017 building and optimizing websites across different industries."
+    },
+    {
+     "label": "We analyze how customers search before creating pages."
+    },
+    {
+     "label": "We follow up on implementation, indexing and performance."
+    },
+    {
+     "label": "Reports that show what was done, what changed and what needs a new priority."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "reviews",
+   "sh_hide": 0,
+   "eyebrow": "Client experiences",
+   "title": "What do our clients say about working with us?",
+   "all_link": "",
+   "all_label": "",
+   "text": "Reviews appear exactly as clients wrote them on the SEO House Google profile, with their names and ratings.",
+   "heading": "Google reviews area",
+   "text_2": "Real reviews from our profile, with client names and ratings, will appear here once the plugin is connected.",
+   "label": "Trustindex"
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Questions about SEO services in Egypt",
+   "items": [
+    {
+     "question": "Is search behavior in Egypt different from other markets?",
+     "answer": "Search phrasing and the level of competition for the same terms differ, and many searchers tend to compare options before getting in touch. That's why we build keywords and pages on real search data, not generic lists."
+    },
+    {
+     "question": "How do you decide which keywords deserve their own page?",
+     "answer": "We create a separate page when a phrase reflects a different service or need with its own search intent. Closely related variations are grouped on one page so visibility isn't split between pages."
+    },
+    {
+     "question": "Can you improve my current website without rebuilding it?",
+     "answer": "In most cases, yes. We start by fixing what's holding back indexing, page structure and content, and we only recommend a rebuild if the platform itself prevents optimization."
+    },
+    {
+     "question": "What's the difference between optimizing a service page and creating new content?",
+     "answer": "A service page targets people who want to buy or get in touch now, while new content targets people looking for answers before they decide. We use the first to bring in orders and the second to expand visibility and feed your service pages."
+    },
+    {
+     "question": "How do you set priorities in the first month?",
+     "answer": "We weigh the size of the opportunity against the strength of the competition and how close the page is to an order, then start with what can be improved quickly for a noticeable impact before moving on to work that takes longer."
+    },
+    {
+     "question": "How do you measure inquiries and orders that come from search?",
+     "answer": "We set up contact and order events in Google Analytics 4 and connect them to the organic channel and to the pages visitors came from, so you can see the impact of each page on its own."
+    },
+    {
+     "question": "Does the service include follow-up on implementation and indexing?",
+     "answer": "Yes. We follow up on the changes being implemented and on pages appearing in the index, fix whatever is preventing them from being indexed, and include this in the progress report."
+    },
+    {
+     "question": "How is the cost of SEO services determined?",
+     "answer": "It depends on the size of your site, the competition and the scope of work required. Check our pricing page, then book a call to discuss your situation."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "seo",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}
