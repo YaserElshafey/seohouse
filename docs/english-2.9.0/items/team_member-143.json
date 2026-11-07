@@ -1,0 +1,36 @@
+{
+ "title": "Mona Ali",
+ "slug": "mona-ali-en",
+ "content": "",
+ "excerpt": "",
+ "fields": {
+  "role": "Social Media Lead",
+  "experience": "2+ years of experience",
+  "specialties": [
+   {
+    "label": "Content"
+   },
+   {
+    "label": "Ads"
+   }
+  ],
+  "bio": "",
+  "links": [],
+  "linkedin": "https://www.linkedin.com/in/mona-ali-a18028254/",
+  "author": null,
+  "home_photo": 1,
+  "sh_seo_title": "",
+  "sh_seo_description": "",
+  "sh_seo_noindex": 0,
+  "sh_seo_og_image": null,
+  "sh_crumb": "",
+  "sh_crumb_ancestor": "",
+  "sh_schema_service": "",
+  "sh_schema_type": "auto"
+ },
+ "seo": {
+  "rank_math_title": "Mona Ali – Social Media Lead | SEO House",
+  "rank_math_description": "Mona Ali is the Social Media Lead at SEO House, with 2+ years of experience in social media content and paid ads for brands in KSA, Egypt and the UAE.",
+  "rank_math_focus_keyword": "mona ali"
+ }
+}

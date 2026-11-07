@@ -97,3 +97,23 @@ function sh_lang_switch_html( string $style ): string {
 		esc_html( $s['label'] )
 	);
 }
+
+/**
+ * On English pages, an article's featured image whose stored alt text is Arabic (media is shared by both
+ * languages) is described by the English article title.
+ */
+add_filter(
+	'wp_get_attachment_image_attributes',
+	static function ( $attr, $attachment ) {
+		if ( ! sh_is_en() || ! is_singular() || empty( $attr['alt'] ) || ! preg_match( '/\p{Arabic}/u', (string) $attr['alt'] ) ) {
+			return $attr;
+		}
+		$id = (int) get_queried_object_id();
+		if ( (int) get_post_thumbnail_id( $id ) === (int) $attachment->ID ) {
+			$attr['alt'] = wp_strip_all_tags( get_the_title( $id ) );
+		}
+		return $attr;
+	},
+	10,
+	2
+);

@@ -1,0 +1,111 @@
+{
+ "title": "E-commerce: Organic Sales Growth for a Salla Store",
+ "slug": "ecommerce-seo-case-study",
+ "content": "",
+ "excerpt": "",
+ "fields": {
+  "summary": "Higher organic sales for a Salla store, while cutting reliance on Google Ads by 45%.",
+  "crumb": "",
+  "result": "+234%",
+  "result_label": "Traffic growth",
+  "sector": "E-commerce",
+  "market": "",
+  "filter": [
+   "ecommerce"
+  ],
+  "client": "Jalsatak",
+  "client_public": 1,
+  "client_url": "",
+  "client_logo": null,
+  "duration": "10 months of ongoing collaboration",
+  "source": "",
+  "period": "",
+  "challenge_title": "Heavy reliance on ads and weak organic visibility",
+  "challenge_text": "Before we started, the store relied heavily on paid ads to bring in traffic and sales, while its organic visibility on key category and product pages was very weak. The site structure also did not help search engines understand which pages were the priority, buying-intent keywords were poorly targeted, and many pages brought in no qualified traffic or steady sales.",
+  "solution_title": "What we did",
+  "solution_intro": "We started by reorganizing the store's structure and identifying the most important pages in terms of demand and profitability.",
+  "steps": [
+   {
+    "title": "Restructuring the store",
+    "text": "Identifying the most important pages in terms of demand and profitability, and organizing the structure around them."
+   },
+   {
+    "title": "Optimizing category and product pages",
+    "text": "Working on titles, on-page descriptions and internal links between pages."
+   },
+   {
+    "title": "A content plan to support the store",
+    "text": "Creating content that supports the store's pages and targets keywords with high purchase intent."
+   },
+   {
+    "title": "Technical factors affecting crawling and indexing",
+    "text": "Improving what affects crawling and indexing, to gradually reduce reliance on ads."
+   }
+  ],
+  "results_text": "Over the course of the project, the store saw clear growth in organic traffic to pages with purchase intent, and more of its pages appeared in the top search results. Ongoing optimization also increased the contribution of organic traffic to sales, eased some of the pressure on ad spend and struck a better balance between organic and paid growth.",
+  "metrics": [
+   {
+    "label": "Traffic",
+    "unit": "",
+    "before": "",
+    "after": "",
+    "change": "+234%",
+    "source": "",
+    "screenshot": null
+   },
+   {
+    "label": "Leads",
+    "unit": "",
+    "before": "",
+    "after": "",
+    "change": "+314%",
+    "source": "",
+    "screenshot": null
+   }
+  ],
+  "period_before": "",
+  "period_after": "",
+  "gallery": [
+   {
+    "image": 105,
+    "alt": "Report screenshot from the published case study page (1)",
+    "caption": "Screenshot published on the current case study page.",
+    "source": "",
+    "verified": 0
+   },
+   {
+    "image": 106,
+    "alt": "Report screenshot from the published case study page (2)",
+    "caption": "Screenshot published on the current case study page.",
+    "source": "",
+    "verified": 0
+   },
+   {
+    "image": 107,
+    "alt": "Report screenshot from the published case study page (3)",
+    "caption": "Screenshot published on the current case study page.",
+    "source": "",
+    "verified": 0
+   }
+  ],
+  "service_label": "E-commerce SEO",
+  "service_page": "",
+  "related_pages": null,
+  "cta_title": "",
+  "cta_text": "",
+  "review_notes": "The headline figure on the published page (+184%) has no metric name and does not match +234% (traffic) or +314% (leads). The traffic metric is shown instead until it is confirmed what +184% measures.\nThe summary mentions “sales” and “cutting reliance on Google Ads by 45%”, while the metrics shown are traffic and leads; a screenshot proving the 45% figure is needed, or it should be removed.\nThe published page has no data source and no comparison periods.\nThe three “Results at a glance” screenshots are the same ones used in the healthcare and education case studies; the screenshots for this case need to be confirmed.",
+  "sh_seo_title": "",
+  "sh_seo_description": "",
+  "sh_seo_noindex": 0,
+  "sh_seo_og_image": null,
+  "sh_crumb": "",
+  "sh_crumb_ancestor": "",
+  "sh_schema_service": "",
+  "sh_schema_type": "auto"
+ },
+ "seo": {
+  "rank_math_title": "E-commerce SEO Case Study: Salla Store | SEO House",
+  "rank_math_description": "E-commerce SEO case study: higher organic sales for a Salla store while cutting reliance on Google Ads by 45%, with +234% traffic and +314% leads.",
+  "rank_math_focus_keyword": "e-commerce seo case study"
+ }
+}

@@ -74,7 +74,14 @@ function sh_hreflang_group(): array {
 add_action(
 	'wp_head',
 	static function () {
-		if ( ! is_singular() || is_paged() ) {
+		if ( is_paged() ) {
+			return;
+		}
+		if ( ( is_home() && ! is_front_page() ) || is_category() ) {
+			sh_hreflang_archives();
+			return;
+		}
+		if ( ! is_singular() ) {
 			return;
 		}
 		$g = sh_hreflang_group();
@@ -102,4 +109,34 @@ function sh_hreflang_translations(): void {
 		printf( '<link rel="alternate" hreflang="%s" href="%s" />' . "\n", esc_attr( $lang ), esc_url( $alt[1] ) );
 	}
 	printf( '<link rel="alternate" hreflang="x-default" href="%s" />' . "\n", esc_url( $alts['ar'][1] ) );
+}
+
+/**
+ * The blog (posts page) and its categories: ar, en and x-default when both language versions exist and the
+ * other one has articles (an empty English category is not announced).
+ */
+function sh_hreflang_archives(): void {
+	if ( ! function_exists( 'sh_i18n_alternates' ) || ! function_exists( 'pll_get_term_translations' ) ) {
+		return;
+	}
+	$links = array();
+	if ( is_home() ) {
+		foreach ( sh_i18n_alternates( (int) get_option( 'page_for_posts' ) ) as $lang => $alt ) {
+			$links[ $lang ] = $alt[1];
+		}
+	} else {
+		foreach ( (array) pll_get_term_translations( (int) get_queried_object_id() ) as $lang => $tid ) {
+			$t = get_term( (int) $tid, 'category' );
+			if ( in_array( $lang, array( 'ar', 'en' ), true ) && $t && ! is_wp_error( $t ) && $t->count > 0 ) {
+				$links[ $lang ] = (string) get_term_link( $t );
+			}
+		}
+	}
+	if ( count( $links ) < 2 || ! isset( $links['ar'] ) ) {
+		return;
+	}
+	foreach ( array( 'ar', 'en' ) as $lang ) {
+		printf( '<link rel="alternate" hreflang="%s" href="%s" />' . "\n", esc_attr( $lang ), esc_url( $links[ $lang ] ) );
+	}
+	printf( '<link rel="alternate" hreflang="x-default" href="%s" />' . "\n", esc_url( $links['ar'] ) );
 }

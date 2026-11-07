@@ -1,0 +1,36 @@
+{
+ "title": "Esraa Mohamed",
+ "slug": "esraa-mohamed-en",
+ "content": "",
+ "excerpt": "",
+ "fields": {
+  "role": "E-commerce SEO Specialist",
+  "experience": "1+ year of experience",
+  "specialties": [
+   {
+    "label": "Products"
+   },
+   {
+    "label": "Content"
+   }
+  ],
+  "bio": "",
+  "links": [],
+  "linkedin": "",
+  "author": null,
+  "home_photo": 1,
+  "sh_seo_title": "",
+  "sh_seo_description": "",
+  "sh_seo_noindex": 0,
+  "sh_seo_og_image": null,
+  "sh_crumb": "",
+  "sh_crumb_ancestor": "",
+  "sh_schema_service": "",
+  "sh_schema_type": "auto"
+ },
+ "seo": {
+  "rank_math_title": "Esraa Mohamed – E-commerce SEO Specialist | SEO House",
+  "rank_math_description": "Esraa Mohamed is an E-commerce SEO Specialist at SEO House, with 1+ year of experience optimizing product pages and store content for search.",
+  "rank_math_focus_keyword": "esraa mohamed"
+ }
+}

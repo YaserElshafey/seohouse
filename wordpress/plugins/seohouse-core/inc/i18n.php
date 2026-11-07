@@ -133,6 +133,21 @@ function sh_i18n_locale_for( array $in ): void {
 
 /* ------------------------------------------------------------------ front end */
 
+// Rank Math's Polylang integration appends the language's home path (en/) to the canonical of the posts
+// page as if it were the home URL: /en/blog/en/. The English blog's canonical is its own address.
+add_filter(
+	'rank_math/frontend/canonical',
+	static function ( $canonical ) {
+		if ( ! sh_i18n_active() || ! sh_is_en() || ! is_home() || is_front_page() ) {
+			return $canonical;
+		}
+		$url   = (string) get_permalink( (int) get_option( 'page_for_posts' ) );
+		$paged = (int) get_query_var( 'paged' );
+		return $paged > 1 ? trailingslashit( $url ) . 'page/' . $paged . '/' : $url;
+	},
+	99
+);
+
 // the site name on English pages (titles of archives and of anything without its own SEO title)
 add_filter(
 	'option_blogname',

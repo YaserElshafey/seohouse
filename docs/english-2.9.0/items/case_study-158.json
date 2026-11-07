@@ -1,0 +1,111 @@
+{
+ "title": "Healthcare: Organic Traffic Growth for a Medical Clinic",
+ "slug": "healthcare-seo-case-study",
+ "content": "",
+ "excerpt": "",
+ "fields": {
+  "summary": "Organic traffic growth for a specialized medical clinic, which moved from position 47 to #1 for its main keywords.",
+  "crumb": "",
+  "result": "+254%",
+  "result_label": "Traffic growth",
+  "sector": "Health & Medical",
+  "market": "",
+  "filter": [
+   "health"
+  ],
+  "client": "Lavizon Clinics",
+  "client_public": 1,
+  "client_url": "",
+  "client_logo": null,
+  "duration": "",
+  "source": "",
+  "period": "",
+  "challenge_title": "Weak organic visibility for the clinic's core services",
+  "challenge_text": "Before we worked on the website, the medical clinic had weak organic visibility for keywords related to its core services, and search played only a limited role in bringing in bookings and inquiries. The pages were also not built around the needs of patients searching online, whether in how the content was written, how the information was organized or how clearly the clinic's services were targeted.",
+  "solution_title": "What we did",
+  "solution_intro": "We started by reviewing the most important medical and service pages.",
+  "steps": [
+   {
+    "title": "Re-optimizing medical and service pages",
+    "text": "Optimizing the most important pages to match how users actually search."
+   },
+   {
+    "title": "Content development",
+    "text": "Explaining services more clearly and in a way that builds trust with patients searching online."
+   },
+   {
+    "title": "Site structure and internal linking",
+    "text": "Improving the site's internal structure and the links between its pages."
+   },
+   {
+    "title": "Content growth plan",
+    "text": "Supporting the clinic's visibility for keywords related to its target services and specialties."
+   }
+  ],
+  "results_text": "Over the months of work, the website achieved clear growth in organic traffic, and rankings improved for a number of main keywords until important pages reached the first page. This strengthened the clinic's online presence and increased its chances of reaching patients searching directly for its services, instead of relying only on referrals or other sources.",
+  "metrics": [
+   {
+    "label": "Traffic",
+    "unit": "",
+    "before": "",
+    "after": "",
+    "change": "+254%",
+    "source": "",
+    "screenshot": null
+   },
+   {
+    "label": "Leads",
+    "unit": "",
+    "before": "",
+    "after": "",
+    "change": "+232%",
+    "source": "",
+    "screenshot": null
+   }
+  ],
+  "period_before": "",
+  "period_after": "",
+  "gallery": [
+   {
+    "image": 106,
+    "alt": "Report screenshot from the published case study page (1)",
+    "caption": "Screenshot published on the current case study page.",
+    "source": "",
+    "verified": 0
+   },
+   {
+    "image": 107,
+    "alt": "Report screenshot from the published case study page (2)",
+    "caption": "Screenshot published on the current case study page.",
+    "source": "",
+    "verified": 0
+   },
+   {
+    "image": 105,
+    "alt": "Report screenshot from the published case study page (3)",
+    "caption": "Screenshot published on the current case study page.",
+    "source": "",
+    "verified": 0
+   }
+  ],
+  "service_label": "Medical SEO",
+  "service_page": "",
+  "related_pages": null,
+  "cta_title": "",
+  "cta_text": "",
+  "review_notes": "The project duration is inconsistent: the summary says “within 8 months” while the project details say “6 months of ongoing collaboration”. The duration has been removed from the page until it is confirmed.\nThe headline figure (+312%) has no metric name and does not match +254% (traffic) or +232% (leads). The traffic metric is shown instead.\nThe claim “from position 47 to #1” needs a rankings screenshot to support it.\nThere is no source and no comparison periods, and the three screenshots are duplicated in the other two case studies.",
+  "sh_seo_title": "",
+  "sh_seo_description": "",
+  "sh_seo_noindex": 0,
+  "sh_seo_og_image": null,
+  "sh_crumb": "",
+  "sh_crumb_ancestor": "",
+  "sh_schema_service": "",
+  "sh_schema_type": "auto"
+ },
+ "seo": {
+  "rank_math_title": "Medical Clinic SEO Case Study | SEO House",
+  "rank_math_description": "Medical SEO case study: a specialized clinic grew organic traffic by 254% and moved from position 47 to #1 for its main keywords. See what we changed.",
+  "rank_math_focus_keyword": "medical seo case study"
+ }
+}

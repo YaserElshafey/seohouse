@@ -1,6 +1,6 @@
 {
  "theme": "seohouse",
- "version": "2.8.5",
+ "version": "2.8.6",
  "count": 365,
  "files": [
   {
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 1072,
-   "sha1": "06339495e505f8cc7629fd41d5df613520e97bf7"
+   "sha1": "35974cfb93e6c628f5755e2a0dd132ca01c3af11"
   },
   {
    "path": "header.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 545,
-   "sha1": "d09f85841113ea55e0a2729c76017cca8e8cf7b0"
+   "sha1": "3c7b852986275180c83b00756a1c8016bbf93e78"
   },
   {
    "path": "theme.json",
@@ -555,8 +555,8 @@
   },
   {
    "path": "inc/i18n.php",
-   "size": 3011,
-   "sha1": "28e0660201ba005c38371306371b2195be98dde1"
+   "size": 3630,
+   "sha1": "c5ef7c840e65c20f4d761902bc645f5debef2698"
   },
   {
    "path": "inc/navigation.php",
@@ -575,8 +575,8 @@
   },
   {
    "path": "inc/seo-hreflang.php",
-   "size": 4234,
-   "sha1": "90b47879401f4569957a892631d1726861d78094"
+   "size": 5533,
+   "sha1": "34bc7ac8b16ef5026f13eb2c0c8540d14f596221"
   },
   {
    "path": "inc/setup.php",
