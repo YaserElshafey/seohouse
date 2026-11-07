@@ -398,6 +398,7 @@ function sh_i18n_import_page( array $in ) {
 	if ( function_exists( 'sh_search_index' ) ) {
 		sh_search_index( $id );
 	}
+	sh_i18n_refresh_sitemaps();
 	$p = get_post( $id );
 	return array(
 		'id'       => $id,
@@ -410,6 +411,16 @@ function sh_i18n_import_page( array $in ) {
 		'missing'  => $missing,
 		'index'    => sh_i18n_indexable( $id ),
 	);
+}
+
+/**
+ * Rank Math rebuilds its sitemaps: its cached files are deleted now. (Cache_Watcher::clear() only queues
+ * the deletion for the end of a request in which the sitemap module runs, which a REST call is not.)
+ */
+function sh_i18n_refresh_sitemaps(): void {
+	if ( class_exists( '\\RankMath\\Sitemap\\Cache' ) && method_exists( '\\RankMath\\Sitemap\\Cache', 'invalidate_storage' ) ) {
+		\RankMath\Sitemap\Cache::invalidate_storage();
+	}
 }
 
 /** noindex (Rank Math robots + Core flag) on or off for one page. */
@@ -534,6 +545,61 @@ function sh_i18n_export_menus(): array {
 	return $out;
 }
 
+/** Company fields of «إعدادات سيو هاوس» that can be set over REST (content/options). */
+const SH_REMOTE_OPTION_FIELDS = array( 'sh_legal_name', 'sh_cr_number', 'sh_cr_office', 'sh_tax_number' );
+
+/**
+ * Exact text replacements inside one page's sections (both languages), e.g. filling placeholders of a
+ * legal page. Only whole occurrences of each "find" string in text values change; nothing else is written.
+ *
+ * @return array|WP_Error
+ */
+function sh_i18n_replace_text( int $id, array $pairs, bool $dry ) {
+	$p = get_post( $id );
+	if ( ! $p || 'page' !== $p->post_type || ! sh_core_acf_ready() ) {
+		return new WP_Error( 'sh_page', 'id: رقم صفحة.', array( 'status' => 400 ) );
+	}
+	$pairs = array_values( array_filter( $pairs, static fn( $x ) => is_array( $x ) && '' !== (string) ( $x['find'] ?? '' ) ) );
+	$found = array_fill( 0, count( $pairs ), 0 );
+	$walk  = static function ( $v ) use ( &$walk, $pairs, &$found ) {
+		if ( is_array( $v ) ) {
+			foreach ( $v as $k => $x ) {
+				$v[ $k ] = $walk( $x );
+			}
+			return $v;
+		}
+		if ( ! is_string( $v ) ) {
+			return $v;
+		}
+		foreach ( $pairs as $i => $pr ) {
+			$n = substr_count( $v, (string) $pr['find'] );
+			if ( $n ) {
+				$found[ $i ] += $n;
+				$v            = str_replace( (string) $pr['find'], (string) ( $pr['replace'] ?? '' ), $v );
+			}
+		}
+		return $v;
+	};
+	$changed = array();
+	foreach ( sh_core_section_fields( $id ) as $f ) {
+		$before = sh_transfer_value( $f, acf_get_value( $id, $f ) );
+		$after  = $walk( $before );
+		if ( $after !== $before ) {
+			$changed[] = substr( (string) $f['name'], 2 );
+			if ( ! $dry ) {
+				update_field( $f['key'], $after, $id );
+			}
+		}
+	}
+	if ( ! $dry && $changed ) {
+		sh_core_sections( $id, true );
+		if ( function_exists( 'sh_search_index' ) ) {
+			sh_search_index( $id );
+		}
+	}
+	return array( 'id' => $id, 'dry_run' => $dry, 'sections' => $changed, 'found' => $found );
+}
+
 add_action(
 	'rest_api_init',
 	static function () {
@@ -598,6 +664,36 @@ add_action(
 		);
 		register_rest_route(
 			'seohouse/v1',
+			'/content/replace',
+			array(
+				'methods'             => 'POST',
+				'callback'            => static function ( WP_REST_Request $r ) {
+					$in = (array) $r->get_json_params();
+					return rest_ensure_response( sh_i18n_replace_text( (int) ( $in['id'] ?? 0 ), (array) ( $in['pairs'] ?? array() ), ! isset( $in['dry_run'] ) || ! empty( $in['dry_run'] ) ) );
+				},
+				'permission_callback' => $admin,
+			)
+		);
+		register_rest_route(
+			'seohouse/v1',
+			'/content/options',
+			array(
+				'methods'             => 'POST',
+				'callback'            => static function ( WP_REST_Request $r ) {
+					$saved = array();
+					foreach ( (array) $r->get_json_params() as $k => $v ) {
+						if ( in_array( $k, SH_REMOTE_OPTION_FIELDS, true ) && is_scalar( $v ) ) {
+							update_field( $k, sanitize_text_field( (string) $v ), 'option' );
+							$saved[ $k ] = (string) get_field( $k, 'option', false );
+						}
+					}
+					return new WP_REST_Response( array( 'saved' => $saved ) );
+				},
+				'permission_callback' => $admin,
+			)
+		);
+		register_rest_route(
+			'seohouse/v1',
 			'/content/robots',
 			array(
 				'methods'             => 'POST',
@@ -612,6 +708,7 @@ add_action(
 						sh_i18n_set_index( $id, $index );
 						$out[ $id ] = $index ? 'index' : 'noindex';
 					}
+					sh_i18n_refresh_sitemaps();
 					return new WP_REST_Response( $out );
 				},
 				'permission_callback' => $admin,

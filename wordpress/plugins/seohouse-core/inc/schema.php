@@ -280,6 +280,19 @@ function sh_schema_address() {
 }
 
 /** The company from «إعدادات سيو هاوس». Always type Organization. */
+/** Commercial registration number as a schema.org PropertyValue (empty when not set). */
+function sh_schema_registration(): array {
+	$cr = sh_core_plain( sh_core_option( 'sh_cr_number', '' ) );
+	if ( '' === $cr ) {
+		return array();
+	}
+	return array(
+		'@type'      => 'PropertyValue',
+		'propertyID' => 'Commercial Registration',
+		'value'      => $cr,
+	);
+}
+
 function sh_schema_organization(): array {
 	$founded = trim( (string) sh_core_option( 'sh_founded', '' ) );
 	$logo    = sh_schema_logo();
@@ -289,6 +302,9 @@ function sh_schema_organization(): array {
 			'@id'           => sh_schema_id( 'organization' ),
 			'name'          => sh_core_plain( sh_core_option( 'sh_company_name', get_bloginfo( 'name' ) ) ),
 			'alternateName' => sh_core_plain( sh_core_option( 'sh_company_name_en', '' ) ),
+			'legalName'     => sh_core_plain( sh_core_option( 'sh_legal_name', '' ) ),
+			'taxID'         => sh_core_plain( sh_core_option( 'sh_tax_number', '' ) ),
+			'identifier'    => sh_schema_registration(),
 			'url'           => home_url( '/' ),
 			'logo'          => $logo,
 			'image'         => sh_schema_company_image( $logo ),

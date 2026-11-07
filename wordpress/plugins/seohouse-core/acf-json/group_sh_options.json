@@ -362,6 +362,38 @@
       "required": 0
     },
     {
+      "key": "field_sh_opt_legal_name",
+      "label": "الاسم القانوني للشركة",
+      "name": "sh_legal_name",
+      "type": "text",
+      "instructions": "كما في السجل التجاري والبطاقة الضريبية، مثل: سيو هاوس للتسويق الإلكتروني ش.ذ.م.م. يظهر في أسفل الفوتر وفي البيانات المنظمة (legalName).",
+      "required": 0
+    },
+    {
+      "key": "field_sh_opt_cr_number",
+      "label": "رقم السجل التجاري",
+      "name": "sh_cr_number",
+      "type": "text",
+      "instructions": "يظهر في أسفل الفوتر وفي البيانات المنظمة.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_opt_cr_office",
+      "label": "مكتب السجل التجاري",
+      "name": "sh_cr_office",
+      "type": "text",
+      "instructions": "اختياري، مثل: استثمار الإسكندرية.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_opt_tax_number",
+      "label": "رقم التسجيل الضريبي",
+      "name": "sh_tax_number",
+      "type": "text",
+      "instructions": "من البطاقة الضريبية. يظهر في أسفل الفوتر وفي البيانات المنظمة (taxID).",
+      "required": 0
+    },
+    {
       "key": "field_sh_opt_whatsapp",
       "label": "واتساب",
       "name": "sh_whatsapp",
@@ -892,5 +924,5 @@
   "active": true,
   "description": "",
   "show_in_rest": 0,
-  "modified": 1790000000
+  "modified": 1790001000
 }

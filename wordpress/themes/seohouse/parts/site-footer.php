@@ -15,6 +15,26 @@ $cta       = sh_header_cta();
 $show_cta  = 'thank-you' !== sh_view_key() && $cta['label'];
 $copyright = (string) sh_option( 'sh_copyright', '' );
 $copyright = $copyright ? str_replace( '{year}', wp_date( 'Y' ), $copyright ) : '© ' . wp_date( 'Y' ) . ' ' . sh_site_name();
+// legal identity under the copyright (from «إعدادات سيو هاوس ← بيانات الشركة»): name, commercial register, tax number
+$legal_bits = array();
+$legal_name = trim( (string) sh_option( 'sh_legal_name', '' ) );
+$cr_number  = trim( (string) sh_option( 'sh_cr_number', '' ) );
+$cr_office  = trim( (string) sh_option( 'sh_cr_office', '' ) );
+$tax_number = trim( (string) sh_option( 'sh_tax_number', '' ) );
+if ( '' !== $legal_name ) {
+	$legal_bits[] = esc_html( $legal_name );
+}
+if ( '' !== $cr_number ) {
+	$legal_bits[] = '' !== $cr_office
+		/* translators: 1: commercial register number, 2: register office */
+		? sprintf( esc_html__( 'سجل تجاري رقم %1$s (%2$s)', 'seohouse' ), '<bdi>' . esc_html( $cr_number ) . '</bdi>', esc_html( $cr_office ) )
+		/* translators: %s: commercial register number */
+		: sprintf( esc_html__( 'سجل تجاري رقم %s', 'seohouse' ), '<bdi>' . esc_html( $cr_number ) . '</bdi>' );
+}
+if ( '' !== $tax_number ) {
+	/* translators: %s: tax registration number */
+	$legal_bits[] = sprintf( esc_html__( 'رقم التسجيل الضريبي %s', 'seohouse' ), '<bdi>' . esc_html( $tax_number ) . '</bdi>' );
+}
 ?>
 <footer data-foot-blue style="position: relative; background: linear-gradient(rgb(40, 84, 232) 0%, rgb(36, 76, 214) 100%); color: rgb(255, 255, 255); overflow: hidden;">
 	<div aria-hidden="true" style="position: absolute; inset-inline: 0px; top: 0px; height: 2px; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35) 30%, rgba(255, 255, 255, 0.55) 55%, transparent);"></div>
@@ -43,7 +63,7 @@ $copyright = $copyright ? str_replace( '{year}', wp_date( 'Y' ), $copyright ) : 
 	</div>
 	<div style="position: relative; border-top: 1px solid rgba(255, 255, 255, 0.2);">
 		<div style="max-width: 1200px; margin: 0px auto; padding: 18px 20px; display: flex; flex-wrap: wrap; gap: 12px 20px; justify-content: space-between; font-size: 13px; color: rgb(255, 255, 255);">
-			<span><?php echo esc_html( $copyright ); ?></span>
+			<span><?php echo esc_html( $copyright ); ?><?php if ( $legal_bits ) : ?><span data-foot-legal style="display: block; margin-top: 4px; font-size: 12.5px; opacity: 0.9;"><?php echo implode( ' · ', $legal_bits ); // phpcs:ignore WordPress.Security.EscapeOutput -- each part escaped above ?></span><?php endif; ?></span>
 			<?php if ( $legal ) : ?>
 			<span style="display: flex; gap: 20px;">
 				<?php foreach ( $legal as $l ) : ?>
