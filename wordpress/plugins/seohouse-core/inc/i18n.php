@@ -943,15 +943,15 @@ function sh_i18n_export_menus(): array {
 const SH_REMOTE_OPTION_FIELDS = array( 'sh_legal_name', 'sh_cr_number', 'sh_cr_office', 'sh_tax_number' );
 
 /**
- * Exact text replacements inside one page's sections (both languages), e.g. filling placeholders of a
- * legal page. Only whole occurrences of each "find" string in text values change; nothing else is written.
+ * Exact text replacements inside one page's sections, or the fields of an article, case study or team
+ * member (both languages), e.g. filling placeholders of a legal page. Only whole occurrences of each "find" string in text values change; nothing else is written.
  *
  * @return array|WP_Error
  */
 function sh_i18n_replace_text( int $id, array $pairs, bool $dry ) {
 	$p = get_post( $id );
-	if ( ! $p || 'page' !== $p->post_type || ! sh_core_acf_ready() ) {
-		return new WP_Error( 'sh_page', 'id: رقم صفحة.', array( 'status' => 400 ) );
+	if ( ! $p || ! in_array( $p->post_type, array_merge( array( 'page' ), SH_I18N_ITEM_TYPES ), true ) || ! sh_core_acf_ready() ) {
+		return new WP_Error( 'sh_page', 'id: رقم صفحة أو مقال أو دراسة حالة أو عضو فريق.', array( 'status' => 400 ) );
 	}
 	$pairs = array_values( array_filter( $pairs, static fn( $x ) => is_array( $x ) && '' !== (string) ( $x['find'] ?? '' ) ) );
 	$found = array_fill( 0, count( $pairs ), 0 );
@@ -975,11 +975,12 @@ function sh_i18n_replace_text( int $id, array $pairs, bool $dry ) {
 		return $v;
 	};
 	$changed = array();
-	foreach ( sh_core_section_fields( $id ) as $f ) {
+	$defs = 'page' === $p->post_type ? sh_core_section_fields( $id ) : array_values( sh_i18n_type_fields( $p->post_type ) );
+	foreach ( $defs as $f ) {
 		$before = sh_transfer_value( $f, acf_get_value( $id, $f ) );
 		$after  = $walk( $before );
 		if ( $after !== $before ) {
-			$changed[] = substr( (string) $f['name'], 2 );
+			$changed[] = 'page' === $p->post_type ? substr( (string) $f['name'], 2 ) : (string) $f['name'];
 			if ( ! $dry ) {
 				update_field( $f['key'], $after, $id );
 			}
