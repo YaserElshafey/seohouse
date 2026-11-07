@@ -10,7 +10,9 @@
 
 /* hover states of shared components (design style-hover values) */
 .sh-hv-cta:hover { background: var(--sh-blue-hover) !important; }
-.sh-hv-nav:hover { color: var(--sh-link) !important; background: var(--sh-surface) !important; }
+.sh-hv-nav:hover { color: var(--sh-link) !important; background: rgba(40, 84, 232, .07) !important; }
+.sh-hv-nav:focus-visible, .sh-lang-switch:focus-visible { outline: 2px solid var(--sh-blue); outline-offset: 2px; }
+.sh-lang-switch:hover { color: var(--sh-link) !important; background: rgba(40, 84, 232, .07); }
 .sh-hv-mega:hover { background: rgba(171, 182, 194, 0.1) !important; }
 .sh-hv-link:hover { color: var(--sh-link) !important; }
 .sh-hv-onblue:hover, .sh-hv-onblue:focus-visible { background: var(--sh-blue-tint) !important; color: #1A3AB0 !important; }

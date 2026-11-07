@@ -1,6 +1,6 @@
 {
  "theme": "seohouse",
- "version": "2.8.1",
+ "version": "2.8.2",
  "count": 365,
  "files": [
   {
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 1072,
-   "sha1": "3e8927ef71642824a8950916e48b8b67ffadb330"
+   "sha1": "4fb356d636833082ce6fa0d228e427ae7ecc5f40"
   },
   {
    "path": "header.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 545,
-   "sha1": "7fc8343a7e7a4f89cffde4fa6cdab729836ed6fc"
+   "sha1": "e44a096413cb729bd3bccc9f13aef3273338b90b"
   },
   {
    "path": "theme.json",
@@ -95,8 +95,8 @@
   },
   {
    "path": "assets/css/theme.css",
-   "size": 30170,
-   "sha1": "255ac0d538a0afa4fdd7a74f67061bf17e94b587"
+   "size": 30387,
+   "sha1": "892fd90d9e2c2b2fd691f4d111c118a68fb30a7f"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -555,13 +555,13 @@
   },
   {
    "path": "inc/i18n.php",
-   "size": 2533,
-   "sha1": "b3b60e717736dab6c47d4572959d21ebce656680"
+   "size": 3011,
+   "sha1": "28e0660201ba005c38371306371b2195be98dde1"
   },
   {
    "path": "inc/navigation.php",
-   "size": 5860,
-   "sha1": "12907158bfd0b9d3ca333d757cc41322995f750e"
+   "size": 5974,
+   "sha1": "acb1997f24b750f2a730c03a7737aa15266664ad"
   },
   {
    "path": "inc/release-files.php",
@@ -790,8 +790,8 @@
   },
   {
    "path": "parts/drawer.php",
-   "size": 3537,
-   "sha1": "9cd82ca9eeabc48e424cb806e8cad00b744911d1"
+   "size": 3592,
+   "sha1": "e824355866120da31945a5f6800bb894c16b12dd"
   },
   {
    "path": "parts/legal-document.php",
@@ -815,8 +815,8 @@
   },
   {
    "path": "parts/site-header.php",
-   "size": 7391,
-   "sha1": "6df39179a20d0ada759dd87eae2c50822e1d9c25"
+   "size": 7331,
+   "sha1": "c682a6b2fa450e19e73a48c5c9dd93e9187771bd"
   },
   {
    "path": "parts/blog/empty.php",

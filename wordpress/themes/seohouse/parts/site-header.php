@@ -26,7 +26,7 @@ $chev  = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="cu
 			<i style="display: block; width: 18px; height: 1.5px; background: var(--sh-ink);"></i>
 			<i style="display: block; width: 18px; height: 1.5px; background: var(--sh-ink);"></i>
 		</button>
-		<nav aria-label="<?php esc_attr_e( 'القائمة الرئيسية', 'seohouse' ); ?>" data-nav="desktop" style="align-items: center; justify-content: center; gap: 2px; flex: 0 1 auto; min-width: 0px; margin-inline: auto; padding: 5px; background: var(--sh-surface); border: 1px solid var(--sh-line); border-radius: 999px;">
+		<nav aria-label="<?php esc_attr_e( 'القائمة الرئيسية', 'seohouse' ); ?>" data-nav="desktop" style="align-items: center; justify-content: center; gap: 4px; flex: 0 1 auto; min-width: 0px; margin-inline: auto;">
 			<?php
 			foreach ( $nav as $n ) :
 				$color = $n['active'] ? 'var(--sh-link)' : 'rgb(14, 22, 48)';
@@ -64,7 +64,7 @@ $chev  = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="cu
 			endforeach;
 			?>
 		</nav>
-		<?php echo sh_lang_switch_html( 'flex: 0 0 auto; font-size: 14px; font-weight: 600; color: var(--sh-ink); padding: 8px 12px; border: 1px solid var(--sh-line); border-radius: 999px; white-space: nowrap;' ); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside ?>
+		<?php echo sh_lang_switch_html( 'flex: 0 0 auto; display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; letter-spacing: .04em; color: var(--sh-ink); padding: 8px 10px; border-radius: 10px; white-space: nowrap;' ); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside ?>
 		<a href="<?php echo esc_url( sh_home_url() ); ?>" aria-label="<?php echo esc_attr( sh_site_name() . ' — ' . __( 'الرئيسية', 'seohouse' ) ); ?>" style="display: flex; align-items: center; flex: 0 0 auto; margin-inline-start: auto;"><img src="<?php echo esc_url( sh_logo_light_url() ); ?>" alt="<?php echo esc_attr( sh_site_name() ); ?>" width="145" height="34" fetchpriority="high" style="height: 34px; width: auto; display: block;"></a>
 	</div>
 </header>

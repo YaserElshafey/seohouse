@@ -74,7 +74,8 @@ function sh_lang_switch(): ?array {
 	}
 	return array(
 		'url'   => (string) get_permalink( $tid ),
-		'label' => 'en' === $to ? 'English' : 'العربية',
+		'label' => 'en' === $to ? 'EN' : 'AR',
+		'name'  => 'en' === $to ? 'English' : 'العربية',
 		'lang'  => $to,
 	);
 }
@@ -85,11 +86,14 @@ function sh_lang_switch_html( string $style ): string {
 	if ( ! $s ) {
 		return '';
 	}
+	$globe = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3"></path></svg>';
 	return sprintf(
-		'<a href="%1$s" hreflang="%2$s" lang="%2$s" data-sh-lang-switch style="%3$s">%4$s</a>',
+		'<a href="%1$s" hreflang="%2$s" lang="%2$s" aria-label="%3$s" title="%3$s" class="sh-lang-switch" data-sh-lang-switch style="%4$s">%5$s<span>%6$s</span></a>',
 		esc_url( $s['url'] ),
 		esc_attr( $s['lang'] ),
+		esc_attr( $s['name'] ),
 		esc_attr( $style ),
+		$globe,
 		esc_html( $s['label'] )
 	);
 }

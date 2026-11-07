@@ -35,7 +35,7 @@ $nav = sh_nav_primary();
 		</div>
 		<?php endforeach; ?>
 	</nav>
-	<?php echo sh_lang_switch_html( 'margin-top: 18px; display: block; text-align: center; font-weight: 600; color: var(--sh-ink); padding: 12px; border: 1px solid var(--sh-line); border-radius: 14px;' ); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside ?>
+	<?php echo sh_lang_switch_html( 'margin-top: 18px; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; letter-spacing: .04em; color: var(--sh-ink); padding: 12px; border-radius: 14px; background: var(--sh-surface);' ); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped inside ?>
 	<?php $cta = sh_header_cta(); if ( $cta['label'] ) : ?>
 	<a href="<?php echo esc_url( $cta['url'] ); ?>" style="margin-top: 22px; background: var(--sh-blue); color: rgb(255, 255, 255); font-weight: 700; padding: 16px; border-radius: 14px; display: block; text-align: center;"><?php echo esc_html( $cta['label'] ); ?></a>
 	<?php endif; ?>

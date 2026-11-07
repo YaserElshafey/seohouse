@@ -45,7 +45,8 @@ function sh_url_path( string $url ): string {
 function sh_path_active( string $url ): bool {
 	$p   = sh_url_path( $url );
 	$cur = sh_current_path();
-	return '/' === $p ? '/' === $cur : str_starts_with( $cur, $p );
+	$home = sh_url_path( sh_home_url() ); // a language home (/ or /en/) is active only on itself
+	return ( '/' === $p || $home === $p ) ? $p === $cur : str_starts_with( $cur, $p );
 }
 
 /**
