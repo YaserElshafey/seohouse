@@ -1,0 +1,283 @@
+{
+ "id": 67,
+ "key": "services",
+ "title": "Services",
+ "slug": "services",
+ "parent": 0,
+ "path": "/services/",
+ "template": "page-templates/services.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "SEO, Web Design & Online Store Services | SEO House",
+  "sh_seo_description": "SEO House is a digital marketing agency specializing in SEO, plus website and online store design and product upload, to turn Google searches into orders.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Digital marketing and web development services",
+  "sh_crumb": "",
+  "rank_math_title": "SEO, Web Design & Online Store Services | SEO House",
+  "rank_math_description": "SEO House is a digital marketing agency specializing in SEO, plus website and online store design and product upload, to turn Google searches into orders.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo services"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Our services",
+   "title": "SEO House services",
+   "text": "We work on what brings you customers from search, and on the foundation it stands on: a solid website or store and well-organized, measurable product content.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "Browse services",
+   "link": 65,
+   "heading": "Search engine optimization",
+   "label": "Core specialty: visibility and leads",
+   "items": [
+    {
+     "link": 87,
+     "icon": "ife038925",
+     "heading": "Website design & development",
+     "label": "WordPress, Webflow, React & Next.js, custom development"
+    },
+    {
+     "link": 77,
+     "icon": "ic15425eb",
+     "heading": "E-commerce store design",
+     "label": "Shopify, Salla, Zid, WooCommerce"
+    },
+    {
+     "link": 27,
+     "icon": "i85482618",
+     "heading": "Product upload & content management",
+     "label": "Catalog data, images and categories"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "families",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Services",
+   "title": "What we do",
+   "text": "SEO is our core specialty, and our other services build the foundation it runs on: a solid website or store and well-organized product content.",
+   "items": [
+    {
+     "eyebrow": "Core specialty",
+     "icon": "i4197e9b2",
+     "label": "Search engine optimization",
+     "text": "The work SEO House was built on: analyzing search demand, fixing the site's technical issues, building content and authority, then measuring the impact on leads.",
+     "eyebrow_2": "Customer search",
+     "eyebrow_3": "The right page",
+     "eyebrow_4": "Lead",
+     "items": [
+      {
+       "link": 65,
+       "label": "Full SEO service"
+      },
+      {
+       "link": 63,
+       "label": "Technical SEO"
+      },
+      {
+       "link": 61,
+       "label": "On-page SEO"
+      },
+      {
+       "link": 53,
+       "label": "SEO content"
+      },
+      {
+       "link": 49,
+       "label": "Link building"
+      },
+      {
+       "link": 51,
+       "label": "Consulting & performance analysis"
+      }
+     ]
+    },
+    {
+     "eyebrow": "Website build",
+     "icon": "i9c2be56f",
+     "label": "Website design & development",
+     "text": "Websites built around your business goals: a clear message, speed, easy management and a technical foundation ready for SEO work later on.",
+     "eyebrow_2": "Goal",
+     "eyebrow_3": "Structure",
+     "eyebrow_4": "Launch",
+     "items": [
+      {
+       "link": 87,
+       "label": "Website design & development"
+      },
+      {
+       "link": 95,
+       "label": "WordPress"
+      },
+      {
+       "link": 93,
+       "label": "Webflow"
+      },
+      {
+       "link": 91,
+       "label": "React & Next.js"
+      },
+      {
+       "link": 85,
+       "label": "Custom development"
+      }
+     ]
+    },
+    {
+     "eyebrow": "E-commerce",
+     "icon": "icaf199e7",
+     "label": "Online store design & development",
+     "text": "Stores built for easy buying: clear categories, persuasive product pages, and payment and shipping that work without friction.",
+     "eyebrow_2": "Category",
+     "eyebrow_3": "Product",
+     "eyebrow_4": "Checkout",
+     "items": [
+      {
+       "link": 77,
+       "label": "Online store design & development"
+      },
+      {
+       "link": 71,
+       "label": "Shopify"
+      },
+      {
+       "link": 69,
+       "label": "Salla"
+      },
+      {
+       "link": 75,
+       "label": "Zid"
+      },
+      {
+       "link": 73,
+       "label": "WooCommerce"
+      }
+     ]
+    }
+   ],
+   "eyebrow_2": "Content operations",
+   "label": "Product upload & content management",
+   "text_2": "Adding products with their data, images and categories in an organized way, so your store runs smoothly and shows up in search without messy data.",
+   "eyebrow_3": "Supplier file",
+   "eyebrow_4": "Editing",
+   "eyebrow_5": "Published",
+   "link": 27,
+   "label_2": "Product upload & content management"
+  },
+  {
+   "acf_fc_layout": "path",
+   "sh_hide": 0,
+   "eyebrow": "Where to start?",
+   "title": "Choose the right starting point for you",
+   "items": [
+    {
+     "link": 65,
+     "eyebrow": "You have a working website",
+     "heading": "You want more visibility and leads",
+     "text": "Start with SEO and a review of what's keeping your pages from competing.",
+     "label": "SEO service →"
+    },
+    {
+     "link": 87,
+     "eyebrow": "No website, or an outdated one",
+     "heading": "You want to build the right foundation",
+     "text": "Start with a website or store design that fits your business and platform.",
+     "label": "Website design →"
+    },
+    {
+     "link": 27,
+     "eyebrow": "Your store is live but the data is messy",
+     "heading": "You want an organized catalog",
+     "text": "Start with product upload and organizing product data and categories.",
+     "label": "Product upload →"
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "sectors",
+   "sh_hide": 0,
+   "eyebrow": "Sectors",
+   "title": "Sectors we serve",
+   "link": 47,
+   "link_label": "All sectors →",
+   "items": [
+    {
+     "link": 31,
+     "link_label": "E-commerce"
+    },
+    {
+     "link": 37,
+     "link_label": "Healthcare & medical"
+    },
+    {
+     "link": 41,
+     "link_label": "Real estate & construction"
+    },
+    {
+     "link": 33,
+     "link_label": "Education & training"
+    },
+    {
+     "link": 45,
+     "link_label": "Tourism & travel"
+    },
+    {
+     "link": 43,
+     "link_label": "Technology & software"
+    },
+    {
+     "link": 39,
+     "link_label": "Legal & consulting"
+    },
+    {
+     "link": 35,
+     "link_label": "Food & restaurants"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Questions about SEO House services",
+   "items": [
+    {
+     "question": "Can I hire you for just one service?",
+     "answer": "Yes. We can work on SEO alone, on building your website or store alone, or only on product upload, depending on what your project needs."
+    },
+    {
+     "question": "Which service is right for an existing website that isn't generating leads?",
+     "answer": "We usually start with an SEO review to find what's stopping your pages from ranking and converting, then decide whether the website itself needs development work."
+    },
+    {
+     "question": "Do you build the website and then leave?",
+     "answer": "Handover includes a walkthrough of how to manage the site and a transfer of all access rights. After that, we can agree on monthly support for ongoing optimization and measurement."
+    },
+    {
+     "question": "Do you use ready-made platforms or custom development?",
+     "answer": "We work with WordPress, Webflow, Shopify, Salla, Zid and WooCommerce, and we build custom solutions when ready-made platforms don't fit the system you need."
+    },
+    {
+     "question": "How is pricing determined?",
+     "answer": "Pricing depends on the scope of work, the size of your website or catalog, and how competitive your market is. Check our pricing page, then book a call to discuss your project."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

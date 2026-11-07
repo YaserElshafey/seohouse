@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 
 const SH_LANG_DEFAULT = 'ar';
 const SH_LANGS        = array(
-	'ar' => array( 'locale' => 'ar', 'name' => 'العربية', 'rtl' => true, 'term_group' => 0, 'flag' => 'arab' ),
+	'ar' => array( 'locale' => 'ar', 'name' => 'العربية', 'rtl' => true, 'term_group' => 0, 'flag' => 'sa' ),
 	'en' => array( 'locale' => 'en_US', 'name' => 'English', 'rtl' => false, 'term_group' => 1, 'flag' => 'us' ),
 );
 
@@ -189,6 +189,48 @@ add_filter(
 	3
 );
 
+// Site search covers pages and posts (in the visitor's language) and case studies and team members, which
+// have no language: Polylang filters a mixed query by language as a whole, so those are let through here.
+add_action(
+	'pre_get_posts',
+	static function ( WP_Query $q ) {
+		if ( is_admin() || ! $q->is_main_query() || ! $q->is_search() || ! sh_i18n_active() ) {
+			return;
+		}
+		$tq = $q->get( 'tax_query' );
+		if ( ! is_array( $tq ) ) {
+			return;
+		}
+		foreach ( $tq as $i => $clause ) {
+			if ( is_array( $clause ) && 'language' === ( $clause['taxonomy'] ?? '' ) ) {
+				$tq[ $i ] = array(
+					'relation' => 'OR',
+					$clause,
+					array( 'taxonomy' => 'language', 'operator' => 'NOT EXISTS' ),
+				);
+			}
+		}
+		$q->set( 'tax_query', $tq );
+	},
+	99
+);
+
+// The other language's address (Polylang links, Rank Math og:locale:alternate) only once that page is
+// released: an English page under review stays unannounced, and English has no archives yet.
+add_filter(
+	'pll_translation_url',
+	static function ( $url, $lang ) {
+		if ( 'en' !== $lang || sh_is_en() ) {
+			return $url;
+		}
+		$id = is_front_page() ? (int) get_option( 'page_on_front' ) : ( is_singular() ? (int) get_queried_object_id() : 0 );
+		$t  = $id ? sh_translation( $id, 'en' ) : 0;
+		return $t && sh_i18n_indexable( $t ) ? $url : '';
+	},
+	20,
+	2
+);
+
 /* ------------------------------------------------------------------ REST: setup */
 
 /** Polylang options for this site: language in the URL directory, Arabic without prefix, no browser redirects. */
@@ -198,20 +240,6 @@ function sh_i18n_setup(): array {
 	}
 	$model = PLL()->model;
 	$done  = array();
-
-	// 1. Arabic menus keep their places: copy the theme's current locations into Polylang's Arabic slots
-	//    before any language exists (Polylang reads menu locations per language on the front end).
-	$theme   = get_option( 'stylesheet' );
-	$mods    = (array) get_option( 'theme_mods_' . $theme, array() );
-	$current = (array) ( $mods['nav_menu_locations'] ?? array() );
-	$menus   = (array) $model->options->get( 'nav_menus' );
-	foreach ( $current as $loc => $menu_id ) {
-		if ( $menu_id && empty( $menus[ $theme ][ $loc ][ SH_LANG_DEFAULT ] ) ) {
-			$menus[ $theme ][ $loc ][ SH_LANG_DEFAULT ] = (int) $menu_id;
-			$done[] = 'menu ' . $loc . ' → ar';
-		}
-	}
-	$model->options->set( 'nav_menus', $menus );
 
 	// 2. Options, stated (a wrong one would move or redirect Arabic URLs). redirect_lang: the English front
 	//    page is /en/, not /en/<its slug>/ (the Arabic one stays /).
@@ -239,7 +267,21 @@ function sh_i18n_setup(): array {
 	}
 	$model->clean_languages_cache();
 
-	// 4. Everything that has no language yet is Arabic.
+	// 4. Arabic menus keep their places: the theme's current locations go into Polylang's Arabic slots
+	//    (on the front end Polylang reads menu locations per language; it keeps slots of existing languages only).
+	$theme   = get_option( 'stylesheet' );
+	$mods    = (array) get_option( 'theme_mods_' . $theme, array() );
+	$current = (array) ( $mods['nav_menu_locations'] ?? array() );
+	$menus   = (array) $model->options->get( 'nav_menus' );
+	foreach ( $current as $loc => $menu_id ) {
+		if ( $menu_id && empty( $menus[ $theme ][ $loc ][ SH_LANG_DEFAULT ] ) ) {
+			$menus[ $theme ][ $loc ][ SH_LANG_DEFAULT ] = (int) $menu_id;
+			$done[] = 'menu ' . $loc . ' → ar';
+		}
+	}
+	$model->options->set( 'nav_menus', $menus );
+
+	// 5. Everything that has no language yet is Arabic.
 	$model->set_language_in_mass();
 	$model->options->save();
 	flush_rewrite_rules( false );

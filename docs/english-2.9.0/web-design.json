@@ -1,0 +1,230 @@
+{
+ "id": 87,
+ "key": "web-design",
+ "title": "Website Design",
+ "slug": "web-design",
+ "parent": 67,
+ "path": "/services/web-design/",
+ "template": "page-templates/web-design.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "Website Design Company for Fast, SEO-Ready Sites | SEO House",
+  "sh_seo_description": "Website design company building fast, mobile-friendly sites with an Arabic dashboard and Google-ready structure, on WordPress, Webflow or custom code.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Website design and development",
+  "sh_crumb": "Web Design & Development",
+  "rank_math_title": "Website Design Company for Fast, SEO-Ready Sites | SEO House",
+  "rank_math_description": "Website design company building fast, mobile-friendly sites with an Arabic dashboard and Google-ready structure, on WordPress, Webflow or custom code.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "website design company"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Website design & development",
+   "title": "Website design and development",
+   "text": "We start with one question: what do you want visitors to do? Then we build the structure, content, interface and performance so they get there by the shortest path, and you can measure it.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "How we build",
+   "label": "From business goal to a working website",
+   "items": [
+    {
+     "label": "Business goal",
+     "label_2": "What visitors should do"
+    },
+    {
+     "label": "Page structure",
+     "label_2": "A layout that gets the message across fastest"
+    },
+    {
+     "label": "Interface & content",
+     "label_2": "Design and copy that remove hesitation"
+    },
+    {
+     "label": "Development & speed",
+     "label_2": "A clean, fast, easy-to-manage build"
+    },
+    {
+     "label": "Measurement",
+     "label_2": "Contact and lead events tracked"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "deliverables",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "What you get",
+   "title": "A website built to work, not just to look good",
+   "text": "Every website we deliver includes these six parts. What changes from project to project is their scale, not whether they're there.",
+   "heading": "Page structure",
+   "text_2": "A sitemap built around your services and your customers' questions, so visitors find what they need in two or three clicks.",
+   "heading_2": "Mobile experience",
+   "text_3": "Design that starts with the phone screen: thumb-friendly buttons, short menus and forms that are easy to fill in.",
+   "items": [
+    {
+     "label": "Loading",
+     "variant": "v1"
+    },
+    {
+     "label": "Interactivity",
+     "variant": "v2"
+    },
+    {
+     "label": "Stability",
+     "variant": "v3"
+    }
+   ],
+   "heading_3": "Website speed",
+   "text_4": "Compressed images and lighter code, so pages load fast even on a weak connection.",
+   "heading_4": "Content management",
+   "text_5": "An Arabic-language dashboard where your team can edit text and images and add pages without a developer.",
+   "items_2": [
+    {
+     "icon": "i817572ba",
+     "heading": "Forms & contact",
+     "text": "Short forms and clear call and WhatsApp buttons, with messages delivered to your inbox or sales system."
+    },
+    {
+     "icon": "ieec8e9d4",
+     "heading": "Measurement",
+     "text": "Google Analytics and Search Console set up, with calls and form submissions tracked, so you know what brings in customers."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "phases",
+   "sh_hide": 0,
+   "eyebrow": "Project phases",
+   "title": "From discovery to handover",
+   "items": [
+    {
+     "heading": "Discovery",
+     "label": "Understanding your business, audience, competitors and the website's goal."
+    },
+    {
+     "heading": "Structure",
+     "label": "The sitemap and the order of content on each page."
+    },
+    {
+     "heading": "Design",
+     "label": "On-brand desktop and mobile designs, approved before development."
+    },
+    {
+     "heading": "Development",
+     "label": "Building on the right platform, with speed and meta tags optimized."
+    },
+    {
+     "heading": "Launch & handover",
+     "label": "Testing, analytics setup and CMS training, then launch."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "platforms",
+   "sh_hide": 0,
+   "eyebrow": "Technologies",
+   "title": "We choose the technology to fit the project",
+   "items": [
+    {
+     "link": 95,
+     "logo": "assets/platforms/official/wordpress.svg",
+     "logo_image": null,
+     "heading": "WordPress",
+     "label": "For company websites with lots of content: a blog, service pages and multiple languages, with easy day-to-day management.",
+     "eyebrow": "Service details →"
+    },
+    {
+     "link": 93,
+     "logo": "assets/platforms/official/webflow.svg",
+     "logo_image": null,
+     "heading": "Webflow",
+     "label": "For company profile sites that launch fast, with precise visual control and animation, and no servers or plugins to maintain.",
+     "eyebrow": "Service details →"
+    }
+   ],
+   "link": 91,
+   "items_2": [
+    {
+     "logo": "assets/platforms/official/react.svg",
+     "logo_image": null
+    },
+    {
+     "logo": "assets/platforms/official/nextjs.svg",
+     "logo_image": null
+    }
+   ],
+   "heading": "React & Next.js",
+   "label": "For interactive interfaces or platforms with user accounts, data and integrations, built for speed and scale.",
+   "eyebrow_2": "Service details →",
+   "link_2": 85,
+   "heading_2": "Custom development",
+   "label_2": "For systems no ready-made platform can handle: portals, bookings, memberships and internal dashboards.",
+   "eyebrow_3": "Service details →"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Online store design & development",
+     "link": 77
+    },
+    {
+     "label": "SEO services",
+     "link": 65
+    },
+    {
+     "label": "All services",
+     "link": 67
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Website design & development FAQ",
+   "items": [
+    {
+     "question": "How long does it take to build a website?",
+     "answer": "It depends on the number of pages, the amount of content and the platform. We set a timeline once the structure and scope are agreed."
+    },
+    {
+     "question": "Do you write the website content?",
+     "answer": "We can include it in the scope. If you already have content, we review it and organize it to fit the page structure."
+    },
+    {
+     "question": "Can I edit the website myself?",
+     "answer": "Yes. We hand over a clear dashboard along with a training session on editing your content and pages."
+    },
+    {
+     "question": "Is the website SEO-ready?",
+     "answer": "We build the foundation: URL structure, meta tags, speed and tracking. Ongoing work on search visibility is a separate service you can add."
+    },
+    {
+     "question": "Can you migrate an existing website?",
+     "answer": "Yes. We create a migration plan that preserves your URLs and pages, and we monitor indexing after launch."
+    },
+    {
+     "question": "What happens after launch?",
+     "answer": "We can agree on ongoing monthly support for maintenance, updates and performance improvements."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "web",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

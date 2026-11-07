@@ -1,0 +1,482 @@
+{
+ "id": 137,
+ "key": "home",
+ "title": "Home",
+ "slug": "home",
+ "parent": 0,
+ "path": "/",
+ "template": "page-templates/home.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "SEO & Web Design Agency in KSA, UAE & Egypt | SEO House",
+  "sh_seo_description": "SEO House helps companies and online stores grow through SEO, website design and e-commerce store design, with a clear plan and measurable results.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "auto",
+  "sh_schema_service": "",
+  "sh_crumb": "",
+  "rank_math_title": "SEO & Web Design Agency in KSA, UAE & Egypt | SEO House",
+  "rank_math_description": "SEO House helps companies and online stores grow through SEO, website design and e-commerce store design, with a clear plan and measurable results.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo agency"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "title": "A complete team that grows your business through search",
+   "text": "SEO and web development experts who help your customers find you and grow your sales",
+   "link_label": "Book a free consultation",
+   "link_label_2": "See our results",
+   "items": [
+    [],
+    []
+   ],
+   "link": 79,
+   "link_label_3": "Meet the SEO House team"
+  },
+  {
+   "acf_fc_layout": "client_logos",
+   "sh_hide": 0,
+   "text": "Companies that trust us"
+  },
+  {
+   "acf_fc_layout": "services",
+   "sh_hide": 0,
+   "title": "Our services",
+   "link": 67,
+   "link_label": "All services",
+   "items": [
+    {
+     "link": 65,
+     "icon": "i9db3f4c7",
+     "eyebrow": "Core service",
+     "heading": "Search engine optimization",
+     "text": "We make your website visible to people searching for what you offer, and measure the impact on traffic, inquiries and orders.",
+     "items": [
+      {
+       "eyebrow": "Search query",
+       "variant": "v1"
+      },
+      {
+       "eyebrow": "Service page",
+       "variant": "v1"
+      },
+      {
+       "eyebrow": "Lead",
+       "variant": "v1"
+      }
+     ],
+     "label": "SEO service details →"
+    },
+    {
+     "link": 87,
+     "icon": "iaee0e3f0",
+     "eyebrow": "Core service",
+     "heading": "Website design & development",
+     "text": "Fast websites with a page structure that supports search visibility.",
+     "items": [
+      {
+       "eyebrow": "Home",
+       "variant": "v2"
+      },
+      {
+       "eyebrow": "Services",
+       "variant": "v2"
+      },
+      {
+       "eyebrow": "Contact",
+       "variant": "v2"
+      }
+     ],
+     "label": "Service details →"
+    },
+    {
+     "link": 77,
+     "icon": "i42aa1ca9",
+     "eyebrow": "Core service",
+     "heading": "E-commerce store design & development",
+     "text": "Stores on Salla, Zid, Shopify and WooCommerce, with pages built to sell.",
+     "items": [
+      {
+       "eyebrow": "Category",
+       "variant": "v2"
+      },
+      {
+       "eyebrow": "Product",
+       "variant": "v2"
+      },
+      {
+       "eyebrow": "Cart",
+       "variant": "v2"
+      }
+     ],
+     "label": "Service details →"
+    },
+    {
+     "link": 27,
+     "icon": "i6073398f",
+     "eyebrow": "Core service",
+     "heading": "Product upload & store content management",
+     "text": "Adding products, their data and categories, and keeping them up to date.",
+     "items": [
+      {
+       "eyebrow": "Supplier file",
+       "variant": "v2"
+      },
+      {
+       "eyebrow": "Editing",
+       "variant": "v2"
+      },
+      {
+       "eyebrow": "Published",
+       "variant": "v2"
+      }
+     ],
+     "label": "Service details →"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "sectors",
+   "sh_hide": 0,
+   "eyebrow": "Sectors",
+   "title": "Sectors we work with",
+   "link": 47,
+   "link_label": "All sectors",
+   "items": [
+    {
+     "link": 31,
+     "icon": "i245ac198",
+     "heading": "E-commerce",
+     "label": "From category and product pages to cart and order",
+     "items": [
+      {
+       "eyebrow": "Category"
+      },
+      {
+       "eyebrow": "Product"
+      },
+      {
+       "eyebrow": "Purchase"
+      }
+     ]
+    },
+    {
+     "link": 37,
+     "icon": "i25d8cd9c",
+     "heading": "Healthcare & medical",
+     "label": "Finding the service and doctor, then booking",
+     "items": [
+      {
+       "eyebrow": "Specialty"
+      },
+      {
+       "eyebrow": "Page"
+      },
+      {
+       "eyebrow": "Appointment"
+      }
+     ]
+    },
+    {
+     "link": 41,
+     "icon": "i3c0ccf7f",
+     "heading": "Real estate & construction",
+     "label": "Project, location and map pages",
+     "items": [
+      {
+       "eyebrow": "Area"
+      },
+      {
+       "eyebrow": "Project"
+      },
+      {
+       "eyebrow": "Inquiry"
+      }
+     ]
+    },
+    {
+     "link": 33,
+     "icon": "i19db1f1b",
+     "heading": "Education & training",
+     "label": "Courses, levels and registration pages",
+     "items": [
+      {
+       "eyebrow": "Field"
+      },
+      {
+       "eyebrow": "Course"
+      },
+      {
+       "eyebrow": "Registration"
+      }
+     ]
+    },
+    {
+     "link": 45,
+     "icon": "i29d22bbf",
+     "heading": "Tourism & travel",
+     "label": "Destinations, itineraries and booking pages",
+     "items": [
+      {
+       "eyebrow": "Destination"
+      },
+      {
+       "eyebrow": "Package"
+      },
+      {
+       "eyebrow": "Booking"
+      }
+     ]
+    },
+    {
+     "link": 43,
+     "icon": "i7c0f5381",
+     "heading": "Technology & software",
+     "label": "Solution, use-case and integration pages",
+     "items": [
+      {
+       "eyebrow": "Problem"
+      },
+      {
+       "eyebrow": "Solution"
+      },
+      {
+       "eyebrow": "Request a demo"
+      }
+     ]
+    },
+    {
+     "link": 39,
+     "icon": "i872d6632",
+     "heading": "Legal & consulting",
+     "label": "Service pages and trust signals",
+     "items": [
+      {
+       "eyebrow": "Issue"
+      },
+      {
+       "eyebrow": "Expertise"
+      },
+      {
+       "eyebrow": "Consultation"
+      }
+     ]
+    },
+    {
+     "link": 35,
+     "icon": "i81f82ddb",
+     "heading": "Food & restaurants",
+     "label": "Local search, menus, branches and ordering",
+     "items": [
+      {
+       "eyebrow": "Branch"
+      },
+      {
+       "eyebrow": "Menu"
+      },
+      {
+       "eyebrow": "Order"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "about",
+   "sh_hide": 0,
+   "eyebrow": "About SEO House",
+   "title": "SEO House since 2017",
+   "text": "SEO House started because the market needed a company that delivers what it promises and ties its work to real, trackable results. We begin by understanding your business and market, then set priorities and work with you transparently, from implementation to measurement.",
+   "link": 19,
+   "link_label": "About us",
+   "items": [
+    {
+     "text": "SEO is our core specialty."
+    },
+    {
+     "text": "We implement changes on your site, not just recommend them."
+    },
+    {
+     "text": "We measure the impact on traffic, inquiries and orders."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "markets",
+   "sh_hide": 0,
+   "eyebrow": "Markets",
+   "title": "Markets we work in",
+   "items": [
+    {
+     "link": 57,
+     "icon": "i2ea38d47",
+     "heading": "Saudi Arabia",
+     "label": "Companies in the Kingdom that want to reach their customers through search.",
+     "eyebrow": "Learn more →"
+    },
+    {
+     "link": 55,
+     "icon": "i5653018a",
+     "heading": "Egypt",
+     "label": "Turning high search volume into valuable visits and inquiries.",
+     "eyebrow": "Learn more →"
+    },
+    {
+     "link": 59,
+     "icon": "idde4edda",
+     "heading": "UAE",
+     "label": "A competitive market that demands precise visibility for high-intent search terms.",
+     "eyebrow": "Learn more →"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "reviews",
+   "sh_hide": 0,
+   "eyebrow": "Google reviews",
+   "title": "What our clients say",
+   "all_link": "",
+   "all_label": "",
+   "items": [
+    {
+     "label": "Photo",
+     "text": "Client name",
+     "label_2": "Google review",
+     "text_2": "The real review text is pulled from the Trustindex plugin linked to the Google account and appears here with the reviewer's name, photo and rating.",
+     "label_3": "Placeholder content — to be pulled from Trustindex",
+     "variant": "v1"
+    },
+    {
+     "label": "Photo",
+     "text": "Client name",
+     "label_2": "Google review",
+     "text_2": "Space for the second review. Text length varies, and the layout handles longer or shorter text without breaking the grid.",
+     "label_3": "Placeholder content — to be pulled from Trustindex",
+     "variant": "v2"
+    },
+    {
+     "label": "Photo",
+     "text": "Client name",
+     "label_2": "Google review",
+     "text_2": "Space for the third review. On mobile, only one review is shown, with arrows and swipe navigation.",
+     "label_3": "Placeholder content — to be pulled from Trustindex",
+     "variant": "v3"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "articles",
+   "sh_hide": 0,
+   "eyebrow": "Blog",
+   "title": "Latest from our blog",
+   "link": 138,
+   "link_label": "All articles"
+  },
+  {
+   "acf_fc_layout": "platforms",
+   "sh_hide": 0,
+   "eyebrow": "Platforms & tools",
+   "title": "Platforms and tools we work with",
+   "items": [
+    {
+     "items": [
+      {
+       "logo": "assets/platforms/official/wordpress.svg",
+       "logo_image": "",
+       "label": "WordPress"
+      },
+      {
+       "logo": "assets/platforms/official/shopify.svg",
+       "logo_image": "",
+       "label": "Shopify"
+      },
+      {
+       "logo": "assets/platforms/official/salla.svg",
+       "logo_image": "",
+       "label": "Salla"
+      },
+      {
+       "logo": "assets/platforms/official/gsc.svg",
+       "logo_image": "",
+       "label": "Google Search Console"
+      },
+      {
+       "logo": "assets/platforms/official/webflow.svg",
+       "logo_image": "",
+       "label": "Webflow"
+      },
+      {
+       "logo": "assets/platforms/official/woocommerce.svg",
+       "logo_image": "",
+       "label": "WooCommerce"
+      },
+      {
+       "logo": "assets/platforms/official/ga4.svg",
+       "logo_image": "",
+       "label": "Google Analytics"
+      }
+     ]
+    },
+    {
+     "items": [
+      {
+       "logo": "assets/platforms/official/ga4.svg",
+       "logo_image": "",
+       "label": "Google Analytics"
+      },
+      {
+       "logo": "assets/platforms/official/woocommerce.svg",
+       "logo_image": "",
+       "label": "WooCommerce"
+      },
+      {
+       "logo": "assets/platforms/official/webflow.svg",
+       "logo_image": "",
+       "label": "Webflow"
+      },
+      {
+       "logo": "assets/platforms/official/gsc.svg",
+       "logo_image": "",
+       "label": "Google Search Console"
+      },
+      {
+       "logo": "assets/platforms/official/salla.svg",
+       "logo_image": "",
+       "label": "Salla"
+      },
+      {
+       "logo": "assets/platforms/official/shopify.svg",
+       "logo_image": "",
+       "label": "Shopify"
+      },
+      {
+       "logo": "assets/platforms/official/wordpress.svg",
+       "logo_image": "",
+       "label": "WordPress"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "results",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Documented results",
+   "title": "Results from our projects",
+   "link": 29,
+   "link_label": "All results →"
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

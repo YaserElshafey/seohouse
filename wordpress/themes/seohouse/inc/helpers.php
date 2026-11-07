@@ -372,25 +372,25 @@ function sh_google_reviews_button( int $post_id = 0 ): string {
 function sh_footer_about_html( string $text ): string {
 	$html   = esc_html( $text );
 	$phrase = esc_html__( 'شركة سيو', 'seohouse' );
-	$page   = get_page_by_path( 'services/seo', OBJECT, 'page' );
+	$url    = sh_page_url( 'services/seo' ); // the general SEO page in the page's language
 	$pos    = mb_strpos( $html, $phrase );
-	if ( ! $page || 'publish' !== $page->post_status || false === $pos ) {
+	if ( '' === $url || false === $pos ) {
 		return $html;
 	}
-	$link = '<a href="' . esc_url( get_permalink( $page ) ) . '" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">' . $phrase . '</a>';
+	$link = '<a href="' . esc_url( $url ) . '" style="color: inherit; text-decoration: underline; text-underline-offset: 3px;">' . $phrase . '</a>';
 	return mb_substr( $html, 0, $pos ) . $link . mb_substr( $html, $pos + mb_strlen( $phrase ) );
 }
 
 /** One line after the article body: «تبحث عن شركة سيو …؟» linking to the general SEO page. */
 function sh_article_seo_line(): string {
-	$page = get_page_by_path( 'services/seo', OBJECT, 'page' );
-	if ( ! $page || 'publish' !== $page->post_status ) {
+	$url = sh_page_url( 'services/seo' );
+	if ( '' === $url ) {
 		return '';
 	}
 	return '<p data-art-seo-line>' . sprintf(
 		/* translators: %s: link «شركة سيو» */
 		esc_html__( 'تبحث عن %s لتحسين أداء موقعك؟ تعرّف على خدمات سيو هاوس.', 'seohouse' ),
-		'<a href="' . esc_url( get_permalink( $page ) ) . '">' . esc_html__( 'شركة سيو', 'seohouse' ) . '</a>'
+		'<a href="' . esc_url( $url ) . '">' . esc_html__( 'شركة سيو', 'seohouse' ) . '</a>'
 	) . '</p>';
 }
 

@@ -1,0 +1,80 @@
+{
+ "id": 81,
+ "key": "terms",
+ "title": "Terms and Conditions",
+ "slug": "terms",
+ "parent": 0,
+ "path": "/terms/",
+ "template": "page-templates/terms.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "Terms and Conditions | SEO House",
+  "sh_seo_description": "Terms for using the SEO House website and requesting its services: content and client results, offers and contracts, IP, liability and governing law.",
+  "sh_seo_noindex": "1",
+  "sh_schema_type": "webpage",
+  "sh_schema_service": "",
+  "sh_crumb": "",
+  "rank_math_title": "Terms and Conditions | SEO House",
+  "rank_math_description": "Terms for using the SEO House website and requesting its services: content and client results, offers and contracts, IP, liability and governing law.",
+  "rank_math_robots": [
+   "index"
+  ],
+  "rank_math_focus_keyword": "terms and conditions"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "title": "Terms and Conditions",
+   "text": "These Terms govern your use of the SEO House website and your requests for its services through it. By using the website or submitting any form on it, you agree to these Terms and to the Privacy Policy. If you do not agree to them, please do not use the website.",
+   "link": "",
+   "link_label": "Privacy Policy →"
+  },
+  {
+   "acf_fc_layout": "document",
+   "sh_hide": 0,
+   "eyebrow": "Contents",
+   "label": "Last updated:",
+   "updated": "October 3, 2026",
+   "items_2": [
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">1.</span> Use of the Website",
+     "body": "The website is to be used to learn about SEO House's services, read its content and request consultations and services, for lawful purposes only. You may not:\r\n\r\n- Attempt to gain unauthorized access to the website, its control panel or its servers, or disable or slow it down.\r\n- Send spam or automated messages through the forms, or submit another person's data without their permission.\r\n- Collect the website's content or data by automated means in a manner that harms it.\r\n\r\nYou undertake that the data you submit is accurate, and you are responsible for the data you submit."
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">2.</span> Information and Content",
+     "body": "Articles and service pages constitute general information for introductory and educational purposes and are not advice tailored to your website. We strive to keep them accurate and up to date, but the practices of search engines and platforms change constantly. You should therefore review your website's situation with a specialist before making any decision based on them.\r\n\r\nClient results and case studies are real figures from previous projects, for which we state the source and the period in which they were achieved. They illustrate how we work and do not constitute a promise to achieve the same results. Results vary depending on the website's condition, competition in the sector, the speed of implementation and changes in search engines. No one can guarantee a specific ranking in Google results, and we make no such promise."
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">3.</span> Service Requests and Proposals",
+     "body": "Requesting a consultation or service through the website does not create a contract. The advertised free consultation does not give rise to any obligation on your part.\r\n\r\nThe prices and packages published on the website are estimates and describe the scope of each package. The final price is set out in a written proposal based on the size of the website and the scope of work. No engagement shall commence except under a written proposal or contract approved by both parties, specifying the scope of work, duration, consideration, and method of payment and delivery.\r\n\r\nIn the event of any conflict between these Terms and the signed proposal or contract, the proposal or contract shall prevail in all matters relating to the service."
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">4.</span> Intellectual Property",
+     "body": "The website's text and design, the SEO House logo and visual identity, and the website's images and graphics are the property of SEO House or of their respective owners who have licensed us to use them. You may quote from the articles to a reasonable extent, provided that you cite the source and add a link to the original page. You may not copy or republish the content in full, or use it commercially, without our written permission.\r\n\r\nThe client and platform logos displayed on the website, such as Google, Salla, Zid and Shopify, are the property of their respective owners. We display them to present our work and the tools we use, and their display does not imply an official partnership unless we expressly state otherwise."
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">5.</span> External Links",
+     "body": "The website may contain links to other websites, or tools provided by third parties, such as Google reviews, WhatsApp and the appointment booking tool. These parties are independent of us, and your use of them is subject to their own terms and policies. We are not responsible for their content or availability."
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">6.</span> Limitation of Liability",
+     "body": "We make reasonable professional efforts to keep the website available and accurate, but we do not guarantee that it will operate without interruption or errors. To the extent permitted by applicable laws and regulations, SEO House shall not be liable for any indirect loss or damage arising from the use of the website, reliance on its general content, or the inability to access it.\r\n\r\nThis does not limit any liability that cannot lawfully be excluded. Our liability for the services we provide is governed by the contract signed with you."
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">7.</span> Amendments",
+     "body": "We may amend these Terms when there are changes to the website, its services or applicable laws and regulations, and we will publish the new version on this page together with the date of the last update. The new version applies to use of the website after its publication. An amendment does not change the terms of an existing signed contract."
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">8.</span> Governing Law",
+     "body": "These Terms are governed by and construed in accordance with the laws of [the country in which the company is registered]. The parties shall first attempt to resolve any dispute amicably within 30 days of one party notifying the other of it in writing. If the dispute is not resolved, it shall be referred to the competent courts in [city], unless the signed contract provides otherwise."
+    },
+    {
+     "title": "<span style=\"color: var(--sh-blue);\">9.</span> Contact",
+     "body": "For any question about these Terms or our services:\r\n\r\n- Email: [the company's official email address]\r\n- The form on the “Contact Us” page.\r\n- SEO House — [the company's legal name, commercial registration number and address]"
+    }
+   ]
+  }
+ ]
+}

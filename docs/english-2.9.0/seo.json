@@ -1,0 +1,567 @@
+{
+ "id": 65,
+ "key": "seo",
+ "title": "SEO Services",
+ "slug": "seo",
+ "parent": 67,
+ "path": "/services/seo/",
+ "template": "page-templates/seo.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "SEO Company for Saudi Arabia, the UAE & Egypt | SEO House",
+  "sh_seo_description": "SEO House is an SEO company helping businesses in Saudi Arabia, the UAE and Egypt rank higher with content, technical SEO and links, and tracked results.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Search engine optimization services",
+  "sh_crumb": "",
+  "rank_math_title": "SEO Company for Saudi Arabia, the UAE & Egypt | SEO House",
+  "rank_math_description": "SEO House is an SEO company helping businesses in Saudi Arabia, the UAE and Egypt rank higher with content, technical SEO and links, and tracked results.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo company"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "title": "Your SEO Company for Search Growth",
+   "text": "SEO House is an SEO company that helps businesses and online stores improve their visibility in search engines by developing their website and content, then tracking the impact on inquiries and sales.",
+   "link_label": "Book a free consultation",
+   "link_label_2": "Explore SEO services",
+   "text_2": "Dental clinic in Riyadh",
+   "label": "E",
+   "label_2": "example-clinic.com › Services",
+   "eyebrow": "Organic result",
+   "text_3": "Dental Clinic in Riyadh — Book an Appointment in a Minute",
+   "label_3": "Orthodontics, implants, cosmetic dentistry. Licensed team and evening appointments.",
+   "label_4": "Lands on the service page",
+   "label_5": "Requests an appointment",
+   "label_6": "Conversion event recorded in Google Analytics"
+  },
+  {
+   "acf_fc_layout": "client_logos",
+   "sh_hide": 0,
+   "text": "Companies that trust us"
+  },
+  {
+   "acf_fc_layout": "seo_system",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "SEO service",
+   "title": "What does our SEO service include?",
+   "text": "Five areas we work on together, based on your site's condition and goals.",
+   "items": [
+    {
+     "link": 63,
+     "icon": "i5a243655",
+     "heading": "Technical SEO",
+     "text": "We fix crawling, indexing, speed and site architecture issues.",
+     "eyebrow": "Learn more →",
+     "variant": "v1"
+    },
+    {
+     "link": 61,
+     "icon": "i51e3c8ff",
+     "heading": "On-page SEO",
+     "text": "We optimize pages, titles and internal links around search intent.",
+     "eyebrow": "Learn more →",
+     "variant": "v2"
+    },
+    {
+     "link": 53,
+     "icon": "i2c133160",
+     "heading": "Content writing",
+     "text": "We create content that answers what customers search for and leads them to the next step.",
+     "eyebrow": "Learn more →",
+     "variant": "v3"
+    },
+    {
+     "link": 49,
+     "icon": "i56d9327e",
+     "heading": "Off-page SEO",
+     "text": "We build links and external visibility that strengthen your site's authority.",
+     "eyebrow": "Learn more →",
+     "variant": "v4"
+    },
+    {
+     "link": 51,
+     "icon": "i63d221d5",
+     "heading": "Consulting & performance analysis",
+     "text": "We read the data to pinpoint problems, opportunities and implementation priorities.",
+     "eyebrow": "Learn more →",
+     "variant": "v5"
+    }
+   ],
+   "heading": "The right customer reaches the right page",
+   "link": 31,
+   "heading_2": "Running an online store?",
+   "text_2": "We have a dedicated SEO track for category pages, product pages and the platforms online stores run on.",
+   "text_3": "E-commerce SEO →"
+  },
+  {
+   "acf_fc_layout": "layers",
+   "sh_hide": 0,
+   "eyebrow": "What do we change on your site?",
+   "title": "We treat your site as one system",
+   "text": "Technical fixes alone aren't enough, and neither is content alone. We prioritize the work based on what's holding your site back and what can make a real impact.",
+   "items": [
+    {
+     "icon": "i1b743354",
+     "heading": "Technical foundation",
+     "label": "Sound crawling, indexing, speed and page structure.",
+     "variant": "v1"
+    },
+    {
+     "icon": "i8f790a81",
+     "heading": "Pages & content",
+     "label": "Pages that match search intent and lead to the next step.",
+     "variant": "v2"
+    },
+    {
+     "icon": "id5205ea8",
+     "heading": "Authority & links",
+     "label": "External visibility and links that build trust in your site.",
+     "variant": "v3"
+    },
+    {
+     "icon": "i1363724a",
+     "heading": "Measurement & improvement",
+     "label": "Reading the data and adjusting priorities month after month.",
+     "variant": "v4"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "results",
+   "sh_hide": 0,
+   "eyebrow": "Documented results",
+   "title": "Documented results from our SEO projects",
+   "all_label": "All results",
+   "all_link": 29,
+   "cases": [
+    {
+     "tab": "Online store",
+     "sector": "E-commerce",
+     "market": "Saudi Arabia",
+     "figure": "+432%",
+     "headline": "Growth in organic search revenue",
+     "desc": "Organic search revenue rose from SAR 19,956 to SAR 106,274 after we fixed the technical side and rebuilt the category and product pages.",
+     "period": "90 days",
+     "source": "Google Analytics 4",
+     "link_label": "Case study",
+     "case_study": null,
+     "link": 29,
+     "proof": 101,
+     "alt": "Google Analytics report showing organic search revenue of SAR 106,274 versus SAR 19,956"
+    },
+    {
+     "tab": "Medical services",
+     "sector": "Health & medical",
+     "market": "Saudi Arabia",
+     "figure": "12.9K clicks",
+     "headline": "Organic clicks in 28 days",
+     "desc": "Organic clicks rose from 825 to 12.9K after we expanded page coverage and optimized titles for search intent.",
+     "period": "28 days vs. the previous 28 days",
+     "source": "Google Search Console",
+     "link_label": "Case study",
+     "case_study": null,
+     "link": 29,
+     "proof": 102,
+     "alt": "Search Console dashboard showing 12.9K clicks versus 825 clicks in the previous period"
+    },
+    {
+     "tab": "Law firm",
+     "sector": "Legal & consulting",
+     "market": "Saudi Arabia",
+     "figure": "#1 position",
+     "headline": "#1 organic result for “law firm” (Arabic search)",
+     "desc": "An organic result on the search page, not a Maps listing, achieved by reworking the service page structure and trust signals.",
+     "period": "Ongoing result",
+     "source": "Google results page",
+     "link_label": "Case study",
+     "case_study": null,
+     "link": 29,
+     "proof": 104,
+     "alt": "Google results page showing Sahal Law Firm in the first organic position for the Arabic search “law firm”"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "sectors",
+   "sh_hide": 0,
+   "eyebrow": "Industries",
+   "title": "SEO varies by industry",
+   "link": 47,
+   "link_label": "All industries →",
+   "items": [
+    {
+     "link": 31,
+     "icon": "i28c5742f",
+     "heading": "E-commerce",
+     "label": "Covering category and product pages and resolving duplicate content."
+    },
+    {
+     "link": 37,
+     "icon": "ic38e5c55",
+     "heading": "Health & medical",
+     "label": "Service and doctor pages that capture local search and lead to bookings."
+    },
+    {
+     "link": 41,
+     "icon": "ib2d1913e",
+     "heading": "Real estate & construction",
+     "label": "Project and location pages that target city and neighborhood searches."
+    },
+    {
+     "link": 33,
+     "icon": "i77b387dc",
+     "heading": "Education & training",
+     "label": "Course and level pages that answer learners' questions."
+    },
+    {
+     "link": 45,
+     "icon": "i7d44d30c",
+     "heading": "Tourism & travel",
+     "label": "Destination pages and seasonal itineraries tied to booking."
+    },
+    {
+     "link": 43,
+     "icon": "ifd450e20",
+     "heading": "Technology & software",
+     "label": "Solution and use-case pages that target problem-based searches."
+    },
+    {
+     "link": 39,
+     "icon": "i1a80e2f8",
+     "heading": "Legal & consulting",
+     "label": "Service pages and trust signals for high-intent keywords."
+    },
+    {
+     "link": 35,
+     "icon": "iecb8165c",
+     "heading": "Food & restaurants",
+     "label": "Local search, menus and branches tied to ordering."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "markets",
+   "sh_hide": 0,
+   "eyebrow": "Markets",
+   "title": "Experience in three Arab markets",
+   "items": [
+    {
+     "link": 57,
+     "heading": "Saudi Arabia",
+     "text": "Local search differs between Riyadh, Jeddah and the Eastern Province, with stiff competition for service keywords.",
+     "label": "Learn more →"
+    },
+    {
+     "link": 55,
+     "heading": "Egypt",
+     "text": "High search volume that needs careful filtering to turn traffic into valuable inquiries.",
+     "label": "Learn more →"
+    },
+    {
+     "link": 59,
+     "heading": "UAE",
+     "text": "A competitive market in both Arabic and English that calls for precise visibility on keywords with purchase intent.",
+     "label": "Learn more →"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "process",
+   "sh_hide": 0,
+   "eyebrow": "Process & deliverables",
+   "title": "See what we do and what you get",
+   "deliverables_label": "Deliverables",
+   "phases": [
+    {
+     "num": "01",
+     "label": "Understand your site and goals",
+     "desc": "A review of your business, market, tracking and current position.",
+     "out": "We agree on the goal the work will be measured against.",
+     "items": [
+      {
+       "text": "Current-state summary"
+      },
+      {
+       "text": "Measurable goals"
+      },
+      {
+       "text": "Tracking setup in GA4 and Search Console"
+      }
+     ],
+     "viz_title": "Starting summary",
+     "viz_rows": [
+      {
+       "label": "Business & market",
+       "pct": "78%"
+      },
+      {
+       "label": "Goals",
+       "pct": "62%"
+      },
+      {
+       "label": "Tracking status",
+       "pct": "48%"
+      }
+     ]
+    },
+    {
+     "num": "02",
+     "label": "Analyze and prioritize",
+     "desc": "Technical audit, competitors, keywords and pages.",
+     "out": "We decide what gets done first and what can wait.",
+     "items": [
+      {
+       "text": "Technical audit report"
+      },
+      {
+       "text": "Keyword and page map"
+      },
+      {
+       "text": "Ranked priority list"
+      }
+     ],
+     "viz_title": "Priority list",
+     "viz_rows": [
+      {
+       "label": "Technical issues",
+       "pct": "86%"
+      },
+      {
+       "label": "Pages to improve",
+       "pct": "64%"
+      },
+      {
+       "label": "Content opportunities",
+       "pct": "44%"
+      }
+     ]
+    },
+    {
+     "num": "03",
+     "label": "Implement improvements",
+     "desc": "Technical work, pages, content, and internal and external links, depending on scope.",
+     "out": "Your pages are ready to rank and compete.",
+     "items": [
+      {
+       "text": "Monthly implementation log"
+      },
+      {
+       "text": "Published pages and content"
+      },
+      {
+       "text": "Applied technical improvements"
+      }
+     ],
+     "viz_title": "Implementation log",
+     "viz_rows": [
+      {
+       "label": "Technical changes",
+       "pct": "70%"
+      },
+      {
+       "label": "Published pages",
+       "pct": "58%"
+      },
+      {
+       "label": "Internal links",
+       "pct": "50%"
+      }
+     ]
+    },
+    {
+     "num": "04",
+     "label": "Measure and improve",
+     "desc": "Performance dashboard, monthly review and next-phase priorities.",
+     "out": "We set next month's priorities based on data.",
+     "items": [
+      {
+       "text": "Live performance dashboard"
+      },
+      {
+       "text": "Monthly report and review"
+      },
+      {
+       "text": "Next-phase plan"
+      }
+     ],
+     "viz_title": "Performance review",
+     "viz_rows": [
+      {
+       "label": "Visibility",
+       "pct": "72%"
+      },
+      {
+       "label": "Traffic",
+       "pct": "60%"
+      },
+      {
+       "label": "Leads",
+       "pct": "46%"
+      }
+     ]
+    }
+   ],
+   "team_title": "A specialist team working on your project",
+   "team_sub": "SEO · Content · Development · Performance analysis",
+   "team_link_label": "Meet the SEO House team",
+   "team_link": 79
+  },
+  {
+   "acf_fc_layout": "tools",
+   "sh_hide": 0,
+   "eyebrow": "Tools & measurement",
+   "title": "How we measure progress",
+   "text": "Three questions we answer in every review.",
+   "items": [
+    {
+     "heading": "What do we measure?",
+     "text": "Impressions and clicks, traffic from search, and inquiries and orders.",
+     "label": "Search Console · Google Analytics"
+    },
+    {
+     "heading": "How do we interpret changes?",
+     "text": "We compare periods and link each change to the pages and updates we've made.",
+     "label": "Looker Studio · Screaming Frog"
+    },
+    {
+     "heading": "What's the next decision?",
+     "text": "We identify which pages deserve work in the next phase and what can wait.",
+     "label": "Concise monthly report"
+    }
+   ],
+   "eyebrow_2": "Platforms and tools we work with",
+   "items_2": [
+    {
+     "logo": "assets/platforms/official/wordpress.svg",
+     "logo_image": "",
+     "label": "WordPress"
+    },
+    {
+     "logo": "assets/platforms/official/shopify.svg",
+     "logo_image": "",
+     "label": "Shopify"
+    },
+    {
+     "logo": "assets/platforms/official/salla.svg",
+     "logo_image": "",
+     "label": "Salla"
+    },
+    {
+     "logo": "assets/platforms/official/gsc.svg",
+     "logo_image": "",
+     "label": "Search Console"
+    },
+    {
+     "logo": "assets/platforms/official/webflow.svg",
+     "logo_image": "",
+     "label": "Webflow"
+    },
+    {
+     "logo": "assets/platforms/official/woocommerce.svg",
+     "logo_image": "",
+     "label": "WooCommerce"
+    },
+    {
+     "logo": "assets/platforms/official/ga4.svg",
+     "logo_image": "",
+     "label": "Google Analytics"
+    },
+    {
+     "logo": "assets/platforms/official/looker.svg",
+     "logo_image": "",
+     "label": "Looker Studio"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "reviews",
+   "sh_hide": 0,
+   "eyebrow": "Google reviews",
+   "title": "What our clients say",
+   "all_link": "",
+   "all_label": "",
+   "items": [
+    {
+     "label": "Photo",
+     "text": "Client name",
+     "label_2": "Google review",
+     "text_2": "The real review text is pulled from the Trustindex plugin connected to the Google account and appears here with the reviewer's name, photo and rating.",
+     "label_3": "Placeholder — will be pulled from Trustindex",
+     "variant": "v1"
+    },
+    {
+     "label": "Photo",
+     "text": "Client name",
+     "label_2": "Google review",
+     "text_2": "Space for the second review. Text length varies, and the layout handles longer or shorter text without breaking the grid.",
+     "label_3": "Placeholder — will be pulled from Trustindex",
+     "variant": "v2"
+    },
+    {
+     "label": "Photo",
+     "text": "Client name",
+     "label_2": "Google review",
+     "text_2": "Space for the third review. On mobile, only one review is shown at a time, with arrows and swipe navigation.",
+     "label_3": "Placeholder — will be pulled from Trustindex",
+     "variant": "v3"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Common questions before getting started",
+   "items": [
+    {
+     "question": "How long does SEO take to show results?",
+     "answer": "The first signs usually appear within 6 to 12 weeks, depending on your site's condition and the competition. The impact on leads and orders takes longer."
+    },
+    {
+     "question": "How do I know the work is actually being done?",
+     "answer": "You receive an implementation log showing what was done and when, plus a performance dashboard connected to your Search Console and Google Analytics accounts."
+    },
+    {
+     "question": "Does your SEO service include content and link building?",
+     "answer": "It depends on the agreed scope. The work can be limited to technical SEO and on-page work, or it can also cover content and links."
+    },
+    {
+     "question": "Do you work with online stores?",
+     "answer": "Yes. We have a dedicated track for category and product pages on Salla, Zid, Shopify and WooCommerce."
+    },
+    {
+     "question": "Do I need a developer?",
+     "answer": "Not necessarily. We implement most improvements ourselves on popular platforms; on custom-built systems, we'll need your developer's cooperation."
+    },
+    {
+     "question": "Do you require long-term contracts?",
+     "answer": "We work month to month. We recommend at least six months to see a clear impact, but we don't lock you into a long contract."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "pricing_strip",
+   "sh_hide": 0,
+   "heading": "Want to know which plan fits your site?",
+   "text": "Your plan depends on the size of your site, the competition and how much hands-on implementation is needed. You can review the plan details before booking a call.",
+   "link_label": "Book a consultation call",
+   "link": 23,
+   "link_label_2": "View plans & pricing"
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "seo",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}
