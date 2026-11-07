@@ -1,6 +1,6 @@
 {
  "theme": "seohouse",
- "version": "2.8.4",
+ "version": "2.8.5",
  "count": 365,
  "files": [
   {
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 1072,
-   "sha1": "0829ef4b7ca59252cb8e9148dcffc39044aec377"
+   "sha1": "06339495e505f8cc7629fd41d5df613520e97bf7"
   },
   {
    "path": "header.php",
@@ -55,23 +55,23 @@
   },
   {
    "path": "single-case_study.php",
-   "size": 17246,
-   "sha1": "9584e660ed8e4285702b779bb48fa719d6fe0401"
+   "size": 17365,
+   "sha1": "64f09dc59e4b39d9de1b2f16174b21b3a1a1970c"
   },
   {
    "path": "single-team_member.php",
-   "size": 8679,
-   "sha1": "8b4a92b6e04ce0c44e6cd9598f4551ab0f248955"
+   "size": 8788,
+   "sha1": "5ab4a119640254ea046ada294555bd75737a3406"
   },
   {
    "path": "single.php",
-   "size": 10767,
-   "sha1": "6587e5b0303f9c0f52bb7a662f6bc5b72878414f"
+   "size": 10874,
+   "sha1": "deb598cd27910eeb9a341a9659027fee238fbf01"
   },
   {
    "path": "style.css",
    "size": 545,
-   "sha1": "11f2988c60f25e67f3e10ef803edb589290f3e38"
+   "sha1": "d09f85841113ea55e0a2729c76017cca8e8cf7b0"
   },
   {
    "path": "theme.json",
@@ -800,8 +800,8 @@
   },
   {
    "path": "parts/quick-links.php",
-   "size": 1215,
-   "sha1": "24605b8fa0a707ce5a10a988c6b2f11e0bd31ed1"
+   "size": 1309,
+   "sha1": "6e69519a5c3db2ec03e85a3755b855b74aa159fa"
   },
   {
    "path": "parts/seo-other-markets.php",

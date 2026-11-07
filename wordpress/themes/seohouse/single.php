@@ -64,7 +64,7 @@ while ( have_posts() ) :
 						<?php // no team profile linked: the article's WordPress author, as on the main site ?>
 						<span style="font-weight: 600; color: <?php echo esc_attr( $ink ); ?>;"><?php echo esc_html( get_the_author_meta( 'display_name', (int) get_post_field( 'post_author', $id ) ) ); ?></span>
 					<?php else : ?>
-						<?php $team = get_page_by_path( 'team' ); ?>
+						<?php $team = get_page_by_path( 'team' ); $team = $team ? get_post( sh_tr_id( (int) $team->ID ) ) : null; // the team page in the article's language ?>
 						<a href="<?php echo esc_url( $team ? get_permalink( $team ) : home_url( '/' ) ); ?>" style="font-weight: 600; color: <?php echo esc_attr( $ink ); ?>; border-bottom: 1px solid rgba(var(--sh-blue-rgb), 0.4);"><?php echo esc_html( sprintf( /* translators: %s: company */ __( 'فريق %s', 'seohouse' ), sh_site_name() ) ); ?></a>
 					<?php endif; ?>
 					</span><?php echo $sep; // phpcs:ignore ?>

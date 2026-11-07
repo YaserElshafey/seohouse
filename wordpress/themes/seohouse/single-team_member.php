@@ -17,6 +17,7 @@ while ( have_posts() ) :
 	$tags  = array_filter( wp_list_pluck( (array) ( $f['specialties'] ?? array() ), 'label' ) );
 	$links = array_filter( (array) ( $f['links'] ?? array() ), static fn( $l ) => ! empty( $l['url'] ) && ! empty( $l['label'] ) );
 	$team  = get_page_by_path( 'team' );
+	$team  = $team ? get_post( sh_tr_id( (int) $team->ID ) ) : null; // the team page in the visitor's language
 
 	// Articles: posts whose "author_member" is this profile, or written by the linked WordPress account.
 	$meta_q = array( array( 'key' => 'author_member', 'value' => $id ) );

@@ -4,6 +4,7 @@
  * page (sections keyed by field name), read from what the site stores now.
  *
  *   GET content?ids=67,57     title, slug, parent, path, template, status, SEO fields and the sections
+ *                             (articles, case studies, team members: their fields, body, excerpt and categories)
  *                             of each page. Images are attachment IDs, page links are page IDs (or the
  *                             URL typed in the field), list rows carry no record IDs, so the result can
  *                             be written back with update_field() to this page or to another page with
@@ -85,8 +86,26 @@ function sh_transfer_page( WP_Post $p ): array {
 	foreach ( array( 'rank_math_title', 'rank_math_description', 'rank_math_robots', 'rank_math_focus_keyword' ) as $meta ) {
 		$seo[ $meta ] = get_post_meta( $p->ID, $meta, true );
 	}
-	$tpl = (string) get_page_template_slug( $p );
-	return array(
+	$tpl  = (string) get_page_template_slug( $p );
+	$item = array();
+	if ( 'page' !== $p->post_type ) {
+		// articles, case studies, team members: their own fields, body and categories
+		$fields = array();
+		if ( sh_core_acf_ready() && function_exists( 'sh_i18n_type_fields' ) ) {
+			foreach ( sh_i18n_type_fields( $p->post_type ) as $name => $f ) {
+				$fields[ $name ] = sh_transfer_value( $f, acf_get_value( $p->ID, $f ) );
+			}
+		}
+		$item = array(
+			'type'       => $p->post_type,
+			'content'    => $p->post_content,
+			'excerpt'    => $p->post_excerpt,
+			'fields'     => $fields,
+			'thumbnail'  => (int) get_post_thumbnail_id( $p ),
+			'categories' => 'post' === $p->post_type ? array_map( 'intval', wp_get_post_categories( $p->ID ) ) : array(),
+		);
+	}
+	return $item + array(
 		'id'       => (int) $p->ID,
 		'key'      => sh_core_page_key( $p ),
 		'title'    => $p->post_title,
@@ -109,8 +128,8 @@ function sh_transfer_rest_export( WP_REST_Request $r ) {
 	$out = array();
 	foreach ( $ids as $id ) {
 		$p = get_post( $id );
-		if ( ! $p || 'page' !== $p->post_type ) {
-			$out[] = array( 'id' => $id, 'error' => 'not a page' );
+		if ( ! $p || ! in_array( $p->post_type, array( 'page', 'post', 'case_study', 'team_member' ), true ) ) {
+			$out[] = array( 'id' => $id, 'error' => 'not a page, article, case study or team member' );
 			continue;
 		}
 		if ( ! current_user_can( 'edit_post', $id ) ) {

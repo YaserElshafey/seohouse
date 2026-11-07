@@ -213,7 +213,7 @@ while ( have_posts() ) :
 				<?php endif; ?>
 			</div>
 			<div style="display: flex; flex-wrap: wrap; gap: 12px;">
-				<?php $results = get_page_by_path( 'results' ); ?>
+				<?php $results = get_page_by_path( 'results' ); $results = $results ? get_post( sh_tr_id( (int) $results->ID ) ) : null; // the results page in the visitor's language ?>
 				<?php if ( $results ) : ?>
 				<a href="<?php echo esc_url( get_permalink( $results ) ); ?>" class="sh-hv-next" style="min-height: 48px; display: inline-flex; align-items: center; padding: 0px 18px; border-radius: 12px; background: rgba(40, 84, 232, 0.18); box-shadow: rgba(40, 84, 232, 0.45) 0px 0px 0px 1px inset; color: var(--sh-ink); font-weight: 600;"><?php esc_html_e( 'كل النتائج', 'seohouse' ); ?></a>
 				<?php endif; ?>

@@ -12,6 +12,7 @@ $paths = (array) ( $args['paths'] ?? array( '/services/', '/results/', '/blog/' 
 $links = array();
 foreach ( $paths as $p ) {
 	$page = '/blog/' === $p ? get_post( (int) get_option( 'page_for_posts' ) ) : get_page_by_path( trim( $p, '/' ) );
+	$page = $page ? get_post( sh_tr_id( (int) $page->ID ) ) : null; // in the visitor's language
 	if ( $page && 'publish' === $page->post_status ) {
 		$links[] = array( get_permalink( $page ), function_exists( 'sh_crumb_label' ) ? sh_crumb_label( $page, true ) : get_the_title( $page ) );
 	}

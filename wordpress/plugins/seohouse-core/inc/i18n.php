@@ -133,6 +133,18 @@ function sh_i18n_locale_for( array $in ): void {
 
 /* ------------------------------------------------------------------ front end */
 
+// the site name on English pages (titles of archives and of anything without its own SEO title)
+add_filter(
+	'option_blogname',
+	static function ( $name ) {
+		if ( is_admin() || ! did_action( 'pll_language_defined' ) || ! sh_is_en() ) {
+			return $name;
+		}
+		$en = trim( (string) get_option( 'options_sh_company_name_en', '' ) );
+		return '' !== $en ? $en : 'SEO House';
+	}
+);
+
 // one hreflang set, printed by the theme from sh_i18n_alternates() (Polylang's would include noindex drafts)
 add_filter( 'pll_rel_hreflang_attributes', '__return_empty_array', 99 );
 
@@ -141,9 +153,15 @@ add_filter( 'pll_rel_hreflang_attributes', '__return_empty_array', 99 );
  * /en/services/seo/ksa/ (Polylang's free version cannot give two pages the same slug, so the English
  * pages keep their own slugs in the database and their public address is built from the Arabic page).
  * An English page without a published Arabic page, and the English front page (/en/), keep Polylang's.
+ * Articles and team members whose internal slug ends in "-en" are mirrored the same way
+ * (/en/blog/<slug>/, /en/team/<slug>/); an English item with its own slug (case studies) keeps it.
  */
 function sh_i18n_mirror_link( int $id ): string {
 	if ( ! sh_i18n_active() || 'en' !== (string) pll_get_post_language( $id ) ) {
+		return '';
+	}
+	$type = (string) get_post_type( $id );
+	if ( 'page' !== $type && ! str_ends_with( (string) get_post_field( 'post_name', $id ), '-en' ) ) {
 		return '';
 	}
 	$front = (int) get_option( 'page_on_front' );
@@ -171,35 +189,97 @@ add_filter(
 	30,
 	2
 );
+foreach ( array( 'post_link', 'post_type_link' ) as $sh_hook ) {
+	add_filter(
+		$sh_hook,
+		static function ( $link, $post ) {
+			$mirror = $post instanceof WP_Post ? sh_i18n_mirror_link( (int) $post->ID ) : '';
+			return '' !== $mirror ? $mirror : $link;
+		},
+		30,
+		2
+	);
+}
 
-// /en/<Arabic path>/ opens the English version of that Arabic page.
+/** Category addresses mirror the Arabic ones too: an English term whose slug ends in "-en". */
+add_filter(
+	'term_link',
+	static function ( $link, $term, $taxonomy ) {
+		if ( ! sh_i18n_active() || 'category' !== $taxonomy || ! function_exists( 'pll_get_term' ) || ! str_ends_with( (string) $term->slug, '-en' ) || 'en' !== (string) pll_get_term_language( $term->term_id ) ) {
+			return $link;
+		}
+		$ar = (int) pll_get_term( $term->term_id, 'ar' );
+		if ( ! $ar ) {
+			return $link;
+		}
+		$home    = trailingslashit( (string) get_option( 'home' ) );
+		$ar_link = (string) get_term_link( $ar, $taxonomy );
+		return str_starts_with( $ar_link, $home ) ? $home . 'en/' . ltrim( substr( $ar_link, strlen( $home ) ), '/' ) : $link;
+	},
+	30,
+	3
+);
+
+// /en/<Arabic path>/ opens the English version of that Arabic page, article, team member or category.
 add_filter(
 	'request',
 	static function ( $qv ) {
-		if ( ! sh_i18n_active() || empty( $qv['pagename'] ) ) {
+		if ( ! sh_i18n_active() ) {
 			return $qv;
 		}
 		$lang = (string) ( $qv['lang'] ?? '' );
 		if ( 'en' !== $lang && 'en' !== (string) pll_current_language() ) {
 			return $qv;
 		}
-		$ar = get_page_by_path( (string) $qv['pagename'], OBJECT, 'page' );
-		if ( ! $ar || 'ar' !== (string) pll_get_post_language( $ar->ID ) ) {
-			return $qv; // not an Arabic path (e.g. an older English address): WordPress finds the page and redirects to its address
-		}
-		$en = (int) pll_get_post( $ar->ID, 'en' );
-		if ( ! $en || 'publish' !== get_post_status( $en ) ) {
+		$to_en = static function ( int $ar ): int {
+			if ( ! $ar || 'ar' !== (string) pll_get_post_language( $ar ) ) {
+				return 0;
+			}
+			$en = (int) pll_get_post( $ar, 'en' );
+			return $en && 'publish' === get_post_status( $en ) ? $en : 0;
+		};
+		if ( ! empty( $qv['pagename'] ) ) {
+			$ar = get_page_by_path( (string) $qv['pagename'], OBJECT, 'page' );
+			$en = $ar ? $to_en( (int) $ar->ID ) : 0; // not an Arabic path (an older English address): WordPress finds the page and it is redirected
+			if ( $en ) {
+				unset( $qv['pagename'] );
+				$qv['page_id'] = $en;
+			}
 			return $qv;
 		}
-		unset( $qv['pagename'] );
-		$qv['page_id'] = $en;
+		foreach ( array( 'team_member' => 'team_member', 'name' => 'post' ) as $var => $type ) {
+			if ( empty( $qv[ $var ] ) ) {
+				continue;
+			}
+			$type  = 'name' === $var && ! empty( $qv['post_type'] ) && is_string( $qv['post_type'] ) ? $qv['post_type'] : $type;
+			$found = get_posts( array( 'name' => (string) $qv[ $var ], 'post_type' => $type, 'post_status' => 'publish', 'lang' => 'ar', 'numberposts' => 1, 'fields' => 'ids' ) );
+			$en    = $found ? $to_en( (int) $found[0] ) : 0;
+			if ( $en && str_ends_with( (string) get_post_field( 'post_name', $en ), '-en' ) ) {
+				unset( $qv[ $var ], $qv['name'] );
+				$qv['p']         = $en;
+				$qv['post_type'] = $type;
+			}
+			return $qv;
+		}
+		if ( ! empty( $qv['category_name'] ) && function_exists( 'pll_get_term' ) ) {
+			// Polylang filters term lookups by the request's language: ask for the Arabic term explicitly
+			$ar = get_terms( array( 'taxonomy' => 'category', 'slug' => sanitize_title( basename( (string) $qv['category_name'] ) ), 'lang' => 'ar', 'hide_empty' => false, 'number' => 1 ) );
+			$ar = is_array( $ar ) && $ar ? $ar[0] : null;
+			$en = $ar ? (int) pll_get_term( $ar->term_id, 'en' ) : 0;
+			if ( $en ) {
+				unset( $qv['category_name'] );
+				$qv['cat'] = $en;
+			}
+		}
 		return $qv;
 	},
 	20
 );
 
-// Older English addresses (before the mirrored structure, e.g. /en/seo/saudi-arabia/ or /en/about-us/)
-// move permanently to the page's address. English requests only; Arabic URLs are never redirected here.
+// Older English addresses move permanently to the current one. English requests only; Arabic URLs are
+// never redirected here. A page or item answering at another address than its own is redirected; an
+// address that no longer answers is redirected when it is recorded in sh_i18n_moved (old path => ID),
+// which the imports fill whenever they change an English address.
 add_action(
 	'template_redirect',
 	static function () {
@@ -211,22 +291,10 @@ add_action(
 		$qs   = (string) wp_parse_url( $uri, PHP_URL_QUERY );
 		$to   = '';
 		if ( is_404() ) {
-			$segs = array_values( array_filter( explode( '/', trim( $path, '/' ) ) ) );
-			if ( count( $segs ) < 2 || 'en' !== $segs[0] ) {
-				return;
-			}
-			$found = get_posts(
-				array(
-					'post_type'   => 'page',
-					'name'        => sanitize_title( end( $segs ) ),
-					'post_status' => 'publish',
-					'lang'        => 'en',
-					'numberposts' => 1,
-					'fields'      => 'ids',
-				)
-			);
-			$to = $found ? (string) get_permalink( (int) $found[0] ) : '';
-		} elseif ( is_page() ) {
+			$old = (array) get_option( 'sh_i18n_moved', array() );
+			$key = '/' . trim( $path, '/' ) . '/';
+			$to  = isset( $old[ $key ] ) && 'publish' === get_post_status( (int) $old[ $key ] ) ? (string) get_permalink( (int) $old[ $key ] ) : '';
+		} elseif ( is_singular() ) {
 			$want = sh_i18n_mirror_link( (int) get_queried_object_id() );
 			if ( '' !== $want && untrailingslashit( rawurldecode( (string) wp_parse_url( $want, PHP_URL_PATH ) ) ) !== untrailingslashit( $path ) ) {
 				$to = $want;
@@ -385,10 +453,20 @@ function sh_i18n_setup(): array {
 	}
 	$model->options->set( 'nav_menus', $menus );
 
-	// 5. Everything that has no language yet is Arabic.
+	// 5. Case studies and team members are translated too (their English versions are listed on English pages).
+	$types = (array) $model->options->get( 'post_types' );
+	$want  = array_values( array_unique( array_merge( $types, array( 'case_study', 'team_member' ) ) ) );
+	if ( $want !== $types ) {
+		$model->options->set( 'post_types', $want );
+		$model->options->save();
+		$done[] = 'post types case_study, team_member';
+	}
+
+	// 6. Everything that has no language yet is Arabic.
 	$model->set_language_in_mass();
 	$model->options->save();
-	flush_rewrite_rules( false );
+	delete_option( 'rewrite_rules' ); // rebuilt on the next request, with Polylang's rules for the newly translated types
+	sh_i18n_refresh_sitemaps();
 
 	return array(
 		'ok'        => true,
@@ -448,6 +526,7 @@ function sh_i18n_import_page( array $in ) {
 		}
 		pll_set_post_language( $id, 'en' );
 	} else {
+		$before     = (string) get_permalink( $id );
 		$args['ID'] = $id;
 		$r          = wp_update_post( wp_slash( $args ), true );
 		if ( is_wp_error( $r ) ) {
@@ -461,6 +540,9 @@ function sh_i18n_import_page( array $in ) {
 	$translations['en'] = $id;
 	pll_save_post_translations( $translations );
 	PLL()->model->clean_languages_cache(); // languages keep their front page / posts page: a new translation of either must be seen
+	if ( ! $new ) {
+		sh_i18n_remember_path( $id, $before );
+	}
 
 	// sections, by the field keys of the template's field group
 	$keys = array();
@@ -515,6 +597,199 @@ function sh_i18n_import_page( array $in ) {
 		'missing'  => $missing,
 		'index'    => sh_i18n_indexable( $id ),
 	);
+}
+
+/** Records an English address that an import is about to change (see sh_i18n_moved). */
+function sh_i18n_remember_path( int $id, string $before ): void {
+	$after = (string) get_permalink( $id );
+	if ( '' === $before || $before === $after ) {
+		return;
+	}
+	$path  = '/' . trim( rawurldecode( (string) wp_parse_url( $before, PHP_URL_PATH ) ), '/' ) . '/';
+	$moved = (array) get_option( 'sh_i18n_moved', array() );
+	$moved[ $path ] = $id;
+	update_option( 'sh_i18n_moved', $moved, false );
+}
+
+/** Post types whose English versions are written by content/item. */
+const SH_I18N_ITEM_TYPES = array( 'post', 'case_study', 'team_member' );
+
+/** Field name => ACF field for the content groups of a post type (not page sections). */
+function sh_i18n_type_fields( string $type ): array {
+	$out = array();
+	foreach ( acf_get_field_groups( array( 'post_type' => $type ) ) as $g ) {
+		if ( str_starts_with( (string) $g['key'], 'group_sh_page_' ) ) {
+			continue;
+		}
+		foreach ( (array) acf_get_fields( $g ) as $f ) {
+			if ( '' !== (string) ( $f['name'] ?? '' ) && ! in_array( $f['type'], array( 'tab', 'accordion', 'message' ), true ) ) {
+				$out[ $f['name'] ] = $f;
+			}
+		}
+	}
+	return $out;
+}
+
+/** Post IDs in a stored value (relationship, post object) → their English versions when there are any. */
+function sh_i18n_map_ids( $v ) {
+	if ( is_array( $v ) ) {
+		return array_map( 'sh_i18n_map_ids', $v );
+	}
+	if ( is_numeric( $v ) && (int) $v > 0 ) {
+		$en = (int) pll_get_post( (int) $v, 'en' );
+		return $en ? $en : (int) $v;
+	}
+	return $v;
+}
+
+/**
+ * Creates or updates the English version of an Arabic article, case study or team member.
+ *
+ * Body (JSON): source (Arabic ID), slug, title, content (articles: block markup), excerpt,
+ * fields {name: value} (as GET content returns them), seo {rank_math_title, rank_math_description,
+ * rank_math_focus_keyword}, index (bool). Featured image, author, date and menu order follow the Arabic
+ * item; categories become their English versions (create them first with i18n/terms).
+ */
+function sh_i18n_import_item( array $in ) {
+	if ( ! sh_i18n_active() || ! sh_core_acf_ready() ) {
+		return new WP_Error( 'sh_i18n', 'Polylang وACF مطلوبتان.', array( 'status' => 409 ) );
+	}
+	$source = get_post( (int) ( $in['source'] ?? 0 ) );
+	if ( ! $source || ! in_array( $source->post_type, SH_I18N_ITEM_TYPES, true ) || SH_LANG_DEFAULT !== sh_post_lang( $source->ID ) ) {
+		return new WP_Error( 'sh_source', 'source: رقم مقال أو دراسة حالة أو عضو فريق عربي.', array( 'status' => 400 ) );
+	}
+	if ( ! pll_is_translated_post_type( $source->post_type ) ) {
+		return new WP_Error( 'sh_type', 'نوع المحتوى غير مفعّل للترجمة (شغّل i18n/setup).', array( 'status' => 409 ) );
+	}
+	$slug = sanitize_title( (string) ( $in['slug'] ?? '' ) );
+	if ( '' === $slug ) {
+		return new WP_Error( 'sh_slug', 'slug مطلوب.', array( 'status' => 400 ) );
+	}
+	$id   = (int) pll_get_post( $source->ID, 'en' );
+	$new  = ! $id;
+	$args = array(
+		'post_type'     => $source->post_type,
+		'post_title'    => wp_strip_all_tags( (string) ( $in['title'] ?? $source->post_title ) ),
+		'post_name'     => $slug,
+		'post_content'  => (string) ( $in['content'] ?? '' ),
+		'post_excerpt'  => (string) ( $in['excerpt'] ?? '' ),
+		'post_author'   => (int) $source->post_author,
+		'post_date'     => $source->post_date,
+		'post_date_gmt' => $source->post_date_gmt,
+		'menu_order'    => (int) $source->menu_order,
+	);
+	if ( $new ) {
+		$args['post_status'] = 'draft';
+		$id                  = wp_insert_post( wp_slash( $args ), true );
+		if ( is_wp_error( $id ) ) {
+			return $id;
+		}
+		pll_set_post_language( $id, 'en' );
+	} else {
+		$before     = (string) get_permalink( $id );
+		$args['ID'] = $id;
+		$r          = wp_update_post( wp_slash( $args ), true );
+		if ( is_wp_error( $r ) ) {
+			return $r;
+		}
+	}
+	$translations       = (array) pll_get_post_translations( $source->ID );
+	$translations['ar'] = $source->ID;
+	$translations['en'] = $id;
+	pll_save_post_translations( $translations );
+	if ( ! $new ) {
+		sh_i18n_remember_path( $id, $before );
+	}
+	$thumb = (int) get_post_thumbnail_id( $source->ID );
+	if ( $thumb ) {
+		set_post_thumbnail( $id, $thumb );
+	} else {
+		delete_post_thumbnail( $id );
+	}
+	if ( 'post' === $source->post_type ) {
+		$cats = array();
+		foreach ( wp_get_post_categories( $source->ID ) as $c ) {
+			$en_c = (int) pll_get_term( (int) $c, 'en' );
+			if ( $en_c ) {
+				$cats[] = $en_c;
+			}
+		}
+		wp_set_post_categories( $id, $cats );
+	}
+
+	$known   = sh_i18n_type_fields( $source->post_type );
+	$written = array();
+	$skipped = array();
+	foreach ( (array) ( $in['fields'] ?? array() ) as $name => $value ) {
+		if ( ! isset( $known[ $name ] ) ) {
+			$skipped[] = $name;
+			continue;
+		}
+		if ( in_array( $known[ $name ]['type'], array( 'post_object', 'relationship' ), true ) ) {
+			$value = sh_i18n_map_ids( $value );
+		}
+		update_field( $known[ $name ]['key'], $value, $id );
+		$written[] = $name;
+	}
+	$seo = (array) ( $in['seo'] ?? array() );
+	foreach ( array( 'rank_math_title', 'rank_math_description', 'rank_math_focus_keyword' ) as $m ) {
+		$v = trim( wp_strip_all_tags( (string) ( $seo[ $m ] ?? '' ) ) );
+		if ( '' === $v ) {
+			delete_post_meta( $id, $m );
+		} else {
+			update_post_meta( $id, $m, $v );
+		}
+	}
+	sh_i18n_set_index( $id, ! empty( $in['index'] ) );
+	if ( $new || 'publish' !== get_post_status( $id ) ) {
+		wp_update_post( array( 'ID' => $id, 'post_status' => 'publish' ) );
+	}
+	if ( function_exists( 'sh_search_index' ) ) {
+		sh_search_index( $id );
+	}
+	sh_i18n_refresh_sitemaps();
+	$p = get_post( $id );
+	return array(
+		'id'      => $id,
+		'source'  => $source->ID,
+		'created' => $new,
+		'url'     => (string) get_permalink( $id ),
+		'slug'    => rawurldecode( $p->post_name ),
+		'slug_ok' => $p->post_name === $slug,
+		'fields'  => count( $written ),
+		'skipped' => $skipped,
+		'index'   => sh_i18n_indexable( $id ),
+	);
+}
+
+/** English versions of Arabic categories: [{source, name, description}] (slug: Arabic slug + "-en"). */
+function sh_i18n_import_terms( array $items ): array {
+	$out = array();
+	foreach ( $items as $it ) {
+		$ar = get_term( (int) ( $it['source'] ?? 0 ), 'category' );
+		if ( ! $ar || is_wp_error( $ar ) || 'ar' !== (string) pll_get_term_language( $ar->term_id ) ) {
+			$out[] = array( 'source' => (int) ( $it['source'] ?? 0 ), 'error' => 'not an Arabic category' );
+			continue;
+		}
+		$name = sanitize_text_field( (string) ( $it['name'] ?? '' ) );
+		$desc = sanitize_textarea_field( (string) ( $it['description'] ?? '' ) );
+		$en   = (int) pll_get_term( $ar->term_id, 'en' );
+		if ( $en ) {
+			wp_update_term( $en, 'category', array( 'name' => $name, 'description' => $desc ) );
+		} else {
+			$r = wp_insert_term( $name, 'category', array( 'slug' => $ar->slug . '-en', 'description' => $desc ) );
+			if ( is_wp_error( $r ) ) {
+				$out[] = array( 'source' => $ar->term_id, 'error' => $r->get_error_message() );
+				continue;
+			}
+			$en = (int) $r['term_id'];
+			pll_set_term_language( $en, 'en' );
+		}
+		pll_save_term_translations( array( 'ar' => $ar->term_id, 'en' => $en ) );
+		$out[] = array( 'source' => $ar->term_id, 'id' => $en, 'url' => (string) get_term_link( $en, 'category' ) );
+	}
+	sh_i18n_refresh_sitemaps();
+	return $out;
 }
 
 /**
@@ -768,6 +1043,43 @@ add_action(
 		);
 		register_rest_route(
 			'seohouse/v1',
+			'/i18n/moved',
+			array(
+				'methods'             => 'POST',
+				'callback'            => static function ( WP_REST_Request $r ) {
+					$moved = (array) get_option( 'sh_i18n_moved', array() );
+					foreach ( (array) $r->get_json_params() as $path => $id ) {
+						$path = '/' . trim( sanitize_text_field( (string) $path ), '/' ) . '/';
+						if ( str_starts_with( $path, '/en/' ) && 'en' === sh_post_lang( (int) $id ) ) {
+							$moved[ $path ] = (int) $id;
+						}
+					}
+					update_option( 'sh_i18n_moved', $moved, false );
+					return new WP_REST_Response( $moved );
+				},
+				'permission_callback' => $admin,
+			)
+		);
+		register_rest_route(
+			'seohouse/v1',
+			'/content/item',
+			array(
+				'methods'             => 'POST',
+				'callback'            => static fn( WP_REST_Request $r ) => rest_ensure_response( sh_i18n_import_item( (array) $r->get_json_params() ) ),
+				'permission_callback' => $admin,
+			)
+		);
+		register_rest_route(
+			'seohouse/v1',
+			'/i18n/terms',
+			array(
+				'methods'             => 'POST',
+				'callback'            => static fn( WP_REST_Request $r ) => new WP_REST_Response( sh_i18n_import_terms( (array) ( $r->get_json_params()['items'] ?? array() ) ) ),
+				'permission_callback' => $admin,
+			)
+		);
+		register_rest_route(
+			'seohouse/v1',
 			'/content/replace',
 			array(
 				'methods'             => 'POST',
@@ -805,8 +1117,8 @@ add_action(
 					$index = rest_sanitize_boolean( $r['index'] );
 					$out   = array();
 					foreach ( array_filter( array_map( 'intval', (array) $r['ids'] ) ) as $id ) {
-						if ( 'page' !== get_post_type( $id ) || 'en' !== sh_post_lang( $id ) ) {
-							$out[ $id ] = 'skipped (not an English page)';
+						if ( ! in_array( get_post_type( $id ), array_merge( array( 'page' ), SH_I18N_ITEM_TYPES ), true ) || 'en' !== sh_post_lang( $id ) ) {
+							$out[ $id ] = 'skipped (not an English page or item)';
 							continue;
 						}
 						sh_i18n_set_index( $id, $index );
