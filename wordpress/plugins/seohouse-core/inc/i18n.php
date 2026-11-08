@@ -148,6 +148,13 @@ add_filter(
 	99
 );
 
+// An English address that no longer exists is not sent to a similarly named page (WordPress's guess would
+// land on the Arabic article with the same slug): it stays a 404. Recorded moves (sh_i18n_moved) still redirect.
+add_filter(
+	'do_redirect_guess_404_permalink',
+	static fn( $guess ) => sh_i18n_active() && sh_is_en() ? false : $guess
+);
+
 // the site name on English pages (titles of archives and of anything without its own SEO title)
 add_filter(
 	'option_blogname',
@@ -267,12 +274,19 @@ add_filter(
 				continue;
 			}
 			$type  = 'name' === $var && ! empty( $qv['post_type'] ) && is_string( $qv['post_type'] ) ? $qv['post_type'] : $type;
-			$found = get_posts( array( 'name' => (string) $qv[ $var ], 'post_type' => $type, 'post_status' => 'publish', 'lang' => 'ar', 'numberposts' => 1, 'fields' => 'ids' ) );
+			$found = array_values( array_filter( get_posts( array( 'name' => (string) $qv[ $var ], 'post_type' => $type, 'post_status' => 'publish', 'numberposts' => 5, 'fields' => 'ids' ) ), static fn( $i ) => 'ar' === (string) pll_get_post_language( (int) $i ) ) );
 			$en    = $found ? $to_en( (int) $found[0] ) : 0;
 			if ( $en && str_ends_with( (string) get_post_field( 'post_name', $en ), '-en' ) ) {
 				unset( $qv[ $var ], $qv['name'] );
 				$qv['p']         = $en;
 				$qv['post_type'] = $type;
+			} elseif ( $found && ! $en ) {
+				// get_posts() ignores Polylang's "lang" (filters suppressed): the language is checked here
+				$own = array_filter( get_posts( array( 'name' => (string) $qv[ $var ], 'post_type' => $type, 'post_status' => 'publish', 'numberposts' => 5, 'fields' => 'ids' ) ), static fn( $i ) => 'en' === (string) pll_get_post_language( (int) $i ) );
+				if ( ! $own ) {
+					// an Arabic article without an English version: /en/... is a 404 (Polylang would send it to the Arabic one)
+					return array( 'error' => '404' );
+				}
 			}
 			return $qv;
 		}
@@ -777,6 +791,116 @@ function sh_i18n_import_item( array $in ) {
 	);
 }
 
+/**
+ * A standalone English article (written for English search, not a translation of an Arabic one): no
+ * translation link, so no hreflang and no language switch on it.
+ *
+ * Body (JSON): id (to update an article created here), title, slug, content (block markup), excerpt,
+ * categories (English category IDs), new_categories [{name, slug, description}] (created in English when
+ * missing), author (user ID), member (English team member ID for the byline),
+ * thumbnail (attachment ID), fields {intro, reading, toc, sidebar_cta, updated_label}, seo
+ * {rank_math_title, rank_math_description, rank_math_focus_keyword}, index (bool), status (publish|draft).
+ */
+function sh_i18n_standalone_article( array $in ) {
+	if ( ! sh_i18n_active() || ! sh_core_acf_ready() ) {
+		return new WP_Error( 'sh_i18n', 'Polylang وACF مطلوبتان.', array( 'status' => 409 ) );
+	}
+	$id = (int) ( $in['id'] ?? 0 );
+	if ( $id && ( 'post' !== get_post_type( $id ) || 'en' !== sh_post_lang( $id ) || count( (array) pll_get_post_translations( $id ) ) > 1 ) ) {
+		return new WP_Error( 'sh_id', 'id: مقال إنجليزي مستقل.', array( 'status' => 400 ) );
+	}
+	$slug = sanitize_title( (string) ( $in['slug'] ?? '' ) );
+	if ( '' === $slug || '' === trim( (string) ( $in['title'] ?? '' ) ) ) {
+		return new WP_Error( 'sh_args', 'title وslug مطلوبان.', array( 'status' => 400 ) );
+	}
+	$author = (int) ( $in['author'] ?? 0 );
+	$args   = array(
+		'post_type'    => 'post',
+		'post_title'   => wp_strip_all_tags( (string) $in['title'] ),
+		'post_name'    => $slug,
+		'post_content' => (string) ( $in['content'] ?? '' ),
+		'post_excerpt' => (string) ( $in['excerpt'] ?? '' ),
+		'post_author'  => $author && get_userdata( $author ) ? $author : get_current_user_id(),
+	);
+	$cats = array_values( array_filter( array_map( 'intval', (array) ( $in['categories'] ?? array() ) ), static fn( $c ) => 'en' === (string) pll_get_term_language( $c ) ) );
+	// new_categories: [{name, slug, description}] — standalone English categories (no Arabic counterpart)
+	foreach ( (array) ( $in['new_categories'] ?? array() ) as $c ) {
+		$c_slug = sanitize_title( (string) ( $c['slug'] ?? '' ) );
+		$c_name = trim( wp_strip_all_tags( (string) ( $c['name'] ?? '' ) ) );
+		if ( '' === $c_slug || '' === $c_name || str_ends_with( $c_slug, '-en' ) ) {
+			continue;
+		}
+		$have = get_terms( array( 'taxonomy' => 'category', 'slug' => $c_slug, 'lang' => '', 'hide_empty' => false, 'number' => 1 ) );
+		$term = is_array( $have ) && $have ? (int) $have[0]->term_id : 0;
+		if ( $term && 'en' !== (string) pll_get_term_language( $term ) ) {
+			return new WP_Error( 'sh_cat', 'new_categories: slug مستخدم لتصنيف عربي: ' . $c_slug, array( 'status' => 409 ) );
+		}
+		if ( ! $term ) {
+			$r = wp_insert_term( $c_name, 'category', array( 'slug' => $c_slug, 'description' => (string) ( $c['description'] ?? '' ) ) );
+			if ( is_wp_error( $r ) ) {
+				return $r;
+			}
+			$term = (int) $r['term_id'];
+			pll_set_term_language( $term, 'en' );
+		}
+		$cats[] = $term;
+	}
+	$new = ! $id;
+	if ( $new ) {
+		$args['post_status'] = 'draft';
+		$id                  = wp_insert_post( wp_slash( $args ), true );
+		if ( is_wp_error( $id ) ) {
+			return $id;
+		}
+		pll_set_post_language( $id, 'en' );
+	} else {
+		$args['ID'] = $id;
+		$r          = wp_update_post( wp_slash( $args ), true );
+		if ( is_wp_error( $r ) ) {
+			return $r;
+		}
+	}
+	wp_set_post_categories( $id, $cats );
+	if ( ! empty( $in['thumbnail'] ) && wp_attachment_is_image( (int) $in['thumbnail'] ) ) {
+		set_post_thumbnail( $id, (int) $in['thumbnail'] );
+	}
+	$known = sh_i18n_type_fields( 'post' );
+	foreach ( (array) ( $in['fields'] ?? array() ) as $name => $value ) {
+		if ( isset( $known[ $name ] ) && 'author_member' !== $name ) {
+			update_field( $known[ $name ]['key'], $value, $id );
+		}
+	}
+	$member = (int) ( $in['member'] ?? 0 );
+	if ( $member && 'team_member' === get_post_type( $member ) && 'en' === sh_post_lang( $member ) && isset( $known['author_member'] ) ) {
+		update_field( $known['author_member']['key'], $member, $id );
+	}
+	$seo = (array) ( $in['seo'] ?? array() );
+	foreach ( array( 'rank_math_title', 'rank_math_description', 'rank_math_focus_keyword' ) as $m ) {
+		$v = trim( wp_strip_all_tags( (string) ( $seo[ $m ] ?? '' ) ) );
+		if ( '' === $v ) {
+			delete_post_meta( $id, $m );
+		} else {
+			update_post_meta( $id, $m, $v );
+		}
+	}
+	sh_i18n_set_index( $id, ! empty( $in['index'] ) );
+	$status = 'draft' === ( $in['status'] ?? 'publish' ) ? 'draft' : 'publish';
+	if ( get_post_status( $id ) !== $status ) {
+		wp_update_post( array( 'ID' => $id, 'post_status' => $status ) );
+	}
+	if ( function_exists( 'sh_search_index' ) ) {
+		sh_search_index( $id );
+	}
+	sh_i18n_refresh_sitemaps();
+	return array(
+		'id'      => $id,
+		'created' => $new,
+		'status'  => get_post_status( $id ),
+		'url'     => (string) get_permalink( $id ),
+		'index'   => sh_i18n_indexable( $id ),
+	);
+}
+
 /** English versions of Arabic categories: [{source, name, description}] (slug: Arabic slug + "-en"). */
 function sh_i18n_import_terms( array $items ): array {
 	$out = array();
@@ -1073,6 +1197,15 @@ add_action(
 					update_option( 'sh_i18n_moved', $moved, false );
 					return new WP_REST_Response( $moved );
 				},
+				'permission_callback' => $admin,
+			)
+		);
+		register_rest_route(
+			'seohouse/v1',
+			'/content/article',
+			array(
+				'methods'             => 'POST',
+				'callback'            => static fn( WP_REST_Request $r ) => rest_ensure_response( sh_i18n_standalone_article( (array) $r->get_json_params() ) ),
 				'permission_callback' => $admin,
 			)
 		);
