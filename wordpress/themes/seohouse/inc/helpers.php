@@ -510,3 +510,14 @@ function sh_footer_social_icons(): string {
 	}
 	return '' !== $items ? '<ul class="sh-foot-social" aria-label="' . esc_attr__( 'روابط التواصل', 'seohouse' ) . '">' . $items . '</ul>' : '';
 }
+
+/**
+ * Escaped text whose signed numbers and percentages («+1,363%», «-12%», «335.44%») are isolated as
+ * left-to-right, so their sign and percent stay on the right side inside Arabic sentences (2.8.8).
+ */
+function sh_bidi_numbers( string $text ): string {
+	$html = esc_html( $text );
+	// a Latin phrase in «…» (a search phrase) keeps its quotes around it, also when the line wraps
+	$html = (string) preg_replace( '/«([A-Za-z][^«»]*)»/u', '«<bdi dir="ltr">$1</bdi>»', $html );
+	return (string) preg_replace( '/(?<![\w>])([+\-−]?\d[\d,.]*%|[+\-−]\d[\d,.]*)/u', '<bdi dir="ltr">$1</bdi>', $html );
+}

@@ -16,6 +16,7 @@ $labels = array(
 	'tech'        => __( 'التقنية', 'seohouse' ),
 	'legal'       => __( 'القانون', 'seohouse' ),
 	'food'        => __( 'الأغذية والمطاعم', 'seohouse' ),
+	'industry'    => __( 'الصناعة', 'seohouse' ),
 );
 $present = array();
 foreach ( sh_case_studies() as $c ) {

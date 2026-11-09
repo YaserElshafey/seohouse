@@ -79,6 +79,8 @@ function sh_lang_switch(): ?array {
 			$url = add_query_arg( 's', rawurlencode( get_search_query( false ) ), $home );
 		} elseif ( $blog && 'publish' === get_post_status( $blog ) && ( is_singular( 'post' ) || is_category() || is_home() ) ) {
 			$url = (string) get_permalink( $blog );
+		} elseif ( is_singular( 'case_study' ) && ( $res = get_page_by_path( 'results' ) ) && ( $rt = sh_translation( (int) $res->ID, $to ) ) && 'publish' === get_post_status( $rt ) ) { // phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition
+			$url = (string) get_permalink( $rt ); // a case study written in one language: the other language's results
 		} else {
 			$url = $home;
 		}

@@ -216,3 +216,43 @@ add_filter(
 	10,
 	2
 );
+
+/* ------------------------------------------------------------------ English pages (2.9.15) */
+
+/**
+ * The reviews plugin (Widgets for Google Reviews, free mode) has one widget, in one language: its
+ * labels, dates and buttons come from a language template it downloads once and stores
+ * («trustindex-google-review-content») with the language («trustindex-google-lang»). On English
+ * pages both options are answered in English: the English template for the same widget style is
+ * downloaded once and kept in «sh_ti_template_en». Arabic pages and the plugin's settings are untouched.
+ */
+function sh_core_reviews_en_template( $stored ) {
+	$style = (int) get_option( 'trustindex-google-style-id', 4 );
+	$keep  = (array) get_option( 'sh_ti_template_en', array() );
+	if ( ! empty( $keep[ $style ] ) ) {
+		return $keep[ $style ];
+	}
+	if ( get_transient( 'sh_ti_template_en_failed' ) ) {
+		return $stored;
+	}
+	$r    = wp_remote_get( 'https://cdn.trustindex.io/widget-assets/template/v2/en.json', array( 'timeout' => 15 ) );
+	$all  = is_wp_error( $r ) ? null : json_decode( (string) wp_remote_retrieve_body( $r ), true );
+	$html = is_array( $all ) && isset( $all[ $style ] ) && is_string( $all[ $style ] ) ? $all[ $style ] : '';
+	if ( false === strpos( $html, '<!-- R-LIST -->' ) ) {
+		set_transient( 'sh_ti_template_en_failed', 1, HOUR_IN_SECONDS );
+		return $stored;
+	}
+	update_option( 'sh_ti_template_en', array( $style => $html ), false );
+	return $html;
+}
+
+add_action(
+	'wp',
+	static function () {
+		if ( is_admin() || ! function_exists( 'sh_is_en' ) || ! sh_is_en() ) {
+			return;
+		}
+		add_filter( 'option_trustindex-google-lang', static fn() => 'en' );
+		add_filter( 'option_trustindex-google-review-content', 'sh_core_reviews_en_template' );
+	}
+);

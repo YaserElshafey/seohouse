@@ -122,9 +122,9 @@
   "القائمة": "Menu",
   "القائمة الرئيسية": "Main menu",
   "القانون": "Legal",
-  "القطاع": "Sector",
-  "القطاع:": "Sector:",
-  "القطاعات": "Sectors",
+  "القطاع": "Industry",
+  "القطاع:": "Industry:",
+  "القطاعات": "Industries",
   "الكل": "All",
   "المدونة": "Blog",
   "المستخدمون": "Users",
@@ -247,7 +247,27 @@
   "ووردبريس": "WordPress",
   "ووكومرس": "WooCommerce",
   "ويب فلو": "Webflow",
-  "→ السابق": "← Previous"
+  "→ السابق": "← Previous",
+  "كلمة البحث:": "Search phrase:",
+  "الصناعة": "Industry & manufacturing",
+  "مسودة — معاينة": "Draft — preview",
+  "قسم مخفي عن الزوار — يظهر لك فقط للمراجعة.": "Hidden from visitors — shown to you for review only.",
+  "من ترتيب عملائنا في جوجل": "Our clients in Google results",
+  "المجال": "Field",
+  "الدولة": "Country",
+  "شعار %s": "%s logo",
+  "قبل": "Before",
+  "بعد": "After",
+  "الزيادة": "Increase",
+  "نتيجة إضافية": "Also",
+  "الدليل": "Evidence",
+  "الدليل من Google Analytics": "The evidence from Google Analytics",
+  "ترتيبنا في جوجل": "Our Google rankings",
+  "لقطات من نتائج بحث جوجل وقت إعداد الدراسة": "Google search results captured when this case study was prepared",
+  "بكلمات العميل": "In the client's words",
+  "رأي العميل": "What the client says",
+  "نتائج أخرى": "More results",
+  "دراسات حالة أخرى": "Other case studies"
  },
  "seohouse-core": {
   "%s — %s، %s": "%s — %s, %s",
@@ -272,6 +292,7 @@
   "صفحة غير موجودة": "Page not found",
   "طلبك مسجل لدينا بالفعل.": "We already have your request.",
   "نتائج البحث": "Search results",
-  "وصلنا طلبك.": "We've received your request."
+  "وصلنا طلبك.": "We've received your request.",
+  "محاولات دخول كثيرة من هذا الجهاز. حاول مرة أخرى بعد 15 دقيقة.": "Too many sign-in attempts from this device. Try again in 15 minutes."
  }
 }

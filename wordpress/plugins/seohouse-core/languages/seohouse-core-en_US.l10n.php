@@ -26,6 +26,7 @@ return array(
 		'رابط الموقع غير صحيح.' => 'The website URL is not valid.',
 		'صفحة غير موجودة' => 'Page not found',
 		'طلبك مسجل لدينا بالفعل.' => 'We already have your request.',
+		'محاولات دخول كثيرة من هذا الجهاز. حاول مرة أخرى بعد 15 دقيقة.' => 'Too many sign-in attempts from this device. Try again in 15 minutes.',
 		'نتائج البحث' => 'Search results',
 		'وصلنا طلبك.' => 'We\'ve received your request.',
 	),

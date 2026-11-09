@@ -140,10 +140,10 @@
   {
    "acf_fc_layout": "sectors",
    "sh_hide": 0,
-   "eyebrow": "Sectors",
-   "title": "Sectors we work with",
+   "eyebrow": "Industries",
+   "title": "Industries we work with",
    "link": 47,
-   "link_label": "All sectors",
+   "link_label": "All industries",
    "items": [
     {
      "link": 31,

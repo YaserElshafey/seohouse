@@ -90,6 +90,7 @@
         "tech": "التقنية",
         "legal": "القانون",
         "food": "الأغذية والمطاعم",
+        "industry": "الصناعة",
         "other": "أخرى"
       },
       "multiple": 1,
@@ -397,6 +398,96 @@
       }
     },
     {
+      "key": "field_sh_cs_main_metric",
+      "label": "المؤشر الأساسي (عنوان كروت النتائج)",
+      "name": "main_metric",
+      "type": "text",
+      "instructions": "مثل: طلبات الحجز من جوجل. عند ملئه مع «بعد» تظهر النتائج في 3 كروت: قبل، بعد، الزيادة.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_cs_main_before",
+      "label": "قبل",
+      "name": "main_before",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "wrapper": {
+        "width": "30"
+      }
+    },
+    {
+      "key": "field_sh_cs_main_before_period",
+      "label": "فترة «قبل»",
+      "name": "main_before_period",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "wrapper": {
+        "width": "70"
+      }
+    },
+    {
+      "key": "field_sh_cs_main_after",
+      "label": "بعد",
+      "name": "main_after",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "wrapper": {
+        "width": "30"
+      }
+    },
+    {
+      "key": "field_sh_cs_main_after_period",
+      "label": "فترة «بعد»",
+      "name": "main_after_period",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "wrapper": {
+        "width": "70"
+      }
+    },
+    {
+      "key": "field_sh_cs_main_change",
+      "label": "الزيادة",
+      "name": "main_change",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "wrapper": {
+        "width": "30"
+      }
+    },
+    {
+      "key": "field_sh_cs_main_change_note",
+      "label": "سطر تحت الزيادة",
+      "name": "main_change_note",
+      "type": "text",
+      "instructions": "اختياري، مثل: موقع جديد بدأ من الصفر",
+      "required": 0,
+      "wrapper": {
+        "width": "70"
+      }
+    },
+    {
+      "key": "field_sh_cs_extra_line",
+      "label": "سطر إضافي",
+      "name": "extra_line",
+      "type": "text",
+      "instructions": "اختياري: كارت رابع في النتائج.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_cs_extra_result",
+      "label": "نتيجة إضافية",
+      "name": "extra_result",
+      "type": "text",
+      "instructions": "اختياري: كارت آخر في النتائج.",
+      "required": 0
+    },
+    {
       "key": "field_sh_cs_tab_gallery",
       "label": "نظرة على النتائج",
       "name": "tab_gallery",
@@ -462,6 +553,129 @@
           "key": "field_sh_cs_gallery__verified"
         }
       ]
+    },
+    {
+      "key": "field_sh_cs_tab_proof",
+      "label": "الدليل والترتيب",
+      "name": "tab_proof",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_cs_analytics_image",
+      "label": "لقطة Google Analytics",
+      "name": "analytics_image",
+      "type": "image",
+      "instructions": "اللقطة كاملة كما هي (تصغير وWebP فقط). تفتح بحجمها الكامل عند الضغط.",
+      "required": 0,
+      "return_format": "id",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_sh_cs_analytics_alt",
+      "label": "وصف لقطة Analytics (نص بديل)",
+      "name": "analytics_alt",
+      "type": "text",
+      "instructions": "",
+      "required": 0
+    },
+    {
+      "key": "field_sh_cs_rankings",
+      "label": "لقطات الترتيب في جوجل",
+      "name": "rankings",
+      "type": "sh_rows",
+      "instructions": "",
+      "required": 0,
+      "layout": "block",
+      "button_label": "إضافة لقطة",
+      "max": 8,
+      "sub_fields": [
+        {
+          "name": "image",
+          "label": "اللقطة",
+          "type": "image",
+          "instructions": "",
+          "required": 1,
+          "return_format": "id",
+          "preview_size": "medium",
+          "key": "field_sh_cs_rankings__image"
+        },
+        {
+          "name": "keyword",
+          "label": "كلمة البحث",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "key": "field_sh_cs_rankings__keyword",
+          "wrapper": {
+            "width": "50"
+          }
+        },
+        {
+          "name": "position",
+          "label": "الترتيب",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "key": "field_sh_cs_rankings__position",
+          "wrapper": {
+            "width": "50"
+          }
+        },
+        {
+          "name": "alt",
+          "label": "نص بديل",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "key": "field_sh_cs_rankings__alt"
+        }
+      ]
+    },
+    {
+      "key": "field_sh_cs_tab_quote",
+      "label": "رأي العميل",
+      "name": "tab_quote",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_cs_quote",
+      "label": "رأي العميل",
+      "name": "quote",
+      "type": "textarea",
+      "instructions": "اتركه فارغًا إن لم يوجد: لا يظهر القسم.",
+      "required": 0,
+      "rows": 4,
+      "new_lines": ""
+    },
+    {
+      "key": "field_sh_cs_quote_name",
+      "label": "اسم صاحب الرأي",
+      "name": "quote_name",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "wrapper": {
+        "width": "50"
+      }
+    },
+    {
+      "key": "field_sh_cs_quote_company",
+      "label": "الشركة",
+      "name": "quote_company",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "wrapper": {
+        "width": "50"
+      }
     },
     {
       "key": "field_sh_cs_tab_links",
@@ -565,5 +779,5 @@
   "active": true,
   "description": "",
   "show_in_rest": 0,
-  "modified": 1790000000
+  "modified": 1794248856
 }

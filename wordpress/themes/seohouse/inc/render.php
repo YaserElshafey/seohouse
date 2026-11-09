@@ -51,9 +51,17 @@ function sh_render_sections( string $key ): void {
 	}
 	echo '<main id="main" class="sh-main">';
 	$other_markets = in_array( $key, array( 'seo-ksa', 'seo-egypt', 'seo-uae' ), true ); // «خدماتنا في الأسواق العربية» before the FAQ
+	// editors can look at hidden sections before showing them: ?sh_show_hidden=1 (marked, never for visitors)
+	$show_hidden = isset( $_GET['sh_show_hidden'] ) && current_user_can( 'edit_pages' ); // phpcs:ignore WordPress.Security.NonceVerification
 	foreach ( $rows as $i => $row ) {
-		if ( ! is_array( $row ) || ! empty( $row['sh_hide'] ) ) {
+		if ( ! is_array( $row ) ) {
 			continue;
+		}
+		if ( ! empty( $row['sh_hide'] ) ) {
+			if ( ! $show_hidden ) {
+				continue;
+			}
+			$row['sh_preview_hidden'] = true;
 		}
 		$layout = (string) ( $row['acf_fc_layout'] ?? '' );
 		if ( $other_markets && ( str_starts_with( $layout, 'faq' ) || str_starts_with( $layout, 'booking' ) ) ) {

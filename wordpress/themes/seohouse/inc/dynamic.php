@@ -102,15 +102,35 @@ function sh_case_studies( int $limit = 0 ): array {
 		$posts = array_filter( array_map( 'get_post', $ids ), static fn( $p ) => $p && 'publish' === $p->post_status );
 		return array_slice( array_values( $posts ), 0, $limit );
 	}
-	return get_posts(
+	$preview = ! $limit && sh_cases_preview();
+	$posts   = get_posts(
 		array(
 			'post_type'      => 'case_study',
-			'post_status'    => 'publish',
+			'post_status'    => $preview ? array( 'publish', 'draft' ) : 'publish',
 			'posts_per_page' => $limit ? $limit : 50,
 			'orderby'        => array( 'menu_order' => 'ASC', 'date' => 'DESC' ),
 			'no_found_rows'  => true,
 		)
 	);
+	// preview: the list as it will be once the drafts are approved (cases to retire then are left out)
+	return $preview ? array_values( array_filter( $posts, static fn( $p ) => ! get_post_meta( $p->ID, '_sh_retire_on_approval', true ) ) ) : $posts;
+}
+
+/**
+ * Results page preview for editors (?sh_preview=1): draft case studies are listed (marked «مسودة»),
+ * and published ones marked to be retired on approval are left out. Visitors never see it (2.8.8).
+ */
+function sh_cases_preview(): bool {
+	return isset( $_GET['sh_preview'] ) && current_user_can( 'edit_others_pages' ); // phpcs:ignore WordPress.Security.NonceVerification
+}
+
+/**
+ * The new case study presentation (client logo and name on the cards, other cases under each case) is
+ * shown to visitors once approved (option «sh_cases_v2»); before that only in the editors' preview and
+ * on draft case studies (2.8.8).
+ */
+function sh_cases_v2(): bool {
+	return (bool) get_option( 'sh_cases_v2', 0 ) || sh_cases_preview() || ( is_singular( 'case_study' ) && 'publish' !== get_post_status() );
 }
 
 /**

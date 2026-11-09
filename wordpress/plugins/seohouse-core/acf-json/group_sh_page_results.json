@@ -93,6 +93,139 @@
       ]
     },
     {
+      "key": "field_sh_res_rank_acc",
+      "label": "من ترتيب عملائنا في جوجل",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_sh_res_rank",
+      "label": "",
+      "name": "s_rankings",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_sh_res_rank_hide",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          },
+          "instructions": "المحررون يرون القسم المخفي بإضافة ‎?sh_show_hidden=1‎ إلى رابط الصفحة."
+        },
+        {
+          "key": "field_sh_res_rank_eyebrow",
+          "name": "eyebrow",
+          "label": "العنوان الصغير",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_sh_res_rank_title",
+          "name": "title",
+          "label": "العنوان",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_sh_res_rank_note",
+          "name": "note",
+          "label": "السطر تحت القسم",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_sh_res_rank_items",
+          "name": "items",
+          "label": "اللقطات",
+          "type": "sh_rows",
+          "instructions": "",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة لقطة",
+          "max": 24,
+          "sub_fields": [
+            {
+              "name": "image",
+              "label": "اللقطة",
+              "type": "image",
+              "instructions": "",
+              "required": 1,
+              "return_format": "id",
+              "preview_size": "medium",
+              "key": "field_sh_res_rank_items__image"
+            },
+            {
+              "name": "client",
+              "label": "العميل",
+              "type": "text",
+              "instructions": "",
+              "required": 1,
+              "key": "field_sh_res_rank_items__client",
+              "wrapper": {
+                "width": "50"
+              }
+            },
+            {
+              "name": "sector",
+              "label": "المجال",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "key": "field_sh_res_rank_items__sector",
+              "wrapper": {
+                "width": "50"
+              }
+            },
+            {
+              "name": "keyword",
+              "label": "كلمة البحث",
+              "type": "text",
+              "instructions": "",
+              "required": 1,
+              "key": "field_sh_res_rank_items__keyword",
+              "wrapper": {
+                "width": "50"
+              }
+            },
+            {
+              "name": "position",
+              "label": "الترتيب",
+              "type": "text",
+              "instructions": "",
+              "required": 1,
+              "key": "field_sh_res_rank_items__position",
+              "wrapper": {
+                "width": "50"
+              }
+            },
+            {
+              "name": "alt",
+              "label": "نص بديل",
+              "type": "text",
+              "instructions": "",
+              "required": 0,
+              "key": "field_sh_res_rank_items__alt"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "key": "field_8bd44d6e0fa20",
       "label": "صفحات مرتبطة — مكوّن مشترك",
       "name": "",

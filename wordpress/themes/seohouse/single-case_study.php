@@ -27,6 +27,16 @@ while ( have_posts() ) :
 			__( 'فترة القياس', 'seohouse' )  => $g( 'period' ),
 		)
 	);
+	// 2.8.8: a client with a logo gets the client box (logo, field, country) instead of the data list
+	$logo = $show_client && ! empty( $f['client_logo'] ) ? (int) $f['client_logo'] : 0;
+	if ( $logo ) {
+		$meta = array_filter(
+			array(
+				__( 'المجال', 'seohouse' ) => $g( 'sector' ),
+				__( 'الدولة', 'seohouse' ) => $g( 'market' ),
+			)
+		);
+	}
 	$steps   = array_values( array_filter( (array) ( $f['steps'] ?? array() ), static fn( $s ) => ! empty( $s['title'] ) ) );
 	$metrics = array_values( array_filter( (array) ( $f['metrics'] ?? array() ), static fn( $m ) => ! empty( $m['label'] ) && ( '' !== ( $m['after'] ?? '' ) || '' !== ( $m['change'] ?? '' ) ) ) );
 	// only screenshots confirmed for this case are shown (unverified ones stay in the admin for review)
@@ -47,7 +57,7 @@ while ( have_posts() ) :
 			<?php if ( $g( 'summary' ) ) : ?>
 			<p style="font-size: 17px; line-height: 1.9; color: <?php echo esc_attr( $muted ); ?>; margin: 12px 0px 0px; text-wrap: pretty;"><?php echo esc_html( $g( 'summary' ) ); ?></p>
 			<?php endif; ?>
-			<?php if ( $g( 'result' ) || $meta ) : ?>
+			<?php if ( $g( 'result' ) || $meta || $logo ) : ?>
 			<div data-cs-top style="margin-top: 22px; display: grid; gap: 16px; align-items: stretch;">
 				<?php if ( $g( 'result' ) ) : ?>
 				<div style="border-radius: 14px; background: var(--sh-blue); color: rgb(255, 255, 255); padding: 14px 18px; display: flex; flex-direction: column; justify-content: center; min-width: 170px;">
@@ -57,7 +67,18 @@ while ( have_posts() ) :
 					<?php endif; ?>
 				</div>
 				<?php endif; ?>
-				<?php if ( $meta ) : ?>
+				<?php if ( $logo ) : ?>
+				<div class="sh-cs-client" style="display: flex; align-items: center; gap: 16px 22px; flex-wrap: wrap; background: rgb(255, 255, 255); border-radius: 14px; padding: 14px 18px; box-shadow: 0 0 0 1px var(--sh-line);">
+					<span class="sh-case-logo sh-case-logo--lg"><?php echo wp_get_attachment_image( $logo, 'medium', false, array( 'alt' => sprintf( /* translators: %s: client */ __( 'شعار %s', 'seohouse' ), $g( 'client' ) ), 'decoding' => 'async' ) ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span>
+					<?php if ( $meta ) : ?>
+					<dl style="margin: 0px; display: flex; flex-wrap: wrap; gap: 10px 28px;">
+						<?php foreach ( $meta as $k => $v ) : ?>
+						<div style="min-width: 0px;"><dt style="font-size: 12.5px; color: var(--sh-text);"><?php echo esc_html( $k ); ?></dt><dd style="margin: 2px 0px 0px; font-size: 14.5px; font-weight: 600; color: var(--sh-ink);"><?php echo esc_html( $v ); ?></dd></div>
+						<?php endforeach; ?>
+					</dl>
+					<?php endif; ?>
+				</div>
+				<?php elseif ( $meta ) : ?>
 				<dl data-cs-meta style="margin: 0px; display: grid; gap: 10px 18px; align-content: center; background: rgb(255, 255, 255); border-radius: 14px; padding: 14px 18px; box-shadow: 0 0 0 1px var(--sh-line);">
 					<?php foreach ( $meta as $k => $v ) : ?>
 					<div style="min-width: 0px;"><dt style="font-size: 12.5px; color: var(--sh-text);"><?php echo esc_html( $k ); ?></dt><dd style="margin: 2px 0px 0px; font-size: 14.5px; font-weight: 600; color: var(--sh-ink);">
@@ -120,7 +141,12 @@ while ( have_posts() ) :
 	</section>
 	<?php endif; ?>
 
-	<?php if ( $g( 'results_text' ) || $metrics ) : ?>
+	<?php
+	// 2.8.8: the main result as three cards (before / after / increase, each with its period), then the
+	// extra lines and the source; cases without it keep the metrics list
+	$main = '' !== $g( 'main_after' ) || '' !== $g( 'main_change' );
+	?>
+	<?php if ( $g( 'results_text' ) || $metrics || $main ) : ?>
 	<section data-screen-label="Results" data-blue-field style="position: relative; overflow: hidden; background: linear-gradient(rgb(46, 90, 240) 0%, rgb(40, 84, 232) 60%, rgb(36, 76, 214) 100%); color: rgb(255, 255, 255);">
 		<div aria-hidden="true" style="position: absolute; inset: 0px; opacity: 0.12; background-image: radial-gradient(rgb(255, 255, 255) 1px, transparent 1px); background-size: 22px 22px; pointer-events: none;"></div>
 		<div style="position: relative; max-width: 760px; margin: 0px auto; padding-inline: 20px; padding-top: clamp(32px, 4vw, 52px); padding-bottom: clamp(32px, 4vw, 52px);">
@@ -129,7 +155,43 @@ while ( have_posts() ) :
 			<?php if ( $g( 'results_text' ) ) : ?>
 			<div class="sh-cs-text" style="font-size: 17px; line-height: 2; color: rgb(255, 255, 255); margin: 12px 0px 0px; text-wrap: pretty;"><?php echo wp_kses_post( $g( 'results_text' ) ); ?></div>
 			<?php endif; ?>
-			<?php if ( $metrics ) : ?>
+			<?php if ( $main ) : ?>
+			<?php if ( $g( 'main_metric' ) ) : ?>
+			<p style="margin: 14px 0px 0px; font-size: 16.5px; font-weight: 600; color: rgb(255, 255, 255);"><?php echo esc_html( $g( 'main_metric' ) ); ?></p>
+			<?php endif; ?>
+			<div data-cs-main style="margin-top: 16px; display: grid; gap: 12px;">
+				<?php
+				$cards = array(
+					array( __( 'قبل', 'seohouse' ), $g( 'main_before' ), $g( 'main_before_period' ), '' ),
+					array( __( 'بعد', 'seohouse' ), $g( 'main_after' ), $g( 'main_after_period' ), '' ),
+					array( __( 'الزيادة', 'seohouse' ), $g( 'main_change' ), $g( 'main_change_note' ), 'up' ),
+				);
+				foreach ( $cards as $card ) :
+					if ( '' === (string) $card[1] ) {
+						continue;
+					}
+					?>
+				<div class="sh-cs-card<?php echo 'up' === $card[3] ? ' sh-cs-card--up' : ''; ?>">
+					<span class="sh-cs-card__label"><?php echo esc_html( $card[0] ); ?></span>
+					<span class="sh-cs-card__value"><bdi><?php echo esc_html( $card[1] ); ?></bdi></span>
+					<?php if ( '' !== (string) $card[2] ) : ?>
+					<span class="sh-cs-card__sub"><?php echo esc_html( $card[2] ); ?></span>
+					<?php endif; ?>
+				</div>
+				<?php endforeach; ?>
+				<?php foreach ( array( 'extra_line' => '', 'extra_result' => __( 'نتيجة إضافية', 'seohouse' ) ) as $k => $label ) : ?>
+					<?php if ( $g( $k ) ) : ?>
+				<div class="sh-cs-card sh-cs-card--wide">
+					<?php if ( '' !== $label ) : ?><span class="sh-cs-card__label"><?php echo esc_html( $label ); ?></span><?php endif; ?>
+					<span class="sh-cs-card__text"><?php echo sh_bidi_numbers( $g( $k ) ); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped in the helper ?></span>
+				</div>
+					<?php endif; ?>
+				<?php endforeach; ?>
+			</div>
+			<?php if ( $g( 'source' ) ) : ?>
+			<p style="margin: 16px 0px 0px; font-size: 14px; color: rgb(255, 255, 255);"><?php echo esc_html( __( 'المصدر:', 'seohouse' ) . ' ' . $g( 'source' ) ); ?></p>
+			<?php endif; ?>
+			<?php elseif ( $metrics ) : ?>
 			<div data-cs-metrics style="margin-top: 22px; display: grid; gap: 12px;">
 				<?php foreach ( $metrics as $m ) : ?>
 				<div style="border-radius: 14px; background: rgba(255, 255, 255, 0.12); box-shadow: inset 0 0 0 1px var(--sh-line); padding: 16px 18px;">
@@ -161,7 +223,7 @@ while ( have_posts() ) :
 					__( 'المصدر:', 'seohouse' ) => $g( 'source' ),
 				)
 			);
-			if ( $periods && ( $g( 'period_before' ) || $g( 'period_after' ) ) ) :
+			if ( ! $main && $periods && ( $g( 'period_before' ) || $g( 'period_after' ) ) ) :
 				?>
 			<dl style="margin: 16px 0px 0px; display: flex; flex-wrap: wrap; gap: 6px 24px; font-size: 14px; color: rgb(255, 255, 255);">
 				<?php foreach ( $periods as $k => $v ) : ?>
@@ -201,6 +263,67 @@ while ( have_posts() ) :
 	</section>
 	<?php endif; ?>
 
+	<?php
+	$analytics = (int) $g( 'analytics_image' );
+	$rankings  = array_values( array_filter( (array) ( $f['rankings'] ?? array() ), static fn( $x ) => ! empty( $x['image'] ) && ! empty( $x['keyword'] ) ) );
+	$head      = static function ( string $eyebrow, string $title ): void {
+		printf(
+			'<div style="font-size: 13.5px; font-weight: 600; color: var(--sh-link);">%s</div><h2 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(21px, 2vw, 26px); line-height: 1.5; margin: 8px 0px 0px;">%s</h2>',
+			esc_html( $eyebrow ),
+			esc_html( $title )
+		);
+	};
+	?>
+	<?php if ( $analytics ) : ?>
+	<section data-screen-label="Analytics" style="background: var(--sh-surface); color: var(--sh-ink);">
+		<div style="max-width: 1000px; margin: 0px auto; padding: clamp(32px, 4vw, 52px) 20px;">
+			<div style="max-width: 760px; margin: 0px auto;"><?php $head( __( 'الدليل', 'seohouse' ), __( 'الدليل من Google Analytics', 'seohouse' ) ); ?></div>
+			<?php
+			$alt  = $g( 'analytics_alt' ) ? $g( 'analytics_alt' ) : (string) get_post_meta( $analytics, '_wp_attachment_image_alt', true );
+			$full = (string) wp_get_attachment_image_url( $analytics, 'full' );
+			?>
+			<figure style="margin: 20px 0px 0px; border-radius: 16px; background: rgb(255, 255, 255); padding: 10px; box-shadow: 0 14px 34px -28px rgba(6,11,31,.5), 0 0 0 1px var(--sh-line);">
+				<a href="<?php echo esc_url( $full ); ?>" data-sh-lightbox data-alt="<?php echo esc_attr( $alt ); ?>" aria-label="<?php echo esc_attr( __( 'فتح الصورة بالحجم الكامل:', 'seohouse' ) . ' ' . $alt ); ?>" class="sh-shot__img">
+					<?php echo wp_get_attachment_image( $analytics, 'full', false, array( 'alt' => $alt, 'loading' => 'lazy', 'decoding' => 'async', 'sizes' => '(max-width: 1000px) 100vw, 980px' ) ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+				</a>
+				<?php if ( $g( 'source' ) ) : ?>
+				<figcaption style="padding: 12px 6px 4px; font-size: 14px; line-height: 1.7; color: <?php echo esc_attr( $muted ); ?>;"><?php echo esc_html( __( 'المصدر:', 'seohouse' ) . ' ' . $g( 'source' ) ); ?></figcaption>
+				<?php endif; ?>
+			</figure>
+		</div>
+	</section>
+	<?php endif; ?>
+
+	<?php if ( $rankings ) : ?>
+	<section data-screen-label="Rankings" style="background: var(--sh-surface); color: var(--sh-ink); border-top: 1px solid var(--sh-line);">
+		<div style="max-width: 1000px; margin: 0px auto; padding: clamp(32px, 4vw, 52px) 20px;">
+			<div style="max-width: 760px; margin: 0px auto;"><?php $head( __( 'نتائج البحث', 'seohouse' ), __( 'ترتيبنا في جوجل', 'seohouse' ) ); ?></div>
+			<div class="sh-rank-grid" data-count="<?php echo (int) count( $rankings ); ?>" style="margin-top: 20px;">
+				<?php
+				foreach ( $rankings as $x ) {
+					get_template_part( 'parts/case-shot', null, array( 'image' => (int) $x['image'], 'alt' => (string) ( $x['alt'] ?? '' ), 'keyword' => (string) $x['keyword'], 'position' => (string) ( $x['position'] ?? '' ) ) );
+				}
+				?>
+			</div>
+			<p style="margin: 16px 0px 0px; font-size: 14px; color: <?php echo esc_attr( $muted ); ?>;"><?php esc_html_e( 'لقطات من نتائج بحث جوجل وقت إعداد الدراسة', 'seohouse' ); ?></p>
+		</div>
+	</section>
+	<?php endif; ?>
+
+	<?php if ( $g( 'quote' ) ) : ?>
+	<section data-screen-label="Testimonial" style="background: var(--sh-surface); color: var(--sh-ink); border-top: 1px solid var(--sh-line);">
+		<div style="max-width: 760px; margin: 0px auto; padding: clamp(32px, 4vw, 52px) 20px;">
+			<?php $head( __( 'بكلمات العميل', 'seohouse' ), __( 'رأي العميل', 'seohouse' ) ); ?>
+			<figure class="sh-cs-quote">
+				<blockquote><p><?php echo esc_html( $g( 'quote' ) ); ?></p></blockquote>
+				<?php if ( $g( 'quote_name' ) || $g( 'quote_company' ) ) : ?>
+				<figcaption><b><?php echo esc_html( $g( 'quote_name' ) ); ?></b><?php echo $g( 'quote_name' ) && $g( 'quote_company' ) ? '، ' : ''; ?><span><?php echo esc_html( $g( 'quote_company' ) ); ?></span></figcaption>
+				<?php endif; ?>
+			</figure>
+		</div>
+	</section>
+	<?php endif; ?>
+
 	<section data-screen-label="Next" style="background: var(--sh-bg); border-bottom: 1px solid var(--sh-line);">
 		<div style="max-width: 1040px; margin: 0px auto; padding: clamp(28px, 3.2vw, 40px) 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 28px;">
 			<div style="min-width: 0px;">
@@ -221,6 +344,23 @@ while ( have_posts() ) :
 			</div>
 		</div>
 	</section>
+
+	<?php
+	$others = '';
+	if ( sh_cases_v2() ) {
+		ob_start();
+		get_template_part( 'parts/dynamic/case-list', null, array( 'context' => 'related', 'exclude' => array( $id ), 'limit' => 3 ) );
+		$others = trim( (string) ob_get_clean() );
+	}
+	if ( '' !== $others ) :
+		?>
+	<section data-screen-label="More cases" style="background: var(--sh-surface); color: var(--sh-ink);">
+		<div style="max-width: 1100px; margin: 0px auto; padding: clamp(32px, 4vw, 52px) 20px;">
+			<?php $head( __( 'نتائج أخرى', 'seohouse' ), __( 'دراسات حالة أخرى', 'seohouse' ) ); ?>
+			<ul style="list-style: none; margin: 20px 0px 0px; padding: 0px; display: flex; flex-direction: column; gap: 12px;"><?php echo $others; // phpcs:ignore WordPress.Security.EscapeOutput -- escaped in the part ?></ul>
+		</div>
+	</section>
+	<?php endif; ?>
 </main>
 	<?php
 endwhile;
