@@ -277,7 +277,8 @@ add_filter(
 			$found = array_values( array_filter( get_posts( array( 'name' => (string) $qv[ $var ], 'post_type' => $type, 'post_status' => 'publish', 'numberposts' => 5, 'fields' => 'ids' ) ), static fn( $i ) => 'ar' === (string) pll_get_post_language( (int) $i ) ) );
 			$en    = $found ? $to_en( (int) $found[0] ) : 0;
 			if ( $en && str_ends_with( (string) get_post_field( 'post_name', $en ), '-en' ) ) {
-				unset( $qv[ $var ], $qv['name'] );
+				// also the post type's own query var (case_study=<slug>), or WordPress looks for both and finds nothing (2.9.19)
+				unset( $qv[ $var ], $qv['name'], $qv[ $type ] );
 				$qv['p']         = $en;
 				$qv['post_type'] = $type;
 			} elseif ( $found && ! $en ) {

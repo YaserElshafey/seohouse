@@ -21,7 +21,7 @@ if ( ! $items ) {
 		<?php endif; ?>
 		<?php if ( ! empty( $f['eyebrow'] ) ) : ?><div style="font-size: 13px; font-weight: 600; color: var(--sh-link);"><?php echo esc_html( $f['eyebrow'] ); ?></div><?php endif; ?>
 		<h2 data-h2 style="font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); margin: 10px 0px 0px; line-height: 1.3;"><?php echo esc_html( ! empty( $f['title'] ) ? $f['title'] : __( 'من ترتيب عملائنا في جوجل', 'seohouse' ) ); ?></h2>
-		<ul class="sh-rank-grid" style="list-style: none; margin: 22px 0px 0px; padding: 0px;">
+		<ul class="sh-rank-grid" data-sh-gallery style="list-style: none; margin: 22px 0px 0px; padding: 0px;">
 			<?php
 			foreach ( $items as $x ) :
 				get_template_part(
@@ -34,6 +34,7 @@ if ( ! $items ) {
 						'sub'      => (string) ( $x['sector'] ?? '' ),
 						'keyword'  => (string) $x['keyword'],
 						'position' => (string) ( $x['position'] ?? '' ),
+						'date'     => (string) ( $x['date'] ?? '' ),
 						'tag'      => 'li',
 					)
 				);

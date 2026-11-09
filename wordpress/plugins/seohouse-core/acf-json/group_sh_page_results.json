@@ -157,7 +157,7 @@
           "required": 0,
           "layout": "block",
           "button_label": "إضافة لقطة",
-          "max": 24,
+          "max": 80,
           "sub_fields": [
             {
               "name": "image",
@@ -209,6 +209,17 @@
               "instructions": "",
               "required": 1,
               "key": "field_sh_res_rank_items__position",
+              "wrapper": {
+                "width": "50"
+              }
+            },
+            {
+              "name": "date",
+              "label": "تاريخ اللقطة",
+              "type": "text",
+              "instructions": "مثل: 1 نوفمبر 2026. يظهر تحت اللقطة حتى لا يُقارَن ترتيب اليوم بلقطة قديمة.",
+              "required": 0,
+              "key": "field_sh_res_rank_items__date",
               "wrapper": {
                 "width": "50"
               }

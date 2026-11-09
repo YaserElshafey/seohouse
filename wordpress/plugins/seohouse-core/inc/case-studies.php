@@ -23,8 +23,9 @@ function sh_core_case_save( array $in ) {
 		return new WP_Error( 'sh_acf', 'ACF مطلوبة.', array( 'status' => 409 ) );
 	}
 	$id = (int) ( $in['id'] ?? 0 );
-	if ( $id && ( 'case_study' !== get_post_type( $id ) || 'publish' === get_post_status( $id ) ) ) {
-		return new WP_Error( 'sh_id', 'id: دراسة حالة غير منشورة أُنشئت من هذا المسار.', array( 'status' => 400 ) );
+	// a published case is changed only when asked explicitly (allow_published: true), e.g. to correct a field
+	if ( $id && ( 'case_study' !== get_post_type( $id ) || ( 'publish' === get_post_status( $id ) && empty( $in['allow_published'] ) ) ) ) {
+		return new WP_Error( 'sh_id', 'id: دراسة حالة غير منشورة أُنشئت من هذا المسار (أو allow_published).', array( 'status' => 400 ) );
 	}
 	$title = trim( wp_strip_all_tags( (string) ( $in['title'] ?? '' ) ) );
 	$slug  = sanitize_title( (string) ( $in['slug'] ?? '' ) );

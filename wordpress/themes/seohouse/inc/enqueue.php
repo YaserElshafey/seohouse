@@ -95,6 +95,12 @@ add_action(
 					'pick'       => __( 'اختر الخدمة المطلوبة.', 'seohouse' ),
 					'name'       => __( 'اكتب اسمك.', 'seohouse' ),
 					'contact'    => __( 'اكتب رقم جوال أو بريدًا إلكترونيًا صحيحًا.', 'seohouse' ),
+					'lbKw'       => __( 'كلمة البحث', 'seohouse' ),
+					'lbPos'      => __( 'الترتيب', 'seohouse' ),
+					'lbDate'     => __( 'تاريخ اللقطة', 'seohouse' ),
+					'lbPrev'     => __( 'الصورة السابقة', 'seohouse' ),
+					'lbNext'     => __( 'الصورة التالية', 'seohouse' ),
+					'lbOf'       => __( '%1$s من %2$s', 'seohouse' ),
 				),
 			)
 		);

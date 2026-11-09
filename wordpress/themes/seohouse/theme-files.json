@@ -1,6 +1,6 @@
 {
  "theme": "seohouse",
- "version": "2.8.10",
+ "version": "2.8.13",
  "count": 367,
  "files": [
   {
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 1073,
-   "sha1": "e97e3ae50759d7ffc9d637bf88fbf885abd9877c"
+   "sha1": "5d3639f1514a28b6575518127eac312496f301da"
   },
   {
    "path": "header.php",
@@ -55,8 +55,8 @@
   },
   {
    "path": "single-case_study.php",
-   "size": 25985,
-   "sha1": "b0e5295d86f534d9d081afa99c506bf0429e0d98"
+   "size": 26347,
+   "sha1": "8de32aeeff1a47feffcd92ec25574efbc16c6c3c"
   },
   {
    "path": "single-team_member.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 546,
-   "sha1": "9c75ebf330d66c5a35a1553b1065877c2452b3d1"
+   "sha1": "0ba664117a6f2f9dbfdf7b4079e0644b7d67e448"
   },
   {
    "path": "theme.json",
@@ -95,8 +95,8 @@
   },
   {
    "path": "assets/css/theme.css",
-   "size": 37592,
-   "sha1": "19657123dcfe6902b602acc7475c236e2b3f9577"
+   "size": 42229,
+   "sha1": "f8b3fd624f4694d6cddc9ed9e6e0eb50c4a789a9"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -425,8 +425,8 @@
   },
   {
    "path": "assets/js/site.js",
-   "size": 23297,
-   "sha1": "5df6a9b70770428495be9baea4430375c0373b9d"
+   "size": 26471,
+   "sha1": "36fe01d50dd44d5ce5bbd02c5f8681a43e41d93d"
   },
   {
    "path": "assets/platforms/ga4.svg",
@@ -545,8 +545,8 @@
   },
   {
    "path": "inc/enqueue.php",
-   "size": 7942,
-   "sha1": "7a513dd060208ac2fbd8f5d4cc032a66366f3c99"
+   "size": 8324,
+   "sha1": "b8c21f9051f180731a62a2fcee0819e551021bd8"
   },
   {
    "path": "inc/helpers.php",
@@ -590,8 +590,8 @@
   },
   {
    "path": "languages/en_US.l10n.php",
-   "size": 14966,
-   "sha1": "70dc1e0d895053a441250f5896f87e5d7b372ae5"
+   "size": 15280,
+   "sha1": "4585215202418cc649a347b97c8ba2624d682a7b"
   },
   {
    "path": "page-templates/about.php",
@@ -790,8 +790,8 @@
   },
   {
    "path": "parts/case-shot.php",
-   "size": 2438,
-   "sha1": "8141adde04f9be6fc12b8593fef79a4ca269a2f8"
+   "size": 3224,
+   "sha1": "480d42034aa1315c7c1883463b7889740144fb07"
   },
   {
    "path": "parts/drawer.php",
@@ -1025,8 +1025,8 @@
   },
   {
    "path": "sections/results/rankings.php",
-   "size": 2306,
-   "sha1": "cd21bb8e607c9a77cf531963685b412a15b6fdcd"
+   "size": 2373,
+   "sha1": "8a431dd64fc58bf16ad686a513d6ef637faee8ce"
   },
   {
    "path": "sections/sector-ecommerce/case.php",

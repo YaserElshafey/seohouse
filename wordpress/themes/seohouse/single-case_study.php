@@ -283,7 +283,7 @@ while ( have_posts() ) :
 			$full = (string) wp_get_attachment_image_url( $analytics, 'full' );
 			?>
 			<figure style="margin: 20px 0px 0px; border-radius: 16px; background: rgb(255, 255, 255); padding: 10px; box-shadow: 0 14px 34px -28px rgba(6,11,31,.5), 0 0 0 1px var(--sh-line);">
-				<a href="<?php echo esc_url( $full ); ?>" data-sh-lightbox data-alt="<?php echo esc_attr( $alt ); ?>" aria-label="<?php echo esc_attr( __( 'فتح الصورة بالحجم الكامل:', 'seohouse' ) . ' ' . $alt ); ?>" class="sh-shot__img">
+				<a href="<?php echo esc_url( $full ); ?>" data-sh-lightbox data-alt="<?php echo esc_attr( $alt ); ?>" data-lb-title="<?php echo esc_attr( __( 'الدليل من Google Analytics', 'seohouse' ) ); ?>" data-lb-sub="<?php echo esc_attr( $g( 'source' ) ); ?>" aria-label="<?php echo esc_attr( __( 'فتح الصورة بالحجم الكامل:', 'seohouse' ) . ' ' . $alt ); ?>" class="sh-shot__img">
 					<?php echo wp_get_attachment_image( $analytics, 'full', false, array( 'alt' => $alt, 'loading' => 'lazy', 'decoding' => 'async', 'sizes' => '(max-width: 1000px) 100vw, 980px' ) ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 				</a>
 				<?php if ( $g( 'source' ) ) : ?>
@@ -298,10 +298,10 @@ while ( have_posts() ) :
 	<section data-screen-label="Rankings" style="background: var(--sh-surface); color: var(--sh-ink); border-top: 1px solid var(--sh-line);">
 		<div style="max-width: 1000px; margin: 0px auto; padding: clamp(32px, 4vw, 52px) 20px;">
 			<div style="max-width: 760px; margin: 0px auto;"><?php $head( __( 'نتائج البحث', 'seohouse' ), __( 'ترتيبنا في جوجل', 'seohouse' ) ); ?></div>
-			<div class="sh-rank-grid" data-count="<?php echo (int) count( $rankings ); ?>" style="margin-top: 20px;">
+			<div class="sh-rank-grid" data-sh-gallery data-count="<?php echo (int) count( $rankings ); ?>" style="margin-top: 20px;">
 				<?php
 				foreach ( $rankings as $x ) {
-					get_template_part( 'parts/case-shot', null, array( 'image' => (int) $x['image'], 'alt' => (string) ( $x['alt'] ?? '' ), 'keyword' => (string) $x['keyword'], 'position' => (string) ( $x['position'] ?? '' ) ) );
+					get_template_part( 'parts/case-shot', null, array( 'image' => (int) $x['image'], 'alt' => (string) ( $x['alt'] ?? '' ), 'keyword' => (string) $x['keyword'], 'position' => (string) ( $x['position'] ?? '' ), 'date' => (string) ( $x['date'] ?? '' ), 'lb_title' => $show_client ? $g( 'client' ) : get_the_title(), 'lb_sub' => implode( ' · ', array_filter( array( $g( 'sector' ), $g( 'market' ) ) ) ) ) );
 				}
 				?>
 			</div>

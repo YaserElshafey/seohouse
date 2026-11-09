@@ -4,7 +4,7 @@
  * line, and the search phrase with its position. Used by «من ترتيب عملائنا في جوجل» (results page)
  * and «ترتيبنا في جوجل» (case study).
  *
- * @var array $args { image, alt, title, sub, keyword, position, tag (li|div) }
+ * @var array $args { image, alt, title, sub, keyword, position, date (when it was taken), lb_title, lb_sub, tag (li|div) }
  * @package SEOHouse
  */
 
@@ -21,8 +21,8 @@ $tag  = 'li' === ( $args['tag'] ?? 'div' ) ? 'li' : 'div';
 ?>
 <<?php echo $tag; // phpcs:ignore WordPress.Security.EscapeOutput -- li|div ?> class="sh-shot">
 	<figure style="margin: 0px; height: 100%; display: flex; flex-direction: column; border-radius: 16px; background: rgb(255, 255, 255); padding: 10px; box-shadow: 0 14px 34px -28px rgba(6,11,31,.5), 0 0 0 1px var(--sh-line);">
-		<a href="<?php echo esc_url( $full ); ?>" data-sh-lightbox data-alt="<?php echo esc_attr( $alt ); ?>" aria-label="<?php echo esc_attr( __( 'فتح الصورة بالحجم الكامل:', 'seohouse' ) . ' ' . $alt ); ?>" class="sh-shot__img">
-			<?php echo wp_get_attachment_image( $img, 'large', false, array( 'alt' => $alt, 'loading' => 'lazy', 'decoding' => 'async' ) ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+		<a href="<?php echo esc_url( $full ); ?>" data-sh-lightbox data-alt="<?php echo esc_attr( $alt ); ?>" data-lb-title="<?php echo esc_attr( (string) ( $args['lb_title'] ?? ( $args['title'] ?? '' ) ) ); ?>" data-lb-sub="<?php echo esc_attr( (string) ( $args['lb_sub'] ?? ( $args['sub'] ?? '' ) ) ); ?>" data-lb-kw="<?php echo esc_attr( (string) ( $args['keyword'] ?? '' ) ); ?>" data-lb-pos="<?php echo esc_attr( (string) ( $args['position'] ?? '' ) ); ?>" data-lb-date="<?php echo esc_attr( (string) ( $args['date'] ?? '' ) ); ?>" aria-label="<?php echo esc_attr( __( 'فتح الصورة بالحجم الكامل:', 'seohouse' ) . ' ' . $alt ); ?>" class="sh-shot__img sh-shot__frame">
+			<?php echo wp_get_attachment_image( $img, 'large', false, array( 'alt' => $alt, 'loading' => 'lazy', 'decoding' => 'async', 'sizes' => '(max-width: 599px) 100vw, 360px' ) ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
 		</a>
 		<figcaption style="padding: 12px 6px 4px;">
 			<?php if ( ! empty( $args['title'] ) ) : ?>
@@ -34,6 +34,9 @@ $tag  = 'li' === ( $args['tag'] ?? 'div' ) ? 'li' : 'div';
 			<span class="sh-shot__kw"><?php esc_html_e( 'كلمة البحث:', 'seohouse' ); ?> <b>«<bdi><?php echo esc_html( $args['keyword'] ?? '' ); ?></bdi>»</b></span>
 			<?php if ( ! empty( $args['position'] ) ) : ?>
 			<span class="sh-shot__pos"><?php echo esc_html( $args['position'] ); ?></span>
+			<?php endif; ?>
+			<?php if ( ! empty( $args['date'] ) ) : ?>
+			<span class="sh-shot__date"><?php echo esc_html( sprintf( /* translators: %s: date the screenshot was taken */ __( 'لقطة بتاريخ %s', 'seohouse' ), $args['date'] ) ); ?></span>
 			<?php endif; ?>
 		</figcaption>
 	</figure>

@@ -267,7 +267,14 @@
   "بكلمات العميل": "In the client's words",
   "رأي العميل": "What the client says",
   "نتائج أخرى": "More results",
-  "دراسات حالة أخرى": "Other case studies"
+  "دراسات حالة أخرى": "Other case studies",
+  "كلمة البحث": "Search phrase",
+  "الترتيب": "Position",
+  "الصورة السابقة": "Previous image",
+  "الصورة التالية": "Next image",
+  "%1$s من %2$s": "%1$s of %2$s",
+  "لقطة بتاريخ %s": "Captured on %s",
+  "تاريخ اللقطة": "Captured on"
  },
  "seohouse-core": {
   "%s — %s، %s": "%s — %s, %s",

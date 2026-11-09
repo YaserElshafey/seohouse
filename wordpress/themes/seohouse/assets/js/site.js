@@ -288,19 +288,65 @@
 	});
 
 	/* ---------------------------------------------------------------- lightbox */
-	$$('[data-sh-lightbox]').forEach(function (a) {
-		a.addEventListener('click', function (e) {
+	/* 2.8.11: the image at full size; when the link carries details (data-lb-*), a panel beside it (under it on
+	   phones) with the client, field, search phrase and position, and previous / next within its gallery
+	   ([data-sh-gallery]); arrow keys follow the reading direction, Escape closes. */
+	var rtl = d.documentElement.dir === 'rtl';
+	function lbOpen(a) {
+		var group = a.closest('[data-sh-gallery]');
+		var items = group ? $$('[data-sh-lightbox]', group) : [a];
+		var i = Math.max(0, items.indexOf(a));
+		var box = d.createElement('div');
+		box.className = 'sh-lightbox'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true');
+		box.innerHTML = '<div class="sh-lb__stage"><img alt=""></div><aside class="sh-lb__panel" hidden><p class="sh-lb__count"></p><h2 class="sh-lb__title"></h2><p class="sh-lb__sub"></p><dl class="sh-lb__facts"></dl><p class="sh-lb__alt"></p></aside>'
+			+ '<button type="button" class="sh-lb__close">✕</button><button type="button" class="sh-lb__nav" data-dir="-1"></button><button type="button" class="sh-lb__nav" data-dir="1"></button>';
+		var img = box.querySelector('img'), panel = box.querySelector('.sh-lb__panel');
+		var navs = $$('.sh-lb__nav', box);
+		box.querySelector('.sh-lb__close').setAttribute('aria-label', t('close', 'إغلاق'));
+		navs[0].setAttribute('aria-label', t('lbPrev', 'الصورة السابقة')); navs[0].textContent = rtl ? '›' : '‹';
+		navs[1].setAttribute('aria-label', t('lbNext', 'الصورة التالية')); navs[1].textContent = rtl ? '‹' : '›';
+		function text(sel, v) { var el = box.querySelector(sel); el.textContent = v || ''; el.hidden = !v; }
+		function show(k) {
+			i = (k + items.length) % items.length;
+			var x = items[i], g = function (n) { return x.getAttribute('data-lb-' + n) || ''; };
+			img.src = x.getAttribute('href'); img.alt = x.getAttribute('data-alt') || '';
+			box.querySelector('.sh-lb__stage').scrollTop = 0;
+			var rich = !!(g('title') || g('kw'));
+			box.classList.toggle('sh-lb--rich', rich); panel.hidden = !rich;
+			navs.forEach(function (b) { b.hidden = items.length < 2; });
+			if (!rich) return;
+			text('.sh-lb__count', items.length > 1 ? t('lbOf', '%1$s من %2$s').replace('%1$s', i + 1).replace('%2$s', items.length) : '');
+			text('.sh-lb__title', g('title')); text('.sh-lb__sub', g('sub')); text('.sh-lb__alt', x.getAttribute('data-alt'));
+			var facts = box.querySelector('.sh-lb__facts'); facts.innerHTML = '';
+			[['lbKw', 'كلمة البحث', g('kw') ? '«' + g('kw') + '»' : ''], ['lbPos', 'الترتيب', g('pos')], ['lbDate', 'تاريخ اللقطة', g('date')]].forEach(function (f) {
+				if (!f[2]) return;
+				var dt = d.createElement('dt'), dd = d.createElement('dd');
+				dt.textContent = t(f[0], f[1]); dd.textContent = f[2]; dd.setAttribute('dir', 'auto');
+				if (f[0] === 'lbPos') dd.className = 'sh-lb__pos';
+				facts.appendChild(dt); facts.appendChild(dd);
+			});
+			facts.hidden = !facts.children.length;
+		}
+		function close() { box.remove(); d.removeEventListener('keydown', keys); items[i].focus(); }
+		function keys(e) {
+			if (e.key === 'Escape') { close(); return; }
+			if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
 			e.preventDefault();
-			var box = d.createElement('div');
-			box.className = 'sh-lightbox'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true');
-			box.innerHTML = '<button type="button">✕</button><img alt="">';
-			box.querySelector('button').setAttribute('aria-label', t('close', 'إغلاق'));
-			box.querySelector('img').src = a.getAttribute('href');
-			box.querySelector('img').alt = a.getAttribute('data-alt') || '';
-			box.addEventListener('click', function (ev) { if (ev.target === box || ev.target.tagName === 'BUTTON') { box.remove(); a.focus(); } });
-			d.body.appendChild(box);
-			box.querySelector('button').focus();
+			var step = e.key === 'ArrowRight' ? 1 : -1; // forward is to the right in English, to the left in Arabic
+			show(i + (rtl ? -step : step));
+		}
+		box.addEventListener('click', function (ev) {
+			var nav = ev.target.closest('.sh-lb__nav');
+			if (nav) { show(i + Number(nav.getAttribute('data-dir'))); return; }
+			if (ev.target === box || ev.target.classList.contains('sh-lb__stage') || ev.target.closest('.sh-lb__close')) close();
 		});
+		d.addEventListener('keydown', keys);
+		show(i);
+		d.body.appendChild(box);
+		box.querySelector('.sh-lb__close').focus();
+	}
+	$$('[data-sh-lightbox]').forEach(function (a) {
+		a.addEventListener('click', function (e) { e.preventDefault(); lbOpen(a); });
 	});
 
 	/* ---------------------------------------------------------------- booking form (one step) */

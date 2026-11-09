@@ -408,3 +408,54 @@ body.single-case_study [data-res-card] { grid-template-columns: minmax(150px, .3
 .sh-cs-quote blockquote p { margin: 0; font-size: 18px; line-height: 2; color: var(--sh-ink); text-wrap: pretty; }
 .sh-cs-quote figcaption { margin-top: 14px; font-size: 14.5px; color: var(--sh-text); }
 .sh-cs-quote figcaption b { color: var(--sh-ink); font-weight: 700; }
+
+/* ---- 2.8.11: screenshot galleries and viewer ----------------------------------------------- */
+/* every screenshot in the same frame (3:2), shown whole (contain, no crop), so cards line up */
+.sh-shot__frame { aspect-ratio: 3 / 2; display: flex; align-items: center; justify-content: center; background: #EEF1F6; padding: 6px; }
+.sh-shot__frame img { width: 100%; height: 100%; object-fit: contain; border-radius: 6px; }
+.sh-rank-grid { align-items: stretch !important; }
+.sh-rank-grid > .sh-shot { min-width: 0; }
+.sh-rank-grid > .sh-shot > figure { height: 100%; }
+.sh-rank-grid[data-count="1"], .sh-rank-grid[data-count="2"], .sh-rank-grid[data-count="4"] { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; }
+@media (max-width: 959px) { .sh-rank-grid[data-count] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+@media (max-width: 599px) { .sh-rank-grid[data-count] { grid-template-columns: 1fr !important; } }
+/* viewer: image + details panel at the side (inline end), under the image on phones */
+.sh-lightbox.sh-lb--rich { display: grid; grid-template-columns: minmax(0, 1fr) 360px; padding: 0; overflow: hidden; background: #0A0E18; }
+.sh-lightbox:not(.sh-lb--rich) .sh-lb__stage { display: contents; }
+.sh-lb--rich .sh-lb__stage { overflow: auto; overscroll-behavior: contain; display: flex; padding: 64px 72px 24px; min-height: 0; }
+.sh-lb--rich .sh-lb__stage img { margin: auto; max-width: 100%; height: auto; border-radius: 10px; }
+.sh-lb__panel { background: #fff; color: var(--sh-ink); overflow: auto; padding: 72px 26px 28px; min-height: 0; }
+.sh-lb__count { margin: 0 0 10px; font-size: 13px; font-weight: 600; color: var(--sh-text); }
+.sh-lb__title { margin: 0; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 21px; line-height: 1.45; }
+.sh-lb__sub { margin: 4px 0 0; font-size: 14px; color: var(--sh-text); }
+.sh-lb__facts { margin: 18px 0 0; display: grid; gap: 4px; border-top: 1px solid var(--sh-line); padding-top: 16px; }
+.sh-lb__facts dt { font-size: 12.5px; color: var(--sh-text); margin-top: 10px; }
+.sh-lb__facts dt:first-child { margin-top: 0; }
+.sh-lb__facts dd { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.6; }
+.sh-lb__facts dd.sh-lb__pos { display: inline-block; justify-self: start; font-size: 14px; color: var(--sh-link); background: var(--sh-blue-tint); border-radius: 999px; padding: 4px 14px; }
+.sh-lb__alt { margin: 18px 0 0; font-size: 14px; line-height: 1.8; color: var(--sh-text); }
+.sh-lightbox.sh-lb--rich .sh-lb__close { color: var(--sh-ink); border-color: var(--sh-line); background: #fff; }
+.sh-lightbox .sh-lb__nav { position: fixed; top: 50%; width: 48px; height: 48px; margin-top: -24px; border-radius: 999px; border: 0; background: rgba(255, 255, 255, .92); color: var(--sh-ink); font-size: 28px; line-height: 1; cursor: pointer; z-index: 2; box-shadow: 0 6px 20px rgba(0, 0, 0, .25); }
+.sh-lightbox .sh-lb__nav[data-dir="-1"] { inset-inline-start: 14px; inset-inline-end: auto; }
+.sh-lightbox .sh-lb__nav[data-dir="1"] { inset-inline-end: 14px; inset-inline-start: auto; }
+.sh-lightbox.sh-lb--rich .sh-lb__nav[data-dir="1"] { inset-inline-end: calc(360px + 14px); }
+.sh-lightbox .sh-lb__nav:hover, .sh-lightbox .sh-lb__nav:focus-visible { background: #fff; outline: 2px solid var(--sh-blue); outline-offset: 2px; }
+.sh-lightbox .sh-lb__nav[hidden] { display: none; }
+@media (max-width: 899px) {
+	.sh-lightbox.sh-lb--rich { display: block; overflow: auto; }
+	.sh-lb--rich .sh-lb__stage { padding: 64px 12px 12px; overflow: visible; }
+	.sh-lb__panel { padding: 22px 20px 32px; }
+	.sh-lightbox.sh-lb--rich .sh-lb__close { color: #fff; border-color: rgba(255, 255, 255, .3); background: rgba(10, 14, 24, .6); }
+	.sh-lightbox .sh-lb__nav { top: auto; bottom: 16px; margin-top: 0; }
+	.sh-lightbox.sh-lb--rich .sh-lb__nav[data-dir="1"] { inset-inline-end: 14px; }
+}
+
+/* when the screenshot was taken (2.8.12): a later search can rank differently */
+.sh-shot__date { display: block; margin-top: 8px; font-size: 12.5px; color: var(--sh-text); }
+/* English case cards (2.8.13): English labels under the number are longer than the Arabic ones; a wider
+   first column keeps them on one line, so the cards match the Arabic ones in height and rhythm */
+@media (min-width: 720px) {
+	html:not([dir="rtl"]) [data-res-card] { grid-template-columns: minmax(280px, .36fr) minmax(0, 1fr) auto !important; }
+}
+html:not([dir="rtl"]) [data-res-card] > span:first-child > span + span { white-space: nowrap; }
+@media (max-width: 719px) { html:not([dir="rtl"]) [data-res-card] > span:first-child > span + span { white-space: normal; } }
