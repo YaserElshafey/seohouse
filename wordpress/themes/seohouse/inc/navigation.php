@@ -46,7 +46,10 @@ function sh_path_active( string $url ): bool {
 	$p   = sh_url_path( $url );
 	$cur = sh_current_path();
 	$home = sh_url_path( sh_home_url() ); // a language home (/ or /en/) is active only on itself
-	return ( '/' === $p || $home === $p ) ? $p === $cur : str_starts_with( $cur, $p );
+	if ( '/' === $p || $home === $p ) {
+		return $p === $cur && ! is_search() && ! is_404(); // search results and 404 answer at / too (2.8.7)
+	}
+	return str_starts_with( $cur, $p );
 }
 
 /**

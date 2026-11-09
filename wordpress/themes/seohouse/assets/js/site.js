@@ -50,6 +50,7 @@
 		drawer.hidden = !open;
 		if (opener) opener.setAttribute('aria-expanded', open ? 'true' : 'false');
 		d.documentElement.style.overflow = open ? 'hidden' : '';
+		d.documentElement.classList.toggle('sh-drawer-open', open); // hides the floating contact buttons (theme.css)
 		if (open) { var c = drawer.querySelector('[data-sh-drawer-close]'); if (c) c.focus(); } else if (opener) opener.focus();
 	}
 	if (opener) opener.addEventListener('click', function () { drawerSet(true); });
@@ -206,15 +207,23 @@
 		if (!form || !sent) return;
 		function showErr(m) { errText.textContent = m || ''; err.hidden = false; }
 		function hideErr() { err.hidden = true; errText.textContent = ''; }
-		$$('input,textarea,select', form).forEach(function (i) { i.addEventListener('input', hideErr); });
+		$$('input,textarea,select', form).forEach(function (i) { i.addEventListener('input', function () { hideErr(); i.removeAttribute('aria-invalid'); }); });
+		['name', 'company', 'email', 'phone', 'goal'].forEach(function (n) { if (form[n]) form[n].setAttribute('aria-required', 'true'); });
 		function val(n) { return form[n] ? String(form[n].value || '').trim() : ''; }
 		function optText(n) { var el = form[n]; return el && el.selectedIndex >= 0 ? el.options[el.selectedIndex].text : ''; }
+		// the fields to fix are marked (aria-invalid, red border) and the first one gets the focus
+		function bad(names, m) {
+			names.forEach(function (n) { if (form[n]) form[n].setAttribute('aria-invalid', 'true'); });
+			if (form[names[0]]) form[names[0]].focus();
+			showErr(m);
+		}
 		form.addEventListener('submit', function (e) {
 			e.preventDefault();
-			if (!val('name') || !val('company')) return showErr(t('nameCo', 'أدخل الاسم واسم الشركة للمتابعة.'));
-			if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val('email'))) return showErr(t('email', 'أدخل بريدًا إلكترونيًا صحيحًا.'));
-			if (!isPhone(val('phone'))) return showErr(t('phone', 'أدخل رقم هاتف صحيحًا.'));
-			if (!val('goal')) return showErr(t('goal', 'اكتب الهدف أو التحدي الأساسي.'));
+			var empty = ['name', 'company'].filter(function (n) { return !val(n); });
+			if (empty.length) return bad(empty, t('nameCo', 'أدخل الاسم واسم الشركة للمتابعة.'));
+			if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val('email'))) return bad(['email'], t('email', 'أدخل بريدًا إلكترونيًا صحيحًا.'));
+			if (!isPhone(val('phone'))) return bad(['phone'], t('phone', 'أدخل رقم هاتف صحيحًا.'));
+			if (!val('goal')) return bad(['goal'], t('goal', 'اكتب الهدف أو التحدي الأساسي.'));
 			if (form.getAttribute('aria-busy') === 'true') return;
 			leadBusy(form, true);
 			fetch((cfg.rest || '/wp-json/seohouse/v1/') + 'lead', { method: 'POST', body: leadData(form), credentials: 'same-origin', cache: 'no-store' })
@@ -226,7 +235,7 @@
 					var sum = box.querySelector('[data-ct-summary]');
 					if (sum) sum.textContent = t('market', 'السوق:') + ' ' + optText('market') + ' · ' + t('service', 'الخدمة:') + ' ' + optText('service');
 					form.hidden = true; sent.hidden = false;
-					var t = sent.querySelector('[data-ct-sent-title]'); if (t) t.focus();
+					var ttl = sent.querySelector('[data-ct-sent-title]'); if (ttl) ttl.focus(); // not "t": that would hide the t() helper used above
 					if (window.dataLayer) window.dataLayer.push({ event: 'sh_lead_submitted', sh_source: 'contact', sh_service: val('service') });
 				})
 				.catch(function () { leadBusy(form, false); showErr(cfg.i18n && cfg.i18n.failed); });
@@ -346,6 +355,37 @@
 		if (!a || !window.dataLayer) return;
 		var h = a.getAttribute('href');
 		window.dataLayer.push({ event: 'sh_cta_click', sh_target: h.indexOf('tel:') === 0 ? 'phone' : h.indexOf('mailto:') === 0 ? 'email' : h.indexOf('wa.me') >= 0 ? 'whatsapp' : h.charAt(0) === '#' ? 'booking' : 'contact' });
+	});
+
+	/* ---------------------------------------------------------------- floating contact buttons (Chaty plugin), Arabic pages
+	   They sit at the inline end (left in RTL) so they do not cover the start of Arabic lines; their
+	   hover labels open towards the page and read in Arabic. The widget is added after load. */
+	if (d.documentElement.dir === 'rtl') {
+		var chatyAr = { 'Contact us': 'تواصل معنا', 'Phone': 'اتصال', 'WhatsApp': 'واتساب', 'Hide': 'إخفاء' };
+		var fixChaty = function () {
+			var w = d.querySelector('.chaty-widget');
+			if (!w || w.getAttribute('data-sh-rtl')) return !!w;
+			w.setAttribute('data-sh-rtl', '1');
+			d.documentElement.classList.add('sh-chaty-rtl');
+			$$('.pos-left', w).forEach(function (x) { x.classList.remove('pos-left'); x.classList.add('pos-right'); });
+			$$('[data-hover]', w).forEach(function (x) { var v = chatyAr[x.getAttribute('data-hover')]; if (v) x.setAttribute('data-hover', v); });
+			$$('.on-hover-text p', w).forEach(function (p) { var v = chatyAr[p.textContent.trim()]; if (v) p.textContent = v; });
+			return true;
+		};
+		if (!fixChaty() && window.MutationObserver) {
+			var chatyObs = new MutationObserver(function () { if (fixChaty()) chatyObs.disconnect(); });
+			chatyObs.observe(d.body, { childList: true, subtree: true });
+			setTimeout(function () { chatyObs.disconnect(); }, 20000);
+		}
+	}
+
+	/* ---------------------------------------------------------------- scrolling strips: images that only come into view by the
+	   animation (a transform) are never reached by lazy loading, which left empty gaps; after the page
+	   has loaded they are fetched (small images, each one once for both copies) */
+	window.addEventListener('load', function () {
+		setTimeout(function () {
+			$$('[style*="shRtl"] img[loading="lazy"]').forEach(function (img) { img.loading = 'eager'; });
+		}, 300);
 	});
 
 	/* ---------------------------------------------------------------- marquee copies: links in the hidden duplicate set are not focusable */

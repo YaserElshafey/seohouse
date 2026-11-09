@@ -182,6 +182,7 @@ function sh_lead_handle( array $in ): array {
 	$contact  = sanitize_text_field( (string) ( $in['contact'] ?? '' ) );
 	$site     = esc_url_raw( trim( (string) ( $in['site'] ?? '' ) ) );
 	$page_id  = absint( $in['page_id'] ?? 0 );
+	$page_id  = $page_id && 'publish' === get_post_status( $page_id ) ? $page_id : 0; // a published page only
 	$source   = sanitize_key( (string) ( $in['source'] ?? 'booking' ) );
 	$source   = in_array( $source, array( 'booking', 'contact' ), true ) ? $source : 'booking';
 	$sid      = preg_replace( '/[^a-zA-Z0-9-]/', '', substr( (string) ( $in['sid'] ?? '' ), 0, 64 ) );
@@ -269,12 +270,13 @@ function sh_lead_handle( array $in ): array {
 	}
 
 	// rate limit: 5 new requests / 10 minutes per IP (hashed, not stored in clear)
-	$ip   = (string) ( $_SERVER['REMOTE_ADDR'] ?? '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
-	$bkey = 'sh_lead_rl_' . substr( hash_hmac( 'sha256', $ip, wp_salt( 'nonce' ) ), 0, 20 );
+	// (IPv6: the /64 network, which one connection can rotate inside; counted before storing, 2.9.13)
+	$bkey = 'sh_lead_rl_' . substr( hash_hmac( 'sha256', sh_core_client_net(), wp_salt( 'nonce' ) ), 0, 20 );
 	$hits = (int) get_transient( $bkey );
 	if ( $hits >= 5 ) {
 		return $fail( 'rate', __( 'استلمنا عدة طلبات من هذا الجهاز. حاول بعد قليل.', 'seohouse-core' ) );
 	}
+	set_transient( $bkey, $hits + 1, 10 * MINUTE_IN_SECONDS );
 
 	$ref = bin2hex( random_bytes( 12 ) );
 	$id  = wp_insert_post(
@@ -300,8 +302,13 @@ function sh_lead_handle( array $in ): array {
 		return $fail( 'store', __( 'تعذر حفظ الطلب الآن. حاول مرة أخرى أو تواصل معنا عبر صفحة التواصل.', 'seohouse-core' ) );
 	}
 
-	set_transient( $bkey, $hits + 1, 10 * MINUTE_IN_SECONDS );
-	sh_lead_notify( (int) $id );
+	// e-mail at most 30 requests an hour site-wide (a spam wave cannot flood the inbox; requests are
+	// still stored and listed under «الطلبات»)
+	$mails = (int) get_transient( 'sh_lead_mail_hour' );
+	if ( $mails < 30 ) {
+		set_transient( 'sh_lead_mail_hour', $mails + 1, HOUR_IN_SECONDS );
+		sh_lead_notify( (int) $id );
+	}
 
 	do_action( 'sh_lead_stored', $id, compact( 'name', 'contact', 'site', 'service', 'page_id', 'source' ) );
 

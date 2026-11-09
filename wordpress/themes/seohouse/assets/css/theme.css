@@ -95,6 +95,11 @@ img { height: auto; }
 .sh-crumbs-light nav, .sh-crumbs-light nav a { color: var(--sh-text) !important; }
 .sh-crumbs-light nav [aria-current] { color: var(--sh-ink) !important; }
 .sh-crumbs-light nav a:hover { color: var(--sh-link) !important; }
+/* the current item (a long article title) stays on one line: the trail never wraps differently once the
+   web font arrives (it moved the whole article header on phones), and the full title is the H1 below */
+.sh-crumbs-light nav { flex-wrap: nowrap !important; min-width: 0; }
+.sh-crumbs-light nav > a, .sh-crumbs-light nav > span[aria-hidden] { flex: none; white-space: nowrap; }
+.sh-crumbs-light nav [aria-current] { flex: 1 1 0; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .sh-hv-next:hover { background: rgba(40, 84, 232, 0.32) !important; }
 .sh-cs-text p { margin: 0; }
 .sh-cs-text p + p { margin-top: 1em; }
@@ -328,3 +333,29 @@ footer[data-foot-blue] a:focus-visible { outline: 2px solid #fff !important; out
 [dir="ltr"] [data-sh-bar] > a[aria-label]:last-child { margin-inline-start: 0 !important; margin-inline-end: auto; } /* beats the inline auto margin */
 
 [data-foot-copy] bdi { white-space: nowrap; } /* numbers never break across lines */
+
+/* ---- 2.8.7: audit fixes ---------------------------------------------------------------------- */
+/* scrolling strips (team photos, client logos, platforms) move towards the reading end in English too */
+@keyframes shLtr { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+html:not([dir="rtl"]) [style*="shRtl"] { animation-name: shLtr !important; }
+/* arrow icons drawn for RTL (mirrored) point forward in English */
+html:not([dir="rtl"]) svg[style*="scaleX(-1)"] { transform: none !important; }
+html:not([dir="rtl"]) [data-svc-step] + [data-svc-step]::before { content: "→"; }
+/* flow tags in the home sectors cards: the arrow was almost invisible and only pushed the text aside */
+[data-sc-step] + [data-sc-step]::before { color: rgba(33, 72, 216, .5) !important; }
+html:not([dir="rtl"]) [data-sc-step] + [data-sc-step]::before { content: "→"; }
+/* /en/sectors/: English chips need a wider last column */
+@media (min-width: 900px) {
+	html:not([dir="rtl"]) [data-sc-row] { grid-template-columns: minmax(0, .85fr) minmax(0, .85fr) minmax(0, 1.1fr) !important; }
+}
+/* "one system" layers (SEO page): the staircase indent squeezes the cards on phones */
+@media (max-width: 640px) {
+	[data-layers] [style*="margin-inline-start: auto"] { width: 100% !important; }
+}
+/* contact form: fields to fix */
+[data-ct-form] [aria-invalid="true"], [data-bk-form] [aria-invalid="true"] { border-color: #D92D20 !important; box-shadow: 0 0 0 3px rgba(217, 45, 32, .12) !important; }
+/* mobile menu: the floating contact buttons stay under it */
+html.sh-drawer-open .chaty, html.sh-drawer-open .chaty-widget { display: none !important; }
+/* floating contact buttons on Arabic pages: inline end (left), so they do not cover where lines start */
+html.sh-chaty-rtl .chaty-widget.right-position { right: auto !important; left: 25px !important; }
+html.sh-chaty-rtl .chaty-widget.right-position .chaty-channel-list { left: 0 !important; right: auto !important; }

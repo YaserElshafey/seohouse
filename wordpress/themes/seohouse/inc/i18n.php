@@ -64,16 +64,27 @@ function sh_lang_switch(): ?array {
 	} elseif ( is_singular() ) {
 		$id = (int) get_queried_object_id();
 	}
-	if ( ! $id ) {
-		return null;
-	}
 	$to  = sh_is_en() ? 'ar' : 'en';
-	$tid = sh_translation( $id, $to );
-	if ( ! $tid || ( 'en' === $to && ! sh_i18n_indexable( $tid ) ) ) {
-		return null;
+	$tid = $id ? sh_translation( $id, $to ) : 0;
+	$url = $tid && ( 'ar' === $to || sh_i18n_indexable( $tid ) ) ? (string) get_permalink( $tid ) : '';
+	if ( '' === $url ) {
+		// no counterpart (404, search, an article written for one language, a category): the closest
+		// page in the other language: its search, its blog, or its home page (2.8.7)
+		$home = function_exists( 'pll_home_url' ) ? (string) pll_home_url( $to ) : '';
+		if ( '' === $home || ( 'en' === $to && function_exists( 'sh_translation' ) && ! sh_translation( (int) get_option( 'page_on_front' ), 'en' ) ) ) {
+			return null;
+		}
+		$blog = sh_translation( (int) get_option( 'page_for_posts' ), $to );
+		if ( is_search() ) {
+			$url = add_query_arg( 's', rawurlencode( get_search_query( false ) ), $home );
+		} elseif ( $blog && 'publish' === get_post_status( $blog ) && ( is_singular( 'post' ) || is_category() || is_home() ) ) {
+			$url = (string) get_permalink( $blog );
+		} else {
+			$url = $home;
+		}
 	}
 	return array(
-		'url'   => (string) get_permalink( $tid ),
+		'url'   => $url,
 		'label' => 'en' === $to ? 'EN' : 'AR',
 		'name'  => 'en' === $to ? 'English' : 'العربية',
 		'lang'  => $to,

@@ -87,8 +87,7 @@ function sh_remote_header_auth( $user_id ) {
 	if ( $user instanceof WP_User ) {
 		return $user->ID;
 	}
-	$code = is_wp_error( $user ) ? $user->get_error_code() : '';
-	sh_remote_auth_problem( 'application_passwords_disabled_for_user' === $code ? 'disabled_for_user' : 'invalid' );
+	sh_remote_auth_problem( 'invalid' ); // one answer for a wrong password and an unusable account (no login confirmation)
 	return $user_id;
 }
 

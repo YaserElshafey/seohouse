@@ -167,6 +167,9 @@ if ( ! sh_seo_plugin_active() ) {
 				$img = (int) get_post_thumbnail_id( $id );
 			}
 			$src = $img ? wp_get_attachment_image_src( $img, 'large' ) : false;
+			if ( ! $src ) {
+				$src = array( SH_CORE_URL . 'assets/og-default.jpg', 1200, 630 ); // brand share image (2.9.13)
+			}
 			echo '<meta property="og:locale" content="ar_AR">' . "\n";
 			printf( '<meta property="og:site_name" content="%s">' . "\n", esc_attr( sh_core_option( 'sh_company_name', get_bloginfo( 'name' ) ) ) );
 			printf( '<meta property="og:type" content="%s">' . "\n", is_singular( 'post' ) ? 'article' : 'website' );

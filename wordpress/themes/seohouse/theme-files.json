@@ -1,6 +1,6 @@
 {
  "theme": "seohouse",
- "version": "2.8.6",
+ "version": "2.8.7",
  "count": 365,
  "files": [
   {
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 1072,
-   "sha1": "35974cfb93e6c628f5755e2a0dd132ca01c3af11"
+   "sha1": "8e45f32ef25d577942236bc9dfc0be1ae97487d8"
   },
   {
    "path": "header.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 545,
-   "sha1": "3c7b852986275180c83b00756a1c8016bbf93e78"
+   "sha1": "53fa03cf4e5bb973d33ec3794a1f2f2c0bf50bd3"
   },
   {
    "path": "theme.json",
@@ -95,8 +95,8 @@
   },
   {
    "path": "assets/css/theme.css",
-   "size": 30486,
-   "sha1": "0bac84edec00c923fae6dbec6651ea8667a6b3cc"
+   "size": 32971,
+   "sha1": "d6c5e1720b16019e619a47ecd9e1e8a7fd1fde3a"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -425,8 +425,8 @@
   },
   {
    "path": "assets/js/site.js",
-   "size": 20696,
-   "sha1": "4b47e7a5ab94f224d3bfa8655fe0a281ecdad30a"
+   "size": 22800,
+   "sha1": "942ce43b6f0e27cafca6811999f225db1ce546ef"
   },
   {
    "path": "assets/platforms/ga4.svg",
@@ -555,13 +555,13 @@
   },
   {
    "path": "inc/i18n.php",
-   "size": 3630,
-   "sha1": "c5ef7c840e65c20f4d761902bc645f5debef2698"
+   "size": 4420,
+   "sha1": "f7cf83cfb027f2e5f523031fc2f5d4ed96f61281"
   },
   {
    "path": "inc/navigation.php",
-   "size": 5974,
-   "sha1": "acb1997f24b750f2a730c03a7737aa15266664ad"
+   "size": 6070,
+   "sha1": "2db2f3319360f0cc8128e187eef700a93897c590"
   },
   {
    "path": "inc/release-files.php",
@@ -790,8 +790,8 @@
   },
   {
    "path": "parts/drawer.php",
-   "size": 3592,
-   "sha1": "e824355866120da31945a5f6800bb894c16b12dd"
+   "size": 3585,
+   "sha1": "b419e45d6aed3f75ccbbaff15b79656aec66b62f"
   },
   {
    "path": "parts/legal-document.php",

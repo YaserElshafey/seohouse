@@ -362,6 +362,43 @@ function sh_rankmath_no_json_ld( $data ) {
 }
 add_filter( 'rank_math/json_ld', 'sh_rankmath_no_json_ld', PHP_INT_MAX );
 
+/**
+ * Share image for pages without one of their own (2.9.13): the brand image shipped with Core
+ * (assets/og-default.jpg, 1200×630, no language-specific text). A featured image, a Rank Math social
+ * image or Rank Math's own default image always wins: this runs only when none of them is there.
+ */
+function sh_rankmath_default_share_image( $image ): void {
+	if ( ! is_object( $image ) || ! method_exists( $image, 'has_images' ) || $image->has_images() ) {
+		return;
+	}
+	if ( (int) ( class_exists( '\RankMath\Helper' ) ? \RankMath\Helper::get_settings( 'titles.open_graph_image_id' ) : 0 ) > 0 ) {
+		return;
+	}
+	$image->add_image(
+		array(
+			'url'    => SH_CORE_URL . 'assets/og-default.jpg',
+			'width'  => 1200,
+			'height' => 630,
+			'type'   => 'image/jpeg',
+			'alt'    => function_exists( 'sh_is_en' ) && sh_is_en() ? 'SEO House' : 'سيو هاوس',
+		)
+	);
+}
+// 404 title in the page's language (Rank Math's setting is one English text for both) (2.9.14)
+add_filter(
+	'rank_math/frontend/title',
+	static function ( $title ) {
+		if ( ! is_404() ) {
+			return $title;
+		}
+		return function_exists( 'sh_is_en' ) && sh_is_en() ? 'Page not found | SEO House' : 'الصفحة غير موجودة | سيو هاوس';
+	},
+	20
+);
+
+add_action( 'rank_math/opengraph/facebook/add_additional_images', 'sh_rankmath_default_share_image' );
+add_action( 'rank_math/opengraph/twitter/add_additional_images', 'sh_rankmath_default_share_image' );
+
 /* ------------------------------------------------------------------ admin: preview and move */
 
 add_action(
