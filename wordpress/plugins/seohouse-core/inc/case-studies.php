@@ -145,10 +145,79 @@ function sh_core_section_save( array $in ) {
 	);
 }
 
+/**
+ * Approval of the new case studies (2.9.17): published cases to take down become drafts, their old
+ * addresses move permanently (301, Rank Math «Redirections» when the module runs, otherwise Core's own
+ * redirect for addresses that answer 404), and the new presentation is switched on for visitors.
+ * Body: retire [IDs], redirects [{from: path, to: URL}], v2 (bool).
+ */
+function sh_core_cases_approve( array $in ) {
+	$out = array( 'retired' => array(), 'redirects' => array(), 'v2' => null );
+	foreach ( array_map( 'intval', (array) ( $in['retire'] ?? array() ) ) as $old ) {
+		if ( 'case_study' === get_post_type( $old ) && 'publish' === get_post_status( $old ) ) {
+			wp_update_post( array( 'ID' => $old, 'post_status' => 'draft' ) );
+			delete_post_meta( $old, '_sh_retire_on_approval' );
+			$out['retired'][] = $old;
+		}
+	}
+	$own = (array) get_option( 'sh_case_redirects', array() );
+	foreach ( (array) ( $in['redirects'] ?? array() ) as $r ) {
+		$from = '/' . trim( rawurldecode( (string) wp_parse_url( (string) ( $r['from'] ?? '' ), PHP_URL_PATH ) ), '/' ) . '/';
+		$to   = esc_url_raw( (string) ( $r['to'] ?? '' ) );
+		if ( '//' === $from || '' === $to ) {
+			continue;
+		}
+		$id = 0;
+		if ( class_exists( '\RankMath\Helper' ) && \RankMath\Helper::is_module_active( 'redirections' ) && class_exists( '\RankMath\Redirections\Redirection' ) ) {
+			$id = (int) \RankMath\Redirections\Redirection::from(
+				array(
+					'url_to'      => $to,
+					'header_code' => 301,
+					'status'      => 'active',
+					'sources'     => array( array( 'pattern' => trim( $from, '/' ), 'comparison' => 'exact' ) ),
+				)
+			)->save();
+		}
+		$own[ $from ] = $to; // also kept here: answers when the address would be a 404 and no other rule did
+		$out['redirects'][] = array( 'from' => $from, 'to' => $to, 'rank_math_id' => $id );
+	}
+	update_option( 'sh_case_redirects', $own, false );
+	if ( isset( $in['v2'] ) ) {
+		update_option( 'sh_cases_v2', empty( $in['v2'] ) ? 0 : 1 );
+		$out['v2'] = (bool) get_option( 'sh_cases_v2' );
+	}
+	return $out;
+}
+
+add_action(
+	'template_redirect',
+	static function () {
+		if ( ! is_404() ) {
+			return;
+		}
+		$map  = (array) get_option( 'sh_case_redirects', array() );
+		$path = '/' . trim( rawurldecode( (string) wp_parse_url( (string) ( $_SERVER['REQUEST_URI'] ?? '' ), PHP_URL_PATH ) ), '/' ) . '/'; // phpcs:ignore WordPress.Security.ValidatedSanitizedInput
+		if ( isset( $map[ $path ] ) ) {
+			wp_safe_redirect( $map[ $path ], 301, 'SEO House Core' );
+			exit;
+		}
+	},
+	5
+);
+
 add_action(
 	'rest_api_init',
 	static function () {
 		$admin = static fn() => current_user_can( 'manage_options' ) && current_user_can( 'edit_others_pages' );
+		register_rest_route(
+			'seohouse/v1',
+			'/cases/approve',
+			array(
+				'methods'             => 'POST',
+				'callback'            => static fn( WP_REST_Request $r ) => rest_ensure_response( sh_core_cases_approve( (array) $r->get_json_params() ) ),
+				'permission_callback' => $admin,
+			)
+		);
 		register_rest_route(
 			'seohouse/v1',
 			'/content/case',
