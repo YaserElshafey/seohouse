@@ -390,18 +390,31 @@
 			}
 		}
 		$$('.sh-sg__item', sg).forEach(function (b) { b.addEventListener('click', function () { pick(b); }); });
-		$$('[data-sg-filter]', sg).forEach(function (chip) {
-			chip.addEventListener('click', function () {
-				var who = chip.getAttribute('data-sg-filter'), first = null;
-				$$('[data-sg-filter]', sg).forEach(function (c) { c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
-				$$('li[data-sg-client]', list).forEach(function (li) {
-					var on = !who || li.getAttribute('data-sg-client') === who;
-					li.hidden = !on;
-					if (on && !first) first = li;
-				});
-				if (list.scrollTo) list.scrollTo({ top: 0, left: 0 });
-				if (first) pick(first.querySelector('.sh-sg__item'), false);
+		// «more below»: the list fades out and a hint shows until its end is reached
+		var more = sg.querySelector('[data-sg-more]');
+		function edge() {
+			var end = list.scrollHeight - list.clientHeight - list.scrollTop < 8 && list.scrollWidth - list.clientWidth - Math.abs(list.scrollLeft) < 8;
+			list.classList.toggle('is-end', end);
+			if (more) more.hidden = end;
+		}
+		list.addEventListener('scroll', edge, { passive: true });
+		window.addEventListener('resize', edge);
+		edge();
+		// 2.8.16: the client filter is a drop-down
+		var sel = sg.querySelector('select[data-sg-filter]'), cnt = sg.querySelector('[data-sg-count]');
+		if (sel) sel.addEventListener('change', function () {
+			var who = sel.value, first = null, n = 0;
+			$$('li[data-sg-client]', list).forEach(function (li) {
+				var on = !who || li.getAttribute('data-sg-client') === who;
+				li.hidden = !on;
+				if (on && !first) first = li;
+				if (on && li.querySelector('.sh-sg__item')) n++;
 			});
+			if (cnt) cnt.textContent = (cnt.getAttribute('data-label') || '%d').replace('%d', n);
+			if (list.scrollTo) list.scrollTo({ top: 0, left: 0 });
+			var firstItem = first && (first.querySelector('.sh-sg__item') || (first.nextElementSibling && first.nextElementSibling.querySelector('.sh-sg__item')));
+			if (firstItem) pick(firstItem, false);
+			edge();
 		});
 	});
 

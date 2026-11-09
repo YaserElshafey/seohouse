@@ -1,6 +1,6 @@
 {
  "theme": "seohouse",
- "version": "2.8.14",
+ "version": "2.8.16",
  "count": 368,
  "files": [
   {
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 1073,
-   "sha1": "91b7fee8a3c83d4591c6396f2b73bb97e4222f18"
+   "sha1": "2592693c1b1444ca309aa8fc70f3d5837b83eeec"
   },
   {
    "path": "header.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 546,
-   "sha1": "1c6054a28b59c536baeda1154b0706a797568d42"
+   "sha1": "d47c16591d3eabd5f950a2ba6d50756a51fb0036"
   },
   {
    "path": "theme.json",
@@ -95,8 +95,8 @@
   },
   {
    "path": "assets/css/theme.css",
-   "size": 46196,
-   "sha1": "8405184aacff5fdb0515ea71793c28a9c413c7fd"
+   "size": 51104,
+   "sha1": "134e5791506d3e6f10c3dbb91425a478b2e5fd17"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -425,8 +425,8 @@
   },
   {
    "path": "assets/js/site.js",
-   "size": 29536,
-   "sha1": "409b17ce22602e812dbcb746a65fe589035ab050"
+   "size": 30250,
+   "sha1": "2520aff5c427efbf0989c726a47b00113aaf22a6"
   },
   {
    "path": "assets/platforms/ga4.svg",
@@ -590,8 +590,8 @@
   },
   {
    "path": "languages/en_US.l10n.php",
-   "size": 15606,
-   "sha1": "32341affe6ab07ceb073f1a128c118077f1c90dc"
+   "size": 15738,
+   "sha1": "cfe84fa4549e99373d7d71488d5ef702a5b76399"
   },
   {
    "path": "page-templates/about.php",
@@ -815,8 +815,8 @@
   },
   {
    "path": "parts/shot-gallery.php",
-   "size": 5973,
-   "sha1": "857e3f48cb5d9258bf59c04e6694729cf596a7a7"
+   "size": 7395,
+   "sha1": "80c795c0f86810aec3b8d6b71606a462fa55c41f"
   },
   {
    "path": "parts/site-footer.php",
@@ -845,8 +845,8 @@
   },
   {
    "path": "parts/dynamic/case-list.php",
-   "size": 6018,
-   "sha1": "37cffd72e0b3b9d4668a50973c877feb44a96efb"
+   "size": 6399,
+   "sha1": "a46f5533ce6417dacb0e2ce523eaf9bb354725d1"
   },
   {
    "path": "parts/dynamic/posts-home.php",

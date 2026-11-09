@@ -79,9 +79,6 @@ foreach ( $cases as $c ) :
 				<?php if ( '' !== $sub ) : ?>
 				<span style="display: block; margin-top: 4px; font-size: 13.5px; color: var(--sh-text);"><?php echo esc_html( $sub ); ?></span>
 				<?php endif; ?>
-				<?php if ( $rich && ! empty( $f['main_after_period'] ) ) : ?>
-				<span class="sh-case-period" title="<?php esc_attr_e( 'فترة النتائج', 'seohouse' ); ?>"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg><span class="screen-reader-text"><?php esc_html_e( 'فترة النتائج:', 'seohouse' ); ?></span> <?php echo esc_html( $f['main_after_period'] ); ?></span>
-				<?php endif; ?>
 				<?php if ( $meta ) : ?>
 				<span style="display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 8px; font-size: 13.5px; color: var(--sh-text);">
 					<?php foreach ( $meta as $m ) : ?>
@@ -96,7 +93,17 @@ foreach ( $cases as $c ) :
 		<?php if ( $rich ) : ?>
 		</span>
 		<?php endif; ?>
+		<?php if ( $rich && ! empty( $f['main_after_period'] ) ) : // 2.8.15: the results period in the card's free space, next to the link ?>
+		<span data-res-go class="sh-case-go">
+			<span class="sh-case-period">
+				<span class="sh-case-period__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg></span>
+				<span class="sh-case-period__text"><span class="sh-case-period__label"><?php esc_html_e( 'فترة النتائج', 'seohouse' ); ?></span><span class="sh-case-period__value"><?php echo esc_html( $f['main_after_period'] ); ?></span></span>
+			</span>
+			<span class="sh-case-go__link"><?php esc_html_e( 'دراسة الحالة', 'seohouse' ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></span>
+		</span>
+		<?php else : ?>
 		<span data-res-go style="font-size: 14.5px; font-weight: 600; color: var(--sh-link); white-space: nowrap;"><?php esc_html_e( 'دراسة الحالة', 'seohouse' ); ?> <span aria-hidden="true"><?php echo esc_html( sh_arrow() ); ?></span></span>
+		<?php endif; ?>
 	</a>
 </li>
 	<?php

@@ -48,6 +48,7 @@ if ( ! $prep ) {
 }
 $first   = $prep[0];
 $clients = array_values( array_unique( array_filter( array_column( $prep, 'title' ) ) ) );
+$counts  = array_count_values( array_filter( array_column( $prep, 'title' ) ) );
 $filter  = ! empty( $args['filter'] ) && count( $clients ) > 1;
 $attrs   = static function ( array $p ): string {
 	$out = '';
@@ -73,17 +74,30 @@ $attrs   = static function ( array $p ): string {
 		</div>
 	</div>
 	<div class="sh-sg__side">
-		<?php if ( $filter ) : ?>
-		<div class="sh-sg__chips" role="group" aria-label="<?php esc_attr_e( 'تصفية حسب العميل', 'seohouse' ); ?>">
-			<button type="button" data-sg-filter="" aria-pressed="true"><?php esc_html_e( 'كل العملاء', 'seohouse' ); ?></button>
-			<?php foreach ( $clients as $c ) : ?>
-			<button type="button" data-sg-filter="<?php echo esc_attr( $c ); ?>" aria-pressed="false"><?php echo esc_html( $c ); ?></button>
-			<?php endforeach; ?>
+		<div class="sh-sg__bar">
+			<?php if ( $filter ) : // 2.8.16: a drop-down, so the clients never crowd the column however many there are ?>
+			<label class="sh-sg__select">
+				<span class="screen-reader-text"><?php esc_html_e( 'تصفية حسب العميل', 'seohouse' ); ?></span>
+				<select data-sg-filter>
+					<option value=""><?php echo esc_html( sprintf( /* translators: %d: number of screenshots */ __( 'كل العملاء (%d)', 'seohouse' ), count( $prep ) ) ); ?></option>
+					<?php foreach ( $clients as $c ) : ?>
+					<option value="<?php echo esc_attr( $c ); ?>"><?php echo esc_html( $c . ' (' . (int) $counts[ $c ] . ')' ); ?></option>
+					<?php endforeach; ?>
+				</select>
+				<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg>
+			</label>
+			<?php endif; ?>
+			<p class="sh-sg__count" data-sg-count data-label="<?php echo esc_attr( __( '%d لقطة', 'seohouse' ) ); ?>"><?php echo esc_html( sprintf( /* translators: %d: number of screenshots */ __( '%d لقطة', 'seohouse' ), count( $prep ) ) ); ?></p>
 		</div>
-		<?php endif; ?>
-		<p class="sh-sg__count"><?php echo esc_html( sprintf( /* translators: %d: number of screenshots */ __( '%d لقطة', 'seohouse' ), count( $prep ) ) ); ?></p>
 		<ol class="sh-sg__list" aria-label="<?php esc_attr_e( 'اللقطات', 'seohouse' ); ?>">
-			<?php foreach ( $prep as $i => $p ) : ?>
+			<?php
+			$prev = null;
+			foreach ( $prep as $i => $p ) :
+				if ( $filter && $p['title'] !== $prev ) : // a heading per client: the list shows there is more than one
+					$prev = $p['title'];
+					?>
+			<li class="sh-sg__group" data-sg-client="<?php echo esc_attr( $p['title'] ); ?>" aria-hidden="true"><span><?php echo esc_html( $p['title'] ); ?></span><span class="sh-sg__chip-n"><?php echo (int) ( $counts[ $p['title'] ] ?? 0 ); ?></span></li>
+				<?php endif; ?>
 			<li data-sg-client="<?php echo esc_attr( $p['title'] ); ?>">
 				<button type="button" class="sh-sg__item" data-lb-item data-href="<?php echo esc_url( $p['full'] ); ?>" data-large="<?php echo esc_url( $p['large'] ); ?>" data-srcset="<?php echo esc_attr( $p['srcset'] ); ?>" data-title="<?php echo esc_attr( $p['title'] ); ?>" data-sub="<?php echo esc_attr( $p['sub'] ); ?>"<?php echo $attrs( $p ); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped above ?><?php echo 0 === $i ? ' aria-current="true"' : ''; ?>>
 					<span class="sh-sg__thumb"><img src="<?php echo esc_url( $p['thumb'] ); ?>" alt="" loading="lazy" decoding="async"></span>
@@ -95,5 +109,8 @@ $attrs   = static function ( array $p ): string {
 			</li>
 			<?php endforeach; ?>
 		</ol>
+		<?php if ( count( $prep ) > 4 ) : ?>
+		<p class="sh-sg__more" data-sg-more><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"></path></svg><?php esc_html_e( 'مرّر لعرض باقي اللقطات', 'seohouse' ); ?></p>
+		<?php endif; ?>
 	</div>
 </div>
