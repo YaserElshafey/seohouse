@@ -14,16 +14,20 @@ defined( 'ABSPATH' ) || exit;
 
 $context = (string) ( $args['context'] ?? 'home' );
 if ( 'related' === $context ) {
-	$cases = get_posts(
+	$preview = sh_cases_preview(); // during a preview: the other new drafts too, without the cases to retire
+	$cases   = get_posts(
 		array(
 			'post_type'      => 'case_study',
-			'post_status'    => 'publish',
+			'post_status'    => $preview ? array( 'publish', 'draft' ) : 'publish',
 			'posts_per_page' => (int) ( $args['limit'] ?? 3 ),
 			'post__not_in'   => array_map( 'intval', (array) ( $args['exclude'] ?? array() ) ),
 			'orderby'        => array( 'menu_order' => 'ASC', 'date' => 'DESC' ),
 			'no_found_rows'  => true,
 		)
 	);
+	if ( $preview ) {
+		$cases = array_values( array_filter( $cases, static fn( $p ) => ! get_post_meta( $p->ID, '_sh_retire_on_approval', true ) ) );
+	}
 } else {
 	$cases = sh_case_studies( (int) ( $args['limit'] ?? 0 ) );
 }
@@ -54,7 +58,7 @@ foreach ( $cases as $c ) :
 	$logo    = $rich && '' !== $client && ! empty( $f['client_logo'] ) ? (int) $f['client_logo'] : 0;
 	$filters = implode( ' ', (array) ( $f['filter'] ?? array() ) );
 	$draft   = 'publish' !== $c->post_status;
-	$href    = $draft ? get_preview_post_link( $c ) : get_permalink( $c );
+	$href    = sh_case_href( $c );
 	?>
 <li data-sh-filter-item="<?php echo esc_attr( $filters ); ?>">
 	<a href="<?php echo esc_url( $href ); ?>" data-hcard data-res-card class="sh-hv-case" style="display: grid; gap: 14px 28px; align-items: center; background: rgb(255, 255, 255); border-radius: 16px; padding: clamp(18px, 2vw, 24px); box-shadow: 0 14px 34px -28px rgba(6,11,31,.5), 0 0 0 1px var(--sh-line); color: var(--sh-ink); transition: box-shadow 0.2s;">

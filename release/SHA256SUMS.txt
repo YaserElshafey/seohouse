@@ -1,2 +1,2 @@
-ea330026c12f770c83cbac9f1087003099ca6820d277c1265fbfcb8938cfad81  seohouse-core.zip
-66d9e586ac9a73f4094a94ab21ec2d6c273afdee2b51d66ff4ee96a9e291b695  seohouse-theme.zip
+b0738efeda782f54e67d821a68af56402f5dadf4e9d286d07e3f35d0f4232511  seohouse-core.zip
+884148aa81fbfaf8e29cc008c771087b7e6e34dd1e49fac81d7223da7a4f01a7  seohouse-theme.zip

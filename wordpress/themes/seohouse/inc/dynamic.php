@@ -121,7 +121,19 @@ function sh_case_studies( int $limit = 0 ): array {
  * and published ones marked to be retired on approval are left out. Visitors never see it (2.8.8).
  */
 function sh_cases_preview(): bool {
+	if ( function_exists( 'sh_core_preview_ok' ) ) {
+		return sh_core_preview_ok(); // signed-in editors, or a review link with the key (Core 2.9.16)
+	}
 	return isset( $_GET['sh_preview'] ) && current_user_can( 'edit_others_pages' ); // phpcs:ignore WordPress.Security.NonceVerification
+}
+
+/** Address of a case study in a list: its review address during a preview, else its own. */
+function sh_case_href( WP_Post $c ): string {
+	$review = function_exists( 'sh_core_preview_link' ) ? sh_core_preview_link( $c ) : '';
+	if ( '' !== $review ) {
+		return $review;
+	}
+	return 'publish' === $c->post_status ? (string) get_permalink( $c ) : (string) get_preview_post_link( $c );
 }
 
 /**

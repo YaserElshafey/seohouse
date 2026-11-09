@@ -49,7 +49,7 @@ while ( have_posts() ) :
 		<div aria-hidden="true" data-hero-grid style="position: absolute; inset: 0px; opacity: 0.5; background-image: linear-gradient(rgba(40, 84, 232, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(40, 84, 232, 0.08) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(80% 90% at 50% 0%, rgb(0, 0, 0), transparent 75%); pointer-events: none;"></div>
 		<div style="position: relative; max-width: 760px; margin: 0px auto; padding-inline: 20px; padding-top: 20px; padding-bottom: clamp(30px, 3.6vw, 44px);">
 			<div class="sh-crumbs-light"><?php sh_breadcrumbs(); ?></div>
-			<?php if ( 'publish' !== get_post_status() ) : ?>
+			<?php if ( 'publish' !== get_post_status() || ! empty( get_post()->sh_preview ) ) : ?>
 			<div role="note" style="margin-top: 16px; display: flex; gap: 10px; background: rgb(255, 251, 234); border: 1px dashed rgb(217, 179, 0); border-radius: 12px; padding: 10px 14px; font-size: 14px; line-height: 1.7; color: var(--sh-text);"><span aria-hidden="true" style="font-weight: 800;">●</span><span><?php esc_html_e( 'مسودة للمراجعة — لا تظهر للزوار ولا تُفهرس.', 'seohouse' ); ?></span></div>
 			<?php endif; ?>
 			<div style="margin-top: 22px; font-size: 13.5px; font-weight: 600; color: var(--sh-link);"><?php esc_html_e( 'دراسة حالة', 'seohouse' ); ?></div>

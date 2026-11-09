@@ -52,7 +52,7 @@ function sh_render_sections( string $key ): void {
 	echo '<main id="main" class="sh-main">';
 	$other_markets = in_array( $key, array( 'seo-ksa', 'seo-egypt', 'seo-uae' ), true ); // «خدماتنا في الأسواق العربية» before the FAQ
 	// editors can look at hidden sections before showing them: ?sh_show_hidden=1 (marked, never for visitors)
-	$show_hidden = isset( $_GET['sh_show_hidden'] ) && current_user_can( 'edit_pages' ); // phpcs:ignore WordPress.Security.NonceVerification
+	$show_hidden = ( isset( $_GET['sh_show_hidden'] ) && current_user_can( 'edit_pages' ) ) || ( function_exists( 'sh_cases_preview' ) && sh_cases_preview() ); // phpcs:ignore WordPress.Security.NonceVerification
 	foreach ( $rows as $i => $row ) {
 		if ( ! is_array( $row ) ) {
 			continue;
