@@ -32,8 +32,10 @@ while ( have_posts() ) :
 	if ( $logo ) {
 		$meta = array_filter(
 			array(
-				__( 'المجال', 'seohouse' ) => $g( 'sector' ),
-				__( 'الدولة', 'seohouse' ) => $g( 'market' ),
+				__( 'المجال', 'seohouse' )       => $g( 'sector' ),
+				__( 'الدولة', 'seohouse' )       => $g( 'market' ),
+				__( 'فترة النتائج', 'seohouse' ) => $g( 'main_after_period' ),
+				__( 'تاريخ الدراسة', 'seohouse' ) => $g( 'case_date' ),
 			)
 		);
 	}
@@ -298,6 +300,15 @@ while ( have_posts() ) :
 	<section data-screen-label="Rankings" style="background: var(--sh-surface); color: var(--sh-ink); border-top: 1px solid var(--sh-line);">
 		<div style="max-width: 1000px; margin: 0px auto; padding: clamp(32px, 4vw, 52px) 20px;">
 			<div style="max-width: 760px; margin: 0px auto;"><?php $head( __( 'نتائج البحث', 'seohouse' ), __( 'ترتيبنا في جوجل', 'seohouse' ) ); ?></div>
+			<?php
+			$shots = array_map(
+				static fn( $x ) => array( 'image' => (int) $x['image'], 'alt' => (string) ( $x['alt'] ?? '' ), 'keyword' => (string) $x['keyword'], 'position' => (string) ( $x['position'] ?? '' ), 'date' => (string) ( $x['date'] ?? '' ), 'lb_title' => $show_client ? $g( 'client' ) : get_the_title(), 'lb_sub' => implode( ' · ', array_filter( array( $g( 'sector' ), $g( 'market' ) ) ) ) ),
+				$rankings
+			);
+			?>
+			<?php if ( count( $shots ) >= 4 ) : ?>
+			<div style="margin-top: 20px;"><?php get_template_part( 'parts/shot-gallery', null, array( 'items' => $shots ) ); ?></div>
+			<?php else : ?>
 			<div class="sh-rank-grid" data-sh-gallery data-count="<?php echo (int) count( $rankings ); ?>" style="margin-top: 20px;">
 				<?php
 				foreach ( $rankings as $x ) {
@@ -305,6 +316,7 @@ while ( have_posts() ) :
 				}
 				?>
 			</div>
+			<?php endif; ?>
 			<p style="margin: 16px 0px 0px; font-size: 14px; color: <?php echo esc_attr( $muted ); ?>;"><?php esc_html_e( 'لقطات من نتائج بحث جوجل وقت إعداد الدراسة', 'seohouse' ); ?></p>
 		</div>
 	</section>

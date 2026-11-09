@@ -1,7 +1,7 @@
 {
  "theme": "seohouse",
- "version": "2.8.13",
- "count": 367,
+ "version": "2.8.14",
+ "count": 368,
  "files": [
   {
    "path": "404.php",
@@ -21,7 +21,7 @@
   {
    "path": "functions.php",
    "size": 1073,
-   "sha1": "5d3639f1514a28b6575518127eac312496f301da"
+   "sha1": "91b7fee8a3c83d4591c6396f2b73bb97e4222f18"
   },
   {
    "path": "header.php",
@@ -55,8 +55,8 @@
   },
   {
    "path": "single-case_study.php",
-   "size": 26347,
-   "sha1": "8de32aeeff1a47feffcd92ec25574efbc16c6c3c"
+   "size": 27152,
+   "sha1": "5bdffdeeefd1f463da8dc4e120f34214aa0624f9"
   },
   {
    "path": "single-team_member.php",
@@ -71,7 +71,7 @@
   {
    "path": "style.css",
    "size": 546,
-   "sha1": "0ba664117a6f2f9dbfdf7b4079e0644b7d67e448"
+   "sha1": "1c6054a28b59c536baeda1154b0706a797568d42"
   },
   {
    "path": "theme.json",
@@ -95,8 +95,8 @@
   },
   {
    "path": "assets/css/theme.css",
-   "size": 42229,
-   "sha1": "f8b3fd624f4694d6cddc9ed9e6e0eb50c4a789a9"
+   "size": 46196,
+   "sha1": "8405184aacff5fdb0515ea71793c28a9c413c7fd"
   },
   {
    "path": "assets/css/pages/404.css",
@@ -425,8 +425,8 @@
   },
   {
    "path": "assets/js/site.js",
-   "size": 26471,
-   "sha1": "36fe01d50dd44d5ce5bbd02c5f8681a43e41d93d"
+   "size": 29536,
+   "sha1": "409b17ce22602e812dbcb746a65fe589035ab050"
   },
   {
    "path": "assets/platforms/ga4.svg",
@@ -590,8 +590,8 @@
   },
   {
    "path": "languages/en_US.l10n.php",
-   "size": 15280,
-   "sha1": "4585215202418cc649a347b97c8ba2624d682a7b"
+   "size": 15606,
+   "sha1": "32341affe6ab07ceb073f1a128c118077f1c90dc"
   },
   {
    "path": "page-templates/about.php",
@@ -790,8 +790,8 @@
   },
   {
    "path": "parts/case-shot.php",
-   "size": 3224,
-   "sha1": "480d42034aa1315c7c1883463b7889740144fb07"
+   "size": 3237,
+   "sha1": "20d267c592995c83f34fbb6e8f3168f20bf1cf5a"
   },
   {
    "path": "parts/drawer.php",
@@ -812,6 +812,11 @@
    "path": "parts/seo-other-markets.php",
    "size": 2199,
    "sha1": "cb7af5b587405edd918ef4eeb055767aa37448da"
+  },
+  {
+   "path": "parts/shot-gallery.php",
+   "size": 5973,
+   "sha1": "857e3f48cb5d9258bf59c04e6694729cf596a7a7"
   },
   {
    "path": "parts/site-footer.php",
@@ -840,8 +845,8 @@
   },
   {
    "path": "parts/dynamic/case-list.php",
-   "size": 5363,
-   "sha1": "8e512a23db5c6dc20b8a34ad68e69af955f203c2"
+   "size": 6018,
+   "sha1": "37cffd72e0b3b9d4668a50973c877feb44a96efb"
   },
   {
    "path": "parts/dynamic/posts-home.php",
@@ -1025,8 +1030,8 @@
   },
   {
    "path": "sections/results/rankings.php",
-   "size": 2373,
-   "sha1": "8a431dd64fc58bf16ad686a513d6ef637faee8ce"
+   "size": 2327,
+   "sha1": "25d2b3913136aff8862f6bfccc2d569a5a0f3ef2"
   },
   {
    "path": "sections/sector-ecommerce/case.php",

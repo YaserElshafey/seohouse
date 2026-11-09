@@ -185,6 +185,17 @@
       "required": 0
     },
     {
+      "key": "field_sh_cs_case_date",
+      "label": "تاريخ الدراسة",
+      "name": "case_date",
+      "type": "text",
+      "instructions": "متى أُعدّت الدراسة، مثل: نوفمبر 2026. يظهر في مربع العميل أول الصفحة.",
+      "required": 0,
+      "wrapper": {
+        "width": "50"
+      }
+    },
+    {
       "key": "field_sh_cs_tab_challenge",
       "label": "التحدي والحل",
       "name": "tab_challenge",

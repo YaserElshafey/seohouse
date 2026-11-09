@@ -33,7 +33,7 @@ if ( 'related' === $context ) {
 }
 foreach ( $cases as $c ) :
 	$f    = function_exists( 'get_fields' ) ? (array) get_fields( $c->ID ) : array();
-	$rich = 'related' === $context || ( 'results' === $context && sh_cases_v2() );
+	$rich = 'related' === $context || ( in_array( $context, array( 'results', 'home' ), true ) && sh_cases_v2() );
 	$meta = array();
 	if ( ! $rich ) {
 		// as designed: results page (client, sector, market, source), home (sector only)
@@ -78,6 +78,9 @@ foreach ( $cases as $c ) :
 				<span style="display: block; font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.5;"><?php echo esc_html( $title ); ?></span>
 				<?php if ( '' !== $sub ) : ?>
 				<span style="display: block; margin-top: 4px; font-size: 13.5px; color: var(--sh-text);"><?php echo esc_html( $sub ); ?></span>
+				<?php endif; ?>
+				<?php if ( $rich && ! empty( $f['main_after_period'] ) ) : ?>
+				<span class="sh-case-period" title="<?php esc_attr_e( 'فترة النتائج', 'seohouse' ); ?>"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"></rect><path d="M3.5 10h17M8 3v4M16 3v4"></path></svg><span class="screen-reader-text"><?php esc_html_e( 'فترة النتائج:', 'seohouse' ); ?></span> <?php echo esc_html( $f['main_after_period'] ); ?></span>
 				<?php endif; ?>
 				<?php if ( $meta ) : ?>
 				<span style="display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 8px; font-size: 13.5px; color: var(--sh-text);">

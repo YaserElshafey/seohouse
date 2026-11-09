@@ -274,7 +274,14 @@
   "الصورة التالية": "Next image",
   "%1$s من %2$s": "%1$s of %2$s",
   "لقطة بتاريخ %s": "Captured on %s",
-  "تاريخ اللقطة": "Captured on"
+  "تاريخ اللقطة": "Captured on",
+  "فترة النتائج:": "Results period:",
+  "فترة النتائج": "Results period",
+  "تاريخ الدراسة": "Case study date",
+  "تصفية حسب العميل": "Filter by client",
+  "كل العملاء": "All clients",
+  "اللقطات": "Screenshots",
+  "%d لقطة": "%d screenshots"
  },
  "seohouse-core": {
   "%s — %s، %s": "%s — %s, %s",

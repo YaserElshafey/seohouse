@@ -294,8 +294,11 @@
 	var rtl = d.documentElement.dir === 'rtl';
 	function lbOpen(a) {
 		var group = a.closest('[data-sh-gallery]');
-		var items = group ? $$('[data-sh-lightbox]', group) : [a];
-		var i = Math.max(0, items.indexOf(a));
+		// the gallery's items (data-lb-item): a grid's links, or a browser's list; filtered-out ones are skipped
+		var items = group ? $$('[data-lb-item]', group).filter(function (x) { return !x.closest('[hidden]'); }) : [];
+		if (!items.length) items = [a];
+		var cur = a.hasAttribute('data-sg-stage') && group ? group.querySelector('.sh-sg__item[aria-current="true"]') : a;
+		var i = Math.max(0, items.indexOf(cur));
 		var box = d.createElement('div');
 		box.className = 'sh-lightbox'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true');
 		box.innerHTML = '<div class="sh-lb__stage"><img alt=""></div><aside class="sh-lb__panel" hidden><p class="sh-lb__count"></p><h2 class="sh-lb__title"></h2><p class="sh-lb__sub"></p><dl class="sh-lb__facts"></dl><p class="sh-lb__alt"></p></aside>'
@@ -309,7 +312,7 @@
 		function show(k) {
 			i = (k + items.length) % items.length;
 			var x = items[i], g = function (n) { return x.getAttribute('data-lb-' + n) || ''; };
-			img.src = x.getAttribute('href'); img.alt = x.getAttribute('data-alt') || '';
+			img.src = x.getAttribute('href') || x.getAttribute('data-href'); img.alt = x.getAttribute('data-alt') || '';
 			box.querySelector('.sh-lb__stage').scrollTop = 0;
 			var rich = !!(g('title') || g('kw'));
 			box.classList.toggle('sh-lb--rich', rich); panel.hidden = !rich;
@@ -327,7 +330,12 @@
 			});
 			facts.hidden = !facts.children.length;
 		}
-		function close() { box.remove(); d.removeEventListener('keydown', keys); items[i].focus(); }
+		function close() {
+			box.remove(); d.removeEventListener('keydown', keys);
+			var x = items[i] || a;
+			if (x.classList.contains('sh-sg__item')) x.click(); // the browser shows the screenshot the viewer ended on
+			x.focus();
+		}
 		function keys(e) {
 			if (e.key === 'Escape') { close(); return; }
 			if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
@@ -347,6 +355,54 @@
 	}
 	$$('[data-sh-lightbox]').forEach(function (a) {
 		a.addEventListener('click', function (e) { e.preventDefault(); lbOpen(a); });
+	});
+
+	/* ---------------------------------------------------------------- screenshot browser (2.8.14)
+	   A preview in the list shows its screenshot in the large frame (and its details under it); chips
+	   filter the list by client. The large frame opens the viewer above. */
+	$$('[data-sh-sg]').forEach(function (sg) {
+		var stage = sg.querySelector('[data-sg-stage]'), simg = stage.querySelector('img');
+		var list = sg.querySelector('.sh-sg__list');
+		function field(n, v) {
+			var el = sg.querySelector('[data-sg="' + n + '"]');
+			if (!el) return;
+			el.textContent = v || '';
+			if (n !== 'keyword') el.hidden = !v;
+		}
+		function pick(btn, scroll) {
+			$$('.sh-sg__item', sg).forEach(function (b) { b.setAttribute('aria-current', 'false'); });
+			btn.setAttribute('aria-current', 'true');
+			simg.src = btn.getAttribute('data-large');
+			simg.setAttribute('srcset', btn.getAttribute('data-srcset') || '');
+			simg.alt = btn.getAttribute('data-alt') || '';
+			stage.setAttribute('href', btn.getAttribute('data-href'));
+			stage.setAttribute('data-alt', btn.getAttribute('data-alt') || '');
+			['title', 'sub', 'kw', 'pos', 'date'].forEach(function (k) { stage.setAttribute('data-lb-' + k, btn.getAttribute('data-lb-' + k) || ''); });
+			field('title', btn.getAttribute('data-title'));
+			field('sub', btn.getAttribute('data-sub'));
+			field('keyword', btn.getAttribute('data-lb-kw'));
+			field('position', btn.getAttribute('data-lb-pos'));
+			var dt = sg.querySelector('[data-sg="date"]'), dv = btn.getAttribute('data-lb-date');
+			if (dt) { dt.textContent = dv ? (dt.getAttribute('data-label') || '%s').replace('%s', dv) : ''; dt.hidden = !dv; }
+			if (scroll !== false && list.scrollTo) {
+				var li = btn.parentNode;
+				list.scrollTo({ top: li.offsetTop - list.offsetTop - 8, left: li.offsetLeft - list.offsetLeft - 8, behavior: 'smooth' });
+			}
+		}
+		$$('.sh-sg__item', sg).forEach(function (b) { b.addEventListener('click', function () { pick(b); }); });
+		$$('[data-sg-filter]', sg).forEach(function (chip) {
+			chip.addEventListener('click', function () {
+				var who = chip.getAttribute('data-sg-filter'), first = null;
+				$$('[data-sg-filter]', sg).forEach(function (c) { c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
+				$$('li[data-sg-client]', list).forEach(function (li) {
+					var on = !who || li.getAttribute('data-sg-client') === who;
+					li.hidden = !on;
+					if (on && !first) first = li;
+				});
+				if (list.scrollTo) list.scrollTo({ top: 0, left: 0 });
+				if (first) pick(first.querySelector('.sh-sg__item'), false);
+			});
+		});
 	});
 
 	/* ---------------------------------------------------------------- booking form (one step) */
