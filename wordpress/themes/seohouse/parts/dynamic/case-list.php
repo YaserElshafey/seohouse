@@ -61,7 +61,7 @@ foreach ( $cases as $c ) :
 	$href    = sh_case_href( $c );
 	?>
 <li data-sh-filter-item="<?php echo esc_attr( $filters ); ?>">
-	<a href="<?php echo esc_url( $href ); ?>" data-hcard data-res-card class="sh-hv-case" style="display: grid; gap: 14px 28px; align-items: center; background: rgb(255, 255, 255); border-radius: 16px; padding: clamp(18px, 2vw, 24px); box-shadow: 0 14px 34px -28px rgba(6,11,31,.5), 0 0 0 1px var(--sh-line); color: var(--sh-ink); transition: box-shadow 0.2s;">
+	<a href="<?php echo esc_url( $href ); ?>" data-hcard data-res-card class="sh-hv-case sh-case--<?php echo esc_attr( $context ); ?>" style="display: grid; gap: 14px 28px; align-items: center; background: rgb(255, 255, 255); border-radius: 16px; padding: clamp(18px, 2vw, 24px); box-shadow: 0 14px 34px -28px rgba(6,11,31,.5), 0 0 0 1px var(--sh-line); color: var(--sh-ink); transition: box-shadow 0.2s;">
 		<span style="display: block;">
 			<span style="display: block; font-family: Alexandria, sans-serif; font-weight: 800; font-size: clamp(28px, 3vw, 38px); line-height: 1; color: var(--sh-link);"><bdi><?php echo esc_html( $f['result'] ?? '' ); ?></bdi></span>
 			<?php if ( ! empty( $f['result_label'] ) ) : ?>
@@ -72,6 +72,8 @@ foreach ( $cases as $c ) :
 		<span class="sh-case-client" style="display: flex; align-items: center; gap: 14px; min-width: 0px;">
 			<?php if ( $logo ) : ?>
 			<span class="sh-case-logo" aria-hidden="true"><?php echo wp_get_attachment_image( $logo, 'medium', false, array( 'alt' => '', 'loading' => 'lazy', 'decoding' => 'async' ) ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span>
+			<?php elseif ( '' !== $client ) : // 2.8.16: no logo yet: the client's initial, so the names stay aligned ?>
+			<span class="sh-case-logo sh-case-logo--initial" aria-hidden="true"><?php echo esc_html( mb_substr( $client, 0, 1 ) ); ?></span>
 			<?php endif; ?>
 		<?php endif; ?>
 			<span style="display: block; min-width: 0px;">

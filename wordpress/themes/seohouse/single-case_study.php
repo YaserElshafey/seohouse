@@ -29,7 +29,7 @@ while ( have_posts() ) :
 	);
 	// 2.8.8: a client with a logo gets the client box (logo, field, country) instead of the data list
 	$logo = $show_client && ! empty( $f['client_logo'] ) ? (int) $f['client_logo'] : 0;
-	if ( $logo ) {
+	if ( $show_client ) { // 2.8.16: with or without a logo
 		$meta = array_filter(
 			array(
 				__( 'المجال', 'seohouse' )       => $g( 'sector' ),
@@ -59,7 +59,7 @@ while ( have_posts() ) :
 			<?php if ( $g( 'summary' ) ) : ?>
 			<p style="font-size: 17px; line-height: 1.9; color: <?php echo esc_attr( $muted ); ?>; margin: 12px 0px 0px; text-wrap: pretty;"><?php echo esc_html( $g( 'summary' ) ); ?></p>
 			<?php endif; ?>
-			<?php if ( $g( 'result' ) || $meta || $logo ) : ?>
+			<?php if ( $g( 'result' ) || $meta || $show_client ) : ?>
 			<div data-cs-top style="margin-top: 22px; display: grid; gap: 16px; align-items: stretch;">
 				<?php if ( $g( 'result' ) ) : ?>
 				<div style="border-radius: 14px; background: var(--sh-blue); color: rgb(255, 255, 255); padding: 14px 18px; display: flex; flex-direction: column; justify-content: center; min-width: 170px;">
@@ -69,13 +69,17 @@ while ( have_posts() ) :
 					<?php endif; ?>
 				</div>
 				<?php endif; ?>
-				<?php if ( $logo ) : ?>
-				<div class="sh-cs-client" style="display: flex; align-items: center; gap: 16px 22px; flex-wrap: wrap; background: rgb(255, 255, 255); border-radius: 14px; padding: 14px 18px; box-shadow: 0 0 0 1px var(--sh-line);">
+				<?php if ( $show_client ) : ?>
+				<div class="sh-cs-client">
+					<?php if ( $logo ) : ?>
 					<span class="sh-case-logo sh-case-logo--lg"><?php echo wp_get_attachment_image( $logo, 'medium', false, array( 'alt' => sprintf( /* translators: %s: client */ __( 'شعار %s', 'seohouse' ), $g( 'client' ) ), 'decoding' => 'async' ) ); // phpcs:ignore WordPress.Security.EscapeOutput ?></span>
+					<?php else : ?>
+					<span class="sh-cs-client__name"><?php echo esc_html( $g( 'client' ) ); ?></span>
+					<?php endif; ?>
 					<?php if ( $meta ) : ?>
-					<dl style="margin: 0px; display: flex; flex-wrap: wrap; gap: 10px 28px;">
+					<dl class="sh-cs-client__meta" style="--n: <?php echo (int) count( $meta ); ?>;">
 						<?php foreach ( $meta as $k => $v ) : ?>
-						<div style="min-width: 0px;"><dt style="font-size: 12.5px; color: var(--sh-text);"><?php echo esc_html( $k ); ?></dt><dd style="margin: 2px 0px 0px; font-size: 14.5px; font-weight: 600; color: var(--sh-ink);"><?php echo esc_html( $v ); ?></dd></div>
+						<div><dt><?php echo esc_html( $k ); ?></dt><dd><?php echo esc_html( $v ); ?></dd></div>
 						<?php endforeach; ?>
 					</dl>
 					<?php endif; ?>

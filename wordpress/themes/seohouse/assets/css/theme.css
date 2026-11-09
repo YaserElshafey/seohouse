@@ -553,3 +553,32 @@ html[dir="rtl"] .sh-case-period { padding: 7px 10px 7px 14px; }
 .sh-sg__select select:focus-visible { outline: 2px solid var(--sh-blue); outline-offset: 1px; }
 .sh-sg__select svg { position: absolute; inset-inline-end: 12px; top: 50%; transform: translateY(-50%); color: var(--sh-link); pointer-events: none; }
 .sh-sg__bar .sh-sg__count { flex: none; }
+/* case card: a client without a logo shows its initial in the logo box */
+.sh-case-logo--initial { background: var(--sh-blue-tint); box-shadow: none; color: var(--sh-link); font-family: Alexandria, sans-serif; font-weight: 800; font-size: 24px; line-height: 1; }
+/* case page: client box — logo centred on top, the details in equal columns under it (same in both languages) */
+.sh-cs-client { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: #fff; border-radius: 14px; padding: 18px 20px; box-shadow: 0 0 0 1px var(--sh-line); text-align: center; min-width: 0; }
+.sh-cs-client .sh-case-logo--lg { width: auto; max-width: 220px; height: 64px; justify-content: center; }
+.sh-cs-client__meta { margin: 0; width: 100%; display: grid; grid-template-columns: repeat(var(--n, 4), minmax(0, 1fr)); padding-top: 14px; border-top: 1px solid var(--sh-line); }
+.sh-cs-client__meta > div { min-width: 0; padding: 0 10px; }
+.sh-cs-client__meta > div + div { border-inline-start: 1px solid var(--sh-line); }
+.sh-cs-client__meta dt { font-size: 12.5px; color: var(--sh-text); }
+.sh-cs-client__meta dd { margin: 3px 0 0; font-size: 14px; font-weight: 600; line-height: 1.45; color: var(--sh-ink); text-wrap: balance; }
+@media (max-width: 599px) {
+	.sh-cs-client__meta { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 12px; }
+	.sh-cs-client__meta > div:nth-child(odd) { border-inline-start: 0; }
+}
+.sh-cs-client__name { font-family: Alexandria, sans-serif; font-weight: 700; font-size: 20px; line-height: 1.4; color: var(--sh-ink); }
+body.single-case_study .sh-main [data-cs-top] { grid-template-columns: minmax(180px, 230px) minmax(0, 1fr); }
+@media (max-width: 599px) { body.single-case_study .sh-main [data-cs-top] { grid-template-columns: 1fr; } }
+/* 2.8.17: the details as a 2 × 2 grid at every width, so long English values never wrap mid-row */
+.sh-cs-client__meta { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 14px; }
+.sh-cs-client__meta > div:nth-child(odd) { border-inline-start: 0; }
+.sh-cs-client__meta dd { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 599px) { .sh-cs-client__meta dd { white-space: normal; } }
+@media (min-width: 720px) { html:not([dir="rtl"]) .sh-main [data-res-card] { grid-template-columns: minmax(230px, .27fr) minmax(0, 1fr) auto !important; } }
+/* home (narrower column), English: the period sits over the link, and the label under the number may wrap */
+html:not([dir="rtl"]) .sh-case--home > span:first-child > span + span { white-space: normal; }
+@media (min-width: 720px) { html:not([dir="rtl"]) .sh-main .sh-case--home[data-res-card] { grid-template-columns: minmax(190px, .3fr) minmax(0, 1fr) auto !important; } }
+html:not([dir="rtl"]) .sh-case--home .sh-case-go { flex-direction: column; align-items: flex-end; gap: 6px; }
+@media (max-width: 719px) { html:not([dir="rtl"]) .sh-case--home .sh-case-go { flex-direction: row; align-items: center; } }
+@media (min-width: 720px) { .sh-case--home .sh-case-go { flex-direction: column; align-items: flex-end; gap: 6px; } }

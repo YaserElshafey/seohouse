@@ -94,3 +94,13 @@
   - فترة النتائج (`main_after_period`) كعلامة بأيقونة تقويم على الكروت.
   - مربع العميل فيه: المجال، والدولة، وفترة النتائج، وتاريخ الدراسة (حقل جديد `case_date`: نوفمبر 2026 / November 2026).
 - **الصفحة الرئيسية:** قايمة النتائج بقت بكارت صفحة النتائج (لوجو، اسم، مجال · دولة، فترة). عمود الرقم بقى أعرض، لأن 120px كانت بتخلّي «+15,800%» يركب على الاسم.
+
+## 2.8.15 – 2.8.22 (theme) + 4 new case studies (9 Nov 2026)
+
+- Case cards: a small, plain «فترة النتائج: …» (icon + text, no box) in the card's free space, set apart from «دراسة الحالة». On the home (narrower column) it sits above the link. A client without a logo gets their initial in the logo box.
+- English cards: narrower number column (names on one line); on the English home the label under the number can wrap.
+- Screenshot browser: client filter is now a drop-down (`select[data-sg-filter]`, «كل العملاء (31)», one option per client with its count); the count beside it follows the filter; client headings in the list; fade + «مرّر لعرض باقي اللقطات» until the end of the list.
+- Case page client box (`.sh-cs-client`): logo centered on top, the details (field, country, results period, case date) in a 2 × 2 grid under it, the same in Arabic and English; used for every public client, with or without a logo. The result column is fixed at 180–230px.
+- New published case studies, built only from the Google screenshots (no Analytics, so no before/after numbers or work steps): Lighting Address 3520/3533, MK Kabbani Furniture 3546/3559, Bin Afif Property Management 3572/3585, Bedaya Psychiatric Center 3598/3607 (AR/EN). Numbers = screenshot counts (searches in the top results; first result; cited in Google's AI Overview), screenshots dated 1 Nov 2026. Source: `docs/case-studies-2026-11/rank_cases.py` and `rank-cases-*.json`.
+- Logos: Bedaya from the brief (3519); Lighting Address, MK Kabbani and Bin Afif taken from the clients' own websites (3664–3666).
+- Note: `content/case` finds an existing case by `id` only, not by slug — sending a slug again creates a copy (`-2`). Always send `id` + `allow_published` for an update.
