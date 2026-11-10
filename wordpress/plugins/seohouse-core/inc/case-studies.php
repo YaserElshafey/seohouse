@@ -239,3 +239,56 @@ add_action(
 		);
 	}
 );
+
+/**
+ * SEO title / description / focus keyword of existing pages, without touching their content (2.9.23).
+ *
+ * Body (JSON): items [{id, title, description, focus}] (a missing key is left as it is), dry_run (default true).
+ * Writes Rank Math's meta and the theme's fallback fields together, so both read the same value.
+ */
+function sh_core_seo_meta_save( array $in ) {
+	$dry = ! isset( $in['dry_run'] ) || ! empty( $in['dry_run'] );
+	$out = array();
+	foreach ( (array) ( $in['items'] ?? array() ) as $it ) {
+		$id = (int) ( $it['id'] ?? 0 );
+		if ( ! $id || ! in_array( get_post_type( $id ), array( 'page', 'post', 'case_study', 'team_member' ), true ) ) {
+			$out[] = array( 'id' => $id, 'error' => 'not a page, post, case study or team member' );
+			continue;
+		}
+		$row = array( 'id' => $id, 'url' => (string) get_permalink( $id ) );
+		foreach ( array( 'title' => array( 'rank_math_title', 'sh_seo_title' ), 'description' => array( 'rank_math_description', 'sh_seo_description' ), 'focus' => array( 'rank_math_focus_keyword', '' ) ) as $k => $metas ) {
+			if ( ! array_key_exists( $k, $it ) ) {
+				continue;
+			}
+			$v                    = trim( sanitize_text_field( (string) $it[ $k ] ) );
+			$row[ $k ]            = array( 'before' => (string) get_post_meta( $id, $metas[0], true ), 'after' => $v );
+			if ( $dry ) {
+				continue;
+			}
+			'' === $v ? delete_post_meta( $id, $metas[0] ) : update_post_meta( $id, $metas[0], $v );
+			if ( $metas[1] && function_exists( 'update_field' ) ) {
+				update_field( $metas[1], $v, $id );
+			}
+		}
+		if ( ! $dry ) {
+			clean_post_cache( $id );
+		}
+		$out[] = $row;
+	}
+	return array( 'dry_run' => $dry, 'items' => $out );
+}
+
+add_action(
+	'rest_api_init',
+	static function () {
+		register_rest_route(
+			'seohouse/v1',
+			'/content/seo',
+			array(
+				'methods'             => 'POST',
+				'callback'            => static fn( WP_REST_Request $r ) => rest_ensure_response( sh_core_seo_meta_save( (array) $r->get_json_params() ) ),
+				'permission_callback' => static fn() => current_user_can( 'manage_options' ) && current_user_can( 'edit_others_pages' ),
+			)
+		);
+	}
+);

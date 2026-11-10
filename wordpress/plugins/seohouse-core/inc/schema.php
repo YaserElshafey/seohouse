@@ -40,6 +40,13 @@ function sh_schema_output(): void {
 	if ( ! $graph ) {
 		return;
 	}
+	// titles reach the graph HTML-escaped («&amp;», «&#8217;»): JSON-LD carries plain text
+	array_walk_recursive(
+		$graph,
+		static function ( &$v ) {
+			$v = is_string( $v ) ? html_entity_decode( $v, ENT_QUOTES | ENT_HTML5, 'UTF-8' ) : $v;
+		}
+	);
 	$json = wp_json_encode(
 		array(
 			'@context' => 'https://schema.org',
@@ -117,7 +124,7 @@ function sh_schema_markets(): array {
 		}
 		$code = '';
 		foreach ( sh_schema_country_aliases() as $c => $aliases ) {
-			if ( in_array( mb_strtolower( $name ), $aliases, true ) ) {
+			if ( in_array( preg_replace( '/^the\s+/u', '', mb_strtolower( $name ) ), $aliases, true ) ) {
 				$code = $c;
 				break;
 			}
@@ -136,9 +143,10 @@ function sh_schema_country_nodes( ?array $codes = null ): array {
 	$nodes = array();
 	foreach ( sh_schema_markets()['countries'] as $code => $name ) {
 		if ( null === $codes || in_array( $code, $codes, true ) ) {
-			$nodes[] = array(
+			$official = array( 'SA' => 'Saudi Arabia', 'EG' => 'Egypt', 'AE' => 'United Arab Emirates' );
+			$nodes[]  = array(
 				'@type' => 'Country',
-				'name'  => $name,
+				'name'  => sh_is_en() && isset( $official[ $code ] ) ? $official[ $code ] : $name, // English pages: the country's standard name
 			);
 		}
 	}
@@ -155,6 +163,7 @@ function sh_schema_market_codes( string $key ): array {
 	if ( 'seo' === $key ) {
 		return array_values( $pages );
 	}
+	$pages += array( 'stores-salla' => 'SA', 'stores-zid' => 'SA' ); // Saudi platforms (2.9.24)
 	return isset( $pages[ $key ] ) ? array( $pages[ $key ] ) : array();
 }
 
@@ -296,12 +305,18 @@ function sh_schema_registration(): array {
 function sh_schema_organization(): array {
 	$founded = trim( (string) sh_core_option( 'sh_founded', '' ) );
 	$logo    = sh_schema_logo();
+	$ar      = (string) get_option( 'options_sh_company_name', get_bloginfo( 'name' ) ); // the Arabic value, whatever the page language
+	$names   = array( sh_core_option( 'sh_company_name', get_bloginfo( 'name' ) ), sh_core_option( 'sh_company_name_en', '' ) );
+	if ( sh_is_en() ) {
+		$names = array( sh_core_option( 'sh_company_name_en', 'SEO House' ), '' !== $ar ? $ar : '' );
+	}
 	return sh_schema_clean(
 		array(
 			'@type'         => 'Organization',
 			'@id'           => sh_schema_id( 'organization' ),
-			'name'          => sh_core_plain( sh_core_option( 'sh_company_name', get_bloginfo( 'name' ) ) ),
-			'alternateName' => sh_core_plain( sh_core_option( 'sh_company_name_en', '' ) ),
+			// English pages: the English name first, the Arabic one as the alternate (2.9.23)
+			'name'          => sh_core_plain( $names[0] ),
+			'alternateName' => sh_core_plain( $names[1] ),
 			'legalName'     => sh_core_plain( sh_core_option( 'sh_legal_name', '' ) ),
 			'taxID'         => sh_core_plain( sh_core_option( 'sh_tax_number', '' ) ),
 			'identifier'    => sh_schema_registration(),
@@ -425,7 +440,7 @@ function sh_schema_service( int $id, string $url, array $org_ref ): array {
 			'description' => $hero['text'] ?? '',
 			'url'         => $url,
 			'provider'    => $org_ref,
-			'areaServed'  => $codes ? sh_schema_country_nodes( $codes ) : array(),
+			'areaServed'  => sh_schema_country_nodes( $codes ? $codes : null ), // 2.9.23: all markets unless the page is a country page
 			'audience'    => '' !== $audience ? array(
 				'@type'        => 'BusinessAudience',
 				'audienceType' => $audience,

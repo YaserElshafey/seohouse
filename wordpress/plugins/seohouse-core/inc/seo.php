@@ -71,7 +71,7 @@ function sh_seo_canonical(): string {
 		return '';
 	}
 	if ( is_front_page() ) {
-		return home_url( '/' );
+		return function_exists( 'sh_home_url' ) ? sh_home_url() : home_url( '/' ); // the English home is /en/ (2.9.23)
 	}
 	if ( is_home() ) {
 		$paged = max( 1, (int) get_query_var( 'paged' ) );
