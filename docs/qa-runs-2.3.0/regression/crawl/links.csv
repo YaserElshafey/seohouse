@@ -1,0 +1,68 @@
+path,status,redirect,robots,inSitemap,linkedFrom,seeds,sample,title
+/,200,,"max-image-preview:large, noindex, nofollow",true,66,seed+sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,سيو هاوس | تحسين الظهور وتصميم المواقع والمتاجر
+/about/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,عن سيو هاوس ومبادئ عملنا | سيو هاوس
+/blog/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,مدونة سيو هاوس | سيو هاوس
+/blog/category/off-page-seo/,200,,"noindex, follow, nofollow",false,0,legacy,,السيو الخارجي | سيو هاوس
+/blog/category/technical-seo/,200,,"max-image-preview:large, noindex, nofollow",true,1,sitemap+legacy,/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,سيو تقني | سيو هاوس
+/blog/fix-404-not-found/,404,,"noindex, follow, nofollow",false,0,legacy,,الصفحة غير موجودة. | سيو هاوس
+/blog/how-to-build-backlinks-correctly/,404,,"noindex, follow, nofollow",false,0,legacy,,الصفحة غير موجودة. | سيو هاوس
+/blog/why-is-my-website-not-showing-in-search-engines/,404,,"noindex, follow, nofollow",false,0,legacy,,الصفحة غير موجودة. | سيو هاوس
+/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap+legacy,/ | /blog/,هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة | سيو هاوس
+/contact/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,اتصل بنا واحجز مكالمة استشارية | سيو هاوس
+/pricing/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,أسعار خدمات سيو هاوس ونطاق العمل | سيو هاوس
+/privacy-policy/,404,,"noindex, follow, nofollow",false,0,legacy,,الصفحة غير موجودة. | سيو هاوس
+/results/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,نتائج ودراسات حالة من مشاريع سيو هاوس | سيو هاوس
+/results/تستتست/,200,,"max-image-preview:large, noindex, nofollow",true,2,sitemap+legacy,/ | /results/,قطاع التعليم والتدريب | سيو هاوس
+/results/قطاع-التجارة-الإلكترونية/,200,,"max-image-preview:large, noindex, nofollow",true,2,sitemap+legacy,/ | /results/,قطاع التجارة الإلكترونية | سيو هاوس
+/results/قطاع-الصحة-والطب/,200,,"max-image-preview:large, noindex, nofollow",true,2,sitemap+legacy,/ | /results/,قطاع الصحة والطب | سيو هاوس
+/sectors/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,قطاعات نعمل عليها في السيو والمواقع والمتاجر | سيو هاوس
+/sectors/ecommerce/,200,,"max-image-preview:large, noindex, nofollow",true,67,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,تحسين محركات البحث للمتاجر الإلكترونية | سيو هاوس
+/sectors/education/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,تحسين محركات البحث لقطاع التعليم والتدريب | سيو هاوس
+/sectors/food/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,تحسين محركات البحث للمطاعم وعلامات الأغذية | سيو هاوس
+/sectors/health/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,تحسين محركات البحث للقطاع الطبي | سيو هاوس
+/sectors/legal/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,تحسين محركات البحث لمكاتب المحاماة | سيو هاوس
+/sectors/real-estate/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,تحسين محركات البحث لقطاع العقارات | سيو هاوس
+/sectors/tech/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,تحسين محركات البحث لشركات التقنية والبرمجيات | سيو هاوس
+/sectors/tourism/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,تحسين محركات البحث لقطاع السياحة والسفر | سيو هاوس
+/services/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,خدمات سيو هاوس | سيو، مواقع، متاجر ومحتوى المنتجات
+/services/products/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,رفع المنتجات وإدارة محتوى المتاجر | سيو هاوس
+/services/seo/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,خدمات تحسين محركات البحث SEO | سيو هاوس
+/services/seo/backlinks/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,خدمة بناء الروابط الخارجية للمواقع | سيو هاوس
+/services/seo/consulting/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,استشارات السيو وتحليل الأداء | سيو هاوس
+/services/seo/content/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,خدمة كتابة محتوى السيو للمواقع والمتاجر | سيو هاوس
+/services/seo/egypt/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,شركة سيو في مصر لتحسين ظهور موقعك | سيو هاوس
+/services/seo/ksa/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,شركة سيو في السعودية | سيو هاوس
+/services/seo/on-page/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,خدمة السيو الداخلي وتحسين صفحات الموقع | سيو هاوس
+/services/seo/stores-seo/,301,/sectors/ecommerce/,,false,0,legacy,,
+/services/seo/technical/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,خدمة السيو التقني وتدقيق الموقع | سيو هاوس
+/services/seo/uae/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,شركة سيو في الإمارات لتحسين ظهور موقعك | سيو هاوس
+/services/stores/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,تصميم وتطوير المتاجر الإلكترونية | سيو هاوس
+/services/stores/salla/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap+legacy,/services/ | /services/stores/,تصميم وتطوير متاجر سلة | سيو هاوس
+/services/stores/shopify/,200,,"max-image-preview:large, noindex, nofollow",true,3,sitemap+legacy,/services/ | /services/stores/,تصميم وتطوير متاجر شوبيفاي | سيو هاوس
+/services/stores/woocommerce/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap+legacy,/services/ | /services/stores/,تصميم وتطوير متاجر ووكومرس | سيو هاوس
+/services/stores/zid/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap+legacy,/services/ | /services/stores/,تصميم وتطوير متاجر زد | سيو هاوس
+/services/web-design/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,تصميم وتطوير مواقع الشركات | سيو هاوس
+/services/web-design/custom-dev/,200,,"max-image-preview:large, noindex, nofollow",true,3,sitemap+legacy,/services/ | /services/web-design/,البرمجة الخاصة وتطوير الأنظمة والمنصات | سيو هاوس
+/services/web-design/react-next/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap+legacy,/services/ | /services/web-design/,تطوير مواقع وتطبيقات رياكت ونكست | سيو هاوس
+/services/web-design/webflow/,200,,"max-image-preview:large, noindex, nofollow",true,2,sitemap+legacy,/services/ | /services/web-design/,تصميم مواقع ويب فلو للشركات | سيو هاوس
+/services/web-design/wordpress/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap+legacy,/services/ | /services/web-design/,تصميم مواقع ووردبريس للشركات | سيو هاوس
+/team/,200,,"max-image-preview:large, noindex, nofollow",true,66,sitemap+legacy,/ | /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/,فريق سيو هاوس | سيو هاوس
+/team/adham-hesham/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/ahmed-sanad/,أدهم هشام | سيو هاوس
+/team/ahmed-sanad/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/heba-geneedy/,أحمد سند | سيو هاوس
+/team/eman-farid/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/seif-sanad/,إيمان فريد | سيو هاوس
+/team/esraa-kamal/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/maha-ali/,إسراء كمال | سيو هاوس
+/team/esraa-mohamed/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/mohamed-hassan/,إسراء محمد | سيو هاوس
+/team/heba-geneedy/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/mennatallah-said/,هبه جنيدي | سيو هاوس
+/team/maha-ali/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/yasser-youssef/,مها علي | سيو هاوس
+/team/mariam-hesham/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/esraa-mohamed/,مريم هشام | سيو هاوس
+/team/mennatallah-said/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/yasser-youssef/,منةالله سعيد | سيو هاوس
+/team/mohamed-hassan/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/mona-ali/,محمد حسن | سيو هاوس
+/team/mohamed-moawad/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/yasser-youssef/,محمد معوض | سيو هاوس
+/team/mona-ali/,200,,"max-image-preview:large, noindex, nofollow",true,5,sitemap,/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/ | /team/,منى علي | سيو هاوس
+/team/morad-salah/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/adham-hesham/,مراد صلاح | سيو هاوس
+/team/mustafa-mahmoud/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/esraa-kamal/,مصطفي محمود | سيو هاوس
+/team/nada-mahmoud/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/mustafa-mahmoud/,ندى محمود | سيو هاوس
+/team/noha-elmahdy/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/mariam-hesham/,نهى المهدي | سيو هاوس
+/team/seif-sanad/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/nada-mahmoud/,سيف سند | سيو هاوس
+/team/yasser-youssef/,200,,"max-image-preview:large, noindex, nofollow",true,4,sitemap,/team/ | /team/morad-salah/,ياسر يوسف | سيو هاوس
+/terms/,404,,"noindex, follow, nofollow",false,0,legacy,,الصفحة غير موجودة. | سيو هاوس

@@ -1,0 +1,208 @@
+== 1. restore the installed state: theme 2.7.1 + Core 2.7.0 + edits + a 2.7.1 request
+name	version
+seohouse	2.7.1
+advanced-custom-fields	active	6.3.12
+seo-by-rank-math	active	1.0.279
+seohouse-core	active	2.7.0
+== 2. snapshot + crawl before
+Success: 1466 posts, 13944 meta, 6 terms, 200 options → /home/claude/wptest-fixture/runs/upgrade-271-to-272/before.json
+63 urls; non-200: {}; php errors in page: []
+== 3A. Core: replace with seohouse-core.zip
+Success: Installed 1 of 1 plugins.
+Notice: Function wp_add_privacy_policy_content was called <strong>incorrectly</strong>. The suggested privacy policy content should be added only in wp-admin by using the <code>admin_init</code> (or later) action. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.9.7.) in /home/claude/wptest/wp-includes/functions.php on line 6260
+seohouse-core	active	2.7.1
+== 3B. theme: replace with seohouse-theme.zip
+Success: Installed 1 of 1 themes.
+name	version
+seohouse	2.7.2
+seohouse-core	active	2.7.1
+== 4. snapshot after + compare
+Success: 1466 posts, 13944 meta, 6 terms, 200 options → /home/claude/wptest-fixture/runs/upgrade-271-to-272/after.json
+posts    before   1466  after   1466  removed   0  added   0  changed   0
+meta     before  13944  after  13944  removed   0  added   0  changed   0
+terms    before      6  after      6  removed   0  added   0  changed   0
+options  before    200  after    200  removed   0  added   0  changed   0
+CONTENT UNCHANGED
+== 5. crawl after + checks
+63 urls; non-200: {}; php errors in page: []
+-- owner edits visible
+   OK  نحسّن ظهور موقعك في محركات البحث  (http://127.0.0.1:8090/)
+   OK  فريق بخبرات متنوعة يعمل معك لجذب العملاء وزيادة مبيعاتك.  (http://127.0.0.1:8090/)
+   OK  [EDIT-ROW]  (http://127.0.0.1:8090/)
+   OK  [EDIT-HOME-SERVICES]  (http://127.0.0.1:8090/)
+   OK  [EDIT-TEAM]  (http://127.0.0.1:8090/team/)
+   OK  [EDIT-FIT]  (http://127.0.0.1:8090/services/web-design/custom-dev/)
+   OK  [EDIT-WOO]  (http://127.0.0.1:8090/services/stores/woocommerce/)
+   OK  [EDIT-LEGAL]  (http://127.0.0.1:8090/sectors/legal/)
+   OK  [EDIT-BACKLINKS]  (http://127.0.0.1:8090/services/seo/backlinks/)
+-- deleted team member (mona-ali / منى علي)
+   own page among published URLs: none
+   pages showing the name — before upgrade: 0, after: 0 []
+-- status per URL
+   62 URLs answer 200; 404 page: [404]
+   PHP warnings/errors printed in pages: none
+-- text that was on a page before and is missing after (content must not disappear)
+   http://127.0.0.1:8090/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/about/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/pricing/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/results/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/sectors/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/sectors/ecommerce/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/sectors/education/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/sectors/food/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/sectors/health/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/sectors/legal/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/sectors/real-estate/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/sectors/tech/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/sectors/tourism/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/products/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/seo/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/seo/backlinks/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/seo/consulting/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/seo/content/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/seo/egypt/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/seo/ksa/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/seo/on-page/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/seo/technical/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/seo/uae/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/stores/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/stores/salla/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/stores/shopify/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/stores/woocommerce/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/stores/zid/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/web-design/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/web-design/custom-dev/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/web-design/react-next/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/web-design/webflow/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/services/web-design/wordpress/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/adham-hesham/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/ahmed-sanad/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/eman-farid/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/esraa-kamal/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/esraa-mohamed/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/heba-geneedy/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/maha-ali/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/mariam-hesham/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/mennatallah-said/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/mohamed-hassan/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/mohamed-moawad/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/morad-salah/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/mustafa-mahmoud/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/nada-mahmoud/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/noha-elmahdy/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/seif-sanad/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   http://127.0.0.1:8090/team/yasser-youssef/  lost 2:
+      - الجوال أو البريد الإلكتروني
+      - متابعة لاختيار الموعد
+   total lines lost: 106
+RESULT: PASS
+== 6. PHP log after the update (ACF 6.3.12's own textdomain notice on WP 7.1 filtered; counted below)
+ACF textdomain notices (not from SEO House): 76
+(end of log)

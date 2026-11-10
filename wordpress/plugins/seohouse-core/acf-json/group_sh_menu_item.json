@@ -1,0 +1,65 @@
+{
+  "key": "group_sh_menu_item",
+  "title": "خيارات عنصر القائمة",
+  "fields": [
+    {
+      "key": "field_sh_menu_icon",
+      "label": "أيقونة (الميجا مينيو)",
+      "name": "sh_menu_icon",
+      "type": "select",
+      "instructions": "",
+      "required": 0,
+      "choices": {
+        "": "بدون",
+        "search": "بحث",
+        "window": "موقع",
+        "bag": "متجر",
+        "upload": "رفع"
+      },
+      "allow_null": 1,
+      "return_format": "value"
+    },
+    {
+      "key": "field_sh_menu_all_label",
+      "label": "نص رابط «الكل» أسفل اللوحة",
+      "name": "sh_menu_all_label",
+      "type": "text",
+      "instructions": "للعناصر التي لها قائمة فرعية؛ يشير إلى رابط العنصر نفسه.",
+      "required": 0
+    },
+    {
+      "key": "field_sh_menu_layout",
+      "label": "شكل اللوحة",
+      "name": "sh_menu_layout",
+      "type": "select",
+      "instructions": "",
+      "required": 0,
+      "choices": {
+        "": "تلقائي",
+        "list": "قائمة بعمود واحد",
+        "grid2": "عمودان"
+      },
+      "allow_null": 1,
+      "return_format": "value"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "nav_menu_item",
+        "operator": "==",
+        "value": "all"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1790000000
+}

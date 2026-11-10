@@ -1,0 +1,18 @@
+ok       الاسم | printed: سيو هاوس | settings: سيو هاوس
+ok       الاسم اللاتيني | printed: SEO House | settings: SEO House
+ok       الرابط | printed: http://127.0.0.1:8090/ | settings: http://127.0.0.1:8090/
+ok       الشعار | printed: http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp | settings: http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp
+ok       الوصف | printed: سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017. | settings: سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.
+ok       سنة التأسيس | printed: 2017 | settings: 2017
+ok       الهاتف | printed: +201050861791 | settings: +201050861791
+ok       البريد | printed: info@seohouse.agency | settings: info@seohouse.agency
+ok       العنوان | printed: 234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر | settings: 234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر
+ok       الأسواق | printed: السعودية، مصر، الإمارات | settings: السعودية، مصر، الإمارات
+ok       الحسابات الرسمية | printed: https://www.facebook.com/seohouse.agency | settings: https://www.facebook.com/seohouse.agency
+review   الشعار 290x68 بكسل؛ Google يطلب 112x112 على الأقل. ارفع «الشعار على الخلفية الفاتحة» بمقاس أكبر (أو اضبط شعار Rank Math).
+review   المقال «هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة» مرتبط بعضو فريق محذوف أو غير منشور (#50): لا يُطبع له مؤلف، ويظهر «بقلم» بلا اسم. اختر كاتبًا منشورًا في حقل «الكاتب» أو أفرغه.
+review   دراسة الحالة «قطاع التعليم والتدريب» بلا صورة بارزة ولا لقطة موثقة: لا يُطبع image.
+review   دراسة الحالة «قطاع الصحة والطب» بلا صورة بارزة ولا لقطة موثقة: لا يُطبع image.
+review   دراسة الحالة «قطاع التجارة الإلكترونية» بلا صورة بارزة ولا لقطة موثقة: لا يُطبع image.
+review   صفحة «السيو في السعودية»: «اسم الخدمة في Schema» فارغ، فلا يُطبع serviceType.
+Success: 0 conflict(s), 6 case(s) to review, 0 page(s) with ratings

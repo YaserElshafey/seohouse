@@ -1,0 +1,210 @@
+{
+  "date": "2026-10-03T23:37:00.337Z",
+  "results": [
+    {
+      "name": "before: theme folder holds old-theme leftovers (front-page.php.old, archive-sector.php, …)",
+      "ok": true,
+      "detail": "389 files"
+    },
+    {
+      "name": "before: home answers (front-page.php renamed on the server)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "before: privacy published, robots index; terms published with [..] fields, robots noindex",
+      "ok": true,
+      "detail": "{\"privacy-policy\":\"index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large\",\"terms\":\"follow, noindex\"}"
+    },
+    {
+      "name": "upload seohouse-theme.zip: «استبدال الحالي بالمرفوع» offered (2.5.0 → 2.6.0)",
+      "ok": true,
+      "detail": "منصّبالمرفوعاسم القالبSEO HouseSEO Houseالنسخة2.5.02.6.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5نسخة PHP المطلوبة8.18.1"
+    },
+    {
+      "name": "theme replaced",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "theme folder after the upload = exactly the release files (old front-page.php.old, archive-sector.php, … gone)",
+      "ok": true,
+      "detail": "357 files, extra: "
+    },
+    {
+      "name": "home answers after the theme upload",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "upload seohouse-core.zip: «استبدال الحالي بالمرفوع» offered (2.5.0 → 2.6.0)",
+      "ok": true,
+      "detail": "الحاليةالمرفوعةاسم الإضافةSEO House CoreSEO House Coreالنسخة2.5.02.6.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5نسخة PHP المطلوبة8.1"
+    },
+    {
+      "name": "plugin replaced",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "SEO House Core 2.6.0 active",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no «ملفات قديمة» notice after the upload",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "preview: no failures",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "update run: no failures",
+      "ok": true,
+      "detail": "اكتملت التهيئة.أُنشئ: 0 حُدّث: 0 بلا تغيير: 74 محمي: 0 فشل: 0"
+    },
+    {
+      "name": "the update did not write the legal pages",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "post-update checks flag exactly: legal pages published without approved text, and the missing redirect of the old site",
+      "ok": true,
+      "detail": "الصفحات القانونية: سياسة الخصوصية: منشورة — بلا نص (فارغة أو نص مؤقت بين معقوفين)، الشروط والأحكام: منشورة — فيها مسودة 2.5.0 غير المعتمدة — انظر «سياسة الخصوصية والشروط والأحكام» أسفل هذه الصفحة ; تحويلات روابط الموقع السابق: ناقصة: /services/seo/stores-seo/ — انظر «تحويلات الموقع السابق» أسفل هذه الصفحة"
+    },
+    {
+      "name": "before: /services/seo/stores-seo/ answers 404 (the old site redirected it 301)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terms unchanged by the update (still the 2.5.0 draft until approved here)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "box: privacy (published, empty) → automatic, button offered; notes the other page the setup created",
+      "ok": true,
+      "detail": "سياسة الخصوصية/privacy-policy/ — #1488 — منشورة — indexبلا نص (فارغة أو نص مؤقت بين معقوفين)للعلم: صفحة أخرى أنشأتها التهيئة (#3، draft) ليست الصفحة التي تظهر على هذا الرابط.النص الذي سيُطبَّقنحن في س"
+    },
+    {
+      "name": "box: terms (2.5.0 draft) → automatic",
+      "ok": true,
+      "detail": "الشروط والأحكام/terms/ — #17 — منشورة — noindexفيها مسودة 2.5.0 غير المعتمدةالنص الذي سيُطبَّقمرحبًا بك في موقع سيو هاوس. إن استخدامك لهذا الموقع أو تصفحك له أو"
+    },
+    {
+      "name": "apply privacy-policy: approved text written, copy kept, page stays published",
+      "ok": true,
+      "detail": "طُبّق النص المعتمد على «سياسة الخصوصية» (الصفحة #1488، منشورة). حُفظت نسخة من قيمها السابقة: wp-content/uploads/seohouse-backups/privacy-policy-before-legal-text-20261003-233651-bEmKil.json"
+    },
+    {
+      "name": "apply terms: approved text written, copy kept, page stays published",
+      "ok": true,
+      "detail": "طُبّق النص المعتمد على «الشروط والأحكام» (الصفحة #17، منشورة). حُفظت نسخة من قيمها السابقة: wp-content/uploads/seohouse-backups/terms-before-legal-text-20261003-233652-DMA67v.json"
+    },
+    {
+      "name": "«تحويلات الموقع السابق» lists /services/seo/stores-seo/ → /sectors/ecommerce/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "redirect added; existing ones kept",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "/services/seo/stores-seo/ → 301 /sectors/ecommerce/ again",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "after applying: all checks «سليم» (legal pages carry the approved text)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "/privacy-policy/: 200, H1, every approved heading, first paragraph, «آخر تحديث: 30 مايو 2026»",
+      "ok": true,
+      "detail": "6 headings"
+    },
+    {
+      "name": "/privacy-policy/: nothing in square brackets, no placeholder",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "/privacy-policy/: contents list = section headings, each link has its target",
+      "ok": true,
+      "detail": "p2 p3 p4 p5 p6 p7"
+    },
+    {
+      "name": "/privacy-policy/: robots as before (index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large), canonical this address",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "privacy-policy: still published; copy of previous values in _sh_pre_legal_text",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "/terms/: 200, H1, every approved heading, first paragraph, «آخر تحديث: 30 مايو 2026»",
+      "ok": true,
+      "detail": "10 headings"
+    },
+    {
+      "name": "/terms/: nothing in square brackets, no placeholder",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "/terms/: contents list = section headings, each link has its target",
+      "ok": true,
+      "detail": "t2 t3 t4 t5 t6 t7 t8 t9 t10 t11"
+    },
+    {
+      "name": "/terms/: robots as before (follow, noindex), canonical this address (Rank Math prints none for noindex)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terms: still published; copy of previous values in _sh_pre_legal_text",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "editor: «الأقسام» list with a title and a text box per section, «تاريخ آخر تحديث» field",
+      "ok": true,
+      "detail": "7 rows"
+    },
+    {
+      "name": "after an editor change: terms → «عُدّل يدويًا», no button",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI apply refuses the edited page",
+      "ok": true,
+      "detail": "privacy-policy  pack       #1488 publish index — فيها النص المعتمد\nterms           manual     #17 publish noindex — فيها نص كتبه شخص (عُدّل يدويًا) — لا يُكتب ف"
+    },
+    {
+      "name": "editor paragraph still on the page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no PHP errors from the theme or Core during the update",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no JavaScript errors",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

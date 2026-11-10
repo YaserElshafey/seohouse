@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-03T14:49:25.064Z",
+  "stamp": "musicjy4",
+  "passed": 6,
+  "failed": 0,
+  "results": [
+    {
+      "name": "booking: validation message without data",
+      "ok": true,
+      "detail": "اكتب اسمك."
+    },
+    {
+      "name": "booking: submitted, step 2 shown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "contact: validation message without data",
+      "ok": true,
+      "detail": "أدخل الاسم واسم الشركة للمتابعة."
+    },
+    {
+      "name": "contact: submitted, confirmation shown",
+      "ok": true,
+      "detail": "السوق: السعودية · الخدمة: تصميم وتطوير موقع"
+    },
+    {
+      "name": "honeypot: request rejected",
+      "ok": true,
+      "detail": "422 spam"
+    },
+    {
+      "name": "no JavaScript errors",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

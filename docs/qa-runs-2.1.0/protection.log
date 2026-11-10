@@ -1,0 +1,14 @@
+== update run with untouched menus
+== editor renamed an item in menu 5; full update run (bare --update)
+protected  page:home — عُدّل من لوحة التحكم بعد التجهيز؛ لم يُكتب فوقه. (--force للكتابة)
+protected  page:seo-technical — عُدّل من لوحة التحكم بعد التجهيز؛ لم يُكتب فوقه. (--force للكتابة)
+protected  case:education-platform — عُدّل من لوحة التحكم بعد التجهيز؛ لم يُكتب فوقه. (--force للكتابة)
+protected  menu:footer — عُدّلت القائمة من لوحة التحكم؛ لم يُكتب فوقها. (--force للكتابة)
+protected  options — عُدّلت الإعدادات من لوحة التحكم؛ لم يُكتب فوقها. (--force للكتابة)
+created    0
+updated    0
+skipped    136
+protected  5
+failed     0
+menu edit kept: 1
+list items before/after: 1298 / 1298

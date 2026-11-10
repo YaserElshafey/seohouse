@@ -1,0 +1,247 @@
+{
+ "id": 63,
+ "key": "seo-technical",
+ "title": "Technical SEO",
+ "slug": "technical",
+ "parent": 65,
+ "path": "/services/seo/technical/",
+ "template": "page-templates/seo-technical.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "Technical SEO Services: Audits & Site Speed | SEO House",
+  "sh_seo_description": "Technical SEO services: we audit crawling, indexing, site speed, architecture and structured data, rank issues by impact, then fix them and track results.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Technical SEO and website audits",
+  "sh_crumb": "",
+  "rank_math_title": "Technical SEO Services: Audits & Site Speed | SEO House",
+  "rank_math_description": "Technical SEO services: we audit crawling, indexing, site speed, architecture and structured data, rank issues by impact, then fix them and track results.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "technical seo services"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Technical SEO",
+   "title": "Technical SEO for Your Website",
+   "text": "We audit crawling, indexing, rendering, speed and page structure, pinpoint what's holding back your visibility, then implement the fixes and track their impact in your site data.",
+   "link_label": "Book a consultation",
+   "link_label_2": "What we fix",
+   "label": "How search engines move through your site",
+   "items": [
+    {
+     "text": "Crawling",
+     "label": "The crawler reaches accessible pages"
+    },
+    {
+     "text": "Indexing",
+     "label": "The page is read and added to the index"
+    },
+    {
+     "text": "Rendering",
+     "label": "JavaScript runs and the content appears"
+    },
+    {
+     "text": "Measurement",
+     "label": "Impressions and clicks are recorded in Search Console"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "issues",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "What we fix",
+   "title": "We rank issues by impact, not by count",
+   "text": "A long report isn't useful on its own. We classify what's keeping your pages out of search, then start with what actually changes the outcome.",
+   "items": [
+    {
+     "heading": "Pages blocked from indexing",
+     "text": "noindex tags or robots rules keeping important pages out of search.",
+     "eyebrow": "Critical",
+     "variant": "v1"
+    },
+    {
+     "heading": "Canonical conflicts",
+     "text": "Contradictory signals that lead search engines to pick the wrong page.",
+     "eyebrow": "Critical",
+     "variant": "v1"
+    },
+    {
+     "heading": "Redirect chains",
+     "text": "Chained redirects that waste crawl budget and slow down access.",
+     "eyebrow": "High",
+     "variant": "v2"
+    },
+    {
+     "heading": "JavaScript-dependent content",
+     "text": "Content missing from the initial render, so it isn't read reliably.",
+     "eyebrow": "High",
+     "variant": "v2"
+    },
+    {
+     "heading": "<bdi>Core Web Vitals</bdi>",
+     "text": "Slow loading and layout shifts hurt the user experience and how pages are assessed.",
+     "eyebrow": "Medium",
+     "variant": "v3"
+    },
+    {
+     "heading": "Sitemaps and structured data",
+     "text": "Outdated sitemaps and missing or invalid structured data.",
+     "eyebrow": "Medium",
+     "variant": "v3"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "scope",
+   "sh_hide": 0,
+   "eyebrow": "Audit scope",
+   "title": "Full technical coverage of your site",
+   "items": [
+    {
+     "icon": "icf00f088",
+     "heading": "Crawling & indexing",
+     "label": "robots, sitemap, crawl budget, orphan pages"
+    },
+    {
+     "icon": "id44a3ad9",
+     "heading": "Architecture & links",
+     "label": "Hierarchy, internal links, page depth, redirects"
+    },
+    {
+     "icon": "i6a5629ce",
+     "heading": "Speed & experience",
+     "label": "Core Web Vitals, images, scripts, loading"
+    },
+    {
+     "icon": "i0e5f52f7",
+     "heading": "Canonicals & duplication",
+     "label": "Near-duplicate pages, URL parameters, canonical selection"
+    },
+    {
+     "icon": "i4ee136cb",
+     "heading": "JavaScript SEO",
+     "label": "Rendering, deferred content, client-side routing"
+    },
+    {
+     "icon": "iebf47bcd",
+     "heading": "Structured data",
+     "label": "The right schema for each page, plus validation"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "levels",
+   "sh_hide": 0,
+   "eyebrow": "Three levels",
+   "title": "Audit, implementation and monitoring",
+   "text": "Choose what suits your team: an audit we hand over, implementation we carry out, or ongoing monitoring after implementation.",
+   "items": [
+    {
+     "heading": "Technical audit",
+     "text": "A full site audit and an actionable priority report.",
+     "eyebrow": "Prioritized issue log + impact explained"
+    },
+    {
+     "heading": "Implementation",
+     "text": "We apply the fixes in your platform and work with your developer when needed.",
+     "eyebrow": "Implementation log + re-audit"
+    },
+    {
+     "heading": "Monitoring",
+     "text": "Monthly monitoring of indexing and performance, and fixes for whatever comes up.",
+     "eyebrow": "Monthly report + alerts"
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "tools",
+   "sh_hide": 0,
+   "eyebrow": "Data sources",
+   "title": "Where does the data come from?",
+   "text": "We run the site crawl with Screaming Frog, take indexing status and visibility from Search Console, and measure the impact of changes on traffic in Google Analytics.",
+   "heading": "Screaming Frog",
+   "label": "Page crawling, broken links, redirects, duplicate tags.",
+   "items": [
+    {
+     "logo": "assets/platforms/official/gsc.svg",
+     "logo_image": null,
+     "heading": "Search Console",
+     "label": "Indexing status, impressions and clicks, and crawl errors straight from Google."
+    },
+    {
+     "logo": "assets/platforms/official/ga4.svg",
+     "logo_image": null,
+     "heading": "Google Analytics",
+     "label": "Organic traffic and conversions before and after each change."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Full SEO service",
+     "link": 65
+    },
+    {
+     "label": "On-page SEO",
+     "link": 61
+    },
+    {
+     "label": "Consulting & performance analysis",
+     "link": 51
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Technical SEO FAQs",
+   "items": [
+    {
+     "question": "What's the difference between a technical SEO audit and implementation?",
+     "answer": "The audit uncovers issues and ranks them by impact; implementation means applying the fixes on your site. You can request either one, or both."
+    },
+    {
+     "question": "Do you need access to our website?",
+     "answer": "We need read access to Search Console and GA4, plus edit access to your platform if implementation is part of the scope."
+    },
+    {
+     "question": "Can technical SEO alone improve rankings?",
+     "answer": "It removes what's keeping your pages out of search and improves the user experience, but competing for search terms also takes content and authority."
+    },
+    {
+     "question": "How long does a technical SEO audit take?",
+     "answer": "It depends on the size of the site, the number of pages and how complex its structure is. We set the timeline after an initial review of the site."
+    },
+    {
+     "question": "Do you work with JavaScript websites?",
+     "answer": "Yes. We check how your pages render and identify the content that search engines can't reliably reach."
+    },
+    {
+     "question": "Does the service include fixing site speed?",
+     "answer": "We handle images, scripts and loading within your platform, and anything that requires changes to the site's architecture we implement together with your developer."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "seo",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

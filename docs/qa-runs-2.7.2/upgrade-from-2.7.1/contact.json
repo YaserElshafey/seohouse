@@ -1,0 +1,19 @@
+[
+ {
+  "scenario": "contact",
+  "requests": 1,
+  "responses": [
+   {
+    "status": 200,
+    "body": {
+     "ok": true,
+     "code": "stored",
+     "message": "وصلنا طلبك.",
+     "ref": "24d2d4dca35f587251dfff5d"
+    }
+   }
+  ],
+  "successShown": true,
+  "error": ""
+ }
+]

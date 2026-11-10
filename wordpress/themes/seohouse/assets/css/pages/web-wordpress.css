@@ -1,0 +1,14 @@
+/* SEO House - WordPress.dc.html — page-specific rules from the approved design (generated). */
+[data-wp-canvas] { grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr); }
+@media (max-width:859px) { [data-wp-canvas] { grid-template-columns:1fr; } }
+[data-wp-row] { grid-template-columns:repeat(3,minmax(0,1fr)); }
+[data-bk-grid] { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); }
+[data-bk-row] { grid-template-columns:1fr 1fr; }
+@media (max-width:899px) { [data-bk-grid] { grid-template-columns:1fr; } }
+@media (max-width:559px) { [data-bk-row] { grid-template-columns:1fr; } }
+[data-screen-label="Hero"] { position:relative; overflow:hidden; }
+[data-hero-grid] ~ *:not([aria-hidden="true"]) { position:relative; }
+[data-sec-head][data-center] { text-align:center; margin-inline:auto; }
+[data-sec-head][data-center] > div:first-child { justify-content:center; }
+p[data-center] { margin-inline:auto !important; text-align:center; }
+@media (max-width:859px) { [data-pts] { grid-template-columns:1fr !important; } }

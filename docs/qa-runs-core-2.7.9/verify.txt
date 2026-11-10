@@ -1,0 +1,12 @@
+sitemap_index.xml 200 text/xml; charset=UTF-8 | ['post-sitemap.xml', 'page-sitemap.xml', 'case_study-sitemap.xml', 'team_member-sitemap.xml', 'category-sitemap.xml']
+/team_member-sitemap.xml   200 text/xml  valid_xml=True urls=17 in_index=True
+   every listed URL: 200, self-canonical, indexable → yes
+/?sitemap=team_member      200 text/xml  valid_xml=True urls=17 in_index=True
+/case_study-sitemap.xml    200 text/xml  valid_xml=True urls=3 in_index=True
+   every listed URL: 200, self-canonical, indexable → yes
+/?sitemap=case_study       200 text/xml  valid_xml=True urls=3 in_index=True
+/page-sitemap.xml          200 text/xml  valid_xml=True urls=38 in_index=True
+/?sitemap=page             200 text/xml  valid_xml=True urls=38 in_index=True
+/post-sitemap.xml          200 text/xml  valid_xml=True urls=2 in_index=True
+/?sitemap=post             200 text/xml  valid_xml=True urls=2 in_index=True
+RESULT PASS

@@ -1,0 +1,32 @@
+== WordPress 7.1.2, plugins before: 0
+Success: Installed 1 of 1 plugins.
+Success: Installed 1 of 1 plugins.
+Success: Installed 1 of 1 themes.
+name	version
+advanced-custom-fields	6.8.10
+seohouse-core	2.1.0
+== dry run
+created    81
+updated    5
+skipped    0
+protected  0
+failed     0
+Success: اكتمل التجهيز.
+pages after dry run (WordPress defaults only): 2
+== import
+created    107
+updated    5
+skipped    0
+protected  0
+failed     0
+Success: اكتمل التجهيز.
+== verify
+Success: القيم مطابقة للتصميم.
+== re-run
+created    0
+updated    0
+skipped    74
+protected  0
+failed     0
+Success: اكتمل التجهيز.
+records: pages 40, posts 4, cases 5, team 18, list items 1296, media 35

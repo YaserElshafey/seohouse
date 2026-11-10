@@ -1,0 +1,200 @@
+{
+ "id": 39,
+ "key": "sector-legal",
+ "title": "Legal & Consulting",
+ "slug": "legal",
+ "parent": 47,
+ "path": "/sectors/legal/",
+ "template": "page-templates/sector-legal.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "SEO for Law Firms & Legal Marketing | SEO House",
+  "sh_seo_description": "SEO for law firms, built on clear practice area pages and trust signals. We took one law firm to the #1 position for the Arabic search “law firm”.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Search engine optimization for the legal sector",
+  "sh_crumb": "Legal & consulting",
+  "rank_math_title": "SEO for Law Firms & Legal Marketing | SEO House",
+  "rank_math_description": "SEO for law firms, built on clear practice area pages and trust signals. We took one law firm to the #1 position for the Arabic search “law firm”.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo for law firms"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Legal & consulting",
+   "title": "SEO for law firms",
+   "text": "Someone looking for a lawyer needs to know which areas of law the firm handles, whether it has the right experience for their matter, and how to get in touch clearly and confidentially. We build pages for your actual practice areas, present your team and their credentials as the firm approves them, and organize articles around clients' questions, without turning them into promises of outcomes or one-size-fits-all legal advice.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "What we build",
+   "eyebrow_2": "The client's search path",
+   "label": "Illustrative example",
+   "label_2": "Employment lawyer",
+   "items": [
+    {
+     "icon": "ifac340b5",
+     "heading": "The legal issue",
+     "label": "The client's question, in their own words"
+    },
+    {
+     "icon": "i715283b5",
+     "heading": "Practice area",
+     "label": "The service and what it covers"
+    },
+    {
+     "icon": "i4968b528",
+     "heading": "Expertise & answers",
+     "label": "Credentials and what to expect"
+    }
+   ],
+   "label_3": "The action we measure",
+   "heading": "Consultation request"
+  },
+  {
+   "acf_fc_layout": "sector_journey",
+   "sh_hide": 0,
+   "eyebrow": "Illustrative example: a law firm",
+   "title": "From legal question to consultation",
+   "eyebrow_2": "1",
+   "heading": "The question",
+   "label": "Trademark registration procedure",
+   "label_2": "A clear answer on the procedure, documents and expected timeline.",
+   "eyebrow_3": "2",
+   "heading_2": "Service & expertise",
+   "eyebrow_4": "Intellectual property",
+   "items": [
+    {
+     "label": "Specialization"
+    },
+    {
+     "label": "License and regulatory body"
+    },
+    {
+     "label": "What the service covers"
+    }
+   ],
+   "eyebrow_5": "3",
+   "heading_3": "Consultation request",
+   "items_2": [
+    {
+     "label": "Type of matter"
+    },
+    {
+     "label": "Preferred contact method"
+    }
+   ],
+   "label_3": "Your details are used only to contact you about your request.",
+   "eyebrow_6": "Request a consultation"
+  },
+  {
+   "acf_fc_layout": "practice",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Practice areas before articles",
+   "title": "A service page answers a different question than an article",
+   "eyebrow": "Article",
+   "eyebrow_2": "Service page",
+   "items": [
+    {
+     "eyebrow": "The question",
+     "items": [
+      {
+       "text": "“What are the requirements to set up a company?”"
+      },
+      {
+       "text": "“I need a firm to set up my company”"
+      }
+     ]
+    },
+    {
+     "eyebrow": "The page's role",
+     "items": [
+      {
+       "text": "Explains the concept and its limits"
+      },
+      {
+       "text": "Sets out the help offered and who it's for"
+      }
+     ]
+    },
+    {
+     "eyebrow": "Next step",
+     "items": [
+      {
+       "text": "Link to the related service"
+      },
+      {
+       "text": "Consultation request"
+      }
+     ]
+    }
+   ],
+   "text": "An article explains a concept and its limits, while a service page sets out the help the firm provides, who it's for, and how to request a consultation. We organize practice areas around your real services and link them to the related explainers, without duplicating text or implying that a general article can replace legal advice."
+  },
+  {
+   "acf_fc_layout": "expertise",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Firm and attorney expertise",
+   "title": "Show your people's expertise accurately",
+   "text": "When the decision to get in touch rests on trust, visitors need to know who will handle their matter, what experience they have and what they practice. We use the bios, credentials and memberships the firm approves, and link them to the relevant services and articles.",
+   "heading": "Differences by jurisdiction",
+   "text_2": "Any explanation of a law or procedure should name the country it applies to and be reviewed by a legal professional. Facts and laws vary, and no single promised outcome fits every case."
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "SEO services",
+     "link": 65
+    },
+    {
+     "label": "SEO content",
+     "link": 53
+    },
+    {
+     "label": "All industries",
+     "link": 47
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Questions about SEO for law firms",
+   "items": [
+    {
+     "question": "When should a topic be a service page, and when an article?",
+     "answer": "If the searcher wants someone to help with the matter, it's a service page. If they want to understand it first, it's an article that leads to the related service."
+    },
+    {
+     "question": "How can a law firm show a lawyer's expertise without exaggerating?",
+     "answer": "Through bios, credentials, memberships and practice areas as the firm approves them, with no success rates or unverified results."
+    },
+    {
+     "question": "Does a law firm need a page for every city?",
+     "answer": "Only for cities where the firm actually practices and where people search, with content specific to the procedures or authorities there."
+    },
+    {
+     "question": "How do you measure results?",
+     "answer": "By the qualified inquiries and calls that come from service pages, tracked separately from visits to general articles."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "Tell us about your firm's website and the practice areas that matter to you. We'll review your service pages before the call and suggest where the consultation request should sit on each one, and how we'll track the requests it brings in.",
+   "points": []
+  }
+ ]
+}

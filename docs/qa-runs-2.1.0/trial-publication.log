@@ -1,0 +1,19 @@
+== trial publication on the TEST copy (8093) — not an approval
+Success: Updated post 3.
+Success: Updated post 16.
+Success: Updated post 70.
+Success: Updated post 71.
+Success: Updated post 72.
+Success: كل الروابط المنشورة (53) تعمل.
+crawl during trial {'urls': 67, 'ok200': 66, 'redirects': 1, 'notFound': 0, 'internalLinks': 2188, 'sitemapEntries': 64, 'assets': 117, 'assetErrors': 0, 'brokenLinks': 0, 'sitemapProblems': 0, 'indexableNotInSitemap': 0, 'draftsLinkedOrListed': 0}
+== reverted to draft
+Success: Updated post 3.
+Success: Updated post 16.
+Success: Updated post 70.
+Success: Updated post 71.
+Success: Updated post 72.
+/privacy-policy/ 404
+/terms/ 404
+/blog/fix-404-not-found/ 404
+/blog/how-to-build-backlinks-correctly/ 404
+/blog/why-is-my-website-not-showing-in-search-engines/ 404

@@ -1,0 +1,147 @@
+{
+ "id": 19,
+ "key": "about",
+ "title": "About Us",
+ "slug": "about",
+ "parent": 0,
+ "path": "/about/",
+ "template": "page-templates/about.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "About Us – SEO & Web Design Agency Since 2017 | SEO House",
+  "sh_seo_description": "SEO House was founded in 2017 to deliver measurable work: on-site implementation, not just advice, and verifiable results. Serving KSA, Egypt and the UAE.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "about",
+  "sh_schema_service": "",
+  "sh_crumb": "",
+  "rank_math_title": "About Us – SEO & Web Design Agency Since 2017 | SEO House",
+  "rank_math_description": "SEO House was founded in 2017 to deliver measurable work: on-site implementation, not just advice, and verifiable results. Serving KSA, Egypt and the UAE.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo agency"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Our story",
+   "title": "About SEO House",
+   "text": "Since 2017, we've helped companies improve their search visibility with a clear plan and results we review together.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "Our principles"
+  },
+  {
+   "acf_fc_layout": "now",
+   "sh_hide": 0,
+   "eyebrow": "Today",
+   "title": "Meet our team",
+   "text": "SEO doesn't work in isolation. Our team brings together search, content, development and performance analysis, so work moves from recommendation to implementation on the site itself.",
+   "link": 79,
+   "link_label": "Meet the team",
+   "items": [
+    {
+     "eyebrow": "2017",
+     "text": "The beginning: a company specializing in search engine optimization."
+    },
+    {
+     "eyebrow": "Today",
+     "text": "SEO is our core specialty, alongside website and online store design and development, and product uploading, each offered as a standalone service."
+    },
+    {
+     "eyebrow": "Markets",
+     "text": "We serve companies in Saudi Arabia, Egypt and the UAE, and we work with Saudi and Emirati companies remotely."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "principles",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Principles",
+   "title": "Four principles that guide every project",
+   "items": [
+    {
+     "heading": "We start with data, not a ready-made checklist",
+     "text": "We study the site's current state and how its customers search before we propose any work.",
+     "variant": "v1"
+    },
+    {
+     "heading": "We implement, not just recommend",
+     "text": "A recommendation that isn't implemented doesn't change results. We implement on the site or work alongside your team.",
+     "variant": "v1"
+    },
+    {
+     "heading": "We measure what matters to the business",
+     "text": "Traffic is an intermediate metric. What we track is inquiries, orders and revenue.",
+     "variant": "v2"
+    },
+    {
+     "heading": "We tell you what we can't do",
+     "text": "If a goal is unrealistic or the timeline isn't enough, we say so before we agree, not after.",
+     "variant": "v2"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "nopromise",
+   "sh_hide": 0,
+   "eyebrow": "What we don't promise",
+   "title": "Clear boundaries before we start",
+   "items": [
+    {
+     "label": "We don't promise a specific position in search results or a guaranteed timeframe."
+    },
+    {
+     "label": "We don't show any result we can't prove from the client's account."
+    },
+    {
+     "label": "We don't publish a client's name or data without their consent."
+    },
+    {
+     "label": "We don't use link sources or tactics that violate search engine guidelines."
+    }
+   ],
+   "heading": "How we present results",
+   "text": "We show every result with its source and time period exactly as they appear in the client's account, and we name the client only with their consent.",
+   "link": 29,
+   "link_label": "View results"
+  },
+  {
+   "acf_fc_layout": "client_logos",
+   "sh_hide": 0,
+   "text": "Companies that trust us"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Team",
+     "link": 79
+    },
+    {
+     "label": "Results",
+     "link": 29
+    },
+    {
+     "label": "All services",
+     "link": 67
+    },
+    {
+     "label": "Contact us",
+     "link": 21
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

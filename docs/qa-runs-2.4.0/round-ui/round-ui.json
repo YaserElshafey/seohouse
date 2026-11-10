@@ -1,0 +1,241 @@
+{
+  "date": "2026-10-03T14:46:17.054Z",
+  "wp": "http://127.0.0.1:8097/new",
+  "results": [
+    {
+      "name": "0 upload seohouse-theme.zip: WordPress offers to replace the installed theme",
+      "ok": true,
+      "detail": "منصّبالمرفوعاسم القالبSEO HouseSEO Houseالنسخة2.3.02.4.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5نسخة PHP المطل"
+    },
+    {
+      "name": "0 theme replaced",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "0 upload seohouse-core.zip: WordPress offers to replace the installed plugin",
+      "ok": true,
+      "detail": "الحاليةالمرفوعةاسم الإضافةSEO House CoreSEO House Coreالنسخة2.3.02.4.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5"
+    },
+    {
+      "name": "0 plugin replaced",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "0 SEO House Core 2.4.0 active",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "D1 «نقل المقالات»: main site detected with its published count",
+      "ok": true,
+      "detail": "الموقع الأساسيRank Math مفعّلة لكنها متوقفة: لم تكتمل خطوة الحساب في معالج"
+    },
+    {
+      "name": "D2 preview writes nothing and lists the four articles",
+      "ok": true,
+      "detail": "جديد: 0 — استبدال مسودة: 4 — تحديث: 0 — بلا تغيير: 0 — محمي: 0 — فشل: 0infosource4 مقالًا منشورًا"
+    },
+    {
+      "name": "D3 run completes without failures",
+      "ok": true,
+      "detail": "جديد: 6 — استبدال مسودة: 4 — تحديث: 0 — بلا تغيير: 0 — محمي: 0 — فشل: 0infosource4 مقالًا منشورًا"
+    },
+    {
+      "name": "D4 /blog/why-is-my-website-not-showing-in-search-engines/ answers 200 on /new/",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "D4 /blog/how-to-build-backlinks-correctly/ answers 200 on /new/",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "D4 /blog/fix-404-not-found/ answers 200 on /new/",
+      "ok": true,
+      "detail": "200"
+    },
+    {
+      "name": "D4 article byline: the author of the main site (not a generic team name)",
+      "ok": true,
+      "detail": "بقلم Yasser Youssef"
+    },
+    {
+      "name": "D5 second run: nothing created or replaced",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A1 notice: Rank Math installed but waiting for its registration step",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A2 meanwhile Core outputs title, description and schema (not an empty head)",
+      "ok": true,
+      "detail": "<title>شركة سيو في مصر لتحسين ظهور موقعك | سيو هاوس"
+    },
+    {
+      "name": "A3 «تشغيل بدون حساب» → Rank Math running, box shown for all four types",
+      "ok": true,
+      "detail": "الصفحاتظاهرالمقالاتظاهردراسات الحالةظاهرفريق العملظاهرمع تفعيل Rank Math يُحرَّر عنوان "
+    },
+    {
+      "name": "A4 page: Rank Math box in the edit screen",
+      "ok": true,
+      "detail": "classic editor box"
+    },
+    {
+      "name": "A5 page: title and description saved in Rank Math and shown on the page",
+      "ok": true,
+      "detail": "عنوان اختبار page musi6nrr | وصف اختبار Rank Math لنوع page — musi6nrr"
+    },
+    {
+      "name": "A5 page: one title, one description, at most one canonical, one JSON-LD",
+      "ok": true,
+      "detail": "canonical: Rank Math leaves it out while the review copy is noindex"
+    },
+    {
+      "name": "A4 post: Rank Math box in the edit screen",
+      "ok": true,
+      "detail": "block editor sidebar"
+    },
+    {
+      "name": "A5 post: title and description saved in Rank Math and shown on the page",
+      "ok": true,
+      "detail": "عنوان اختبار post musi6nrr | وصف اختبار Rank Math لنوع post — musi6nrr"
+    },
+    {
+      "name": "A5 post: one title, one description, at most one canonical, one JSON-LD",
+      "ok": true,
+      "detail": "canonical: Rank Math leaves it out while the review copy is noindex"
+    },
+    {
+      "name": "A4 case_study: Rank Math box in the edit screen",
+      "ok": true,
+      "detail": "classic editor box"
+    },
+    {
+      "name": "A5 case_study: title and description saved in Rank Math and shown on the page",
+      "ok": true,
+      "detail": "عنوان اختبار case_study musi6nrr | وصف اختبار Rank Math لنوع case_study — musi6nrr"
+    },
+    {
+      "name": "A5 case_study: one title, one description, at most one canonical, one JSON-LD",
+      "ok": true,
+      "detail": "canonical: Rank Math leaves it out while the review copy is noindex"
+    },
+    {
+      "name": "A4 team_member: Rank Math box in the edit screen",
+      "ok": true,
+      "detail": "classic editor box"
+    },
+    {
+      "name": "A5 team_member: title and description saved in Rank Math and shown on the page",
+      "ok": true,
+      "detail": "عنوان اختبار team_member musi6nrr | وصف اختبار Rank Math لنوع team_member — musi6nrr"
+    },
+    {
+      "name": "A5 team_member: one title, one description, at most one canonical, one JSON-LD",
+      "ok": true,
+      "detail": "canonical: Rank Math leaves it out while the review copy is noindex"
+    },
+    {
+      "name": "A6 review copy /new/ stays noindex with Rank Math running",
+      "ok": true,
+      "detail": "<meta name=\"robots\" content=\"noindex, nofollow\"/"
+    },
+    {
+      "name": "B1 logo field in the section: choices are the library platforms by name (not SVG file names)",
+      "ok": true,
+      "detail": "- Select -، ووردبريس، ووكومرس، شوبيفاي، سلة، ويب فلو، رياكت، نكست، سيرش كونسول، جوجل أناليتكس، لوكر ستوديو"
+    },
+    {
+      "name": "B1 «أو شعار من مكتبة الوسائط» field next to it",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B2 new item: logo uploaded from the media library into the section",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B3 saved: notice that a platform was added to the library",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B4 page shows the uploaded logo with the item label",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B5 the new platform is in «المنصات والأدوات» (name + logo)",
+      "ok": true,
+      "detail": "ووردبريس، ووكومرس، شوبيفاي، سلة، ويب فلو، رياكت، نكست، سيرش كونسول، جوجل أناليتكس، لوكر ستوديو، منصة اختبار musi6nrr"
+    },
+    {
+      "name": "B6 the item now points to the library platform (choice selected)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B7 change an item's platform → the page shows the new logo in that place",
+      "ok": true,
+      "detail": "shopify.svg, ga4.svg, test-logo-zid.webp"
+    },
+    {
+      "name": "B8 delete the item → its logo and label are gone from the page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "B8 … the platform stays in the library for other pages",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "C1 «تقييمات جوجل» in the SEO House menu",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "C1 status without a shortcode: section hidden everywhere",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "C2 shared shortcode saved: status «مسجّل من إضافة مفعّلة», pages «يظهر — الشورت كود العام»",
+      "ok": true,
+      "detail": "5 pages"
+    },
+    {
+      "name": "C3 page override saved: Egypt «يظهر — الشورت كود الخاص»",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "C4 Egypt shows its own widget once and not the shared one",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "C4 home shows the shared widget once",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "C5 unknown shortcode: status says the plugin is not active; home hides the section",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no JavaScript errors in the admin",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

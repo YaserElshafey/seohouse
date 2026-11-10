@@ -1,0 +1,31 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "نتائج الأعمال",
+   "href": "/results/"
+  },
+  {
+   "label": "قطاع التعليم والتدريب",
+   "href": null
+  }
+ ],
+ "key": "case-education",
+ "route": "/results/تستتست/",
+ "kind": "cpt",
+ "title": "دراسة حالة: التعليم والتدريب",
+ "file": "SEO House - Case Education Platform.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "قطاع التعليم والتدريب - سيو هاوس",
+  "description": "نمو في عدد الليدز الشهرية لمنصة تدريب — 14 كلمة مفتاحية تنافسية في الصفحة الأولى.",
+  "robots": "",
+  "schema_type": "auto",
+  "schema_service": ""
+ },
+ "template": null,
+ "sections": []
+}

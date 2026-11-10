@@ -1,0 +1,31 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "نتائج الأعمال",
+   "href": "/results/"
+  },
+  {
+   "label": "نمو الإيرادات العضوية",
+   "href": null
+  }
+ ],
+ "key": "case-organic-revenue",
+ "route": "/results/organic-revenue-growth/",
+ "kind": "cpt",
+ "title": "دراسة حالة: نمو الإيرادات العضوية",
+ "file": "SEO House - Organic Revenue Growth Case Study.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "نمو الإيرادات العضوية لمتجر إلكتروني في السعودية — مسودة - سيو هاوس",
+  "description": "مسودة دراسة حالة للمراجعة، غير منشورة.",
+  "robots": "noindex, nofollow",
+  "schema_type": "auto",
+  "schema_service": ""
+ },
+ "template": null,
+ "sections": []
+}

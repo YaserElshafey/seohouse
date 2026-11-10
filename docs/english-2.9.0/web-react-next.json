@@ -1,0 +1,204 @@
+{
+ "id": 91,
+ "key": "web-react-next",
+ "title": "React & Next.js",
+ "slug": "react-next",
+ "parent": 87,
+ "path": "/services/web-design/react-next/",
+ "template": "page-templates/web-react-next.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "React and Next.js Development, Fast & Scalable | SEO House",
+  "sh_seo_description": "React and Next.js development for sites and platforms, with the right rendering for each page, a CMS your team edits without code, and system integrations.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "React and Next.js development",
+  "sh_crumb": "",
+  "rank_math_title": "React and Next.js Development, Fast & Scalable | SEO House",
+  "rank_math_description": "React and Next.js development for sites and platforms, with the right rendering for each page, a CMS your team edits without code, and system integrations.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "react and next.js development"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "React & Next.js",
+   "title": "Website development with React and Next.js",
+   "text": "We build website front ends with React and Next.js, the framework built on top of it. We choose the right rendering method for each page and connect it to your systems and data sources, on an architecture built to scale.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "When you need it",
+   "items": [
+    {
+     "heading": "View layer",
+     "label": "Reusable UI components",
+     "variant": "v1"
+    },
+    {
+     "heading": "Routing layer",
+     "label": "Routes, pages and the rendering method for each",
+     "variant": "v2"
+    },
+    {
+     "heading": "Data layer",
+     "label": "Fetching from APIs, with caching",
+     "variant": "v3"
+    },
+    {
+     "heading": "Sources layer",
+     "label": "CMS, internal systems and external services",
+     "variant": "v4"
+    }
+   ],
+   "label": "Requests travel down the stack, then come back rendered"
+  },
+  {
+   "acf_fc_layout": "when",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "When you need it",
+   "title": "When a custom front end beats ready-made platforms",
+   "items": [
+    {
+     "heading": "Interactive interfaces",
+     "label": "Calculators, dashboards, complex filters and experiences that depend on user state."
+    },
+    {
+     "heading": "Multiple integrations",
+     "label": "Bringing internal systems or external services together in one interface."
+    },
+    {
+     "heading": "Large data volumes",
+     "label": "Thousands of pages or records that need performance and control over rendering."
+    },
+    {
+     "heading": "Digital products",
+     "label": "A web app with users, accounts and permissions."
+    },
+    {
+     "heading": "Multiple front ends",
+     "label": "A website, an app and an admin dashboard on the same data source."
+    },
+    {
+     "heading": "Critical performance",
+     "label": "Pages that must load fast under heavy load."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "render",
+   "sh_hide": 0,
+   "eyebrow": "Rendering",
+   "title": "We choose rendering to fit each page",
+   "text": "Not every page needs the same treatment. Next.js lets us choose how each page is rendered: content pages are pre-generated so they load fast and are read reliably, while pages that depend on user data are rendered on request.",
+   "items": [
+    {
+     "heading": "Static generation",
+     "text": "Content and service pages: they load fast and reach search engines in full."
+    },
+    {
+     "heading": "Server-side rendering",
+     "text": "Pages that change with the data but must appear complete on load."
+    },
+    {
+     "heading": "Client-side rendering",
+     "text": "Interactive parts of a page that search engines don't need to read."
+    },
+    {
+     "heading": "Incremental regeneration",
+     "text": "Regenerating pages when data changes, without a full redeploy."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "deliver",
+   "sh_hide": 0,
+   "eyebrow": "Deliverables",
+   "title": "What the project delivers",
+   "items": [
+    {
+     "label": "A front end built on documented, reusable components."
+    },
+    {
+     "label": "Integration with a CMS your team can edit without code."
+    },
+    {
+     "label": "Performance testing and a review of load and interaction times."
+    },
+    {
+     "label": "Analytics and conversion events set up in Google Analytics."
+    },
+    {
+     "label": "Documentation of the architecture, deployment and operations."
+    },
+    {
+     "label": "A development plan for the next phase, when needed."
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Website design & development",
+     "link": 87
+    },
+    {
+     "label": "Custom development",
+     "link": 85
+    },
+    {
+     "label": "Technical SEO",
+     "link": 63
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "React and Next.js development FAQ",
+   "items": [
+    {
+     "question": "When do I need Next.js instead of a ready-made platform?",
+     "answer": "When you need an interactive interface, integrations with internal systems, or performance that ready-made platforms can't deliver with large volumes of data."
+    },
+    {
+     "question": "Does a Next.js website affect SEO?",
+     "answer": "Not if the rendering method is chosen correctly. We use server-side rendering or static generation for pages that search engines need to read reliably."
+    },
+    {
+     "question": "Who manages the content?",
+     "answer": "We connect the project to a separate CMS, so your team can edit text without touching the code."
+    },
+    {
+     "question": "Can it integrate with an existing system?",
+     "answer": "Yes. We build the front end on top of your existing APIs, or develop new ones as needed."
+    },
+    {
+     "question": "How do you check performance?",
+     "answer": "We measure load and interaction times in an environment close to production, and optimize images, bundles and the way data is fetched."
+    },
+    {
+     "question": "What about maintenance?",
+     "answer": "We hand over documentation of the architecture, and we can agree on ongoing updates and continued development."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "web",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

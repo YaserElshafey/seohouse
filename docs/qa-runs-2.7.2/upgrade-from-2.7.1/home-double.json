@@ -1,0 +1,19 @@
+[
+ {
+  "scenario": "home-double",
+  "requests": 1,
+  "responses": [
+   {
+    "status": 200,
+    "body": {
+     "ok": true,
+     "code": "stored",
+     "message": "وصلنا طلبك.",
+     "ref": "33a70334e322474e352faff7"
+    }
+   }
+  ],
+  "successShown": true,
+  "error": ""
+ }
+]

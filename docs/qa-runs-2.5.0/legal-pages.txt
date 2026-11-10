@@ -1,0 +1,22 @@
+PASS  privacy-policy: still a draft
+PASS  privacy-policy: 8 sections with a heading  — البيانات التي يجمعها الموقع | سبب استخدام البيانات | أدوات التحليل والكوكيز | مشاركة البيانات | مدة الاحتفاظ | حقوق المستخدم | تحديث السياسة | وسيلة التواصل
+PASS  privacy-policy: every section has its body text  — 8
+PASS  privacy-policy: no "[يُضاف النص القانوني…]" placeholder left
+PASS  privacy-policy: lists rendered as <ul>  — بيانات تكتبها أنت في نماذج التواصل وطلب الاستشارة والحجز: 
+PASS  privacy-policy: «آخر تحديث: 3 أكتوبر 2026» shown
+PASS  privacy-policy: contents list links to each section  — #p1 #p2 #p3 #p4 #p5 #p6 #p7 #p8
+PASS  privacy-policy: hero intro is the new text  — توضح هذه السياسة كيف تتعامل سيو هاوس مع البيانات ا
+PASS  privacy-policy: phone width, no horizontal scroll  — 0px
+PASS  terms: still a draft
+PASS  terms: 9 sections with a heading  — 1. استخدام الموقع | 2. المعلومات والمحتوى | 3. طلب الخدمات والعروض | 4. الملكية الفكرية | 5. الروابط الخارجية | 6. حدود المسؤولية | 7. التعديلات | 8. القانون المطبق | 9. التواصل
+PASS  terms: every section has its body text  — 9
+PASS  terms: no "[يُضاف النص القانوني…]" placeholder left
+PASS  terms: lists rendered as <ul>  — محاولة الوصول غير المصرح به إلى الموقع أو لوحة تحكمه أو خو
+PASS  terms: «آخر تحديث: 3 أكتوبر 2026» shown
+PASS  terms: contents list links to each section  — #t1 #t2 #t3 #t4 #t5 #t6 #t7 #t8 #t9
+PASS  terms: hero intro is the new text  — تنظّم هذه الشروط استخدامك لموقع سيو هاوس وطلب خدما
+PASS  terms: phone width, no horizontal scroll  — 0px
+PASS  editor: «نص القسم» textarea for each section, «تاريخ آخر تحديث» field  — 8 textareas
+PASS  no JavaScript errors
+
+20/20 passed

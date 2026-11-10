@@ -1,0 +1,13 @@
+/* Block editor writing area (add_editor_style): white page, dark text, readable headings and links —
+   the colours of the article body on the site. WordPress prefixes these rules with .editor-styles-wrapper,
+   so they only reach the editor canvas and outrank theme.json's dark global styles there; the site's own
+   colours (theme.json, theme.css) are untouched. */
+body { background: #FFFFFF; color: #252B33; font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif; font-size: 17px; line-height: 1.95; }
+h1, h2, h3, h4, h5, h6 { color: #252B33; font-family: Alexandria, sans-serif; font-weight: 700; line-height: 1.4; }
+a { color: #2148D8; text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: #1A3AB0; }
+blockquote { border-inline-start: 3px solid #2854E8; background: #FAFBFC; padding: 14px 20px; color: #252B33; }
+table th, table td { border-color: #CCD3DC; }
+code { background: rgba(37, 43, 51, .06); color: #252B33; }
+pre { background: #252B33; color: #FFFFFF; }
+::selection { background: #2854E8; color: #FFFFFF; }

@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-03T22:24:38.383Z",
+  "results": [
+    {
+      "name": "privacy-policy: still a draft",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "privacy-policy: 8 sections with a heading",
+      "ok": true,
+      "detail": "البيانات التي يجمعها الموقع | سبب استخدام البيانات | أدوات التحليل والكوكيز | مشاركة البيانات | مدة الاحتفاظ | حقوق المستخدم | تحديث السياسة | وسيلة التواصل"
+    },
+    {
+      "name": "privacy-policy: every section has its body text",
+      "ok": true,
+      "detail": "8"
+    },
+    {
+      "name": "privacy-policy: no \"[يُضاف النص القانوني…]\" placeholder left",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "privacy-policy: lists rendered as <ul>",
+      "ok": true,
+      "detail": "بيانات تكتبها أنت في نماذج التواصل وطلب الاستشارة والحجز: "
+    },
+    {
+      "name": "privacy-policy: «آخر تحديث: 3 أكتوبر 2026» shown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "privacy-policy: contents list links to each section",
+      "ok": true,
+      "detail": "#p1 #p2 #p3 #p4 #p5 #p6 #p7 #p8"
+    },
+    {
+      "name": "privacy-policy: hero intro is the new text",
+      "ok": true,
+      "detail": "توضح هذه السياسة كيف تتعامل سيو هاوس مع البيانات ا"
+    },
+    {
+      "name": "privacy-policy: phone width, no horizontal scroll",
+      "ok": true,
+      "detail": "0px"
+    },
+    {
+      "name": "terms: still a draft",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terms: 9 sections with a heading",
+      "ok": true,
+      "detail": "1. استخدام الموقع | 2. المعلومات والمحتوى | 3. طلب الخدمات والعروض | 4. الملكية الفكرية | 5. الروابط الخارجية | 6. حدود المسؤولية | 7. التعديلات | 8. القانون المطبق | 9. التواصل"
+    },
+    {
+      "name": "terms: every section has its body text",
+      "ok": true,
+      "detail": "9"
+    },
+    {
+      "name": "terms: no \"[يُضاف النص القانوني…]\" placeholder left",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terms: lists rendered as <ul>",
+      "ok": true,
+      "detail": "محاولة الوصول غير المصرح به إلى الموقع أو لوحة تحكمه أو خو"
+    },
+    {
+      "name": "terms: «آخر تحديث: 3 أكتوبر 2026» shown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "terms: contents list links to each section",
+      "ok": true,
+      "detail": "#t1 #t2 #t3 #t4 #t5 #t6 #t7 #t8 #t9"
+    },
+    {
+      "name": "terms: hero intro is the new text",
+      "ok": true,
+      "detail": "تنظّم هذه الشروط استخدامك لموقع سيو هاوس وطلب خدما"
+    },
+    {
+      "name": "terms: phone width, no horizontal scroll",
+      "ok": true,
+      "detail": "0px"
+    },
+    {
+      "name": "editor: «نص القسم» textarea for each section, «تاريخ آخر تحديث» field",
+      "ok": true,
+      "detail": "8 textareas"
+    },
+    {
+      "name": "no JavaScript errors",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "key": "group_sh_page_privacy_policy",
+  "title": "أقسام الصفحة — سياسة الخصوصية",
+  "fields": [
+    {
+      "key": "field_535d4e9bd684c",
+      "label": "الواجهة (Hero)",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_28c54b6af3435",
+      "label": "",
+      "name": "s_hero",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_3881ee5d50562",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_2253668d56d6d",
+          "label": "العنوان: سياسة الخصوصية",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        },
+        {
+          "key": "field_4258fd1bd08fc",
+          "label": "النص: توضح هذه الصفحة كيف يتعامل الموقع مع…",
+          "name": "text",
+          "type": "text",
+          "instructions": "",
+          "required": 0
+        }
+      ]
+    },
+    {
+      "key": "field_67671c2890a60",
+      "label": "قسم: المحتويات",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 1,
+      "endpoint": 0
+    },
+    {
+      "key": "field_78c63de4108f4",
+      "label": "",
+      "name": "s_document",
+      "type": "group",
+      "layout": "block",
+      "instructions": "",
+      "wrapper": {
+        "class": "sh-section"
+      },
+      "sub_fields": [
+        {
+          "key": "field_4810060714d77",
+          "name": "sh_hide",
+          "label": "إخفاء القسم",
+          "type": "true_false",
+          "ui": 1,
+          "default_value": 0,
+          "wrapper": {
+            "width": "30"
+          }
+        },
+        {
+          "key": "field_f0c15ab587758",
+          "label": "عنوان قائمة المحتويات",
+          "name": "eyebrow",
+          "type": "text",
+          "instructions": "تُبنى القائمة تلقائيًا من عناوين الأقسام أدناه.",
+          "required": 0
+        },
+        {
+          "key": "field_1addeb5066769",
+          "label": "نص قبل التاريخ",
+          "name": "label",
+          "type": "text",
+          "instructions": "مثل: آخر تحديث:",
+          "required": 0
+        },
+        {
+          "key": "field_22111d491c7b2",
+          "label": "تاريخ آخر تحديث",
+          "name": "updated",
+          "type": "text",
+          "instructions": "مثل: 3 أكتوبر 2026. يظهر بعد «آخر تحديث:».",
+          "required": 0
+        },
+        {
+          "key": "field_22c535cfeec88",
+          "label": "الأقسام",
+          "name": "items_2",
+          "type": "sh_rows",
+          "instructions": "كل قسم: عنوان ونص. القسم بلا عنوان يظهر نصه دون أن يدخل قائمة المحتويات (مثل المقدمة). سطر فارغ يبدأ فقرة جديدة، والسطر الذي يبدأ بـ «- » عنصر في قائمة. يمكن الإضافة والحذف وإعادة الترتيب.",
+          "required": 0,
+          "layout": "block",
+          "button_label": "إضافة عنصر",
+          "sub_fields": [
+            {
+              "key": "field_d0f66908aa747",
+              "label": "عنوان القسم",
+              "name": "title",
+              "type": "text",
+              "instructions": "",
+              "required": 0
+            },
+            {
+              "key": "field_f0c08d914a600",
+              "label": "نص القسم",
+              "name": "body",
+              "type": "textarea",
+              "instructions": "",
+              "required": 0,
+              "rows": 10,
+              "new_lines": ""
+            }
+          ],
+          "collapsed": "field_d0f66908aa747"
+        }
+      ]
+    },
+    {
+      "key": "field_1e61a55a8d973",
+      "label": "",
+      "name": "",
+      "type": "accordion",
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 1
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-templates/privacy-policy.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": [
+    "the_content",
+    "excerpt",
+    "discussion",
+    "comments",
+    "format",
+    "send-trackbacks"
+  ],
+  "active": true,
+  "description": "حقول قالب سياسة الخصوصية — مولدة من SEO House - Privacy Policy.dc.html. الأقسام بترتيب التصميم؛ يمكن إخفاء أي قسم.",
+  "show_in_rest": 0,
+  "modified": 1790600000
+}

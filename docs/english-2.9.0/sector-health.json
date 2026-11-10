@@ -1,0 +1,242 @@
+{
+ "id": 37,
+ "key": "sector-health",
+ "title": "Medical SEO",
+ "slug": "health",
+ "parent": 47,
+ "path": "/sectors/health/",
+ "template": "page-templates/sector-health.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "Medical SEO for Clinics & Healthcare Providers | SEO House",
+  "sh_seo_description": "Medical SEO for clinics and medical centers: specialty, doctor and branch pages built to increase bookings. One medical site grew clicks from 825 to 12.9K.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Medical and healthcare SEO services",
+  "sh_crumb": "Health & medical",
+  "rank_math_title": "Medical SEO for Clinics & Healthcare Providers | SEO House",
+  "rank_math_description": "Medical SEO for clinics and medical centers: specialty, doctor and branch pages built to increase bookings. One medical site grew clicks from 825 to 12.9K.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "medical seo"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Health & medical",
+   "title": "Medical SEO for clinics and healthcare providers",
+   "text": "A patient may start by asking about a symptom, then search for a specialty or service, and then compare doctors, appointment times and locations. We organize your medical website so they find clear information about the service, the doctor, the branch and the next step to book. In this sector, content must be accurate and reviewed by your medical team; we don't use treatment claims or unverified testimonials to boost visibility.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "The patient journey",
+   "eyebrow_2": "The patient's search path",
+   "label": "Illustrative example",
+   "label_2": "dermatologist near me",
+   "items": [
+    {
+     "icon": "i300033cf",
+     "heading": "Specialty",
+     "label": "A page that brings the department's services together"
+    },
+    {
+     "icon": "i85efa4ab",
+     "heading": "Service or doctor",
+     "label": "Qualifications and clinic hours"
+    },
+    {
+     "icon": "i4968b528",
+     "heading": "Trust information",
+     "label": "Address, license and contact options"
+    }
+   ],
+   "label_3": "The action we measure",
+   "heading": "Appointment request"
+  },
+  {
+   "acf_fc_layout": "sector_journey",
+   "sh_hide": 0,
+   "eyebrow": "Illustrative healthcare provider example",
+   "title": "From a patient's question to an appointment request",
+   "eyebrow_2": "1",
+   "heading": "Search",
+   "label": "pediatric dentist",
+   "label_2": "They search for a specialty and a nearby service before searching for a provider's name.",
+   "eyebrow_3": "2",
+   "heading_2": "Service & doctor page",
+   "eyebrow_4": "Pediatric dentistry",
+   "label_3": "Doctor · Experience · Branch",
+   "eyebrow_5": "3",
+   "heading_3": "Appointment request",
+   "eyebrow_6": "Morning",
+   "eyebrow_7": "Evening",
+   "items": [
+    {
+     "label": "Name"
+    },
+    {
+     "label": "Mobile number"
+    }
+   ],
+   "eyebrow_8": "Request an appointment"
+  },
+  {
+   "acf_fc_layout": "journey",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "From a medical question to the service page",
+   "title": "The patient journey doesn't always start with a service name",
+   "items": [
+    {
+     "heading": "Question or symptom",
+     "label": "Something worrying them"
+    },
+    {
+     "heading": "Specialty",
+     "label": "The right one for their condition"
+    },
+    {
+     "heading": "Service or doctor",
+     "label": "What the provider actually offers"
+    },
+    {
+     "heading": "Branch",
+     "label": "The nearest one and visit details"
+    },
+    {
+     "heading": "Appointment request",
+     "label": "Call or book"
+    }
+   ],
+   "text": "A visitor may start by searching for a symptom that worries them, then try to find the right specialty, and then look at a specific service or doctor and a branch near them. We organize your site's pages so they can move between these steps without general information getting mixed up with the booking page."
+  },
+  {
+   "acf_fc_layout": "pages",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Doctor, specialty and branch",
+   "title": "Every page type has a clear job",
+   "items": [
+    {
+     "icon": "ibf55d922",
+     "heading": "Service page",
+     "text": "Explains what the provider actually offers, who delivers it and how to book."
+    },
+    {
+     "icon": "i03d84387",
+     "heading": "Doctor page",
+     "text": "Their details, accredited qualifications and the services they provide."
+    },
+    {
+     "icon": "if0120d7d",
+     "heading": "Branch page",
+     "text": "Accurate address, contact details and visit information."
+    }
+   ],
+   "heading": "Accurate content with a traceable source",
+   "text": "Publishing an article that repeats the name of a condition or procedure isn't enough. Medical content is reviewed by a specialist chosen by the provider, and the qualifications of whoever delivers the service and the limits of the published information are made clear. We work on headings, on linking articles to services and doctors, and on mobile readability, while keeping educational information separate from advice that requires an individual assessment by a doctor. We never attribute a specialty or treatment outcome to a clinic that the clinic hasn't approved."
+  },
+  {
+   "acf_fc_layout": "measure",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "How do we measure?",
+   "title": "From clicks to appointment requests",
+   "text": "We review the performance of specialty, service and doctor pages in Search Console, then track whether visitors go on to call or request an appointment, where those actions can be measured.",
+   "items": [
+    {
+     "text": "We have a documented case of a medical services website whose clicks rose from 825 to 12.9K across two consecutive 28-day periods."
+    },
+    {
+     "text": "This is a visibility and clicks result; we don't describe it as bookings or revenue."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "case",
+   "sh_hide": 0,
+   "label": "Documented result",
+   "title": "From 825 to 12.9K clicks in 28 days",
+   "text": "For a medical services website, organic clicks rose from 825 in the previous period to 12.9K in the last 28 days.",
+   "label_2": "Previous period",
+   "heading": "825",
+   "label_3": "clicks",
+   "label_4": "Last 28 days",
+   "heading_2": "12.9K",
+   "label_5": "organic clicks",
+   "items": [
+    {
+     "label": "Industry",
+     "heading": "Medical services"
+    },
+    {
+     "label": "Source",
+     "heading": "Search Console"
+    },
+    {
+     "label": "Comparison",
+     "heading": "Two consecutive 28-day periods"
+    },
+    {
+     "label": "Client name",
+     "heading": "Not shown"
+    }
+   ],
+   "label_6": "Search Console",
+   "link": "uploads/03-case-gsc-clicks-12900.webp",
+   "image": 102
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "SEO services",
+     "link": 65
+    },
+    {
+     "label": "SEO content",
+     "link": 53
+    },
+    {
+     "label": "All industries",
+     "link": 47
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Medical SEO questions",
+   "items": [
+    {
+     "question": "Who reviews the medical articles?",
+     "answer": "A specialist chosen by your organization. We write and structure the content for search, and no medical text is published until your medical team has reviewed it."
+    },
+    {
+     "question": "Does every doctor need their own page?",
+     "answer": "Only when patients search for the doctor by name or the doctor is a factor in their decision. Otherwise, the specialty and service pages matter more, with the doctors mentioned on them."
+    },
+    {
+     "question": "How do we link each service to the right branch?",
+     "answer": "On the service page, we list the branches that actually offer it, and we link each branch to its own page showing the address and how to book."
+    },
+    {
+     "question": "Do more clicks mean more bookings?",
+     "answer": "Not necessarily. We only measure bookings and calls when they're set up to be tracked, and we never describe clicks as bookings."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

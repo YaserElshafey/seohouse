@@ -1,0 +1,7 @@
+/* SEO House - Search Results.dc.html — page-specific rules from the approved design (generated). */
+[data-sc-row] { grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) minmax(0,.7fr); }
+@media (max-width:899px) { [data-sc-row] { grid-template-columns:1fr; } }
+[data-sc-pick] { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:719px) { [data-sc-pick] { grid-template-columns:1fr; } }
+[data-screen-label="Hero"] { position:relative; overflow:hidden; }
+[data-hero-grid] ~ *:not([aria-hidden="true"]) { position:relative; }

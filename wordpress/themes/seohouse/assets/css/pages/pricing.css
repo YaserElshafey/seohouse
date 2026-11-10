@@ -1,0 +1,31 @@
+/* SEO House - Pricing.dc.html — page-specific rules from the approved design (generated). */
+[data-sc-row] { grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) minmax(0,.7fr); }
+@media (max-width:899px) { [data-sc-row] { grid-template-columns:1fr; } }
+[data-sc-pick] { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:719px) { [data-sc-pick] { grid-template-columns:1fr; } }
+[data-pr-hero] { grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); }
+@media (max-width:1023px) { [data-pr-hero] { grid-template-columns:1fr; } }
+[data-pr-row] { grid-template-columns:minmax(0,.42fr) minmax(0,1.58fr); }
+@media (max-width:719px) { [data-pr-row] { grid-template-columns:1fr; } }
+[data-pr-two] { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:859px) { [data-pr-two] { grid-template-columns:1fr; } }
+[data-pr-three] { grid-template-columns:repeat(3,minmax(0,1fr)); }
+@media (max-width:859px) { [data-pr-three] { grid-template-columns:1fr; } }
+[data-pr-four] { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:719px) { [data-pr-four] { grid-template-columns:1fr; } }
+[data-bk-grid] { grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); }
+[data-bk-row] { grid-template-columns:1fr 1fr; }
+@media (max-width:899px) { [data-bk-grid] { grid-template-columns:1fr; } }
+@media (max-width:559px) { [data-bk-row] { grid-template-columns:1fr; } }
+[data-screen-label="Hero"] { position:relative; overflow:hidden; }
+[data-hero-grid] ~ *:not([aria-hidden="true"]) { position:relative; }
+[data-pr-fgrid] { grid-template-columns:repeat(3,minmax(0,1fr)); }
+@media (max-width:959px) { [data-pr-fgrid] { grid-template-columns:1fr 1fr; } }
+@media (max-width:599px) { [data-pr-fgrid] { grid-template-columns:1fr; } }
+[data-sh-center] { text-align:center; }
+[data-sh-center] > p { margin-inline:auto !important; max-width:44em; }
+[data-sh-center] h2 { text-wrap:balance; }
+[data-sec-head][data-center] { text-align:center; margin-inline:auto; }
+[data-sec-head][data-center] > div:first-child { justify-content:center; }
+p[data-center] { margin-inline:auto !important; text-align:center; }
+@media (max-width:859px) { [data-pts] { grid-template-columns:1fr !important; } }

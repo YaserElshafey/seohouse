@@ -1,0 +1,202 @@
+{
+ "id": 69,
+ "key": "stores-salla",
+ "title": "Salla",
+ "slug": "salla",
+ "parent": 77,
+ "path": "/services/stores/salla/",
+ "template": "page-templates/stores-salla.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "Salla Store Design in Saudi Arabia | SEO House",
+  "sh_seo_description": "Salla store design in your brand, with clear categories, complete product data, payment, shipping and Google Analytics, ready to sell in Saudi Arabia.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Salla store development",
+  "sh_crumb": "",
+  "rank_math_title": "Salla Store Design in Saudi Arabia | SEO House",
+  "rank_math_description": "Salla store design in your brand, with clear categories, complete product data, payment, shipping and Google Analytics, ready to sell in Saudi Arabia.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "salla store design"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "logo": "assets/platforms/official/salla.svg",
+   "logo_image": null,
+   "title": "Salla store design",
+   "text": "We set up your brand, pages and categories inside Salla, connect local payment and shipping, and organize your product data so buying is easy and your pages show up in search.",
+   "link_label": "Book a consultation",
+   "link_label_2": "Setup steps",
+   "label": "New order",
+   "eyebrow": "Processing",
+   "items": [
+    {
+     "label": "Product",
+     "label_2": "In the right category"
+    },
+    {
+     "label": "Options",
+     "label_2": "Size and color linked to inventory"
+    },
+    {
+     "label": "Payment",
+     "label_2": "Local gateway enabled"
+    },
+    {
+     "label": "Shipping",
+     "label_2": "Local carrier with tracking"
+    }
+   ],
+   "label_2": "Order status",
+   "eyebrow_2": "Ready to ship"
+  },
+  {
+   "acf_fc_layout": "setup",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "What we deliver",
+   "title": "Setting up your store in Salla",
+   "items": [
+    {
+     "heading": "Brand & storefront",
+     "label": "Setting up colors, fonts, banners and the main pages."
+    },
+    {
+     "heading": "Category structure",
+     "label": "Categories and subcategories that make browsing and filtering easy."
+    },
+    {
+     "heading": "Product data",
+     "label": "Organized names, descriptions, images, options and inventory."
+    },
+    {
+     "heading": "Payment & shipping",
+     "label": "Connecting local providers and testing the order path."
+    },
+    {
+     "heading": "Supporting pages",
+     "label": "About, shipping and returns, FAQ and contact."
+    },
+    {
+     "heading": "Measurement",
+     "label": "Connecting Google Analytics and tracking cart and order events."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "phases",
+   "sh_hide": 0,
+   "eyebrow": "Project phases",
+   "title": "From account to first order",
+   "items": [
+    {
+     "heading": "Setup",
+     "text": "Account, domain and core settings."
+    },
+    {
+     "heading": "Structure",
+     "text": "Categories, pages and content structure."
+    },
+    {
+     "heading": "Storefront",
+     "text": "Brand, banners and display pages."
+    },
+    {
+     "heading": "Integrations",
+     "text": "Payment, shipping, invoicing and order testing."
+    },
+    {
+     "heading": "Handover",
+     "text": "Measurement setup, management training, then launch."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "limits",
+   "sh_hide": 0,
+   "eyebrow": "Platform limits",
+   "title": "What you can and can't do in Salla",
+   "text": "We make this clear early, so expectations aren't built on things the platform doesn't allow.",
+   "items": [
+    {
+     "label": "Customization works within the platform's capabilities and available themes."
+    },
+    {
+     "label": "Some deep technical changes aren't possible the way they are on open platforms."
+    },
+    {
+     "label": "The focus is on structure, content and the buying experience."
+    },
+    {
+     "label": "Integrations are limited to the providers the platform supports."
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Online store design & development",
+     "link": 77
+    },
+    {
+     "label": "Zid",
+     "link": 75
+    },
+    {
+     "label": "Product upload & content management",
+     "link": 27
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Salla store FAQ",
+   "items": [
+    {
+     "question": "How much can a Salla store be customized?",
+     "answer": "Customization is more limited than on open platforms, so we work within Salla's capabilities and focus on structure, content and the buying experience."
+    },
+    {
+     "question": "Do you connect local payment and shipping?",
+     "answer": "Yes. We connect the available payment gateways and shipping companies and test the order process from start to finish."
+    },
+    {
+     "question": "Can you improve my Salla store's visibility in search?",
+     "answer": "Yes, within what the platform allows: the category structure, category and product descriptions, titles and meta tags."
+    },
+    {
+     "question": "Do you upload the products?",
+     "answer": "Product upload and product data organization is a separate service that can be added to your project."
+    },
+    {
+     "question": "Can you migrate my store from another platform?",
+     "answer": "Yes. We move your products and categories and put a redirect plan in place for your old URLs."
+    },
+    {
+     "question": "How long does a Salla store setup take?",
+     "answer": "It depends on the size of your catalog, the number of pages and the integrations. We set the timeline once the scope is agreed."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "stores",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

@@ -1,0 +1,317 @@
+[
+    {
+        "ok": true,
+        "name": "all published posts of the main site found (source count from its posts table)",
+        "detail": "4 posts"
+    },
+    {
+        "ok": true,
+        "name": "published articles here = published articles on the main site",
+        "detail": "4 \/ 4"
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] exactly one copy",
+        "detail": "1 found"
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] title",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] slug and status",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] dates (published, modified)",
+        "detail": "2026-05-29 18:14:49 \/ 2026-05-29 19:49:07"
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] content identical apart from the site address",
+        "detail": "14416 bytes, 8 H2, 1 tables, 0 images"
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] no main-site address left in the content",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] author",
+        "detail": "Yasser Youssef"
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] categories",
+        "detail": "technical-seo"
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] featured image: same file, alt text, file present",
+        "detail": "2026\/05\/مشكلة-404-not-found.jpg — alt: مشكلة 404 not found"
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] featured image: every size file present",
+        "detail": "5 sizes"
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] images inside the article: files here, alt kept",
+        "detail": "0 images"
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] Rank Math fields (6)",
+        "detail": "rank_math_title, rank_math_description, rank_math_robots, rank_math_primary_category, rank_math_facebook_image, rank_math_facebook_image_id"
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] URL answers 200",
+        "detail": "\/new\/blog\/fix-404-not-found\/"
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] same path as on the main site (after \/new)",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[fix-404-not-found] backup of the replaced draft kept",
+        "detail": "draft — الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزانية الزحف وتجربة المستخدم"
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] exactly one copy",
+        "detail": "1 found"
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] title",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] slug and status",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] dates (published, modified)",
+        "detail": "2026-05-29 19:40:39 \/ 2026-05-29 19:49:02"
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] content identical apart from the site address",
+        "detail": "42425 bytes, 10 H2, 2 tables, 1 images"
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] no main-site address left in the content",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] author",
+        "detail": "Yasser Youssef"
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] categories",
+        "detail": "off-page-seo"
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] featured image: same file, alt text, file present",
+        "detail": "2026\/05\/d1db1390-8654-45ed-bc23-1acc93638886.png — alt: كيفية بناء باك لينك موقعك بطريقة صحيحة"
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] featured image: every size file present",
+        "detail": "10 sizes"
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] images inside the article: files here, alt kept",
+        "detail": "1 images"
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] Rank Math fields (6)",
+        "detail": "rank_math_title, rank_math_description, rank_math_robots, rank_math_primary_category, rank_math_facebook_image, rank_math_facebook_image_id"
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] URL answers 200",
+        "detail": "\/new\/blog\/how-to-build-backlinks-correctly\/"
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] same path as on the main site (after \/new)",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[how-to-build-backlinks-correctly] backup of the replaced draft kept",
+        "detail": "draft — كيف تبني روابط خلفية لموقعك بطريقة صحيحة"
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] exactly one copy",
+        "detail": "1 found"
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] title",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] slug and status",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] dates (published, modified)",
+        "detail": "2026-05-29 20:21:17 \/ 2026-05-29 20:23:45"
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] content identical apart from the site address",
+        "detail": "31771 bytes, 18 H2, 1 tables, 0 images"
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] no main-site address left in the content",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] author",
+        "detail": "Yasser Youssef"
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] categories",
+        "detail": "technical-seo"
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] featured image: same file, alt text, file present",
+        "detail": "2026\/05\/لماذا-لا-يظهر-موقعك-في-محركات-البحث.png — alt: لماذا لا يظهر موقعك في محركات البحث"
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] featured image: every size file present",
+        "detail": "10 sizes"
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] images inside the article: files here, alt kept",
+        "detail": "0 images"
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] Rank Math fields (6)",
+        "detail": "rank_math_title, rank_math_description, rank_math_robots, rank_math_primary_category, rank_math_facebook_image, rank_math_facebook_image_id"
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] URL answers 200",
+        "detail": "\/new\/blog\/why-is-my-website-not-showing-in-search-engines\/"
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] same path as on the main site (after \/new)",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[why-is-my-website-not-showing-in-search-engines] backup of the replaced draft kept",
+        "detail": "draft — لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول"
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] exactly one copy",
+        "detail": "1 found"
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] title",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] slug and status",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] dates (published, modified)",
+        "detail": "2026-06-03 17:09:11 \/ 2026-06-03 17:14:44"
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] content identical apart from the site address",
+        "detail": "24167 bytes, 2 H2, 2 tables, 0 images"
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] no main-site address left in the content",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] author",
+        "detail": "Mona"
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] categories",
+        "detail": "technical-seo"
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] featured image: same file, alt text, file present",
+        "detail": "2026\/06\/ChatGPT-Image-3-يونيو-2026،-05_07_09-م.png — alt: هل يظهر موقعك داخل إجابات Google الذكية؟ تحديث جديد من Search Console قد يجيبك"
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] featured image: every size file present",
+        "detail": "10 sizes"
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] images inside the article: files here, alt kept",
+        "detail": "0 images"
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] Rank Math fields (6)",
+        "detail": "rank_math_title, rank_math_description, rank_math_robots, rank_math_primary_category, rank_math_facebook_image, rank_math_facebook_image_id"
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] URL answers 200",
+        "detail": "\/new\/blog\/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1\/"
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] same path as on the main site (after \/new)",
+        "detail": ""
+    },
+    {
+        "ok": true,
+        "name": "[هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] backup of the replaced draft kept",
+        "detail": "publish — هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة"
+    },
+    {
+        "ok": true,
+        "name": "backup file of replaced drafts (not web-readable)",
+        "detail": "drafts-before-migration-20261003-144628-dTREHV.json"
+    }
+]

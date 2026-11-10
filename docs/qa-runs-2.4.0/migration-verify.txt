@@ -1,0 +1,65 @@
+PASS  all published posts of the main site found (source count from its posts table)  — 4 posts
+PASS  published articles here = published articles on the main site  — 4 / 4
+PASS  [fix-404-not-found] exactly one copy  — 1 found
+PASS  [fix-404-not-found] title
+PASS  [fix-404-not-found] slug and status
+PASS  [fix-404-not-found] dates (published, modified)  — 2026-05-29 18:14:49 / 2026-05-29 19:49:07
+PASS  [fix-404-not-found] content identical apart from the site address  — 14416 bytes, 8 H2, 1 tables, 0 images
+PASS  [fix-404-not-found] no main-site address left in the content
+PASS  [fix-404-not-found] author  — Yasser Youssef
+PASS  [fix-404-not-found] categories  — technical-seo
+PASS  [fix-404-not-found] featured image: same file, alt text, file present  — 2026/05/مشكلة-404-not-found.jpg — alt: مشكلة 404 not found
+PASS  [fix-404-not-found] featured image: every size file present  — 5 sizes
+PASS  [fix-404-not-found] images inside the article: files here, alt kept  — 0 images
+PASS  [fix-404-not-found] Rank Math fields (6)  — rank_math_title, rank_math_description, rank_math_robots, rank_math_primary_category, rank_math_facebook_image, rank_math_facebook_image_id
+PASS  [fix-404-not-found] URL answers 200  — /new/blog/fix-404-not-found/
+PASS  [fix-404-not-found] same path as on the main site (after /new)
+PASS  [fix-404-not-found] backup of the replaced draft kept  — draft — الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزانية الزحف وتجربة المستخدم
+PASS  [how-to-build-backlinks-correctly] exactly one copy  — 1 found
+PASS  [how-to-build-backlinks-correctly] title
+PASS  [how-to-build-backlinks-correctly] slug and status
+PASS  [how-to-build-backlinks-correctly] dates (published, modified)  — 2026-05-29 19:40:39 / 2026-05-29 19:49:02
+PASS  [how-to-build-backlinks-correctly] content identical apart from the site address  — 42425 bytes, 10 H2, 2 tables, 1 images
+PASS  [how-to-build-backlinks-correctly] no main-site address left in the content
+PASS  [how-to-build-backlinks-correctly] author  — Yasser Youssef
+PASS  [how-to-build-backlinks-correctly] categories  — off-page-seo
+PASS  [how-to-build-backlinks-correctly] featured image: same file, alt text, file present  — 2026/05/d1db1390-8654-45ed-bc23-1acc93638886.png — alt: كيفية بناء باك لينك موقعك بطريقة صحيحة
+PASS  [how-to-build-backlinks-correctly] featured image: every size file present  — 10 sizes
+PASS  [how-to-build-backlinks-correctly] images inside the article: files here, alt kept  — 1 images
+PASS  [how-to-build-backlinks-correctly] Rank Math fields (6)  — rank_math_title, rank_math_description, rank_math_robots, rank_math_primary_category, rank_math_facebook_image, rank_math_facebook_image_id
+PASS  [how-to-build-backlinks-correctly] URL answers 200  — /new/blog/how-to-build-backlinks-correctly/
+PASS  [how-to-build-backlinks-correctly] same path as on the main site (after /new)
+PASS  [how-to-build-backlinks-correctly] backup of the replaced draft kept  — draft — كيف تبني روابط خلفية لموقعك بطريقة صحيحة
+PASS  [why-is-my-website-not-showing-in-search-engines] exactly one copy  — 1 found
+PASS  [why-is-my-website-not-showing-in-search-engines] title
+PASS  [why-is-my-website-not-showing-in-search-engines] slug and status
+PASS  [why-is-my-website-not-showing-in-search-engines] dates (published, modified)  — 2026-05-29 20:21:17 / 2026-05-29 20:23:45
+PASS  [why-is-my-website-not-showing-in-search-engines] content identical apart from the site address  — 31771 bytes, 18 H2, 1 tables, 0 images
+PASS  [why-is-my-website-not-showing-in-search-engines] no main-site address left in the content
+PASS  [why-is-my-website-not-showing-in-search-engines] author  — Yasser Youssef
+PASS  [why-is-my-website-not-showing-in-search-engines] categories  — technical-seo
+PASS  [why-is-my-website-not-showing-in-search-engines] featured image: same file, alt text, file present  — 2026/05/لماذا-لا-يظهر-موقعك-في-محركات-البحث.png — alt: لماذا لا يظهر موقعك في محركات البحث
+PASS  [why-is-my-website-not-showing-in-search-engines] featured image: every size file present  — 10 sizes
+PASS  [why-is-my-website-not-showing-in-search-engines] images inside the article: files here, alt kept  — 0 images
+PASS  [why-is-my-website-not-showing-in-search-engines] Rank Math fields (6)  — rank_math_title, rank_math_description, rank_math_robots, rank_math_primary_category, rank_math_facebook_image, rank_math_facebook_image_id
+PASS  [why-is-my-website-not-showing-in-search-engines] URL answers 200  — /new/blog/why-is-my-website-not-showing-in-search-engines/
+PASS  [why-is-my-website-not-showing-in-search-engines] same path as on the main site (after /new)
+PASS  [why-is-my-website-not-showing-in-search-engines] backup of the replaced draft kept  — draft — لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] exactly one copy  — 1 found
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] title
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] slug and status
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] dates (published, modified)  — 2026-06-03 17:09:11 / 2026-06-03 17:14:44
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] content identical apart from the site address  — 24167 bytes, 2 H2, 2 tables, 0 images
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] no main-site address left in the content
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] author  — Mona
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] categories  — technical-seo
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] featured image: same file, alt text, file present  — 2026/06/ChatGPT-Image-3-يونيو-2026،-05_07_09-م.png — alt: هل يظهر موقعك داخل إجابات Google الذكية؟ تحديث جديد من Search Console قد يجيبك
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] featured image: every size file present  — 10 sizes
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] images inside the article: files here, alt kept  — 0 images
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] Rank Math fields (6)  — rank_math_title, rank_math_description, rank_math_robots, rank_math_primary_category, rank_math_facebook_image, rank_math_facebook_image_id
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] URL answers 200  — /new/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] same path as on the main site (after /new)
+PASS  [هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء] backup of the replaced draft kept  — publish — هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة
+PASS  backup file of replaced drafts (not web-readable)  — drafts-before-migration-20261003-144628-dTREHV.json
+
+63/63 passed

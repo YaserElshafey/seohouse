@@ -1,0 +1,99 @@
+DIFF /                                                            SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /about/                                                      SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /contact/                                                    SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /services/                                                   SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /services/seo/                                               SEO tags  25 CHANGED | rest of HTML 8 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       +<meta property="og:updated_time" content="2026-10-11T17:40:20+00:00" />
+       -								<a href="http://127.0.0.1:8090/results/" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 15px; font-weight: 600; color: var(--sh-link); border-bottom:
+       +								<a href="http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%aa%d8%ac%d8%a7%d8%b1%d8%a9-%d8%a7%d9%84%d8%a5%d9%84%d9%83%d8%aa%d8%b1%d9%88%d9%86%d9%8a%d8%a9/" style="display:
+       -								<a href="http://127.0.0.1:8090/results/" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 15px; font-weight: 600; color: var(--sh-link); border-bottom:
+       +								<a href="http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/" style="display: inline-flex; align-items: center; gap: 8px; mar
+       -								<a href="http://127.0.0.1:8090/results/" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-size: 15px; font-weight: 600; color: var(--sh-link); border-bottom:
+DIFF /services/seo/ksa/                                           SEO tags  24 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /services/seo/egypt/                                         SEO tags  24 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /services/seo/uae/                                           SEO tags  24 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /services/seo/technical/                                     SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /services/web-design/                                        SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /services/web-design/wordpress/                              SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /services/stores/                                            SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /services/stores/salla/                                      SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /services/products/                                          SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /sectors/                                                    SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /sectors/health/                                             SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /sectors/legal/                                              SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /results/                                                    SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /results/%D9%82%D8%B7%D8%A7%D8%B9-%D8%A7%D9%84%D8%B5%D8%AD%D SEO tags  17 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /blog/                                                       SEO tags  14 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /blog/%D9%87%D9%84-%D9%8A%D8%B8%D9%87%D8%B1-%D9%85%D9%88%D9% SEO tags  27 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /team/                                                       SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /team/yasser-youssef/                                        SEO tags  23 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /team/eman-farid/                                            SEO tags  23 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /pricing/                                                    SEO tags  19 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /terms/                                                      SEO tags  18 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /privacy-policy/                                             SEO tags  16 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /blog/category/technical-seo/                                SEO tags  15 same | rest of HTML 2 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+DIFF /?s=seo                                                      SEO tags  11 same | rest of HTML 12 lines differ | JSON-LD 1→1 ['seohouse-schema']
+       -										<a href="http://127.0.0.1:8090/services/seo/" class="sh-hv-link" style="display: block; padding: 18px 4px; border-top: 1px solid var(--sh-line); color: var(--sh-ink);">
+       -						<span style="display: block; font-size: 12.5px; font-weight: 600; color: var(--sh-link);">صفحة</span>
+       -						<span style="display: block; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 18px; margin-top: 6px;">تحسين محركات البحث</span>
+       -												<span dir="ltr" style="display: block; font-size: 13px; color: var(--sh-text); margin-top: 6px; text-align: end;">/services/seo/</span>
+       -					</a>
+       +					</a>
+DIFF /no-such-page/                                               SEO tags   9 same | rest of HTML 2 lines differ | JSON-LD 0→0 []
+       -<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.8.MTIME"></script>
+       +<script data-wp-strategy="defer" defer id="sh-site-js" src="http://127.0.0.1:8090/wp-content/themes/seohouse/assets/js/site.js?ver=2.7.9.MTIME"></script>
+30 pages, 30 with differences outside JSON-LD

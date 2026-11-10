@@ -1,0 +1,606 @@
+{
+ "sitemaps": {
+  "/post-sitemap.xml": [
+   "/blog/",
+   "/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+   "/blog/why-is-my-website-not-showing-in-search-engines/",
+   "/blog/fix-404-not-found/",
+   "/blog/how-to-build-backlinks-correctly/"
+  ],
+  "/page-sitemap.xml": [
+   "/",
+   "/privacy-policy/",
+   "/team/",
+   "/services/seo/on-page/",
+   "/pricing/",
+   "/services/seo/content/",
+   "/contact/",
+   "/services/seo/backlinks/",
+   "/services/seo/",
+   "/services/seo/consulting/",
+   "/services/web-design/",
+   "/services/seo/ksa/",
+   "/services/stores/",
+   "/services/seo/egypt/",
+   "/services/products/",
+   "/services/seo/uae/",
+   "/sectors/ecommerce/",
+   "/services/web-design/wordpress/",
+   "/sectors/health/",
+   "/services/web-design/webflow/",
+   "/sectors/real-estate/",
+   "/services/web-design/react-next/",
+   "/sectors/education/",
+   "/services/web-design/custom-dev/",
+   "/sectors/tourism/",
+   "/services/stores/shopify/",
+   "/services/",
+   "/sectors/tech/",
+   "/services/stores/salla/",
+   "/sectors/",
+   "/sectors/legal/",
+   "/services/stores/zid/",
+   "/results/",
+   "/sectors/food/",
+   "/services/stores/woocommerce/",
+   "/about/",
+   "/services/seo/technical/"
+  ],
+  "/case_study-sitemap.xml": [
+   "/results/قطاع-التجارة-الإلكترونية/",
+   "/results/قطاع-الصحة-والطب/",
+   "/results/تستتست/"
+  ],
+  "/team_member-sitemap.xml": [
+   "/team/esraa-mohamed/",
+   "/team/nada-mahmoud/",
+   "/team/adham-hesham/",
+   "/team/mariam-hesham/",
+   "/team/seif-sanad/",
+   "/team/morad-salah/",
+   "/team/yasser-youssef/",
+   "/team/noha-elmahdy/",
+   "/team/mohamed-moawad/",
+   "/team/eman-farid/",
+   "/team/maha-ali/",
+   "/team/mennatallah-said/",
+   "/team/mona-ali/",
+   "/team/esraa-kamal/",
+   "/team/heba-geneedy/",
+   "/team/mohamed-hassan/",
+   "/team/mustafa-mahmoud/",
+   "/team/ahmed-sanad/"
+  ],
+  "/category-sitemap.xml": [
+   "/blog/category/technical-seo/",
+   "/blog/category/off-page-seo/"
+  ]
+ },
+ "pages": [
+  {
+   "path": "/blog/",
+   "status": 200,
+   "canonical": "/blog/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "مدونة سيو هاوس | سيو هاوس"
+  },
+  {
+   "path": "/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+   "status": 200,
+   "canonical": "/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة - سيو هاوس"
+  },
+  {
+   "path": "/blog/why-is-my-website-not-showing-in-search-engines/",
+   "status": 200,
+   "canonical": "/blog/why-is-my-website-not-showing-in-search-engines/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول - سيو هاوس"
+  },
+  {
+   "path": "/blog/fix-404-not-found/",
+   "status": 200,
+   "canonical": "/blog/fix-404-not-found/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزانية الزحف وتجربة المستخدم - سيو هاوس"
+  },
+  {
+   "path": "/blog/how-to-build-backlinks-correctly/",
+   "status": 200,
+   "canonical": "/blog/how-to-build-backlinks-correctly/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "كيفية بناء باك لينك موقعك بطريقة صحيحة | دليل عملي من سيو هاوس"
+  },
+  {
+   "path": "/",
+   "status": 200,
+   "canonical": "/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "سيو هاوس | تحسين الظهور وتصميم المواقع والمتاجر"
+  },
+  {
+   "path": "/privacy-policy/",
+   "status": 200,
+   "canonical": "/privacy-policy/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "سياسة الخصوصية - سيو هاوس"
+  },
+  {
+   "path": "/team/",
+   "status": 200,
+   "canonical": "/team/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "فريق سيو هاوس | سيو هاوس"
+  },
+  {
+   "path": "/services/seo/on-page/",
+   "status": 200,
+   "canonical": "/services/seo/on-page/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "خدمة السيو الداخلي وتحسين صفحات الموقع | سيو هاوس"
+  },
+  {
+   "path": "/pricing/",
+   "status": 200,
+   "canonical": "/pricing/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "أسعار خدمات سيو هاوس ونطاق العمل | سيو هاوس"
+  },
+  {
+   "path": "/services/seo/content/",
+   "status": 200,
+   "canonical": "/services/seo/content/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "خدمة كتابة محتوى السيو للمواقع والمتاجر | سيو هاوس"
+  },
+  {
+   "path": "/contact/",
+   "status": 200,
+   "canonical": "/contact/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "اتصل بنا واحجز مكالمة استشارية | سيو هاوس"
+  },
+  {
+   "path": "/services/seo/backlinks/",
+   "status": 200,
+   "canonical": "/services/seo/backlinks/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "خدمة بناء الروابط الخارجية للمواقع | سيو هاوس"
+  },
+  {
+   "path": "/services/seo/",
+   "status": 200,
+   "canonical": "/services/seo/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "خدمات تحسين محركات البحث SEO | سيو هاوس"
+  },
+  {
+   "path": "/services/seo/consulting/",
+   "status": 200,
+   "canonical": "/services/seo/consulting/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "استشارات السيو وتحليل الأداء | سيو هاوس"
+  },
+  {
+   "path": "/services/web-design/",
+   "status": 200,
+   "canonical": "/services/web-design/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تصميم وتطوير مواقع الشركات | سيو هاوس"
+  },
+  {
+   "path": "/services/seo/ksa/",
+   "status": 200,
+   "canonical": "/services/seo/ksa/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "عنوان كتبه المحرر لصفحة السعودية"
+  },
+  {
+   "path": "/services/stores/",
+   "status": 200,
+   "canonical": "/services/stores/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تصميم وتطوير المتاجر الإلكترونية | سيو هاوس"
+  },
+  {
+   "path": "/services/seo/egypt/",
+   "status": 200,
+   "canonical": "/services/seo/egypt/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "شركة سيو في مصر لتحسين ظهور موقعك | سيو هاوس"
+  },
+  {
+   "path": "/services/products/",
+   "status": 200,
+   "canonical": "/services/products/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "رفع المنتجات وإدارة محتوى المتاجر | سيو هاوس"
+  },
+  {
+   "path": "/services/seo/uae/",
+   "status": 200,
+   "canonical": "/services/seo/uae/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "شركة سيو في الإمارات لتحسين ظهور موقعك | سيو هاوس"
+  },
+  {
+   "path": "/sectors/ecommerce/",
+   "status": 200,
+   "canonical": "/sectors/ecommerce/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تحسين محركات البحث للمتاجر الإلكترونية | سيو هاوس"
+  },
+  {
+   "path": "/services/web-design/wordpress/",
+   "status": 200,
+   "canonical": "/services/web-design/wordpress/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تصميم مواقع ووردبريس للشركات | سيو هاوس"
+  },
+  {
+   "path": "/sectors/health/",
+   "status": 200,
+   "canonical": "/sectors/health/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تحسين محركات البحث للقطاع الطبي | سيو هاوس"
+  },
+  {
+   "path": "/services/web-design/webflow/",
+   "status": 200,
+   "canonical": "/services/web-design/webflow/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تصميم مواقع ويب فلو للشركات | سيو هاوس"
+  },
+  {
+   "path": "/sectors/real-estate/",
+   "status": 200,
+   "canonical": "/sectors/real-estate/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تحسين محركات البحث لقطاع العقارات | سيو هاوس"
+  },
+  {
+   "path": "/services/web-design/react-next/",
+   "status": 200,
+   "canonical": "/services/web-design/react-next/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تطوير مواقع وتطبيقات رياكت ونكست | سيو هاوس"
+  },
+  {
+   "path": "/sectors/education/",
+   "status": 200,
+   "canonical": "/sectors/education/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تحسين محركات البحث لقطاع التعليم والتدريب | سيو هاوس"
+  },
+  {
+   "path": "/services/web-design/custom-dev/",
+   "status": 200,
+   "canonical": "/services/web-design/custom-dev/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "البرمجة الخاصة وتطوير الأنظمة والمنصات | سيو هاوس"
+  },
+  {
+   "path": "/sectors/tourism/",
+   "status": 200,
+   "canonical": "/sectors/tourism/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تحسين محركات البحث لقطاع السياحة والسفر | سيو هاوس"
+  },
+  {
+   "path": "/services/stores/shopify/",
+   "status": 200,
+   "canonical": "/services/stores/shopify/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تصميم وتطوير متاجر شوبيفاي | سيو هاوس"
+  },
+  {
+   "path": "/services/",
+   "status": 200,
+   "canonical": "/services/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "خدمات سيو هاوس | سيو، مواقع، متاجر ومحتوى المنتجات"
+  },
+  {
+   "path": "/sectors/tech/",
+   "status": 200,
+   "canonical": "/sectors/tech/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تحسين محركات البحث لشركات التقنية والبرمجيات | سيو هاوس"
+  },
+  {
+   "path": "/services/stores/salla/",
+   "status": 200,
+   "canonical": "/services/stores/salla/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تصميم وتطوير متاجر سلة | سيو هاوس"
+  },
+  {
+   "path": "/sectors/",
+   "status": 200,
+   "canonical": "/sectors/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "قطاعات نعمل عليها في السيو والمواقع والمتاجر | سيو هاوس"
+  },
+  {
+   "path": "/sectors/legal/",
+   "status": 200,
+   "canonical": "/sectors/legal/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تحسين محركات البحث لمكاتب المحاماة | سيو هاوس"
+  },
+  {
+   "path": "/services/stores/zid/",
+   "status": 200,
+   "canonical": "/services/stores/zid/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تصميم وتطوير متاجر زد | سيو هاوس"
+  },
+  {
+   "path": "/results/",
+   "status": 200,
+   "canonical": "/results/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "نتائج ودراسات حالة من مشاريع سيو هاوس | سيو هاوس"
+  },
+  {
+   "path": "/sectors/food/",
+   "status": 200,
+   "canonical": "/sectors/food/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تحسين محركات البحث للمطاعم وعلامات الأغذية | سيو هاوس"
+  },
+  {
+   "path": "/services/stores/woocommerce/",
+   "status": 200,
+   "canonical": "/services/stores/woocommerce/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "تصميم وتطوير متاجر ووكومرس | سيو هاوس"
+  },
+  {
+   "path": "/about/",
+   "status": 200,
+   "canonical": "/about/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "عن سيو هاوس | فريق متخصص في نمو المواقع والمتاجر"
+  },
+  {
+   "path": "/services/seo/technical/",
+   "status": 200,
+   "canonical": "/services/seo/technical/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "خدمة السيو التقني وتدقيق الموقع | سيو هاوس"
+  },
+  {
+   "path": "/results/قطاع-التجارة-الإلكترونية/",
+   "status": 200,
+   "canonical": "/results/قطاع-التجارة-الإلكترونية/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "قطاع التجارة الإلكترونية - سيو هاوس"
+  },
+  {
+   "path": "/results/قطاع-الصحة-والطب/",
+   "status": 200,
+   "canonical": "/results/قطاع-الصحة-والطب/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "قطاع الصحة والطب - سيو هاوس"
+  },
+  {
+   "path": "/results/تستتست/",
+   "status": 200,
+   "canonical": "/results/تستتست/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "قطاع التعليم والتدريب - سيو هاوس"
+  },
+  {
+   "path": "/team/esraa-mohamed/",
+   "status": 200,
+   "canonical": "/team/esraa-mohamed/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "إسراء محمد - سيو هاوس"
+  },
+  {
+   "path": "/team/nada-mahmoud/",
+   "status": 200,
+   "canonical": "/team/nada-mahmoud/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "ندى محمود - سيو هاوس"
+  },
+  {
+   "path": "/team/adham-hesham/",
+   "status": 200,
+   "canonical": "/team/adham-hesham/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "أدهم هشام - سيو هاوس"
+  },
+  {
+   "path": "/team/mariam-hesham/",
+   "status": 200,
+   "canonical": "/team/mariam-hesham/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "مريم هشام - سيو هاوس"
+  },
+  {
+   "path": "/team/seif-sanad/",
+   "status": 200,
+   "canonical": "/team/seif-sanad/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "سيف سند - سيو هاوس"
+  },
+  {
+   "path": "/team/morad-salah/",
+   "status": 200,
+   "canonical": "/team/morad-salah/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "مراد صلاح - سيو هاوس"
+  },
+  {
+   "path": "/team/yasser-youssef/",
+   "status": 200,
+   "canonical": "/team/yasser-youssef/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "ياسر يوسف - سيو هاوس"
+  },
+  {
+   "path": "/team/noha-elmahdy/",
+   "status": 200,
+   "canonical": "/team/noha-elmahdy/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "نهى المهدي - سيو هاوس"
+  },
+  {
+   "path": "/team/mohamed-moawad/",
+   "status": 200,
+   "canonical": "/team/mohamed-moawad/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "محمد معوض - سيو هاوس"
+  },
+  {
+   "path": "/team/eman-farid/",
+   "status": 200,
+   "canonical": "/team/eman-farid/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "إيمان فريد - سيو هاوس"
+  },
+  {
+   "path": "/team/maha-ali/",
+   "status": 200,
+   "canonical": "/team/maha-ali/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "مها علي - سيو هاوس"
+  },
+  {
+   "path": "/team/mennatallah-said/",
+   "status": 200,
+   "canonical": "/team/mennatallah-said/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "منةالله سعيد - سيو هاوس"
+  },
+  {
+   "path": "/team/mona-ali/",
+   "status": 200,
+   "canonical": "/team/mona-ali/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "منى علي - سيو هاوس"
+  },
+  {
+   "path": "/team/esraa-kamal/",
+   "status": 200,
+   "canonical": "/team/esraa-kamal/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "إسراء كمال - سيو هاوس"
+  },
+  {
+   "path": "/team/heba-geneedy/",
+   "status": 200,
+   "canonical": "/team/heba-geneedy/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "هبه جنيدي - سيو هاوس"
+  },
+  {
+   "path": "/team/mohamed-hassan/",
+   "status": 200,
+   "canonical": "/team/mohamed-hassan/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "محمد حسن - سيو هاوس"
+  },
+  {
+   "path": "/team/mustafa-mahmoud/",
+   "status": 200,
+   "canonical": "/team/mustafa-mahmoud/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "مصطفي محمود - سيو هاوس"
+  },
+  {
+   "path": "/team/ahmed-sanad/",
+   "status": 200,
+   "canonical": "/team/ahmed-sanad/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "أحمد سند - سيو هاوس"
+  },
+  {
+   "path": "/blog/category/technical-seo/",
+   "status": 200,
+   "canonical": "/blog/category/technical-seo/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "سيو تقني - سيو هاوس"
+  },
+  {
+   "path": "/blog/category/off-page-seo/",
+   "status": 200,
+   "canonical": "/blog/category/off-page-seo/",
+   "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+   "title": "السيو الخارجي - سيو هاوس"
+  }
+ ],
+ "links": {
+  "/": 200,
+  "/about/": 200,
+  "/blog/": 200,
+  "/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/": 200,
+  "/blog/category/off-page-seo/": 200,
+  "/blog/category/technical-seo/": 200,
+  "/blog/fix-404-not-found/": 200,
+  "/blog/how-to-build-backlinks-correctly/": 200,
+  "/blog/why-is-my-website-not-showing-in-search-engines/": 200,
+  "/contact/": 200,
+  "/pricing/": 200,
+  "/privacy-policy/": 200,
+  "/results/": 200,
+  "/results/تستتست/": 200,
+  "/results/قطاع-التجارة-الإلكترونية/": 200,
+  "/results/قطاع-الصحة-والطب/": 200,
+  "/sectors/": 200,
+  "/sectors/ecommerce/": 200,
+  "/sectors/education/": 200,
+  "/sectors/food/": 200,
+  "/sectors/health/": 200,
+  "/sectors/legal/": 200,
+  "/sectors/real-estate/": 200,
+  "/sectors/tech/": 200,
+  "/sectors/tourism/": 200,
+  "/services/": 200,
+  "/services/products/": 200,
+  "/services/seo/": 200,
+  "/services/seo/backlinks/": 200,
+  "/services/seo/consulting/": 200,
+  "/services/seo/content/": 200,
+  "/services/seo/egypt/": 200,
+  "/services/seo/ksa/": 200,
+  "/services/seo/on-page/": 200,
+  "/services/seo/technical/": 200,
+  "/services/seo/uae/": 200,
+  "/services/stores/": 200,
+  "/services/stores/salla/": 200,
+  "/services/stores/shopify/": 200,
+  "/services/stores/woocommerce/": 200,
+  "/services/stores/zid/": 200,
+  "/services/web-design/": 200,
+  "/services/web-design/custom-dev/": 200,
+  "/services/web-design/react-next/": 200,
+  "/services/web-design/webflow/": 200,
+  "/services/web-design/wordpress/": 200,
+  "/team/": 200,
+  "/team/adham-hesham/": 200,
+  "/team/ahmed-sanad/": 200,
+  "/team/eman-farid/": 200,
+  "/team/esraa-kamal/": 200,
+  "/team/esraa-mohamed/": 200,
+  "/team/heba-geneedy/": 200,
+  "/team/maha-ali/": 200,
+  "/team/mariam-hesham/": 200,
+  "/team/mennatallah-said/": 200,
+  "/team/mohamed-hassan/": 200,
+  "/team/mohamed-moawad/": 200,
+  "/team/mona-ali/": 200,
+  "/team/morad-salah/": 200,
+  "/team/mustafa-mahmoud/": 200,
+  "/team/nada-mahmoud/": 200,
+  "/team/noha-elmahdy/": 200,
+  "/team/seif-sanad/": 200,
+  "/team/yasser-youssef/": 200,
+  "/terms/": 200
+ },
+ "problems": [],
+ "php_errors": []
+}

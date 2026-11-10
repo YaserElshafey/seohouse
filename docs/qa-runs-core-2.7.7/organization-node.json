@@ -1,0 +1,140 @@
+{
+ "/": {
+  "@type": "Organization",
+  "@id": "http://127.0.0.1:8090/#organization",
+  "name": "سيو هاوس",
+  "alternateName": "SEO House",
+  "url": "http://127.0.0.1:8090/",
+  "logo": {
+   "@type": "ImageObject",
+   "@id": "http://127.0.0.1:8090/#logo",
+   "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+   "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+   "width": 290,
+   "height": 68
+  },
+  "image": {
+   "@id": "http://127.0.0.1:8090/#logo"
+  },
+  "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+  "foundingDate": "2017",
+  "telephone": "+201050861791",
+  "email": "info@seohouse.agency",
+  "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "234 شارع عبد السلام عارف، لوران",
+   "addressLocality": "الإسكندرية",
+   "addressRegion": "الإسكندرية",
+   "addressCountry": "EG"
+  },
+  "areaServed": [
+   {
+    "@type": "Country",
+    "name": "السعودية"
+   },
+   {
+    "@type": "Country",
+    "name": "مصر"
+   },
+   {
+    "@type": "Country",
+    "name": "الإمارات"
+   }
+  ],
+  "sameAs": [
+   "https://www.facebook.com/seohouse.agency"
+  ]
+ },
+ "/services/seo/ksa/": {
+  "@type": "Organization",
+  "@id": "http://127.0.0.1:8090/#organization",
+  "name": "سيو هاوس",
+  "alternateName": "SEO House",
+  "url": "http://127.0.0.1:8090/",
+  "logo": {
+   "@type": "ImageObject",
+   "@id": "http://127.0.0.1:8090/#logo",
+   "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+   "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+   "width": 290,
+   "height": 68
+  },
+  "image": {
+   "@id": "http://127.0.0.1:8090/#logo"
+  },
+  "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+  "foundingDate": "2017",
+  "telephone": "+201050861791",
+  "email": "info@seohouse.agency",
+  "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "234 شارع عبد السلام عارف، لوران",
+   "addressLocality": "الإسكندرية",
+   "addressRegion": "الإسكندرية",
+   "addressCountry": "EG"
+  },
+  "areaServed": [
+   {
+    "@type": "Country",
+    "name": "السعودية"
+   },
+   {
+    "@type": "Country",
+    "name": "مصر"
+   },
+   {
+    "@type": "Country",
+    "name": "الإمارات"
+   }
+  ],
+  "sameAs": [
+   "https://www.facebook.com/seohouse.agency"
+  ]
+ },
+ "/contact/": {
+  "@type": "Organization",
+  "@id": "http://127.0.0.1:8090/#organization",
+  "name": "سيو هاوس",
+  "alternateName": "SEO House",
+  "url": "http://127.0.0.1:8090/",
+  "logo": {
+   "@type": "ImageObject",
+   "@id": "http://127.0.0.1:8090/#logo",
+   "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+   "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+   "width": 290,
+   "height": 68
+  },
+  "image": {
+   "@id": "http://127.0.0.1:8090/#logo"
+  },
+  "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+  "foundingDate": "2017",
+  "telephone": "+201050861791",
+  "email": "info@seohouse.agency",
+  "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "234 شارع عبد السلام عارف، لوران",
+   "addressLocality": "الإسكندرية",
+   "addressRegion": "الإسكندرية",
+   "addressCountry": "EG"
+  },
+  "areaServed": [
+   {
+    "@type": "Country",
+    "name": "السعودية"
+   },
+   {
+    "@type": "Country",
+    "name": "مصر"
+   },
+   {
+    "@type": "Country",
+    "name": "الإمارات"
+   }
+  ],
+  "sameAs": [
+   "https://www.facebook.com/seohouse.agency"
+  ]
+ }
+}

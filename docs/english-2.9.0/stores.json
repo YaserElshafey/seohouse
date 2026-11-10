@@ -1,0 +1,245 @@
+{
+ "id": 77,
+ "key": "stores",
+ "title": "E-commerce Store Design",
+ "slug": "stores",
+ "parent": 67,
+ "path": "/services/stores/",
+ "template": "page-templates/stores.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "E-commerce Store Design That Grows Your Sales | SEO House",
+  "sh_seo_description": "Professional e-commerce store design on Salla, Zid, Shopify or WooCommerce: clear categories, product pages that sell, payment and shipping, full tracking.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "E-commerce store design and development",
+  "sh_crumb": "Store Design & Development",
+  "rank_math_title": "E-commerce Store Design That Grows Your Sales | SEO House",
+  "rank_math_description": "Professional e-commerce store design on Salla, Zid, Shopify or WooCommerce: clear categories, product pages that sell, payment and shipping, full tracking.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "e-commerce store design"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Online stores",
+   "title": "E-commerce store design",
+   "text": "We design the catalog, product pages and checkout flow so shoppers get from landing to ordering with as little friction as possible, and we track every step to see where they drop off.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "The buying journey",
+   "label": "The buying journey in your store",
+   "items": [
+    {
+     "label": "Visit",
+     "label_2": "100%",
+     "variant": "v1"
+    },
+    {
+     "label": "Category",
+     "label_2": "—",
+     "variant": "v2"
+    },
+    {
+     "label": "Product",
+     "label_2": "—",
+     "variant": "v3"
+    },
+    {
+     "label": "Cart",
+     "label_2": "—",
+     "variant": "v4"
+    },
+    {
+     "label": "Checkout",
+     "label_2": "—",
+     "variant": "v5"
+    },
+    {
+     "label": "Order",
+     "label_2": "Goal",
+     "variant": "v6"
+    }
+   ],
+   "label_2": "Every extra step loses you buyers."
+  },
+  {
+   "acf_fc_layout": "journey",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Shopping experience",
+   "title": "Five stops every shopper passes through",
+   "items": [
+    {
+     "heading": "Categories & search",
+     "label": "Categories that match how shoppers think, with search and filters that get them to the right product fast."
+    },
+    {
+     "heading": "Product page",
+     "label": "Clear photos, full specifications, size and color options, and answers to pre-purchase questions."
+    },
+    {
+     "heading": "Cart",
+     "label": "A clear order summary, shipping costs shown early, and easy quantity changes."
+    },
+    {
+     "heading": "Payment & shipping",
+     "label": "Local payment methods, shipping options and delivery times, with no unnecessary steps."
+    },
+    {
+     "heading": "Order tracking",
+     "label": "Tracking add-to-cart, checkout starts and completed orders, so you know where shoppers drop off."
+    }
+   ],
+   "label": "Search for a product",
+   "label_2": "Fragrances",
+   "items_2": [
+    {
+     "label": "Gifts"
+    },
+    {
+     "label": "Deals"
+    }
+   ],
+   "items_3": [
+    {
+     "label": "Cart"
+    },
+    {
+     "label": "2"
+    }
+   ],
+   "label_3": "Checkout & shipping"
+  },
+  {
+   "acf_fc_layout": "platforms",
+   "sh_hide": 0,
+   "eyebrow": "Platforms we build on",
+   "title": "We build on the platform that fits how you operate",
+   "text": "We choose how to build your store based on what you sell, how you manage orders and inventory, and the integrations you need. Then we set up the pages, categories and product data so customers can find what they want and buy with ease.",
+   "items": [
+    {
+     "link": 71,
+     "logo": "assets/platforms/official/shopify.svg",
+     "logo_image": "",
+     "eyebrow": "Multi-market stores",
+     "heading": "Shopify",
+     "text": "For stores that sell to more than one market and need ready-made apps and integrations.",
+     "label": "Shopify service →"
+    },
+    {
+     "link": 69,
+     "logo": "assets/platforms/official/salla.svg",
+     "logo_image": "",
+     "eyebrow": "Local operations",
+     "heading": "Salla",
+     "text": "For stores in Saudi Arabia that want local payment and shipping and simple day-to-day management.",
+     "label": "Salla service →"
+    }
+   ],
+   "link": 75,
+   "heading": "Zid",
+   "eyebrow_2": "Operations dashboard",
+   "heading_2": "Zid",
+   "text_2": "For merchants who manage their catalog, orders and customers from one dashboard, with local integrations.",
+   "label": "Zid service →",
+   "link_2": 73,
+   "logo": "assets/platforms/official/woocommerce.svg",
+   "logo_image": "",
+   "eyebrow_3": "Store and content together",
+   "heading_3": "WooCommerce",
+   "text_3": "For businesses that want their store and content on one website, with full control over their data.",
+   "label_2": "WooCommerce service →"
+  },
+  {
+   "acf_fc_layout": "phases",
+   "sh_hide": 0,
+   "eyebrow": "Project phases",
+   "title": "From catalog to first order",
+   "items": [
+    {
+     "heading": "Catalog",
+     "label": "Reviewing products, categories and variants before the build."
+    },
+    {
+     "heading": "Structure",
+     "label": "The category and page structure, and the purchase path."
+    },
+    {
+     "heading": "Design & build",
+     "label": "On-brand designs, built inside the platform."
+    },
+    {
+     "heading": "Integrations",
+     "label": "Payment, shipping, invoicing and inventory, plus test orders."
+    },
+    {
+     "heading": "Launch & measurement",
+     "label": "Event tracking setup, final testing, handover and training."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Product upload & content management",
+     "link": 27
+    },
+    {
+     "label": "E-commerce sector",
+     "link": 31
+    },
+    {
+     "label": "Website design & development",
+     "link": 87
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Online store design FAQ",
+   "items": [
+    {
+     "question": "Which e-commerce platform is right for my store?",
+     "answer": "It depends on your market, catalog size and how you handle payment and shipping. We recommend a platform after reviewing your products and operating plan."
+    },
+    {
+     "question": "Do you upload the products?",
+     "answer": "Product upload and product data management is a separate service that can be added to your store project."
+    },
+    {
+     "question": "Do you set up payment and shipping?",
+     "answer": "Yes. We connect the payment gateways and shipping companies available on your platform and test the order process from start to finish."
+    },
+    {
+     "question": "Is the store ready to rank in search?",
+     "answer": "We set up the category structure, URLs, meta tags and speed. Ongoing work on search visibility is a separate SEO service."
+    },
+    {
+     "question": "Can you migrate an existing store?",
+     "answer": "Yes, with a plan for migrating products, URLs and redirects that protects the search visibility your store has already built."
+    },
+    {
+     "question": "How long does it take to build an online store?",
+     "answer": "It depends on the size of your catalog and the integrations required. We set the timeline once the scope is agreed."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "stores",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

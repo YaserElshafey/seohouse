@@ -1,0 +1,26 @@
+note  /: no FAQPage
+note  /about/: no FAQPage
+note  /contact/: no FAQPage
+note  /services/: ItemList 17 items
+note  /sectors/: ItemList 8 items
+note  /results/: ItemList 3 items
+note  /results/: no FAQPage
+note  /blog/: ItemList 1 items
+note  /blog/: no FAQPage
+note  /team/: ItemList 17 items
+note  /team/: no FAQPage
+note  /services/seo/ksa/: no serviceType (field empty)
+note  /results/قطاع-الصحة-والطب/: author={'@id': 'http://127.0.0.1:8090/#organization'} image=no
+note  /results/قطاع-الصحة-والطب/: no FAQPage
+note  /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/: author=None image=yes
+note  /blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/: no FAQPage
+note  /team/yasser-youssef/: no FAQPage
+note  /terms/: no FAQPage
+note  /privacy-policy/: no FAQPage
+note  /blog/category/technical-seo/: no FAQPage
+ERROR /: 2 JSON-LD blocks
+ERROR /services/seo/: 2 JSON-LD blocks
+ERROR /services/seo/ksa/: 2 JSON-LD blocks
+ERROR /services/seo/egypt/: 2 JSON-LD blocks
+ERROR /services/seo/uae/: 2 JSON-LD blocks
+27 pages, 5 errors

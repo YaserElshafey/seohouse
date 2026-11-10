@@ -1,0 +1,45 @@
+== 1. restore the edited 2.6.0 site (database + theme 2.6.0)
+Success: Installed 1 of 1 themes.
+name	version
+seohouse	2.7.0
+== 2. colour settings saved with the 2.x defaults (as if «إعدادات سيو هاوس» had been saved)
+== 3. snapshot before
+Success: 1448 posts, 13829 meta, 6 terms, 200 options → /home/claude/wptest-fixture/run/before.json
+61 urls; non-200: {}; php errors in page: []
+== 4. upgrade: theme ZIP replaces the installed theme
+Success: Installed 1 of 1 themes.
+name	version
+seohouse	2.7.0
+advanced-custom-fields	active	6.8.10
+seo-by-rank-math	active	1.0.279
+seohouse-core	active	2.6.0
+== 5. snapshot after + compare
+Success: 1448 posts, 13829 meta, 6 terms, 200 options → /home/claude/wptest-fixture/run/after.json
+posts    before   1448  after   1448  removed   0  added   0  changed   0
+meta     before  13829  after  13829  removed   0  added   0  changed   0
+terms    before      6  after      6  removed   0  added   0  changed   0
+options  before    200  after    200  removed   0  added   0  changed   0
+CONTENT UNCHANGED
+== 6. crawl after
+61 urls; non-200: {}; php errors in page: []
+-- owner edits visible
+   OK  نحسّن ظهور موقعك في محركات البحث  (http://127.0.0.1:8090/)
+   OK  فريق بخبرات متنوعة يعمل معك لجذب العملاء وزيادة مبيعاتك.  (http://127.0.0.1:8090/)
+   OK  [EDIT-ROW]  (http://127.0.0.1:8090/)
+   OK  [EDIT-HOME-SERVICES]  (http://127.0.0.1:8090/)
+   OK  [EDIT-TEAM]  (http://127.0.0.1:8090/team/)
+   OK  [EDIT-FIT]  (http://127.0.0.1:8090/services/web-design/custom-dev/)
+   OK  [EDIT-WOO]  (http://127.0.0.1:8090/services/stores/woocommerce/)
+   OK  [EDIT-LEGAL]  (http://127.0.0.1:8090/sectors/legal/)
+   OK  [EDIT-BACKLINKS]  (http://127.0.0.1:8090/services/seo/backlinks/)
+-- deleted team member (mona-ali / منى علي)
+   own page among published URLs: none
+   pages showing the name — before upgrade: 0, after: 0 []
+-- status per URL
+   60 URLs answer 200; 404 page: [404]
+   PHP warnings/errors printed in pages: none
+-- text that was on a page before and is missing after (content must not disappear)
+   total lines lost: 0
+RESULT: PASS
+== 7. PHP log
+(end of log)

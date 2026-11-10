@@ -1,0 +1,317 @@
+{
+  "date": "2026-10-03T12:57:18.260Z",
+  "wp": "http://127.0.0.1:8080",
+  "urls": 67,
+  "ok200": 61,
+  "redirects": 1,
+  "notFound": 5,
+  "internalLinks": 2027,
+  "sitemapEntries": 60,
+  "assets": 116,
+  "assetErrors": [],
+  "brokenLinks": [],
+  "sitemapProblems": [
+    {
+      "path": "/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/about/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/blog/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/blog/category/technical-seo/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/contact/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/pricing/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/results/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/results/تستتست/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/results/قطاع-التجارة-الإلكترونية/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/results/قطاع-الصحة-والطب/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/sectors/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/sectors/ecommerce/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/sectors/education/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/sectors/food/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/sectors/health/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/sectors/legal/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/sectors/real-estate/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/sectors/tech/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/sectors/tourism/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/products/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/seo/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/seo/backlinks/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/seo/consulting/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/seo/content/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/seo/egypt/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/seo/ksa/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/seo/on-page/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/seo/technical/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/seo/uae/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/stores/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/stores/salla/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/stores/shopify/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/stores/woocommerce/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/stores/zid/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/web-design/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/web-design/custom-dev/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/web-design/react-next/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/web-design/webflow/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/services/web-design/wordpress/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/adham-hesham/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/ahmed-sanad/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/eman-farid/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/esraa-kamal/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/esraa-mohamed/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/heba-geneedy/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/maha-ali/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/mariam-hesham/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/mennatallah-said/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/mohamed-hassan/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/mohamed-moawad/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/mona-ali/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/morad-salah/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/mustafa-mahmoud/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/nada-mahmoud/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/noha-elmahdy/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/seif-sanad/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    },
+    {
+      "path": "/team/yasser-youssef/",
+      "status": 200,
+      "robots": "max-image-preview:large, noindex, nofollow"
+    }
+  ],
+  "indexableNotInSitemap": [],
+  "draftsLinkedOrListed": []
+}

@@ -1,0 +1,469 @@
+{
+ "dry_run": true,
+ "items": [
+  {
+   "id": 2746,
+   "url": "https://seohouse.agency/en/sectors/",
+   "title": {
+    "before": "Industries We Serve: SEO by Industry | SEO House",
+    "after": "SEO by Industry in Saudi Arabia, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "SEO for online stores, clinics, real estate, education, tourism, tech, law firms and restaurants, planned around how each industry's customers search.",
+    "after": "SEO for stores, clinics, real estate, education, travel, tech, law firms and restaurants in Saudi Arabia, the UAE and Egypt, built on how each searches."
+   },
+   "focus": {
+    "before": "industries we serve",
+    "after": "seo by industry"
+   }
+  },
+  {
+   "id": 2768,
+   "url": "https://seohouse.agency/en/sectors/ecommerce/",
+   "title": {
+    "before": "E-commerce SEO Services That Grow Online Sales | SEO House",
+    "after": "E-commerce SEO in Saudi Arabia, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "E-commerce SEO that improves category and product pages and fixes duplicate content to win orders. We grew a Saudi store's search revenue 432% in 90 days.",
+    "after": "E-commerce SEO for stores in Saudi Arabia, the UAE and Egypt: category and product pages that win orders. One Saudi store grew search revenue 432% in 90 days."
+   },
+   "focus": {
+    "before": "e-commerce seo",
+    "after": "e-commerce seo saudi arabia"
+   }
+  },
+  {
+   "id": 2798,
+   "url": "https://seohouse.agency/en/sectors/health/",
+   "title": {
+    "before": "Medical SEO for Clinics & Healthcare Providers | SEO House",
+    "after": "Medical SEO for Clinics in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "Medical SEO for clinics and medical centers: specialty, doctor and branch pages built to increase bookings. One medical site grew clicks from 825 to 12.9K.",
+    "after": "Medical SEO for clinics in Saudi Arabia, the UAE and Egypt: specialty, doctor and branch pages built for bookings. One medical site grew clicks 825 to 12.9K."
+   },
+   "focus": {
+    "before": "medical seo",
+    "after": "medical seo saudi arabia"
+   }
+  },
+  {
+   "id": 2826,
+   "url": "https://seohouse.agency/en/sectors/real-estate/",
+   "title": {
+    "before": "Real Estate SEO for Developers & Agencies | SEO House",
+    "after": "Real Estate SEO in Saudi Arabia, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "Real estate SEO for developers, contractors, and sales and rental agencies, with project and area pages that bring in viewing requests from buyers.",
+    "after": "Real estate SEO for developers, contractors and agencies in Saudi Arabia, the UAE and Egypt: project and area pages that bring viewing requests from buyers."
+   },
+   "focus": {
+    "before": "real estate seo",
+    "after": "real estate seo saudi arabia"
+   }
+  },
+  {
+   "id": 2849,
+   "url": "https://seohouse.agency/en/sectors/education/",
+   "title": {
+    "before": "SEO for Education & Training Centers | SEO House",
+    "after": "Education SEO in Saudi Arabia, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "SEO for education and training centers and learning platforms: clear subject and course pages that turn people searching for a course into registrations.",
+    "after": "SEO for education and training centers and learning platforms in Saudi Arabia, the UAE and Egypt: clear course pages that turn searches into registrations."
+   },
+   "focus": {
+    "before": "seo for education and training centers",
+    "after": "education seo saudi arabia"
+   }
+  },
+  {
+   "id": 2879,
+   "url": "https://seohouse.agency/en/sectors/tourism/",
+   "title": {
+    "before": "SEO for Travel & Tourism Companies | SEO House",
+    "after": "Travel & Tourism SEO in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "SEO for travel and tourism companies: destination and package pages plus up-to-date seasonal content that take trip planners straight to booking.",
+    "after": "SEO for travel and tourism companies in Saudi Arabia, the UAE and Egypt: destination and package pages plus seasonal content that take trip planners to booking."
+   },
+   "focus": {
+    "before": "seo for travel and tourism companies",
+    "after": "tourism seo saudi arabia"
+   }
+  },
+  {
+   "id": 2903,
+   "url": "https://seohouse.agency/en/sectors/tech/",
+   "title": {
+    "before": "SEO for Software Companies & SaaS | SEO House",
+    "after": "SaaS & Software SEO in Saudi Arabia, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "SaaS SEO for software and tech companies: solution, use-case, integration and comparison pages that win demo and trial requests from buyers seeking a fix.",
+    "after": "SEO for software and SaaS companies in Saudi Arabia, the UAE and Egypt: solution, use-case, integration and comparison pages that win demo and trial requests."
+   },
+   "focus": {
+    "before": "seo for software companies",
+    "after": "saas seo saudi arabia"
+   }
+  },
+  {
+   "id": 2928,
+   "url": "https://seohouse.agency/en/sectors/legal/",
+   "title": {
+    "before": "SEO for Law Firms & Legal Marketing | SEO House",
+    "after": "SEO for Law Firms in Saudi Arabia, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "SEO for law firms, built on clear practice area pages and trust signals. We took one law firm to the #1 position for the Arabic search “law firm”.",
+    "after": "SEO for law firms in Saudi Arabia, the UAE and Egypt: clear practice area pages and trust signals. We took one law firm to #1 for the Arabic search “law firm”."
+   },
+   "focus": {
+    "before": "seo for law firms",
+    "after": "seo for law firms saudi arabia"
+   }
+  },
+  {
+   "id": 2954,
+   "url": "https://seohouse.agency/en/sectors/food/",
+   "title": {
+    "before": "Restaurant SEO & Local Search for Food Brands | SEO House",
+    "after": "Restaurant SEO in Saudi Arabia, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "Restaurant SEO for restaurants and food brands: clear branch and menu pages that show up in nearby restaurant searches, with easy ordering and booking.",
+    "after": "Restaurant SEO for restaurants and food brands in Saudi Arabia, the UAE and Egypt: branch and menu pages that show up in nearby searches and lead to orders."
+   },
+   "focus": {
+    "before": "restaurant seo",
+    "after": "restaurant seo saudi arabia"
+   }
+  },
+  {
+   "id": 1794,
+   "url": "https://seohouse.agency/en/services/seo/",
+   "title": {
+    "before": "SEO Agency for the Arab Region | SEO House",
+    "after": "SEO Agency in Saudi Arabia, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "SEO House is an SEO company helping businesses in Saudi Arabia, the UAE and Egypt rank higher with content, technical SEO and links, and tracked results.",
+    "after": "SEO House is an SEO agency helping businesses in Saudi Arabia, the UAE and Egypt rank higher on Google with content, technical SEO, links and tracked results."
+   },
+   "focus": {
+    "before": "seo company",
+    "after": "seo agency saudi arabia"
+   }
+  },
+  {
+   "id": 1867,
+   "url": "https://seohouse.agency/en/services/seo/ksa/",
+   "title": {
+    "before": "SEO Company in Saudi Arabia | SEO House",
+    "after": "SEO Company in Saudi Arabia | SEO Services KSA | SEO House"
+   },
+   "description": {
+    "before": "SEO House is an SEO company in Saudi Arabia helping businesses rank on Google, from competitor and content analysis to technical fixes and lead tracking.",
+    "after": "SEO House is an SEO company in Saudi Arabia helping businesses rank on Google, from competitor and content analysis to technical fixes and lead tracking."
+   },
+   "focus": {
+    "before": "seo company in saudi arabia",
+    "after": "seo company in saudi arabia"
+   }
+  },
+  {
+   "id": 2011,
+   "url": "https://seohouse.agency/en/services/seo/content/",
+   "title": {
+    "before": "SEO Content Writing Services for Websites | SEO House",
+    "after": "SEO Content Writing in Saudi Arabia, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "SEO content writing services by human editors: articles, service, category and product pages built on search data, reviewed before publishing and measured.",
+    "after": "SEO content writing for businesses in Saudi Arabia, the UAE and Egypt: articles, service, category and product pages built on search data and edited by people."
+   },
+   "focus": {
+    "before": "seo content writing services",
+    "after": "seo content writing saudi arabia"
+   }
+  },
+  {
+   "id": 1979,
+   "url": "https://seohouse.agency/en/services/seo/technical/",
+   "title": {
+    "before": "Technical SEO Services: Audits & Site Speed | SEO House",
+    "after": "Technical SEO Services in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "Technical SEO services: we audit crawling, indexing, site speed, architecture and structured data, rank issues by impact, then fix them and track results.",
+    "after": "Technical SEO services in Saudi Arabia, the UAE and Egypt: we audit crawling, indexing, speed and structured data, fix issues by impact and track the results."
+   },
+   "focus": {
+    "before": "technical seo services",
+    "after": "technical seo services saudi arabia"
+   }
+  },
+  {
+   "id": 2483,
+   "url": "https://seohouse.agency/en/services/seo/on-page/",
+   "title": {
+    "before": "On-Page SEO Services to Optimize Your Pages | SEO House",
+    "after": "On-Page SEO Services in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "On-page SEO services: we map each page to a clear keyword, optimize titles, descriptions, content and internal links, and fix pages competing for one term.",
+    "after": "On-page SEO services in Saudi Arabia, the UAE and Egypt: one clear keyword per page, better titles, content and internal links, and no competing pages."
+   },
+   "focus": {
+    "before": "on-page seo services",
+    "after": "on-page seo services saudi arabia"
+   }
+  },
+  {
+   "id": 2507,
+   "url": "https://seohouse.agency/en/services/seo/backlinks/",
+   "title": {
+    "before": "Link Building & Backlink Services | SEO House",
+    "after": "Link Building Services in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "Link building services: backlinks from relevant sites with real audiences. We vet every source, document every link and track its impact. No link networks.",
+    "after": "Link building services in Saudi Arabia, the UAE and Egypt: backlinks from relevant sites with real audiences, every source vetted and every link documented."
+   },
+   "focus": {
+    "before": "link building services",
+    "after": "link building services saudi arabia"
+   }
+  },
+  {
+   "id": 2545,
+   "url": "https://seohouse.agency/en/services/seo/consulting/",
+   "title": {
+    "before": "SEO Consulting & Website Performance Analysis | SEO House",
+    "after": "SEO Consulting in Saudi Arabia, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "SEO consulting that turns Search Console and Analytics data into decisions: diagnosing traffic drops, migration plans and clear priorities for your team.",
+    "after": "SEO consulting in Saudi Arabia, the UAE and Egypt: we turn Search Console and Analytics data into decisions, from traffic drops to migrations and priorities."
+   },
+   "focus": {
+    "before": "seo consulting",
+    "after": "seo consultant saudi arabia"
+   }
+  },
+  {
+   "id": 2040,
+   "url": "https://seohouse.agency/en/services/web-design/",
+   "title": {
+    "before": "Website Design Company for Fast, SEO-Ready Sites | SEO House",
+    "after": "Website Design Company in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "Website design company building fast, mobile-friendly sites with an easy-to-use dashboard and Google-ready structure, on WordPress, Webflow or custom code.",
+    "after": "Website design company in Saudi Arabia, the UAE and Egypt: fast, mobile-friendly sites with an easy dashboard and Google-ready structure."
+   },
+   "focus": {
+    "before": "website design company",
+    "after": "website design company saudi arabia"
+   }
+  },
+  {
+   "id": 2246,
+   "url": "https://seohouse.agency/en/services/web-design/wordpress/",
+   "title": {
+    "before": "WordPress Website Design for Businesses | SEO House",
+    "after": "WordPress Website Design in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "WordPress website design with on-brand blocks your team uses to add pages without a developer, plus tuned speed, security, backups and Google-ready setup.",
+    "after": "WordPress website design in Saudi Arabia, the UAE and Egypt: on-brand blocks your team uses to add pages, with tuned speed, security, backups and SEO setup."
+   },
+   "focus": {
+    "before": "wordpress website design",
+    "after": "wordpress website design saudi arabia"
+   }
+  },
+  {
+   "id": 2286,
+   "url": "https://seohouse.agency/en/services/web-design/webflow/",
+   "title": {
+    "before": "Webflow Website Design for Businesses | SEO House",
+    "after": "Webflow Website Design in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "Webflow website design with precise visual control and animation, a CMS your team can edit and built-in SEO settings. No servers or plugins to maintain.",
+    "after": "Webflow website design in Saudi Arabia, the UAE and Egypt: precise design and animation, a CMS your team can edit and built-in SEO, with no servers to run."
+   },
+   "focus": {
+    "before": "webflow website design",
+    "after": "webflow website design saudi arabia"
+   }
+  },
+  {
+   "id": 2322,
+   "url": "https://seohouse.agency/en/services/web-design/react-next/",
+   "title": {
+    "before": "React and Next.js Development, Fast & Scalable | SEO House",
+    "after": "React & Next.js Development in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "React and Next.js development for sites and platforms, with the right rendering for each page, a CMS your team edits without code, and system integrations.",
+    "after": "React and Next.js development in Saudi Arabia, the UAE and Egypt: the right rendering for each page, a CMS your team edits without code, and integrations."
+   },
+   "focus": {
+    "before": "react and next.js development",
+    "after": "next.js development saudi arabia"
+   }
+  },
+  {
+   "id": 2353,
+   "url": "https://seohouse.agency/en/services/web-design/custom-dev/",
+   "title": {
+    "before": "Custom Web Development for Portals & Systems | SEO House",
+    "after": "Custom Web Development in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "Custom web development for portals, bookings, memberships and dashboards, with payment, shipping and accounting integrations, tested on real data.",
+    "after": "Custom web development in Saudi Arabia, the UAE and Egypt: portals, bookings, memberships and dashboards, with payment, shipping and accounting integrations."
+   },
+   "focus": {
+    "before": "custom web development",
+    "after": "custom web development saudi arabia"
+   }
+  },
+  {
+   "id": 2070,
+   "url": "https://seohouse.agency/en/services/stores/",
+   "title": {
+    "before": "E-commerce Store Design That Grows Your Sales | SEO House",
+    "after": "E-commerce Store Design in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "Professional e-commerce store design on Salla, Zid, Shopify or WooCommerce: clear categories, product pages that sell, payment and shipping, full tracking.",
+    "after": "E-commerce store design in Saudi Arabia, the UAE and Egypt on Salla, Zid, Shopify or WooCommerce: clear categories, product pages that sell, payment, shipping."
+   },
+   "focus": {
+    "before": "e-commerce store design",
+    "after": "e-commerce store design saudi arabia"
+   }
+  },
+  {
+   "id": 2577,
+   "url": "https://seohouse.agency/en/services/stores/salla/",
+   "title": {
+    "before": "Salla Store Design in Saudi Arabia | SEO House",
+    "after": "Salla Store Design & Setup in Saudi Arabia | SEO House"
+   },
+   "description": {
+    "before": "Salla store design in your brand, with clear categories, complete product data, payment, shipping and Google Analytics, ready to sell in Saudi Arabia.",
+    "after": "Salla store design and setup in Saudi Arabia: your brand, clear categories, complete product data, local payment, shipping and Google Analytics, ready to sell."
+   },
+   "focus": {
+    "before": "salla store design",
+    "after": "salla store design"
+   }
+  },
+  {
+   "id": 2607,
+   "url": "https://seohouse.agency/en/services/stores/zid/",
+   "title": {
+    "before": "Zid Store Design, Ready to Sell | SEO House",
+    "after": "Zid Store Design & Setup in Saudi Arabia | SEO House"
+   },
+   "description": {
+    "before": "Zid store design with an organized catalog, orders and customers, plus shipping, payment and invoicing via Zid-supported providers and less manual work.",
+    "after": "Zid store design and setup in Saudi Arabia: an organized catalog, orders and customers, plus shipping, payment and invoicing through Zid, with less manual work."
+   },
+   "focus": {
+    "before": "zid store design",
+    "after": "zid store design"
+   }
+  },
+  {
+   "id": 2636,
+   "url": "https://seohouse.agency/en/services/stores/shopify/",
+   "title": {
+    "before": "Shopify Store Design & Development | SEO House",
+    "after": "Shopify Store Design in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "Shopify store design with sections you edit yourself, an organized catalog, payment and shipping, multi-market support, and fewer apps to keep costs down.",
+    "after": "Shopify store design in Saudi Arabia, the UAE and Egypt: sections you edit yourself, an organized catalog, payment and shipping, and fewer apps to cut costs."
+   },
+   "focus": {
+    "before": "shopify store design",
+    "after": "shopify store design saudi arabia"
+   }
+  },
+  {
+   "id": 2666,
+   "url": "https://seohouse.agency/en/services/stores/woocommerce/",
+   "title": {
+    "before": "WooCommerce Store Design on WordPress | SEO House",
+    "after": "WooCommerce Store Design in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "WooCommerce store design that puts your products and content on one site, with payment, shipping, invoicing, order tracking and full control of your data.",
+    "after": "WooCommerce store design in Saudi Arabia, the UAE and Egypt: products and content on one site, with payment, shipping, invoicing and full control of your data."
+   },
+   "focus": {
+    "before": "woocommerce store design",
+    "after": "woocommerce store design saudi arabia"
+   }
+  },
+  {
+   "id": 2698,
+   "url": "https://seohouse.agency/en/services/products/",
+   "title": {
+    "before": "Product Upload Service for Online Stores | SEO House",
+    "after": "Product Upload Services in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "Product upload service for online stores on Salla, Zid, Shopify and WooCommerce: names, descriptions, photos, prices, variants, categories, Google-ready.",
+    "after": "Product upload in Saudi Arabia, the UAE and Egypt for Salla, Zid, Shopify and WooCommerce stores: names, descriptions, photos, prices, variants, categories."
+   },
+   "focus": {
+    "before": "product upload service for online stores",
+    "after": "product upload service saudi arabia"
+   }
+  },
+  {
+   "id": 1754,
+   "url": "https://seohouse.agency/en/services/",
+   "title": {
+    "before": "SEO, Web Design & Online Store Services | SEO House",
+    "after": "SEO & Web Design Services in KSA, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "SEO House is a digital marketing agency specializing in SEO, plus website and online store design and product upload, to turn Google searches into orders.",
+    "after": "SEO House services for businesses in Saudi Arabia, the UAE and Egypt: SEO, website and store design, and product upload, to turn Google searches into orders."
+   },
+   "focus": {
+    "before": "seo services",
+    "after": "seo services saudi arabia"
+   }
+  },
+  {
+   "id": 2383,
+   "url": "https://seohouse.agency/en/results/",
+   "title": {
+    "before": "SEO Case Studies & Results from Real Projects | SEO House",
+    "after": "SEO Case Studies from Saudi Arabia, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "SEO case studies from SEO House projects in e-commerce, healthcare and education: traffic and inquiry growth, with the source and period of every figure.",
+    "after": "SEO case studies from projects in Saudi Arabia, the UAE and Egypt: e-commerce, healthcare, travel and more, with the source and period of every figure."
+   },
+   "focus": {
+    "before": "seo case studies",
+    "after": "seo case studies"
+   }
+  }
+ ]
+}

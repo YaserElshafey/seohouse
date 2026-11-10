@@ -1,0 +1,11 @@
+info       source — حزمة المحتوى 2.5.0 — بصمة التصميم: sha256:8b521594e8dc8695
+updated    page:terms — حقول
+protected  page:privacy-policy — عُدّلت من لوحة التحكم؛ بقيت تعديلاتك (44 اختلافًا عن التصميم).
+info       rank-math — حقول Rank Math مكتملة؛ لم يُنقل شيء
+
+created    0
+updated    1
+skipped    74
+protected  1
+failed     0
+Success: اكتمل التجهيز.

@@ -1,0 +1,177 @@
+{
+ "id": 21,
+ "key": "contact",
+ "title": "Contact Us",
+ "slug": "contact",
+ "parent": 0,
+ "path": "/contact/",
+ "template": "page-templates/contact.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "Contact Us – Book a Free SEO Consultation | SEO House",
+  "sh_seo_description": "Contact SEO House to book a free 30-minute consultation for your website or store. We review it first and recommend the right next step, no commitment.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "contact",
+  "sh_schema_service": "",
+  "sh_crumb": "",
+  "rank_math_title": "Contact Us – Book a Free SEO Consultation | SEO House",
+  "rank_math_description": "Contact SEO House to book a free 30-minute consultation for your website or store. We review it first and recommend the right next step, no commitment.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "free seo consultation"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Contact us",
+   "title": "Book a free consultation",
+   "text": "Send us your website details and goal, and we'll review your site before the call. The call is free, takes 30 minutes and comes with no obligation."
+  },
+  {
+   "acf_fc_layout": "flow",
+   "sh_hide": 0,
+   "contact_title": "Contact details",
+   "eyebrow": "What happens next?",
+   "items": [
+    {
+     "icon": "ib0043c43",
+     "heading": "A free 30-minute call",
+     "text": "One appointment, scheduled once we receive your details."
+    },
+    {
+     "icon": "ie3b5a702",
+     "heading": "We review your site beforehand",
+     "text": "We go through your site and assess it so the call isn't spent on basic questions."
+    },
+    {
+     "icon": "i4f70d48b",
+     "heading": "We discuss your goal and the problem",
+     "text": "What you want to achieve, and what's holding your site back right now."
+    },
+    {
+     "icon": "i5fe1dda6",
+     "heading": "We recommend the right next step",
+     "text": "An honest recommendation, which may be that this work isn't right for you at this stage."
+    }
+   ],
+   "items_2": [
+    {
+     "link": 23,
+     "link_label": "Pricing ranges →"
+    },
+    {
+     "link": 29,
+     "link_label": "Results →"
+    }
+   ],
+   "eyebrow_2": "Qualification form",
+   "title": "Send us your website details",
+   "items_3": [
+    {
+     "label": "Name",
+     "variant": "v1"
+    },
+    {
+     "label": "Company name",
+     "variant": "v2"
+    },
+    {
+     "label": "Email",
+     "variant": "v3"
+    },
+    {
+     "label": "Phone or WhatsApp",
+     "variant": "v4"
+    },
+    {
+     "label": "Website URL",
+     "variant": "v5"
+    }
+   ],
+   "items_4": [
+    {
+     "label": "Market",
+     "items": [
+      {
+       "label": "Saudi Arabia",
+       "variant": "v1"
+      },
+      {
+       "label": "Egypt",
+       "variant": "v2"
+      },
+      {
+       "label": "UAE",
+       "variant": "v3"
+      },
+      {
+       "label": "Other market",
+       "variant": "v4"
+      }
+     ]
+    },
+    {
+     "label": "Service needed",
+     "items": [
+      {
+       "label": "SEO",
+       "variant": "v5"
+      },
+      {
+       "label": "Website design & development",
+       "variant": "v6"
+      },
+      {
+       "label": "Online store design & development",
+       "variant": "v7"
+      },
+      {
+       "label": "Product uploads & content management",
+       "variant": "v8"
+      },
+      {
+       "label": "Not sure yet",
+       "variant": "v9"
+      }
+     ]
+    }
+   ],
+   "label": "Your main goal or challenge",
+   "button": "Submit and choose a time",
+   "label_2": "We use your details only to contact you about your request and schedule the call."
+  },
+  {
+   "acf_fc_layout": "location",
+   "sh_hide": 0,
+   "contact_title": "Contact details",
+   "title": "Our location",
+   "map_embed": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3410.9489683786865!2d29.9714563!3d31.249836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c52bb45e7d97%3A0x699456074ae400a1!2sSEO%20House!5e0!3m2!1sen!2seg!4v1791658489244!5m2!1sen!2seg\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"strict-origin-when-cross-origin\"></iframe>",
+   "directions_url": "https://maps.app.goo.gl/CGwE4yJrwgkZjM9D6",
+   "directions_label": "Get directions"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Results",
+     "link": 29
+    },
+    {
+     "label": "Pricing",
+     "link": 23
+    },
+    {
+     "label": "About us",
+     "link": 19
+    },
+    {
+     "label": "All services",
+     "link": 67
+    }
+   ]
+  }
+ ]
+}

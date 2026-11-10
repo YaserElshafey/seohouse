@@ -1,0 +1,47 @@
+== 1. restore the live-like 2.5.0 state
+name	version
+seohouse	2.5.0
+advanced-custom-fields	active	6.3.12
+seo-by-rank-math	active	1.0.279
+seohouse-core	active	2.5.0
+theme folder files before: 389 (incl. old-theme leftovers: front-page.php.old=yes)
+== 2. snapshot + crawl before
+Success: 1465 posts, 13932 meta, 6 terms, 200 options → /home/claude/wptest-fixture/runs/theme-only/before.json
+63 urls; non-200: {}; php errors in page: []
+== 3A. theme: replace with seohouse-theme.zip
+Success: Installed 1 of 1 themes.
+name	version
+seohouse	2.7.0
+theme folder files after: 358; leftovers: removed
+seohouse-core	active	2.5.0
+== 4. snapshot after + compare
+Success: 1465 posts, 13932 meta, 6 terms, 200 options → /home/claude/wptest-fixture/runs/theme-only/after.json
+posts    before   1465  after   1465  removed   0  added   0  changed   0
+meta     before  13932  after  13932  removed   0  added   0  changed   0
+terms    before      6  after      6  removed   0  added   0  changed   0
+options  before    200  after    200  removed   0  added   0  changed   0
+CONTENT UNCHANGED
+== 5. crawl after + checks
+63 urls; non-200: {}; php errors in page: []
+-- owner edits visible
+   OK  نحسّن ظهور موقعك في محركات البحث  (http://127.0.0.1:8090/)
+   OK  فريق بخبرات متنوعة يعمل معك لجذب العملاء وزيادة مبيعاتك.  (http://127.0.0.1:8090/)
+   OK  [EDIT-ROW]  (http://127.0.0.1:8090/)
+   OK  [EDIT-HOME-SERVICES]  (http://127.0.0.1:8090/)
+   OK  [EDIT-TEAM]  (http://127.0.0.1:8090/team/)
+   OK  [EDIT-FIT]  (http://127.0.0.1:8090/services/web-design/custom-dev/)
+   OK  [EDIT-WOO]  (http://127.0.0.1:8090/services/stores/woocommerce/)
+   OK  [EDIT-LEGAL]  (http://127.0.0.1:8090/sectors/legal/)
+   OK  [EDIT-BACKLINKS]  (http://127.0.0.1:8090/services/seo/backlinks/)
+-- deleted team member (mona-ali / منى علي)
+   own page among published URLs: none
+   pages showing the name — before upgrade: 0, after: 0 []
+-- status per URL
+   62 URLs answer 200; 404 page: [404]
+   PHP warnings/errors printed in pages: none
+-- text that was on a page before and is missing after (content must not disappear)
+   total lines lost: 0
+RESULT: PASS
+== 6. PHP log after the update (ACF 6.3.12's own textdomain notice on WP 7.1 filtered; counted below)
+ACF textdomain notices (not from SEO House): 73
+(end of log)

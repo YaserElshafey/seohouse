@@ -1,0 +1,36 @@
+{
+ "title": "Seif Sanad",
+ "slug": "seif-sanad-en",
+ "content": "",
+ "excerpt": "",
+ "fields": {
+  "role": "SEO Specialist",
+  "experience": "1+ year of experience",
+  "specialties": [
+   {
+    "label": "SEO"
+   },
+   {
+    "label": "Content"
+   }
+  ],
+  "bio": "",
+  "links": [],
+  "linkedin": "",
+  "author": null,
+  "home_photo": 1,
+  "sh_seo_title": "",
+  "sh_seo_description": "",
+  "sh_seo_noindex": 0,
+  "sh_seo_og_image": null,
+  "sh_crumb": "",
+  "sh_crumb_ancestor": "",
+  "sh_schema_service": "",
+  "sh_schema_type": "auto"
+ },
+ "seo": {
+  "rank_math_title": "Seif Sanad – SEO Specialist | SEO House",
+  "rank_math_description": "Seif Sanad is an SEO Specialist at SEO House, with 1+ year of experience in SEO and content for business websites in Saudi Arabia, Egypt and the UAE.",
+  "rank_math_focus_keyword": "seif sanad"
+ }
+}

@@ -1,0 +1,584 @@
+/* SEO House — theme components that sit around the generated design sections. */
+
+[hidden] { display: none !important; }
+
+.sh-skip { position: absolute; inset-inline-start: 12px; top: -60px; z-index: 100; background: var(--sh-blue); color: #fff; padding: 10px 16px; border-radius: 10px; font-weight: 700; }
+.sh-skip:focus { top: 12px; }
+
+.sh-main { display: block; }
+.sh-admin-hint { max-width: 1200px; margin: 40px auto; padding: 18px 20px; border: 1px dashed rgba(40, 84, 232, .6); border-radius: 12px; color: var(--sh-link); font-size: 15px; }
+
+/* hover states of shared components (design style-hover values) */
+.sh-hv-cta:hover { background: var(--sh-blue-hover) !important; }
+.sh-hv-nav:hover { color: var(--sh-link) !important; background: rgba(40, 84, 232, .07) !important; }
+.sh-hv-nav:focus-visible, .sh-lang-switch:focus-visible { outline: 2px solid var(--sh-blue); outline-offset: 2px; }
+.sh-lang-switch:hover { color: var(--sh-link) !important; background: rgba(40, 84, 232, .07); }
+.sh-hv-mega:hover { background: rgba(171, 182, 194, 0.1) !important; }
+.sh-hv-link:hover { color: var(--sh-link) !important; }
+.sh-hv-onblue:hover, .sh-hv-onblue:focus-visible { background: var(--sh-blue-tint) !important; color: #1A3AB0 !important; }
+/* search field on the blue heroes: the design's grey placeholder is ~2:1 on blue */
+[data-sh-q]::placeholder { color: rgba(255, 255, 255, .78); }
+.sh-hv-foot:hover { color: #fff !important; text-decoration: underline !important; text-underline-offset: 4px !important; }
+
+/* header: open mega-menu button */
+[data-sh-menu] button[aria-expanded="true"] { color: var(--sh-link) !important; }
+[data-sh-menu] button[aria-expanded="true"] [data-chev] { transform: rotate(180deg); }
+
+/* booking */
+[data-bk-grid] { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); }
+@media (max-width: 899px) { [data-bk-grid] { grid-template-columns: 1fr; } }
+[data-bk-row] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 559px) { [data-bk-row] { grid-template-columns: 1fr; } }
+[data-bk-pick] { border: 1px solid var(--sh-line); background: #fff; color: var(--sh-ink); }
+[data-bk-pick][aria-pressed="true"] { border-color: var(--sh-blue); background: var(--sh-blue); color: #fff; }
+/* service choices: centred rows, wrap inside the form (long labels wrap instead of overflowing) */
+[data-bk-pick] { max-width: 100%; white-space: normal; line-height: 1.5; padding-block: 8px !important; text-align: center; }
+@media (max-width: 559px) { [data-bk-services] > div { gap: 6px !important; } [data-bk-pick] { padding-inline: 12px !important; font-size: 13.5px !important; } }
+[data-sh-booking] form[aria-busy="true"] button[type="submit"] { opacity: .7; cursor: progress; }
+
+/* accessibility: pause long animations on request */
+[data-sh-paused] *, [data-sh-paused] { animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* WordPress content (articles, legal pages) */
+.sh-prose { font-size: 17px; line-height: 1.95; color: var(--sh-text); }
+.sh-prose > * + * { margin-top: 1.1em; }
+.sh-prose h2 { font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(22px, 2vw, 28px); line-height: 1.4; color: var(--sh-ink); margin: 1.8em 0 0; scroll-margin-top: 96px; }
+.sh-prose h3 { font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(19px, 1.6vw, 22px); line-height: 1.45; color: var(--sh-ink); margin: 1.5em 0 0; scroll-margin-top: 96px; }
+.sh-prose h4 { font-weight: 700; font-size: 18px; color: var(--sh-ink); }
+.sh-prose a { color: var(--sh-link); text-decoration: underline; text-underline-offset: 3px; }
+.sh-prose a:hover { color: var(--sh-link-hover); }
+.sh-prose ul, .sh-prose ol { padding-inline-start: 1.3em; }
+.sh-prose li + li { margin-top: .4em; }
+.sh-prose strong { color: var(--sh-ink); }
+.sh-prose blockquote { margin-inline: 0; padding: 14px 20px; border-inline-start: 3px solid var(--sh-blue); background: var(--sh-surface); border-radius: 0 12px 12px 0; color: var(--sh-ink); }
+.sh-prose img { max-width: 100%; height: auto; border-radius: 14px; }
+.sh-prose figure { margin: 1.6em 0; }
+.sh-prose figcaption { font-size: 14px; color: var(--sh-text); margin-top: 8px; text-align: center; }
+.sh-prose table { width: 100%; border-collapse: collapse; font-size: 15.5px; display: block; overflow-x: auto; }
+.sh-prose th, .sh-prose td { border: 1px solid var(--sh-line); padding: 10px 12px; text-align: start; }
+.sh-prose th { color: var(--sh-ink); background: var(--sh-surface); }
+.sh-prose code { font-size: .92em; background: rgba(37, 43, 51, .06); padding: 2px 6px; border-radius: 6px; direction: ltr; unicode-bidi: isolate; }
+.sh-prose pre { direction: ltr; overflow-x: auto; background: #252B33; color: #fff; padding: 16px; border-radius: 12px; }
+.sh-prose.is-light { color: var(--sh-text); }
+.sh-prose.is-light h2, .sh-prose.is-light h3, .sh-prose.is-light h4, .sh-prose.is-light strong { color: var(--sh-ink); }
+.sh-prose.is-light a { color: var(--sh-link); }
+.sh-prose.is-light th, .sh-prose.is-light td { border-color: var(--sh-line); }
+
+/* pagination */
+.sh-pagination { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 36px; }
+.sh-pagination .page-numbers { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 12px; border-radius: 10px; border: 1px solid var(--sh-line); background: var(--sh-surface); color: var(--sh-ink); font-weight: 600; }
+.sh-pagination .page-numbers.current { background: var(--sh-blue); color: #fff; border-color: var(--sh-blue); }
+.sh-pagination a.page-numbers:hover { border-color: var(--sh-blue); color: var(--sh-link); }
+
+/* lightbox (case study gallery) */
+.sh-lightbox { position: fixed; inset: 0; z-index: 90; background: rgba(37, 43, 51, .94); display: flex; overflow: auto; overscroll-behavior: contain; padding: 72px 20px 20px; }
+/* full size (2.8.8): the image at its own width (never wider than the screen), scrolling when taller */
+.sh-lightbox img { margin: auto; max-width: 100%; max-height: none; width: auto; height: auto; border-radius: 12px; }
+body:has(.sh-lightbox) .chaty, body:has(.sh-lightbox) .chaty-widget { display: none !important; }
+.sh-lightbox button { position: fixed; top: 16px; inset-inline-end: 16px; width: 44px; height: 44px; border-radius: 10px; border: 1px solid rgba(255,255,255,.3); background: none; color: #fff; font-size: 20px; cursor: pointer; }
+
+.screen-reader-text { border: 0; clip: rect(1px,1px,1px,1px); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; word-wrap: normal !important; }
+
+/* hover states of WordPress-driven cards (design style-hover values) */
+.sh-hv-case:hover { box-shadow: rgba(40, 84, 232, 0.5) 0px 18px 40px -26px, rgba(40, 84, 232, 0.4) 0px 0px 0px 1px !important; }
+.sh-hv-lead:hover { box-shadow: rgba(40, 84, 232, 0.9) 0px 24px 48px -28px !important; }
+.sh-hv-row:hover { box-shadow: rgba(40, 84, 232, 0.45) 0px 0px 0px 1px, rgba(40, 84, 232, 0.6) 0px 16px 32px -24px !important; color: var(--sh-link) !important; }
+.sh-hv-tmcard:hover { border-color: rgba(40, 84, 232, 0.6) !important; box-shadow: rgba(40, 84, 232, 0.6) 0px 18px 40px -28px !important; }
+.sh-hv-in:hover { background: var(--sh-blue) !important; color: #fff !important; }
+.sh-hv-blue:hover { color: var(--sh-link) !important; }
+img { height: auto; }
+[data-sh-filter] { border: 1px solid var(--sh-line); background: #fff; color: var(--sh-ink); }
+[data-sh-filter][aria-pressed="true"] { border-color: var(--sh-blue); background: var(--sh-blue); color: #fff; }
+
+/* breadcrumb on light surfaces (case study, article) */
+.sh-crumbs-light nav, .sh-crumbs-light nav a { color: var(--sh-text) !important; }
+.sh-crumbs-light nav [aria-current] { color: var(--sh-ink) !important; }
+.sh-crumbs-light nav a:hover { color: var(--sh-link) !important; }
+/* the current item (a long article title) stays on one line: the trail never wraps differently once the
+   web font arrives (it moved the whole article header on phones), and the full title is the H1 below */
+.sh-crumbs-light nav { flex-wrap: nowrap !important; min-width: 0; }
+.sh-crumbs-light nav > a, .sh-crumbs-light nav > span[aria-hidden] { flex: none; white-space: nowrap; }
+.sh-crumbs-light nav [aria-current] { flex: 1 1 0; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sh-hv-next:hover { background: rgba(40, 84, 232, 0.32) !important; }
+.sh-cs-text p { margin: 0; }
+.sh-cs-text p + p { margin-top: 1em; }
+.sh-hv-outline:hover { border-color: var(--sh-blue) !important; color: var(--sh-link) !important; }
+.sh-hv-mate:hover { background: rgba(40, 84, 232, 0.08) !important; }
+
+/* Gutenberg blocks inside the article body follow the design's article components */
+[data-art-body] .wp-block-table { margin: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; box-shadow: 0 0 0 1px var(--sh-line); background: #fff; }
+[data-art-body] .wp-block-table table { width: 100%; min-width: 520px; border-collapse: collapse; font-size: 15px; line-height: 1.75; }
+[data-art-body] .wp-block-table th { text-align: start; background: #EEF2FB; color: var(--sh-ink); font-weight: 700; padding: 12px 14px; border: 0; }
+[data-art-body] .wp-block-table td { padding: 12px 14px; border: 0; border-top: 1px solid var(--sh-line); vertical-align: top; }
+[data-art-body] .wp-block-quote p { margin: 0; }
+[data-art-body] .wp-block-image img { border-radius: 12px; }
+[data-art-body] ol { margin: 0; padding: 0 22px 0 0; display: flex; flex-direction: column; gap: 6px; }
+.sh-hv-blrow:hover { background: rgba(40, 84, 232, 0.04) !important; }
+.sh-hv-chip:hover { background: rgba(40, 84, 232, 0.12) !important; color: var(--sh-link) !important; }
+[data-hero-blue] .sh-hv-chip:hover { background: rgba(255, 255, 255, 0.12) !important; color: #fff !important; }
+.sh-hv-chip[aria-current]:hover { background: var(--sh-blue) !important; color: #fff !important; }
+[data-hero-blue] .sh-hv-chip[aria-current]:hover { background: #fff !important; color: var(--sh-link) !important; }
+[data-sh-booking] label { min-width: 0; }
+[data-sh-booking] input { width: 100%; min-width: 0; box-sizing: border-box; }
+
+/* Reviews from the connected plugin (shortcode) replace the example cards: the design's
+   carousel arrows and dots belong to those cards, so they are hidden; the plugin's own
+   controls inside the widget stay. */
+[data-screen-label="Reviews"]:has([data-reviews-live]) button[aria-label]:not([data-reviews-live] *) { display: none; }
+.sh-reviews-live { margin-top: 24px; min-width: 0; max-width: 100%; overflow-x: clip; }
+
+/* ---------------------------------------------------------------------------------------------
+   Readability on top of the approved v5 design (2.7.0). The design export still carries a few
+   colours of the earlier dark design on what are now light surfaces (white text on a white card)
+   and dark headings on the blue fields. Measured on the export itself (<1.5:1 white-on-white,
+   ~2.4:1 ink-on-blue); each rule targets only those elements and uses the design's own roles.
+   --------------------------------------------------------------------------------------------- */
+/* white text inside the light cards of the sector hero panel and the «رحلة العميل» widget
+   (not inside the panel's navy boxes, not on its own blue fill) */
+[data-sx-panel] [style*="color: rgb(255, 255, 255)"]:not([style*="background: rgb(6, 11, 31)"] *):not([style*="background: var(--sh-blue)"]):not([style*="background: rgb(40, 84, 232)"]),
+[data-sj-panel] [style*="background: rgb(255, 255, 255); color: rgb(6, 11, 31)"] [style*="color: rgb(255, 255, 255)"]:not([style*="background: var(--sh-blue)"]):not([style*="background: rgb(40, 84, 232)"]):not([style*="background: linear-gradient"]) { color: var(--sh-ink) !important; }
+:is([data-sx-panel], [data-sj-panel] [style*="background: rgb(255, 255, 255); color: rgb(6, 11, 31)"]) [style*="color: rgb(255, 255, 255)"][style*="background: rgba(var(--sh-blue-rgb)"] { color: var(--sh-link) !important; }
+/* small badges on light tints inside the hero cards (products, Salla, SEO) */
+[data-hero-blue] [style*="color: rgb(255, 255, 255)"][style*="background: rgba(var(--sh-blue-rgb), 0.08)"],
+[data-hero-blue] [style*="color: rgb(255, 255, 255)"][style*="background: rgba(var(--sh-blue-rgb), 0.1)"] { color: var(--sh-link) !important; }
+/* dark section titles and labels on the blue fields */
+[data-blue-field] h2[data-sec-h] { color: #fff; }
+
+/* ---------------------------------------------------------------- 2.7.1 fixes */
+
+/* «منصات وأدوات نعمل عليها»: logos alone, one chip size, logo scaled to fit (never cropped) */
+[data-plat-chip][data-plat-logo-only] { gap: 0; justify-content: center; min-width: 96px; height: 64px; padding: 0 24px; text-decoration: none; transition: box-shadow .2s ease; }
+[data-plat-chip][data-plat-logo-only] img[data-plat-logo] { width: auto; height: 34px; max-width: 132px; object-fit: contain; display: block; }
+a[data-plat-chip][data-plat-logo-only]:hover { box-shadow: 0 10px 26px -18px rgba(37,43,51,.45), 0 0 0 1px var(--sh-blue); }
+a[data-plat-chip][data-plat-logo-only]:focus-visible { outline: 2px solid var(--sh-blue); outline-offset: 3px; }
+@media (max-width: 767px) { [data-plat-chip][data-plat-logo-only] { min-width: 80px; height: 56px; padding: 0 18px; } [data-plat-chip][data-plat-logo-only] img[data-plat-logo] { height: 28px; max-width: 108px; } }
+
+/* clickable cards never move on hover/focus (approved: colour only). Generated hover classes on some
+   cards (e.g. «قطاعات نعمل معها») lift the card 3px; at its edge the card then slides out from under
+   the pointer, loses :hover, drops back and re-enters it — the jitter. [class] raises specificity
+   above the generated .hv-*:hover rules. */
+[data-hcard][class]:hover, [data-hcard][class]:focus-visible, [data-hcard][class]:focus-within { transform: none !important; }
+
+/* Hero text block of the listing / legal / company pages: centred title, description and buttons; the
+   description uses the hero's width (short sentences stay on one line on desktop, long ones wrap
+   naturally; no balance-wrapping that splits short lines). Scope: the block that holds the H1 only —
+   breadcrumbs, article bodies and long content are not affected. */
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) {
+	text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+}
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) > :is(h1, p) {
+	max-width: min(100%, 62em) !important; margin-inline: auto !important; text-wrap: pretty !important;
+}
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) > :is(div, nav, form) {
+	justify-content: center; margin-inline: auto;
+}
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) > nav[aria-label="مسار التنقل"] {
+	align-self: flex-start; margin-inline: 0;
+}
+:is(.page-template-privacy-policy, .page-template-terms, .page-template-about, .page-template-team, .page-template-sectors, .page-template-contact, .page-template-results, .page-template-thank-you, .blog, .category, .search) section[data-screen-label="Hero"] :is(div, header):has(> h1) [role="list"] { justify-content: center; }
+
+/* ------------------------------------------------------------------ sticky header (2.7.3)
+   The header was already position: sticky, but .sh-root had overflow-x: hidden, which makes it the
+   scroll container, so the header scrolled away. overflow-x: clip keeps wide decorations clipped
+   without creating a scroll container (hidden stays as the fallback for old browsers). The header
+   stays in the flow, so nothing jumps; anchors land below it (scroll-padding). */
+.sh-root { overflow-x: hidden; }
+@supports (overflow: clip) { .sh-root { overflow-x: clip; } }
+[data-sh-header] { position: sticky !important; top: 0; z-index: 60; }
+html { scroll-padding-top: 88px; }
+/* WordPress admin bar: fixed 32px (46px below 783px); below 601px it scrolls away with the page */
+body.admin-bar [data-sh-header] { top: 32px !important; }
+html:has(body.admin-bar) { scroll-padding-top: 120px; }
+body.admin-bar #sh-drawer { top: 32px !important; }
+@media screen and (max-width: 782px) {
+	body.admin-bar [data-sh-header] { top: 46px !important; }
+	html:has(body.admin-bar) { scroll-padding-top: 134px; }
+	body.admin-bar #sh-drawer { top: 46px !important; }
+}
+@media screen and (max-width: 600px) {
+	body.admin-bar [data-sh-header] { top: 0 !important; }
+	body.admin-bar #sh-drawer { top: 0 !important; }
+	html:has(body.admin-bar) { scroll-padding-top: 88px; }
+}
+/* one offset for every anchor: html scroll-padding (header + admin bar) instead of per-element margins */
+[style*="scroll-margin-top"], .sh-prose h2, .sh-prose h3 { scroll-margin-top: 12px !important; }
+
+/* ------------------------------------------------------------------ «خدماتنا في الأسواق العربية» (country SEO pages only)
+   Compact one-line link cards: centred title and labels, equal cards. Three across from 1180px (the
+   longest label is ~311px at 19px, so each card keeps room for one line); below that they stack in one
+   centred column instead of squeezing the text. Labels may still wrap when the text is enlarged (no
+   nowrap). Colours, top bar and hover come from the markets cards ([data-hcard]). */
+.sh-other-markets { border-bottom: 1px solid var(--sh-line); }
+.sh-other-markets__inner { max-width: 1200px; margin: 0 auto; padding: clamp(32px, 4.4vw, 60px) 20px; }
+.sh-other-markets__title { font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(23px, 2.2vw, 31px); line-height: 1.3; margin: 0; text-align: center; color: var(--sh-ink); }
+.sh-other-markets__grid { margin-top: 24px; display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.sh-other-markets__card { position: relative; display: flex; align-items: center; justify-content: center; min-height: 68px; padding: 16px; border-radius: 16px; overflow: hidden; background: var(--sh-surface); border: 1px solid var(--sh-line); color: var(--sh-ink); text-align: center; text-decoration: none; }
+.sh-other-markets__bar { position: absolute; inset-inline: 0; top: 0; height: 4px; background: linear-gradient(90deg, var(--sh-sky), rgba(40, 84, 232, .6)); }
+.sh-other-markets__label { font-family: Alexandria, sans-serif; font-weight: 500; font-size: 19px; line-height: 1.45; text-wrap: balance; min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 1179px) {
+	.sh-other-markets__grid { grid-template-columns: minmax(0, 1fr); max-width: 520px; margin-inline: auto; gap: 12px; }
+	.sh-other-markets__card { min-height: 64px; padding: 14px 18px; }
+	.sh-other-markets__label { font-size: 18px; }
+}
+@media (max-width: 599px) {
+	.sh-other-markets__label { font-size: 17px; }
+}
+
+/* ------------------------------------------------------------------ contact page (2.7.7, rearranged 2.7.8)
+   Form section: the form and «ماذا سيحدث؟» side by side (stacked below 1024px). Next section:
+   «بيانات التواصل» card beside the map (card first: right in RTL, above the map on small screens).
+   Scoped to .sh-ct-* classes used only on the contact page. */
+[data-ct-grid].sh-ct-layout { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: center; }
+.sh-ct-layout > * { min-width: 0; }
+.sh-ct-form select, .sh-ct-form input, .sh-ct-form textarea { max-width: 100%; min-width: 0; }
+.sh-ct-form [data-ct-fields] > * { min-width: 0; }
+@media (max-width: 1023px) { [data-ct-grid].sh-ct-layout { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 599px) { .sh-ct-form [data-ct-fields] { grid-template-columns: minmax(0, 1fr); } }
+
+.sh-ct-loc { border-bottom: 1px solid var(--sh-line); }
+.sh-ct-loc__inner { max-width: 1200px; margin: 0 auto; padding: clamp(32px, 4.4vw, 56px) 20px; display: grid; gap: clamp(16px, 2vw, 28px); grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: stretch; }
+.sh-ct-loc--nomap .sh-ct-loc__inner { grid-template-columns: minmax(0, 560px); justify-content: center; }
+.sh-ct-contact { background: #fff; border: 1px solid var(--sh-line); border-radius: 18px; padding: 22px 24px; box-shadow: 0 18px 40px -34px rgba(6, 11, 31, .35); align-self: center; }
+.sh-ct-contact__title { margin: 0; font-family: Alexandria, sans-serif; font-weight: 700; font-size: clamp(20px, 1.7vw, 23px); line-height: 1.35; color: var(--sh-ink); }
+.sh-ct-contact__list { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 14px; }
+.sh-ct-contact__row { display: flex; align-items: flex-start; gap: 12px; min-width: 0; }
+.sh-ct-contact__icon { flex: 0 0 auto; width: 38px; height: 38px; border-radius: 11px; background: rgba(40, 84, 232, .12); color: var(--sh-blue); display: flex; align-items: center; justify-content: center; }
+.sh-ct-contact__icon svg { width: 19px; height: 19px; }
+.sh-ct-contact__text { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.sh-ct-contact__label { font-size: 13px; color: var(--sh-text); }
+.sh-ct-contact__value { font-size: 15.5px; line-height: 1.6; color: var(--sh-ink); overflow-wrap: anywhere; }
+.sh-ct-contact__value[dir="ltr"] { unicode-bidi: isolate; text-align: right; }
+.sh-ct-contact__value--link { color: var(--sh-link); font-weight: 600; text-decoration: none; }
+.sh-ct-contact__value--link:hover, .sh-ct-contact__value--link:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
+.sh-ct-loc__map { min-width: 0; min-height: 300px; border-radius: 18px; overflow: hidden; border: 1px solid var(--sh-line); background: #fff; display: flex; }
+.sh-ct-loc__map iframe { display: block; width: 100%; height: auto; min-height: 300px; flex: 1 1 auto; border: 0; }
+@media (max-width: 899px) {
+	.sh-ct-loc__inner { grid-template-columns: minmax(0, 1fr); }
+	.sh-ct-loc__map, .sh-ct-loc__map iframe { min-height: 280px; }
+}
+@media (min-width: 600px) and (max-width: 899px) { .sh-ct-contact__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 20px; } }
+
+/* ------------------------------------------------------------------ footer social icons (2.7.8)
+   «إعدادات سيو هاوس ← الفوتر ← روابط التواصل في الفوتر». White brand marks on the blue footer, 44px tap
+   targets, calm hover (background only, no movement), visible keyboard focus. */
+.sh-foot-social { list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px; }
+.sh-foot-social a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; color: #fff; background: transparent; transition: background-color .2s ease; }
+.sh-foot-social a:hover { background: rgba(255, 255, 255, .14); }
+.sh-foot-social a:focus-visible { background: rgba(255, 255, 255, .14); }
+/* keyboard focus on the blue footer: white ring (a site-wide :focus-visible rule with !important made it blue on blue) */
+footer[data-foot-blue] a:focus-visible { outline: 2px solid #fff !important; outline-offset: 3px; }
+.sh-foot-social svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; display: block; }
+/* the icons start where the footer text starts, on phones too (one direction for the whole footer) */
+.sh-foot-social { margin-inline-start: -10px; }
+
+/* ------------------------------------------------------------------ white cards (2.7.12)
+   One white card for the light and blue fields: an opaque white surface that stands apart from the
+   section, dark title, readable text. [data-card] is the surface (also for cards that are not links);
+   [data-lcard] is a clickable card («أسواق نعمل فيها» on the homepage; «خدماتنا» uses the blue card hover
+   since 2.7.14, see below) with a blue «details»
+   link. Hover/focus keep the white surface (no colour flip, no movement): a clearer blue edge, a light
+   shadow, the link underlined and its arrow nudged forward. Touch screens get the resting state, which
+   already shows the link. [data-card-lead] marks the lead service (blue edge and accents). These replace
+   the dark design's translucent fills (3.5–7% white or ink), which vanish or turn grey on light fields. */
+:is([data-card], [data-lcard]) { background: #fff; border: 1px solid var(--sh-line); color: var(--sh-ink); box-shadow: 0 1px 2px rgba(37, 43, 51, .05), 0 14px 32px -26px rgba(37, 43, 51, .5); }
+:is([data-card], [data-lcard])[data-card-lead] { border-color: var(--sh-blue); background: radial-gradient(90% 70% at 100% 0%, rgba(40, 84, 232, .07), transparent 60%), #fff; box-shadow: inset 0 0 0 1px var(--sh-blue), 0 18px 40px -28px rgba(40, 84, 232, .55); }
+:is([data-card], [data-lcard]) :is([data-svc-viz], [data-fam-flow]) { background: #F3F5F8; border: 1px solid #DCE1E8; }
+:is([data-card], [data-lcard])[data-card-lead] :is([data-svc-viz], [data-fam-flow]) { background: var(--sh-blue-tint); border-color: rgba(40, 84, 232, .22); }
+[data-lcard] { text-decoration: none; transition: border-color .2s ease, box-shadow .2s ease; }
+[data-lcard]:hover { color: var(--sh-ink); }
+[data-lcard-more] { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--sh-link); transition: color .2s ease; }
+[data-lcard-text] { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 5px; text-decoration-thickness: 1.5px; transition: text-decoration-color .2s ease; }
+[data-lcard-arrow] { display: inline-block; transition: transform .2s ease; }
+[data-lcard]:is(:hover, :focus-visible) { border-color: var(--sh-blue); box-shadow: inset 0 0 0 1px var(--sh-blue), 0 20px 40px -26px rgba(40, 84, 232, .5); }
+[data-lcard][data-card-lead]:is(:hover, :focus-visible) { box-shadow: inset 0 0 0 1px var(--sh-blue), 0 24px 48px -26px rgba(40, 84, 232, .6); }
+[data-lcard]:is(:hover, :focus-visible) [data-lcard-more] { color: var(--sh-link-hover); }
+[data-lcard]:is(:hover, :focus-visible) [data-lcard-text] { text-decoration-color: currentColor; }
+[data-lcard]:is(:hover, :focus-visible) [data-lcard-arrow] { transform: translateX(-4px); }
+[data-lcard]:focus-visible { outline: 3px solid var(--sh-focus, var(--sh-blue)) !important; outline-offset: 3px; }
+/* «خدماتنا» (homepage): icon tile and process strip */
+:is([data-card], [data-lcard]) [data-lcard-icon] { flex: 0 0 auto; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: rgba(40, 84, 232, .1); box-shadow: inset 0 0 0 1px rgba(40, 84, 232, .16); color: var(--sh-link); }
+:is([data-card], [data-lcard])[data-card-lead] [data-lcard-icon] { background: var(--sh-blue); box-shadow: none; color: #fff; }
+:is([data-card], [data-lcard]) [data-svc-step] { color: var(--sh-ink); }
+:is([data-card], [data-lcard]) [data-svc-dot] { background: var(--sh-blue); }
+/* «خدماتنا» (homepage) since 2.7.14: white cards at rest with the site's blue card hover ([data-hcard] in
+   design-base.css, as before 2.7.12). Inside the blue card the strip, dots, step arrows, icon tile and the
+   lead badge turn white-on-blue so they stay readable (the badge's blue is inline, hence !important). */
+@media (hover: hover) {
+	[data-card][data-hcard]:hover [data-svc-viz] { background: rgba(255, 255, 255, .14); }
+	[data-card][data-hcard]:hover [data-svc-dot] { background: #fff; }
+	[data-card][data-hcard]:hover [data-svc-step] + [data-svc-step]::before { color: #fff; }
+	[data-card][data-hcard]:hover [data-lcard-icon] { background: rgba(255, 255, 255, .16); box-shadow: none; }
+	[data-card][data-hcard]:hover [data-svc-badge] { background: #fff !important; color: var(--sh-link) !important; }
+}
+[data-card][data-hcard]:focus-visible [data-svc-viz] { background: rgba(255, 255, 255, .14); }
+[data-card][data-hcard]:focus-visible [data-svc-dot] { background: #fff; }
+[data-card][data-hcard]:focus-visible [data-svc-step] + [data-svc-step]::before { color: #fff; }
+[data-card][data-hcard]:focus-visible [data-lcard-icon] { background: rgba(255, 255, 255, .16); box-shadow: none; }
+[data-card][data-hcard]:focus-visible [data-svc-badge] { background: #fff !important; color: var(--sh-link) !important; }
+/* «أسواق نعمل فيها»: dotted field and country outline; stronger on hover/focus. On the blue field the
+   card's own edge meets blue, so the hover/focus edge is drawn 2px inside the white surface. */
+[data-mkt-blue] [data-lcard]:is(:hover, :focus-visible) { border-color: var(--sh-blue); box-shadow: inset 0 0 0 2px var(--sh-blue), 0 22px 44px -26px rgba(6, 11, 31, .55); }
+[data-lcard] [data-mkt-map] { background-image: radial-gradient(rgba(76, 89, 107, .16) 1px, transparent 1px); background-size: 14px 14px; transition: background-image .2s ease; }
+[data-lcard] [data-mkt-map] path { fill: rgba(40, 84, 232, .1); stroke: var(--sh-blue); stroke-width: 1.6; transition: fill .2s ease, stroke-width .2s ease; }
+[data-lcard]:is(:hover, :focus-visible) [data-mkt-map] { background-image: radial-gradient(rgba(40, 84, 232, .28) 1px, transparent 1px); }
+[data-lcard]:is(:hover, :focus-visible) [data-mkt-map] path { fill: rgba(40, 84, 232, .2); stroke: var(--sh-link); stroke-width: 2.4; }
+/* keyboard focus ring on the blue fields: white (the homepage's site-wide ring is blue) */
+:is([data-mkt-blue], [data-hero-blue], [data-blue-field], footer[data-foot-blue]) { --sh-focus: #fff; }
+@media (prefers-reduced-motion: reduce) { [data-lcard-arrow] { transition: none; } }
+
+/* English (LTR): the header keeps the Arabic arrangement — logo on the left, booking button on the right —
+   which is also the usual English one. Arabic (RTL) is untouched. */
+[dir="ltr"] [data-sh-bar] { flex-direction: row-reverse; }
+[dir="ltr"] [data-sh-bar] > a[aria-label]:last-child { margin-inline-start: 0 !important; margin-inline-end: auto; } /* beats the inline auto margin */
+
+[data-foot-copy] bdi { white-space: nowrap; } /* numbers never break across lines */
+
+/* ---- 2.8.7: audit fixes ---------------------------------------------------------------------- */
+/* scrolling strips (team photos, client logos, platforms) move towards the reading end in English too */
+@keyframes shLtr { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+html:not([dir="rtl"]) [style*="shRtl"] { animation-name: shLtr !important; }
+/* arrow icons drawn for RTL (mirrored) point forward in English */
+html:not([dir="rtl"]) svg[style*="scaleX(-1)"] { transform: none !important; }
+html:not([dir="rtl"]) [data-svc-step] + [data-svc-step]::before { content: "→"; }
+/* flow tags in the home sectors cards: the arrow was almost invisible and only pushed the text aside */
+[data-sc-step] + [data-sc-step]::before { color: rgba(33, 72, 216, .5) !important; }
+html:not([dir="rtl"]) [data-sc-step] + [data-sc-step]::before { content: "→"; }
+/* /en/sectors/: English chips need a wider last column */
+@media (min-width: 900px) {
+	html:not([dir="rtl"]) [data-sc-row] { grid-template-columns: minmax(0, .85fr) minmax(0, .85fr) minmax(0, 1.1fr) !important; }
+}
+/* "one system" layers (SEO page): the staircase indent squeezes the cards on phones */
+@media (max-width: 640px) {
+	[data-layers] [style*="margin-inline-start: auto"] { width: 100% !important; }
+}
+/* contact form: fields to fix */
+[data-ct-form] [aria-invalid="true"], [data-bk-form] [aria-invalid="true"] { border-color: #D92D20 !important; box-shadow: 0 0 0 3px rgba(217, 45, 32, .12) !important; }
+/* mobile menu: the floating contact buttons stay under it */
+html.sh-drawer-open .chaty, html.sh-drawer-open .chaty-widget { display: none !important; }
+/* floating contact buttons on Arabic pages: inline end (left), so they do not cover where lines start */
+html.sh-chaty-rtl .chaty-widget.right-position { right: auto !important; left: 25px !important; }
+html.sh-chaty-rtl .chaty-widget.right-position .chaty-channel-list { left: 0 !important; right: auto !important; }
+/* reviews widget: each review reads in its own direction (an English review inside the Arabic widget
+   ended with its punctuation on the wrong side) */
+.ti-widget .ti-review-content, .ti-widget .ti-review-text-container, .ti-widget .ti-name { unicode-bidi: plaintext; }
+
+/* ---- 2.8.8: case studies ------------------------------------------------------------------- */
+/* client logo in the results cards and the case study's client box */
+.sh-case-logo { flex: none; width: 104px; height: 60px; border-radius: 12px; background: #fff; box-shadow: 0 0 0 1px var(--sh-line); display: flex; align-items: center; justify-content: center; padding: 6px 10px; }
+.sh-case-logo img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.sh-case-logo--lg { width: 150px; height: 72px; box-shadow: none; padding: 0; justify-content: flex-start; }
+.sh-case-draft { display: inline-block; margin-top: 8px; font-size: 12px; font-weight: 700; color: #8a6d00; background: rgb(255, 251, 234); border: 1px dashed rgb(217, 179, 0); border-radius: 999px; padding: 2px 10px; }
+.sh-hidden-note { margin-bottom: 18px; font-size: 14px; color: var(--sh-text); background: rgb(255, 251, 234); border: 1px dashed rgb(217, 179, 0); border-radius: 12px; padding: 10px 14px; }
+/* the cases list on a case study page (other cases) has the results page's columns */
+body.single-case_study [data-res-card] { grid-template-columns: minmax(150px, .3fr) minmax(0, 1fr) auto; }
+@media (max-width: 719px) {
+	body.single-case_study [data-res-card] { grid-template-columns: 1fr; }
+	body.single-case_study [data-res-go] { justify-self: start; }
+	.sh-case-logo { width: 92px; height: 52px; }
+}
+/* results in three cards: before, after, increase */
+[data-cs-main] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 639px) { [data-cs-main] { grid-template-columns: 1fr; } }
+.sh-cs-card { border-radius: 14px; background: rgba(255, 255, 255, .12); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .28); padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; color: #fff; min-width: 0; }
+.sh-cs-card--wide { grid-column: 1 / -1; }
+.sh-cs-card--up { background: #fff; box-shadow: none; color: var(--sh-ink); }
+.sh-cs-card__label { font-size: 14px; font-weight: 600; }
+.sh-cs-card__value { font-family: Alexandria, sans-serif; font-weight: 800; font-size: clamp(24px, 2.4vw, 30px); line-height: 1.25; }
+.sh-cs-card--up .sh-cs-card__value { color: var(--sh-link); }
+.sh-cs-card__sub { font-size: 13.5px; line-height: 1.6; }
+.sh-cs-card--up .sh-cs-card__sub { color: var(--sh-text); }
+.sh-cs-card__text { font-size: 16px; font-weight: 600; line-height: 1.7; }
+/* screenshots: as they are, full image on click */
+.sh-shot__img { display: block; border-radius: 10px; overflow: hidden; cursor: zoom-in; background: var(--sh-surface); }
+.sh-shot__img img { display: block; width: 100%; height: auto; }
+.sh-shot__kw { display: block; margin-top: 8px; font-size: 14px; line-height: 1.6; color: var(--sh-text); }
+.sh-shot__kw b { font-weight: 700; color: var(--sh-ink); }
+.sh-shot__pos { display: inline-block; margin-top: 8px; font-size: 13px; font-weight: 700; line-height: 1.5; color: var(--sh-link); background: var(--sh-blue-tint); border-radius: 999px; padding: 3px 12px; }
+.sh-rank-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; }
+.sh-rank-grid[data-count="1"] { grid-template-columns: minmax(0, 1fr); max-width: 760px; margin-inline: auto; }
+.sh-rank-grid[data-count="2"], .sh-rank-grid[data-count="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 959px) { .sh-rank-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+@media (max-width: 599px) { .sh-rank-grid { grid-template-columns: 1fr !important; } }
+/* client's words */
+.sh-cs-quote { margin: 18px 0 0; background: #fff; border-radius: 16px; padding: clamp(20px, 2.4vw, 28px); box-shadow: 0 14px 34px -28px rgba(6,11,31,.5), 0 0 0 1px var(--sh-line); border-inline-start: 4px solid var(--sh-blue); }
+.sh-cs-quote blockquote { margin: 0; }
+.sh-cs-quote blockquote p { margin: 0; font-size: 18px; line-height: 2; color: var(--sh-ink); text-wrap: pretty; }
+.sh-cs-quote figcaption { margin-top: 14px; font-size: 14.5px; color: var(--sh-text); }
+.sh-cs-quote figcaption b { color: var(--sh-ink); font-weight: 700; }
+
+/* ---- 2.8.11: screenshot galleries and viewer ----------------------------------------------- */
+/* every screenshot in the same frame (3:2), shown whole (contain, no crop), so cards line up */
+.sh-shot__frame { aspect-ratio: 3 / 2; display: flex; align-items: center; justify-content: center; background: #EEF1F6; padding: 6px; }
+.sh-shot__frame img { width: 100%; height: 100%; object-fit: contain; border-radius: 6px; }
+.sh-rank-grid { align-items: stretch !important; }
+.sh-rank-grid > .sh-shot { min-width: 0; }
+.sh-rank-grid > .sh-shot > figure { height: 100%; }
+.sh-rank-grid[data-count="1"], .sh-rank-grid[data-count="2"], .sh-rank-grid[data-count="4"] { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: none; }
+@media (max-width: 959px) { .sh-rank-grid[data-count] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+@media (max-width: 599px) { .sh-rank-grid[data-count] { grid-template-columns: 1fr !important; } }
+/* viewer: image + details panel at the side (inline end), under the image on phones */
+.sh-lightbox.sh-lb--rich { display: grid; grid-template-columns: minmax(0, 1fr) 360px; padding: 0; overflow: hidden; background: #0A0E18; }
+.sh-lightbox:not(.sh-lb--rich) .sh-lb__stage { display: contents; }
+.sh-lb--rich .sh-lb__stage { overflow: auto; overscroll-behavior: contain; display: flex; padding: 64px 72px 24px; min-height: 0; }
+.sh-lb--rich .sh-lb__stage img { margin: auto; max-width: 100%; height: auto; border-radius: 10px; }
+.sh-lb__panel { background: #fff; color: var(--sh-ink); overflow: auto; padding: 72px 26px 28px; min-height: 0; }
+.sh-lb__count { margin: 0 0 10px; font-size: 13px; font-weight: 600; color: var(--sh-text); }
+.sh-lb__title { margin: 0; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 21px; line-height: 1.45; }
+.sh-lb__sub { margin: 4px 0 0; font-size: 14px; color: var(--sh-text); }
+.sh-lb__facts { margin: 18px 0 0; display: grid; gap: 4px; border-top: 1px solid var(--sh-line); padding-top: 16px; }
+.sh-lb__facts dt { font-size: 12.5px; color: var(--sh-text); margin-top: 10px; }
+.sh-lb__facts dt:first-child { margin-top: 0; }
+.sh-lb__facts dd { margin: 0; font-size: 16px; font-weight: 700; line-height: 1.6; }
+.sh-lb__facts dd.sh-lb__pos { display: inline-block; justify-self: start; font-size: 14px; color: var(--sh-link); background: var(--sh-blue-tint); border-radius: 999px; padding: 4px 14px; }
+.sh-lb__alt { margin: 18px 0 0; font-size: 14px; line-height: 1.8; color: var(--sh-text); }
+.sh-lightbox.sh-lb--rich .sh-lb__close { color: var(--sh-ink); border-color: var(--sh-line); background: #fff; }
+.sh-lightbox .sh-lb__nav { position: fixed; top: 50%; width: 48px; height: 48px; margin-top: -24px; border-radius: 999px; border: 0; background: rgba(255, 255, 255, .92); color: var(--sh-ink); font-size: 28px; line-height: 1; cursor: pointer; z-index: 2; box-shadow: 0 6px 20px rgba(0, 0, 0, .25); }
+.sh-lightbox .sh-lb__nav[data-dir="-1"] { inset-inline-start: 14px; inset-inline-end: auto; }
+.sh-lightbox .sh-lb__nav[data-dir="1"] { inset-inline-end: 14px; inset-inline-start: auto; }
+.sh-lightbox.sh-lb--rich .sh-lb__nav[data-dir="1"] { inset-inline-end: calc(360px + 14px); }
+.sh-lightbox .sh-lb__nav:hover, .sh-lightbox .sh-lb__nav:focus-visible { background: #fff; outline: 2px solid var(--sh-blue); outline-offset: 2px; }
+.sh-lightbox .sh-lb__nav[hidden] { display: none; }
+@media (max-width: 899px) {
+	.sh-lightbox.sh-lb--rich { display: block; overflow: auto; }
+	.sh-lb--rich .sh-lb__stage { padding: 64px 12px 12px; overflow: visible; }
+	.sh-lb__panel { padding: 22px 20px 32px; }
+	.sh-lightbox.sh-lb--rich .sh-lb__close { color: #fff; border-color: rgba(255, 255, 255, .3); background: rgba(10, 14, 24, .6); }
+	.sh-lightbox .sh-lb__nav { top: auto; bottom: 16px; margin-top: 0; }
+	.sh-lightbox.sh-lb--rich .sh-lb__nav[data-dir="1"] { inset-inline-end: 14px; }
+}
+
+/* when the screenshot was taken (2.8.12): a later search can rank differently */
+.sh-shot__date { display: block; margin-top: 8px; font-size: 12.5px; color: var(--sh-text); }
+/* English case cards (2.8.13): English labels under the number are longer than the Arabic ones; a wider
+   first column keeps them on one line, so the cards match the Arabic ones in height and rhythm */
+@media (min-width: 720px) {
+	html:not([dir="rtl"]) [data-res-card] { grid-template-columns: minmax(280px, .36fr) minmax(0, 1fr) auto !important; }
+}
+html:not([dir="rtl"]) [data-res-card] > span:first-child > span + span { white-space: nowrap; }
+@media (max-width: 719px) { html:not([dir="rtl"]) [data-res-card] > span:first-child > span + span { white-space: normal; } }
+
+/* home «Results» list (2.8.14): the results page card and columns (the design's 120px number column was
+   too narrow for «+15,800%», which ran into the client name) */
+@media (min-width: 720px) {
+	html[dir="rtl"] .sh-main [data-res-card] { grid-template-columns: minmax(200px, .3fr) minmax(0, 1fr) auto !important; column-gap: 28px !important; }
+}
+/* period of the results on a case card */
+.sh-case-period { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 12.5px; font-weight: 600; color: var(--sh-link); background: var(--sh-blue-tint); border-radius: 999px; padding: 3px 10px 3px 12px; }
+.sh-case-period svg { flex: none; }
+
+/* ---- 2.8.14: screenshot browser (one large screenshot + a scrolling list) ----------------------- */
+.sh-sg { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 16px; align-items: start; }
+.sh-sg__main, .sh-sg__side { background: #fff; border-radius: 16px; box-shadow: 0 14px 34px -28px rgba(6,11,31,.5), 0 0 0 1px var(--sh-line); min-width: 0; }
+.sh-sg__main { padding: 10px; }
+.sh-sg__stage { border-radius: 10px; cursor: zoom-in; }
+.sh-sg__info { padding: 14px 8px 6px; }
+.sh-sg__info p { margin: 0; }
+.sh-sg__title { font-family: Alexandria, sans-serif; font-weight: 700; font-size: 18px; line-height: 1.5; color: var(--sh-ink); }
+.sh-sg__sub { font-size: 13.5px; color: var(--sh-text); margin-top: 2px !important; }
+.sh-sg__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 8px !important; }
+.sh-sg__meta .sh-shot__pos { margin-top: 0; }
+.sh-sg__date { font-size: 12.5px; color: var(--sh-text); }
+.sh-sg__side { padding: 12px; display: flex; flex-direction: column; gap: 10px; }
+.sh-sg__chips { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: thin; padding-bottom: 2px; }
+.sh-sg__chips button { flex: none; min-height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--sh-line); background: #fff; color: var(--sh-ink); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.sh-sg__chips button[aria-pressed="true"] { background: var(--sh-blue); border-color: var(--sh-blue); color: #fff; }
+.sh-sg__count { margin: 0; font-size: 12.5px; color: var(--sh-text); }
+.sh-sg__list { list-style: none; margin: 0; padding: 0 2px 0 0; display: flex; flex-direction: column; gap: 6px; max-height: 470px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.sh-sg__list > li[hidden] { display: none; }
+.sh-sg__item { width: 100%; display: flex; align-items: center; gap: 10px; padding: 6px; border: 1px solid transparent; border-radius: 12px; background: none; color: var(--sh-ink); font: inherit; text-align: start; cursor: pointer; }
+.sh-sg__item:hover { background: var(--sh-surface); }
+.sh-sg__item[aria-current="true"] { background: var(--sh-blue-tint); border-color: rgba(40, 84, 232, .35); }
+.sh-sg__item:focus-visible { outline: 2px solid var(--sh-blue); outline-offset: 1px; }
+.sh-sg__thumb { flex: none; width: 92px; aspect-ratio: 3 / 2; border-radius: 8px; background: #EEF1F6; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.sh-sg__thumb img { width: 100%; height: 100%; object-fit: contain; }
+.sh-sg__label { min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.sh-sg__label-title { font-size: 13.5px; font-weight: 700; line-height: 1.4; }
+.sh-sg__label-kw { font-size: 13px; line-height: 1.5; color: var(--sh-text); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+@media (max-width: 899px) {
+	.sh-sg { grid-template-columns: 1fr; }
+	.sh-sg__list { flex-direction: row; max-height: none; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x proximity; padding-bottom: 4px; }
+	.sh-sg__list > li { flex: 0 0 auto; width: 200px; scroll-snap-align: start; }
+	.sh-sg__item { flex-direction: column; align-items: stretch; }
+	.sh-sg__thumb { width: 100%; }
+}
+
+/* ---- 2.8.15 ------------------------------------------------------------------------------- */
+/* results period in the card's free space, next to «دراسة الحالة» */
+.sh-case-go { display: flex !important; align-items: center; gap: 22px; flex-wrap: wrap; white-space: normal !important; }
+.sh-case-go__link { font-size: 14.5px; font-weight: 600; color: var(--sh-link); white-space: nowrap; }
+.sh-case-period { display: inline-flex; align-items: center; gap: 10px; margin: 0; padding: 7px 14px 7px 10px; border-radius: 12px; background: var(--sh-surface); box-shadow: inset 0 0 0 1px var(--sh-line); font-size: inherit; font-weight: inherit; color: var(--sh-ink); }
+html[dir="rtl"] .sh-case-period { padding: 7px 10px 7px 14px; }
+.sh-case-period__icon { flex: none; width: 34px; height: 34px; border-radius: 10px; background: var(--sh-blue-tint); color: var(--sh-link); display: flex; align-items: center; justify-content: center; }
+.sh-case-period__text { display: flex; flex-direction: column; line-height: 1.35; }
+.sh-case-period__label { font-size: 11.5px; font-weight: 600; color: var(--sh-text); }
+.sh-case-period__value { font-size: 13.5px; font-weight: 700; color: var(--sh-ink); white-space: nowrap; }
+@media (max-width: 719px) { .sh-case-go { justify-content: space-between; width: 100%; } }
+/* screenshot browser: every client visible in the filter, client headings, «more below» */
+.sh-sg__chips { flex-wrap: wrap; overflow: visible; }
+.sh-sg__chips button { display: inline-flex; align-items: center; gap: 6px; }
+.sh-sg__chip-n { display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: rgba(40, 84, 232, .1); color: var(--sh-link); font-size: 11.5px; font-weight: 700; }
+.sh-sg__chips button[aria-pressed="true"] .sh-sg__chip-n { background: rgba(255, 255, 255, .22); color: #fff; }
+.sh-sg__group { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px 8px 6px; background: #fff; font-size: 12.5px; font-weight: 700; color: var(--sh-text); border-bottom: 1px solid var(--sh-line); }
+.sh-sg__group[hidden] { display: none; }
+.sh-sg__list { -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent); mask-image: linear-gradient(to bottom, #000 82%, transparent); }
+.sh-sg__list.is-end { -webkit-mask-image: none; mask-image: none; }
+.sh-sg__more { margin: 0; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 12.5px; font-weight: 600; color: var(--sh-link); }
+.sh-sg__more[hidden] { display: none; }
+@media (max-width: 899px) {
+	.sh-sg__group { display: none; }
+	.sh-sg__list { -webkit-mask-image: linear-gradient(to left, #000 82%, transparent); mask-image: linear-gradient(to left, #000 82%, transparent); }
+	html[dir="rtl"] .sh-sg__list { -webkit-mask-image: linear-gradient(to right, #000 82%, transparent); mask-image: linear-gradient(to right, #000 82%, transparent); }
+	.sh-sg__more svg { transform: rotate(-90deg); }
+	html[dir="rtl"] .sh-sg__more svg { transform: rotate(90deg); }
+}
+
+/* ---- 2.8.16 ------------------------------------------------------------------------------- */
+/* results period: small and plain (no box), set apart from «دراسة الحالة» */
+.sh-case-go { gap: 14px 44px; }
+.sh-case-period { gap: 6px; padding: 0 !important; border-radius: 0; background: none; box-shadow: none; color: var(--sh-text); }
+.sh-case-period__icon { width: auto; height: auto; border-radius: 0; background: none; color: var(--sh-link); }
+.sh-case-period__icon svg { width: 15px; height: 15px; }
+.sh-case-period__text { flex-direction: row; align-items: baseline; gap: 5px; line-height: 1.4; }
+.sh-case-period__label { font-size: 12.5px; font-weight: 500; }
+.sh-case-period__label::after { content: ":"; }
+.sh-case-period__value { font-size: 13px; font-weight: 700; color: var(--sh-ink); }
+/* screenshot browser: client filter as a drop-down, count beside it */
+.sh-sg__bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.sh-sg__select { position: relative; flex: 1 1 auto; min-width: 0; max-width: 300px; display: block; }
+.sh-sg__select select { width: 100%; min-height: 40px; padding-block: 0; padding-inline: 14px 36px; border: 1px solid var(--sh-line); border-radius: 12px; background: #fff; color: var(--sh-ink); font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; -webkit-appearance: none; appearance: none; text-overflow: ellipsis; }
+.sh-sg__select select:hover { border-color: rgba(40, 84, 232, .45); }
+.sh-sg__select select:focus-visible { outline: 2px solid var(--sh-blue); outline-offset: 1px; }
+.sh-sg__select svg { position: absolute; inset-inline-end: 12px; top: 50%; transform: translateY(-50%); color: var(--sh-link); pointer-events: none; }
+.sh-sg__bar .sh-sg__count { flex: none; }
+/* case card: a client without a logo shows its initial in the logo box */
+.sh-case-logo--initial { background: var(--sh-blue-tint); box-shadow: none; color: var(--sh-link); font-family: Alexandria, sans-serif; font-weight: 800; font-size: 24px; line-height: 1; }
+/* case page: client box — logo centred on top, the details in equal columns under it (same in both languages) */
+.sh-cs-client { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; background: #fff; border-radius: 14px; padding: 18px 20px; box-shadow: 0 0 0 1px var(--sh-line); text-align: center; min-width: 0; }
+.sh-cs-client .sh-case-logo--lg { width: auto; max-width: 220px; height: 64px; justify-content: center; }
+.sh-cs-client__meta { margin: 0; width: 100%; display: grid; grid-template-columns: repeat(var(--n, 4), minmax(0, 1fr)); padding-top: 14px; border-top: 1px solid var(--sh-line); }
+.sh-cs-client__meta > div { min-width: 0; padding: 0 10px; }
+.sh-cs-client__meta > div + div { border-inline-start: 1px solid var(--sh-line); }
+.sh-cs-client__meta dt { font-size: 12.5px; color: var(--sh-text); }
+.sh-cs-client__meta dd { margin: 3px 0 0; font-size: 14px; font-weight: 600; line-height: 1.45; color: var(--sh-ink); text-wrap: balance; }
+@media (max-width: 599px) {
+	.sh-cs-client__meta { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 12px; }
+	.sh-cs-client__meta > div:nth-child(odd) { border-inline-start: 0; }
+}
+.sh-cs-client__name { font-family: Alexandria, sans-serif; font-weight: 700; font-size: 20px; line-height: 1.4; color: var(--sh-ink); }
+body.single-case_study .sh-main [data-cs-top] { grid-template-columns: minmax(180px, 230px) minmax(0, 1fr); }
+@media (max-width: 599px) { body.single-case_study .sh-main [data-cs-top] { grid-template-columns: 1fr; } }
+/* 2.8.17: the details as a 2 × 2 grid at every width, so long English values never wrap mid-row */
+.sh-cs-client__meta { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 14px; }
+.sh-cs-client__meta > div:nth-child(odd) { border-inline-start: 0; }
+.sh-cs-client__meta dd { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 599px) { .sh-cs-client__meta dd { white-space: normal; } }
+@media (min-width: 720px) { html:not([dir="rtl"]) .sh-main [data-res-card] { grid-template-columns: minmax(230px, .27fr) minmax(0, 1fr) auto !important; } }
+/* home (narrower column), English: the period sits over the link, and the label under the number may wrap */
+html:not([dir="rtl"]) .sh-case--home > span:first-child > span + span { white-space: normal; }
+@media (min-width: 720px) { html:not([dir="rtl"]) .sh-main .sh-case--home[data-res-card] { grid-template-columns: minmax(190px, .3fr) minmax(0, 1fr) auto !important; } }
+html:not([dir="rtl"]) .sh-case--home .sh-case-go { flex-direction: column; align-items: flex-end; gap: 6px; }
+@media (max-width: 719px) { html:not([dir="rtl"]) .sh-case--home .sh-case-go { flex-direction: row; align-items: center; } }
+@media (min-width: 720px) { .sh-case--home .sh-case-go { flex-direction: column; align-items: flex-end; gap: 6px; } }

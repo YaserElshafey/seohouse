@@ -1,0 +1,53 @@
+== 1. restore the installed state: theme 2.7.6 + Core 2.7.2 + edits + earlier requests
+name	version
+seohouse	2.7.6
+advanced-custom-fields	active	6.3.12
+seo-by-rank-math	active	1.0.279
+seohouse-core	active	2.7.2
+test-rankmath-autoload	must-use	
+== 2. snapshot + crawl before
+Success: 1467 posts, 13965 meta, 6 terms, 205 options → /home/claude/wptest-fixture/runs/upgrade-276-to-277/before.json
+63 urls; non-200: {}; php errors in page: []
+== 3A. Core: replace with seohouse-core.zip
+Success: Installed 1 of 1 plugins.
+Notice: Function wp_add_privacy_policy_content was called <strong>incorrectly</strong>. The suggested privacy policy content should be added only in wp-admin by using the <code>admin_init</code> (or later) action. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 4.9.7.) in /home/claude/wptest/wp-includes/functions.php on line 6260
+seohouse-core	active	2.7.3
+== 3B. theme: replace with seohouse-theme.zip
+Success: Installed 1 of 1 themes.
+name	version
+seohouse	2.7.7
+seohouse-core	active	2.7.3
+== 4. snapshot after + compare
+Success: 1467 posts, 13965 meta, 6 terms, 205 options → /home/claude/wptest-fixture/runs/upgrade-276-to-277/after.json
+posts    before   1467  after   1467  removed   0  added   0  changed   0
+meta     before  13965  after  13965  removed   0  added   0  changed   0
+terms    before      6  after      6  removed   0  added   0  changed   0
+options  before    205  after    205  removed   0  added   0  changed   0
+CONTENT UNCHANGED
+== 5. crawl after + checks
+63 urls; non-200: {}; php errors in page: []
+-- owner edits visible
+   OK  نحسّن ظهور موقعك في محركات البحث  (http://127.0.0.1:8090/)
+   OK  فريق بخبرات متنوعة يعمل معك لجذب العملاء وزيادة مبيعاتك.  (http://127.0.0.1:8090/)
+   OK  [EDIT-ROW]  (http://127.0.0.1:8090/)
+   OK  [EDIT-HOME-SERVICES]  (http://127.0.0.1:8090/)
+   OK  [EDIT-TEAM]  (http://127.0.0.1:8090/team/)
+   OK  [EDIT-FIT]  (http://127.0.0.1:8090/services/web-design/custom-dev/)
+   OK  [EDIT-WOO]  (http://127.0.0.1:8090/services/stores/woocommerce/)
+   OK  [EDIT-LEGAL]  (http://127.0.0.1:8090/sectors/legal/)
+   OK  [EDIT-BACKLINKS]  (http://127.0.0.1:8090/services/seo/backlinks/)
+-- deleted team member (mona-ali / منى علي)
+   own page among published URLs: none
+   pages showing the name — before upgrade: 0, after: 0 []
+-- status per URL
+   62 URLs answer 200; 404 page: [404]
+   PHP warnings/errors printed in pages: none
+-- text that was on a page before and is missing after (content must not disappear)
+   http://127.0.0.1:8090/contact/  lost 2:
+      - استلمنا بياناتك
+      - الخطوة التالية اختيار موعد المكالمة.
+   total lines lost: 2
+RESULT: PASS
+== 6. PHP log after the update (ACF 6.3.12's own textdomain notice on WP 7.1 filtered; counted below)
+ACF textdomain notices (not from SEO House): 75
+(end of log)

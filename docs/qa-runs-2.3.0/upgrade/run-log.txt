@@ -1,0 +1,18 @@
+معلومة | source | حزمة المحتوى 2.3.0 — بصمة التصميم: sha256:8b521594e8dc8695
+أُنشئ | asset:assets/platforms/official/wordpress.svg | وسائط
+أُنشئ | asset:assets/platforms/official/woocommerce.svg | وسائط
+أُنشئ | asset:assets/platforms/official/shopify.svg | وسائط
+أُنشئ | asset:assets/platforms/official/salla.svg | وسائط
+أُنشئ | asset:assets/platforms/official/webflow.svg | وسائط
+أُنشئ | asset:assets/platforms/official/react.svg | وسائط
+أُنشئ | asset:assets/platforms/official/nextjs.svg | وسائط
+أُنشئ | asset:assets/platforms/official/gsc.svg | وسائط
+أُنشئ | asset:assets/platforms/official/ga4.svg | وسائط
+أُنشئ | asset:assets/platforms/official/looker.svg | وسائط
+محمي (صفحة سابقة أو تعديل) | permalinks | بنية روابط مختلفة مضبوطة مسبقًا (/%postname%/) والموقع فيه محتوى منشور؛ لم تُغيَّر. المقالات المنشورة سابقًا على /blog/… تحتاج /blog/%postname%/ — طبّقها من «تهيئة الموقع ← فحص الموقع».
+حُدّث | page:seo-ksa | حقول
+حُدّث | page:seo-egypt | حقول
+حُدّث | page:seo-uae | حقول
+حُدّث | page:web-react-next | حقول
+محمي (صفحة سابقة أو تعديل) | page:about | عُدّلت من لوحة التحكم؛ بقيت تعديلاتك (1 اختلافًا عن التصميم).
+أُنشئ | options:sh_platforms | إعداد جديد أُضيف

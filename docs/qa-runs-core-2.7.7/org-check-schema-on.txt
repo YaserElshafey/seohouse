@@ -1,0 +1,2 @@
+pages with schema: 29 | distinct company address/image/logo across pages: 1
+no errors

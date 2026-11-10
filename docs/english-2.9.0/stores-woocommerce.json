@@ -1,0 +1,214 @@
+{
+ "id": 73,
+ "key": "stores-woocommerce",
+ "title": "WooCommerce",
+ "slug": "woocommerce",
+ "parent": 77,
+ "path": "/services/stores/woocommerce/",
+ "template": "page-templates/stores-woocommerce.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "WooCommerce Store Design on WordPress | SEO House",
+  "sh_seo_description": "WooCommerce store design that puts your products and content on one site, with payment, shipping, invoicing, order tracking and full control of your data.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "WooCommerce store development",
+  "sh_crumb": "",
+  "rank_math_title": "WooCommerce Store Design on WordPress | SEO House",
+  "rank_math_description": "WooCommerce store design that puts your products and content on one site, with payment, shipping, invoicing, order tracking and full control of your data.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "woocommerce store design"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "logo": "assets/platforms/official/woocommerce.svg",
+   "logo_image": null,
+   "title": "WooCommerce store design",
+   "text": "We build your store inside WordPress, so you control products, pages and content together, with carefully chosen plugins, tuned performance and a clear maintenance plan.",
+   "link_label": "Book a consultation",
+   "link_label_2": "What we deliver",
+   "eyebrow": "WordPress",
+   "items": [
+    {
+     "label": "Pages & articles"
+    },
+    {
+     "label": "Guides & comparisons"
+    },
+    {
+     "label": "Internal linking structure"
+    }
+   ],
+   "eyebrow_2": "WooCommerce",
+   "items_2": [
+    {
+     "label": "Products & variants"
+    },
+    {
+     "label": "Cart & checkout"
+    },
+    {
+     "label": "Orders & customers"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "build",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "What we deliver",
+   "title": "Building the store inside WordPress",
+   "items": [
+    {
+     "heading": "Product structure",
+     "label": "Organized simple and variable products, attributes and categories.",
+     "variant": "v1"
+    },
+    {
+     "heading": "Content integration",
+     "label": "Articles and guides that support product and category pages.",
+     "variant": "v1"
+    },
+    {
+     "heading": "Plugins",
+     "label": "A short list for payment, shipping and invoicing, only when needed.",
+     "variant": "v2"
+    },
+    {
+     "heading": "Performance",
+     "label": "Caching, image compression and fewer scripts.",
+     "variant": "v2"
+    },
+    {
+     "heading": "Security & maintenance",
+     "label": "Backups, user permissions and an update plan.",
+     "variant": "v2"
+    },
+    {
+     "heading": "Measurement",
+     "label": "Cart, checkout and order events in Google Analytics.",
+     "variant": "v2"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "phases",
+   "sh_hide": 0,
+   "eyebrow": "Project phases",
+   "title": "From setup to launch",
+   "items": [
+    {
+     "heading": "Setup",
+     "label": "Hosting, domain, and WordPress and WooCommerce configuration.",
+     "variant": "v1"
+    },
+    {
+     "heading": "Catalog",
+     "label": "Building products, attributes and categories.",
+     "variant": "v2"
+    },
+    {
+     "heading": "Storefront",
+     "label": "On-brand store templates and content pages.",
+     "variant": "v3"
+    },
+    {
+     "heading": "Integrations",
+     "label": "Payment, shipping, invoicing and full order testing.",
+     "variant": "v4"
+    },
+    {
+     "heading": "Launch",
+     "label": "Performance and measurement setup, then handover and training.",
+     "variant": "v5"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "fit",
+   "sh_hide": 0,
+   "eyebrow": "When it fits",
+   "title": "And what it requires",
+   "items": [
+    {
+     "label": "A good fit if content is a key part of how you win customers."
+    },
+    {
+     "label": "A good fit if you want full control over your data and theme."
+    },
+    {
+     "label": "Requires good hosting and an ongoing maintenance plan."
+    },
+    {
+     "label": "Requires discipline in choosing plugins to protect performance."
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Online store design & development",
+     "link": 77
+    },
+    {
+     "label": "WordPress",
+     "link": 95
+    },
+    {
+     "label": "Product upload & content management",
+     "link": 27
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "WooCommerce store FAQ",
+   "items": [
+    {
+     "question": "What are the advantages of WooCommerce over closed platforms?",
+     "answer": "Full control over your data, theme and plugins, plus your blog and content pages integrated with your store in a single system."
+    },
+    {
+     "question": "Will a WooCommerce store slow down my website?",
+     "answer": "Not necessarily. Slowness usually comes from too many plugins and weak hosting, and we address both from the start."
+    },
+    {
+     "question": "How many plugins do you use?",
+     "answer": "As few as possible, and only from trusted sources, because every plugin adds load and compatibility risk."
+    },
+    {
+     "question": "What about maintenance?",
+     "answer": "We set up backups and an update plan, and we can agree on monthly follow-up."
+    },
+    {
+     "question": "Can I combine my blog with my WooCommerce store?",
+     "answer": "Yes, and it's one of WooCommerce's biggest strengths: content that attracts visitors and leads them to your product pages."
+    },
+    {
+     "question": "Can you migrate my store from another platform?",
+     "answer": "Yes. We move your products, customers and orders, with a redirect plan for your URLs."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "stores",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}
