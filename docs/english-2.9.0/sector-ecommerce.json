@@ -1,0 +1,251 @@
+{
+ "id": 31,
+ "key": "sector-ecommerce",
+ "title": "E-commerce SEO",
+ "slug": "ecommerce",
+ "parent": 47,
+ "path": "/sectors/ecommerce/",
+ "template": "page-templates/sector-ecommerce.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "E-commerce SEO Services That Grow Online Sales | SEO House",
+  "sh_seo_description": "E-commerce SEO that improves category and product pages and fixes duplicate content to win orders. We grew a Saudi store's search revenue 432% in 90 days.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "E-commerce SEO services",
+  "sh_crumb": "E-commerce",
+  "rank_math_title": "E-commerce SEO Services That Grow Online Sales | SEO House",
+  "rank_math_description": "E-commerce SEO that improves category and product pages and fixes duplicate content to win orders. We grew a Saudi store's search revenue 432% in 90 days.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "e-commerce seo"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "E-commerce",
+   "title": "E-commerce SEO",
+   "text": "Shoppers can reach your store by searching for a whole category, a specific product or a comparison between options. So we organize your store's pages around what customers search for at each stage, and we find what's stopping Google from reaching your key categories and products. Our goal is for visitors to land on a useful page that helps them choose and buy, and for you to see the impact in orders and revenue, not just traffic.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "What we work on",
+   "eyebrow_2": "The customer's search path",
+   "label": "Illustrative example",
+   "label_2": "men's running shoes size 43",
+   "items": [
+    {
+     "icon": "i044cef19",
+     "heading": "Category page",
+     "label": "Size, color and price filters"
+    },
+    {
+     "icon": "ie854af75",
+     "heading": "Product page",
+     "label": "Photos, variants and availability"
+    },
+    {
+     "icon": "i6a6194fb",
+     "heading": "Cart & checkout",
+     "label": "Shipping cost shown before payment"
+    }
+   ],
+   "label_3": "The action we measure",
+   "heading": "Completed order"
+  },
+  {
+   "acf_fc_layout": "sector_journey",
+   "sh_hide": 0,
+   "eyebrow": "Illustrative store example",
+   "title": "How a shopper gets from category to order",
+   "eyebrow_2": "1",
+   "heading": "Category page",
+   "label": "Kids' bedroom furniture",
+   "eyebrow_3": "Material",
+   "items": [
+    {
+     "eyebrow": "Age"
+    },
+    {
+     "eyebrow": "Color"
+    }
+   ],
+   "eyebrow_4": "2",
+   "heading_2": "Product page",
+   "eyebrow_5": "Wooden kids' bed",
+   "eyebrow_6": "White",
+   "eyebrow_7": "Natural",
+   "eyebrow_8": "3",
+   "heading_3": "Cart & order",
+   "label_2": "Wooden kids' bed",
+   "label_3": "× 1",
+   "label_4": "In stock · Delivery shown before payment",
+   "eyebrow_9": "Place order"
+  },
+  {
+   "acf_fc_layout": "path",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "From category search to buying decision",
+   "title": "From category to product",
+   "items": [
+    {
+     "icon": "ic9397380",
+     "eyebrow": "Category search",
+     "heading": "“kids' bedroom furniture”",
+     "label": "Browsing, not yet decided",
+     "variant": "v1"
+    },
+    {
+     "icon": "id8d357ca",
+     "eyebrow": "Comparison",
+     "heading": "Between models or sizes",
+     "label": "Narrowing down the choice",
+     "variant": "v2"
+    },
+    {
+     "icon": "i12c5c47b",
+     "eyebrow": "Specific product",
+     "heading": "A particular model or size",
+     "label": "Close to buying",
+     "variant": "v3"
+    },
+    {
+     "icon": "i01913773",
+     "eyebrow": "Cart & order",
+     "heading": "Availability & delivery",
+     "label": "Making the decision",
+     "variant": "v4"
+    }
+   ],
+   "text": "Someone searching for “kids' bedroom furniture” hasn't made up their mind yet, while someone searching for a specific size or model is close to buying. We give the category page a clear role: presenting the options and helping shoppers narrow them down. Then we make sure the product page answers questions about size, specifications, availability and delivery using the information the store actually has. That way, each page serves a different question instead of the category and the product competing for the same search term."
+  },
+  {
+   "acf_fc_layout": "visibility",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "The categories and products that deserve priority",
+   "title": "Where is your store losing visibility?",
+   "text": "We review which categories deserve to rank, which products are available and the links that lead to them. Filters can create many near-identical pages or generate titles customers don't care about, so we don't apply one rule to every store. We choose what's useful to searchers and has content of its own, and we handle duplicate or unavailable pages based on your store's actual situation. We also check how fast pages load on mobile, because a customer may reach a product and leave before getting a proper look at it.",
+   "text_2": "What we review in your store",
+   "items": [
+    {
+     "text": "Category structure and category-to-product linking"
+    },
+    {
+     "text": "Product descriptions, sizes and specifications"
+    },
+    {
+     "text": "Unavailable products and their alternatives"
+    },
+    {
+     "text": "Filters and duplicate pages, based on your store's data"
+    },
+    {
+     "text": "Mobile loading speed"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "measure",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "What do we track after implementation?",
+   "title": "What does SEO success mean for a store?",
+   "text": "Rankings and clicks help us understand reach, but they're not where improvement decisions end. We track the performance of category and product pages, plus orders and revenue from organic search, whenever the measurement tools are set up for it.",
+   "items": [
+    {
+     "text": "Qualified clicks to categories"
+    },
+    {
+     "text": "Qualified clicks to products"
+    },
+    {
+     "text": "Add to cart"
+    }
+   ],
+   "text_2": "Organic orders & revenue"
+  },
+  {
+   "acf_fc_layout": "case",
+   "sh_hide": 0,
+   "eyebrow": "Documented result",
+   "heading": "+432.54%",
+   "title": "Growth in organic search revenue",
+   "text": "An online store in the Saudi market. Organic channel revenue rose from SAR 19,956 to SAR 106,274 compared with the previous period.",
+   "items": [
+    {
+     "label": "Industry",
+     "heading": "E-commerce"
+    },
+    {
+     "label": "Market",
+     "heading": "Saudi Arabia"
+    },
+    {
+     "label": "Source",
+     "heading": "Google Analytics"
+    },
+    {
+     "label": "Comparison",
+     "heading": "Previous period"
+    }
+   ],
+   "label": "Google Analytics",
+   "link": "uploads/02-case-organic-revenue-106274.webp",
+   "image": 101
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "SEO services",
+     "link": 65
+    },
+    {
+     "label": "Online store design & development",
+     "link": 77
+    },
+    {
+     "label": "Product upload",
+     "link": 27
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "E-commerce SEO questions",
+   "items": [
+    {
+     "question": "Should every filter page appear in search results?",
+     "answer": "No. We only index a filter page when people actually search for it and it has content of its own that's useful to searchers. We keep the rest from creating duplicates, based on your store's data."
+    },
+    {
+     "question": "What happens to products that are out of stock?",
+     "answer": "It depends on the product. If it's coming back, we keep its page and make availability clear. If it's discontinued for good, we send visitors to a suitable alternative or to its category."
+    },
+    {
+     "question": "Should we start with category pages or product pages?",
+     "answer": "Usually with categories, because they attract broader searches and send visitors on to products. Then we move on to the products closest to an order. This may vary depending on your store's data."
+    },
+    {
+     "question": "How do we know SEO is affecting sales?",
+     "answer": "When tracking is set up correctly, we connect organic visits to add-to-carts, orders and revenue, rather than looking at traffic alone."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

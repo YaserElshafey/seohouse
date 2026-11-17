@@ -1,0 +1,13 @@
+{
+  "name": "seohouse-design-import",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Converts the approved Claude Design export into SEO House WordPress theme sections, ACF field groups and seed content.",
+  "scripts": {
+    "extract": "node extract.js",
+    "convert": "node convert.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}

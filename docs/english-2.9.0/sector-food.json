@@ -1,0 +1,229 @@
+{
+ "id": 35,
+ "key": "sector-food",
+ "title": "Restaurant SEO",
+ "slug": "food",
+ "parent": 47,
+ "path": "/sectors/food/",
+ "template": "page-templates/sector-food.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "Restaurant SEO & Local Search for Food Brands | SEO House",
+  "sh_seo_description": "Restaurant SEO for restaurants and food brands: clear branch and menu pages that show up in nearby restaurant searches, with easy ordering and booking.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "SEO services for restaurants and food brands",
+  "sh_crumb": "Food & restaurants",
+  "rank_math_title": "Restaurant SEO & Local Search for Food Brands | SEO House",
+  "rank_math_description": "Restaurant SEO for restaurants and food brands: clear branch and menu pages that show up in nearby restaurant searches, with easy ordering and booking.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "restaurant seo"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Food & restaurants",
+   "title": "SEO for restaurants and food brands",
+   "text": "Someone searching for a restaurant may want the nearest branch that's open now, a look at the menu, a table booking or delivery. We cover each of these tasks with clear, up-to-date pages: branches with accurate details, a menu organized into sections, and the right way to order or book. Showing up in local search doesn't help if the visitor ends up with outdated opening hours or an order link that doesn't work.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "What we work on",
+   "eyebrow_2": "The customer's search path",
+   "label": "Illustrative example",
+   "label_2": "restaurants open now near me",
+   "items": [
+    {
+     "icon": "ie59b5e34",
+     "heading": "Branch",
+     "label": "Address and current opening hours"
+    },
+    {
+     "icon": "ib848b72b",
+     "heading": "Menu",
+     "label": "Sections and dishes as readable text"
+    },
+    {
+     "icon": "i5b10b0a6",
+     "heading": "Customer's choice",
+     "label": "Delivery, pickup or booking"
+    }
+   ],
+   "label_3": "The action we measure",
+   "heading": "Booking or order"
+  },
+  {
+   "acf_fc_layout": "sector_journey",
+   "sh_hide": 0,
+   "eyebrow": "Illustrative restaurant example",
+   "title": "From branch and menu to order or booking",
+   "eyebrow_2": "1",
+   "heading": "Branch",
+   "label": "restaurant near me",
+   "items": [
+    {
+     "icon": "i786c2038",
+     "label": "North branch · Open now"
+    },
+    {
+     "icon": "i0e5766d8",
+     "label": "South branch · Closing soon"
+    }
+   ],
+   "eyebrow_3": "2",
+   "heading_2": "Menu",
+   "items_2": [
+    {
+     "label": "Main dishes",
+     "label_2": "View →"
+    },
+    {
+     "label": "Grills",
+     "label_2": "View →"
+    },
+    {
+     "label": "Drinks",
+     "label_2": "View →"
+    }
+   ],
+   "label_2": "A searchable text menu, not an image or a file.",
+   "eyebrow_4": "3",
+   "heading_3": "Order or booking",
+   "eyebrow_5": "Delivery",
+   "items_3": [
+    {
+     "eyebrow": "Pickup"
+    },
+    {
+     "eyebrow": "Book a table"
+    }
+   ],
+   "label_3": "Address or branch",
+   "eyebrow_6": "Order now"
+  },
+  {
+   "acf_fc_layout": "branch",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Finding the right branch",
+   "title": "Visitors want information they can use right now",
+   "text": "When someone searches for a restaurant, what they may need most is the nearest branch, its opening hours, the menu and how to book or order. We put this information on clear pages for each real branch, with working links for directions and contact. We don't duplicate pages by just swapping the neighborhood name; each branch needs its own details, photos and services as they really are.",
+   "eyebrow": "A branch page includes",
+   "items": [
+    {
+     "label": "Address",
+     "variant": "v1"
+    },
+    {
+     "label": "Opening hours",
+     "variant": "v1"
+    },
+    {
+     "label": "Directions",
+     "variant": "v1"
+    },
+    {
+     "label": "Menu",
+     "variant": "v1"
+    },
+    {
+     "label": "Booking or ordering",
+     "variant": "v2"
+    },
+    {
+     "label": "Call",
+     "variant": "v1"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "menu",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "The menu before the decision",
+   "title": "Make your menu easy to browse and search",
+   "text": "If your menu is published as a single image, visitors struggle to find the section or dish they want. We organize the menu items and the details the restaurant approves into suitable pages, and we review dishes or prices that change. We also make it clear when the goal is a table booking and when it's a delivery order, so every button leads to the right action, not a generic contact page.",
+   "items": [
+    {
+     "icon": "if0120d7d",
+     "heading": "Book a table",
+     "text": "The button goes to that branch's own booking tool."
+    },
+    {
+     "icon": "id2d78dc7",
+     "heading": "Order delivery",
+     "text": "The button goes to the correct ordering page, not a generic contact page."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "measure",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Measurement by branch",
+   "title": "Measure visitor actions by branch",
+   "text": "We review local search performance and branch pages, then clicks on call, directions, booking and ordering, where measurement tools are available.",
+   "items": [
+    {
+     "text": "These signals help us improve the information visitors actually need."
+    },
+    {
+     "text": "We don't post made-up order counts or ratings, and we don't confuse brand visibility in search with confirmed food orders."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "SEO services",
+     "link": 65
+    },
+    {
+     "label": "Website design & development",
+     "link": 87
+    },
+    {
+     "label": "All industries",
+     "link": 47
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Restaurant SEO questions",
+   "items": [
+    {
+     "question": "Does every restaurant branch need its own page?",
+     "answer": "Yes, when each branch has a different address, opening hours and services. A single page for all branches can't serve local search in each area."
+    },
+    {
+     "question": "How do you handle a menu that changes often?",
+     "answer": "We publish it as structured text, organized into sections and dishes approved by the restaurant, and we update dishes or prices when they change, instead of using a single image that's hard to update."
+    },
+    {
+     "question": "How do you separate delivery orders from table bookings?",
+     "answer": "Each action gets its own button that leads to the right tool, and we measure each one separately by branch."
+    },
+    {
+     "question": "What do you measure?",
+     "answer": "Clicks on call, directions, booking and ordering from branch pages, where measurement tools are available."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

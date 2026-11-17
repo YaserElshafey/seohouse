@@ -1,0 +1,181 @@
+{
+ "id": 61,
+ "key": "seo-on-page",
+ "title": "On-Page SEO",
+ "slug": "on-page",
+ "parent": 65,
+ "path": "/services/seo/on-page/",
+ "template": "page-templates/seo-on-page.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "On-Page SEO Services to Optimize Your Pages | SEO House",
+  "sh_seo_description": "On-page SEO services: we map each page to a clear keyword, optimize titles, descriptions, content and internal links, and fix pages competing for one term.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "On-page SEO and page optimization",
+  "sh_crumb": "",
+  "rank_math_title": "On-Page SEO Services to Optimize Your Pages | SEO House",
+  "rank_math_description": "On-page SEO services: we map each page to a clear keyword, optimize titles, descriptions, content and internal links, and fix pages competing for one term.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "on-page seo services"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "On-page SEO",
+   "title": "Optimizing Your Website's Pages",
+   "text": "We identify the search intent behind each page, then refine the title, content and internal links so visitors find their answer and move on to the next step.",
+   "link_label": "Book a consultation",
+   "link_label_2": "What we optimize on the page",
+   "label": "Search intent → this page",
+   "items": [
+    {
+     "label": "Internal link"
+    },
+    {
+     "label": "Internal link"
+    }
+   ],
+   "label_2": "Clear action: contact or order"
+  },
+  {
+   "acf_fc_layout": "layers",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "What we optimize on the page",
+   "title": "Every element on the page serves the visitor's question",
+   "text": "A good page isn't a collection of keywords. It's a well-organized answer that takes visitors from their question to the next step.",
+   "items": [
+    {
+     "heading": "Search intent & keywords",
+     "label": "We work out what a phrase really means and assign each keyword group to the one page that deserves it."
+    },
+    {
+     "heading": "Title & meta description",
+     "label": "A title that matches the query and a description that makes the value clear, without stuffing or repetition."
+    },
+    {
+     "heading": "Content structure",
+     "label": "Ordering headings and paragraphs so visitors quickly reach what they're looking for."
+    },
+    {
+     "heading": "Internal links",
+     "label": "Linking each page to the pages that support it and the pages it leads to, to distribute importance across the site."
+    },
+    {
+     "heading": "Keyword cannibalization",
+     "label": "Merging or separating pages that compete with each other for the same phrase."
+    },
+    {
+     "heading": "Structured data",
+     "label": "Schema suited to the page type that clarifies its content for search engines."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "flow",
+   "sh_hide": 0,
+   "eyebrow": "The page journey",
+   "title": "From search query to recorded action",
+   "eyebrow_2": "01",
+   "heading": "The query",
+   "label": "The visitor types their question or need into search.",
+   "eyebrow_3": "02",
+   "heading_2": "The right page",
+   "label_2": "The page that answers that exact intent appears.",
+   "eyebrow_4": "03",
+   "heading_3": "The answer",
+   "label_3": "The content addresses the question and removes any hesitation.",
+   "eyebrow_5": "04",
+   "heading_4": "The next step",
+   "label_4": "An internal link or a clear action that leads to conversion."
+  },
+  {
+   "acf_fc_layout": "deliverables",
+   "sh_hide": 0,
+   "eyebrow": "Deliverables",
+   "title": "What you get from an on-page SEO project",
+   "items": [
+    {
+     "label": "A keyword and page map showing which page owns each search intent."
+    },
+    {
+     "label": "Updated titles and meta descriptions for priority pages."
+    },
+    {
+     "label": "A proposed content structure for each page that needs reorganizing."
+    },
+    {
+     "label": "An internal linking plan between service and content pages."
+    },
+    {
+     "label": "A list of competing pages, with a merge-or-separate decision for each."
+    },
+    {
+     "label": "Structured data, implemented and validated."
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Full SEO service",
+     "link": 65
+    },
+    {
+     "label": "Technical SEO",
+     "link": 63
+    },
+    {
+     "label": "SEO content",
+     "link": 53
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "On-page SEO FAQs",
+   "items": [
+    {
+     "question": "What's the difference between on-page SEO and technical SEO?",
+     "answer": "Technical SEO deals with search engines' ability to reach and read a page, while on-page SEO deals with what's on the page itself: search intent, title, content and links."
+    },
+    {
+     "question": "How do you know if two pages are competing with each other?",
+     "answer": "We check in Search Console which pages appear for the same phrase and keep swapping positions, then decide whether to merge them or separate the intent between the two."
+    },
+    {
+     "question": "Do you rewrite page content?",
+     "answer": "We reorganize the content and add what's missing. Writing new pages from scratch falls under our SEO content service."
+    },
+    {
+     "question": "How many pages do you work on each month?",
+     "answer": "It depends on the scope of work and the condition of the pages. We start with the pages closest to generating orders, then expand from there."
+    },
+    {
+     "question": "Do I need a developer?",
+     "answer": "Most changes are made directly in your platform. We only need your developer for templates and custom-built systems."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "seo",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

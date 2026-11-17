@@ -1,0 +1,211 @@
+{
+ "id": 53,
+ "key": "seo-content",
+ "title": "SEO Content",
+ "slug": "content",
+ "parent": 65,
+ "path": "/services/seo/content/",
+ "template": "page-templates/seo-content.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "SEO Content Writing Services for Websites | SEO House",
+  "sh_seo_description": "SEO content writing services by human editors: articles, service, category and product pages built on search data, reviewed before publishing and measured.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "SEO content writing",
+  "sh_crumb": "",
+  "rank_math_title": "SEO Content Writing Services for Websites | SEO House",
+  "rank_math_description": "SEO content writing services by human editors: articles, service, category and product pages built on search data, reviewed before publishing and measured.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo content writing services"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "SEO content",
+   "title": "SEO Content Writing",
+   "text": "We start with search data to decide what's worth writing, then produce clear, human-written copy that an editor reviews before publishing, and we measure its impact on visibility and traffic.",
+   "link_label": "Book a consultation",
+   "link_label_2": "Content types",
+   "items": [
+    {
+     "text": "Research & intent",
+     "label": "What the visitor actually wants"
+    },
+    {
+     "text": "Brief",
+     "label": "Angle, questions, sources, call to action"
+    },
+    {
+     "text": "Writing",
+     "label": "Human copy that answers, with no filler"
+    },
+    {
+     "text": "Review",
+     "label": "Language and subject-matter editing before publishing"
+    },
+    {
+     "text": "Publish & measure",
+     "label": "Connecting the page to search and reading its impact"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "types",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Content types",
+   "title": "Not all content serves the same goal",
+   "text": "A service page attracts people who want to buy; an article attracts people looking for an answer. We choose the type of content based on where the visitor is in their decision.",
+   "items": [
+    {
+     "heading": "Service pages",
+     "label": "Copy that explains the service and its scope, removes hesitation and leads to an inquiry or order."
+    },
+    {
+     "heading": "Articles & guides",
+     "label": "Answers to the questions that come before a decision, building trust and feeding your service pages."
+    },
+    {
+     "heading": "Category pages",
+     "label": "Descriptions that explain what a category includes and help visitors filter and choose."
+    },
+    {
+     "heading": "Product pages",
+     "label": "Enough information to buy: specs, uses and the differences between options."
+    },
+    {
+     "heading": "Comparison pages",
+     "label": "A neutral look at the differences between alternatives, for people comparing before they order."
+    },
+    {
+     "heading": "Support content",
+     "label": "Post-purchase answers that cut down on repeat questions."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "flow",
+   "sh_hide": 0,
+   "eyebrow": "How we work",
+   "title": "From research to a published, measured page",
+   "items": [
+    {
+     "heading": "Research & intent",
+     "text": "We identify what customers search for and what competing pages cover.",
+     "eyebrow": "Output: topic list"
+    },
+    {
+     "heading": "Brief",
+     "text": "We define the angle, questions, sources and the action we want the reader to take.",
+     "eyebrow": "Output: content brief"
+    },
+    {
+     "heading": "Writing",
+     "text": "Direct, human-written copy that answers the question without filler.",
+     "eyebrow": "Output: draft"
+    },
+    {
+     "heading": "Review",
+     "text": "Language and subject-matter editing, checked against the brief.",
+     "eyebrow": "Output: approved copy"
+    },
+    {
+     "heading": "Publish & measure",
+     "text": "Structured publishing, then tracking visibility and traffic.",
+     "eyebrow": "Output: performance report"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "human",
+   "sh_hide": 0,
+   "eyebrow": "Tools and editing",
+   "title": "Tools support the research; people make the calls",
+   "text": "We use search data and analysis tools to choose topics and angles. The writing and review are done by an editor who understands your business and knows what matters to the reader.",
+   "items": [
+    {
+     "heading": "What the tools do",
+     "text": "Spot demand, analyze competitor coverage, prioritize topics."
+    },
+    {
+     "heading": "What the editor does",
+     "text": "Choose the angle, craft the answer, fact-check and match your brand voice."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "proof",
+   "sh_hide": 0,
+   "eyebrow": "Content impact in a real project",
+   "heading": "12.9K organic clicks in 28 days",
+   "text": "A medical services website, compared with 825 clicks in the previous period, after improving its pages and content and connecting search traffic to the right path through the site.",
+   "label": "Source: Search Console",
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Full SEO service",
+     "link": 65
+    },
+    {
+     "label": "On-page SEO",
+     "link": 61
+    },
+    {
+     "label": "Link building",
+     "link": 49
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "SEO content FAQs",
+   "items": [
+    {
+     "question": "Is your content written with AI tools?",
+     "answer": "Tools help with research and coverage analysis. The writing and review are done by an editor, and we never publish copy without human editing."
+    },
+    {
+     "question": "How many articles do we need per month?",
+     "answer": "The number isn't the goal. We first work out what your priority pages need, and improving existing pages can be more effective than adding new articles."
+    },
+    {
+     "question": "Do you write service pages, or only articles?",
+     "answer": "We write both: service, category and product pages, as well as the articles and guides people read before making a decision."
+    },
+    {
+     "question": "How do you measure the success of SEO content?",
+     "answer": "We track impressions and clicks in Search Console, and traffic and conversions in GA4, for every page."
+    },
+    {
+     "question": "Do you update old content?",
+     "answer": "Yes. Updating a page that's losing visibility often pays off faster than creating a new one."
+    },
+    {
+     "question": "Can you write in our brand voice?",
+     "answer": "We agree on tone and terminology at the start, and apply them to every piece before it's published."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "seo",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

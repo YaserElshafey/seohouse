@@ -1,0 +1,348 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "الخدمات",
+   "href": null
+  }
+ ],
+ "key": "services",
+ "route": "/services/",
+ "kind": "page",
+ "title": "الخدمات",
+ "file": "SEO House - All Services.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "خدمات سيو هاوس | سيو، مواقع، متاجر ومحتوى المنتجات",
+  "description": "منظومة خدمات سيو هاوس: تحسين محركات البحث كتخصص أساسي، إلى جانب تصميم وتطوير المواقع والمتاجر ورفع المنتجات وإدارة محتواها.",
+  "robots": "",
+  "schema_type": "service",
+  "schema_service": "خدمات تسويق رقمي وتطوير ويب"
+ },
+ "template": "page-templates/services.php",
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "eyebrow": "خدمات سيو هاوس",
+   "title": "خدمات سيو هاوس",
+   "text": "نعمل على ما يجلب لك عملاء من البحث، وعلى الأساس الذي يقف عليه ذلك: موقع أو متجر سليم، ومحتوى منتجات منظم يمكن قياسه.",
+   "link_label": "احجز مكالمة استشارية",
+   "link_label_2": "استعرض الخدمات",
+   "link": {
+    "__route": "/services/seo/"
+   },
+   "heading": "تحسين محركات البحث",
+   "label": "التخصص الأساسي: الظهور والطلبات",
+   "items": [
+    {
+     "link": {
+      "__route": "/services/web-design/"
+     },
+     "icon": "ife038925",
+     "heading": "تصميم وتطوير المواقع",
+     "label": "ووردبريس، ويب فلو، رياكت ونكست، برمجة خاصة"
+    },
+    {
+     "link": {
+      "__route": "/services/stores/"
+     },
+     "icon": "ic15425eb",
+     "heading": "تصميم المتاجر الإلكترونية",
+     "label": "شوبيفاي، سلة، زد، ووكومرس"
+    },
+    {
+     "link": {
+      "__route": "/services/products/"
+     },
+     "icon": "i85482618",
+     "heading": "رفع المنتجات وإدارة المحتوى",
+     "label": "بيانات وصور وتصنيفات الكتالوج"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "families",
+   "eyebrow": "الخدمات",
+   "title": "خدمات سيو هاوس",
+   "text": "السيو هو تخصصنا الأساسي، وبقية الخدمات تبني الأساس الذي يعمل عليه: موقع أو متجر سليم، ومحتوى منتجات منظم.",
+   "items": [
+    {
+     "eyebrow": "التخصص الأساسي",
+     "icon": "i4197e9b2",
+     "label": "تحسين محركات البحث",
+     "text": "العمل الذي بنيت عليه سيو هاوس: تحليل الطلب، معالجة الموقع تقنيًا، بناء المحتوى والسلطة، ثم قياس الأثر على الطلبات.",
+     "eyebrow_2": "بحث العميل",
+     "eyebrow_3": "صفحة مناسبة",
+     "eyebrow_4": "طلب",
+     "items": [
+      {
+       "link": {
+        "__route": "/services/seo/"
+       },
+       "label": "خدمة السيو الكاملة"
+      },
+      {
+       "link": {
+        "__route": "/services/seo/technical/"
+       },
+       "label": "السيو التقني"
+      },
+      {
+       "link": {
+        "__route": "/services/seo/on-page/"
+       },
+       "label": "السيو الداخلي"
+      },
+      {
+       "link": {
+        "__route": "/services/seo/content/"
+       },
+       "label": "محتوى السيو"
+      },
+      {
+       "link": {
+        "__route": "/services/seo/backlinks/"
+       },
+       "label": "بناء الروابط"
+      },
+      {
+       "link": {
+        "__route": "/services/seo/consulting/"
+       },
+       "label": "الاستشارات وتحليل الأداء"
+      }
+     ]
+    },
+    {
+     "eyebrow": "بناء الموقع",
+     "icon": "i9c2be56f",
+     "label": "تصميم وتطوير المواقع",
+     "text": "مواقع تُبنى على أهداف النشاط: رسالة واضحة، سرعة، سهولة إدارة، وأساس تقني يتحمل العمل على الظهور لاحقًا.",
+     "eyebrow_2": "الهدف",
+     "eyebrow_3": "البنية",
+     "eyebrow_4": "الإطلاق",
+     "items": [
+      {
+       "link": {
+        "__route": "/services/web-design/"
+       },
+       "label": "تصميم وتطوير المواقع"
+      },
+      {
+       "link": {
+        "__route": "/services/web-design/wordpress/"
+       },
+       "label": "ووردبريس"
+      },
+      {
+       "link": {
+        "__route": "/services/web-design/webflow/"
+       },
+       "label": "ويب فلو"
+      },
+      {
+       "link": {
+        "__route": "/services/web-design/react-next/"
+       },
+       "label": "رياكت ونكست"
+      },
+      {
+       "link": {
+        "__route": "/services/web-design/custom-dev/"
+       },
+       "label": "البرمجة الخاصة"
+      }
+     ]
+    },
+    {
+     "eyebrow": "التجارة الإلكترونية",
+     "icon": "icaf199e7",
+     "label": "تصميم وتطوير المتاجر",
+     "text": "متاجر تركّز على سهولة الشراء: تصنيف واضح، صفحات منتج مقنعة، دفع وشحن يعملان دون عقبات.",
+     "eyebrow_2": "الفئة",
+     "eyebrow_3": "المنتج",
+     "eyebrow_4": "الدفع",
+     "items": [
+      {
+       "link": {
+        "__route": "/services/stores/"
+       },
+       "label": "تصميم وتطوير المتاجر"
+      },
+      {
+       "link": {
+        "__route": "/services/stores/shopify/"
+       },
+       "label": "شوبيفاي"
+      },
+      {
+       "link": {
+        "__route": "/services/stores/salla/"
+       },
+       "label": "سلة"
+      },
+      {
+       "link": {
+        "__route": "/services/stores/zid/"
+       },
+       "label": "زد"
+      },
+      {
+       "link": {
+        "__route": "/services/stores/woocommerce/"
+       },
+       "label": "ووكومرس"
+      }
+     ]
+    }
+   ],
+   "eyebrow_2": "تشغيل المحتوى",
+   "label": "رفع المنتجات وإدارة المحتوى",
+   "text_2": "إدخال المنتجات وبياناتها وصورها وتصنيفاتها بصورة منظمة، حتى يعمل المتجر ويظهر في البحث دون فوضى بيانات.",
+   "eyebrow_3": "ملف المورد",
+   "eyebrow_4": "التحرير",
+   "eyebrow_5": "منشور",
+   "link": {
+    "__route": "/services/products/"
+   },
+   "label_2": "رفع المنتجات وإدارة المحتوى"
+  },
+  {
+   "acf_fc_layout": "path",
+   "eyebrow": "من أين تبدأ؟",
+   "title": "اختر نقطة البداية حسب حالتك",
+   "items": [
+    {
+     "link": {
+      "__route": "/services/seo/"
+     },
+     "eyebrow": "لديك موقع يعمل",
+     "heading": "تريد ظهورًا وطلبات أكثر",
+     "text": "ابدأ من خدمة السيو ومراجعة ما يمنع الصفحات من المنافسة.",
+     "label": "خدمة السيو ←"
+    },
+    {
+     "link": {
+      "__route": "/services/web-design/"
+     },
+     "eyebrow": "لا يوجد موقع أو الموقع قديم",
+     "heading": "تريد بناء أساس صحيح",
+     "text": "ابدأ من تصميم الموقع أو المتجر بما يناسب نشاطك ومنصتك.",
+     "label": "تصميم المواقع ←"
+    },
+    {
+     "link": {
+      "__route": "/services/products/"
+     },
+     "eyebrow": "متجرك جاهز والبيانات غير منظمة",
+     "heading": "تريد كتالوج منظمًا",
+     "text": "ابدأ من رفع المنتجات وترتيب بياناتها وتصنيفاتها.",
+     "label": "رفع المنتجات ←"
+    }
+   ],
+   "link": {
+    "__route": "/pricing/"
+   },
+   "link_label": "راجع نطاقات الأسعار"
+  },
+  {
+   "acf_fc_layout": "sectors",
+   "eyebrow": "القطاعات",
+   "title": "القطاعات التي نخدمها",
+   "link": {
+    "__route": "/sectors/"
+   },
+   "link_label": "جميع القطاعات ←",
+   "items": [
+    {
+     "link": {
+      "__route": "/sectors/ecommerce/"
+     },
+     "link_label": "التجارة الإلكترونية"
+    },
+    {
+     "link": {
+      "__route": "/sectors/health/"
+     },
+     "link_label": "الصحة والطب"
+    },
+    {
+     "link": {
+      "__route": "/sectors/real-estate/"
+     },
+     "link_label": "العقارات والبناء"
+    },
+    {
+     "link": {
+      "__route": "/sectors/education/"
+     },
+     "link_label": "التعليم والتدريب"
+    },
+    {
+     "link": {
+      "__route": "/sectors/tourism/"
+     },
+     "link_label": "السياحة والسفر"
+    },
+    {
+     "link": {
+      "__route": "/sectors/tech/"
+     },
+     "link_label": "التقنية والبرمجيات"
+    },
+    {
+     "link": {
+      "__route": "/sectors/legal/"
+     },
+     "link_label": "القانون والاستشارات"
+    },
+    {
+     "link": {
+      "__route": "/sectors/food/"
+     },
+     "link_label": "الأغذية والمطاعم"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "eyebrow": "أسئلة شائعة",
+   "title": "أسئلة عن خدمات سيو هاوس",
+   "items": [
+    {
+     "question": "هل يمكن طلب خدمة واحدة فقط؟",
+     "answer": "نعم. يمكن العمل على السيو وحده، أو على بناء الموقع أو المتجر وحده، أو على رفع المنتجات فقط بحسب ما يحتاجه مشروعك."
+    },
+    {
+     "question": "ما الخدمة التي تناسب موقعًا قائمًا لا يحقق طلبات؟",
+     "answer": "نبدأ عادة بمراجعة السيو لتحديد ما يمنع الصفحات من الظهور والتحويل، ثم نقرر ما إذا كان الموقع نفسه يحتاج تطويرًا."
+    },
+    {
+     "question": "هل تبنون الموقع ثم تتركونه؟",
+     "answer": "التسليم يشمل شرح الإدارة وتسليم الصلاحيات. يمكن بعدها الاتفاق على متابعة شهرية للتحسين والقياس."
+    },
+    {
+     "question": "هل تعملون على منصات جاهزة أم برمجة خاصة؟",
+     "answer": "نعمل على WordPress وWebflow وShopify وسلة وزد وWooCommerce، وننفّذ برمجة خاصة عندما لا تناسب المنصات الجاهزة طبيعة النظام المطلوب."
+    },
+    {
+     "question": "كيف تُحدد الأسعار؟",
+     "answer": "تُحدد بحسب نطاق العمل وحجم الموقع أو الكتالوج ومستوى المنافسة. راجع صفحة الأسعار ثم احجز مكالمة لمناقشة حالتك."
+    }
+   ],
+   "schema": 1,
+   "_variant": "head"
+  },
+  {
+   "acf_fc_layout": "booking",
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

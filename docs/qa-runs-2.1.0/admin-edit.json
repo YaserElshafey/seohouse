@@ -1,0 +1,153 @@
+{
+  "date": "2026-10-02T19:57:22.833Z",
+  "wp": "http://127.0.0.1:8093",
+  "passed": 29,
+  "failed": 0,
+  "results": [
+    {
+      "name": "login",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "classic edit screen with ACF sections (no block editor)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sections rendered as ACF Group fields",
+      "ok": true,
+      "detail": "8 sections"
+    },
+    {
+      "name": "a section list (sh_rows) is present",
+      "ok": true,
+      "detail": "s_hero.items"
+    },
+    {
+      "name": "add item: new row appended and open",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "reorder: ↑ moves the item up",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "remove item: row removed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "save: no JS errors on the edit screen",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "saved: section text field",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "saved: item count",
+      "ok": true,
+      "detail": "4/4"
+    },
+    {
+      "name": "saved: new order (moved item first)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "saved: removed item is gone",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "saved: added item kept at the end",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public page: edited title shown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public page: added item shown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public page: hidden FAQ section not rendered",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "nested list present on this page",
+      "ok": true,
+      "detail": "s_services"
+    },
+    {
+      "name": "nested list found",
+      "ok": true,
+      "detail": "s_services"
+    },
+    {
+      "name": "nested list: edit saved and shown on the public page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "nested list: no JS errors",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "settings: WordPress admin page renders the ACF group with tabs",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "settings: saved notice",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "settings: no JS errors",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "settings: text field persisted",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "settings: list item persisted",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "public page: footer text from settings",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "case study: metrics item saved",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "case study: public page shows the new metric",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "case study: no JS errors",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

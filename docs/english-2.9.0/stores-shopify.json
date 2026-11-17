@@ -1,0 +1,211 @@
+{
+ "id": 71,
+ "key": "stores-shopify",
+ "title": "Shopify",
+ "slug": "shopify",
+ "parent": 77,
+ "path": "/services/stores/shopify/",
+ "template": "page-templates/stores-shopify.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "Shopify Store Design & Development | SEO House",
+  "sh_seo_description": "Shopify store design with sections you edit yourself, an organized catalog, payment and shipping, multi-market support, and fewer apps to keep costs down.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Shopify store development",
+  "sh_crumb": "",
+  "rank_math_title": "Shopify Store Design & Development | SEO House",
+  "rank_math_description": "Shopify store design with sections you edit yourself, an organized catalog, payment and shipping, multi-market support, and fewer apps to keep costs down.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "shopify store design"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "logo": "assets/platforms/official/shopify.svg",
+   "logo_image": null,
+   "title": "Shopify store design",
+   "text": "We build editable, on-brand sections, organize your catalog and variants, and set up payment, shipping and tracking, choosing only the apps that support your operations.",
+   "link_label": "Book a consultation",
+   "link_label_2": "What we deliver",
+   "label": "storefront — editable sections",
+   "eyebrow": "Section",
+   "label_2": "Main banner",
+   "items": [
+    {
+     "label": "Featured collections"
+    },
+    {
+     "label": "Best sellers"
+    },
+    {
+     "label": "Reviews"
+    }
+   ],
+   "label_3": "Store footer"
+  },
+  {
+   "acf_fc_layout": "build",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "What we deliver",
+   "title": "Building the store from the inside",
+   "items": [
+    {
+     "heading": "Theme & sections",
+     "text": "On-brand sections you can assemble yourself into new pages."
+    },
+    {
+     "heading": "Catalog & variants",
+     "text": "Organizing products, options and smart collections."
+    },
+    {
+     "heading": "Apps",
+     "text": "A short list chosen by need, with their impact on speed monitored."
+    },
+    {
+     "heading": "Payment & shipping",
+     "text": "Connecting gateways and carriers and testing the full order."
+    },
+    {
+     "heading": "Markets",
+     "text": "Multiple markets, currencies and languages when needed."
+    },
+    {
+     "heading": "Tracking & reports",
+     "text": "Cart, checkout and order events in Google Analytics."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "apps",
+   "sh_hide": 0,
+   "eyebrow": "Apps",
+   "title": "Every app adds cost and scripts",
+   "text": "We review every app request with one question: does the platform already handle this? Anything that doesn't support your operations doesn't get installed.",
+   "items": [
+    {
+     "heading": "Payment & shipping",
+     "label": "Connecting gateways and carriers that aren't supported out of the box.",
+     "eyebrow": "Required",
+     "variant": "v1"
+    },
+    {
+     "heading": "Tax invoicing",
+     "label": "A regulatory requirement the platform doesn't cover by default.",
+     "eyebrow": "Required",
+     "variant": "v1"
+    },
+    {
+     "heading": "Reviews",
+     "label": "Useful when buying decisions depend on what other shoppers say.",
+     "eyebrow": "Case by case",
+     "variant": "v2"
+    },
+    {
+     "heading": "Page builders",
+     "label": "Custom sections make them unnecessary and stay faster.",
+     "eyebrow": "Rarely",
+     "variant": "v3"
+    },
+    {
+     "heading": "Pop-ups",
+     "label": "They hurt the experience and speed more than they bring in.",
+     "eyebrow": "Rarely",
+     "variant": "v3"
+    },
+    {
+     "heading": "Extra tracking",
+     "label": "Google Analytics and platform events cover the measurement you need.",
+     "eyebrow": "Usually not",
+     "variant": "v3"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "care",
+   "sh_hide": 0,
+   "eyebrow": "After launch",
+   "title": "Ongoing operations",
+   "items": [
+    {
+     "label": "Adding products and collections within the agreed structure."
+    },
+    {
+     "label": "Regular reviews of store speed and app impact."
+    },
+    {
+     "label": "Monitoring the checkout path and fixing drop-off points."
+    },
+    {
+     "label": "Reports on orders and traffic sources."
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Online store design & development",
+     "link": 77
+    },
+    {
+     "label": "Product upload & content management",
+     "link": 27
+    },
+    {
+     "label": "E-commerce sector",
+     "link": 31
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Shopify store FAQ",
+   "items": [
+    {
+     "question": "Do you use a ready-made Shopify theme?",
+     "answer": "We start from a stable theme and build on-brand sections on top of it, instead of installing a cluttered theme that's hard to change later."
+    },
+    {
+     "question": "How many apps does a Shopify store need?",
+     "answer": "As few as possible. Every app adds scripts and a monthly cost, so we choose only the ones that genuinely support your operations."
+    },
+    {
+     "question": "Does it support Arabic and RTL?",
+     "answer": "Yes. We set up the text direction and Arabic fonts across the theme and sections."
+    },
+    {
+     "question": "Can I sell in more than one market?",
+     "answer": "Yes, through Shopify Markets, with currencies, languages and shipping methods set up for each market."
+    },
+    {
+     "question": "What about SEO on Shopify?",
+     "answer": "We set up the category structure, URLs, meta tags and structured data. Ongoing work on search visibility is a separate SEO service."
+    },
+    {
+     "question": "Can you migrate my store from another platform?",
+     "answer": "Yes. We move your products, customers and orders, with a redirect plan that preserves your old URLs."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "stores",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

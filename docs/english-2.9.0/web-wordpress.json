@@ -1,0 +1,242 @@
+{
+ "id": 95,
+ "key": "web-wordpress",
+ "title": "WordPress Websites",
+ "slug": "wordpress",
+ "parent": 87,
+ "path": "/services/web-design/wordpress/",
+ "template": "page-templates/web-wordpress.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "WordPress Website Design for Businesses | SEO House",
+  "sh_seo_description": "WordPress website design with on-brand blocks your team uses to add pages without a developer, plus tuned speed, security, backups and Google-ready setup.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "WordPress website design and development",
+  "sh_crumb": "",
+  "rank_math_title": "WordPress Website Design for Businesses | SEO House",
+  "rank_math_description": "WordPress website design with on-brand blocks your team uses to add pages without a developer, plus tuned speed, security, backups and Google-ready setup.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "wordpress website design"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "logo": "assets/platforms/official/wordpress.svg",
+   "logo_image": null,
+   "title": "WordPress website design",
+   "text": "We build on-brand content blocks that you assemble into new pages yourself, with performance, security and URL structure set up from the start.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "The block system",
+   "label": "Block library",
+   "items": [
+    {
+     "label": "Page hero"
+    },
+    {
+     "label": "Services grid"
+    },
+    {
+     "label": "Text & image"
+    },
+    {
+     "label": "FAQ"
+    },
+    {
+     "label": "Contact form"
+    },
+    {
+     "label": "Call-to-action bar"
+    }
+   ],
+   "label_2": "Assembled page",
+   "label_3": "Page hero",
+   "items_2": [
+    {
+     "label": "Service"
+    },
+    {
+     "label": "Service"
+    },
+    {
+     "label": "Service"
+    }
+   ],
+   "label_4": "Text & image",
+   "label_5": "Contact form"
+  },
+  {
+   "acf_fc_layout": "system",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "The block system",
+   "title": "Pages built from ready-made components",
+   "text": "Instead of designing every page from scratch, we build a library of on-brand blocks: content sections, grids, forms and menus. You create a new page by combining them, without a developer and without breaking the design.",
+   "items": [
+    {
+     "heading": "Content blocks",
+     "label": "Ready-made sections for text, images, services and FAQs."
+    },
+    {
+     "heading": "Page templates",
+     "label": "A consistent structure for service, article and sector pages."
+    },
+    {
+     "heading": "Field library",
+     "label": "Defined fields that prevent mistakes when editing."
+    },
+    {
+     "heading": "Menus & links",
+     "label": "Clear navigation and an organized URL structure."
+    },
+    {
+     "heading": "Forms",
+     "label": "Contact forms connected to email and tracking."
+    },
+    {
+     "heading": "Permissions",
+     "label": "Defined roles for your team in the dashboard."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "ops",
+   "sh_hide": 0,
+   "eyebrow": "What we set up",
+   "title": "Performance, security and management",
+   "items": [
+    {
+     "label": "Image compression, lazy loading and fewer unnecessary scripts."
+    },
+    {
+     "label": "Caching configured at both page and server level."
+    },
+    {
+     "label": "Regular backups and a clear recovery plan."
+    },
+    {
+     "label": "Core and plugin updates that are monitored, not blindly automatic."
+    },
+    {
+     "label": "User permissions defined for each role on your team."
+    },
+    {
+     "label": "URL structure, meta tags and a sitemap ready for SEO work."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "fit",
+   "sh_hide": 0,
+   "eyebrow": "When WordPress is the right fit",
+   "title": "And when something else is better",
+   "items": [
+    {
+     "heading": "It's a good fit if",
+     "items": [
+      {
+       "symbol": "✓",
+       "label": "You publish content regularly and want to manage it yourself.",
+       "variant": "v1"
+      },
+      {
+       "symbol": "✓",
+       "label": "You need many service and sector pages with the same structure.",
+       "variant": "v1"
+      },
+      {
+       "symbol": "✓",
+       "label": "You want multiple languages and your team managing everything from one dashboard.",
+       "variant": "v1"
+      }
+     ]
+    },
+    {
+     "heading": "Something else may suit you if",
+     "items": [
+      {
+       "symbol": "•",
+       "label": "You need a complex interactive interface or an internal app.",
+       "variant": "v2"
+      },
+      {
+       "symbol": "•",
+       "label": "Your project relies on integrations and real-time data.",
+       "variant": "v2"
+      },
+      {
+       "symbol": "•",
+       "label": "You want precise visual control with advanced animation.",
+       "variant": "v2"
+      }
+     ]
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Website design & development",
+     "link": 87
+    },
+    {
+     "label": "WooCommerce",
+     "link": 73
+    },
+    {
+     "label": "SEO services",
+     "link": 65
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "WordPress website FAQ",
+   "items": [
+    {
+     "question": "Do you use a ready-made theme?",
+     "answer": "No. Instead of installing a generic theme, we build blocks around your brand, so your pages stay editable without breaking the design."
+    },
+    {
+     "question": "How many plugins do you use?",
+     "answer": "As few as possible, and only trusted ones, because too many plugins slow the site down and increase security risks."
+    },
+    {
+     "question": "Can I add pages myself?",
+     "answer": "Yes. Pages are built from ready-made blocks that you put together yourself, without writing any code."
+    },
+    {
+     "question": "What about security and updates?",
+     "answer": "We set up backups, user permissions and a security layer, and we can agree on monthly monitoring of updates."
+    },
+    {
+     "question": "Do you build multilingual WordPress websites?",
+     "answer": "Yes, with the URL structure and language tags set up correctly for each language version."
+    },
+    {
+     "question": "Is WordPress a good choice for an online store?",
+     "answer": "Yes, through WooCommerce. We have a separate page that explains how we build and set up WooCommerce stores."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "web",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

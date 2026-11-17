@@ -1,0 +1,192 @@
+{
+ "ar": {
+  "title": "سهل للمحاماة",
+  "slug": "sahal-law-firm",
+  "status": "publish",
+  "menu_order": 12,
+  "fields": {
+   "crumb": "سهل للمحاماة",
+   "summary": "7 كلمات بحث بالعربي والإنجليزي لخدمات المحاماة يظهر فيها الموقع في النتائج الأولى على جوجل، منها 4 أول نتيجة",
+   "result": "7",
+   "result_label": "كلمات في أول نتائج جوجل",
+   "sector": "محاماة واستشارات",
+   "market": "السعودية",
+   "filter": [
+    "legal"
+   ],
+   "client": "سهل للمحاماة",
+   "client_public": 1,
+   "client_logo": 3726,
+   "source": "لقطات من نتائج بحث جوجل بتاريخ 1 و17 نوفمبر 2026",
+   "challenge_title": "الظهور لمن يبحث عن محامٍ في الرياض، بالعربي والإنجليزي",
+   "challenge_text": "مكتب محاماة في الرياض يقدم خدمات قانونية واستشارية للشركات والأفراد، بموقع عربي وآخر إنجليزي.",
+   "results_text": "يظهر الموقع في النتائج الأولى على جوجل لـ 7 كلمات بحث بالعربي والإنجليزي، منها 4 يظهر فيها أول نتيجة. اللقطات أدناه من نتائج بحث جوجل بتاريخ 1 و17 نوفمبر 2026.",
+   "metrics": [
+    {
+     "label": "كلمات بحث يظهر فيها الموقع في النتائج الأولى",
+     "after": "7",
+     "source": "لقطات من نتائج بحث جوجل بتاريخ 1 و17 نوفمبر 2026"
+    },
+    {
+     "label": "منها كلمات يظهر فيها الموقع أول نتيجة (بعد الخريطة أو الملخص إن وُجدا)",
+     "after": "4",
+     "source": "لقطات من نتائج بحث جوجل بتاريخ 1 و17 نوفمبر 2026"
+    }
+   ],
+   "main_after_period": "نوفمبر 2026",
+   "case_date": "نوفمبر 2026",
+   "rankings": [
+    {
+     "image": 3291,
+     "keyword": "مكتب محاماة",
+     "position": "أول نتيجة بعد الخريطة",
+     "alt": "نتيجة بحث جوجل لكلمة «مكتب محاماة»: موقع سهل للمحاماة — أول نتيجة بعد الخريطة",
+     "date": "1 نوفمبر 2026"
+    },
+    {
+     "image": 3292,
+     "keyword": "أفضل محامي بالرياض",
+     "position": "النتيجة الثانية في جوجل",
+     "alt": "نتيجة بحث جوجل لكلمة «أفضل محامي بالرياض»: موقع سهل للمحاماة — النتيجة الثانية في جوجل",
+     "date": "1 نوفمبر 2026"
+    },
+    {
+     "image": 3727,
+     "keyword": "trademark registration lawyer",
+     "position": "أول نتيجة بعد الخريطة",
+     "alt": "نتيجة بحث جوجل لكلمة «trademark registration lawyer»: موقع سهل للمحاماة — أول نتيجة بعد الخريطة",
+     "date": "17 نوفمبر 2026"
+    },
+    {
+     "image": 3728,
+     "keyword": "lawyer incorporate business",
+     "position": "أول نتيجة بعد ملخص جوجل الذكي",
+     "alt": "نتيجة بحث جوجل لكلمة «lawyer incorporate business»: موقع سهل للمحاماة — أول نتيجة بعد ملخص جوجل الذكي",
+     "date": "17 نوفمبر 2026"
+    },
+    {
+     "image": 3729,
+     "keyword": "debt collection lawyer",
+     "position": "أول نتيجة بعد ملخص جوجل الذكي",
+     "alt": "نتيجة بحث جوجل لكلمة «debt collection lawyer»: موقع سهل للمحاماة — أول نتيجة بعد ملخص جوجل الذكي",
+     "date": "17 نوفمبر 2026"
+    },
+    {
+     "image": 3730,
+     "keyword": "law firm in riyadh",
+     "position": "النتيجة الثانية بعد الخريطة",
+     "alt": "نتيجة بحث جوجل لكلمة «law firm in riyadh»: موقع سهل للمحاماة — النتيجة الثانية بعد الخريطة",
+     "date": "17 نوفمبر 2026"
+    },
+    {
+     "image": 3731,
+     "keyword": "commercial insurance lawyer",
+     "position": "النتيجة الثالثة بعد الخريطة",
+     "alt": "نتيجة بحث جوجل لكلمة «commercial insurance lawyer»: موقع سهل للمحاماة — النتيجة الثالثة بعد الخريطة",
+     "date": "17 نوفمبر 2026"
+    }
+   ]
+  },
+  "seo": {
+   "rank_math_title": "دراسة حالة سيو: سهل للمحاماة | سيو هاوس",
+   "rank_math_description": "دراسة حالة سيو لسهل للمحاماة: 7 كلمات بحث بالعربي والإنجليزي لخدمات المحاماة يظهر فيها الموقع في النتائج الأولى على جوجل، منها 4 أول نتيجة.",
+   "rank_math_focus_keyword": "دراسة حالة سيو"
+  }
+ },
+ "en": {
+  "source": 3742,
+  "slug": "sahal-law-firm-en",
+  "title": "Sahal Law Firm",
+  "index": true,
+  "fields": {
+   "crumb": "Sahal Law Firm",
+   "summary": "7 Arabic and English legal searches with the site in Google’s top results, 4 of them as the first result",
+   "result": "7",
+   "result_label": "searches in Google’s top results",
+   "sector": "Law & legal advice",
+   "market": "Saudi Arabia",
+   "filter": [
+    "legal"
+   ],
+   "client": "Sahal Law Firm",
+   "client_public": 1,
+   "client_logo": 3726,
+   "source": "Google search results captured on 1 and 17 November 2026",
+   "challenge_title": "Being found by people looking for a lawyer in Riyadh, in Arabic and English",
+   "challenge_text": "A law firm in Riyadh offering legal and advisory services to companies and individuals, with an Arabic and an English website.",
+   "results_text": "The site shows up in Google’s top results for 7 Arabic and English searches, 4 of them as the first result. The screenshots below are Google search results captured on 1 and 17 November 2026.",
+   "metrics": [
+    {
+     "label": "Searches with the site in the top results",
+     "after": "7",
+     "source": "Google search results captured on 1 and 17 November 2026"
+    },
+    {
+     "label": "Of these, searches where the site is the first result (after the map or overview, if any)",
+     "after": "4",
+     "source": "Google search results captured on 1 and 17 November 2026"
+    }
+   ],
+   "main_after_period": "November 2026",
+   "case_date": "November 2026",
+   "rankings": [
+    {
+     "image": 3291,
+     "keyword": "مكتب محاماة",
+     "position": "First result after the map",
+     "date": "1 November 2026",
+     "alt": "Google search results for “مكتب محاماة”: Sahal Law Firm’s website — First result after the map"
+    },
+    {
+     "image": 3292,
+     "keyword": "أفضل محامي بالرياض",
+     "position": "#2 on Google",
+     "date": "1 November 2026",
+     "alt": "Google search results for “أفضل محامي بالرياض”: Sahal Law Firm’s website — #2 on Google"
+    },
+    {
+     "image": 3727,
+     "keyword": "trademark registration lawyer",
+     "position": "First result after the map",
+     "date": "17 November 2026",
+     "alt": "Google search results for “trademark registration lawyer”: Sahal Law Firm’s website — First result after the map"
+    },
+    {
+     "image": 3728,
+     "keyword": "lawyer incorporate business",
+     "position": "First result after the AI Overview",
+     "date": "17 November 2026",
+     "alt": "Google search results for “lawyer incorporate business”: Sahal Law Firm’s website — First result after the AI Overview"
+    },
+    {
+     "image": 3729,
+     "keyword": "debt collection lawyer",
+     "position": "First result after the AI Overview",
+     "date": "17 November 2026",
+     "alt": "Google search results for “debt collection lawyer”: Sahal Law Firm’s website — First result after the AI Overview"
+    },
+    {
+     "image": 3730,
+     "keyword": "law firm in riyadh",
+     "position": "Second result after the map",
+     "date": "17 November 2026",
+     "alt": "Google search results for “law firm in riyadh”: Sahal Law Firm’s website — Second result after the map"
+    },
+    {
+     "image": 3731,
+     "keyword": "commercial insurance lawyer",
+     "position": "Third result after the map",
+     "date": "17 November 2026",
+     "alt": "Google search results for “commercial insurance lawyer”: Sahal Law Firm’s website — Third result after the map"
+    }
+   ]
+  },
+  "seo": {
+   "rank_math_title": "SEO Case Study: Sahal Law Firm | SEO House",
+   "rank_math_description": "SEO case study for Sahal Law Firm: 7 Arabic and English legal searches with the site in Google’s top results, 4 of them as the first result.",
+   "rank_math_focus_keyword": "seo case study"
+  }
+ },
+ "ar_id": 3742,
+ "en_id": 3753
+}

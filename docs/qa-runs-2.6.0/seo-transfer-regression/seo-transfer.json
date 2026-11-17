@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-03T23:33:46.288Z",
+  "wp": "http://127.0.0.1:8096/new",
+  "results": [
+    {
+      "name": "menu: «نقل عناوين وأوصاف SEO» under سيو هاوس",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "screen names the main site read-only and what is never changed",
+      "ok": true,
+      "detail": "نقل عناوين وأوصاف SEOتحديث محتوى التصميم 2.6.0 متاح في SEO House Core. يطبَّق على الصفحات التي لم تعدّلها فقط. مراجعة التحديثينقل عنوان الصفحة (title) ووصفها (meta description) كما يظهران فعلًا في الم"
+    },
+    {
+      "name": "preview: «معاينة — لم يُكتب شيء» with counts",
+      "ok": true,
+      "detail": "معاينة — لم يُكتب شيء. سيُنقل: 71 — متطابق: 16 — قديم فارغ: 10 — معدّل يدويًا: 1 — بلا مقابل: 21 صفحة — تعذّرت قراءته: 0 صفحة"
+    },
+    {
+      "name": "preview columns: الرابط، العنوان القديم والجديد، الوصف القديم والجديد، الإجراء المقترح",
+      "ok": true,
+      "detail": "الرابط | عنوان SEO القديم | عنوان SEO الجديد | الوصف القديم | الوصف الجديد | الإجراء المقترح"
+    },
+    {
+      "name": "home (static front page): old title from the main site's HTML, action write",
+      "ok": true,
+      "detail": "سيو هاوس | نساعد الشركات والمتاجر على النمو ‖ سيو هاوس | تحسين الظهور وتصميم المواقع والمتاجر"
+    },
+    {
+      "name": "blog archive (posts page): row present, old title «مدونة سيو هاوس | …»",
+      "ok": true,
+      "detail": "/blog/أرشيف المدونة"
+    },
+    {
+      "name": "category: template title «سيو خارجي - سيو هاوس» (no field on the main site) → write; empty description → kept",
+      "ok": true,
+      "detail": "/blog/category/off-page-seo/تصنيفسيو خارجي - سيو هاوسالسيو الخارجي - سيو هاوس(فارغ)يُنقل العنوانالوصف القديم فارغ — يبقى الحالي"
+    },
+    {
+      "name": "results archive on the main site (custom type archive) matched to the /results/ page here",
+      "ok": true,
+      "detail": "نتائج الأعمال - سيو هاوس ‖ نتائج ودراسات حالة من مشاريع سيو هاوس | سيو هاوس ‖ نتائج الأعمال Archive - سيو هاوس"
+    },
+    {
+      "name": "sector (custom type on the main site, page here): matched by full path",
+      "ok": true,
+      "detail": "تحسين محركات البحث للمتاجر الإلكترونية - سيو هاوس"
+    },
+    {
+      "name": "result: description shown through the %excerpt% template on the main site is read from HTML",
+      "ok": true,
+      "detail": "نمو في الزيارات العضوية لعيادة طبية متخصصة خلال 8 أشهر — انتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية."
+    },
+    {
+      "name": "a title edited here by hand → «معدّل يدويًا هنا — لا يُكتب فوقه»",
+      "ok": true,
+      "detail": "حات، وقياس أثر العمل على الزيارات والاستفسارات والمبيعات.معدّل يدويًا هنا — لا يُكتب فوقهالوصف القديم فارغ — يبقى الحالي"
+    },
+    {
+      "name": "old description empty → «الوصف القديم فارغ — يبقى الحالي»",
+      "ok": true,
+      "detail": "يُنقل العنوانالوصف القديم فارغ — يبقى الحالي"
+    },
+    {
+      "name": "identical title → «متطابق — تخطٍّ»",
+      "ok": true,
+      "detail": "متطابق — تخطٍّيُنقل الوصف"
+    },
+    {
+      "name": "draft here (privacy policy): included, new values computed by Rank Math",
+      "ok": true,
+      "detail": "/privacy-policy/صفحة — draft"
+    },
+    {
+      "name": "full path, not last slug: /thank-you/ here is NOT matched to the main site's /contact/thank-you/",
+      "ok": true,
+      "detail": "here-only: /results/organic-revenue-growth/ — نمو الإيرادات العضوية لمتجر إلكتروني في السعو … main-only: /sample-page/ — Sample Page (page)/contact/thank-you/ — شكرًا (page)"
+    },
+    {
+      "name": "preview wrote nothing (Rank Math values unchanged)",
+      "ok": true,
+      "detail": "71 values proposed"
+    },
+    {
+      "name": "run: «اكتمل النقل» — values written = values proposed in the preview",
+      "ok": true,
+      "detail": "اكتمل النقل. كُتبت 71 قيمة في 40 صفحة. نسخة القيم السابقة: wp-content/uploads/seohouse-backups/seo-meta-before-transfer-20261003-233304-TptYWa.json"
+    },
+    {
+      "name": "backup of the current meta values written before the change",
+      "ok": true,
+      "detail": "wp-content/uploads/seohouse-backups/seo-meta-before-transfer-20261003-233304-TptYWa.json"
+    },
+    {
+      "name": "report after the run: no mismatch that needs review",
+      "ok": true,
+      "detail": "مطابق: 40 — غير مطابق عن قصد: 7 — غير مطابق يحتاج مراجعة: 0 — تنزيل التقرير (CSV)"
+    },
+    {
+      "name": "«غير مطابق عن قصد» only for: the hand-edited title, or an empty old description",
+      "ok": true,
+      "detail": "/pricing/ /services/ /services/seo/technical/ /services/seo/on-page/ /services/seo/uae/ /services/seo/ksa/ /services/seo/egypt/"
+    },
+    {
+      "name": "report row: /services/seo/ksa/ title kept (manual)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "H1/title, content, slug, status, robots and canonical of every record unchanged",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "main site database unchanged (read-only connection)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "/new/services/: canonical stays this site's (main site has a custom canonical), robots stays noindex",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "/new/pricing/: main site's noindex,nofollow field not copied (robots = this site's staging noindex only)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "privacy policy still a draft",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "second run writes nothing",
+      "ok": true,
+      "detail": "اكتمل النقل. كُتبت 0 قيمة في 0 صفحة. نسخة القيم السابقة: wp-content/uploads/seoh"
+    },
+    {
+      "name": "after the run, an editor edit is protected → manual",
+      "ok": true,
+      "detail": "اتصل بنا | احجز استشارة مع سيو هاوس ‖ عنوان عدّله المحرر بعد النقل"
+    },
+    {
+      "name": "a value this screen wrote follows a later change on the main site → write",
+      "ok": true,
+      "detail": "السيو التقني لمواقع الشركات | سيو هاوس ‖ السيو التقني - سيو هاوس"
+    },
+    {
+      "name": "nothing else proposed (no duplicates on a repeated run)",
+      "ok": true,
+      "detail": "1 write"
+    },
+    {
+      "name": "restore: values from before the transfer put back",
+      "ok": true,
+      "detail": "أُعيدت 70 قيمة إلى ما كانت عليه قبل النقل (القيم التي عُدّلت بعد النقل تُركت)."
+    },
+    {
+      "name": "restore keeps the editor's later edit",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "restore: /services/seo/egypt/ title back to its value before the transfer",
+      "ok": true,
+      "detail": "شركة سيو في مصر لتحسين ظهور موقعك | سيو هاوس"
+    },
+    {
+      "name": "no JavaScript errors",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

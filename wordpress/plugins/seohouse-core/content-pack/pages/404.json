@@ -1,0 +1,27 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "صفحة غير موجودة",
+   "href": null
+  }
+ ],
+ "key": "404",
+ "route": "(404)",
+ "kind": "system",
+ "title": "صفحة غير موجودة",
+ "file": "SEO House - 404.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "الصفحة غير موجودة | سيو هاوس",
+  "description": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+  "robots": "noindex, follow",
+  "schema_type": "auto",
+  "schema_service": ""
+ },
+ "template": null,
+ "sections": []
+}

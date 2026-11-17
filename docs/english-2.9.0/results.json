@@ -1,0 +1,68 @@
+{
+ "id": 29,
+ "key": "results",
+ "title": "Results",
+ "slug": "results",
+ "parent": 0,
+ "path": "/results/",
+ "template": "page-templates/results.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "SEO Case Studies & Results from Real Projects | SEO House",
+  "sh_seo_description": "SEO case studies from SEO House projects in e-commerce, healthcare and education: traffic and inquiry growth, with the source and period of every figure.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "collection",
+  "sh_schema_service": "",
+  "sh_crumb": "",
+  "rank_math_title": "SEO Case Studies & Results from Real Projects | SEO House",
+  "rank_math_description": "SEO case studies from SEO House projects in e-commerce, healthcare and education: traffic and inquiry growth, with the source and period of every figure.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo case studies"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "title": "Our results",
+   "text": "Results from our projects, documented with real figures and performance reports."
+  },
+  {
+   "acf_fc_layout": "cases",
+   "sh_hide": 0,
+   "text": "Every result is shown with its source and time period, exactly as it appears in the client's account."
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "SEO services",
+     "link": 65
+    },
+    {
+     "label": "E-commerce sector",
+     "link": 31
+    },
+    {
+     "label": "Health & medical sector",
+     "link": 37
+    },
+    {
+     "label": "Pricing",
+     "link": 23
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

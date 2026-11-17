@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Alex;src:url(alexandria-latin.woff2) format('woff2');font-weight:400 800}
+@font-face{font-family:Plex;src:url(ibm-plex-sans-arabic-500-latin.woff2) format('woff2');font-weight:500}
+@font-face{font-family:Plex;src:url(ibm-plex-sans-arabic-600-latin.woff2) format('woff2');font-weight:600}
+@font-face{font-family:Plex;src:url(ibm-plex-sans-arabic-700-latin.woff2) format('woff2');font-weight:700}
+:root{--blue:#2854E8;--ink:#060B1F;--text:#4C596B;--line:#E3E8F0;--soft:#EEF2FD}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1672px;height:941px;overflow:hidden;background:#fff}
+body{position:relative;font-family:Plex,sans-serif;color:var(--ink)}
+.wave{position:absolute;left:0;right:0;bottom:0;height:150px}
+.dots{position:absolute;display:grid;grid-template-columns:repeat(5,8px);gap:22px}
+.dots i{width:7px;height:7px;border-radius:50%;background:#CBD3E1;display:block}
+.logo{position:absolute;left:64px;top:56px;height:78px}
+.left{position:absolute;left:96px;top:238px;width:700px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font:700 21px Plex;color:var(--blue);background:var(--soft);padding:10px 20px;border-radius:999px;letter-spacing:.02em}
+.eyebrow b{width:8px;height:8px;border-radius:50%;background:var(--blue)}
+h1{font:800 76px/1.12 Alex,sans-serif;letter-spacing:-.018em;margin-top:30px}
+h1 span{color:var(--blue);white-space:nowrap}
+.sub{font:600 30px/1.45 Plex;color:var(--ink);margin-top:30px}
+.sub2{font:500 26px/1.45 Plex;color:var(--text);margin-top:4px}
+.card{position:absolute;background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 24px 60px -24px rgba(16,32,90,.22),0 2px 6px rgba(16,32,90,.05)}
+.search{left:1050px;top:76px;width:380px;height:68px;border-radius:999px;display:flex;align-items:center;gap:16px;padding:0 28px;font:600 22px Plex}
+.main{left:880px;top:182px;width:640px;padding:30px 34px 30px}
+.bar3{display:flex;gap:9px;margin-bottom:22px}.bar3 i{width:13px;height:13px;border-radius:50%;display:block}
+.label{font:700 18px Plex;color:var(--text);letter-spacing:.06em;text-transform:uppercase}
+.range{display:flex;align-items:baseline;gap:14px;margin-top:10px}
+.range .cur{font:700 22px Plex;color:var(--text)}
+.range .num{font:800 54px Alex;letter-spacing:-.02em}
+.range .dash{font:700 40px Alex;color:#AAB4C6}
+.track{position:relative;height:14px;border-radius:99px;background:#EDF0F6;margin:28px 0 12px}
+.fill{position:absolute;left:12%;right:16%;top:0;bottom:0;border-radius:99px;background:linear-gradient(90deg,#7C9BFF,var(--blue))}
+.knob{position:absolute;top:50%;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;background:#fff;border:5px solid var(--blue);box-shadow:0 4px 12px rgba(40,84,232,.35)}
+.ticks{display:flex;justify-content:space-between;font:600 17px Plex;color:#8B96A8}
+.factors{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;margin-top:28px}
+.f{display:flex;align-items:center;gap:12px;font:600 19px Plex;color:var(--ink);background:#F7F9FC;border:1px solid #EBEFF5;border-radius:12px;padding:12px 14px}
+.f i{flex:none;width:26px;height:26px;border-radius:8px;background:var(--soft);display:grid;place-items:center}
+.scope{left:1318px;top:668px;width:300px;padding:22px 24px}
+.scope h4{font:700 20px Plex;display:flex;justify-content:space-between;align-items:center}
+.scope h4 em{font:700 13px Plex;font-style:normal;color:#fff;background:var(--ink);padding:5px 10px;border-radius:7px;letter-spacing:.04em}
+.ck{display:flex;align-items:center;gap:10px;font:600 18px Plex;color:var(--text);margin-top:13px}
+.ck b{width:22px;height:22px;border-radius:50%;background:#16B364;display:grid;place-items:center;flex:none}
+.tag{position:absolute;left:820px;top:676px;background:var(--blue);color:#fff;font:700 19px Plex;padding:12px 20px;border-radius:999px;box-shadow:0 12px 26px -10px rgba(40,84,232,.6);display:flex;gap:10px;align-items:center}
+</style></head><body>
+<svg class="wave" viewBox="0 0 1672 150" preserveAspectRatio="none"><path d="M0 70 C 300 20, 520 120, 860 80 S 1400 30, 1672 70 L1672 150 L0 150Z" fill="#EEF2FD"/><path d="M0 105 C 340 70, 640 140, 980 110 S 1480 80, 1672 105 L1672 150 L0 150Z" fill="#E2E9FC"/></svg>
+<div class="dots" style="right:56px;top:66px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="dots" style="left:72px;top:770px"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<img class="logo" src="logo.webp" alt="">
+
+<div class="left">
+  <div class="eyebrow"><b></b>SEO PRICING GUIDE</div>
+  <h1>How much does SEO cost in <span>Saudi Arabia</span>?</h1>
+  <p class="sub">The real price follows the scope.</p>
+  <p class="sub2">Six factors that set your budget, in SAR.</p>
+</div>
+
+<div class="card search"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2854E8" stroke-width="2.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></svg>seo cost in saudi arabia</div>
+
+<div class="card main">
+  <div class="bar3"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i></div>
+  <div class="label">Monthly / project budget</div>
+  <div class="range"><span class="cur">SAR</span><span class="num">1,500</span><span class="dash">–</span><span class="num">7,000</span></div>
+  <div class="track"><div class="fill"></div><span class="knob" style="left:12%"></span><span class="knob" style="left:84%"></span></div>
+  <div class="ticks"><span>Smaller scope</span><span>Larger scope</span></div>
+  <div class="factors">
+    <div class="f"><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2854E8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></i>Site condition</div>
+    <div class="f"><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2854E8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></i>Pages &amp; products</div>
+    <div class="f"><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2854E8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></i>Competition</div>
+    <div class="f"><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2854E8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></i>Scope of work</div>
+    <div class="f"><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2854E8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></i>Content &amp; dev</div>
+    <div class="f"><i><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2854E8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></i>Platform</div>
+  </div>
+</div>
+
+<div class="card scope">
+  <h4>Your proposal <em>WRITTEN</em></h4>
+  <div class="ck"><b><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></b>Free site review</div>
+  <div class="ck"><b><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></b>30-minute call</div>
+  <div class="ck"><b><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg></b>Clear scope &amp; price</div>
+</div>
+</body></html>

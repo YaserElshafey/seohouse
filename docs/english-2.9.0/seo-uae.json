@@ -1,0 +1,397 @@
+{
+ "id": 59,
+ "key": "seo-uae",
+ "title": "UAE SEO",
+ "slug": "uae",
+ "parent": 65,
+ "path": "/services/seo/uae/",
+ "template": "page-templates/seo-uae.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "SEO Company in the UAE | Dubai SEO Services | SEO House",
+  "sh_seo_description": "Looking for an SEO company in the UAE? SEO House grows your search visibility with competitor analysis, content, technical fixes and lead tracking.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Search engine optimization services",
+  "sh_crumb": "UAE",
+  "rank_math_title": "SEO Company in the UAE | Dubai SEO Services | SEO House",
+  "rank_math_description": "Looking for an SEO company in the UAE? SEO House grows your search visibility with competitor analysis, content, technical fixes and lead tracking.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo company in the uae"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "SEO services in the UAE",
+   "title": "SEO Company in the UAE",
+   "text": "Looking for an SEO company in the UAE? We help businesses and online stores across the UAE market, from Dubai to Abu Dhabi, improve their websites and content to reach the customers searching for their services and products.",
+   "link_label": "Book a consultation",
+   "link_label_2": "Explore growth opportunities",
+   "text_2": "Commercial search term",
+   "label": "Competitor page",
+   "label_2": "Competitor page",
+   "label_3": "Your page",
+   "label_4": "Competitor page",
+   "label_5": "Visibility",
+   "label_6": "Qualified visit",
+   "label_7": "Inquiry or order"
+  },
+  {
+   "acf_fc_layout": "client_logos",
+   "sh_hide": 0,
+   "text": "Companies that trust us"
+  },
+  {
+   "acf_fc_layout": "market",
+   "sh_hide": 0,
+   "eyebrow": "The UAE market",
+   "title": "High competition calls for clearer priorities",
+   "text": "Businesses in the UAE compete for a large number of commercial search terms, but ranking for more keywords doesn't necessarily mean reaching better customers. We assess the size of the opportunity, the strength of your competitors and your decision pages, then start with what can make a real impact.",
+   "items": [
+    {
+     "heading": "Search intent",
+     "items": [
+      {
+       "label": "What does the customer actually want?"
+      },
+      {
+       "label": "Are they looking for information, comparing options, or ready to get in touch?"
+      }
+     ]
+    },
+    {
+     "heading": "Competitive strength",
+     "items": [
+      {
+       "label": "What kinds of pages rank at the top?"
+      },
+      {
+       "label": "And what makes them stronger than your pages?"
+      }
+     ]
+    },
+    {
+     "heading": "Conversion path",
+     "items": [
+      {
+       "label": "Does the visitor find the answer?"
+      },
+      {
+       "label": "And can they easily move on to contacting you or placing an order?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "opportunities",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Finding opportunities",
+   "title": "Where can your site's visibility grow?",
+   "review_label": "What we review",
+   "improve_label": "What can be improved",
+   "outcome_label": "The business outcome we track",
+   "opps": [
+    {
+     "num": "01",
+     "label": "Service and product pages",
+     "review": "We review how well your pages cover commercial search terms, how clearly each page explains what it offers, and how it currently ranks against competing pages.",
+     "improve": "Improving titles, content, page structure and internal links to match commercial search intent.",
+     "outcome": "Inquiries and orders from the pages that directly represent your service or product."
+    },
+    {
+     "num": "02",
+     "label": "Comparison and selection searches",
+     "review": "We look at what customers compare before they decide, and whether they find that comparison on your site or on someone else's.",
+     "improve": "Creating or improving pages that explain the differences and options and lead to the right page.",
+     "outcome": "Visitors moving from comparing options to contacting you, on your own site."
+    },
+    {
+     "num": "03",
+     "label": "Questions asked before a decision",
+     "review": "We review the questions people repeatedly search for and whether your site answers them clearly.",
+     "improve": "Content that answers the question and connects it to the service page or the next step.",
+     "outcome": "Qualified visits that start with a question and end on a decision page."
+    },
+    {
+     "num": "04",
+     "label": "Opportunities in existing pages",
+     "review": "We review pages that get impressions without enough clicks, and why they aren't making the most of that visibility.",
+     "improve": "Improving titles, descriptions, content and page structure to turn impressions into visits.",
+     "outcome": "Traffic growth from existing pages without creating new content."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "gulf_case",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Documented evidence",
+   "title": "A documented result from a project in a Gulf market",
+   "text": "We present this result with its real market and source, without attributing it to the UAE or presenting it as a local case.",
+   "heading": "253.05% organic revenue growth",
+   "items": [
+    {
+     "label": "Market",
+     "heading": "Saudi Arabia"
+    },
+    {
+     "label": "Industry",
+     "heading": "Not disclosed"
+    },
+    {
+     "label": "Source",
+     "heading": "Google Analytics 4"
+    },
+    {
+     "label": "Result",
+     "heading": "253.05% organic revenue growth"
+    }
+   ],
+   "label": "Google Analytics",
+   "link": "uploads/04-case-ga4-revenue-growth-253.webp",
+   "image": 103
+  },
+  {
+   "acf_fc_layout": "needs",
+   "sh_hide": 0,
+   "title": "When do you need an SEO plan built for the UAE market?",
+   "items": [
+    {
+     "heading": "Your site ranks but doesn't bring in enough inquiries",
+     "text": "You have visibility, but your pages don't lead visitors to a clear next step.",
+     "link": 61,
+     "link_label": "On-page SEO"
+    },
+    {
+     "heading": "You're entering the UAE market and need visibility from scratch",
+     "text": "A page structure and core content that cover commercial demand before you compete for it.",
+     "link": 65,
+     "link_label": "Full SEO service"
+    },
+    {
+     "heading": "Your online store needs more visibility for categories and products",
+     "text": "Category and product pages need coverage and a technical setup that can handle the store's size.",
+     "link": 63,
+     "link_label": "Technical SEO"
+    },
+    {
+     "heading": "Key pages have dropped or aren't moving despite new content",
+     "text": "We look at the data to find the cause of the decline before adding any new content.",
+     "link": 51,
+     "link_label": "Consulting & performance analysis"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "first_month",
+   "sh_hide": 0,
+   "eyebrow": "The first month",
+   "title": "Clear priorities before expanding the scope",
+   "text": "We start by identifying the websites and pages that are capturing the opportunities, then sort out what can be improved and what needs to be built from scratch.",
+   "items": [
+    {
+     "label": "Deliverable"
+    },
+    {
+     "label": "What you get"
+    }
+   ],
+   "label": "Priority",
+   "items_2": [
+    {
+     "text": "Review current visibility and your real competitors",
+     "label": "A list of the websites and pages capturing the opportunities in front of you.",
+     "label_2": "High",
+     "variant": "v1"
+    },
+    {
+     "text": "Analyze gaps in services, pages and content",
+     "label": "What your site is missing in pages and topics compared with demand.",
+     "label_2": "High",
+     "variant": "v2"
+    },
+    {
+     "text": "Assess page opportunities by competition and goal",
+     "label": "Pages ranked by how well they can compete and how close they are to demand.",
+     "label_2": "Medium",
+     "variant": "v3"
+    },
+    {
+     "text": "Define the technical fixes and content needed",
+     "label": "A specific action list for each page or group of pages.",
+     "label_2": "Medium",
+     "variant": "v4"
+    },
+    {
+     "text": "Set a clear baseline for measurement and tracking",
+     "label": "A recorded starting point for visibility, traffic and conversions.",
+     "label_2": "Essential",
+     "variant": "v5"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "sectors",
+   "sh_hide": 0,
+   "eyebrow": "Industries",
+   "title": "Search opportunities vary by type of business",
+   "link": 47,
+   "link_label": "All industries →",
+   "items": [
+    {
+     "link": 31,
+     "heading": "E-commerce",
+     "label": "Search starts with a product or category and ends with a completed order.",
+     "variant": "v1"
+    },
+    {
+     "link": 37,
+     "heading": "Health & medical",
+     "label": "People search for a service or symptoms, then compare providers before booking.",
+     "variant": "v2"
+    },
+    {
+     "link": 41,
+     "heading": "Real estate & construction",
+     "label": "A long decision that moves between areas, projects and prices.",
+     "variant": "v2"
+    },
+    {
+     "link": 33,
+     "heading": "Education & training",
+     "label": "People search for a field or skill, then compare courses and certificates.",
+     "variant": "v2"
+    },
+    {
+     "link": 45,
+     "heading": "Tourism & travel",
+     "label": "Seasonal search that starts with a destination or activity and ends with a booking.",
+     "variant": "v1"
+    },
+    {
+     "link": 43,
+     "heading": "Technology & software",
+     "label": "People search for the problem or use case before the product name.",
+     "variant": "v2"
+    },
+    {
+     "link": 39,
+     "heading": "Legal & consulting",
+     "label": "Searches for legal services and for sources that prove expertise.",
+     "variant": "v2"
+    },
+    {
+     "link": 35,
+     "heading": "Food & restaurants",
+     "label": "Fast-decision local searches for menus, branches and ordering.",
+     "variant": "v2"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "measure",
+   "sh_hide": 0,
+   "eyebrow": "Measurement",
+   "title": "We measure progress against your business goals",
+   "text": "The results published on our results page come from other markets and industries and are not attributed to the UAE market. For every project, we set its own KPIs based on data from its own accounts.",
+   "items": [
+    {
+     "icon": "i74ca11e5",
+     "heading": "Better visibility for key commercial pages",
+     "text": "We track the rankings and visibility of the pages that represent your service or product, not just any keyword."
+    },
+    {
+     "icon": "i2779bfcf",
+     "heading": "Growth in qualified traffic, not just overall traffic",
+     "text": "We measure visits from search terms that reflect a real need."
+    },
+    {
+     "icon": "i2cbe0dd3",
+     "heading": "Inquiries, orders or sales generated by search",
+     "text": "We connect the work done to the business results recorded in your company's accounts."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "why",
+   "sh_hide": 0,
+   "title": "SEO decisions driven by priorities and measurement",
+   "items": [
+    {
+     "label": "We identify the opportunities worth investing in before scaling up content."
+    },
+    {
+     "label": "We work remotely with businesses in the UAE, with clear communication and reporting."
+    },
+    {
+     "label": "We handle technical SEO, content and pages as one integrated system."
+    },
+    {
+     "label": "We use real data to evaluate progress, with no promises or unverified numbers."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "reviews",
+   "sh_hide": 0,
+   "eyebrow": "Client reviews",
+   "title": "What do our clients say about working with us?",
+   "all_link": "",
+   "all_label": "",
+   "text": "Reviews appear exactly as clients wrote them on the SEO House Google profile, with their names and ratings.",
+   "heading": "Google reviews area",
+   "text_2": "Real reviews from our profile, with client names and ratings, will appear here once the plugin is connected.",
+   "label": "Trustindex"
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "FAQs about SEO services in the UAE",
+   "items": [
+    {
+     "question": "What makes SEO competition in the UAE different?",
+     "answer": "A large number of companies target the same commercial search terms, and their pages are often well optimized. That's why our plan starts by choosing the opportunities you can actually win, rather than expanding the keyword list."
+    },
+    {
+     "question": "How do you choose which pages should compete first?",
+     "answer": "We measure the strength of the top-ranking pages against the current state of your page, and start with pages that need limited improvement to get close to the top, before those that require longer-term building."
+    },
+    {
+     "question": "Is the SEO plan different for service websites and online stores?",
+     "answer": "Yes. A service website relies on a limited number of pages that need content and authority, while an online store relies on categories, products and a technical structure that can handle a large number of pages."
+    },
+    {
+     "question": "What do you deliver in the first month?",
+     "answer": "A review of your visibility and competitors, an analysis of page and content gaps, opportunities ranked by priority, a technical and content action list, and a baseline for tracking progress."
+    },
+    {
+     "question": "How do you track the impact on inquiries and orders?",
+     "answer": "We set up contact and order events in Google Analytics 4 and connect them to the organic channel and to individual pages, so you can see which page generated each inquiry or order."
+    },
+    {
+     "question": "Can the whole project be handled remotely?",
+     "answer": "Yes. Meetings, access, implementation and reporting are all managed remotely, and we work directly with your marketing or development team when needed."
+    },
+    {
+     "question": "How do you determine the scope of work and pricing?",
+     "answer": "We define the scope after reviewing your website, the level of competition and the work that actually needs to be done. Check our pricing page, then book a call to discuss your situation."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "seo",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

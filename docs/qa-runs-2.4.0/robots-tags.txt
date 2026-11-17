@@ -1,0 +1,9 @@
+== production copy (root, environment production, search engines allowed)
+/: HTTP/1.1 200 OK  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" rel="canonical" href="http://127.0.0.1:8099/" 
+/blog/fix-404-not-found/: HTTP/1.1 200 OK  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" rel="canonical" href="http://127.0.0.1:8099/blog/fix-404-not-found/" 
+/blog/how-to-build-backlinks-correctly/: HTTP/1.1 200 OK  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" rel="canonical" href="http://127.0.0.1:8099/blog/how-to-build-backlinks-correctly/" 
+/services/seo/egypt/: HTTP/1.1 200 OK  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" rel="canonical" href="http://127.0.0.1:8099/services/seo/egypt/" 
+/sitemap_index.xml: HTTP/1.1 200 OK X-Robots-Tag: noindex  
+== /new/ review copy
+/: HTTP/1.1 200 OK X-Robots-Tag: noindex, nofollow  <meta name="robots" content="noindex, nofollow"
+/blog/fix-404-not-found/: HTTP/1.1 200 OK X-Robots-Tag: noindex, nofollow  <meta name="robots" content="noindex, nofollow"

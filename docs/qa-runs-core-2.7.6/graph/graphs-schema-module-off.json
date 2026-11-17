@@ -1,0 +1,3991 @@
+{
+ "/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/#webpage",
+    "url": "http://127.0.0.1:8090/",
+    "name": "عنوان Rank Math معدّل 6",
+    "description": "وصف Rank Math معدّل 6",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "about": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   }
+  ]
+ },
+ "/about/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "AboutPage",
+    "@id": "http://127.0.0.1:8090/about/#webpage",
+    "url": "http://127.0.0.1:8090/about/",
+    "name": "عن سيو هاوس ومبادئ عملنا | سيو هاوس",
+    "description": "تأسست سيو هاوس عام 2017 لتقديم عمل يمكن قياسه: تنفيذ داخل الموقع لا توصيات فقط، ونتائج تُعرض بمصدرها. نخدم الشركات في السعودية ومصر والإمارات.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/about/#breadcrumb"
+    },
+    "about": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/about/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "عن الشركة",
+      "item": "http://127.0.0.1:8090/about/"
+     }
+    ]
+   }
+  ]
+ },
+ "/contact/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "ContactPage",
+    "@id": "http://127.0.0.1:8090/contact/#webpage",
+    "url": "http://127.0.0.1:8090/contact/",
+    "name": "اتصل بنا واحجز مكالمة استشارية | سيو هاوس",
+    "description": "أرسل بيانات موقعك وهدفك، ونراجع الحالة قبل مكالمة استشارية مجانية مدتها 30 دقيقة نحدد فيها الخطوة المناسبة دون التزام.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/contact/#breadcrumb"
+    },
+    "about": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/contact/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "اتصل بنا",
+      "item": "http://127.0.0.1:8090/contact/"
+     }
+    ]
+   }
+  ]
+ },
+ "/services/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "CollectionPage",
+    "@id": "http://127.0.0.1:8090/services/#webpage",
+    "url": "http://127.0.0.1:8090/services/",
+    "name": "خدمات سيو هاوس | سيو، مواقع، متاجر ومحتوى المنتجات",
+    "description": "منظومة خدمات سيو هاوس: تحسين محركات البحث كتخصص أساسي، إلى جانب تصميم وتطوير المواقع والمتاجر ورفع المنتجات وإدارة محتواها.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/services/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/services/#list"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/services/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "الخدمات",
+      "item": "http://127.0.0.1:8090/services/"
+     }
+    ]
+   },
+   {
+    "@type": "ItemList",
+    "@id": "http://127.0.0.1:8090/services/#list",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "خدمة السيو الكاملة",
+      "url": "http://127.0.0.1:8090/services/seo/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "السيو التقني",
+      "url": "http://127.0.0.1:8090/services/seo/technical/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "السيو الداخلي",
+      "url": "http://127.0.0.1:8090/services/seo/on-page/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "محتوى السيو",
+      "url": "http://127.0.0.1:8090/services/seo/content/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "بناء الروابط",
+      "url": "http://127.0.0.1:8090/services/seo/backlinks/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "الاستشارات وتحليل الأداء",
+      "url": "http://127.0.0.1:8090/services/seo/consulting/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "تصميم وتطوير المواقع",
+      "url": "http://127.0.0.1:8090/services/web-design/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "ووردبريس",
+      "url": "http://127.0.0.1:8090/services/web-design/wordpress/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "ويب فلو",
+      "url": "http://127.0.0.1:8090/services/web-design/webflow/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "رياكت ونكست",
+      "url": "http://127.0.0.1:8090/services/web-design/react-next/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "البرمجة الخاصة",
+      "url": "http://127.0.0.1:8090/services/web-design/custom-dev/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "تصميم وتطوير المتاجر",
+      "url": "http://127.0.0.1:8090/services/stores/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "شوبيفاي",
+      "url": "http://127.0.0.1:8090/services/stores/shopify/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 14,
+      "name": "سلة",
+      "url": "http://127.0.0.1:8090/services/stores/salla/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 15,
+      "name": "زد",
+      "url": "http://127.0.0.1:8090/services/stores/zid/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 16,
+      "name": "ووكومرس",
+      "url": "http://127.0.0.1:8090/services/stores/woocommerce/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 17,
+      "name": "رفع المنتجات وإدارة المحتوى",
+      "url": "http://127.0.0.1:8090/services/products/"
+     }
+    ]
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/services/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "هل يمكن طلب خدمة واحدة فقط؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم. يمكن العمل على السيو وحده، أو على بناء الموقع أو المتجر وحده، أو على رفع المنتجات فقط بحسب ما يحتاجه مشروعك."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "ما الخدمة التي تناسب موقعًا قائمًا لا يحقق طلبات؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نبدأ عادة بمراجعة السيو لتحديد ما يمنع الصفحات من الظهور والتحويل، ثم نقرر ما إذا كان الموقع نفسه يحتاج تطويرًا."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تبنون الموقع ثم تتركونه؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "التسليم يشمل شرح الإدارة وتسليم الصلاحيات. يمكن بعدها الاتفاق على متابعة شهرية للتحسين والقياس."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تعملون على منصات جاهزة أم برمجة خاصة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعمل على WordPress وWebflow وShopify وسلة وزد وWooCommerce، وننفّذ برمجة خاصة عندما لا تناسب المنصات الجاهزة طبيعة النظام المطلوب."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف تُحدد الأسعار؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "تُحدد بحسب نطاق العمل وحجم الموقع أو الكتالوج ومستوى المنافسة. راجع صفحة الأسعار ثم احجز مكالمة لمناقشة حالتك."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/services/seo/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/services/seo/#webpage",
+    "url": "http://127.0.0.1:8090/services/seo/",
+    "name": "عنوان Rank Math معدّل 18",
+    "description": "وصف Rank Math معدّل 18",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/services/seo/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/services/seo/#service"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/services/seo/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "الخدمات",
+      "item": "http://127.0.0.1:8090/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "تحسين محركات البحث",
+      "item": "http://127.0.0.1:8090/services/seo/"
+     }
+    ]
+   },
+   {
+    "@type": "Service",
+    "@id": "http://127.0.0.1:8090/services/seo/#service",
+    "name": "خدمات تحسين محركات البحث",
+    "serviceType": "تحسين محركات البحث",
+    "description": "نراجع موقعك، ونعالج المشكلات التقنية، ونحسّن الصفحات والمحتوى والروابط، ثم نتابع أثر العمل على الزيارات والاستفسارات والمبيعات.",
+    "url": "http://127.0.0.1:8090/services/seo/",
+    "provider": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    },
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ]
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/services/seo/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "كم يستغرق ظهور نتائج السيو؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "تظهر المؤشرات الأولى غالبًا بين 6 و12 أسبوعًا حسب حالة الموقع والمنافسة، والأثر على الطلبات يحتاج وقتًا أطول."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف أعرف أن العمل يتم تنفيذه فعلًا؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "تستلم سجل تنفيذ يوضح ما نُفّذ وتاريخه، ولوحة أداء مرتبطة بحساباتك في سيرش كونسول وجوجل أناليتكس."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تشمل الخدمة المحتوى والروابط؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "بحسب النطاق المتفق عليه. يمكن أن يقتصر العمل على الجانب التقني والصفحات، أو يشمل المحتوى والروابط."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تعملون مع المتاجر الإلكترونية؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم، ولدينا مسار مخصص لصفحات الفئات والمنتجات على سلة وزد وشوبيفاي وووكومرس."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل أحتاج إلى مطور؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "ليس بالضرورة. ننفّذ أغلب التحسينات على المنصات الشائعة، ونحتاج تعاون مطورك في الأنظمة المخصصة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل توجد عقود طويلة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "العمل شهري. نوصي بمدة لا تقل عن ستة أشهر لظهور أثر واضح، دون إلزامك بعقد طويل."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/services/seo/ksa/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/services/seo/ksa/#webpage",
+    "url": "http://127.0.0.1:8090/services/seo/ksa/",
+    "name": "شركة سيو في السعودية | سيو هاوس",
+    "description": "نساعد الشركات داخل السعودية على تحسين ظهور مواقعها، ومعالجة الجوانب التقنية والمحتوى والصفحات، وقياس أثر العمل على الزيارات والاستفسارات والمبيعات.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/services/seo/ksa/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/services/seo/ksa/#service"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/services/seo/ksa/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "خدمات السيو",
+      "item": "http://127.0.0.1:8090/services/seo/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "السعودية",
+      "item": "http://127.0.0.1:8090/services/seo/ksa/"
+     }
+    ]
+   },
+   {
+    "@type": "Service",
+    "@id": "http://127.0.0.1:8090/services/seo/ksa/#service",
+    "name": "خدمات تحسين محركات البحث في السعودية",
+    "description": "نراجع طريقة بحث عملائك والمنافسة داخل السوق السعودي، ثم نحسّن صفحات موقعك ومحتواه وجوانبه التقنية بما يدعم الزيارات المؤهلة والاستفسارات والطلبات.",
+    "url": "http://127.0.0.1:8090/services/seo/ksa/",
+    "provider": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    },
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     }
+    ]
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/services/seo/ksa/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "هل تحتاج الشركة إلى صفحات منفصلة لكل مدينة سعودية؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "ليس دائمًا. ننشئ صفحة مدينة عندما يكون البحث المحلي واضحًا ويوجد لديك خدمة أو فرع فعلي هناك، وإلا فالأفضل تقوية صفحة الخدمة الرئيسية بدل تكرار صفحات متشابهة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تختلف خطة السيو للمتجر الإلكتروني عن شركة الخدمات؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم. المتجر يعتمد على صفحات الفئات والمنتجات وبنية تقنية تتحمل حجمًا كبيرًا، وشركة الخدمات تعتمد على صفحات خدمة قليلة تحتاج قوة محتوى وسلطة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تشمل الخدمة تنفيذ التحسينات أم تقديم التوصيات فقط؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "ننفّذ ما يمكن تنفيذه داخل المنصة ونطاق العمل، ونتعاون مع مطورك في التعديلات التي تحتاج صلاحيات أو تطويرًا مخصصًا."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف نحدد الصفحات ذات الأولوية؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نقارن حجم الفرصة بقوة المنافسة وقرب الصفحة من الطلب، فتبدأ الخطة من الصفحات التي يمكنها المنافسة وتخدم هدفًا تجاريًا واضحًا."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف يتم قياس الزيارات والاستفسارات والمبيعات؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نضبط أحداث التواصل والطلب في Google Analytics 4 ونربط الظهور والنقرات من Search Console بالصفحات، فيظهر أثر كل تحسين على حدة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "متى يمكن ملاحظة تقدم في الأداء؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يبدأ القياس من اليوم الأول، وتظهر المؤشرات الأولى عادة بعد أسابيع من التنفيذ، أما الأثر على الطلبات فيحتاج وقتًا أطول بحسب المنافسة وحالة الموقع."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف يتم تحديد تكلفة مشروع السيو؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "تُحدد بحسب حجم الموقع والمنافسة ونطاق التنفيذ المطلوب. راجع صفحة الأسعار ثم احجز مكالمة لمناقشة حالتك."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/services/seo/egypt/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/services/seo/egypt/#webpage",
+    "url": "http://127.0.0.1:8090/services/seo/egypt/",
+    "name": "شركة سيو في مصر لتحسين ظهور موقعك | سيو هاوس",
+    "description": "نساعد الشركات داخل مصر على تحسين ظهور مواقعها في نتائج البحث من خلال السيو التقني والمحتوى وتحسين الصفحات وقياس أثر العمل على الزيارات والعملاء.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/services/seo/egypt/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/services/seo/egypt/#service"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/services/seo/egypt/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "خدمات السيو",
+      "item": "http://127.0.0.1:8090/services/seo/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "مصر",
+      "item": "http://127.0.0.1:8090/services/seo/egypt/"
+     }
+    ]
+   },
+   {
+    "@type": "Service",
+    "@id": "http://127.0.0.1:8090/services/seo/egypt/#service",
+    "name": "خدمات تحسين محركات البحث في مصر",
+    "serviceType": "خدمات تحسين محركات البحث",
+    "description": "نراجع كيف يبحث عملاؤك، والصفحات التي تنافسك، وما يمنع موقعك من التقدم. ثم نرتب الأولويات وننفّذ خطة تربط الظهور بنتيجة واضحة.",
+    "url": "http://127.0.0.1:8090/services/seo/egypt/",
+    "provider": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    },
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "مصر"
+     }
+    ]
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/services/seo/egypt/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "هل تختلف طريقة البحث في مصر عن الأسواق الأخرى؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "تختلف صيغ البحث ومستوى المنافسة على العبارات نفسها، ويميل كثير من الباحثين إلى المقارنة قبل التواصل. لذلك نبني الكلمات والصفحات على بيانات البحث الفعلية لا على قوائم عامة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف نحدد الكلمات التي تستحق إنشاء صفحة مستقلة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "ننشئ صفحة مستقلة عندما تعبّر العبارة عن خدمة أو حاجة مختلفة، ويكون لها نية بحث خاصة. أما الصيغ المتقاربة فنجمعها في صفحة واحدة لتجنب تشتيت الظهور."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل يمكن تحسين الموقع الحالي دون إعادة بنائه؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "في معظم الحالات نعم. نبدأ بمعالجة ما يعوق الفهرسة وبنية الصفحات والمحتوى، ولا نوصي بإعادة البناء إلا إذا كانت المنصة نفسها تمنع التحسين."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "ما الفرق بين تحسين صفحة خدمة وإنشاء محتوى جديد؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "صفحة الخدمة تستهدف من يريد الشراء أو التواصل الآن، والمحتوى الجديد يستهدف من يبحث عن إجابة قبل القرار. نستخدم الأول لجلب الطلبات والثاني لتوسيع الظهور وتغذية صفحات الخدمة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف نحدد الأولويات في الشهر الأول؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نقارن حجم الفرصة بقوة المنافسة وقرب الصفحة من الطلب، ثم نبدأ بما يمكن تحسينه سريعًا ويحقق أثرًا ملحوظًا قبل الانتقال إلى ما يحتاج وقتًا أطول."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف يتم قياس الاستفسارات والطلبات القادمة من البحث؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نضبط أحداث التواصل والطلب في Google Analytics 4 ونربطها بالقناة العضوية وبالصفحات التي جاء منها الزائر، فيظهر أثر كل صفحة على حدة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تشمل الخدمة متابعة التنفيذ والفهرسة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم. نتابع تنفيذ التعديلات وظهور الصفحات في الفهرس ونعالج ما يمنع أرشفتها، ونذكر ذلك في تقرير المتابعة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف تُحدَّد تكلفة خدمات تحسين محركات البحث؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "تُحدد بحسب حجم الموقع والمنافسة ونطاق التنفيذ المطلوب. راجع صفحة الأسعار ثم احجز مكالمة لمناقشة حالتك."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/services/seo/uae/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/services/seo/uae/#webpage",
+    "url": "http://127.0.0.1:8090/services/seo/uae/",
+    "name": "شركة سيو في الإمارات لتحسين ظهور موقعك | سيو هاوس",
+    "description": "نساعد الشركات داخل الإمارات على تحسين ظهور مواقعها في نتائج البحث من خلال تحليل المنافسة وتحسين الصفحات والمحتوى والجوانب التقنية وقياس أثر العمل.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/services/seo/uae/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/services/seo/uae/#service"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/services/seo/uae/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "خدمات السيو",
+      "item": "http://127.0.0.1:8090/services/seo/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "الإمارات",
+      "item": "http://127.0.0.1:8090/services/seo/uae/"
+     }
+    ]
+   },
+   {
+    "@type": "Service",
+    "@id": "http://127.0.0.1:8090/services/seo/uae/#service",
+    "name": "خدمات تحسين محركات البحث في الإمارات",
+    "serviceType": "خدمات تحسين محركات البحث",
+    "description": "نراجع أين يظهر موقعك، وما الذي يبحث عنه عملاؤك، والصفحات التي تستحوذ على الفرص أمامك. ثم نحدد الأولويات وننفّذ خطة تربط الظهور بالاستفسارات والطلبات.",
+    "url": "http://127.0.0.1:8090/services/seo/uae/",
+    "provider": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    },
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ]
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/services/seo/uae/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "ما الذي يجعل المنافسة في السوق الإماراتي مختلفة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "عدد الشركات التي تستهدف العبارات التجارية نفسها كبير، وصفحاتها غالبًا مهيأة جيدًا. لذلك تبدأ الخطة من اختيار الفرص التي يمكن كسبها فعلًا لا من توسيع الكلمات."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف نختار الصفحات التي يمكنها المنافسة أولًا؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نقيس قوة الصفحات المتصدرة مقابل حالة صفحتك، ونبدأ بما يحتاج تحسينًا محدودًا ليقترب من الصدارة، قبل الصفحات التي تتطلب بناءً طويلًا."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تختلف الخطة بين مواقع الخدمات والمتاجر الإلكترونية؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم. موقع الخدمات يعتمد على عدد محدود من الصفحات تحتاج محتوى وسلطة، والمتجر يعتمد على الفئات والمنتجات وبنية تقنية تتحمل حجمًا كبيرًا من الصفحات."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "ما الذي يتم تسليمه خلال الشهر الأول؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "مراجعة للظهور والمنافسين، تحليل لفجوات الصفحات والمحتوى، ترتيب للفرص بحسب الأولوية، قائمة تنفيذ تقنية ومحتوى، ونقطة قياس أساسية للمتابعة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف نتابع أثر العمل على الاستفسارات والطلبات؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نضبط أحداث التواصل والطلب في Google Analytics 4 ونربطها بالقناة العضوية والصفحات، فيمكن معرفة أي صفحة أنتجت الطلب."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل يمكن تنفيذ المشروع بالكامل عن بُعد؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم. الاجتماعات والصلاحيات والتنفيذ والتقارير تُدار عن بُعد، ونتعاون مباشرة مع فريق التسويق أو التطوير عند الحاجة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف يتم تحديد نطاق العمل والتسعير؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نحدد النطاق بعد مراجعة الموقع وحجم المنافسة وما يحتاج إلى تنفيذ فعلي. راجع صفحة الأسعار ثم احجز مكالمة لمناقشة حالتك."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/services/seo/technical/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/services/seo/technical/#webpage",
+    "url": "http://127.0.0.1:8090/services/seo/technical/",
+    "name": "خدمة السيو التقني وتدقيق الموقع | سيو هاوس",
+    "description": "نفحص الزحف والفهرسة والسرعة وبنية الموقع والبيانات المنظمة، ونرتب المشكلات حسب أثرها، ثم ننفّذ التعديلات ونتابع الفهرسة والأداء.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/services/seo/technical/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/services/seo/technical/#service"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/services/seo/technical/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "خدمات السيو",
+      "item": "http://127.0.0.1:8090/services/seo/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "السيو التقني",
+      "item": "http://127.0.0.1:8090/services/seo/technical/"
+     }
+    ]
+   },
+   {
+    "@type": "Service",
+    "@id": "http://127.0.0.1:8090/services/seo/technical/#service",
+    "name": "السيو التقني لموقعك",
+    "serviceType": "السيو التقني وتدقيق المواقع",
+    "description": "نفحص الزحف والفهرسة والعرض والسرعة وبنية الصفحات، ونحدد ما يعطّل الظهور، ثم ننفّذ التعديلات ونتابع أثرها في بيانات الموقع.",
+    "url": "http://127.0.0.1:8090/services/seo/technical/",
+    "provider": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/services/seo/technical/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "ما الفرق بين التدقيق التقني وتنفيذ التعديلات؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "التدقيق يكشف المشكلات ويرتبها حسب الأثر، والتنفيذ هو تطبيق التعديلات داخل الموقع. يمكن طلب أحدهما أو كليهما."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تحتاجون صلاحيات على الموقع؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نحتاج وصولًا للقراءة على Search Console وGA4، ووصولًا للتحرير على المنصة إذا كان التنفيذ ضمن نطاق العمل."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل يؤثر السيو التقني وحده على الترتيب؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يزيل ما يمنع الصفحات من الظهور ويحسّن التجربة، لكن المنافسة على العبارات تحتاج محتوى وسلطة أيضًا."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كم يستغرق الفحص التقني؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يعتمد على حجم الموقع وعدد صفحاته وتعقيد بنيته. نحدد المدة بعد مراجعة أولية للموقع."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تعملون مع المواقع المبنية على JavaScript؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم. نفحص كيف تُعرض الصفحات ونحدد المحتوى الذي لا تصل إليه محركات البحث بصورة موثوقة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تشمل الخدمة إصلاح السرعة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعالج ما يتعلق بالصور والسكربتات والتحميل داخل المنصة، وما يحتاج تعديلًا في البنية ننفّذه بالتعاون مع مطورك."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/services/web-design/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/services/web-design/#webpage",
+    "url": "http://127.0.0.1:8090/services/web-design/",
+    "name": "تصميم وتطوير مواقع الشركات | سيو هاوس",
+    "description": "نبني مواقع تنطلق من أهداف نشاطك: رسالة واضحة، مسار استخدام قصير، سرعة، إدارة محتوى سهلة، وأساس تقني يسمح بالعمل على الظهور والقياس.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/services/web-design/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/services/web-design/#service"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/services/web-design/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "الخدمات",
+      "item": "http://127.0.0.1:8090/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "تصميم وتطوير المواقع",
+      "item": "http://127.0.0.1:8090/services/web-design/"
+     }
+    ]
+   },
+   {
+    "@type": "Service",
+    "@id": "http://127.0.0.1:8090/services/web-design/#service",
+    "name": "تصميم وتطوير المواقع",
+    "serviceType": "تصميم وتطوير المواقع",
+    "description": "نبدأ من سؤال واحد: ما الذي تريد من الزائر أن يفعله؟ ثم نبني البنية والمحتوى والواجهة والأداء بحيث يصل إليه بأقصر طريق ويمكن قياس ذلك.",
+    "url": "http://127.0.0.1:8090/services/web-design/",
+    "provider": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/services/web-design/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "كم يستغرق بناء الموقع؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يعتمد على عدد الصفحات وحجم المحتوى والمنصة. نحدد جدولًا زمنيًا بعد الاتفاق على البنية والنطاق."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تكتبون محتوى الموقع؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يمكن ذلك ضمن النطاق. إن كان لديك محتوى جاهز نراجعه ونرتبه بما يناسب بنية الصفحات."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل أستطيع تعديل الموقع بنفسي؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم. نسلّم لوحة تحكم واضحة مع جلسة تدريب على تعديل المحتوى والصفحات."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل الموقع جاهز للسيو؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نبني الأساس: بنية روابط، وسوم، سرعة، وقياس. العمل المستمر على الظهور خدمة مستقلة يمكن إضافتها."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تنقلون موقعًا قائمًا؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم. نضع خطة نقل تحافظ على الروابط والصفحات، ونتابع الفهرسة بعد الإطلاق."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "ماذا بعد الإطلاق؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يمكن الاتفاق على متابعة شهرية للصيانة والتحديثات وتحسين الأداء."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/services/web-design/wordpress/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/services/web-design/wordpress/#webpage",
+    "url": "http://127.0.0.1:8090/services/web-design/wordpress/",
+    "name": "تصميم مواقع ووردبريس للشركات | سيو هاوس",
+    "description": "مواقع WordPress مبنية بوحدات قابلة للتحرير: إدارة محتوى سهلة، أداء مضبوط، حماية وتحديثات، تعدد لغات، وأساس جاهز للعمل على الظهور.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/services/web-design/wordpress/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/services/web-design/wordpress/#service"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/services/web-design/wordpress/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "تصميم وتطوير المواقع",
+      "item": "http://127.0.0.1:8090/services/web-design/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ووردبريس",
+      "item": "http://127.0.0.1:8090/services/web-design/wordpress/"
+     }
+    ]
+   },
+   {
+    "@type": "Service",
+    "@id": "http://127.0.0.1:8090/services/web-design/wordpress/#service",
+    "name": "تصميم مواقع ووردبريس",
+    "serviceType": "تصميم وتطوير مواقع ووردبريس",
+    "description": "نبني وحدات محتوى على هويتك تركّبها بنفسك في صفحات جديدة، مع ضبط الأداء والحماية وبنية الروابط من البداية.",
+    "url": "http://127.0.0.1:8090/services/web-design/wordpress/",
+    "provider": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/services/web-design/wordpress/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "هل تستخدمون قالبًا جاهزًا؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نبني وحدات على الهوية بدل تركيب قالب عام، حتى تبقى الصفحات قابلة للتحرير دون كسر التصميم."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كم إضافة تستخدمون؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نستخدم أقل عدد ممكن، ونختار الإضافات الموثوقة فقط، لأن كثرتها تبطئ الموقع وتزيد مخاطر الأمان."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل يمكنني إضافة صفحات بنفسي؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم. تُبنى الصفحات من وحدات جاهزة تركّبها بنفسك دون كتابة كود."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "ماذا عن الحماية والتحديثات؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نضبط النسخ الاحتياطي وصلاحيات المستخدمين وطبقة الحماية، ويمكن الاتفاق على متابعة شهرية للتحديثات."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تدعمون تعدد اللغات؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم، مع ضبط بنية الروابط ووسوم اللغة لكل نسخة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل يناسب WordPress المتاجر؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يناسبها عبر WooCommerce، ولها صفحة مستقلة تشرح التنفيذ داخل المتجر."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/services/stores/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/services/stores/#webpage",
+    "url": "http://127.0.0.1:8090/services/stores/",
+    "name": "تصميم وتطوير المتاجر الإلكترونية | سيو هاوس",
+    "description": "متاجر تركّز على سهولة الشراء: تصنيف منتجات واضح، صفحات منتج مقنعة، دفع وشحن بلا عقبات، سرعة، وقياس لكل خطوة في رحلة الطلب.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/services/stores/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/services/stores/#service"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/services/stores/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "الخدمات",
+      "item": "http://127.0.0.1:8090/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "تصميم وتطوير المتاجر",
+      "item": "http://127.0.0.1:8090/services/stores/"
+     }
+    ]
+   },
+   {
+    "@type": "Service",
+    "@id": "http://127.0.0.1:8090/services/stores/#service",
+    "name": "تصميم المتاجر الإلكترونية",
+    "serviceType": "تصميم وتطوير المتاجر الإلكترونية",
+    "description": "نصمم الكتالوج وصفحات المنتج ومسار الدفع بحيث يصل المشتري من الدخول إلى الطلب بأقل احتكاك، مع قياس كل خطوة لمعرفة أين يتوقف.",
+    "url": "http://127.0.0.1:8090/services/stores/",
+    "provider": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/services/stores/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "أي منصة تناسب متجري؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يعتمد على السوق وحجم الكتالوج وطريقة الدفع والشحن. نرشّح المنصة بعد مراجعة منتجاتك وخطة التشغيل."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل ترفعون المنتجات؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "رفع المنتجات وإدارة بياناتها خدمة مستقلة يمكن ضمها إلى مشروع المتجر."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تربطون الدفع والشحن؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم، نربط بوابات الدفع وشركات الشحن المتاحة على المنصة ونختبر الطلب من البداية للنهاية."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل المتجر جاهز للظهور في البحث؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نضبط بنية الفئات والروابط والوسوم والسرعة. العمل المستمر على الظهور خدمة سيو مستقلة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل يمكن نقل متجر قائم؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم، مع خطة لنقل المنتجات والروابط والتحويلات للحفاظ على ما بناه المتجر من ظهور."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كم يستغرق بناء المتجر؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يعتمد على حجم الكتالوج والتكاملات المطلوبة. نحدد المدة بعد الاتفاق على النطاق."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/services/stores/salla/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/services/stores/salla/#webpage",
+    "url": "http://127.0.0.1:8090/services/stores/salla/",
+    "name": "تصميم وتطوير متاجر سلة | سيو هاوس",
+    "description": "متاجر سلة جاهزة للتشغيل في السوق السعودي: هوية وصفحات وتصنيفات منظمة، دفع وشحن محليان، وإعداد يدعم ظهور صفحات الفئات والمنتجات.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/services/stores/salla/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/services/stores/salla/#service"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/services/stores/salla/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "تصميم وتطوير المتاجر",
+      "item": "http://127.0.0.1:8090/services/stores/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "سلة",
+      "item": "http://127.0.0.1:8090/services/stores/salla/"
+     }
+    ]
+   },
+   {
+    "@type": "Service",
+    "@id": "http://127.0.0.1:8090/services/stores/salla/#service",
+    "name": "تصميم متاجر سلة",
+    "serviceType": "تطوير متاجر سلة",
+    "description": "نجهّز الهوية والصفحات والتصنيفات داخل سلة، ونربط الدفع والشحن المحليين، ونرتب بيانات المنتجات بحيث يسهل الشراء وتظهر الصفحات في البحث.",
+    "url": "http://127.0.0.1:8090/services/stores/salla/",
+    "provider": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/services/stores/salla/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "ما حدود التخصيص في سلة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "التخصيص أقل من المنصات المفتوحة، فنعمل داخل إمكانات المنصة ونركز على البنية والمحتوى وتجربة الشراء."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تربطون الدفع والشحن المحلي؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم، نربط بوابات الدفع وشركات الشحن المتاحة ونختبر الطلب من البداية للنهاية."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل يمكن تحسين ظهور صفحات المتجر؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم ضمن ما تتيحه المنصة: بنية التصنيفات، أوصاف الفئات والمنتجات، العناوين والوسوم."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل ترفعون المنتجات؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "رفع المنتجات وترتيب بياناتها خدمة مستقلة يمكن ضمها إلى المشروع."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل يمكن النقل من منصة أخرى؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم، مع نقل المنتجات والتصنيفات ووضع خطة تحويلات للروابط القديمة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كم يستغرق الإعداد؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يعتمد على حجم الكتالوج وعدد الصفحات والتكاملات. نحدد المدة بعد الاتفاق على النطاق."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/services/products/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/services/products/#webpage",
+    "url": "http://127.0.0.1:8090/services/products/",
+    "name": "رفع المنتجات وإدارة محتوى المتاجر | سيو هاوس",
+    "description": "إدخال المنتجات وبياناتها وصورها وتصنيفاتها بصورة منظمة على سلة وزد وShopify وWooCommerce، مع أوصاف وسمات وبيانات سيو قابلة للفهرسة.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/services/products/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/services/products/#service"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/services/products/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "الخدمات",
+      "item": "http://127.0.0.1:8090/services/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "رفع المنتجات وإدارة المحتوى",
+      "item": "http://127.0.0.1:8090/services/products/"
+     }
+    ]
+   },
+   {
+    "@type": "Service",
+    "@id": "http://127.0.0.1:8090/services/products/#service",
+    "name": "رفع المنتجات وتنظيمها",
+    "serviceType": "رفع المنتجات وإدارة محتوى المتاجر",
+    "description": "ندخل المنتجات وبياناتها وصورها وتصنيفاتها بصورة منظمة، فيسهل على المشتري إيجاد المنتج وعلى محركات البحث قراءة صفحاته.",
+    "url": "http://127.0.0.1:8090/services/products/",
+    "provider": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/services/products/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "ما الفرق بين هذه الخدمة وتصميم المتجر؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "تصميم المتجر يبني الواجهة ومسار الشراء، وهذه الخدمة تشغّل المحتوى: إدخال المنتجات وبياناتها وتصنيفاتها بصورة منظمة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "ما الذي تحتاجونه للبدء؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "ملف منتجات بأي صيغة متاحة، والصور، وصلاحية على لوحة المتجر. ما ينقص نحدده ونتفق على طريقة توفيره."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تكتبون أوصاف المنتجات؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم، أوصاف مختصرة مبنية على مواصفات المنتج الفعلية دون مبالغة أو معلومات غير مؤكدة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تعالجون الصور؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نضبط المقاسات والخلفيات والتسميات بما يناسب المنصة، ولا ننشئ صور منتجات غير حقيقية."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كم منتجًا يمكن إدخاله؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يعتمد على اكتمال البيانات وعدد المتغيرات. نحدد الوتيرة بعد مراجعة عينة من الملف."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تعملون على كل المنصات؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعمل على سلة وزد وShopify وWooCommerce، عبر اللوحة مباشرة أو عبر ملفات الاستيراد."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/sectors/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "CollectionPage",
+    "@id": "http://127.0.0.1:8090/sectors/#webpage",
+    "url": "http://127.0.0.1:8090/sectors/",
+    "name": "قطاعات نعمل عليها في السيو والمواقع والمتاجر | سيو هاوس",
+    "description": "تختلف طريقة البحث ومسار القرار بين التجارة الإلكترونية والصحة والعقارات والتعليم والسياحة والتقنية والقانون والمطاعم. اختر قطاعك لترى طريقة العمل المناسبة له.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/sectors/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/sectors/#list"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/sectors/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "القطاعات",
+      "item": "http://127.0.0.1:8090/sectors/"
+     }
+    ]
+   },
+   {
+    "@type": "ItemList",
+    "@id": "http://127.0.0.1:8090/sectors/#list",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "التجارة الإلكترونية",
+      "url": "http://127.0.0.1:8090/sectors/ecommerce/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "الصحة والطب",
+      "url": "http://127.0.0.1:8090/sectors/health/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "العقارات والبناء",
+      "url": "http://127.0.0.1:8090/sectors/real-estate/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "التعليم والتدريب",
+      "url": "http://127.0.0.1:8090/sectors/education/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "السياحة والسفر",
+      "url": "http://127.0.0.1:8090/sectors/tourism/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "التقنية والبرمجيات",
+      "url": "http://127.0.0.1:8090/sectors/tech/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "القانون والاستشارات",
+      "url": "http://127.0.0.1:8090/sectors/legal/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "الأغذية والمطاعم",
+      "url": "http://127.0.0.1:8090/sectors/food/"
+     }
+    ]
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/sectors/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "لماذا تختلف الخطة بين القطاعات؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "لأن طريقة البحث ومسار القرار يختلفان. المتجر يعتمد على صفحات المنتجات، وشركة الخدمات على صفحات الخدمة والمحتوى الذي يسبق التواصل."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "نشاطي لا يظهر ضمن القطاعات الثمانية.",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "القطاعات المعروضة هي الأكثر تكرارًا في مشاريعنا. نعمل مع قطاعات أخرى بعد مراجعة طريقة بحث عملائك وبنية موقعك."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تختلف مدة العمل حسب القطاع؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "تختلف بحسب المنافسة وحجم الموقع وحالة صفحاته أكثر مما تختلف بحسب القطاع نفسه."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تعملون مع أكثر من قطاع لنفس الشركة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نعم، عندما يكون للشركة أكثر من نشاط. نفصل الصفحات والمحتوى لكل نشاط لتجنب تعارض الصفحات."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف تُحدد تكلفة العمل؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "بحسب نطاق التنفيذ وحجم الموقع ومستوى المنافسة. راجع صفحة الأسعار ثم احجز مكالمة لمناقشة حالتك."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/sectors/health/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/sectors/health/#webpage",
+    "url": "http://127.0.0.1:8090/sectors/health/",
+    "name": "تحسين محركات البحث للقطاع الطبي | سيو هاوس",
+    "description": "بنية تخصصات وخدمات وأطباء، ومحتوى يجيب عن أسئلة المريض قبل الحجز، مع البحث المحلي وإشارات الثقة ومسار حجز قصير على الجوال.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/sectors/health/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/sectors/health/#service"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/sectors/health/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "القطاعات",
+      "item": "http://127.0.0.1:8090/sectors/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "الصحة والطب",
+      "item": "http://127.0.0.1:8090/sectors/health/"
+     }
+    ]
+   },
+   {
+    "@type": "Service",
+    "@id": "http://127.0.0.1:8090/sectors/health/#service",
+    "name": "تحسين محركات البحث للقطاع الطبي",
+    "serviceType": "تحسين محركات البحث للقطاع الصحي",
+    "description": "المريض قد يبدأ بسؤال عن عرض، ثم يبحث عن تخصص أو خدمة، وبعدها يقارن الأطباء والمواعيد والموقع. ننظم الموقع الطبي حتى يجد معلومات واضحة عن الخدمة والطبيب والفرع والخطوة التالية للحجز. وفي هذا القطاع، يجب أن يكون المحتوى دقيقًا ومراجعًا من الجهة الطبية؛ لا نستخدم ادعاءات علاجية أو شهادات غير موثقة لرفع الظهور.",
+    "url": "http://127.0.0.1:8090/sectors/health/",
+    "provider": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    },
+    "audience": {
+     "@type": "BusinessAudience",
+     "audienceType": "الصحة والطب"
+    }
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/sectors/health/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "من يراجع المقالات الطبية؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "مختص تختاره المنشأة. نكتب ونرتب المحتوى للبحث، ولا يُنشر نص طبي قبل مراجعته من الجهة الطبية."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل يحتاج كل طبيب صفحة مستقلة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "عندما يبحث المرضى باسمه أو يكون الطبيب عاملًا في القرار. وإلا فصفحة التخصص والخدمة أهم، مع ذكر الأطباء داخلها."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف نربط الخدمة بالفرع المناسب؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "نوضح في صفحة الخدمة الفروع التي تقدمها فعلًا، ونربط كل فرع بصفحته التي تعرض العنوان ووسيلة الحجز."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل تعني زيادة النقرات زيادة الحجوزات؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "ليس بالضرورة. نقيس الحجوزات والمكالمات فقط عندما تكون مهيأة للقياس، ولا نصف النقرات بأنها حجوزات."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/sectors/legal/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/sectors/legal/#webpage",
+    "url": "http://127.0.0.1:8090/sectors/legal/",
+    "name": "تحسين محركات البحث لمكاتب المحاماة | سيو هاوس",
+    "description": "صفحات خدمات قانونية ومحتوى أسئلة يجيب عن إجراء العميل ومدته، مع إبراز الخبرة والترخيص ومسار استشارة واضح، دون ضمانات أو أرقام غير موثقة.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/sectors/legal/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/sectors/legal/#service"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/sectors/legal/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "القطاعات",
+      "item": "http://127.0.0.1:8090/sectors/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "القانون والاستشارات",
+      "item": "http://127.0.0.1:8090/sectors/legal/"
+     }
+    ]
+   },
+   {
+    "@type": "Service",
+    "@id": "http://127.0.0.1:8090/sectors/legal/#service",
+    "name": "تحسين محركات البحث لمكاتب المحاماة",
+    "serviceType": "تحسين محركات البحث للقطاع القانوني",
+    "description": "من يبحث عن محامٍ يحتاج إلى معرفة المجال القانوني الذي يخدمه المكتب، والخبرة المناسبة لمسألته، وكيف يبدأ التواصل بسرية ووضوح. نبني صفحات لمجالات العمل الفعلية، ونعرض الفريق ومؤهلاته كما يعتمدها المكتب، وننظم المقالات حول أسئلة العملاء من دون تحويلها إلى وعود بنتائج أو فتوى عامة تصلح لكل حالة.",
+    "url": "http://127.0.0.1:8090/sectors/legal/",
+    "provider": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    },
+    "audience": {
+     "@type": "BusinessAudience",
+     "audienceType": "القانون والاستشارات"
+    }
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/sectors/legal/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "متى تكون المسألة صفحة خدمة ومتى تكون مقالًا؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "إذا كان الباحث يريد من يساعده في المسألة فهي صفحة خدمة، وإذا كان يريد فهمها أولًا فهي مقال يقود إلى الخدمة المرتبطة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف نظهر خبرة المحامي دون مبالغة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "بالسيرة والمؤهلات والعضويات ومجالات الممارسة كما يعتمدها المكتب، دون نسب نجاح أو نتائج غير موثقة."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل نكتب صفحة لكل مدينة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "فقط للمدن التي يعمل فيها المكتب فعلًا ويوجد عليها بحث، مع محتوى يخص الإجراءات أو الجهات فيها."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف نقيس النتيجة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "بالاستفسارات المؤهلة والمكالمات القادمة من صفحات الخدمات، مع فصلها عن زيارات المقالات العامة."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/results/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "CollectionPage",
+    "@id": "http://127.0.0.1:8090/results/#webpage",
+    "url": "http://127.0.0.1:8090/results/",
+    "name": "نتائج ودراسات حالة من مشاريع سيو هاوس | سيو هاوس",
+    "description": "نتائج موثقة من حسابات العملاء بمصادرها وفتراتها: نمو إيرادات عضوية، ونمو نقرات في Search Console، مع شرح لطريقة قراءة الأرقام.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/results/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/results/#list"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/results/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "نتائج الأعمال",
+      "item": "http://127.0.0.1:8090/results/"
+     }
+    ]
+   },
+   {
+    "@type": "ItemList",
+    "@id": "http://127.0.0.1:8090/results/#list",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "قطاع التجارة الإلكترونية",
+      "url": "http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%aa%d8%ac%d8%a7%d8%b1%d8%a9-%d8%a7%d9%84%d8%a5%d9%84%d9%83%d8%aa%d8%b1%d9%88%d9%86%d9%8a%d8%a9/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "قطاع الصحة والطب",
+      "url": "http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "قطاع التعليم والتدريب",
+      "url": "http://127.0.0.1:8090/results/%d8%aa%d8%b3%d8%aa%d8%aa%d8%b3%d8%aa/"
+     }
+    ]
+   }
+  ]
+ },
+ "/results/%D9%82%D8%B7%D8%A7%D8%B9-%D8%A7%D9%84%D8%B5%D8%AD%D8%A9-%D9%88%D8%A7%D9%84%D8%B7%D8%A8/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/#webpage",
+    "url": "http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/",
+    "name": "قطاع الصحة والطب - سيو هاوس",
+    "description": "نمو في الزيارات العضوية لعيادة طبية متخصصة، وانتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/#breadcrumb"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "نتائج الأعمال",
+      "item": "http://127.0.0.1:8090/results/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "قطاع الصحة والطب",
+      "item": "http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/"
+     }
+    ]
+   },
+   {
+    "@type": "Article",
+    "@id": "http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/#article",
+    "headline": "قطاع الصحة والطب",
+    "description": "نمو في الزيارات العضوية لعيادة طبية متخصصة، وانتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.",
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "inLanguage": "ar",
+    "author": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    },
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    },
+    "mainEntityOfPage": {
+     "@id": "http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/#webpage"
+    }
+   }
+  ]
+ },
+ "/blog/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "CollectionPage",
+    "@id": "http://127.0.0.1:8090/blog/#webpage",
+    "url": "http://127.0.0.1:8090/blog/",
+    "name": "مدونة سيو هاوس | سيو هاوس",
+    "description": "مقالات عن تحسين محركات البحث والسيو التقني والمحتوى والتجارة الإلكترونية والقياس.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/blog/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/blog/#list"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/blog/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "المدونة",
+      "item": "http://127.0.0.1:8090/blog/"
+     }
+    ]
+   },
+   {
+    "@type": "ItemList",
+    "@id": "http://127.0.0.1:8090/blog/#list",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة",
+      "url": "http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/"
+     }
+    ]
+   }
+  ]
+ },
+ "/blog/%D9%87%D9%84-%D9%8A%D8%B8%D9%87%D8%B1-%D9%85%D9%88%D9%82%D8%B9%D9%83-%D8%AF%D8%A7%D8%AE%D9%84-%D8%A5%D8%AC%D8%A7%D8%A8%D8%A7%D8%AA-%D8%AC%D9%88%D8%AC%D9%84-%D8%A8%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/#webpage",
+    "url": "http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/",
+    "name": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة - سيو هاوس",
+    "description": "مع تغير شكل نتائج البحث في Google، لم يعد ظهور الموقع مقتصرًا على الروابط التقليدية التي اعتاد المستخدمون رؤيتها في صفحة النتائج.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-06-03T17:00:00+00:00",
+    "dateModified": "2026-06-03T17:00:00+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/#breadcrumb"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "المدونة",
+      "item": "http://127.0.0.1:8090/blog/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "سيو تقني",
+      "item": "http://127.0.0.1:8090/blog/category/technical-seo/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة",
+      "item": "http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/"
+     }
+    ]
+   },
+   {
+    "@type": "BlogPosting",
+    "@id": "http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/#article",
+    "headline": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة",
+    "description": "مع تغير شكل نتائج البحث في Google، لم يعد ظهور الموقع مقتصرًا على الروابط التقليدية التي اعتاد المستخدمون رؤيتها في صفحة النتائج.",
+    "datePublished": "2026-06-03T17:00:00+00:00",
+    "dateModified": "2026-06-03T17:00:00+00:00",
+    "inLanguage": "ar",
+    "image": "http://127.0.0.1:8090/wp-content/uploads/2026/10/chatgpt-image-2026-06-03-800x450-1.webp",
+    "articleSection": "سيو تقني",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    },
+    "mainEntityOfPage": {
+     "@id": "http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/#webpage"
+    }
+   }
+  ]
+ },
+ "/team/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "CollectionPage",
+    "@id": "http://127.0.0.1:8090/team/#webpage",
+    "url": "http://127.0.0.1:8090/team/",
+    "name": "عنوان Rank Math معدّل 11",
+    "description": "وصف Rank Math معدّل 11",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/team/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/team/#list"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/team/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "فريق العمل",
+      "item": "http://127.0.0.1:8090/team/"
+     }
+    ]
+   },
+   {
+    "@type": "ItemList",
+    "@id": "http://127.0.0.1:8090/team/#list",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ياسر يوسف",
+      "url": "http://127.0.0.1:8090/team/yasser-youssef/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "محمد معوض",
+      "url": "http://127.0.0.1:8090/team/mohamed-moawad/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "مها علي",
+      "url": "http://127.0.0.1:8090/team/maha-ali/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "منةالله سعيد",
+      "url": "http://127.0.0.1:8090/team/mennatallah-said/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "إسراء كمال",
+      "url": "http://127.0.0.1:8090/team/esraa-kamal/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "هبه جنيدي",
+      "url": "http://127.0.0.1:8090/team/heba-geneedy/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "محمد حسن",
+      "url": "http://127.0.0.1:8090/team/mohamed-hassan/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "مصطفي محمود",
+      "url": "http://127.0.0.1:8090/team/mustafa-mahmoud/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "أحمد سند",
+      "url": "http://127.0.0.1:8090/team/ahmed-sanad/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 10,
+      "name": "إسراء محمد",
+      "url": "http://127.0.0.1:8090/team/esraa-mohamed/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 11,
+      "name": "ندى محمود",
+      "url": "http://127.0.0.1:8090/team/nada-mahmoud/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 12,
+      "name": "أدهم هشام",
+      "url": "http://127.0.0.1:8090/team/adham-hesham/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 13,
+      "name": "مريم هشام",
+      "url": "http://127.0.0.1:8090/team/mariam-hesham/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 14,
+      "name": "سيف سند",
+      "url": "http://127.0.0.1:8090/team/seif-sanad/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 15,
+      "name": "مراد صلاح",
+      "url": "http://127.0.0.1:8090/team/morad-salah/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 16,
+      "name": "نهى المهدي",
+      "url": "http://127.0.0.1:8090/team/noha-elmahdy/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 17,
+      "name": "إيمان فريد",
+      "url": "http://127.0.0.1:8090/team/eman-farid/"
+     }
+    ]
+   }
+  ]
+ },
+ "/team/yasser-youssef/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "ProfilePage",
+    "@id": "http://127.0.0.1:8090/team/yasser-youssef/#webpage",
+    "url": "http://127.0.0.1:8090/team/yasser-youssef/",
+    "name": "ياسر يوسف - سيو هاوس",
+    "description": "ياسر يوسف — المدير التنفيذي، سيو هاوس",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/team/yasser-youssef/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/team/yasser-youssef/#person"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/team/yasser-youssef/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "فريق العمل",
+      "item": "http://127.0.0.1:8090/team/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ياسر يوسف",
+      "item": "http://127.0.0.1:8090/team/yasser-youssef/"
+     }
+    ]
+   },
+   {
+    "@type": "Person",
+    "@id": "http://127.0.0.1:8090/team/yasser-youssef/#person",
+    "name": "ياسر يوسف",
+    "jobTitle": "المدير التنفيذي",
+    "image": "http://127.0.0.1:8090/wp-content/uploads/2026/10/pasted-1789463270111-0.webp",
+    "url": "http://127.0.0.1:8090/team/yasser-youssef/",
+    "sameAs": [
+     "https://www.linkedin.com/in/yasser-youssef7/"
+    ],
+    "worksFor": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   }
+  ]
+ },
+ "/team/eman-farid/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "ProfilePage",
+    "@id": "http://127.0.0.1:8090/team/eman-farid/#webpage",
+    "url": "http://127.0.0.1:8090/team/eman-farid/",
+    "name": "إيمان فريد - سيو هاوس",
+    "description": "إيمان فريد — قائد المحتوى، سيو هاوس",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/team/eman-farid/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/team/eman-farid/#person"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/team/eman-farid/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "فريق العمل",
+      "item": "http://127.0.0.1:8090/team/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "إيمان فريد",
+      "item": "http://127.0.0.1:8090/team/eman-farid/"
+     }
+    ]
+   },
+   {
+    "@type": "Person",
+    "@id": "http://127.0.0.1:8090/team/eman-farid/#person",
+    "name": "إيمان فريد",
+    "jobTitle": "قائد المحتوى",
+    "image": "http://127.0.0.1:8090/wp-content/uploads/2026/10/pasted-1789463337592-0.webp",
+    "url": "http://127.0.0.1:8090/team/eman-farid/",
+    "worksFor": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   }
+  ]
+ },
+ "/pricing/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/pricing/#webpage",
+    "url": "http://127.0.0.1:8090/pricing/",
+    "name": "أسعار خدمات سيو هاوس ونطاق العمل | سيو هاوس",
+    "description": "نعمل داخل نطاق 1,500 إلى 7,000 ريال، ويتحدد السعر النهائي بحسب حالة الموقع وحجم الصفحات والسوق والمنافسة ونطاق التنفيذ والمنصة المستخدمة.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:42:52+00:00",
+    "dateModified": "2026-10-06T14:42:52+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/pricing/#breadcrumb"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/pricing/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "الأسعار",
+      "item": "http://127.0.0.1:8090/pricing/"
+     }
+    ]
+   },
+   {
+    "@type": "FAQPage",
+    "@id": "http://127.0.0.1:8090/pricing/#faq",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "هل النطاق شهري أم لمرة واحدة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يتحدد ذلك حسب نوع العمل ونطاقه. مشروع بناء أو مراجعة يختلف عن عمل مستمر، ونوضح ذلك في العرض المكتوب قبل الاتفاق."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "لماذا لا توجد باقات جاهزة؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "لأن الباقة الثابتة تفرض نطاقًا قد لا يناسب موقعك. نحدد النطاق بعد مراجعة الحالة، فيكون السعر مرتبطًا بعمل فعلي."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "ما الحد الأدنى للبدء؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يبدأ النطاق المعروض من 1,500 ريال، لكن نطاق العمل الفعلي وما يشمله يتحددان بعد مراجعة الموقع واحتياجات المشروع."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل السعر يشمل المحتوى والتطوير؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يشمل ما نتفق عليه صراحة. المحتوى والتعديلات التقنية قد تكون داخل النطاق أو ينفّذها فريقك."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "هل يتغير السعر مع الوقت؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "يتغير عند تغيّر النطاق: إضافة صفحات أو أسواق أو خدمات جديدة. لا نغيّره دون اتفاق مكتوب."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "كيف أحصل على نطاق يناسب موقعي؟",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "أرسل بيانات موقعك في نموذج الاستشارة. نراجع الحالة ثم نحدد النطاق والسعر المناسب في المكالمة."
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "/terms/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/terms/#webpage",
+    "url": "http://127.0.0.1:8090/terms/",
+    "name": "الشروط والأحكام | سيو هاوس",
+    "description": "شروط استخدام موقع سيو هاوس وطلب خدماته: المحتوى ونتائج الأعمال، والعروض والتعاقد، والملكية الفكرية، وحدود المسؤولية، والقانون المطبق.",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:43:39+00:00",
+    "dateModified": "2026-10-06T14:43:39+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/terms/#breadcrumb"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/terms/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "الشروط والأحكام",
+      "item": "http://127.0.0.1:8090/terms/"
+     }
+    ]
+   }
+  ]
+ },
+ "/privacy-policy/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "WebPage",
+    "@id": "http://127.0.0.1:8090/privacy-policy/#webpage",
+    "url": "http://127.0.0.1:8090/privacy-policy/",
+    "name": "سياسة الخصوصية - سيو هاوس",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "datePublished": "2026-10-06T14:43:39+00:00",
+    "dateModified": "2026-10-06T14:43:39+00:00",
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/privacy-policy/#breadcrumb"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/privacy-policy/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "سياسة الخصوصية",
+      "item": "http://127.0.0.1:8090/privacy-policy/"
+     }
+    ]
+   }
+  ]
+ },
+ "/blog/category/technical-seo/": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "CollectionPage",
+    "@id": "http://127.0.0.1:8090/blog/category/technical-seo/#webpage",
+    "url": "http://127.0.0.1:8090/blog/category/technical-seo/",
+    "name": "سيو تقني - سيو هاوس",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/blog/category/technical-seo/#breadcrumb"
+    },
+    "mainEntity": {
+     "@id": "http://127.0.0.1:8090/blog/category/technical-seo/#list"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/blog/category/technical-seo/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "المدونة",
+      "item": "http://127.0.0.1:8090/blog/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "سيو تقني",
+      "item": "http://127.0.0.1:8090/blog/category/technical-seo/"
+     }
+    ]
+   },
+   {
+    "@type": "ItemList",
+    "@id": "http://127.0.0.1:8090/blog/category/technical-seo/#list",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة",
+      "url": "http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/"
+     }
+    ]
+   }
+  ]
+ },
+ "/?s=seo": {
+  "@context": "https://schema.org",
+  "@graph": [
+   {
+    "@type": "Organization",
+    "@id": "http://127.0.0.1:8090/#organization",
+    "name": "سيو هاوس",
+    "alternateName": "SEO House",
+    "url": "http://127.0.0.1:8090/",
+    "logo": {
+     "@type": "ImageObject",
+     "@id": "http://127.0.0.1:8090/#logo",
+     "url": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "contentUrl": "http://127.0.0.1:8090/wp-content/themes/seohouse/assets/img/logo-blue.webp",
+     "width": 290,
+     "height": 68
+    },
+    "description": "سيو هاوس شركة متخصصة في تحسين محركات البحث وتصميم المواقع والمتاجر الإلكترونية. نساعد الشركات في السعودية ومصر والإمارات على تطوير حضورها الرقمي منذ 2017.",
+    "foundingDate": "2017",
+    "telephone": "+201050861791",
+    "email": "info@seohouse.agency",
+    "address": "234 شارع عبد السلام عارف، لوران، الإسكندرية، مصر",
+    "areaServed": [
+     {
+      "@type": "Country",
+      "name": "السعودية"
+     },
+     {
+      "@type": "Country",
+      "name": "مصر"
+     },
+     {
+      "@type": "Country",
+      "name": "الإمارات"
+     }
+    ],
+    "sameAs": [
+     "https://www.facebook.com/seohouse.agency"
+    ]
+   },
+   {
+    "@type": "WebSite",
+    "@id": "http://127.0.0.1:8090/#website",
+    "url": "http://127.0.0.1:8090/",
+    "name": "سيو هاوس",
+    "inLanguage": "ar",
+    "publisher": {
+     "@id": "http://127.0.0.1:8090/#organization"
+    }
+   },
+   {
+    "@type": "SearchResultsPage",
+    "@id": "http://127.0.0.1:8090/search/seo/#webpage",
+    "url": "http://127.0.0.1:8090/search/seo/",
+    "name": "seo - سيو هاوس",
+    "inLanguage": "ar",
+    "isPartOf": {
+     "@id": "http://127.0.0.1:8090/#website"
+    },
+    "breadcrumb": {
+     "@id": "http://127.0.0.1:8090/search/seo/#breadcrumb"
+    }
+   },
+   {
+    "@type": "BreadcrumbList",
+    "@id": "http://127.0.0.1:8090/search/seo/#breadcrumb",
+    "itemListElement": [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الرئيسية",
+      "item": "http://127.0.0.1:8090/"
+     },
+     {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "نتائج البحث"
+     }
+    ]
+   }
+  ]
+ },
+ "/no-such-page/": null
+}

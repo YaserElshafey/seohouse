@@ -1,0 +1,111 @@
+{
+ "title": "Education & Training: Organic Traffic Growth",
+ "slug": "education-training-seo-case-study",
+ "content": "",
+ "excerpt": "",
+ "fields": {
+  "summary": "+141% organic traffic and +231% search impressions for a training platform, over 8 months of ongoing work.",
+  "crumb": "",
+  "result": "+141%",
+  "result_label": "Traffic growth",
+  "sector": "Education & Training",
+  "market": "",
+  "filter": [
+   "education"
+  ],
+  "client": "Mubhir",
+  "client_public": 1,
+  "client_url": "https://mubhir.ai/",
+  "client_logo": "",
+  "duration": "8 months of ongoing collaboration",
+  "source": "",
+  "period": "",
+  "challenge_title": "Good content that didn't rank for competitive keywords",
+  "challenge_text": "The education platform struggled to appear for competitive keywords related to courses and training, despite having good content and services. The core problem was poorly organized pages and no clear strategy for covering search intent, along with a lack of strong pages targeting the keywords its audience searches for directly.",
+  "solution_title": "What we did",
+  "solution_intro": "We first analyzed the market and competitors to identify the real keyword opportunities.",
+  "steps": [
+   {
+    "title": "Market and competitor analysis",
+    "text": "Identifying the real keyword opportunities before making any changes."
+   },
+   {
+    "title": "Rebuilding the page structure",
+    "text": "Rebuilding the main pages and the program and course pages so they are clearer for search engines and users."
+   },
+   {
+    "title": "Optimizing existing content and creating new content",
+    "text": "Content that supports the target pages and covers search intent."
+   },
+   {
+    "title": "Internal linking plan",
+    "text": "Distributing authority across pages and improving the chances of ranking first for important keywords."
+   }
+  ],
+  "results_text": "The plan led to notable growth in monthly traffic and a clear improvement in rankings for core keywords, including competitive keywords reaching the first page. This was also reflected in the quality of traffic to the platform, with better signs of attracting users genuinely interested in its training services rather than general, unqualified visits.",
+  "metrics": [
+   {
+    "label": "Traffic",
+    "unit": "",
+    "before": "",
+    "after": "",
+    "change": "+141%",
+    "source": "",
+    "screenshot": ""
+   },
+   {
+    "label": "Impressions",
+    "unit": "",
+    "before": "",
+    "after": "",
+    "change": "+231%",
+    "source": "",
+    "screenshot": ""
+   }
+  ],
+  "period_before": "",
+  "period_after": "",
+  "gallery": [
+   {
+    "image": 107,
+    "alt": "Report screenshot from the published case study page (1)",
+    "caption": "Screenshot published on the current case study page.",
+    "source": "",
+    "verified": 0
+   },
+   {
+    "image": 105,
+    "alt": "Report screenshot from the published case study page (2)",
+    "caption": "Screenshot published on the current case study page.",
+    "source": "",
+    "verified": 0
+   },
+   {
+    "image": 106,
+    "alt": "Report screenshot from the published case study page (3)",
+    "caption": "Screenshot published on the current case study page.",
+    "source": "",
+    "verified": 0
+   }
+  ],
+  "service_label": "Education & Training SEO",
+  "service_page": "",
+  "related_pages": "",
+  "cta_title": "",
+  "cta_text": "",
+  "review_notes": "The headline figure (+220%) has no metric name and does not match +141% (traffic) or +231% (impressions). The traffic metric is shown instead.\r\nThe summary talks about “lead growth” while there is no leads metric among the figures; and “14 keywords on the first page” needs a screenshot.\r\nThe published page URL «/results/تستتست/» does not describe its content; it stays as is in this round, and changing it later with a 301 redirect is suggested after the migration plan is reviewed.\r\nThere is no source and no comparison periods, and the screenshots are duplicated in the other two case studies.",
+  "sh_seo_title": "",
+  "sh_seo_description": "",
+  "sh_seo_noindex": 0,
+  "sh_seo_og_image": null,
+  "sh_crumb": "",
+  "sh_crumb_ancestor": "",
+  "sh_schema_service": "",
+  "sh_schema_type": "auto"
+ },
+ "seo": {
+  "rank_math_title": "Education & Training SEO Case Study | SEO House",
+  "rank_math_description": "Education SEO case study: a training platform grew organic traffic by 141% and search impressions by 231% over 8 months of ongoing SEO work.",
+  "rank_math_focus_keyword": "education seo case study"
+ }
+}

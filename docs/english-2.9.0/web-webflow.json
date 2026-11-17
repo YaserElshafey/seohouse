@@ -1,0 +1,223 @@
+{
+ "id": 93,
+ "key": "web-webflow",
+ "title": "Webflow Websites",
+ "slug": "webflow",
+ "parent": 87,
+ "path": "/services/web-design/webflow/",
+ "template": "page-templates/web-webflow.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "Webflow Website Design for Businesses | SEO House",
+  "sh_seo_description": "Webflow website design with precise visual control and animation, a CMS your team can edit and built-in SEO settings. No servers or plugins to maintain.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Webflow website design and development",
+  "sh_crumb": "",
+  "rank_math_title": "Webflow Website Design for Businesses | SEO House",
+  "rank_math_description": "Webflow website design with precise visual control and animation, a CMS your team can edit and built-in SEO settings. No servers or plugins to maintain.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "webflow website design"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "logo": "assets/platforms/official/webflow.svg",
+   "logo_image": null,
+   "title": "Webflow website design",
+   "text": "We build reusable components with a flexible CMS and subtle animation, so you get a website that launches fast and is easy to update, with no servers to manage.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "How we build",
+   "label": "Layers",
+   "items": [
+    {
+     "label": "Style"
+    },
+    {
+     "label": "CMS"
+    }
+   ],
+   "items_2": [
+    {
+     "label": "Body",
+     "variant": "v1"
+    },
+    {
+     "label": "Section — Hero",
+     "variant": "v2"
+    },
+    {
+     "label": "Container",
+     "variant": "v3"
+    },
+    {
+     "label": "Heading",
+     "variant": "v4"
+    },
+    {
+     "label": "Paragraph",
+     "variant": "v5"
+    },
+    {
+     "label": "Button",
+     "variant": "v5"
+    },
+    {
+     "label": "Section — Features",
+     "variant": "v2"
+    },
+    {
+     "label": "Collection List",
+     "variant": "v3"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "build",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "How we build",
+   "title": "A design system inside Webflow",
+   "text": "We start with a system: fonts, colors, spacing and components. Every page is built from that system, so the design stays consistent and later changes are quick.",
+   "items": [
+    {
+     "heading": "Design system",
+     "label": "Shared variables and styles applied across the whole site."
+    },
+    {
+     "heading": "Components",
+     "label": "Reusable elements with clearly defined states."
+    },
+    {
+     "heading": "CMS Collections",
+     "label": "A content structure for articles, services and sectors."
+    },
+    {
+     "heading": "Interactions & animation",
+     "label": "Scroll and entrance animation that supports reading."
+    },
+    {
+     "heading": "Responsive design",
+     "label": "Fine-tuned for every screen size, not left to default breakpoints."
+    },
+    {
+     "heading": "Built-in SEO",
+     "label": "Meta tags, URLs and a sitemap set up properly."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "launch",
+   "sh_hide": 0,
+   "eyebrow": "Launch path",
+   "title": "A short, disciplined build cycle",
+   "items": [
+    {
+     "heading": "Structure & content",
+     "label": "A sitemap and a content draft before design."
+    },
+    {
+     "heading": "Design system",
+     "label": "On-brand styles and components."
+    },
+    {
+     "heading": "Build",
+     "label": "Assembling pages and fine-tuning responsiveness and animation."
+    },
+    {
+     "heading": "Review",
+     "label": "Testing screen sizes, forms and tracking."
+    },
+    {
+     "heading": "Launch",
+     "label": "Domain connection, redirects, handover and training."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "care",
+   "sh_hide": 0,
+   "eyebrow": "After launch",
+   "title": "Managing your website after launch",
+   "items": [
+    {
+     "label": "Edit content directly on the page, without a developer."
+    },
+    {
+     "label": "Add new CMS items within the defined structure."
+    },
+    {
+     "label": "Regular reviews of performance, forms and links."
+    },
+    {
+     "label": "Support when you add new pages or sections."
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Website design & development",
+     "link": 87
+    },
+    {
+     "label": "WordPress",
+     "link": 95
+    },
+    {
+     "label": "SEO services",
+     "link": 65
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Webflow website FAQ",
+   "items": [
+    {
+     "question": "When is Webflow better than WordPress?",
+     "answer": "When you want a faster launch, precise visual control and polished animation, without managing servers or plugins."
+    },
+    {
+     "question": "Is it easy to edit the content in Webflow?",
+     "answer": "Yes, through CMS Collections and the on-page editor, within the fields we define for your team."
+    },
+    {
+     "question": "Does animation slow the website down?",
+     "answer": "We only use light, purposeful animation, and we respect the reduced-motion setting on the visitor's device."
+    },
+    {
+     "question": "Does Webflow support Arabic and RTL?",
+     "answer": "Yes. We set up the text direction, Arabic fonts and page structure so everything displays correctly."
+    },
+    {
+     "question": "What about hosting?",
+     "answer": "Hosting is provided by Webflow itself, so you don't need a separate server or plugin updates."
+    },
+    {
+     "question": "Can I move the website to another platform later?",
+     "answer": "The content can be exported, but moving a website between platforms means rebuilding the front end and planning redirects."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "web",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

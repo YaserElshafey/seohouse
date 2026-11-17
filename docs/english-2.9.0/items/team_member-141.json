@@ -1,0 +1,36 @@
+{
+ "title": "Maha Ali",
+ "slug": "maha-ali-en",
+ "content": "",
+ "excerpt": "",
+ "fields": {
+  "role": "Team Lead",
+  "experience": "6+ years of experience",
+  "specialties": [
+   {
+    "label": "SEO"
+   },
+   {
+    "label": "Content"
+   }
+  ],
+  "bio": "",
+  "links": [],
+  "linkedin": "https://www.linkedin.com/in/maha-ali-7b7510184/",
+  "author": null,
+  "home_photo": 1,
+  "sh_seo_title": "",
+  "sh_seo_description": "",
+  "sh_seo_noindex": 0,
+  "sh_seo_og_image": null,
+  "sh_crumb": "",
+  "sh_crumb_ancestor": "",
+  "sh_schema_service": "",
+  "sh_schema_type": "auto"
+ },
+ "seo": {
+  "rank_math_title": "Maha Ali – Team Lead | SEO House",
+  "rank_math_description": "Maha Ali is a Team Lead at SEO House, with 6+ years of experience in SEO and content for business websites in Saudi Arabia, Egypt and the UAE.",
+  "rank_math_focus_keyword": "maha ali"
+ }
+}

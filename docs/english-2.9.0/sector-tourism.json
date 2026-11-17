@@ -1,0 +1,204 @@
+{
+ "id": 45,
+ "key": "sector-tourism",
+ "title": "Tourism & Travel",
+ "slug": "tourism",
+ "parent": 47,
+ "path": "/sectors/tourism/",
+ "template": "page-templates/sector-tourism.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "SEO for Travel & Tourism Companies | SEO House",
+  "sh_seo_description": "SEO for travel and tourism companies: destination and package pages plus up-to-date seasonal content that take trip planners straight to booking.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Search engine optimization for travel and tourism",
+  "sh_crumb": "Tourism & travel",
+  "rank_math_title": "SEO for Travel & Tourism Companies | SEO House",
+  "rank_math_description": "SEO for travel and tourism companies: destination and package pages plus up-to-date seasonal content that take trip planners straight to booking.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo for travel and tourism companies"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Tourism & travel",
+   "title": "SEO for travel and tourism companies",
+   "text": "Travel planning usually starts with the destination, timing and budget. Then travelers compare packages and details before they inquire or book. We organize destination pages, packages and practical information so they answer these questions and show what's actually available. And we never show a price, date or destination the company can't deliver.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "The traveler's journey",
+   "eyebrow_2": "The traveler's search path",
+   "label": "Illustrative example",
+   "label_2": "5-day family trip",
+   "items": [
+    {
+     "icon": "i45b9798e",
+     "heading": "Destination",
+     "label": "Best time to visit and things to do"
+    },
+    {
+     "icon": "i97b2a537",
+     "heading": "Options & season",
+     "label": "Duration, budget and timing"
+    },
+    {
+     "icon": "i4c9d7476",
+     "heading": "Package",
+     "label": "What the price includes and excludes"
+    }
+   ],
+   "label_3": "The action we measure",
+   "heading": "Booking or inquiry"
+  },
+  {
+   "acf_fc_layout": "sector_journey",
+   "sh_hide": 0,
+   "eyebrow": "Illustrative example: a travel company",
+   "title": "Destination and options, then package, then booking",
+   "eyebrow_2": "1",
+   "heading": "Destination",
+   "label": "Family summer trip",
+   "eyebrow_3": "Family",
+   "items": [
+    {
+     "eyebrow": "Honeymoon"
+    },
+    {
+     "eyebrow": "Adventure"
+    }
+   ],
+   "eyebrow_4": "2",
+   "heading_2": "Package",
+   "items_2": [
+    {
+     "label": "Day 1: Arrival and check-in"
+    },
+    {
+     "label": "Day 2: City tour"
+    },
+    {
+     "label": "Day 3: Outdoor activity"
+    }
+   ],
+   "label_2": "What the price includes and excludes · Cancellation terms",
+   "eyebrow_5": "3",
+   "heading_3": "Booking",
+   "items_3": [
+    {
+     "label": "Number of travelers"
+    },
+    {
+     "label": "Preferred season"
+    }
+   ],
+   "eyebrow_6": "Request a booking"
+  },
+  {
+   "acf_fc_layout": "choose",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Discovering destinations and comparing packages",
+   "title": "Help travelers choose before you pitch the package",
+   "text": "Someone researching a destination doesn't need a generic ad first. They need to know the best time to go, what there is to do, and what options the company offers. Then they move on to comparing packages by duration, inclusions, terms and availability.",
+   "eyebrow": "Destination page",
+   "heading": "Answers the first questions",
+   "label_2": "When should I go? What can I do there? Which packages are available for this destination?",
+   "eyebrow_2": "Package page",
+   "heading_2": "Shows what can actually be booked",
+   "label_3": "Duration, what's included and excluded, terms, and availability where possible."
+  },
+  {
+   "acf_fc_layout": "season",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Seasons & availability",
+   "title": "Seasonal content needs updating",
+   "text": "Trips, dates and prices change with the season. So we review old pages before reusing them, and make it clear when an offer has ended and what alternative is available. We don't leave up any date or price the company hasn't confirmed, and we don't create a page for every name a destination goes by when the content is identical.",
+   "items": [
+    {
+     "eyebrow": "Before the season",
+     "text": "Update packages and practical information"
+    },
+    {
+     "eyebrow": "During the season",
+     "text": "Monitor availability and update what has ended"
+    },
+    {
+     "eyebrow": "After the season",
+     "text": "Show that the offer has ended and what's available instead"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "inquiry",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "From inquiry to booking",
+   "title": "Make inquiring a natural next step",
+   "text": "After reading the details, travelers should know how to request a price, book or ask about dates.",
+   "items": [
+    {
+     "text": "We review button and form placement on mobile, and track inquiries by destination or package when tracking data is available."
+    },
+    {
+     "text": "The report shows what attracted visits and what generated requests. Traffic numbers alone are never presented as booking growth."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "SEO services",
+     "link": 65
+    },
+    {
+     "label": "SEO content",
+     "link": 53
+    },
+    {
+     "label": "All industries",
+     "link": 47
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Questions about SEO for travel and tourism",
+   "items": [
+    {
+     "question": "Should a travel company create a page for every destination?",
+     "answer": "Only for destinations where the company offers actual packages and has useful, distinctive information. A destination page with no package available doesn't help the traveler."
+    },
+    {
+     "question": "How do you handle seasonal packages?",
+     "answer": "We update the page for the next season if the package runs again, and make clear that the offer has ended and what's available instead, rather than leaving a page that looks active."
+    },
+    {
+     "question": "What information should travelers see before requesting a quote?",
+     "answer": "The duration, what the package includes and excludes, and the booking terms and availability where possible, so requests come from travelers who know what they're asking for."
+    },
+    {
+     "question": "How do you know SEO generated bookings?",
+     "answer": "We track inquiries and requests by destination or package when tracking data is available, and we don't rely on traffic alone."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

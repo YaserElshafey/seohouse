@@ -1,0 +1,72 @@
+{
+ "id": 1562,
+ "key": "privacy-policy",
+ "title": "Privacy Policy",
+ "slug": "privacy-policy",
+ "parent": 0,
+ "path": "/privacy-policy/",
+ "template": "page-templates/privacy-policy.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "Privacy Policy | SEO House",
+  "sh_seo_description": "Read the SEO House privacy policy: what data we collect through our contact and consultation forms, how we use and protect it, and how to submit a request.",
+  "sh_seo_noindex": null,
+  "sh_schema_type": "auto",
+  "sh_schema_service": "",
+  "sh_crumb": "",
+  "rank_math_title": "Privacy Policy | SEO House",
+  "rank_math_description": "Read the SEO House privacy policy: what data we collect through our contact and consultation forms, how we use and protect it, and how to submit a request.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "privacy policy"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "title": "",
+   "text": ""
+  },
+  {
+   "acf_fc_layout": "document",
+   "sh_hide": 0,
+   "eyebrow": "Privacy Policy Contents",
+   "label": "Last updated:",
+   "updated": "October 3, 2026",
+   "items_2": [
+    {
+     "title": "About This Policy",
+     "body": "This Policy explains how personal data is handled when you visit the SEO House website or contact us through the website's forms. It covers the data you submit to request a consultation or to inquire about our services.\r\n\r\nFor privacy inquiries or to submit a request concerning your data, you may write to us at:\r\ninfo@seohouse.agency\r\n\r\n"
+    },
+    {
+     "title": "Data You Provide to Us",
+     "body": "When you complete the contact form or the consultation request form, we collect the data you enter, such as your name, email address, phone number, website URL, the service requested and the details of your request.\r\n\r\nPlease do not include passwords, payment details or sensitive personal information in your message."
+    },
+    {
+     "title": "How Do We Use Your Data?",
+     "body": "We use your contact details and the details of your request to understand your needs, respond to your inquiry, discuss the appropriate service and follow up with you.\r\n\r\nRequests are stored in the website's administration dashboard, and a notification of each request is sent to the SEO House team's email address for follow-up. Submitting the consultation form means that your request has been received; it does not constitute automatic confirmation of an appointment. The team will contact you to arrange the details.\r\n\r\n"
+    },
+    {
+     "title": "Parties That Process Data",
+     "body": "Data may be processed by service providers necessary for operating the website and receiving requests, such as hosting and email services. The locations in which data is processed may vary depending on the service provider used.\r\n\r\nWhen you proceed to an external service, such as WhatsApp or Google Maps, your use of that service is subject to that service's own privacy policy."
+    },
+    {
+     "title": "Cookies and Embedded Services",
+     "body": "The website may use cookies and similar technologies to operate its functions. Embedded services, such as the display of Google reviews, may cause your browser to connect to a third-party provider, which may process technical data about your visit.\r\n\r\nYou can manage cookies through your browser settings; disabling some of them may affect the operation of certain website functions. Any analytics or tracking tools enabled on the website must be described in this Policy in accordance with their actual use.\r\n\r\n"
+    },
+    {
+     "title": "Data Retention and Protection",
+     "body": "The period for which request data is retained is determined by the purpose for which it was collected, the status of our communication or dealings with you, and any legal requirements applicable to it. The need to retain such data is reviewed once that purpose has ended.\r\n\r\nNo method of electronic transmission or storage guarantees absolute protection. Accordingly, please limit the information you provide to what is necessary to discuss your request, and do not send confidential data through the contact form."
+    },
+    {
+     "title": "Your Data Requests",
+     "body": "You may contact us to inquire about your personal data, or to request that it be corrected or deleted, or that we stop contacting you. We handle your request in accordance with applicable laws and regulations, and we may need to verify your identity by appropriate means before fulfilling it.\r\n\r\nThere may be legal grounds requiring the retention of certain data despite a request for its deletion; in such a case, we will explain the reason to you to the extent permitted.\r\n\r\nSend your request to:\r\ninfo@seohouse.agency"
+    },
+    {
+     "title": "Updates to This Policy",
+     "body": "We may update this Policy when there is a change in how the website operates or how data is used. The most recent version will appear on this page together with the date of the last update.\r\n\r\nIf you have a question about any clause, you may contact us at the email address provided above."
+    }
+   ]
+  }
+ ]
+}

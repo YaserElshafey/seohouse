@@ -1,0 +1,36 @@
+{
+ "title": "Heba Geneedy",
+ "slug": "heba-geneedy-en",
+ "content": "",
+ "excerpt": "",
+ "fields": {
+  "role": "HR Lead",
+  "experience": "7+ years of experience",
+  "specialties": [
+   {
+    "label": "Management"
+   },
+   {
+    "label": "Development"
+   }
+  ],
+  "bio": "",
+  "links": [],
+  "linkedin": "https://www.linkedin.com/in/heba-geneedy-506409116/",
+  "author": null,
+  "home_photo": 1,
+  "sh_seo_title": "",
+  "sh_seo_description": "",
+  "sh_seo_noindex": 0,
+  "sh_seo_og_image": null,
+  "sh_crumb": "",
+  "sh_crumb_ancestor": "",
+  "sh_schema_service": "",
+  "sh_schema_type": "auto"
+ },
+ "seo": {
+  "rank_math_title": "Heba Geneedy – HR Lead | SEO House",
+  "rank_math_description": "Heba Geneedy is the HR Lead at SEO House, with 7+ years of experience in people management and team development across the agency's SEO teams.",
+  "rank_math_focus_keyword": "heba geneedy"
+ }
+}

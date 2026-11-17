@@ -1,0 +1,11 @@
+const { chromium } = require('/opt/node-tools/node_modules/playwright');
+const out = process.argv[2], id = process.argv[3];
+(async () => { const b = await chromium.launch(); const p = await (await b.newContext({ viewport: { width: 1440, height: 1000 }, storageState: '/home/claude/wptest-fixture/admin-state.json' })).newPage();
+await p.goto('http://127.0.0.1:8090/wp-admin/upload.php?mode=grid', { waitUntil: 'networkidle' }); await p.waitForTimeout(1500);
+await p.locator('.attachments').screenshot({ path: out + '/media-grid-after.png', clip: undefined });
+await p.goto('http://127.0.0.1:8090/wp-admin/post.php?post=' + id + '&action=edit', { waitUntil: 'networkidle' });
+const box = p.locator('#sh_media_check'); await box.scrollIntoViewIfNeeded(); console.log(await box.innerText());
+await box.screenshot({ path: out + '/attachment-check-box.png' });
+await p.goto('http://127.0.0.1:8090/wp-admin/customize.php', { waitUntil: 'networkidle' }); await p.waitForTimeout(1500); await p.click('#accordion-section-title_tagline'); await p.waitForTimeout(800);
+await p.locator('#customize-control-site_icon').screenshot({ path: out + '/customizer-site-icon-after.png' });
+await b.close(); })();

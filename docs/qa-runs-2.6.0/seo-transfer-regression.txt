@@ -1,0 +1,36 @@
+PASS  menu: «نقل عناوين وأوصاف SEO» under سيو هاوس
+PASS  screen names the main site read-only and what is never changed  — نقل عناوين وأوصاف SEOتحديث محتوى التصميم 2.6.0 متاح في SEO House Core. يطبَّق على الصفحات التي لم تعدّلها فقط. مراجعة التحديثينقل عنوان الصفحة (title) ووصفها (meta description) كما يظهران فعلًا في الم
+PASS  preview: «معاينة — لم يُكتب شيء» with counts  — معاينة — لم يُكتب شيء. سيُنقل: 71 — متطابق: 16 — قديم فارغ: 10 — معدّل يدويًا: 1 — بلا مقابل: 21 صفحة — تعذّرت قراءته: 0 صفحة
+PASS  preview columns: الرابط، العنوان القديم والجديد، الوصف القديم والجديد، الإجراء المقترح  — الرابط | عنوان SEO القديم | عنوان SEO الجديد | الوصف القديم | الوصف الجديد | الإجراء المقترح
+PASS  home (static front page): old title from the main site's HTML, action write  — سيو هاوس | نساعد الشركات والمتاجر على النمو ‖ سيو هاوس | تحسين الظهور وتصميم المواقع والمتاجر
+PASS  blog archive (posts page): row present, old title «مدونة سيو هاوس | …»  — /blog/أرشيف المدونة
+PASS  category: template title «سيو خارجي - سيو هاوس» (no field on the main site) → write; empty description → kept  — /blog/category/off-page-seo/تصنيفسيو خارجي - سيو هاوسالسيو الخارجي - سيو هاوس(فارغ)يُنقل العنوانالوصف القديم فارغ — يبقى الحالي
+PASS  results archive on the main site (custom type archive) matched to the /results/ page here  — نتائج الأعمال - سيو هاوس ‖ نتائج ودراسات حالة من مشاريع سيو هاوس | سيو هاوس ‖ نتائج الأعمال Archive - سيو هاوس
+PASS  sector (custom type on the main site, page here): matched by full path  — تحسين محركات البحث للمتاجر الإلكترونية - سيو هاوس
+PASS  result: description shown through the %excerpt% template on the main site is read from HTML  — نمو في الزيارات العضوية لعيادة طبية متخصصة خلال 8 أشهر — انتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.
+PASS  a title edited here by hand → «معدّل يدويًا هنا — لا يُكتب فوقه»  — حات، وقياس أثر العمل على الزيارات والاستفسارات والمبيعات.معدّل يدويًا هنا — لا يُكتب فوقهالوصف القديم فارغ — يبقى الحالي
+PASS  old description empty → «الوصف القديم فارغ — يبقى الحالي»  — يُنقل العنوانالوصف القديم فارغ — يبقى الحالي
+PASS  identical title → «متطابق — تخطٍّ»  — متطابق — تخطٍّيُنقل الوصف
+PASS  draft here (privacy policy): included, new values computed by Rank Math  — /privacy-policy/صفحة — draft
+PASS  full path, not last slug: /thank-you/ here is NOT matched to the main site's /contact/thank-you/  — here-only: /results/organic-revenue-growth/ — نمو الإيرادات العضوية لمتجر إلكتروني في السعو … main-only: /sample-page/ — Sample Page (page)/contact/thank-you/ — شكرًا (page)
+PASS  preview wrote nothing (Rank Math values unchanged)  — 71 values proposed
+PASS  run: «اكتمل النقل» — values written = values proposed in the preview  — اكتمل النقل. كُتبت 71 قيمة في 40 صفحة. نسخة القيم السابقة: wp-content/uploads/seohouse-backups/seo-meta-before-transfer-20261003-233304-TptYWa.json
+PASS  backup of the current meta values written before the change  — wp-content/uploads/seohouse-backups/seo-meta-before-transfer-20261003-233304-TptYWa.json
+PASS  report after the run: no mismatch that needs review  — مطابق: 40 — غير مطابق عن قصد: 7 — غير مطابق يحتاج مراجعة: 0 — تنزيل التقرير (CSV)
+PASS  «غير مطابق عن قصد» only for: the hand-edited title, or an empty old description  — /pricing/ /services/ /services/seo/technical/ /services/seo/on-page/ /services/seo/uae/ /services/seo/ksa/ /services/seo/egypt/
+PASS  report row: /services/seo/ksa/ title kept (manual)
+PASS  H1/title, content, slug, status, robots and canonical of every record unchanged
+PASS  main site database unchanged (read-only connection)
+PASS  /new/services/: canonical stays this site's (main site has a custom canonical), robots stays noindex
+PASS  /new/pricing/: main site's noindex,nofollow field not copied (robots = this site's staging noindex only)
+PASS  privacy policy still a draft
+PASS  second run writes nothing  — اكتمل النقل. كُتبت 0 قيمة في 0 صفحة. نسخة القيم السابقة: wp-content/uploads/seoh
+PASS  after the run, an editor edit is protected → manual  — اتصل بنا | احجز استشارة مع سيو هاوس ‖ عنوان عدّله المحرر بعد النقل
+PASS  a value this screen wrote follows a later change on the main site → write  — السيو التقني لمواقع الشركات | سيو هاوس ‖ السيو التقني - سيو هاوس
+PASS  nothing else proposed (no duplicates on a repeated run)  — 1 write
+PASS  restore: values from before the transfer put back  — أُعيدت 70 قيمة إلى ما كانت عليه قبل النقل (القيم التي عُدّلت بعد النقل تُركت).
+PASS  restore keeps the editor's later edit
+PASS  restore: /services/seo/egypt/ title back to its value before the transfer  — شركة سيو في مصر لتحسين ظهور موقعك | سيو هاوس
+PASS  no JavaScript errors
+
+34/34 passed

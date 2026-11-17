@@ -1,0 +1,9 @@
+home H1: نرفع ظهور موقعك أمام من يبحث عن خدمتك
+home has no 'Hello world': 0
+redirect: 301 -> http://127.0.0.1:8097/new/sectors/ecommerce/
+crawl {'urls': 67, 'ok200': 61, 'redirects': 1, 'notFound': 5, 'internalLinks': 2027, 'sitemapEntries': 60, 'assets': 116, 'assetErrors': 0, 'brokenLinks': 0, 'sitemapProblems': 0, 'indexableNotInSitemap': 0, 'draftsLinkedOrListed': 0}
+launch-check: 48 OK / 5 FAIL (drafts awaiting approval)
+admin edits: 29/29 passed 
+created    0 updated    0 skipped    136 protected  5 failed     0 menu edit kept: 1 list items before/after: 1298 / 1298 
+protected: page:home page:seo-technical case:education-platform menu:footer options 5 
+PHP log lines: 0
