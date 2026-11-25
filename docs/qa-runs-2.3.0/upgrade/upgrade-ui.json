@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-03T12:54:36.540Z",
+  "wp": "http://127.0.0.1:8097/new",
+  "results": [
+    {
+      "name": "WordPress offers to replace the installed theme with seohouse-theme.zip",
+      "ok": true,
+      "detail": "منصّبالمرفوعاسم القالبSEO HouseSEO Houseالنسخة2.1.02.3.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5نسخة PHP المطلوبة8.18.1"
+    },
+    {
+      "name": "theme replaced",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "WordPress offers to replace the installed plugin with seohouse-core.zip",
+      "ok": true,
+      "detail": "الحاليةالمرفوعةاسم الإضافةSEO House CoreSEO House Coreالنسخة2.2.52.3.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5نسخة PHP المطلوبة8.18.1"
+    },
+    {
+      "name": "plugin replaced",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Plugins screen: SEO House Core 2.3.0 active",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "Themes screen: SEO House 2.3.0 active",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "dashboard: «تحديث محتوى التصميم 2.3.0 متاح» notice",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "setup screen: bundled pack 2.3.0 found and intact",
+      "ok": true,
+      "detail": "حزمة المحتوى2.3.0 — مضمّنة في SEO House Core sha256:8b521594e8dc8695/srv/shwpnew/new/wp-content/plugins/seohouse-core/content-pack — 126 ملفًا / 125 متوقعة، سليمةالحالةهُيّ"
+    },
+    {
+      "name": "setup screen: newer pack notice (2.3.0 > 2.2.1)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "preview (dry run) completes without failures",
+      "ok": true,
+      "detail": "تشغيل تجريبي — لم يُكتب شيء.أُنشئ: 1 حُدّث: 4 بلا تغيير: 73 محمي: 1 فشل: 0السجل (7)معلومةsourceحزمة المحتوى 2.3.0 — بصمة التصميم: sha256:8b521594e8dc8695 — تشغيل تجريبي (بدون كتابة)محمي (صفحة سابقة أو"
+    },
+    {
+      "name": "update run completes without failures",
+      "ok": true,
+      "detail": "اكتملت التهيئة.أُنشئ: 11 حُدّث: 4 بلا تغيير: 73 محمي: 2 فشل: 0 (9 s)"
+    },
+    {
+      "name": "check: الصفحة الرئيسية",
+      "ok": true,
+      "detail": "الرئيسية — http://127.0.0.1:8097/new/"
+    },
+    {
+      "name": "check: صفحة المقالات",
+      "ok": true,
+      "detail": "http://127.0.0.1:8097/new/blog/"
+    },
+    {
+      "name": "check: صفحات التصميم المنشورة",
+      "ok": true,
+      "detail": "38"
+    },
+    {
+      "name": "check: مطابقة نصوص وصور وروابط الأقسام مع التصميم",
+      "ok": true,
+      "detail": "مطابقة؛ 1 صفحة عدّلتها من لوحة التحكم وبقيت كما هي"
+    },
+    {
+      "name": "check: القائمة الرئيسية",
+      "ok": true,
+      "detail": "21 عنصر"
+    },
+    {
+      "name": "check: قائمة الفوتر",
+      "ok": true,
+      "detail": "24 عنصر"
+    },
+    {
+      "name": "check: روابط أسفل الفوتر",
+      "ok": true,
+      "detail": "2 عنصر"
+    },
+    {
+      "name": "check: الصور في مكتبة الوسائط",
+      "ok": true,
+      "detail": "45 / 45"
+    },
+    {
+      "name": "check: إعدادات سيو هاوس",
+      "ok": true,
+      "detail": "اسم الشركة: سيو هاوس · شعارات العملاء: 8"
+    },
+    {
+      "name": "check: الروابط الدائمة (unchanged by the update; reported)",
+      "ok": true,
+      "detail": "الحالية /%postname%/ — روابط المقالات المنشورة سابقًا (/blog/…) لن تعمل حتى تُطبَّق بنية المشروع. تطبيق بنية روابط المشروع"
+    },
+    {
+      "name": "check: الصفحات القانونية والمقالات غير المعتمدة",
+      "ok": true,
+      "detail": "مسودة، مسودة، مسودة، مسودة، مسودة"
+    },
+    {
+      "name": "after the update: no newer-pack notice",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "second run creates and updates nothing",
+      "ok": true,
+      "detail": "اكتملت التهيئة.أُنشئ: 0 حُدّث: 0 بلا تغيير: 73 محمي: 2 فشل: 0"
+    },
+    {
+      "name": "«نقل السيو إلى Rank Math»: nothing left to move, editor value kept",
+      "ok": true,
+      "detail": "سيُنقل: 0 — مطابق: 105 — يبقى: 1"
+    },
+    {
+      "name": "page editor: Core SEO box shows no title/description/image/noindex fields with Rank Math",
+      "ok": true,
+      "detail": "0 duplicate field(s)"
+    },
+    {
+      "name": "page editor: breadcrumb name field kept",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "page editor: Rank Math box present",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "page editor: «التقييمات في هذه الصفحة» field",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "page editor: example testimonials hidden in the reviews section",
+      "ok": true,
+      "detail": "محتوى القسم من شورت كود التقييمات («التقييمات في هذه الصفحة» في الشريط الجانبي، أو الشورت كود العام من «إعدادات سيو هاوس ← التكاملات»). بلا شورت كود لا يظهر الق"
+    },
+    {
+      "name": "settings: «المنصات والأدوات» list with 10 entries",
+      "ok": true,
+      "detail": "10"
+    },
+    {
+      "name": "settings: internal reference field not shown",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no JavaScript errors in the admin",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

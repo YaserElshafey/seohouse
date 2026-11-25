@@ -1,0 +1,191 @@
+{
+  "date": "2026-10-03T12:55:28.596Z",
+  "url": "http://127.0.0.1:8097/new",
+  "results": [
+    {
+      "name": "replace a logo in the library → store hero shows it",
+      "ok": true,
+      "detail": "<img src=\"http://127.0.0.1:8097/new/wp-content/uploads/2026/10/test-logo-salla.webp\""
+    },
+    {
+      "name": "… and the homepage platforms chips show it too",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "optional link on a library entry → logo becomes a link",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "add a new entry → it gets its own reference",
+      "ok": true,
+      "detail": "sh_row:1482"
+    },
+    {
+      "name": "choose the new entry in a page section → its logo shows on that page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "reorder the library → order of the logo choices in page editors",
+      "ok": true,
+      "detail": "[\"زد\",\"ووردبريس\",\"ووكومرس\",\"شوبيفاي\",\"سلة\",\"ويب فلو\",\"رياكت\",\"نكست\",\"سيرش كونسول\",\"جوجل أناليتكس\",\"لوكر ستوديو\"]"
+    },
+    {
+      "name": "remove a library entry used by a page → page falls back to the design logo",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "client logos: reorder and remove in settings → same list and order in the logo track",
+      "ok": true,
+      "detail": "7 logos: Mkkabbani Furniture، جنان العربية للسياحة والسفر، عيادات أفيرون…"
+    },
+    {
+      "name": "no shortcode → no reviews section, no example testimonials: /",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no shortcode → no reviews section, no example testimonials: /services/seo/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no shortcode → no reviews section, no example testimonials: /services/seo/egypt/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no shortcode → no reviews section, no example testimonials: /services/seo/ksa/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no shortcode → no reviews section, no example testimonials: /services/seo/uae/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "page override → reviews widget on that page only",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "shared shortcode → widget in the reviews section, once: /",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "shared shortcode → widget in the reviews section, once: /services/seo/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "shared shortcode → widget in the reviews section, once: /services/seo/ksa/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "shared shortcode → widget in the reviews section, once: /services/seo/uae/",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid code (HTML, unregistered shortcode) → treated as empty, nothing printed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "1440px /: design arrows/dots hidden with the widget, title kept, no overflow",
+      "ok": true,
+      "detail": "{\"visibleDesignButtons\":0,\"overflow\":0,\"title\":\"ما يقوله عملاؤنا\"}"
+    },
+    {
+      "name": "1440px /services/seo/ksa/: design arrows/dots hidden with the widget, title kept, no overflow",
+      "ok": true,
+      "detail": "{\"visibleDesignButtons\":0,\"overflow\":0,\"title\":\"ماذا يقول عملاؤنا عن العمل معنا؟\"}"
+    },
+    {
+      "name": "390px /: design arrows/dots hidden with the widget, title kept, no overflow",
+      "ok": true,
+      "detail": "{\"visibleDesignButtons\":0,\"overflow\":0,\"title\":\"ما يقوله عملاؤنا\"}"
+    },
+    {
+      "name": "390px /services/seo/ksa/: design arrows/dots hidden with the widget, title kept, no overflow",
+      "ok": true,
+      "detail": "{\"visibleDesignButtons\":0,\"overflow\":0,\"title\":\"ماذا يقول عملاؤنا عن العمل معنا؟\"}"
+    },
+    {
+      "name": "editor writes the description in Rank Math → that is the description on the page",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "… and the Rank Math title the editor wrote is kept",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "one source: / (no description yet)",
+      "ok": true,
+      "detail": "{\"title\":1,\"description\":0,\"canonical\":1,\"ogTitle\":1,\"robots\":1,\"ldScripts\":1} graph: Person/Organization, WebSite, WebPage"
+    },
+    {
+      "name": "one source: /services/seo/technical/",
+      "ok": true,
+      "detail": "{\"title\":1,\"description\":1,\"canonical\":1,\"ogTitle\":1,\"robots\":1,\"ldScripts\":1} graph: Person/Organization, WebSite, WebPage, BreadcrumbList, Service, FAQPage"
+    },
+    {
+      "name": "one source: /sectors/ecommerce/",
+      "ok": true,
+      "detail": "{\"title\":1,\"description\":1,\"canonical\":1,\"ogTitle\":1,\"robots\":1,\"ldScripts\":1} graph: Person/Organization, WebSite, WebPage, BreadcrumbList, Service, FAQPage"
+    },
+    {
+      "name": "one source: /services/seo/egypt/",
+      "ok": true,
+      "detail": "{\"title\":1,\"description\":1,\"canonical\":1,\"ogTitle\":1,\"robots\":1,\"ldScripts\":1} graph: Person/Organization, WebSite, WebPage, BreadcrumbList, Service, FAQPage"
+    },
+    {
+      "name": "one source: /services/web-design/react-next/",
+      "ok": true,
+      "detail": "{\"title\":1,\"description\":1,\"canonical\":1,\"ogTitle\":1,\"robots\":1,\"ldScripts\":1} graph: Person/Organization, WebSite, WebPage, BreadcrumbList, Service, FAQPage"
+    },
+    {
+      "name": "one source: /results/",
+      "ok": true,
+      "detail": "{\"title\":1,\"description\":1,\"canonical\":1,\"ogTitle\":1,\"robots\":1,\"ldScripts\":1} graph: Person/Organization, WebSite, CollectionPage, BreadcrumbList, ItemList"
+    },
+    {
+      "name": "one source: /team/",
+      "ok": true,
+      "detail": "{\"title\":1,\"description\":1,\"canonical\":1,\"ogTitle\":1,\"robots\":1,\"ldScripts\":1} graph: Person/Organization, WebSite, CollectionPage, BreadcrumbList, ItemList"
+    },
+    {
+      "name": "one source: /about/",
+      "ok": true,
+      "detail": "{\"title\":1,\"description\":1,\"canonical\":1,\"ogTitle\":1,\"robots\":1,\"ldScripts\":1} graph: Person/Organization, WebSite, AboutPage, BreadcrumbList"
+    },
+    {
+      "name": "one source: /contact/",
+      "ok": true,
+      "detail": "{\"title\":1,\"description\":1,\"canonical\":1,\"ogTitle\":1,\"robots\":1,\"ldScripts\":1} graph: Person/Organization, WebSite, ContactPage, BreadcrumbList"
+    },
+    {
+      "name": "one source: /هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+      "ok": true,
+      "detail": "{\"title\":1,\"description\":1,\"canonical\":1,\"ogTitle\":1,\"robots\":1,\"ldScripts\":1} graph: Person/Organization, WebSite, ImageObject, WebPage, BlogPosting, BreadcrumbList, Person"
+    },
+    {
+      "name": "one source: /results/تستتست/",
+      "ok": true,
+      "detail": "{\"title\":1,\"description\":1,\"canonical\":1,\"ogTitle\":1,\"robots\":1,\"ldScripts\":1} graph: Organization, WebSite, WebPage, BreadcrumbList, Article"
+    },
+    {
+      "name": "one source: /team/eman-farid/",
+      "ok": true,
+      "detail": "{\"title\":1,\"description\":1,\"canonical\":1,\"ogTitle\":1,\"robots\":1,\"ldScripts\":1} graph: Organization, WebSite, ProfilePage, BreadcrumbList, Person"
+    }
+  ]
+}

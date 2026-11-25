@@ -1,0 +1,377 @@
+[
+ {
+  "kind": "analytics",
+  "case": "lavison-clinics",
+  "file": "lavison-clinics-google-analytics.webp",
+  "alt": "تقرير Google Analytics لعيادات لافيزون التخصصية: طلبات الحجز (form_submit) من البحث العضوي 2,448 من يناير إلى أكتوبر 2026 مقابل 0 في الفترة نفسها من 2025",
+  "size": [
+   1800,
+   913
+  ],
+  "id": 3266
+ },
+ {
+  "kind": "analytics",
+  "case": "darbk",
+  "file": "darbk-google-analytics.webp",
+  "alt": "تقرير Google Analytics لدربك: طلبات عروض الأسعار (form_submit) من البحث العضوي 159 من يناير إلى أكتوبر 2026 مقابل 1 في 2025 (+15,800%)، والزوار 15,681 مقابل 1,072",
+  "size": [
+   1800,
+   943
+  ],
+  "id": 3267
+ },
+ {
+  "kind": "analytics",
+  "case": "alrawda-machines",
+  "file": "alrawda-machines-google-analytics.webp",
+  "alt": "تقرير Google Analytics للروضة للماكينات: محادثات واتساب من البحث العضوي 89 من أغسطس إلى أكتوبر 2026 مقابل 7 في الأشهر الثلاثة السابقة (+1,171.43%)، والزوار 1,661 مقابل 700",
+  "size": [
+   1800,
+   866
+  ],
+  "id": 3268
+ },
+ {
+  "kind": "analytics",
+  "case": "arab-computers",
+  "file": "arab-computers-google-analytics.webp",
+  "alt": "تقرير Google Analytics للعربية للحاسبات: محادثات واتساب من البحث العضوي 336 من يناير إلى أكتوبر 2026 مقابل 84 في 2025 (+300%)، والزيارات 3,174 مقابل 1,605",
+  "size": [
+   1800,
+   913
+  ],
+  "id": 3269
+ },
+ {
+  "kind": "analytics",
+  "case": "jinan-travels",
+  "file": "jinan-travels-google-analytics.webp",
+  "alt": "تقرير Google Analytics لجنان للسفر والسياحة: طلبات التواصل من البحث العضوي 8,539 من يناير إلى أكتوبر 2026 مقابل 1,796 في 2025 (+375.45%)",
+  "size": [
+   1800,
+   903
+  ],
+  "id": 3270
+ },
+ {
+  "kind": "analytics",
+  "case": "shesafe",
+  "file": "shesafe-google-analytics.webp",
+  "alt": "تقرير Google Analytics لشي سيف: المبيعات من البحث العضوي 55,580.20 ريال من أغسطس إلى أكتوبر 2026 مقابل 1,583.80 ريال في الأشهر الثلاثة السابقة (+3,409.29%)، والزوار 2,562 مقابل 247",
+  "size": [
+   1554,
+   688
+  ],
+  "id": 3271
+ },
+ {
+  "kind": "ranking",
+  "case": "lavison-clinics",
+  "file": "lavison-clinics-google-ranking-psychiatrist.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «دكتورة نفسيه»: موقع عيادات لافيزون التخصصية — النتيجة الأولى",
+  "keyword": "دكتورة نفسيه",
+  "position": "النتيجة الأولى",
+  "size": [
+   1600,
+   1152
+  ],
+  "id": 3272
+ },
+ {
+  "kind": "ranking",
+  "case": "lavison-clinics",
+  "file": "lavison-clinics-google-ranking-addiction-doctor.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «دكتور ادمان مخدرات»: موقع عيادات لافيزون التخصصية — النتيجة الأولى",
+  "keyword": "دكتور ادمان مخدرات",
+  "position": "النتيجة الأولى",
+  "size": [
+   1600,
+   1073
+  ],
+  "id": 3273
+ },
+ {
+  "kind": "ranking",
+  "case": "darbk",
+  "file": "darbk-google-ranking-truck-tires.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «اطارات شاحنات»: موقع دربك — أول نتيجة بعد صور جوجل",
+  "keyword": "اطارات شاحنات",
+  "position": "أول نتيجة بعد صور جوجل",
+  "size": [
+   1600,
+   1214
+  ],
+  "id": 3274
+ },
+ {
+  "kind": "ranking",
+  "case": "darbk",
+  "file": "darbk-google-ranking-heavy-equipment-tires.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «اطارات معدات ثقيلة»: موقع دربك — أول نتيجة، وفي صور جوجل أيضًا",
+  "keyword": "اطارات معدات ثقيلة",
+  "position": "أول نتيجة، وفي صور جوجل أيضًا",
+  "size": [
+   1600,
+   1204
+  ],
+  "id": 3275
+ },
+ {
+  "kind": "ranking",
+  "case": "alrawda-machines",
+  "file": "alrawda-machines-google-ranking-sweets-packaging-machine.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «ماكينة تغليف حلويات»: موقع الروضة للماكينات — النتيجة الأولى",
+  "keyword": "ماكينة تغليف حلويات",
+  "position": "النتيجة الأولى",
+  "size": [
+   1600,
+   1121
+  ],
+  "id": 3276
+ },
+ {
+  "kind": "ranking",
+  "case": "alrawda-machines",
+  "file": "alrawda-machines-google-ranking-tin-can-sealing-machine.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «ماكينة تقفيل علب الصفيح»: موقع الروضة للماكينات — النتيجة الأولى",
+  "keyword": "ماكينة تقفيل علب الصفيح",
+  "position": "النتيجة الأولى",
+  "size": [
+   1600,
+   957
+  ],
+  "id": 3277
+ },
+ {
+  "kind": "ranking",
+  "case": "arab-computers",
+  "file": "arab-computers-google-ranking-hp-authorized-reseller.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «hp authorized reseller»: موقع العربية للحاسبات — الأول في الخريطة وفي النتائج",
+  "keyword": "hp authorized reseller",
+  "position": "الأول في الخريطة وفي النتائج",
+  "size": [
+   1600,
+   934
+  ],
+  "id": 3278
+ },
+ {
+  "kind": "ranking",
+  "case": "arab-computers",
+  "file": "arab-computers-google-ranking-lenovo-distributor-egypt.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «lenovo distributor in egypt»: موقع العربية للحاسبات — أول نتيجة بعد ملخص جوجل الذكي",
+  "keyword": "lenovo distributor in egypt",
+  "position": "أول نتيجة بعد ملخص جوجل الذكي",
+  "size": [
+   1600,
+   1004
+  ],
+  "id": 3279
+ },
+ {
+  "kind": "ranking",
+  "case": "jinan-travels",
+  "file": "jinan-travels-google-ranking-honeymoon-packages.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «بكجات شهر العسل لشخصين»: موقع جنان للسفر والسياحة — النتيجة الأولى",
+  "keyword": "بكجات شهر العسل لشخصين",
+  "position": "النتيجة الأولى",
+  "size": [
+   1600,
+   1096
+  ],
+  "id": 3280
+ },
+ {
+  "kind": "ranking",
+  "case": "shesafe",
+  "file": "shesafe-google-ranking-organic-sanitary-pads.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «فوط صحية عضوية»: موقع شي سيف — في الصفحة الأولى",
+  "keyword": "فوط صحية عضوية",
+  "position": "في الصفحة الأولى",
+  "size": [
+   1600,
+   922
+  ],
+  "id": 3281
+ },
+ {
+  "kind": "ranking",
+  "case": "shesafe",
+  "file": "shesafe-google-ranking-organic-pads.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «فوط عضوية»: موقع شي سيف ضمن النتائج",
+  "keyword": "فوط عضوية",
+  "position": "",
+  "size": [
+   1600,
+   1116
+  ],
+  "id": 3282
+ },
+ {
+  "kind": "ranking",
+  "case": "shesafe",
+  "file": "shesafe-google-ranking-japanese-sanitary-pads.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «فوط صحية يابانية»: موقع شي سيف ضمن النتائج",
+  "keyword": "فوط صحية يابانية",
+  "position": "",
+  "size": [
+   1600,
+   1190
+  ],
+  "id": 3283
+ },
+ {
+  "kind": "ranking",
+  "case": "shesafe",
+  "file": "shesafe-google-ranking-saudi-sanitary-pads.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «فوط صحية سعودية»: موقع شي سيف ضمن النتائج",
+  "keyword": "فوط صحية سعودية",
+  "position": "",
+  "size": [
+   1600,
+   1128
+  ],
+  "id": 3284
+ },
+ {
+  "kind": "table",
+  "file": "lightingaddress-google-ranking-led-lighting.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «اضاءة ليد»: موقع عنوان الإضاءة — مصدر في ملخص جوجل الذكي، وأول متجر في النتائج",
+  "client": "عنوان الإضاءة",
+  "sector": "متجر إضاءة · السعودية",
+  "keyword": "اضاءة ليد",
+  "position": "مصدر في ملخص جوجل الذكي، وأول متجر في النتائج",
+  "size": [
+   1600,
+   986
+  ],
+  "id": 3285
+ },
+ {
+  "kind": "table",
+  "file": "lightingaddress-google-ranking-modern-ceiling-spotlights.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «سبوتات السقف مودرن»: موقع عنوان الإضاءة — النتيجة الأولى في الصفحة",
+  "client": "عنوان الإضاءة",
+  "sector": "متجر إضاءة · السعودية",
+  "keyword": "سبوتات السقف مودرن",
+  "position": "النتيجة الأولى في الصفحة",
+  "size": [
+   1600,
+   1060
+  ],
+  "id": 3286
+ },
+ {
+  "kind": "table",
+  "file": "mk-kabbani-google-ranking-bedroom-full-set.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «bedroom full set»: موقع ام كيه قباني للأثاث — النتيجة الأولى في الصفحة",
+  "client": "ام كيه قباني للأثاث",
+  "sector": "متجر أثاث · الإمارات",
+  "keyword": "bedroom full set",
+  "position": "النتيجة الأولى في الصفحة",
+  "size": [
+   1600,
+   878
+  ],
+  "id": 3287
+ },
+ {
+  "kind": "table",
+  "file": "mk-kabbani-google-ranking-dubai-furniture-store.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «dubai furniture store»: موقع ام كيه قباني للأثاث — أول نتيجة بعد الخريطة",
+  "client": "ام كيه قباني للأثاث",
+  "sector": "متجر أثاث · الإمارات",
+  "keyword": "dubai furniture store",
+  "position": "أول نتيجة بعد الخريطة",
+  "size": [
+   1600,
+   959
+  ],
+  "id": 3288
+ },
+ {
+  "kind": "table",
+  "file": "afifamlak-google-ranking-mall-management.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «إدارة وتشغيل المولات»: موقع بن عفيف لإدارة العقارات — الأول، ومصدر في ملخص جوجل الذكي",
+  "client": "بن عفيف لإدارة العقارات",
+  "sector": "إدارة عقارات · السعودية",
+  "keyword": "إدارة وتشغيل المولات",
+  "position": "الأول، ومصدر في ملخص جوجل الذكي",
+  "size": [
+   1600,
+   906
+  ],
+  "id": 3289
+ },
+ {
+  "kind": "table",
+  "file": "afifamlak-google-ranking-office-buildings-management.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «إدارة المباني الإدارية»: موقع بن عفيف لإدارة العقارات — الأول، ومصدر في ملخص جوجل الذكي",
+  "client": "بن عفيف لإدارة العقارات",
+  "sector": "إدارة عقارات · السعودية",
+  "keyword": "إدارة المباني الإدارية",
+  "position": "الأول، ومصدر في ملخص جوجل الذكي",
+  "size": [
+   1600,
+   843
+  ],
+  "id": 3290
+ },
+ {
+  "kind": "table",
+  "file": "sahalfirm-google-ranking-law-firm.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «مكتب محاماة»: موقع سهل للمحاماة — أول نتيجة بعد الخريطة",
+  "client": "سهل للمحاماة",
+  "sector": "محاماة واستشارات · السعودية",
+  "keyword": "مكتب محاماة",
+  "position": "أول نتيجة بعد الخريطة",
+  "size": [
+   1600,
+   1061
+  ],
+  "id": 3291
+ },
+ {
+  "kind": "table",
+  "file": "sahalfirm-google-ranking-best-lawyer-riyadh.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «أفضل محامي بالرياض»: موقع سهل للمحاماة — النتيجة الثانية في جوجل",
+  "client": "سهل للمحاماة",
+  "sector": "محاماة واستشارات · السعودية",
+  "keyword": "أفضل محامي بالرياض",
+  "position": "النتيجة الثانية في جوجل",
+  "size": [
+   1600,
+   884
+  ],
+  "id": 3292
+ },
+ {
+  "kind": "table",
+  "file": "bedayaccpa-google-ranking-addiction-treatment-center.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «مركز علاج ادمان»: موقع مركز بداية للطب النفسي — أول نتيجة بعد الخريطة",
+  "client": "مركز بداية للطب النفسي",
+  "sector": "رعاية صحية · مصر",
+  "keyword": "مركز علاج ادمان",
+  "position": "أول نتيجة بعد الخريطة",
+  "size": [
+   1600,
+   1187
+  ],
+  "id": 3293
+ },
+ {
+  "kind": "table",
+  "file": "bedayaccpa-google-ranking-addiction-rehab.webp",
+  "alt": "نتيجة بحث جوجل لكلمة «مصحة علاج ادمان»: موقع مركز بداية للطب النفسي — أول نتيجة بعد الخريطة",
+  "client": "مركز بداية للطب النفسي",
+  "sector": "رعاية صحية · مصر",
+  "keyword": "مصحة علاج ادمان",
+  "position": "أول نتيجة بعد الخريطة",
+  "size": [
+   1600,
+   1148
+  ],
+  "id": 3294
+ }
+]

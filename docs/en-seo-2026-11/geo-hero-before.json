@@ -1,0 +1,106 @@
+{
+ "2746": {
+  "title": "Industries we serve",
+  "text": "A shopper searches for a product, a patient for a symptom, an investor for a location. Choose your industry to see how we build pages and content around the way your customers search."
+ },
+ "2768": {
+  "title": "E-commerce SEO",
+  "text": "Shoppers can reach your store by searching for a whole category, a specific product or a comparison between options. So we organize your store's pages around what customers search for at each stage, and we find what's stopping Google from reaching your key categories and products. Our goal is for visitors to land on a useful page that helps them choose and buy, and for you to see the impact in orders and revenue, not just traffic."
+ },
+ "2798": {
+  "title": "Medical SEO for clinics and healthcare providers",
+  "text": "A patient may start by asking about a symptom, then search for a specialty or service, and then compare doctors, appointment times and locations. We organize your medical website so they find clear information about the service, the doctor, the branch and the next step to book. In this sector, content must be accurate and reviewed by your medical team; we don't use treatment claims or unverified testimonials to boost visibility."
+ },
+ "2826": {
+  "title": "Real estate SEO",
+  "text": "Searching for an apartment in a specific neighborhood is different from searching for a new project or a real estate developer. That's why we don't put every property on one page. We organize the site by area, project and unit type, with up-to-date information that helps visitors compare and request details."
+ },
+ "2849": {
+  "title": "SEO for education and training centers",
+  "text": "Someone looking for a course wants to know what they'll learn, who it's for, when it starts and how to register. Others search for a whole field or learning path before choosing a single program. We build clear pages for fields, learning paths and courses, and connect them so applicants find the information they need, without duplicates or conflicts between the in-person, live online and self-paced versions."
+ },
+ "2879": {
+  "title": "SEO for travel and tourism companies",
+  "text": "Travel planning usually starts with the destination, timing and budget. Then travelers compare packages and details before they inquire or book. We organize destination pages, packages and practical information so they answer these questions and show what's actually available. And we never show a price, date or destination the company can't deliver."
+ },
+ "2903": {
+  "title": "SEO for software and technology companies",
+  "text": "Software buyers don't always search for a product by name. Sometimes they start with a problem, a use case, a comparison between two solutions, or a check that an integration exists with a system they already use. We organize your product pages around these questions, clearly explain the features, limitations and benefits your company confirms, and then make it easy to start a trial or request a demo."
+ },
+ "2928": {
+  "title": "SEO for law firms",
+  "text": "Someone looking for a lawyer needs to know which areas of law the firm handles, whether it has the right experience for their matter, and how to get in touch clearly and confidentially. We build pages for your actual practice areas, present your team and their credentials as the firm approves them, and organize articles around clients' questions, without turning them into promises of outcomes or one-size-fits-all legal advice."
+ },
+ "2954": {
+  "title": "SEO for restaurants and food brands",
+  "text": "Someone searching for a restaurant may want the nearest branch that's open now, a look at the menu, a table booking or delivery. We cover each of these tasks with clear, up-to-date pages: branches with accurate details, a menu organized into sections, and the right way to order or book. Showing up in local search doesn't help if the visitor ends up with outdated opening hours or an order link that doesn't work."
+ },
+ "1794": {
+  "title": "Your SEO Company for Search Growth",
+  "text": "SEO House is an SEO company that helps businesses and online stores improve their visibility in search engines by developing their website and content, then tracking the impact on inquiries and sales."
+ },
+ "2011": {
+  "title": "SEO Content Writing",
+  "text": "We start with search data to decide what's worth writing, then produce clear, human-written copy that an editor reviews before publishing, and we measure its impact on visibility and traffic."
+ },
+ "1979": {
+  "title": "Technical SEO for Your Website",
+  "text": "We audit crawling, indexing, rendering, speed and page structure, pinpoint what's holding back your visibility, then implement the fixes and track their impact in your site data."
+ },
+ "2483": {
+  "title": "Optimizing Your Website's Pages",
+  "text": "We identify the search intent behind each page, then refine the title, content and internal links so visitors find their answer and move on to the next step."
+ },
+ "2507": {
+  "title": "Link Building Services",
+  "text": "We vet every source before any work begins, based on its relevance to your industry, its real audience and where the link will sit, then document what gets published and track its impact on the target page."
+ },
+ "2545": {
+  "title": "SEO Consulting",
+  "text": "We read what your analytics tools are telling you, identify what changed and why, then set priorities and a roadmap your team can implement and track."
+ },
+ "2040": {
+  "title": "Website design and development",
+  "text": "We start with one question: what do you want visitors to do? Then we build the structure, content, interface and performance so they get there by the shortest path, and you can measure it."
+ },
+ "2246": {
+  "title": "WordPress website design",
+  "text": "We build on-brand content blocks that you assemble into new pages yourself, with performance, security and URL structure set up from the start."
+ },
+ "2286": {
+  "title": "Webflow website design",
+  "text": "We build reusable components with a flexible CMS and subtle animation, so you get a website that launches fast and is easy to update, with no servers to manage."
+ },
+ "2322": {
+  "title": "Website development with React and Next.js",
+  "text": "We build website front ends with React and Next.js, the framework built on top of it. We choose the right rendering method for each page and connect it to your systems and data sources, on an architecture built to scale."
+ },
+ "2353": {
+  "title": "Custom systems development",
+  "text": "When ready-made platforms don't fit the way you work, we build the system from your requirements: users, processes, data and integrations, in clear phases with testing before handover."
+ },
+ "2070": {
+  "title": "E-commerce store design",
+  "text": "We design the catalog, product pages and checkout flow so shoppers get from landing to ordering with as little friction as possible, and we track every step to see where they drop off."
+ },
+ "2577": {
+  "title": "Salla store design",
+  "text": "We set up your brand, pages and categories inside Salla, connect local payment and shipping, and organize your product data so buying is easy and your pages show up in search."
+ },
+ "2607": {
+  "title": "Zid store design",
+  "text": "We set up your catalog, pages and categories inside Zid and connect orders, shipping and invoicing, so your store runs day to day without repetitive manual work."
+ },
+ "2636": {
+  "title": "Shopify store design",
+  "text": "We build editable, on-brand sections, organize your catalog and variants, and set up payment, shipping and tracking, choosing only the apps that support your operations."
+ },
+ "2666": {
+  "title": "WooCommerce store design",
+  "text": "We build your store inside WordPress, so you control products, pages and content together, with carefully chosen plugins, tuned performance and a clear maintenance plan."
+ },
+ "2698": {
+  "title": "Product upload and organization",
+  "text": "We add your products with their data, images and categories in an organized way, so shoppers can find the right product easily and search engines can read its pages."
+ }
+}

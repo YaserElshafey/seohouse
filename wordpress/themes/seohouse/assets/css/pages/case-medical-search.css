@@ -1,0 +1,20 @@
+/* SEO House - Medical Search Growth Case Study.dc.html — page-specific rules from the approved design (generated). */
+[data-sc-row] { grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) minmax(0,.7fr); }
+@media (max-width:899px) { [data-sc-row] { grid-template-columns:1fr; } }
+[data-sc-pick] { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:719px) { [data-sc-pick] { grid-template-columns:1fr; } }
+[data-ms-hero] { grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); }
+@media (max-width:1023px) { [data-ms-hero] { grid-template-columns:1fr; } }
+[data-ms-steps] { grid-template-columns:repeat(5,minmax(0,1fr)); }
+[data-ms-line] { position:absolute; top:7px; inset-inline:8px; height:1px; background:linear-gradient(90deg, rgba(40,84,232,.15), rgba(40,84,232,.4), rgba(40,84,232,.5)); }
+@media (max-width:1023px) { [data-ms-steps] { grid-template-columns:1fr; gap:0 !important; } [data-ms-line] { top:12px; bottom:12px; height:auto; inset-inline:auto; inset-inline-start:7px; width:1px; background:linear-gradient(180deg, rgba(40,84,232,.15), rgba(40,84,232,.4), rgba(40,84,232,.5)); } [data-ms-step] { padding-inline-start:30px; padding-block:14px; } [data-ms-step] [data-ms-dot] { position:absolute; inset-inline-start:0; top:18px; } }
+[data-ms-two] { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:859px) { [data-ms-two] { grid-template-columns:1fr; } }
+[data-cs-top] { grid-template-columns:auto minmax(0,1fr); }
+[data-cs-meta] { grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); }
+@media (max-width:599px) { [data-cs-top] { grid-template-columns:1fr; } [data-cs-meta] { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+[data-cs-steps]::before { content:""; position:absolute; top:16px; bottom:36px; inset-inline-start:15.5px; width:1px; background:rgba(40,84,232,.28); }
+[data-cs-metrics] { grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+[data-cs-gallery] { grid-template-columns:1fr; }
+[data-cs-gallery]:not([data-count="1"]) { grid-template-columns:repeat(2,minmax(0,1fr)); }
+@media (max-width:719px) { [data-cs-gallery]:not([data-count="1"]) { grid-template-columns:1fr; } }

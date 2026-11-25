@@ -1,0 +1,45 @@
+PASS  before: theme folder holds old-theme leftovers (front-page.php.old, archive-sector.php, …)  — 389 files
+PASS  before: home answers (front-page.php renamed on the server)
+PASS  before: privacy published, robots index; terms published with [..] fields, robots noindex  — {"privacy-policy":"index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large","terms":"follow, noindex"}
+PASS  upload seohouse-theme.zip: «استبدال الحالي بالمرفوع» offered (2.5.0 → 2.6.0)  — منصّبالمرفوعاسم القالبSEO HouseSEO Houseالنسخة2.5.02.6.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5نسخة PHP المطلوبة8.18.1
+PASS  theme replaced
+PASS  theme folder after the upload = exactly the release files (old front-page.php.old, archive-sector.php, … gone)  — 357 files, extra: 
+PASS  home answers after the theme upload
+PASS  upload seohouse-core.zip: «استبدال الحالي بالمرفوع» offered (2.5.0 → 2.6.0)  — الحاليةالمرفوعةاسم الإضافةSEO House CoreSEO House Coreالنسخة2.5.02.6.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5نسخة PHP المطلوبة8.1
+PASS  plugin replaced
+PASS  SEO House Core 2.6.0 active
+PASS  no «ملفات قديمة» notice after the upload
+PASS  preview: no failures
+PASS  update run: no failures  — اكتملت التهيئة.أُنشئ: 0 حُدّث: 0 بلا تغيير: 74 محمي: 0 فشل: 0
+PASS  the update did not write the legal pages
+PASS  post-update checks flag exactly: legal pages published without approved text, and the missing redirect of the old site  — الصفحات القانونية: سياسة الخصوصية: منشورة — بلا نص (فارغة أو نص مؤقت بين معقوفين)، الشروط والأحكام: منشورة — فيها مسودة 2.5.0 غير المعتمدة — انظر «سياسة الخصوصية والشروط والأحكام» أسفل هذه الصفحة ; تحويلات روابط الموقع ا
+PASS  before: /services/seo/stores-seo/ answers 404 (the old site redirected it 301)
+PASS  terms unchanged by the update (still the 2.5.0 draft until approved here)
+PASS  box: privacy (published, empty) → automatic, button offered; notes the other page the setup created  — سياسة الخصوصية/privacy-policy/ — #1488 — منشورة — indexبلا نص (فارغة أو نص مؤقت بين معقوفين)للعلم: صفحة أخرى أنشأتها التهيئة (#3، draft) ليست الصفحة التي تظهر على هذا الرابط.النص الذي سيُطبَّقنحن في س
+PASS  box: terms (2.5.0 draft) → automatic  — الشروط والأحكام/terms/ — #17 — منشورة — noindexفيها مسودة 2.5.0 غير المعتمدةالنص الذي سيُطبَّقمرحبًا بك في موقع سيو هاوس. إن استخدامك لهذا الموقع أو تصفحك له أو
+PASS  apply privacy-policy: approved text written, copy kept, page stays published  — طُبّق النص المعتمد على «سياسة الخصوصية» (الصفحة #1488، منشورة). حُفظت نسخة من قيمها السابقة: wp-content/uploads/seohouse-backups/privacy-policy-before-legal-text-20261003-233651-bEmKil.json
+PASS  apply terms: approved text written, copy kept, page stays published  — طُبّق النص المعتمد على «الشروط والأحكام» (الصفحة #17، منشورة). حُفظت نسخة من قيمها السابقة: wp-content/uploads/seohouse-backups/terms-before-legal-text-20261003-233652-DMA67v.json
+PASS  «تحويلات الموقع السابق» lists /services/seo/stores-seo/ → /sectors/ecommerce/
+PASS  redirect added; existing ones kept
+PASS  /services/seo/stores-seo/ → 301 /sectors/ecommerce/ again
+PASS  after applying: all checks «سليم» (legal pages carry the approved text)
+PASS  /privacy-policy/: 200, H1, every approved heading, first paragraph, «آخر تحديث: 30 مايو 2026»  — 6 headings
+PASS  /privacy-policy/: nothing in square brackets, no placeholder
+PASS  /privacy-policy/: contents list = section headings, each link has its target  — p2 p3 p4 p5 p6 p7
+PASS  /privacy-policy/: robots as before (index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large), canonical this address
+PASS  privacy-policy: still published; copy of previous values in _sh_pre_legal_text
+PASS  /terms/: 200, H1, every approved heading, first paragraph, «آخر تحديث: 30 مايو 2026»  — 10 headings
+PASS  /terms/: nothing in square brackets, no placeholder
+PASS  /terms/: contents list = section headings, each link has its target  — t2 t3 t4 t5 t6 t7 t8 t9 t10 t11
+PASS  /terms/: robots as before (follow, noindex), canonical this address (Rank Math prints none for noindex)
+PASS  terms: still published; copy of previous values in _sh_pre_legal_text
+PASS  editor: «الأقسام» list with a title and a text box per section, «تاريخ آخر تحديث» field  — 7 rows
+PASS  after an editor change: terms → «عُدّل يدويًا», no button
+PASS  CLI apply refuses the edited page  — privacy-policy  pack       #1488 publish index — فيها النص المعتمد
+terms           manual     #17 publish noindex — فيها نص كتبه شخص (عُدّل يدويًا) — لا يُكتب ف
+PASS  editor paragraph still on the page
+PASS  no PHP errors from the theme or Core during the update
+PASS  no JavaScript errors
+
+41/41 passed
+page-sitemap.xml lists /services/seo/stores-seo/: 0

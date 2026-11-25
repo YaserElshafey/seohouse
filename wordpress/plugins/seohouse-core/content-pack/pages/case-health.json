@@ -1,0 +1,31 @@
+{
+ "crumbs": [
+  {
+   "label": "الرئيسية",
+   "href": "/"
+  },
+  {
+   "label": "نتائج الأعمال",
+   "href": "/results/"
+  },
+  {
+   "label": "قطاع الصحة والطب",
+   "href": null
+  }
+ ],
+ "key": "case-health",
+ "route": "/results/قطاع-الصحة-والطب/",
+ "kind": "cpt",
+ "title": "دراسة حالة: الصحة والطب",
+ "file": "SEO House - Case Health Clinic.dc.html",
+ "status": "publish",
+ "seo": {
+  "title": "قطاع الصحة والطب - سيو هاوس",
+  "description": "نمو في الزيارات العضوية لعيادة طبية متخصصة، وانتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.",
+  "robots": "",
+  "schema_type": "auto",
+  "schema_service": ""
+ },
+ "template": null,
+ "sections": []
+}

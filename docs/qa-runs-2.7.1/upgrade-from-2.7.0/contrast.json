@@ -1,0 +1,632 @@
+{
+ "1440 http://127.0.0.1:8090/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/?s=%D8%B3%D9%8A%D9%88": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/about/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/blog/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/contact/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/no-such-page-xyz/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/pricing/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/privacy-policy/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/results/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/results/%d8%aa%d8%b3%d8%aa%d8%aa%d8%b3%d8%aa/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%aa%d8%ac%d8%a7%d8%b1%d8%a9-%d8%a7%d9%84%d8%a5%d9%84%d9%83%d8%aa%d8%b1%d9%88%d9%86%d9%8a%d8%a9/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/sectors/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/sectors/ecommerce/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/sectors/education/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/sectors/food/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/sectors/health/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/sectors/legal/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/sectors/real-estate/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/sectors/tech/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/sectors/tourism/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/products/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/seo/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/seo/backlinks/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/seo/consulting/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/seo/content/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/seo/egypt/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/seo/ksa/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/seo/on-page/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/seo/technical/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/seo/uae/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/stores/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/stores/salla/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/stores/shopify/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/stores/woocommerce/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/stores/zid/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/web-design/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/web-design/custom-dev/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/web-design/react-next/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/web-design/webflow/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/services/web-design/wordpress/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/adham-hesham/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/ahmed-sanad/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/eman-farid/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/esraa-kamal/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/esraa-mohamed/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/heba-geneedy/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/maha-ali/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/mariam-hesham/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/mennatallah-said/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/mohamed-hassan/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/mohamed-moawad/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/morad-salah/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/mustafa-mahmoud/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/nada-mahmoud/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/noha-elmahdy/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/seif-sanad/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/team/yasser-youssef/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/terms/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "1440 http://127.0.0.1:8090/thank-you/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/?s=%D8%B3%D9%8A%D9%88": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/about/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/blog/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/contact/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/no-such-page-xyz/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/pricing/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/privacy-policy/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/results/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/results/%d8%aa%d8%b3%d8%aa%d8%aa%d8%b3%d8%aa/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%aa%d8%ac%d8%a7%d8%b1%d8%a9-%d8%a7%d9%84%d8%a5%d9%84%d9%83%d8%aa%d8%b1%d9%88%d9%86%d9%8a%d8%a9/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/sectors/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/sectors/ecommerce/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/sectors/education/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/sectors/food/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/sectors/health/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/sectors/legal/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/sectors/real-estate/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/sectors/tech/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/sectors/tourism/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/products/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/seo/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/seo/backlinks/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/seo/consulting/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/seo/content/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/seo/egypt/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/seo/ksa/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/seo/on-page/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/seo/technical/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/seo/uae/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/stores/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/stores/salla/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/stores/shopify/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/stores/woocommerce/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/stores/zid/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/web-design/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/web-design/custom-dev/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/web-design/react-next/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/web-design/webflow/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/services/web-design/wordpress/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/adham-hesham/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/ahmed-sanad/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/eman-farid/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/esraa-kamal/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/esraa-mohamed/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/heba-geneedy/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/maha-ali/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/mariam-hesham/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/mennatallah-said/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/mohamed-hassan/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/mohamed-moawad/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/morad-salah/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/mustafa-mahmoud/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/nada-mahmoud/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/noha-elmahdy/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/seif-sanad/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/team/yasser-youssef/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/terms/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ },
+ "390 http://127.0.0.1:8090/thank-you/": {
+  "bad": [],
+  "overflowX": false,
+  "h1": 1
+ }
+}

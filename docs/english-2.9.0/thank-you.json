@@ -1,0 +1,64 @@
+{
+ "id": 83,
+ "key": "thank-you",
+ "title": "Booking Confirmation",
+ "slug": "thank-you",
+ "parent": 0,
+ "path": "/thank-you/",
+ "template": "page-templates/thank-you.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "Your Call Is Booked | SEO House",
+  "sh_seo_description": "Your free consultation call with SEO House is confirmed.",
+  "sh_seo_noindex": "1",
+  "sh_schema_type": "webpage",
+  "sh_schema_service": "",
+  "sh_crumb": "",
+  "rank_math_title": "Your Call Is Booked | SEO House",
+  "rank_math_description": "Your free consultation call with SEO House is confirmed.",
+  "rank_math_robots": [
+   "noindex"
+  ],
+  "rank_math_focus_keyword": ""
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "title": "Your appointment is confirmed",
+   "items": [
+    {
+     "heading": "Appointment confirmation",
+     "text": "You'll receive your appointment confirmation from the booking tool once it's connected."
+    },
+    {
+     "heading": "Pre-call review",
+     "text": "We review your website's details before the call, so it's useful from the very first minute."
+    },
+    {
+     "heading": "The call",
+     "text": "Free, and 30 minutes long."
+    }
+   ],
+   "items_2": [
+    {
+     "link": 29,
+     "link_label": "Results →"
+    },
+    {
+     "link": 67,
+     "link_label": "Services →"
+    },
+    {
+     "link": 138,
+     "link_label": "Blog →"
+    },
+    {
+     "link": 137,
+     "link_label": "Home →"
+    }
+   ]
+  }
+ ]
+}

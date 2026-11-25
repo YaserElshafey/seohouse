@@ -1,0 +1,3273 @@
+{
+    "plan": [
+        {
+            "kind": "post",
+            "type": "case_study",
+            "id": 65,
+            "label": "قطاع التجارة الإلكترونية",
+            "status": "publish",
+            "path": "/results/قطاع-التجارة-الإلكترونية/",
+            "source": {
+                "kind": "post",
+                "type": "case_study",
+                "id": 352,
+                "label": "قطاع التجارة الإلكترونية"
+            },
+            "old": {
+                "title": "قطاع التجارة الإلكترونية - سيو هاوس",
+                "description": "زيادة في المبيعات العضوية لمتجر سلة مع خفض الاعتماد على Google Ads بنسبة 45%.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%aa%d8%ac%d8%a7%d8%b1%d8%a9-%d8%a7%d9%84%d8%a5%d9%84%d9%83%d8%aa%d8%b1%d9%88%d9%86%d9%8a%d8%a9/"
+            },
+            "new": {
+                "title": "قطاع التجارة الإلكترونية - سيو هاوس",
+                "description": "زيادة في المبيعات العضوية لمتجر سلة مع خفض الاعتماد على Google Ads بنسبة 45%."
+            },
+            "stored": {
+                "title": "",
+                "description": "زيادة في المبيعات العضوية لمتجر سلة مع خفض الاعتماد على Google Ads بنسبة 45%."
+            },
+            "action": {
+                "title": "same",
+                "description": "same"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "case_study",
+            "id": 66,
+            "label": "قطاع الصحة والطب",
+            "status": "publish",
+            "path": "/results/قطاع-الصحة-والطب/",
+            "source": {
+                "kind": "post",
+                "type": "case_study",
+                "id": 353,
+                "label": "قطاع الصحة والطب"
+            },
+            "old": {
+                "title": "قطاع الصحة والطب - سيو هاوس",
+                "description": "نمو في الزيارات العضوية لعيادة طبية متخصصة خلال 8 أشهر — انتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/"
+            },
+            "new": {
+                "title": "قطاع الصحة والطب - سيو هاوس",
+                "description": "نمو في الزيارات العضوية لعيادة طبية متخصصة، وانتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية."
+            },
+            "stored": {
+                "title": "",
+                "description": "نمو في الزيارات العضوية لعيادة طبية متخصصة، وانتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية."
+            },
+            "action": {
+                "title": "same",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "case_study",
+            "id": 67,
+            "label": "قطاع التعليم والتدريب",
+            "status": "publish",
+            "path": "/results/تستتست/",
+            "source": {
+                "kind": "post",
+                "type": "case_study",
+                "id": 351,
+                "label": "قطاع التعليم والتدريب"
+            },
+            "old": {
+                "title": "قطاع التعليم والتدريب - سيو هاوس",
+                "description": "نمو في عدد الليدز الشهرية لمنصة تدريب — 14 كلمة مفتاحية تنافسية في الصفحة الأولى.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/results/%d8%aa%d8%b3%d8%aa%d8%aa%d8%b3%d8%aa/"
+            },
+            "new": {
+                "title": "قطاع التعليم والتدريب - سيو هاوس",
+                "description": "نمو في عدد الليدز الشهرية لمنصة تدريب — 14 كلمة مفتاحية تنافسية في الصفحة الأولى."
+            },
+            "stored": {
+                "title": "",
+                "description": "نمو في عدد الليدز الشهرية لمنصة تدريب — 14 كلمة مفتاحية تنافسية في الصفحة الأولى."
+            },
+            "action": {
+                "title": "same",
+                "description": "same"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "case_study",
+            "id": 68,
+            "label": "نمو الإيرادات العضوية لمتجر إلكتروني في السعودية",
+            "status": "draft",
+            "path": "/results/organic-revenue-growth/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "ارتفعت إيرادات القناة العضوية لمتجر إلكتروني في السوق السعودي بين الفترتين المعروضتين في تقرير جوجل أناليتكس."
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "case_study",
+            "id": 69,
+            "label": "نمو النقرات العضوية لموقع خدمات طبية",
+            "status": "draft",
+            "path": "/results/medical-search-growth/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "ارتفعت النقرات العضوية لموقع خدمات طبية بين فترتين متتاليتين مدة كل منهما 28 يومًا، وفق بيانات سيرش كونسول."
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 14,
+            "label": "اتصل بنا",
+            "status": "publish",
+            "path": "/contact/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 348,
+                "label": "contact"
+            },
+            "old": {
+                "title": "اتصل بنا | احجز استشارة مع سيو هاوس",
+                "description": "تواصل مع سيو هاوس واحجز استشارة لموقعك أو متجرك، واكتشف الفرص الضائعة وخطوات النمو المناسبة لزيادة الظهور والعملاء والمبيعات.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/contact/"
+            },
+            "new": {
+                "title": "اتصل بنا واحجز مكالمة استشارية | سيو هاوس",
+                "description": "أرسل بيانات موقعك وهدفك، ونراجع الحالة قبل مكالمة استشارية مجانية مدتها 30 دقيقة نحدد فيها الخطوة المناسبة دون التزام."
+            },
+            "stored": {
+                "title": "اتصل بنا واحجز مكالمة استشارية | سيو هاوس",
+                "description": "أرسل بيانات موقعك وهدفك، ونراجع الحالة قبل مكالمة استشارية مجانية مدتها 30 دقيقة نحدد فيها الخطوة المناسبة دون التزام."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 13,
+            "label": "الأسعار",
+            "status": "publish",
+            "path": "/pricing/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 349,
+                "label": "اسعار باقات السيو"
+            },
+            "old": {
+                "title": "اسعار باقات السيو - سيو هاوس",
+                "description": "",
+                "robots": "nofollow, noindex",
+                "canonical": ""
+            },
+            "new": {
+                "title": "أسعار خدمات سيو هاوس ونطاق العمل | سيو هاوس",
+                "description": "نعمل داخل نطاق 1,500 إلى 7,000 ريال، ويتحدد السعر النهائي بحسب حالة الموقع وحجم الصفحات والسوق والمنافسة ونطاق التنفيذ والمنصة المستخدمة."
+            },
+            "stored": {
+                "title": "أسعار خدمات سيو هاوس ونطاق العمل | سيو هاوس",
+                "description": "نعمل داخل نطاق 1,500 إلى 7,000 ريال، ويتحدد السعر النهائي بحسب حالة الموقع وحجم الصفحات والسوق والمنافسة ونطاق التنفيذ والمنصة المستخدمة."
+            },
+            "action": {
+                "title": "write",
+                "description": "empty"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 35,
+            "label": "الاستشارات وتحليل الأداء",
+            "status": "publish",
+            "path": "/services/seo/consulting/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 366,
+                "label": "خدمة استشارات السيو لفهم الأداء واتخاذ القرارات"
+            },
+            "old": {
+                "title": "خدمة استشارات السيو لفهم الأداء واتخاذ القرارات - سيو هاوس",
+                "description": "احجز استشارات السيو لفهم أرقام الزيارات والعملاء والمبيعات ومراجعة أداء موقعك أو خطتك الحالية واتخاذ قرارات أوضح مبنية على البيانات.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/seo/consulting/"
+            },
+            "new": {
+                "title": "استشارات السيو وتحليل الأداء | سيو هاوس",
+                "description": "تدقيق وخارطة طريق وأولويات تنفيذ لفريقك: نقرأ بيانات الموقع، ونحدد ما الذي تغيّر ولماذا، ثم نحوّل ذلك إلى قرارات قابلة للتنفيذ والقياس."
+            },
+            "stored": {
+                "title": "استشارات السيو وتحليل الأداء | سيو هاوس",
+                "description": "تدقيق وخارطة طريق وأولويات تنفيذ لفريقك: نقرأ بيانات الموقع، ونحدد ما الذي تغيّر ولماذا، ثم نحوّل ذلك إلى قرارات قابلة للتنفيذ والقياس."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 42,
+            "label": "البرمجة الخاصة",
+            "status": "publish",
+            "path": "/services/web-design/custom-dev/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 379,
+                "label": "برمجة مواقع خاصة تتجاوز القوالب الجاهزة"
+            },
+            "old": {
+                "title": "برمجة مواقع خاصة تتجاوز القوالب الجاهزة - سيو هاوس",
+                "description": "نقدم برمجة مواقع خاصة للشركات التي تحتاج إلى حلول مخصصة تناسب احتياجاتها التشغيلية والتسويقية بعيدًا عن القيود التقليدية للقوالب الجاهزة.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/web-design/custom-dev/"
+            },
+            "new": {
+                "title": "البرمجة الخاصة وتطوير الأنظمة والمنصات | سيو هاوس",
+                "description": "أنظمة ومنصات مبنية على متطلباتك: بوابات، أنظمة داخلية، حجوزات وعضويات وتكاملات، بمراحل واضحة من جمع المتطلبات إلى الاختبار والتسليم."
+            },
+            "stored": {
+                "title": "البرمجة الخاصة وتطوير الأنظمة والمنصات | سيو هاوس",
+                "description": "أنظمة ومنصات مبنية على متطلباتك: بوابات، أنظمة داخلية، حجوزات وعضويات وتكاملات، بمراحل واضحة من جمع المتطلبات إلى الاختبار والتسليم."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 8,
+            "label": "الخدمات",
+            "status": "publish",
+            "path": "/services/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 362,
+                "label": "الخدمات"
+            },
+            "old": {
+                "title": "الخدمات - سيو هاوس",
+                "description": "",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "https://example.com/canonical-main/"
+            },
+            "new": {
+                "title": "خدمات سيو هاوس | سيو، مواقع، متاجر ومحتوى المنتجات",
+                "description": "منظومة خدمات سيو هاوس: تحسين محركات البحث كتخصص أساسي، إلى جانب تصميم وتطوير المواقع والمتاجر ورفع المنتجات وإدارة محتواها."
+            },
+            "stored": {
+                "title": "خدمات سيو هاوس | سيو، مواقع، متاجر ومحتوى المنتجات",
+                "description": "منظومة خدمات سيو هاوس: تحسين محركات البحث كتخصص أساسي، إلى جانب تصميم وتطوير المواقع والمتاجر ورفع المنتجات وإدارة محتواها."
+            },
+            "action": {
+                "title": "write",
+                "description": "empty"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 7,
+            "label": "الرئيسية",
+            "status": "publish",
+            "path": "/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 346,
+                "label": "home"
+            },
+            "old": {
+                "title": "سيو هاوس | نساعد الشركات والمتاجر على النمو",
+                "description": "سيو هاوس شركة سيو متخصصة في زيادة الظهور والعملاء والمبيعات للشركات والمتاجر عبر استراتيجيات واضحة ومحتوى مدروس ونتائج قابلة للقياس.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/"
+            },
+            "new": {
+                "title": "سيو هاوس | تحسين الظهور وتصميم المواقع والمتاجر",
+                "description": ""
+            },
+            "stored": {
+                "title": "سيو هاوس | تحسين الظهور وتصميم المواقع والمتاجر",
+                "description": ""
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 31,
+            "label": "السيو التقني",
+            "status": "publish",
+            "path": "/services/seo/technical/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 371,
+                "label": "السيو التقني"
+            },
+            "old": {
+                "title": "السيو التقني - سيو هاوس",
+                "description": "",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/seo/technical/"
+            },
+            "new": {
+                "title": "خدمة السيو التقني وتدقيق الموقع | سيو هاوس",
+                "description": "نفحص الزحف والفهرسة والسرعة وبنية الموقع والبيانات المنظمة، ونرتب المشكلات حسب أثرها، ثم ننفّذ التعديلات ونتابع الفهرسة والأداء."
+            },
+            "stored": {
+                "title": "خدمة السيو التقني وتدقيق الموقع | سيو هاوس",
+                "description": "نفحص الزحف والفهرسة والسرعة وبنية الموقع والبيانات المنظمة، ونرتب المشكلات حسب أثرها، ثم ننفّذ التعديلات ونتابع الفهرسة والأداء."
+            },
+            "action": {
+                "title": "write",
+                "description": "empty"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 32,
+            "label": "السيو الداخلي",
+            "status": "publish",
+            "path": "/services/seo/on-page/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 370,
+                "label": "السيو الداخلي"
+            },
+            "old": {
+                "title": "السيو الداخلي - سيو هاوس",
+                "description": "",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/seo/on-page/"
+            },
+            "new": {
+                "title": "خدمة السيو الداخلي وتحسين صفحات الموقع | سيو هاوس",
+                "description": "نربط كل صفحة بنية بحث واضحة، ونضبط العناوين والمحتوى والروابط الداخلية والبيانات المنظمة، ونعالج تعارض الصفحات داخل الموقع."
+            },
+            "stored": {
+                "title": "خدمة السيو الداخلي وتحسين صفحات الموقع | سيو هاوس",
+                "description": "نربط كل صفحة بنية بحث واضحة، ونضبط العناوين والمحتوى والروابط الداخلية والبيانات المنظمة، ونعالج تعارض الصفحات داخل الموقع."
+            },
+            "action": {
+                "title": "write",
+                "description": "empty"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 38,
+            "label": "السيو في الإمارات",
+            "status": "publish",
+            "path": "/services/seo/uae/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 372,
+                "label": "تحسين محركات البحث في الامارات"
+            },
+            "old": {
+                "title": "تحسين محركات البحث في الامارات - سيو هاوس",
+                "description": "",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/seo/uae/"
+            },
+            "new": {
+                "title": "شركة سيو في الإمارات لتحسين ظهور موقعك | سيو هاوس",
+                "description": "نساعد الشركات داخل الإمارات على تحسين ظهور مواقعها في نتائج البحث من خلال تحليل المنافسة وتحسين الصفحات والمحتوى والجوانب التقنية وقياس أثر العمل."
+            },
+            "stored": {
+                "title": "شركة سيو في الإمارات لتحسين ظهور موقعك | سيو هاوس",
+                "description": "نساعد الشركات داخل الإمارات على تحسين ظهور مواقعها في نتائج البحث من خلال تحليل المنافسة وتحسين الصفحات والمحتوى والجوانب التقنية وقياس أثر العمل."
+            },
+            "action": {
+                "title": "write",
+                "description": "empty"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 36,
+            "label": "السيو في السعودية",
+            "status": "publish",
+            "path": "/services/seo/ksa/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 369,
+                "label": "تحسين محركات البحث في السعودية"
+            },
+            "old": {
+                "title": "تحسين محركات البحث في السعودية - سيو هاوس",
+                "description": "",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/seo/ksa/"
+            },
+            "new": {
+                "title": "عنوان كتبه المحرر لصفحة السعودية",
+                "description": "نساعد الشركات داخل السعودية على تحسين ظهور مواقعها، ومعالجة الجوانب التقنية والمحتوى والصفحات، وقياس أثر العمل على الزيارات والاستفسارات والمبيعات."
+            },
+            "stored": {
+                "title": "عنوان كتبه المحرر لصفحة السعودية",
+                "description": "نساعد الشركات داخل السعودية على تحسين ظهور مواقعها، ومعالجة الجوانب التقنية والمحتوى والصفحات، وقياس أثر العمل على الزيارات والاستفسارات والمبيعات."
+            },
+            "action": {
+                "title": "manual",
+                "description": "empty"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 37,
+            "label": "السيو في مصر",
+            "status": "publish",
+            "path": "/services/seo/egypt/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 368,
+                "label": "تحسين محركات البحث في مصر"
+            },
+            "old": {
+                "title": "تحسين محركات البحث في مصر - سيو هاوس",
+                "description": "",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/seo/egypt/"
+            },
+            "new": {
+                "title": "شركة سيو في مصر لتحسين ظهور موقعك | سيو هاوس",
+                "description": "نساعد الشركات داخل مصر على تحسين ظهور مواقعها في نتائج البحث من خلال السيو التقني والمحتوى وتحسين الصفحات وقياس أثر العمل على الزيارات والعملاء."
+            },
+            "stored": {
+                "title": "شركة سيو في مصر لتحسين ظهور موقعك | سيو هاوس",
+                "description": "نساعد الشركات داخل مصر على تحسين ظهور مواقعها في نتائج البحث من خلال السيو التقني والمحتوى وتحسين الصفحات وقياس أثر العمل على الزيارات والعملاء."
+            },
+            "action": {
+                "title": "write",
+                "description": "empty"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 17,
+            "label": "الشروط والأحكام",
+            "status": "draft",
+            "path": "/terms/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 384,
+                "label": "الشروط والأحكام"
+            },
+            "old": {
+                "title": "الشروط والأحكام - سيو هاوس",
+                "description": "مرحبًا بك في موقع سيو هاوس. إن استخدامك لهذا الموقع أو تصفحك له أو تقديمك لأي طلب من خلاله يعني موافقتك على الالتزام بهذه الشروط والأحكام. يرجى قراءة هذه",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/terms/"
+            },
+            "new": {
+                "title": "الشروط والأحكام | سيو هاوس",
+                "description": "شروط استخدام موقع سيو هاوس وطلب خدماته: المحتوى ونتائج الأعمال، والعروض والتعاقد، والملكية الفكرية، وحدود المسؤولية، والقانون المطبق."
+            },
+            "stored": {
+                "title": "الشروط والأحكام | سيو هاوس",
+                "description": "شروط استخدام موقع سيو هاوس وطلب خدماته: المحتوى ونتائج الأعمال، والعروض والتعاقد، والملكية الفكرية، وحدود المسؤولية، والقانون المطبق."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": "غير منشور هنا؛ القيم الجديدة محسوبة من Rank Math"
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 9,
+            "label": "القطاعات",
+            "status": "publish",
+            "path": "/sectors/",
+            "source": {
+                "kind": "archive",
+                "type": "sector",
+                "id": 0,
+                "label": "sector (أرشيف)"
+            },
+            "old": {
+                "title": "القطاعات - سيو هاوس",
+                "description": "القطاعات Archive - سيو هاوس",
+                "robots": "index, follow",
+                "canonical": "http://127.0.0.1:8096/sectors/"
+            },
+            "new": {
+                "title": "قطاعات نعمل عليها في السيو والمواقع والمتاجر | سيو هاوس",
+                "description": "تختلف طريقة البحث ومسار القرار بين التجارة الإلكترونية والصحة والعقارات والتعليم والسياحة والتقنية والقانون والمطاعم. اختر قطاعك لترى طريقة العمل المناسبة له."
+            },
+            "stored": {
+                "title": "قطاعات نعمل عليها في السيو والمواقع والمتاجر | سيو هاوس",
+                "description": "تختلف طريقة البحث ومسار القرار بين التجارة الإلكترونية والصحة والعقارات والتعليم والسياحة والتقنية والقانون والمطاعم. اختر قطاعك لترى طريقة العمل المناسبة له."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": "في الأساسي أرشيف نوع «sector» وقيمه من قالب Rank Math التلقائي؛ راجعها بعد النقل"
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 18,
+            "label": "المدونة",
+            "status": "publish",
+            "path": "/blog/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 385,
+                "label": "blog"
+            },
+            "old": {
+                "title": "مدونة سيو هاوس | مكتبة من المقالات في السيو ونمو المواقع",
+                "description": "اقرأ مقالات سيو هاوس عن السيو والمحتوى وتحليل الأداء ونمو المواقع والمتاجر، مع أفكار عملية تساعدك على تحسين الظهور وزيادة العملاء.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/blog/"
+            },
+            "new": {
+                "title": "مدونة سيو هاوس | سيو هاوس",
+                "description": "مقالات عن تحسين محركات البحث والسيو التقني والمحتوى والتجارة الإلكترونية والقياس."
+            },
+            "stored": {
+                "title": "مدونة سيو هاوس | سيو هاوس",
+                "description": "مقالات عن تحسين محركات البحث والسيو التقني والمحتوى والتجارة الإلكترونية والقياس."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 34,
+            "label": "بناء الروابط",
+            "status": "publish",
+            "path": "/services/seo/backlinks/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 365,
+                "label": "backlinks"
+            },
+            "old": {
+                "title": "خدمة بناء الباك لينك والجيست بوست | سيو هاوس",
+                "description": "نقدم خدمة بناء الروابط الخارجية عبر استراتيجية مدروسة تساعد على دعم الصفحات المهمة في موقعك وزيادة الثقة وتحسين فرص المنافسة في نتائج البحث.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/seo/backlinks/"
+            },
+            "new": {
+                "title": "خدمة بناء الروابط الخارجية للمواقع | سيو هاوس",
+                "description": "نبني سلطة الموقع بروابط من مصادر ذات صلة وجمهور حقيقي، ونقيّم كل مصدر قبل التنفيذ، ونوثّق كل رابط ونتابع أثره على الصفحة."
+            },
+            "stored": {
+                "title": "خدمة بناء الروابط الخارجية للمواقع | سيو هاوس",
+                "description": "نبني سلطة الموقع بروابط من مصادر ذات صلة وجمهور حقيقي، ونقيّم كل مصدر قبل التنفيذ، ونوثّق كل رابط ونتابع أثره على الصفحة."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 15,
+            "label": "تأكيد الحجز",
+            "status": "publish",
+            "path": "/thank-you/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "تم حجز مكالمتك | سيو هاوس",
+                "description": "تأكيد حجز المكالمة الاستشارية."
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 19,
+            "label": "تحسين محركات البحث",
+            "status": "publish",
+            "path": "/services/seo/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 364,
+                "label": "seo"
+            },
+            "old": {
+                "title": "تحسين محركات البحث في الوطن العربي والشرق الاوسط | سيو هاوس",
+                "description": "نقدم خدمات تحسين محركات البحث للشركات والمتاجر التي تريد زيادة الظهور وجذب عملاء أكثر وبناء نمو مستدام من خلال خطة واضحة ونتائج قابلة للقياس.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/seo/"
+            },
+            "new": {
+                "title": "خدمات تحسين محركات البحث SEO | سيو هاوس",
+                "description": ""
+            },
+            "stored": {
+                "title": "خدمات تحسين محركات البحث SEO | سيو هاوس",
+                "description": ""
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 21,
+            "label": "تصميم المتاجر",
+            "status": "publish",
+            "path": "/services/stores/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 373,
+                "label": "stores"
+            },
+            "old": {
+                "title": "إنشاء وتصميم متاجر إلكترونية | سيو هاوس",
+                "description": "ننشئ ونصمم متاجر إلكترونية تساعدك على عرض منتجاتك باحتراف وتحسين تجربة الشراء ورفع التحويلات وبناء متجر جاهز للنمو والمبيعات.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/stores/"
+            },
+            "new": {
+                "title": "تصميم وتطوير المتاجر الإلكترونية | سيو هاوس",
+                "description": "متاجر تركّز على سهولة الشراء: تصنيف منتجات واضح، صفحات منتج مقنعة، دفع وشحن بلا عقبات، سرعة، وقياس لكل خطوة في رحلة الطلب."
+            },
+            "stored": {
+                "title": "تصميم وتطوير المتاجر الإلكترونية | سيو هاوس",
+                "description": "متاجر تركّز على سهولة الشراء: تصنيف منتجات واضح، صفحات منتج مقنعة، دفع وشحن بلا عقبات، سرعة، وقياس لكل خطوة في رحلة الطلب."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 20,
+            "label": "تصميم المواقع",
+            "status": "publish",
+            "path": "/services/web-design/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 378,
+                "label": "إنشاء وتصميم مواقع احترافية تدعم النمو والظهور"
+            },
+            "old": {
+                "title": "إنشاء وتصميم مواقع احترافية تدعم النمو والظهور - سيو هاوس",
+                "description": "ننشئ ونصمم مواقع احترافية تساعد الشركات على تقديم خدماتها بشكل أوضح وتحسين تجربة المستخدم وبناء صفحات تدعم الظهور والتحويل والنمو.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/web-design/"
+            },
+            "new": {
+                "title": "تصميم وتطوير مواقع الشركات | سيو هاوس",
+                "description": "نبني مواقع تنطلق من أهداف نشاطك: رسالة واضحة، مسار استخدام قصير، سرعة، إدارة محتوى سهلة، وأساس تقني يسمح بالعمل على الظهور والقياس."
+            },
+            "stored": {
+                "title": "تصميم وتطوير مواقع الشركات | سيو هاوس",
+                "description": "نبني مواقع تنطلق من أهداف نشاطك: رسالة واضحة، مسار استخدام قصير، سرعة، إدارة محتوى سهلة، وأساس تقني يسمح بالعمل على الظهور والقياس."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 22,
+            "label": "رفع المنتجات",
+            "status": "publish",
+            "path": "/services/products/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 363,
+                "label": "products"
+            },
+            "old": {
+                "title": "رفع المنتجات للمتاجر وتنظيم ورفع المنتجات باحتراف | سيو هاوس",
+                "description": "نقدم خدمة رفع المنتجات للمتاجر لمساعدتك في تنظيم البيانات والصور والأوصاف والتصنيفات بشكل احترافي يسرّع الإطلاق ويحسن تجربة التسوق.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/products/"
+            },
+            "new": {
+                "title": "رفع المنتجات وإدارة محتوى المتاجر | سيو هاوس",
+                "description": "إدخال المنتجات وبياناتها وصورها وتصنيفاتها بصورة منظمة على سلة وزد وShopify وWooCommerce، مع أوصاف وسمات وبيانات سيو قابلة للفهرسة."
+            },
+            "stored": {
+                "title": "رفع المنتجات وإدارة محتوى المتاجر | سيو هاوس",
+                "description": "إدخال المنتجات وبياناتها وصورها وتصنيفاتها بصورة منظمة على سلة وزد وShopify وWooCommerce، مع أوصاف وسمات وبيانات سيو قابلة للفهرسة."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 41,
+            "label": "رياكت ونكست",
+            "status": "publish",
+            "path": "/services/web-design/react-next/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 380,
+                "label": "react-next"
+            },
+            "old": {
+                "title": "برمجة مواقع React & Next | سيو هاوس",
+                "description": "نطور مواقع باستخدام React وNext للشركات التي تحتاج إلى أداء أعلى وتجربة أسرع وبنية تقنية متقدمة تدعم التوسع والنمو الرقمي.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/web-design/react-next/"
+            },
+            "new": {
+                "title": "تطوير مواقع وتطبيقات رياكت ونكست | سيو هاوس",
+                "description": "واجهات مبنية على React وNext.js: أداء عالٍ، عرض من الخادم أو توليد ثابت، تكاملات مع أنظمة قائمة، وبنية تتحمل التوسع."
+            },
+            "stored": {
+                "title": "تطوير مواقع وتطبيقات رياكت ونكست | سيو هاوس",
+                "description": "واجهات مبنية على React وNext.js: أداء عالٍ، عرض من الخادم أو توليد ثابت، تكاملات مع أنظمة قائمة، وبنية تتحمل التوسع."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 45,
+            "label": "زد",
+            "status": "publish",
+            "path": "/services/stores/zid/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 377,
+                "label": "zid"
+            },
+            "old": {
+                "title": "تصميم متاجر زد | سيو هاوس",
+                "description": "نقدم تصميم متجر زد للعلامات التجارية التي تريد متجرًا سريعًا وواضحًا وجاهزًا للبيع، مع تجربة استخدام قوية تدعم التوسع والمبيعات.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/stores/zid/"
+            },
+            "new": {
+                "title": "تصميم وتطوير متاجر زد | سيو هاوس",
+                "description": "متاجر زد من زاوية التشغيل: كتالوج وطلبات وعملاء وتكاملات في لوحة واحدة، مع إعداد صفحات وتصنيفات يدعم الظهور وسهولة الشراء."
+            },
+            "stored": {
+                "title": "تصميم وتطوير متاجر زد | سيو هاوس",
+                "description": "متاجر زد من زاوية التشغيل: كتالوج وطلبات وعملاء وتكاملات في لوحة واحدة، مع إعداد صفحات وتصنيفات يدعم الظهور وسهولة الشراء."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 44,
+            "label": "سلة",
+            "status": "publish",
+            "path": "/services/stores/salla/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 374,
+                "label": "salla"
+            },
+            "old": {
+                "title": "تصميم متاجر سلة | سيو هاوس",
+                "description": "نصمم متاجر سلة بشكل احترافي يساعدك على تنظيم المنتجات وتحسين تجربة الشراء وبناء متجر واضح وسريع وجاهز لزيادة المبيعات.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/stores/salla/"
+            },
+            "new": {
+                "title": "تصميم وتطوير متاجر سلة | سيو هاوس",
+                "description": "متاجر سلة جاهزة للتشغيل في السوق السعودي: هوية وصفحات وتصنيفات منظمة، دفع وشحن محليان، وإعداد يدعم ظهور صفحات الفئات والمنتجات."
+            },
+            "stored": {
+                "title": "تصميم وتطوير متاجر سلة | سيو هاوس",
+                "description": "متاجر سلة جاهزة للتشغيل في السوق السعودي: هوية وصفحات وتصنيفات منظمة، دفع وشحن محليان، وإعداد يدعم ظهور صفحات الفئات والمنتجات."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 3,
+            "label": "سياسة الخصوصية",
+            "status": "draft",
+            "path": "/privacy-policy/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 350,
+                "label": "سياسة الخصوصية"
+            },
+            "old": {
+                "title": "سياسة الخصوصية - سيو هاوس",
+                "description": "نحن في سيو هاوس نلتزم بحماية خصوصية زوار الموقع والعملاء، ونعمل على التعامل مع البيانات الشخصية بمسؤولية وشفافية. توضح هذه الصفحة كيفية جمع المعلومات",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/privacy-policy/"
+            },
+            "new": {
+                "title": "سياسة الخصوصية | سيو هاوس",
+                "description": "كيف تجمع سيو هاوس بيانات زوار الموقع وطالبي الاستشارات وتستخدمها وتحميها، ومدة الاحتفاظ بها، وحقوقك في الوصول إليها وتصحيحها وحذفها."
+            },
+            "stored": {
+                "title": "سياسة الخصوصية | سيو هاوس",
+                "description": "كيف تجمع سيو هاوس بيانات زوار الموقع وطالبي الاستشارات وتستخدمها وتحميها، ومدة الاحتفاظ بها، وحقوقك في الوصول إليها وتصحيحها وحذفها."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": "غير منشور هنا؛ القيم الجديدة محسوبة من Rank Math"
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 43,
+            "label": "شوبيفاي",
+            "status": "publish",
+            "path": "/services/stores/shopify/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 375,
+                "label": "shopify"
+            },
+            "old": {
+                "title": "تصميم متاجر شوبيفاي | سيو هاوس",
+                "description": "نصمم متاجر شوبيفاي للعلامات التي تبحث عن متجر احترافي منظم وقابل للتوسع، مع تجربة شراء قوية وصفحات تساعد على رفع المبيعات.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/stores/shopify/"
+            },
+            "new": {
+                "title": "تصميم وتطوير متاجر شوبيفاي | سيو هاوس",
+                "description": "متاجر Shopify مبنية بأقسام قابلة للتحرير: كتالوج ومتغيرات منظمة، تطبيقات مختارة بعناية، دفع وشحن وتتبع مضبوط، وأساس جاهز للظهور."
+            },
+            "stored": {
+                "title": "تصميم وتطوير متاجر شوبيفاي | سيو هاوس",
+                "description": "متاجر Shopify مبنية بأقسام قابلة للتحرير: كتالوج ومتغيرات منظمة، تطبيقات مختارة بعناية، دفع وشحن وتتبع مضبوط، وأساس جاهز للظهور."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 11,
+            "label": "عن الشركة",
+            "status": "publish",
+            "path": "/about/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 347,
+                "label": "about"
+            },
+            "old": {
+                "title": "عن سيو هاوس | فريق متخصص في نمو المواقع والمتاجر",
+                "description": "تعرف على سيو هاوس وفريق العمل الذي يساعد الشركات والمتاجر على بناء نمو رقمي مستدام من خلال المحتوى والتحليل واستراتيجيات الظهور في محركات البحث.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/about/"
+            },
+            "new": {
+                "title": "عن سيو هاوس | فريق متخصص في نمو المواقع والمتاجر",
+                "description": "تأسست سيو هاوس عام 2017 لتقديم عمل يمكن قياسه: تنفيذ داخل الموقع لا توصيات فقط، ونتائج تُعرض بمصدرها. نخدم الشركات في السعودية ومصر والإمارات."
+            },
+            "stored": {
+                "title": "عن سيو هاوس | فريق متخصص في نمو المواقع والمتاجر",
+                "description": "تأسست سيو هاوس عام 2017 لتقديم عمل يمكن قياسه: تنفيذ داخل الموقع لا توصيات فقط، ونتائج تُعرض بمصدرها. نخدم الشركات في السعودية ومصر والإمارات."
+            },
+            "action": {
+                "title": "same",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 12,
+            "label": "فريق العمل",
+            "status": "publish",
+            "path": "/team/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 383,
+                "label": "team"
+            },
+            "old": {
+                "title": "فريق العمل | خبراء النمو الرقمي والتحليل وإدارة المحتوي",
+                "description": "تعرف على فريق سيو هاوس من المتخصصين في المحتوى والتحليل وبناء النمو الرقمي للمواقع والمتاجر بخبرة عملية وفهم واضح لاحتياجات السوق.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/team/"
+            },
+            "new": {
+                "title": "فريق سيو هاوس | سيو هاوس",
+                "description": "فريق يجمع تخصص البحث والمحتوى والتقنية وتحليل الأداء، يعمل على المشروع نفسه بمسؤول محدد وتقرير منتظم بما تغيّر للشركات في السعودية ومصر والإمارات."
+            },
+            "stored": {
+                "title": "فريق سيو هاوس | سيو هاوس",
+                "description": "فريق يجمع تخصص البحث والمحتوى والتقنية وتحليل الأداء، يعمل على المشروع نفسه بمسؤول محدد وتقرير منتظم بما تغيّر للشركات في السعودية ومصر والإمارات."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 30,
+            "label": "قطاع الأغذية والمطاعم",
+            "status": "publish",
+            "path": "/sectors/food/",
+            "source": {
+                "kind": "post",
+                "type": "sector",
+                "id": 356,
+                "label": "تحسين محركات البحث للمطاعم"
+            },
+            "old": {
+                "title": "تحسين محركات البحث للمطاعم - سيو هاوس",
+                "description": "نساعد المطاعم والعلامات الغذائية على زيادة الظهور المحلي وجذب عملاء أكثر عبر محتوى وصفحات واستراتيجية نمو تناسب طبيعة القطاع.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/sectors/food/"
+            },
+            "new": {
+                "title": "تحسين محركات البحث للمطاعم وعلامات الأغذية | سيو هاوس",
+                "description": "ضبط بيانات الفروع وصفحات القائمة والسرعة على الجوال والتقييمات، وربط البحث المحلي بالطلب المباشر من موقعك بدل الاعتماد على الوسطاء."
+            },
+            "stored": {
+                "title": "تحسين محركات البحث للمطاعم وعلامات الأغذية | سيو هاوس",
+                "description": "ضبط بيانات الفروع وصفحات القائمة والسرعة على الجوال والتقييمات، وربط البحث المحلي بالطلب المباشر من موقعك بدل الاعتماد على الوسطاء."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 23,
+            "label": "قطاع التجارة الإلكترونية",
+            "status": "publish",
+            "path": "/sectors/ecommerce/",
+            "source": {
+                "kind": "post",
+                "type": "sector",
+                "id": 354,
+                "label": "تحسين محركات البحث للمتاجر الإلكترونية"
+            },
+            "old": {
+                "title": "تحسين محركات البحث للمتاجر الإلكترونية - سيو هاوس",
+                "description": "نساعد المتاجر الإلكترونية على زيادة الظهور والزيارات والطلبات عبر منهجية سيو مبنية على صفحات المنتجات والتصنيفات وتجربة الشراء والنمو.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/sectors/ecommerce/"
+            },
+            "new": {
+                "title": "تحسين محركات البحث للمتاجر الإلكترونية | سيو هاوس",
+                "description": "نعمل على صفحات الفئات والمنتجات وبيانات الكتالوج والجانب التقني للمتاجر، ونتابع أثر ذلك على السلة والطلب في سلة وزد وShopify وWooCommerce."
+            },
+            "stored": {
+                "title": "تحسين محركات البحث للمتاجر الإلكترونية | سيو هاوس",
+                "description": "نعمل على صفحات الفئات والمنتجات وبيانات الكتالوج والجانب التقني للمتاجر، ونتابع أثر ذلك على السلة والطلب في سلة وزد وShopify وWooCommerce."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 26,
+            "label": "قطاع التعليم والتدريب",
+            "status": "publish",
+            "path": "/sectors/education/",
+            "source": {
+                "kind": "post",
+                "type": "sector",
+                "id": 355,
+                "label": "education"
+            },
+            "old": {
+                "title": "تحسين محركات البحث للمواقع التعليمية والتدريبية | سيو هاوس",
+                "description": "نساعد المعاهد والمنصات التعليمية على زيادة الظهور وجذب الطلاب والعملاء عبر استراتيجية محتوى ونمو تناسب طبيعة قطاع التعليم والتدريب.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/sectors/education/"
+            },
+            "new": {
+                "title": "تحسين محركات البحث لقطاع التعليم والتدريب | سيو هاوس",
+                "description": "بنية صفحات للمجالات والمسارات والدورات والشهادات، ومحتوى يجيب عن أسئلة المتعلم قبل التسجيل، مع مراعاة موسمية الطلب وقياس التسجيل."
+            },
+            "stored": {
+                "title": "تحسين محركات البحث لقطاع التعليم والتدريب | سيو هاوس",
+                "description": "بنية صفحات للمجالات والمسارات والدورات والشهادات، ومحتوى يجيب عن أسئلة المتعلم قبل التسجيل، مع مراعاة موسمية الطلب وقياس التسجيل."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 28,
+            "label": "قطاع التقنية والبرمجيات",
+            "status": "publish",
+            "path": "/sectors/tech/",
+            "source": {
+                "kind": "post",
+                "type": "sector",
+                "id": 360,
+                "label": "تحسين محركات البحث للمواقع التقنية والبرمجيات"
+            },
+            "old": {
+                "title": "تحسين محركات البحث للمواقع التقنية والبرمجيات - سيو هاوس",
+                "description": "نساعد شركات التقنية والبرمجيات على بناء ظهور أقوى وجذب عملاء محتملين عبر تحليل واضح ومحتوى متخصص واستراتيجية تنافسية مناسبة للقطاع.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/sectors/tech/"
+            },
+            "new": {
+                "title": "تحسين محركات البحث لشركات التقنية والبرمجيات | سيو هاوس",
+                "description": "صفحات حلول واستخدامات ومقارنات وتكاملات تلتقط بحث المشتري التقني عن مشكلته، مع معالجة اللغة الداخلية والمحتوى غير المفهرس وطريقة العرض."
+            },
+            "stored": {
+                "title": "تحسين محركات البحث لشركات التقنية والبرمجيات | سيو هاوس",
+                "description": "صفحات حلول واستخدامات ومقارنات وتكاملات تلتقط بحث المشتري التقني عن مشكلته، مع معالجة اللغة الداخلية والمحتوى غير المفهرس وطريقة العرض."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 27,
+            "label": "قطاع السياحة والسفر",
+            "status": "publish",
+            "path": "/sectors/tourism/",
+            "source": {
+                "kind": "post",
+                "type": "sector",
+                "id": 361,
+                "label": "tourism"
+            },
+            "old": {
+                "title": "تحسين محركات البحث لمواقع السياحة والسفر |",
+                "description": "نقدم حلول نمو رقمي لشركات السياحة والسفر تساعدها على الظهور أمام العملاء المناسبين وزيادة الحجوزات والاستفسارات عبر صفحات ومحتوى موجه.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/sectors/tourism/"
+            },
+            "new": {
+                "title": "تحسين محركات البحث لقطاع السياحة والسفر | سيو هاوس",
+                "description": "صفحات وجهات وبرامج وأدلة تخطيط تخدم قرار المسافر من الإلهام إلى الحجز، مع مراعاة موسمية الطلب وسرعة الصفحات على الجوال."
+            },
+            "stored": {
+                "title": "تحسين محركات البحث لقطاع السياحة والسفر | سيو هاوس",
+                "description": "صفحات وجهات وبرامج وأدلة تخطيط تخدم قرار المسافر من الإلهام إلى الحجز، مع مراعاة موسمية الطلب وسرعة الصفحات على الجوال."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 24,
+            "label": "قطاع الصحة والطب",
+            "status": "publish",
+            "path": "/sectors/health/",
+            "source": {
+                "kind": "post",
+                "type": "sector",
+                "id": 357,
+                "label": "تحسين محركات البحث للمواقع الطبية"
+            },
+            "old": {
+                "title": "تحسين محركات البحث للمواقع الطبية - سيو هاوس",
+                "description": "نساعد العيادات والمراكز الطبية على الظهور أمام الجمهور المناسب وزيادة الحجوزات والاستفسارات عبر محتوى وصفحات واستراتيجية مناسبة للقطاع الصحي.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/sectors/health/"
+            },
+            "new": {
+                "title": "تحسين محركات البحث للقطاع الطبي | سيو هاوس",
+                "description": "بنية تخصصات وخدمات وأطباء، ومحتوى يجيب عن أسئلة المريض قبل الحجز، مع البحث المحلي وإشارات الثقة ومسار حجز قصير على الجوال."
+            },
+            "stored": {
+                "title": "تحسين محركات البحث للقطاع الطبي | سيو هاوس",
+                "description": "بنية تخصصات وخدمات وأطباء، ومحتوى يجيب عن أسئلة المريض قبل الحجز، مع البحث المحلي وإشارات الثقة ومسار حجز قصير على الجوال."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 25,
+            "label": "قطاع العقارات والبناء",
+            "status": "publish",
+            "path": "/sectors/real-estate/",
+            "source": {
+                "kind": "post",
+                "type": "sector",
+                "id": 359,
+                "label": "تحسين محركات البحث لمواقع العقارات والمقاولات"
+            },
+            "old": {
+                "title": "تحسين محركات البحث لمواقع العقارات والمقاولات - سيو هاوس",
+                "description": "نساعد شركات العقارات والمقاولات على تحسين الظهور للكلمات المهمة وجذب عملاء أكثر عبر صفحات ومحتوى واستراتيجية نمو تناسب طبيعة القطاع.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/sectors/real-estate/"
+            },
+            "new": {
+                "title": "تحسين محركات البحث لقطاع العقارات | سيو هاوس",
+                "description": "بنية صفحات للمناطق والمشروعات والوحدات تخدم مقارنة المشتري، مع معالجة الوحدات المنتهية والتكرار والفهرسة ونماذج التواصل."
+            },
+            "stored": {
+                "title": "تحسين محركات البحث لقطاع العقارات | سيو هاوس",
+                "description": "بنية صفحات للمناطق والمشروعات والوحدات تخدم مقارنة المشتري، مع معالجة الوحدات المنتهية والتكرار والفهرسة ونماذج التواصل."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 29,
+            "label": "قطاع القانون والاستشارات",
+            "status": "publish",
+            "path": "/sectors/legal/",
+            "source": {
+                "kind": "post",
+                "type": "sector",
+                "id": 358,
+                "label": "تحسين محركات البحث لمواقع المحاماة"
+            },
+            "old": {
+                "title": "تحسين محركات البحث لمواقع المحاماة - سيو هاوس",
+                "description": "نساعد مكاتب المحاماة والاستشارات على زيادة الظهور أمام العملاء المحتملين وبناء حضور رقمي أكثر ثقة وتأثيرًا عبر صفحات ومحتوى مناسبين.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/sectors/legal/"
+            },
+            "new": {
+                "title": "تحسين محركات البحث لمكاتب المحاماة | سيو هاوس",
+                "description": "صفحات خدمات قانونية ومحتوى أسئلة يجيب عن إجراء العميل ومدته، مع إبراز الخبرة والترخيص ومسار استشارة واضح، دون ضمانات أو أرقام غير موثقة."
+            },
+            "stored": {
+                "title": "تحسين محركات البحث لمكاتب المحاماة | سيو هاوس",
+                "description": "صفحات خدمات قانونية ومحتوى أسئلة يجيب عن إجراء العميل ومدته، مع إبراز الخبرة والترخيص ومسار استشارة واضح، دون ضمانات أو أرقام غير موثقة."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 33,
+            "label": "محتوى السيو",
+            "status": "publish",
+            "path": "/services/seo/content/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 367,
+                "label": "content"
+            },
+            "old": {
+                "title": "خدمة كتابة محتوي يساعد على الظهور والتحويل | سيو هاوس",
+                "description": "نكتب محتوى مدروسًا يساعد الشركات والمتاجر على استهداف الكلمات المناسبة وبناء صفحات ومقالات ترفع الظهور وتحوّل الزيارات إلى فرص ومبيعات.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/seo/content/"
+            },
+            "new": {
+                "title": "خدمة كتابة محتوى السيو للمواقع والمتاجر | سيو هاوس",
+                "description": "نبني محتوى يجيب عن أسئلة عملائك ويقودهم إلى الخطوة التالية: بحث ونية، ثم Brief، ثم كتابة ومراجعة بشرية، ثم نشر وقياس."
+            },
+            "stored": {
+                "title": "خدمة كتابة محتوى السيو للمواقع والمتاجر | سيو هاوس",
+                "description": "نبني محتوى يجيب عن أسئلة عملائك ويقودهم إلى الخطوة التالية: بحث ونية، ثم Brief، ثم كتابة ومراجعة بشرية، ثم نشر وقياس."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 10,
+            "label": "نتائج الأعمال",
+            "status": "publish",
+            "path": "/results/",
+            "source": {
+                "kind": "archive",
+                "type": "case_study",
+                "id": 0,
+                "label": "case_study (أرشيف)"
+            },
+            "old": {
+                "title": "نتائج الأعمال - سيو هاوس",
+                "description": "نتائج الأعمال Archive - سيو هاوس",
+                "robots": "index, follow",
+                "canonical": "http://127.0.0.1:8096/results/"
+            },
+            "new": {
+                "title": "نتائج ودراسات حالة من مشاريع سيو هاوس | سيو هاوس",
+                "description": "نتائج موثقة من حسابات العملاء بمصادرها وفتراتها: نمو إيرادات عضوية، ونمو نقرات في Search Console، مع شرح لطريقة قراءة الأرقام."
+            },
+            "stored": {
+                "title": "نتائج ودراسات حالة من مشاريع سيو هاوس | سيو هاوس",
+                "description": "نتائج موثقة من حسابات العملاء بمصادرها وفتراتها: نمو إيرادات عضوية، ونمو نقرات في Search Console، مع شرح لطريقة قراءة الأرقام."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": "في الأساسي أرشيف نوع «case_study» وقيمه من قالب Rank Math التلقائي؛ راجعها بعد النقل"
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 39,
+            "label": "ووردبريس",
+            "status": "publish",
+            "path": "/services/web-design/wordpress/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 382,
+                "label": "تصميم مواقع ووردبريس مرنة وسهلة الإدارة"
+            },
+            "old": {
+                "title": "تصميم مواقع ووردبريس مرنة وسهلة الإدارة - سيو هاوس",
+                "description": "نصمم مواقع ووردبريس احترافية سريعة ومرنة وسهلة الإدارة، تساعد الشركات على تطوير حضورها الرقمي وبناء موقع قابل للنمو والتوسع.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/web-design/wordpress/"
+            },
+            "new": {
+                "title": "تصميم مواقع ووردبريس للشركات | سيو هاوس",
+                "description": "مواقع WordPress مبنية بوحدات قابلة للتحرير: إدارة محتوى سهلة، أداء مضبوط، حماية وتحديثات، تعدد لغات، وأساس جاهز للعمل على الظهور."
+            },
+            "stored": {
+                "title": "تصميم مواقع ووردبريس للشركات | سيو هاوس",
+                "description": "مواقع WordPress مبنية بوحدات قابلة للتحرير: إدارة محتوى سهلة، أداء مضبوط، حماية وتحديثات، تعدد لغات، وأساس جاهز للعمل على الظهور."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 46,
+            "label": "ووكومرس",
+            "status": "publish",
+            "path": "/services/stores/woocommerce/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 376,
+                "label": "woocommerce"
+            },
+            "old": {
+                "title": "تصميم متاجر ووكومرس | سيو هاوس",
+                "description": "نصمم متاجر ووكومرس بشكل احترافي يساعدك على إدارة المنتجات بسهولة وتحسين تجربة الشراء وبناء متجر مرن يدعم النمو والتحويل.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/stores/woocommerce/"
+            },
+            "new": {
+                "title": "تصميم وتطوير متاجر ووكومرس | سيو هاوس",
+                "description": "متاجر WooCommerce تجمع المحتوى والتجارة في نظام واحد: تحكم كامل في المنتجات والصفحات، إضافات مختارة، أداء مضبوط وصيانة واضحة."
+            },
+            "stored": {
+                "title": "تصميم وتطوير متاجر ووكومرس | سيو هاوس",
+                "description": "متاجر WooCommerce تجمع المحتوى والتجارة في نظام واحد: تحكم كامل في المنتجات والصفحات، إضافات مختارة، أداء مضبوط وصيانة واضحة."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "page",
+            "id": 40,
+            "label": "ويب فلو",
+            "status": "publish",
+            "path": "/services/web-design/webflow/",
+            "source": {
+                "kind": "post",
+                "type": "page",
+                "id": 381,
+                "label": "تصميم مواقع ويب فلو مناسبة للشركات"
+            },
+            "old": {
+                "title": "تصميم مواقع ويب فلو مناسبة للشركات - سيو هاوس",
+                "description": "نقدم خدمة تصميم مواقع ويب فلو للشركات التي تحتاج إلى موقع حديث وسريع ومرن، مع تجربة استخدام قوية وهيكل واضح يدعم النمو الرقمي.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/services/web-design/webflow/"
+            },
+            "new": {
+                "title": "تصميم مواقع ويب فلو للشركات | سيو هاوس",
+                "description": "مواقع Webflow بتحكم بصري دقيق وحركة خفيفة وCMS مرن: إطلاق أسرع، مكونات قابلة لإعادة الاستخدام، وإدارة محتوى بلا صيانة خوادم."
+            },
+            "stored": {
+                "title": "تصميم مواقع ويب فلو للشركات | سيو هاوس",
+                "description": "مواقع Webflow بتحكم بصري دقيق وحركة خفيفة وCMS مرن: إطلاق أسرع، مكونات قابلة لإعادة الاستخدام، وإدارة محتوى بلا صيانة خوادم."
+            },
+            "action": {
+                "title": "write",
+                "description": "write"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "post",
+            "id": 71,
+            "label": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزانية الزحف وتجربة المستخدم",
+            "status": "publish",
+            "path": "/blog/fix-404-not-found/",
+            "source": {
+                "kind": "post",
+                "type": "post",
+                "id": 208,
+                "label": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزانية الزحف وتجربة المستخدم"
+            },
+            "old": {
+                "title": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزانية الزحف وتجربة المستخدم - سيو هاوس",
+                "description": "في عالم تحسين محركات البحث الفني (Technical SEO)، لا تعد الأخطاء البرمجية مجرد رموز عابرة تظهر للمستخدم، بل هي مؤشرات حيوية تعكس مدى صحة البنية التحتية للموقع",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/blog/fix-404-not-found/"
+            },
+            "new": {
+                "title": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزانية الزحف وتجربة المستخدم - سيو هاوس",
+                "description": "في عالم تحسين محركات البحث الفني (Technical SEO)، لا تعد الأخطاء البرمجية مجرد رموز عابرة تظهر للمستخدم، بل هي مؤشرات حيوية تعكس مدى صحة البنية التحتية للموقع"
+            },
+            "stored": {
+                "title": "",
+                "description": "في عالم تحسين محركات البحث الفني (Technical SEO)، لا تعد الأخطاء البرمجية مجرد رموز عابرة تظهر للمستخدم، بل هي مؤشرات حيوية تعكس مدى صحة البنية التحتية للموقع"
+            },
+            "action": {
+                "title": "same",
+                "description": "same"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "post",
+            "id": 72,
+            "label": "كيفية بناء باك لينك موقعك بطريقة صحيحة | دليل عملي من سيو هاوس",
+            "status": "publish",
+            "path": "/blog/how-to-build-backlinks-correctly/",
+            "source": {
+                "kind": "post",
+                "type": "post",
+                "id": 261,
+                "label": "كيفية بناء باك لينك موقعك بطريقة صحيحة | دليل عملي من سيو هاوس"
+            },
+            "old": {
+                "title": "كيفية بناء باك لينك موقعك بطريقة صحيحة | دليل عملي من سيو هاوس",
+                "description": "تعلّم كيفية بناء باك لينك لموقعك بطريقة صحيحة عبر استراتيجية آمنة وعملية: اختيار الصفحات، تحليل المنافسين، صناعة أصول قابلة للربط، والتواصل الذكي دون مخالفات.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/blog/how-to-build-backlinks-correctly/"
+            },
+            "new": {
+                "title": "كيفية بناء باك لينك موقعك بطريقة صحيحة | دليل عملي من سيو هاوس",
+                "description": "تعلّم كيفية بناء باك لينك لموقعك بطريقة صحيحة عبر استراتيجية آمنة وعملية: اختيار الصفحات، تحليل المنافسين، صناعة أصول قابلة للربط، والتواصل الذكي دون مخالفات."
+            },
+            "stored": {
+                "title": "كيفية بناء باك لينك موقعك بطريقة صحيحة | دليل عملي من سيو هاوس",
+                "description": "تعلّم كيفية بناء باك لينك لموقعك بطريقة صحيحة عبر استراتيجية آمنة وعملية: اختيار الصفحات، تحليل المنافسين، صناعة أصول قابلة للربط، والتواصل الذكي دون مخالفات."
+            },
+            "action": {
+                "title": "same",
+                "description": "same"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "post",
+            "id": 73,
+            "label": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول",
+            "status": "publish",
+            "path": "/blog/why-is-my-website-not-showing-in-search-engines/",
+            "source": {
+                "kind": "post",
+                "type": "post",
+                "id": 268,
+                "label": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول"
+            },
+            "old": {
+                "title": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول - سيو هاوس",
+                "description": "عدم ظهور الموقع في محركات البحث من أكثر المشاكل التي تسبب قلقًا لأصحاب المواقع، خصوصًا بعد إطلاق موقع جديد أو نشر صفحات مهمة وانتظار ظهورها في نتائج جوجل دون",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/blog/why-is-my-website-not-showing-in-search-engines/"
+            },
+            "new": {
+                "title": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول - سيو هاوس",
+                "description": "عدم ظهور الموقع في محركات البحث من أكثر المشاكل التي تسبب قلقًا لأصحاب المواقع، خصوصًا بعد إطلاق موقع جديد أو نشر صفحات مهمة وانتظار ظهورها في نتائج جوجل دون"
+            },
+            "stored": {
+                "title": "",
+                "description": "عدم ظهور الموقع في محركات البحث من أكثر المشاكل التي تسبب قلقًا لأصحاب المواقع، خصوصًا بعد إطلاق موقع جديد أو نشر صفحات مهمة وانتظار ظهورها في نتائج جوجل دون"
+            },
+            "action": {
+                "title": "same",
+                "description": "same"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "post",
+            "id": 70,
+            "label": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة",
+            "status": "publish",
+            "path": "/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+            "source": {
+                "kind": "post",
+                "type": "post",
+                "id": 338,
+                "label": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة"
+            },
+            "old": {
+                "title": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة - سيو هاوس",
+                "description": "مع تغير شكل نتائج البحث في Google، لم يعد ظهور الموقع مقتصرًا على الروابط التقليدية التي اعتاد المستخدمون رؤيتها في صفحة النتائج.",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/"
+            },
+            "new": {
+                "title": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة - سيو هاوس",
+                "description": "مع تغير شكل نتائج البحث في Google، لم يعد ظهور الموقع مقتصرًا على الروابط التقليدية التي اعتاد المستخدمون رؤيتها في صفحة النتائج."
+            },
+            "stored": {
+                "title": "",
+                "description": "مع تغير شكل نتائج البحث في Google، لم يعد ظهور الموقع مقتصرًا على الروابط التقليدية التي اعتاد المستخدمون رؤيتها في صفحة النتائج."
+            },
+            "action": {
+                "title": "same",
+                "description": "same"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 47,
+            "label": "ياسر يوسف",
+            "status": "publish",
+            "path": "/team/yasser-youssef/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "ياسر يوسف — المدير التنفيذي، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 48,
+            "label": "محمد معوض",
+            "status": "publish",
+            "path": "/team/mohamed-moawad/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "محمد معوض — مدير تحسين محركات البحث، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 49,
+            "label": "مها علي",
+            "status": "publish",
+            "path": "/team/maha-ali/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "مها علي — قائد الفريق، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 50,
+            "label": "منةالله سعيد",
+            "status": "publish",
+            "path": "/team/mennatallah-said/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "منةالله سعيد — قائد تحسين المتاجر الإلكترونية، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 51,
+            "label": "منى علي",
+            "status": "publish",
+            "path": "/team/mona-ali/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "منى علي — قائد منصات التواصل الاجتماعي، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 52,
+            "label": "إسراء كمال",
+            "status": "publish",
+            "path": "/team/esraa-kamal/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "إسراء كمال — قائد علاقات العملاء، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 53,
+            "label": "هبه جنيدي",
+            "status": "publish",
+            "path": "/team/heba-geneedy/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "هبه جنيدي — قائد الموارد البشرية، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 54,
+            "label": "محمد حسن",
+            "status": "publish",
+            "path": "/team/mohamed-hassan/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "محمد حسن — متخصص تحسين محركات البحث، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 55,
+            "label": "مصطفي محمود",
+            "status": "publish",
+            "path": "/team/mustafa-mahmoud/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "مصطفي محمود — متخصص تحسين محركات البحث، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 56,
+            "label": "أحمد سند",
+            "status": "publish",
+            "path": "/team/ahmed-sanad/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "أحمد سند — متخصص تحسين محركات البحث، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 57,
+            "label": "إسراء محمد",
+            "status": "publish",
+            "path": "/team/esraa-mohamed/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "إسراء محمد — متخصص تحسين المتاجر الإلكترونية، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 58,
+            "label": "ندى محمود",
+            "status": "publish",
+            "path": "/team/nada-mahmoud/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "ندى محمود — متخصص تحسين محركات البحث، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 59,
+            "label": "أدهم هشام",
+            "status": "publish",
+            "path": "/team/adham-hesham/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "أدهم هشام — متخصص تحسين محركات البحث، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 60,
+            "label": "مريم هشام",
+            "status": "publish",
+            "path": "/team/mariam-hesham/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "مريم هشام — متخصص تحسين المتاجر الإلكترونية، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 61,
+            "label": "سيف سند",
+            "status": "publish",
+            "path": "/team/seif-sanad/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "سيف سند — متخصص تحسين محركات البحث، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 62,
+            "label": "مراد صلاح",
+            "status": "publish",
+            "path": "/team/morad-salah/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "مراد صلاح — متخصص تحسين محركات البحث، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 63,
+            "label": "نهى المهدي",
+            "status": "publish",
+            "path": "/team/noha-elmahdy/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "نهى المهدي — متخصص تحسين محركات البحث، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "post",
+            "type": "team_member",
+            "id": 64,
+            "label": "إيمان فريد",
+            "status": "publish",
+            "path": "/team/eman-farid/",
+            "source": null,
+            "old": {
+                "title": "",
+                "description": "",
+                "robots": "",
+                "canonical": ""
+            },
+            "new": {
+                "title": "",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": "إيمان فريد — قائد المحتوى، سيو هاوس"
+            },
+            "action": {
+                "title": "nosource",
+                "description": "nosource"
+            },
+            "note": ""
+        },
+        {
+            "kind": "term",
+            "type": "category",
+            "id": 1,
+            "label": "Uncategorized",
+            "status": "publish",
+            "path": "/blog/category/uncategorized/",
+            "source": {
+                "kind": "term",
+                "type": "category",
+                "id": 1,
+                "label": "Uncategorized"
+            },
+            "old": {
+                "title": "Uncategorized - سيو هاوس",
+                "description": "",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/blog/category/uncategorized/"
+            },
+            "new": {
+                "title": "Uncategorized - سيو هاوس",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": ""
+            },
+            "action": {
+                "title": "same",
+                "description": "empty"
+            },
+            "note": ""
+        },
+        {
+            "kind": "term",
+            "type": "category",
+            "id": 3,
+            "label": "السيو الخارجي",
+            "status": "publish",
+            "path": "/blog/category/off-page-seo/",
+            "source": {
+                "kind": "term",
+                "type": "category",
+                "id": 2,
+                "label": "سيو خارجي"
+            },
+            "old": {
+                "title": "سيو خارجي - سيو هاوس",
+                "description": "",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/blog/category/off-page-seo/"
+            },
+            "new": {
+                "title": "السيو الخارجي - سيو هاوس",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": ""
+            },
+            "action": {
+                "title": "write",
+                "description": "empty"
+            },
+            "note": ""
+        },
+        {
+            "kind": "term",
+            "type": "category",
+            "id": 2,
+            "label": "سيو تقني",
+            "status": "publish",
+            "path": "/blog/category/technical-seo/",
+            "source": {
+                "kind": "term",
+                "type": "category",
+                "id": 3,
+                "label": "سيو تقني"
+            },
+            "old": {
+                "title": "سيو تقني - سيو هاوس",
+                "description": "",
+                "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+                "canonical": "http://127.0.0.1:8096/blog/category/technical-seo/"
+            },
+            "new": {
+                "title": "سيو تقني - سيو هاوس",
+                "description": ""
+            },
+            "stored": {
+                "title": "",
+                "description": ""
+            },
+            "action": {
+                "title": "same",
+                "description": "empty"
+            },
+            "note": ""
+        }
+    ],
+    "counts": {
+        "write": 71,
+        "same": 16,
+        "empty": 10,
+        "manual": 1,
+        "nosource": 21,
+        "error": 0
+    },
+    "source_only": [
+        "/sample-page/",
+        "/contact/thank-you/"
+    ],
+    "run": {
+        "written": 71,
+        "changed": 0,
+        "objects": 40,
+        "backup": "wp-content/uploads/seohouse-backups/seo-meta-before-transfer-20261003-222606-nfnzlB.json"
+    },
+    "report": {
+        "time": 1791066373,
+        "source": "http://127.0.0.1:8096",
+        "site": "http://127.0.0.1:8096/new",
+        "summary": {
+            "match": 40,
+            "expected": 7,
+            "mismatch": 0
+        },
+        "rows": [
+            {
+                "path": "/results/قطاع-التجارة-الإلكترونية/",
+                "label": "قطاع التجارة الإلكترونية",
+                "type": "case_study",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "قطاع التجارة الإلكترونية - سيو هاوس",
+                        "new": "قطاع التجارة الإلكترونية - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "زيادة في المبيعات العضوية لمتجر سلة مع خفض الاعتماد على Google Ads بنسبة 45%.",
+                        "new": "زيادة في المبيعات العضوية لمتجر سلة مع خفض الاعتماد على Google Ads بنسبة 45%.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/results/قطاع-الصحة-والطب/",
+                "label": "قطاع الصحة والطب",
+                "type": "case_study",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "قطاع الصحة والطب - سيو هاوس",
+                        "new": "قطاع الصحة والطب - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نمو في الزيارات العضوية لعيادة طبية متخصصة خلال 8 أشهر — انتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.",
+                        "new": "نمو في الزيارات العضوية لعيادة طبية متخصصة خلال 8 أشهر — انتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/results/تستتست/",
+                "label": "قطاع التعليم والتدريب",
+                "type": "case_study",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "قطاع التعليم والتدريب - سيو هاوس",
+                        "new": "قطاع التعليم والتدريب - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نمو في عدد الليدز الشهرية لمنصة تدريب — 14 كلمة مفتاحية تنافسية في الصفحة الأولى.",
+                        "new": "نمو في عدد الليدز الشهرية لمنصة تدريب — 14 كلمة مفتاحية تنافسية في الصفحة الأولى.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/contact/",
+                "label": "اتصل بنا",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "اتصل بنا | احجز استشارة مع سيو هاوس",
+                        "new": "اتصل بنا | احجز استشارة مع سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "تواصل مع سيو هاوس واحجز استشارة لموقعك أو متجرك، واكتشف الفرص الضائعة وخطوات النمو المناسبة لزيادة الظهور والعملاء والمبيعات.",
+                        "new": "تواصل مع سيو هاوس واحجز استشارة لموقعك أو متجرك، واكتشف الفرص الضائعة وخطوات النمو المناسبة لزيادة الظهور والعملاء والمبيعات.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/pricing/",
+                "label": "الأسعار",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "اسعار باقات السيو - سيو هاوس",
+                        "new": "اسعار باقات السيو - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "",
+                        "new": "نعمل داخل نطاق 1,500 إلى 7,000 ريال، ويتحدد السعر النهائي بحسب حالة الموقع وحجم الصفحات والسوق والمنافسة ونطاق التنفيذ والمنصة المستخدمة.",
+                        "state": "expected",
+                        "reason": "الوصف في الأساسي فارغ — بقي وصف الجديد"
+                    }
+                },
+                "state": "expected"
+            },
+            {
+                "path": "/services/seo/consulting/",
+                "label": "الاستشارات وتحليل الأداء",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "خدمة استشارات السيو لفهم الأداء واتخاذ القرارات - سيو هاوس",
+                        "new": "خدمة استشارات السيو لفهم الأداء واتخاذ القرارات - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "احجز استشارات السيو لفهم أرقام الزيارات والعملاء والمبيعات ومراجعة أداء موقعك أو خطتك الحالية واتخاذ قرارات أوضح مبنية على البيانات.",
+                        "new": "احجز استشارات السيو لفهم أرقام الزيارات والعملاء والمبيعات ومراجعة أداء موقعك أو خطتك الحالية واتخاذ قرارات أوضح مبنية على البيانات.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/web-design/custom-dev/",
+                "label": "البرمجة الخاصة",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "برمجة مواقع خاصة تتجاوز القوالب الجاهزة - سيو هاوس",
+                        "new": "برمجة مواقع خاصة تتجاوز القوالب الجاهزة - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نقدم برمجة مواقع خاصة للشركات التي تحتاج إلى حلول مخصصة تناسب احتياجاتها التشغيلية والتسويقية بعيدًا عن القيود التقليدية للقوالب الجاهزة.",
+                        "new": "نقدم برمجة مواقع خاصة للشركات التي تحتاج إلى حلول مخصصة تناسب احتياجاتها التشغيلية والتسويقية بعيدًا عن القيود التقليدية للقوالب الجاهزة.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/",
+                "label": "الخدمات",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "الخدمات - سيو هاوس",
+                        "new": "الخدمات - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "",
+                        "new": "منظومة خدمات سيو هاوس: تحسين محركات البحث كتخصص أساسي، إلى جانب تصميم وتطوير المواقع والمتاجر ورفع المنتجات وإدارة محتواها.",
+                        "state": "expected",
+                        "reason": "الوصف في الأساسي فارغ — بقي وصف الجديد"
+                    }
+                },
+                "state": "expected"
+            },
+            {
+                "path": "/",
+                "label": "الرئيسية",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "سيو هاوس | نساعد الشركات والمتاجر على النمو",
+                        "new": "سيو هاوس | نساعد الشركات والمتاجر على النمو",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "سيو هاوس شركة سيو متخصصة في زيادة الظهور والعملاء والمبيعات للشركات والمتاجر عبر استراتيجيات واضحة ومحتوى مدروس ونتائج قابلة للقياس.",
+                        "new": "سيو هاوس شركة سيو متخصصة في زيادة الظهور والعملاء والمبيعات للشركات والمتاجر عبر استراتيجيات واضحة ومحتوى مدروس ونتائج قابلة للقياس.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/seo/technical/",
+                "label": "السيو التقني",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "السيو التقني - سيو هاوس",
+                        "new": "السيو التقني - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "",
+                        "new": "نفحص الزحف والفهرسة والسرعة وبنية الموقع والبيانات المنظمة، ونرتب المشكلات حسب أثرها، ثم ننفّذ التعديلات ونتابع الفهرسة والأداء.",
+                        "state": "expected",
+                        "reason": "الوصف في الأساسي فارغ — بقي وصف الجديد"
+                    }
+                },
+                "state": "expected"
+            },
+            {
+                "path": "/services/seo/on-page/",
+                "label": "السيو الداخلي",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "السيو الداخلي - سيو هاوس",
+                        "new": "السيو الداخلي - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "",
+                        "new": "نربط كل صفحة بنية بحث واضحة، ونضبط العناوين والمحتوى والروابط الداخلية والبيانات المنظمة، ونعالج تعارض الصفحات داخل الموقع.",
+                        "state": "expected",
+                        "reason": "الوصف في الأساسي فارغ — بقي وصف الجديد"
+                    }
+                },
+                "state": "expected"
+            },
+            {
+                "path": "/services/seo/uae/",
+                "label": "السيو في الإمارات",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تحسين محركات البحث في الامارات - سيو هاوس",
+                        "new": "تحسين محركات البحث في الامارات - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "",
+                        "new": "نساعد الشركات داخل الإمارات على تحسين ظهور مواقعها في نتائج البحث من خلال تحليل المنافسة وتحسين الصفحات والمحتوى والجوانب التقنية وقياس أثر العمل.",
+                        "state": "expected",
+                        "reason": "الوصف في الأساسي فارغ — بقي وصف الجديد"
+                    }
+                },
+                "state": "expected"
+            },
+            {
+                "path": "/services/seo/ksa/",
+                "label": "السيو في السعودية",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تحسين محركات البحث في السعودية - سيو هاوس",
+                        "new": "عنوان كتبه المحرر لصفحة السعودية",
+                        "state": "expected",
+                        "reason": "معدّل يدويًا هنا — تُرك"
+                    },
+                    "description": {
+                        "old": "",
+                        "new": "نساعد الشركات داخل السعودية على تحسين ظهور مواقعها، ومعالجة الجوانب التقنية والمحتوى والصفحات، وقياس أثر العمل على الزيارات والاستفسارات والمبيعات.",
+                        "state": "expected",
+                        "reason": "الوصف في الأساسي فارغ — بقي وصف الجديد"
+                    }
+                },
+                "state": "expected"
+            },
+            {
+                "path": "/services/seo/egypt/",
+                "label": "السيو في مصر",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تحسين محركات البحث في مصر - سيو هاوس",
+                        "new": "تحسين محركات البحث في مصر - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "",
+                        "new": "نساعد الشركات داخل مصر على تحسين ظهور مواقعها في نتائج البحث من خلال السيو التقني والمحتوى وتحسين الصفحات وقياس أثر العمل على الزيارات والعملاء.",
+                        "state": "expected",
+                        "reason": "الوصف في الأساسي فارغ — بقي وصف الجديد"
+                    }
+                },
+                "state": "expected"
+            },
+            {
+                "path": "/sectors/",
+                "label": "القطاعات",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "القطاعات - سيو هاوس",
+                        "new": "القطاعات - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "القطاعات Archive - سيو هاوس",
+                        "new": "القطاعات Archive - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/blog/",
+                "label": "المدونة",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "مدونة سيو هاوس | مكتبة من المقالات في السيو ونمو المواقع",
+                        "new": "مدونة سيو هاوس | مكتبة من المقالات في السيو ونمو المواقع",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "اقرأ مقالات سيو هاوس عن السيو والمحتوى وتحليل الأداء ونمو المواقع والمتاجر، مع أفكار عملية تساعدك على تحسين الظهور وزيادة العملاء.",
+                        "new": "اقرأ مقالات سيو هاوس عن السيو والمحتوى وتحليل الأداء ونمو المواقع والمتاجر، مع أفكار عملية تساعدك على تحسين الظهور وزيادة العملاء.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/seo/backlinks/",
+                "label": "بناء الروابط",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "خدمة بناء الباك لينك والجيست بوست | سيو هاوس",
+                        "new": "خدمة بناء الباك لينك والجيست بوست | سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نقدم خدمة بناء الروابط الخارجية عبر استراتيجية مدروسة تساعد على دعم الصفحات المهمة في موقعك وزيادة الثقة وتحسين فرص المنافسة في نتائج البحث.",
+                        "new": "نقدم خدمة بناء الروابط الخارجية عبر استراتيجية مدروسة تساعد على دعم الصفحات المهمة في موقعك وزيادة الثقة وتحسين فرص المنافسة في نتائج البحث.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/seo/",
+                "label": "تحسين محركات البحث",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تحسين محركات البحث في الوطن العربي والشرق الاوسط | سيو هاوس",
+                        "new": "تحسين محركات البحث في الوطن العربي والشرق الاوسط | سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نقدم خدمات تحسين محركات البحث للشركات والمتاجر التي تريد زيادة الظهور وجذب عملاء أكثر وبناء نمو مستدام من خلال خطة واضحة ونتائج قابلة للقياس.",
+                        "new": "نقدم خدمات تحسين محركات البحث للشركات والمتاجر التي تريد زيادة الظهور وجذب عملاء أكثر وبناء نمو مستدام من خلال خطة واضحة ونتائج قابلة للقياس.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/stores/",
+                "label": "تصميم المتاجر",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "إنشاء وتصميم متاجر إلكترونية | سيو هاوس",
+                        "new": "إنشاء وتصميم متاجر إلكترونية | سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "ننشئ ونصمم متاجر إلكترونية تساعدك على عرض منتجاتك باحتراف وتحسين تجربة الشراء ورفع التحويلات وبناء متجر جاهز للنمو والمبيعات.",
+                        "new": "ننشئ ونصمم متاجر إلكترونية تساعدك على عرض منتجاتك باحتراف وتحسين تجربة الشراء ورفع التحويلات وبناء متجر جاهز للنمو والمبيعات.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/web-design/",
+                "label": "تصميم المواقع",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "إنشاء وتصميم مواقع احترافية تدعم النمو والظهور - سيو هاوس",
+                        "new": "إنشاء وتصميم مواقع احترافية تدعم النمو والظهور - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "ننشئ ونصمم مواقع احترافية تساعد الشركات على تقديم خدماتها بشكل أوضح وتحسين تجربة المستخدم وبناء صفحات تدعم الظهور والتحويل والنمو.",
+                        "new": "ننشئ ونصمم مواقع احترافية تساعد الشركات على تقديم خدماتها بشكل أوضح وتحسين تجربة المستخدم وبناء صفحات تدعم الظهور والتحويل والنمو.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/products/",
+                "label": "رفع المنتجات",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "رفع المنتجات للمتاجر وتنظيم ورفع المنتجات باحتراف | سيو هاوس",
+                        "new": "رفع المنتجات للمتاجر وتنظيم ورفع المنتجات باحتراف | سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نقدم خدمة رفع المنتجات للمتاجر لمساعدتك في تنظيم البيانات والصور والأوصاف والتصنيفات بشكل احترافي يسرّع الإطلاق ويحسن تجربة التسوق.",
+                        "new": "نقدم خدمة رفع المنتجات للمتاجر لمساعدتك في تنظيم البيانات والصور والأوصاف والتصنيفات بشكل احترافي يسرّع الإطلاق ويحسن تجربة التسوق.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/web-design/react-next/",
+                "label": "رياكت ونكست",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "برمجة مواقع React & Next | سيو هاوس",
+                        "new": "برمجة مواقع React & Next | سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نطور مواقع باستخدام React وNext للشركات التي تحتاج إلى أداء أعلى وتجربة أسرع وبنية تقنية متقدمة تدعم التوسع والنمو الرقمي.",
+                        "new": "نطور مواقع باستخدام React وNext للشركات التي تحتاج إلى أداء أعلى وتجربة أسرع وبنية تقنية متقدمة تدعم التوسع والنمو الرقمي.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/stores/zid/",
+                "label": "زد",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تصميم متاجر زد | سيو هاوس",
+                        "new": "تصميم متاجر زد | سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نقدم تصميم متجر زد للعلامات التجارية التي تريد متجرًا سريعًا وواضحًا وجاهزًا للبيع، مع تجربة استخدام قوية تدعم التوسع والمبيعات.",
+                        "new": "نقدم تصميم متجر زد للعلامات التجارية التي تريد متجرًا سريعًا وواضحًا وجاهزًا للبيع، مع تجربة استخدام قوية تدعم التوسع والمبيعات.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/stores/salla/",
+                "label": "سلة",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تصميم متاجر سلة | سيو هاوس",
+                        "new": "تصميم متاجر سلة | سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نصمم متاجر سلة بشكل احترافي يساعدك على تنظيم المنتجات وتحسين تجربة الشراء وبناء متجر واضح وسريع وجاهز لزيادة المبيعات.",
+                        "new": "نصمم متاجر سلة بشكل احترافي يساعدك على تنظيم المنتجات وتحسين تجربة الشراء وبناء متجر واضح وسريع وجاهز لزيادة المبيعات.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/stores/shopify/",
+                "label": "شوبيفاي",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تصميم متاجر شوبيفاي | سيو هاوس",
+                        "new": "تصميم متاجر شوبيفاي | سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نصمم متاجر شوبيفاي للعلامات التي تبحث عن متجر احترافي منظم وقابل للتوسع، مع تجربة شراء قوية وصفحات تساعد على رفع المبيعات.",
+                        "new": "نصمم متاجر شوبيفاي للعلامات التي تبحث عن متجر احترافي منظم وقابل للتوسع، مع تجربة شراء قوية وصفحات تساعد على رفع المبيعات.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/about/",
+                "label": "عن الشركة",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "عن سيو هاوس | فريق متخصص في نمو المواقع والمتاجر",
+                        "new": "عن سيو هاوس | فريق متخصص في نمو المواقع والمتاجر",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "تعرف على سيو هاوس وفريق العمل الذي يساعد الشركات والمتاجر على بناء نمو رقمي مستدام من خلال المحتوى والتحليل واستراتيجيات الظهور في محركات البحث.",
+                        "new": "تعرف على سيو هاوس وفريق العمل الذي يساعد الشركات والمتاجر على بناء نمو رقمي مستدام من خلال المحتوى والتحليل واستراتيجيات الظهور في محركات البحث.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/team/",
+                "label": "فريق العمل",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "فريق العمل | خبراء النمو الرقمي والتحليل وإدارة المحتوي",
+                        "new": "فريق العمل | خبراء النمو الرقمي والتحليل وإدارة المحتوي",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "تعرف على فريق سيو هاوس من المتخصصين في المحتوى والتحليل وبناء النمو الرقمي للمواقع والمتاجر بخبرة عملية وفهم واضح لاحتياجات السوق.",
+                        "new": "تعرف على فريق سيو هاوس من المتخصصين في المحتوى والتحليل وبناء النمو الرقمي للمواقع والمتاجر بخبرة عملية وفهم واضح لاحتياجات السوق.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/sectors/food/",
+                "label": "قطاع الأغذية والمطاعم",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تحسين محركات البحث للمطاعم - سيو هاوس",
+                        "new": "تحسين محركات البحث للمطاعم - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نساعد المطاعم والعلامات الغذائية على زيادة الظهور المحلي وجذب عملاء أكثر عبر محتوى وصفحات واستراتيجية نمو تناسب طبيعة القطاع.",
+                        "new": "نساعد المطاعم والعلامات الغذائية على زيادة الظهور المحلي وجذب عملاء أكثر عبر محتوى وصفحات واستراتيجية نمو تناسب طبيعة القطاع.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/sectors/ecommerce/",
+                "label": "قطاع التجارة الإلكترونية",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تحسين محركات البحث للمتاجر الإلكترونية - سيو هاوس",
+                        "new": "تحسين محركات البحث للمتاجر الإلكترونية - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نساعد المتاجر الإلكترونية على زيادة الظهور والزيارات والطلبات عبر منهجية سيو مبنية على صفحات المنتجات والتصنيفات وتجربة الشراء والنمو.",
+                        "new": "نساعد المتاجر الإلكترونية على زيادة الظهور والزيارات والطلبات عبر منهجية سيو مبنية على صفحات المنتجات والتصنيفات وتجربة الشراء والنمو.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/sectors/education/",
+                "label": "قطاع التعليم والتدريب",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تحسين محركات البحث للمواقع التعليمية والتدريبية | سيو هاوس",
+                        "new": "تحسين محركات البحث للمواقع التعليمية والتدريبية | سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نساعد المعاهد والمنصات التعليمية على زيادة الظهور وجذب الطلاب والعملاء عبر استراتيجية محتوى ونمو تناسب طبيعة قطاع التعليم والتدريب.",
+                        "new": "نساعد المعاهد والمنصات التعليمية على زيادة الظهور وجذب الطلاب والعملاء عبر استراتيجية محتوى ونمو تناسب طبيعة قطاع التعليم والتدريب.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/sectors/tech/",
+                "label": "قطاع التقنية والبرمجيات",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تحسين محركات البحث للمواقع التقنية والبرمجيات - سيو هاوس",
+                        "new": "تحسين محركات البحث للمواقع التقنية والبرمجيات - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نساعد شركات التقنية والبرمجيات على بناء ظهور أقوى وجذب عملاء محتملين عبر تحليل واضح ومحتوى متخصص واستراتيجية تنافسية مناسبة للقطاع.",
+                        "new": "نساعد شركات التقنية والبرمجيات على بناء ظهور أقوى وجذب عملاء محتملين عبر تحليل واضح ومحتوى متخصص واستراتيجية تنافسية مناسبة للقطاع.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/sectors/tourism/",
+                "label": "قطاع السياحة والسفر",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تحسين محركات البحث لمواقع السياحة والسفر |",
+                        "new": "تحسين محركات البحث لمواقع السياحة والسفر |",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نقدم حلول نمو رقمي لشركات السياحة والسفر تساعدها على الظهور أمام العملاء المناسبين وزيادة الحجوزات والاستفسارات عبر صفحات ومحتوى موجه.",
+                        "new": "نقدم حلول نمو رقمي لشركات السياحة والسفر تساعدها على الظهور أمام العملاء المناسبين وزيادة الحجوزات والاستفسارات عبر صفحات ومحتوى موجه.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/sectors/health/",
+                "label": "قطاع الصحة والطب",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تحسين محركات البحث للمواقع الطبية - سيو هاوس",
+                        "new": "تحسين محركات البحث للمواقع الطبية - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نساعد العيادات والمراكز الطبية على الظهور أمام الجمهور المناسب وزيادة الحجوزات والاستفسارات عبر محتوى وصفحات واستراتيجية مناسبة للقطاع الصحي.",
+                        "new": "نساعد العيادات والمراكز الطبية على الظهور أمام الجمهور المناسب وزيادة الحجوزات والاستفسارات عبر محتوى وصفحات واستراتيجية مناسبة للقطاع الصحي.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/sectors/real-estate/",
+                "label": "قطاع العقارات والبناء",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تحسين محركات البحث لمواقع العقارات والمقاولات - سيو هاوس",
+                        "new": "تحسين محركات البحث لمواقع العقارات والمقاولات - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نساعد شركات العقارات والمقاولات على تحسين الظهور للكلمات المهمة وجذب عملاء أكثر عبر صفحات ومحتوى واستراتيجية نمو تناسب طبيعة القطاع.",
+                        "new": "نساعد شركات العقارات والمقاولات على تحسين الظهور للكلمات المهمة وجذب عملاء أكثر عبر صفحات ومحتوى واستراتيجية نمو تناسب طبيعة القطاع.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/sectors/legal/",
+                "label": "قطاع القانون والاستشارات",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تحسين محركات البحث لمواقع المحاماة - سيو هاوس",
+                        "new": "تحسين محركات البحث لمواقع المحاماة - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نساعد مكاتب المحاماة والاستشارات على زيادة الظهور أمام العملاء المحتملين وبناء حضور رقمي أكثر ثقة وتأثيرًا عبر صفحات ومحتوى مناسبين.",
+                        "new": "نساعد مكاتب المحاماة والاستشارات على زيادة الظهور أمام العملاء المحتملين وبناء حضور رقمي أكثر ثقة وتأثيرًا عبر صفحات ومحتوى مناسبين.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/seo/content/",
+                "label": "محتوى السيو",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "خدمة كتابة محتوي يساعد على الظهور والتحويل | سيو هاوس",
+                        "new": "خدمة كتابة محتوي يساعد على الظهور والتحويل | سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نكتب محتوى مدروسًا يساعد الشركات والمتاجر على استهداف الكلمات المناسبة وبناء صفحات ومقالات ترفع الظهور وتحوّل الزيارات إلى فرص ومبيعات.",
+                        "new": "نكتب محتوى مدروسًا يساعد الشركات والمتاجر على استهداف الكلمات المناسبة وبناء صفحات ومقالات ترفع الظهور وتحوّل الزيارات إلى فرص ومبيعات.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/results/",
+                "label": "نتائج الأعمال",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "نتائج الأعمال - سيو هاوس",
+                        "new": "نتائج الأعمال - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نتائج الأعمال Archive - سيو هاوس",
+                        "new": "نتائج الأعمال Archive - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/web-design/wordpress/",
+                "label": "ووردبريس",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تصميم مواقع ووردبريس مرنة وسهلة الإدارة - سيو هاوس",
+                        "new": "تصميم مواقع ووردبريس مرنة وسهلة الإدارة - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نصمم مواقع ووردبريس احترافية سريعة ومرنة وسهلة الإدارة، تساعد الشركات على تطوير حضورها الرقمي وبناء موقع قابل للنمو والتوسع.",
+                        "new": "نصمم مواقع ووردبريس احترافية سريعة ومرنة وسهلة الإدارة، تساعد الشركات على تطوير حضورها الرقمي وبناء موقع قابل للنمو والتوسع.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/stores/woocommerce/",
+                "label": "ووكومرس",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تصميم متاجر ووكومرس | سيو هاوس",
+                        "new": "تصميم متاجر ووكومرس | سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نصمم متاجر ووكومرس بشكل احترافي يساعدك على إدارة المنتجات بسهولة وتحسين تجربة الشراء وبناء متجر مرن يدعم النمو والتحويل.",
+                        "new": "نصمم متاجر ووكومرس بشكل احترافي يساعدك على إدارة المنتجات بسهولة وتحسين تجربة الشراء وبناء متجر مرن يدعم النمو والتحويل.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/services/web-design/webflow/",
+                "label": "ويب فلو",
+                "type": "page",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "تصميم مواقع ويب فلو مناسبة للشركات - سيو هاوس",
+                        "new": "تصميم مواقع ويب فلو مناسبة للشركات - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "نقدم خدمة تصميم مواقع ويب فلو للشركات التي تحتاج إلى موقع حديث وسريع ومرن، مع تجربة استخدام قوية وهيكل واضح يدعم النمو الرقمي.",
+                        "new": "نقدم خدمة تصميم مواقع ويب فلو للشركات التي تحتاج إلى موقع حديث وسريع ومرن، مع تجربة استخدام قوية وهيكل واضح يدعم النمو الرقمي.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/blog/fix-404-not-found/",
+                "label": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزانية الزحف وتجربة المستخدم",
+                "type": "post",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزانية الزحف وتجربة المستخدم - سيو هاوس",
+                        "new": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزانية الزحف وتجربة المستخدم - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "في عالم تحسين محركات البحث الفني (Technical SEO)، لا تعد الأخطاء البرمجية مجرد رموز عابرة تظهر للمستخدم، بل هي مؤشرات حيوية تعكس مدى صحة البنية التحتية للموقع",
+                        "new": "في عالم تحسين محركات البحث الفني (Technical SEO)، لا تعد الأخطاء البرمجية مجرد رموز عابرة تظهر للمستخدم، بل هي مؤشرات حيوية تعكس مدى صحة البنية التحتية للموقع",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/blog/how-to-build-backlinks-correctly/",
+                "label": "كيفية بناء باك لينك موقعك بطريقة صحيحة | دليل عملي من سيو هاوس",
+                "type": "post",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "كيفية بناء باك لينك موقعك بطريقة صحيحة | دليل عملي من سيو هاوس",
+                        "new": "كيفية بناء باك لينك موقعك بطريقة صحيحة | دليل عملي من سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "تعلّم كيفية بناء باك لينك لموقعك بطريقة صحيحة عبر استراتيجية آمنة وعملية: اختيار الصفحات، تحليل المنافسين، صناعة أصول قابلة للربط، والتواصل الذكي دون مخالفات.",
+                        "new": "تعلّم كيفية بناء باك لينك لموقعك بطريقة صحيحة عبر استراتيجية آمنة وعملية: اختيار الصفحات، تحليل المنافسين، صناعة أصول قابلة للربط، والتواصل الذكي دون مخالفات.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/blog/why-is-my-website-not-showing-in-search-engines/",
+                "label": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول",
+                "type": "post",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول - سيو هاوس",
+                        "new": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "عدم ظهور الموقع في محركات البحث من أكثر المشاكل التي تسبب قلقًا لأصحاب المواقع، خصوصًا بعد إطلاق موقع جديد أو نشر صفحات مهمة وانتظار ظهورها في نتائج جوجل دون",
+                        "new": "عدم ظهور الموقع في محركات البحث من أكثر المشاكل التي تسبب قلقًا لأصحاب المواقع، خصوصًا بعد إطلاق موقع جديد أو نشر صفحات مهمة وانتظار ظهورها في نتائج جوجل دون",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+                "label": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة",
+                "type": "post",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة - سيو هاوس",
+                        "new": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "مع تغير شكل نتائج البحث في Google، لم يعد ظهور الموقع مقتصرًا على الروابط التقليدية التي اعتاد المستخدمون رؤيتها في صفحة النتائج.",
+                        "new": "مع تغير شكل نتائج البحث في Google، لم يعد ظهور الموقع مقتصرًا على الروابط التقليدية التي اعتاد المستخدمون رؤيتها في صفحة النتائج.",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/blog/category/uncategorized/",
+                "label": "Uncategorized",
+                "type": "category",
+                "http": "200/200",
+                "robots": "nofollow, noindex",
+                "fields": {
+                    "title": {
+                        "old": "Uncategorized - سيو هاوس",
+                        "new": "Uncategorized - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "",
+                        "new": "",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/blog/category/off-page-seo/",
+                "label": "السيو الخارجي",
+                "type": "category",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "سيو خارجي - سيو هاوس",
+                        "new": "سيو خارجي - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "",
+                        "new": "",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            },
+            {
+                "path": "/blog/category/technical-seo/",
+                "label": "سيو تقني",
+                "type": "category",
+                "http": "200/200",
+                "robots": "noindex, nofollow",
+                "fields": {
+                    "title": {
+                        "old": "سيو تقني - سيو هاوس",
+                        "new": "سيو تقني - سيو هاوس",
+                        "state": "match",
+                        "reason": ""
+                    },
+                    "description": {
+                        "old": "",
+                        "new": "",
+                        "state": "match",
+                        "reason": ""
+                    }
+                },
+                "state": "match"
+            }
+        ]
+    }
+}

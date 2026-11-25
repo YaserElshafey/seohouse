@@ -1,0 +1,308 @@
+{
+ "id": 27,
+ "key": "products",
+ "title": "Product Upload",
+ "slug": "products",
+ "parent": 67,
+ "path": "/services/products/",
+ "template": "page-templates/products.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "Product Upload Service for Online Stores | SEO House",
+  "sh_seo_description": "Product upload service for online stores on Salla, Zid, Shopify and WooCommerce: names, descriptions, photos, prices, variants, categories, Google-ready.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Product upload and store content management",
+  "sh_crumb": "Product Upload & Content Management",
+  "rank_math_title": "Product Upload Service for Online Stores | SEO House",
+  "rank_math_description": "Product upload service for online stores on Salla, Zid, Shopify and WooCommerce: names, descriptions, photos, prices, variants, categories, Google-ready.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "product upload service for online stores"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Product upload & content management",
+   "title": "Product upload and organization",
+   "text": "We add your products with their data, images and categories in an organized way, so shoppers can find the right product easily and search engines can read its pages.",
+   "link_label": "Book a consultation",
+   "link_label_2": "The data flow",
+   "eyebrow_2": "Illustrative example",
+   "label": "Men's clothing → Shirts",
+   "heading": "Men's regular-fit cotton shirt",
+   "items": [
+    [],
+    []
+   ],
+   "eyebrow_3": "Add to cart",
+   "label_2": "Search title, description and structured product data added"
+  },
+  {
+   "acf_fc_layout": "flow",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "One product, from start to publishing",
+   "title": "From supplier file to a complete product page",
+   "text": "An illustrative example of a single product, not a real client's product. We apply the same steps to your whole catalog through the platform dashboard or import files.",
+   "eyebrow_2": "01",
+   "heading": "Source file",
+   "items": [
+    {
+     "items": [
+      {
+       "label": "sku_name"
+      },
+      {
+       "label": "clr"
+      },
+      {
+       "label": "qty"
+      }
+     ],
+     "variant": "v1"
+    },
+    {
+     "items": [
+      {
+       "label": "prod-1123-XL"
+      },
+      {
+       "label": "blk"
+      },
+      {
+       "label": "14"
+      }
+     ],
+     "variant": "v2"
+    },
+    {
+     "items": [
+      {
+       "label": "prod-1123-xl"
+      },
+      {
+       "label": "Black"
+      },
+      {
+       "label": "—"
+      }
+     ],
+     "variant": "v3"
+    },
+    {
+     "items": [
+      {
+       "label": "prod-1124-L"
+      },
+      {
+       "label": "wht"
+      },
+      {
+       "label": "8"
+      }
+     ],
+     "variant": "v2"
+    }
+   ],
+   "label": "Duplicate names, colors in different formats, missing quantities, and no description or category.",
+   "eyebrow_3": "02",
+   "heading_2": "Product editor",
+   "items_2": [
+    {
+     "label": "Name",
+     "eyebrow": "Men's cotton shirt"
+    },
+    {
+     "label": "Variants",
+     "eyebrow": "Black, White · L, XL"
+    },
+    {
+     "label": "Category",
+     "eyebrow": "Men's clothing → Shirts"
+    },
+    {
+     "label": "Inventory",
+     "eyebrow": "In stock by size"
+    },
+    {
+     "label": "Search title",
+     "eyebrow": "Men's regular-fit cotton shirt"
+    }
+   ],
+   "eyebrow_4": "03",
+   "heading_3": "Product page",
+   "heading_4": "Men's regular-fit cotton shirt",
+   "label_2": "Appears in color and size filters",
+   "label_3": "store.example / men / shirts / cotton-shirt",
+   "eyebrow_5": "Men's regular-fit cotton shirt"
+  },
+  {
+   "acf_fc_layout": "fields",
+   "sh_hide": 0,
+   "eyebrow": "What every product gets",
+   "title": "Seven fields that decide whether a product gets found and sold",
+   "items": [
+    {
+     "icon": "i59b0f2e2",
+     "heading": "Name",
+     "label": "Consistent and clear, matching what shoppers type."
+    },
+    {
+     "icon": "if6ca4232",
+     "heading": "Description",
+     "label": "Concise yet detailed, based on the actual specifications."
+    },
+    {
+     "icon": "ia1c1b0c9",
+     "heading": "Images",
+     "label": "Sizes, file names and alt text."
+    },
+    {
+     "icon": "if72944f1",
+     "heading": "Variants",
+     "label": "Color, size and material, linked to filters."
+    },
+    {
+     "icon": "i8105c025",
+     "heading": "Category",
+     "label": "A clear category and subcategory."
+    },
+    {
+     "icon": "icb2630a2",
+     "heading": "Price & availability",
+     "label": "Up-to-date prices, quantities and stock status."
+    },
+    {
+     "icon": "i28bbb60f",
+     "heading": "Search data",
+     "label": "Title, description, URL and structured data."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "process",
+   "sh_hide": 0,
+   "eyebrow": "How we work",
+   "title": "From file to publishing",
+   "items": [
+    {
+     "heading": "Receiving the data",
+     "label": "Your product file and images, plus a check of what's missing."
+    },
+    {
+     "heading": "Cleanup",
+     "label": "Standardizing names and units and removing duplicates."
+    },
+    {
+     "heading": "Enrichment",
+     "label": "Descriptions, attributes and images, linked to filters."
+    },
+    {
+     "heading": "Categorization",
+     "label": "Assigning products to categories and subcategories."
+    },
+    {
+     "heading": "Publishing & review",
+     "label": "Uploading to the platform, then reviewing a sample and checking that products appear correctly."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "platforms",
+   "sh_hide": 0,
+   "eyebrow": "Platforms",
+   "title": "We upload products inside your store's platform",
+   "link": 69,
+   "logo": "assets/platforms/official/salla.svg",
+   "logo_image": null,
+   "heading": "Salla",
+   "label": "Direct entry or via an import file, with categories and options.",
+   "eyebrow_2": "Salla page →",
+   "link_2": 75,
+   "heading_2": "Zid",
+   "label_2": "Catalog, options and inventory, within what the platform dashboard allows.",
+   "eyebrow_3": "Zid page →",
+   "items": [
+    {
+     "link": 71,
+     "logo": "assets/platforms/official/shopify.svg",
+     "logo_image": null,
+     "heading": "Shopify",
+     "label": "Products, variants and collections, with bulk import.",
+     "eyebrow": "Shopify page →"
+    },
+    {
+     "link": 73,
+     "logo": "assets/platforms/official/woocommerce.svg",
+     "logo_image": null,
+     "heading": "WooCommerce",
+     "label": "Simple and variable products and attributes inside WordPress.",
+     "eyebrow": "WooCommerce page →"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "Online store design & development",
+     "link": 77
+    },
+    {
+     "label": "E-commerce sector",
+     "link": 31
+    },
+    {
+     "label": "All services",
+     "link": 67
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Product upload FAQ",
+   "items": [
+    {
+     "question": "How is this service different from store design?",
+     "answer": "Store design builds the storefront and the purchase path. This service handles the content that runs inside it: adding products, their data and categories in an organized way."
+    },
+    {
+     "question": "What do you need from me to get started?",
+     "answer": "A product file in whatever format you have, the product images, and access to your store dashboard. We identify anything that's missing and agree with you on how to provide it."
+    },
+    {
+     "question": "Do you write product descriptions?",
+     "answer": "Yes. We write concise descriptions based on each product's actual specifications, without exaggeration or unverified information."
+    },
+    {
+     "question": "Do you edit product images?",
+     "answer": "We adjust sizes, backgrounds and file names to suit your platform, and we never create fake product images."
+    },
+    {
+     "question": "How many products can you upload?",
+     "answer": "It depends on how complete your data is and how many variants your products have. We set the pace after reviewing a sample of your file."
+    },
+    {
+     "question": "Do you work on all platforms?",
+     "answer": "We work on Salla, Zid, Shopify and WooCommerce, either directly through the dashboard or via import files."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "products",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

@@ -1,0 +1,4 @@
+const { chromium } = require('/opt/node-tools/node_modules/playwright');
+(async()=>{const b=await chromium.launch();for(const w of [1440,768,390,360]){const p=await (await b.newContext({viewport:{width:w,height:900}})).newPage();await p.goto('http://127.0.0.1:8090/contact/',{waitUntil:'networkidle'});
+const s=p.locator('section[data-screen-label="Location"]');await s.scrollIntoViewIfNeeded();await p.waitForTimeout(800);await s.screenshot({path:`runs/r277/location-${w}.png`});
+console.log(w, JSON.stringify(await s.evaluate(e=>{const m=e.querySelector('iframe').getBoundingClientRect(),i=e.querySelector('.sh-ct-loc__info').getBoundingClientRect(),c=e.querySelector('.sh-ct-loc__inner').getBoundingClientRect();return {map:[Math.round(m.width),Math.round(m.height)],info:Math.round(i.width),inside:m.left>=c.left&&m.right<=c.right}})));}await b.close();})();

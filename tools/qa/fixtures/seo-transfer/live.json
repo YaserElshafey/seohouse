@@ -1,0 +1,394 @@
+[
+ {
+  "path": "/",
+  "code": 200,
+  "title": "سيو هاوس | نساعد الشركات والمتاجر على النمو",
+  "description": "سيو هاوس شركة سيو متخصصة في زيادة الظهور والعملاء والمبيعات للشركات والمتاجر عبر استراتيجيات واضحة ومحتوى مدروس ونتائج قابلة للقياس.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/"
+ },
+ {
+  "path": "/about/",
+  "code": 200,
+  "title": "عن سيو هاوس | فريق متخصص في نمو المواقع والمتاجر",
+  "description": "تعرف على سيو هاوس وفريق العمل الذي يساعد الشركات والمتاجر على بناء نمو رقمي مستدام من خلال المحتوى والتحليل واستراتيجيات الظهور في محركات البحث.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/about/"
+ },
+ {
+  "path": "/blog/",
+  "code": 200,
+  "title": "مدونة سيو هاوس | مكتبة من المقالات في السيو ونمو المواقع",
+  "description": "اقرأ مقالات سيو هاوس عن السيو والمحتوى وتحليل الأداء ونمو المواقع والمتاجر، مع أفكار عملية تساعدك على تحسين الظهور وزيادة العملاء.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/blog/"
+ },
+ {
+  "path": "/blog/category/off-page-seo/",
+  "code": 200,
+  "title": "سيو خارجي - سيو هاوس",
+  "description": "",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/blog/category/off-page-seo/"
+ },
+ {
+  "path": "/blog/category/technical-seo/",
+  "code": 200,
+  "title": "سيو تقني - سيو هاوس",
+  "description": "",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/blog/category/technical-seo/"
+ },
+ {
+  "path": "/blog/fix-404-not-found/",
+  "code": 200,
+  "title": "الدليل الفني العميق: حل مشكلة 404 Not Found والتحكم في ميزانية الزحف وتجربة المستخدم - سيو هاوس",
+  "description": "في عالم تحسين محركات البحث الفني (Technical SEO)، لا تعد الأخطاء البرمجية مجرد رموز عابرة تظهر للمستخدم، بل هي مؤشرات حيوية تعكس مدى صحة البنية التحتية للموقع",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/blog/fix-404-not-found/"
+ },
+ {
+  "path": "/blog/how-to-build-backlinks-correctly/",
+  "code": 200,
+  "title": "كيفية بناء باك لينك موقعك بطريقة صحيحة | دليل عملي من سيو هاوس",
+  "description": "تعلّم كيفية بناء باك لينك لموقعك بطريقة صحيحة عبر استراتيجية آمنة وعملية: اختيار الصفحات، تحليل المنافسين، صناعة أصول قابلة للربط، والتواصل الذكي دون مخالفات.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/blog/how-to-build-backlinks-correctly/"
+ },
+ {
+  "path": "/blog/why-is-my-website-not-showing-in-search-engines/",
+  "code": 200,
+  "title": "لماذا لا يظهر موقعك في محركات البحث؟ الأسباب والحلول - سيو هاوس",
+  "description": "عدم ظهور الموقع في محركات البحث من أكثر المشاكل التي تسبب قلقًا لأصحاب المواقع، خصوصًا بعد إطلاق موقع جديد أو نشر صفحات مهمة وانتظار ظهورها في نتائج جوجل دون",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/blog/why-is-my-website-not-showing-in-search-engines/"
+ },
+ {
+  "path": "/blog/هل-يظهر-موقعك-داخل-إجابات-جوجل-بالذكاء/",
+  "code": 200,
+  "title": "هل يظهر موقعك داخل إجابات جوجل بالذكاء الاصطناعي؟ دليلك لفهم تقارير Search Console الجديدة - سيو هاوس",
+  "description": "مع تغير شكل نتائج البحث في Google، لم يعد ظهور الموقع مقتصرًا على الروابط التقليدية التي اعتاد المستخدمون رؤيتها في صفحة النتائج.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/blog/%d9%87%d9%84-%d9%8a%d8%b8%d9%87%d8%b1-%d9%85%d9%88%d9%82%d8%b9%d9%83-%d8%af%d8%a7%d8%ae%d9%84-%d8%a5%d8%ac%d8%a7%d8%a8%d8%a7%d8%aa-%d8%ac%d9%88%d8%ac%d9%84-%d8%a8%d8%a7%d9%84%d8%b0%d9%83%d8%a7%d8%a1/"
+ },
+ {
+  "path": "/contact/",
+  "code": 200,
+  "title": "اتصل بنا | احجز استشارة مع سيو هاوس",
+  "description": "تواصل مع سيو هاوس واحجز استشارة لموقعك أو متجرك، واكتشف الفرص الضائعة وخطوات النمو المناسبة لزيادة الظهور والعملاء والمبيعات.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/contact/"
+ },
+ {
+  "path": "/pricing/",
+  "code": 200,
+  "title": "اسعار باقات السيو - سيو هاوس",
+  "description": "",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/pricing/"
+ },
+ {
+  "path": "/privacy-policy/",
+  "code": 200,
+  "title": "سياسة الخصوصية - سيو هاوس",
+  "description": "نحن في سيو هاوس نلتزم بحماية خصوصية زوار الموقع والعملاء، ونعمل على التعامل مع البيانات الشخصية بمسؤولية وشفافية. توضح هذه الصفحة كيفية جمع المعلومات",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/privacy-policy/"
+ },
+ {
+  "path": "/results/",
+  "code": 200,
+  "title": "نتائج الأعمال - سيو هاوس",
+  "description": "نتائج الأعمال Archive - سيو هاوس",
+  "robots": "index, follow",
+  "canonical": "https://seohouse.agency/results/"
+ },
+ {
+  "path": "/results/تستتست/",
+  "code": 200,
+  "title": "قطاع التعليم والتدريب - سيو هاوس",
+  "description": "نمو في عدد الليدز الشهرية لمنصة تدريب — 14 كلمة مفتاحية تنافسية في الصفحة الأولى.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/results/%d8%aa%d8%b3%d8%aa%d8%aa%d8%b3%d8%aa/"
+ },
+ {
+  "path": "/results/قطاع-التجارة-الإلكترونية/",
+  "code": 200,
+  "title": "قطاع التجارة الإلكترونية - سيو هاوس",
+  "description": "زيادة في المبيعات العضوية لمتجر سلة مع خفض الاعتماد على Google Ads بنسبة 45%.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%aa%d8%ac%d8%a7%d8%b1%d8%a9-%d8%a7%d9%84%d8%a5%d9%84%d9%83%d8%aa%d8%b1%d9%88%d9%86%d9%8a%d8%a9/"
+ },
+ {
+  "path": "/results/قطاع-الصحة-والطب/",
+  "code": 200,
+  "title": "قطاع الصحة والطب - سيو هاوس",
+  "description": "نمو في الزيارات العضوية لعيادة طبية متخصصة خلال 8 أشهر — انتقلت من المرتبة الـ47 إلى الأولى على كلماتها الرئيسية.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/results/%d9%82%d8%b7%d8%a7%d8%b9-%d8%a7%d9%84%d8%b5%d8%ad%d8%a9-%d9%88%d8%a7%d9%84%d8%b7%d8%a8/"
+ },
+ {
+  "path": "/sectors/",
+  "code": 200,
+  "title": "القطاعات - سيو هاوس",
+  "description": "القطاعات Archive - سيو هاوس",
+  "robots": "index, follow",
+  "canonical": "https://seohouse.agency/sectors/"
+ },
+ {
+  "path": "/sectors/ecommerce/",
+  "code": 200,
+  "title": "تحسين محركات البحث للمتاجر الإلكترونية - سيو هاوس",
+  "description": "نساعد المتاجر الإلكترونية على زيادة الظهور والزيارات والطلبات عبر منهجية سيو مبنية على صفحات المنتجات والتصنيفات وتجربة الشراء والنمو.",
+  "robots": "follow, noindex",
+  "canonical": ""
+ },
+ {
+  "path": "/sectors/education/",
+  "code": 200,
+  "title": "تحسين محركات البحث للمواقع التعليمية والتدريبية | سيو هاوس",
+  "description": "نساعد المعاهد والمنصات التعليمية على زيادة الظهور وجذب الطلاب والعملاء عبر استراتيجية محتوى ونمو تناسب طبيعة قطاع التعليم والتدريب.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/sectors/education/"
+ },
+ {
+  "path": "/sectors/food/",
+  "code": 200,
+  "title": "تحسين محركات البحث للمطاعم - سيو هاوس",
+  "description": "نساعد المطاعم والعلامات الغذائية على زيادة الظهور المحلي وجذب عملاء أكثر عبر محتوى وصفحات واستراتيجية نمو تناسب طبيعة القطاع.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/sectors/food/"
+ },
+ {
+  "path": "/sectors/health/",
+  "code": 200,
+  "title": "تحسين محركات البحث للمواقع الطبية - سيو هاوس",
+  "description": "نساعد العيادات والمراكز الطبية على الظهور أمام الجمهور المناسب وزيادة الحجوزات والاستفسارات عبر محتوى وصفحات واستراتيجية مناسبة للقطاع الصحي.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/sectors/health/"
+ },
+ {
+  "path": "/sectors/legal/",
+  "code": 200,
+  "title": "تحسين محركات البحث لمواقع المحاماة - سيو هاوس",
+  "description": "نساعد مكاتب المحاماة والاستشارات على زيادة الظهور أمام العملاء المحتملين وبناء حضور رقمي أكثر ثقة وتأثيرًا عبر صفحات ومحتوى مناسبين.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/sectors/legal/"
+ },
+ {
+  "path": "/sectors/real-estate/",
+  "code": 200,
+  "title": "تحسين محركات البحث لمواقع العقارات والمقاولات - سيو هاوس",
+  "description": "نساعد شركات العقارات والمقاولات على تحسين الظهور للكلمات المهمة وجذب عملاء أكثر عبر صفحات ومحتوى واستراتيجية نمو تناسب طبيعة القطاع.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/sectors/real-estate/"
+ },
+ {
+  "path": "/sectors/tech/",
+  "code": 200,
+  "title": "تحسين محركات البحث للمواقع التقنية والبرمجيات - سيو هاوس",
+  "description": "نساعد شركات التقنية والبرمجيات على بناء ظهور أقوى وجذب عملاء محتملين عبر تحليل واضح ومحتوى متخصص واستراتيجية تنافسية مناسبة للقطاع.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/sectors/tech/"
+ },
+ {
+  "path": "/sectors/tourism/",
+  "code": 200,
+  "title": "تحسين محركات البحث لمواقع السياحة والسفر |",
+  "description": "نقدم حلول نمو رقمي لشركات السياحة والسفر تساعدها على الظهور أمام العملاء المناسبين وزيادة الحجوزات والاستفسارات عبر صفحات ومحتوى موجه.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/sectors/tourism/"
+ },
+ {
+  "path": "/services/",
+  "code": 200,
+  "title": "الخدمات - سيو هاوس",
+  "description": "",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/"
+ },
+ {
+  "path": "/services/products/",
+  "code": 200,
+  "title": "رفع المنتجات للمتاجر وتنظيم ورفع المنتجات باحتراف | سيو هاوس",
+  "description": "نقدم خدمة رفع المنتجات للمتاجر لمساعدتك في تنظيم البيانات والصور والأوصاف والتصنيفات بشكل احترافي يسرّع الإطلاق ويحسن تجربة التسوق.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/products/"
+ },
+ {
+  "path": "/services/seo/",
+  "code": 200,
+  "title": "تحسين محركات البحث في الوطن العربي والشرق الاوسط | سيو هاوس",
+  "description": "نقدم خدمات تحسين محركات البحث للشركات والمتاجر التي تريد زيادة الظهور وجذب عملاء أكثر وبناء نمو مستدام من خلال خطة واضحة ونتائج قابلة للقياس.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/seo/"
+ },
+ {
+  "path": "/services/seo/backlinks/",
+  "code": 200,
+  "title": "خدمة بناء الباك لينك والجيست بوست | سيو هاوس",
+  "description": "نقدم خدمة بناء الروابط الخارجية عبر استراتيجية مدروسة تساعد على دعم الصفحات المهمة في موقعك وزيادة الثقة وتحسين فرص المنافسة في نتائج البحث.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/seo/backlinks/"
+ },
+ {
+  "path": "/services/seo/consulting/",
+  "code": 200,
+  "title": "خدمة استشارات السيو لفهم الأداء واتخاذ القرارات - سيو هاوس",
+  "description": "احجز استشارات السيو لفهم أرقام الزيارات والعملاء والمبيعات ومراجعة أداء موقعك أو خطتك الحالية واتخاذ قرارات أوضح مبنية على البيانات.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/seo/consulting/"
+ },
+ {
+  "path": "/services/seo/content/",
+  "code": 200,
+  "title": "خدمة كتابة محتوي يساعد على الظهور والتحويل | سيو هاوس",
+  "description": "نكتب محتوى مدروسًا يساعد الشركات والمتاجر على استهداف الكلمات المناسبة وبناء صفحات ومقالات ترفع الظهور وتحوّل الزيارات إلى فرص ومبيعات.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/seo/content/"
+ },
+ {
+  "path": "/services/seo/egypt/",
+  "code": 200,
+  "title": "تحسين محركات البحث في مصر - سيو هاوس",
+  "description": "",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/seo/egypt/"
+ },
+ {
+  "path": "/services/seo/ksa/",
+  "code": 200,
+  "title": "تحسين محركات البحث في السعودية - سيو هاوس",
+  "description": "",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/seo/ksa/"
+ },
+ {
+  "path": "/services/seo/on-page/",
+  "code": 200,
+  "title": "السيو الداخلي - سيو هاوس",
+  "description": "",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/seo/on-page/"
+ },
+ {
+  "path": "/services/seo/stores-seo/",
+  "code": 301,
+  "title": "",
+  "description": "",
+  "robots": "",
+  "canonical": ""
+ },
+ {
+  "path": "/services/seo/technical/",
+  "code": 200,
+  "title": "السيو التقني - سيو هاوس",
+  "description": "",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/seo/technical/"
+ },
+ {
+  "path": "/services/seo/uae/",
+  "code": 200,
+  "title": "تحسين محركات البحث في الامارات - سيو هاوس",
+  "description": "",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/seo/uae/"
+ },
+ {
+  "path": "/services/stores/",
+  "code": 200,
+  "title": "إنشاء وتصميم متاجر إلكترونية | سيو هاوس",
+  "description": "ننشئ ونصمم متاجر إلكترونية تساعدك على عرض منتجاتك باحتراف وتحسين تجربة الشراء ورفع التحويلات وبناء متجر جاهز للنمو والمبيعات.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/stores/"
+ },
+ {
+  "path": "/services/stores/salla/",
+  "code": 200,
+  "title": "تصميم متاجر سلة | سيو هاوس",
+  "description": "نصمم متاجر سلة بشكل احترافي يساعدك على تنظيم المنتجات وتحسين تجربة الشراء وبناء متجر واضح وسريع وجاهز لزيادة المبيعات.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/stores/salla/"
+ },
+ {
+  "path": "/services/stores/shopify/",
+  "code": 200,
+  "title": "تصميم متاجر شوبيفاي | سيو هاوس",
+  "description": "نصمم متاجر شوبيفاي للعلامات التي تبحث عن متجر احترافي منظم وقابل للتوسع، مع تجربة شراء قوية وصفحات تساعد على رفع المبيعات.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/stores/shopify/"
+ },
+ {
+  "path": "/services/stores/woocommerce/",
+  "code": 200,
+  "title": "تصميم متاجر ووكومرس | سيو هاوس",
+  "description": "نصمم متاجر ووكومرس بشكل احترافي يساعدك على إدارة المنتجات بسهولة وتحسين تجربة الشراء وبناء متجر مرن يدعم النمو والتحويل.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/stores/woocommerce/"
+ },
+ {
+  "path": "/services/stores/zid/",
+  "code": 200,
+  "title": "تصميم متاجر زد | سيو هاوس",
+  "description": "نقدم تصميم متجر زد للعلامات التجارية التي تريد متجرًا سريعًا وواضحًا وجاهزًا للبيع، مع تجربة استخدام قوية تدعم التوسع والمبيعات.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/stores/zid/"
+ },
+ {
+  "path": "/services/web-design/",
+  "code": 200,
+  "title": "إنشاء وتصميم مواقع احترافية تدعم النمو والظهور - سيو هاوس",
+  "description": "ننشئ ونصمم مواقع احترافية تساعد الشركات على تقديم خدماتها بشكل أوضح وتحسين تجربة المستخدم وبناء صفحات تدعم الظهور والتحويل والنمو.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/web-design/"
+ },
+ {
+  "path": "/services/web-design/custom-dev/",
+  "code": 200,
+  "title": "برمجة مواقع خاصة تتجاوز القوالب الجاهزة - سيو هاوس",
+  "description": "نقدم برمجة مواقع خاصة للشركات التي تحتاج إلى حلول مخصصة تناسب احتياجاتها التشغيلية والتسويقية بعيدًا عن القيود التقليدية للقوالب الجاهزة.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/web-design/custom-dev/"
+ },
+ {
+  "path": "/services/web-design/react-next/",
+  "code": 200,
+  "title": "برمجة مواقع React & Next | سيو هاوس",
+  "description": "نطور مواقع باستخدام React وNext للشركات التي تحتاج إلى أداء أعلى وتجربة أسرع وبنية تقنية متقدمة تدعم التوسع والنمو الرقمي.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/web-design/react-next/"
+ },
+ {
+  "path": "/services/web-design/webflow/",
+  "code": 200,
+  "title": "تصميم مواقع ويب فلو مناسبة للشركات - سيو هاوس",
+  "description": "نقدم خدمة تصميم مواقع ويب فلو للشركات التي تحتاج إلى موقع حديث وسريع ومرن، مع تجربة استخدام قوية وهيكل واضح يدعم النمو الرقمي.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/web-design/webflow/"
+ },
+ {
+  "path": "/services/web-design/wordpress/",
+  "code": 200,
+  "title": "تصميم مواقع ووردبريس مرنة وسهلة الإدارة - سيو هاوس",
+  "description": "نصمم مواقع ووردبريس احترافية سريعة ومرنة وسهلة الإدارة، تساعد الشركات على تطوير حضورها الرقمي وبناء موقع قابل للنمو والتوسع.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/services/web-design/wordpress/"
+ },
+ {
+  "path": "/team/",
+  "code": 200,
+  "title": "فريق العمل | خبراء النمو الرقمي والتحليل وإدارة المحتوي",
+  "description": "تعرف على فريق سيو هاوس من المتخصصين في المحتوى والتحليل وبناء النمو الرقمي للمواقع والمتاجر بخبرة عملية وفهم واضح لاحتياجات السوق.",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/team/"
+ },
+ {
+  "path": "/terms/",
+  "code": 200,
+  "title": "الشروط والأحكام - سيو هاوس",
+  "description": "مرحبًا بك في موقع سيو هاوس. إن استخدامك لهذا الموقع أو تصفحك له أو تقديمك لأي طلب من خلاله يعني موافقتك على الالتزام بهذه الشروط والأحكام. يرجى قراءة هذه",
+  "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+  "canonical": "https://seohouse.agency/terms/"
+ }
+]

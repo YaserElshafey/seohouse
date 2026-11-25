@@ -1,0 +1,385 @@
+{
+ "id": 57,
+ "key": "seo-ksa",
+ "title": "Saudi Arabia SEO",
+ "slug": "ksa",
+ "parent": 65,
+ "path": "/services/seo/ksa/",
+ "template": "page-templates/seo-ksa.php",
+ "status": "publish",
+ "lang": "",
+ "seo": {
+  "sh_seo_title": "SEO Company in Saudi Arabia | SEO House",
+  "sh_seo_description": "SEO House is an SEO company in Saudi Arabia helping businesses rank on Google, from competitor and content analysis to technical fixes and lead tracking.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "auto",
+  "sh_schema_service": "",
+  "sh_crumb": "Saudi Arabia",
+  "rank_math_title": "SEO Company in Saudi Arabia | SEO House",
+  "rank_math_description": "SEO House is an SEO company in Saudi Arabia helping businesses rank on Google, from competitor and content analysis to technical fixes and lead tracking.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo company in saudi arabia"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "title": "SEO Company in Saudi Arabia",
+   "text": "Looking for an SEO company in Saudi Arabia? We help Saudi businesses and online stores reach their customers through search engines, with a plan built around their business and direct remote follow-up.",
+   "link_label": "Book a consultation",
+   "link_label_2": "How we work in the Saudi market",
+   "items": [
+    {
+     "label": "Search intent",
+     "variant": "v1"
+    },
+    {
+     "label": "The right page",
+     "variant": "v2"
+    },
+    {
+     "label": "Qualified visit",
+     "variant": "v3"
+    }
+   ],
+   "label": "Inquiry or order"
+  },
+  {
+   "acf_fc_layout": "client_logos",
+   "sh_hide": 0,
+   "text": "Companies that trust us"
+  },
+  {
+   "acf_fc_layout": "market",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "Understanding the Saudi market",
+   "title": "How do we read the Saudi market before changing your site?",
+   "text": "We start by understanding what customers search for and what they currently see in the results, then identify the pages and opportunities closest to driving a business result.",
+   "items": [
+    {
+     "heading": "We analyze demand",
+     "text": "We learn which services and products customers search for, and how they phrase the related questions and queries.",
+     "variant": "v1"
+    },
+    {
+     "heading": "We compare the competition",
+     "text": "We review the pages and sites that currently rank, identify why they outperform, and find the gaps you can take advantage of.",
+     "variant": "v2"
+    },
+    {
+     "heading": "We set priorities",
+     "text": "We rank pages and topics by how close they are to an inquiry, order or sale, not by search volume alone.",
+     "variant": "v2"
+    },
+    {
+     "heading": "We turn analysis into a plan",
+     "text": "We define what needs to be created or improved, and what should be measured during implementation.",
+     "variant": "v3"
+    }
+   ],
+   "heading": "Saudi market opportunity map",
+   "label": "Analysis phase output",
+   "items_2": [
+    {
+     "icon": "i16a8b069",
+     "text": "Priority pages",
+     "label": "Service and category pages closest to demand.",
+     "items": [
+      {
+       "eyebrow": "Service page"
+      },
+      {
+       "eyebrow": "Category page"
+      },
+      {
+       "eyebrow": "City page"
+      }
+     ]
+    },
+    {
+     "icon": "iad95b557",
+     "text": "Search intents",
+     "label": "Information, comparison, or readiness to get in touch.",
+     "items": [
+      {
+       "eyebrow": "Information"
+      },
+      {
+       "eyebrow": "Comparison"
+      },
+      {
+       "eyebrow": "Contact"
+      }
+     ]
+    },
+    {
+     "icon": "i3ea58866",
+     "text": "Content opportunities",
+     "label": "Questions and topics your site doesn't cover yet.",
+     "items": [
+      {
+       "eyebrow": "FAQ"
+      },
+      {
+       "eyebrow": "Guide"
+      },
+      {
+       "eyebrow": "Comparison"
+      }
+     ]
+    },
+    {
+     "icon": "i73a2c82d",
+     "text": "Key metrics",
+     "label": "Visibility, qualified traffic, inquiries.",
+     "items": [
+      {
+       "eyebrow": "Visibility"
+      },
+      {
+       "eyebrow": "Traffic"
+      },
+      {
+       "eyebrow": "Inquiries"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "saudi_case",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "eyebrow": "A result from the Saudi market",
+   "heading": "+432%",
+   "title": "Growth in organic search revenue",
+   "text": "An online store in the Saudi market. Revenue from the organic channel rose from SAR 19,956 to SAR 106,274 compared with the previous period.",
+   "items": [
+    {
+     "label": "Sector",
+     "heading": "E-commerce"
+    },
+    {
+     "label": "Market",
+     "heading": "Saudi Arabia"
+    },
+    {
+     "label": "Source",
+     "heading": "Google Analytics 4"
+    },
+    {
+     "label": "Period",
+     "heading": "Vs. previous period"
+    }
+   ],
+   "label": "Google Analytics",
+   "link": "uploads/02-case-organic-revenue-106274.webp",
+   "image": 101
+  },
+  {
+   "acf_fc_layout": "scope",
+   "sh_hide": 0,
+   "eyebrow": "What do we deliver for businesses in Saudi Arabia?",
+   "title": "End-to-end work, from research to measurement",
+   "items": [
+    {
+     "link": 63,
+     "heading": "Technical SEO",
+     "text": "Fixing crawling, indexing, speed and site architecture."
+    },
+    {
+     "link": 61,
+     "heading": "On-page SEO",
+     "text": "Optimizing pages, titles and internal links for search intent."
+    },
+    {
+     "link": 53,
+     "heading": "SEO content",
+     "text": "Creating content that meets customer needs and moves them to the right action."
+    },
+    {
+     "link": 49,
+     "heading": "Off-page SEO",
+     "text": "Strengthening your site's credibility with sources and links relevant to your market and industry."
+    },
+    {
+     "link": 51,
+     "heading": "Measurement & optimization",
+     "text": "Tracking the impact of our work on qualified traffic, inquiries and orders."
+    }
+   ],
+   "link": 23,
+   "link_label": "See pricing ranges"
+  },
+  {
+   "acf_fc_layout": "first_month",
+   "sh_hide": 0,
+   "eyebrow": "Month one",
+   "title": "What do you get in the first month?",
+   "text": "We turn the market and site review into an actionable priority list, so work starts with the pages and opportunities that matter most to your business.",
+   "items": [
+    {
+     "text": "A review of your site and its Search Console and Google Analytics data."
+    },
+    {
+     "text": "An analysis of competitors and search opportunities in the Saudi market."
+    },
+    {
+     "text": "A map of priority keywords and pages."
+    },
+    {
+     "text": "A list of technical issues and content that needs improving."
+    },
+    {
+     "text": "An implementation and measurement plan for the next phase."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "sectors",
+   "sh_hide": 0,
+   "eyebrow": "Industries",
+   "title": "SEO varies by industry",
+   "link": 47,
+   "link_label": "All industries →",
+   "items": [
+    {
+     "link": 31,
+     "icon": "i28c5742f",
+     "heading": "E-commerce",
+     "label": "Category and product pages, all the way to checkout"
+    },
+    {
+     "link": 37,
+     "icon": "ic38e5c55",
+     "heading": "Health & medical",
+     "label": "Searching for a service or doctor, then booking"
+    },
+    {
+     "link": 41,
+     "icon": "ib2d1913e",
+     "heading": "Real estate & construction",
+     "label": "Projects, locations and maps"
+    },
+    {
+     "link": 33,
+     "icon": "i77b387dc",
+     "heading": "Education & training",
+     "label": "Courses, levels and registration pages"
+    },
+    {
+     "link": 45,
+     "icon": "i7d44d30c",
+     "heading": "Tourism & travel",
+     "label": "Destinations, itineraries and booking pages"
+    },
+    {
+     "link": 43,
+     "icon": "ifd450e20",
+     "heading": "Technology & software",
+     "label": "Solution, use-case and integration pages"
+    },
+    {
+     "link": 39,
+     "icon": "i1a80e2f8",
+     "heading": "Legal & consulting",
+     "label": "Service pages and trust signals"
+    },
+    {
+     "link": 35,
+     "icon": "iecb8165c",
+     "heading": "Food & restaurants",
+     "label": "Local search, menus, branches and ordering"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "why",
+   "sh_hide": 0,
+   "title": "An SEO partner for the Saudi market, with measurable execution",
+   "items": [
+    {
+     "label": "In business since 2017."
+    },
+    {
+     "label": "We start from your site and market data, not a ready-made keyword list."
+    },
+    {
+     "label": "We implement the improvements, not just send recommendations."
+    },
+    {
+     "label": "We tie our reports to traffic, inquiries, and orders or sales."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "reviews",
+   "sh_hide": 0,
+   "eyebrow": "Client experiences",
+   "title": "What do our clients say about working with us?",
+   "all_link": "",
+   "all_label": "",
+   "items": [
+    {
+     "label": "Google review",
+     "text": "The real review text is pulled from the Trustindex plugin connected to the Google account, and appears here with the name and rating exactly as the client wrote it.",
+     "label_2": "Client name"
+    },
+    {
+     "label": "Google review",
+     "text": "Space for the second review. Text length varies, and the layout handles longer or shorter text without the card height jumping awkwardly.",
+     "label_2": "Client name"
+    }
+   ],
+   "link": "https://www.google.com/search?q=SEO+House",
+   "link_label": "Read our reviews on Google →"
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Questions about SEO services in Saudi Arabia",
+   "items": [
+    {
+     "question": "Does my business need a separate page for each Saudi city?",
+     "answer": "Not always. We create a city page when there is clear local search demand and you actually offer a service or have a branch there. Otherwise, it's better to strengthen your main service page than to duplicate near-identical pages."
+    },
+    {
+     "question": "Is an SEO plan for an online store different from one for a service business?",
+     "answer": "Yes. An online store relies on category and product pages and a technical setup that can handle a large number of pages, while a service business relies on a few service pages that need strong content and authority."
+    },
+    {
+     "question": "Do you implement the improvements or only make recommendations?",
+     "answer": "We implement everything that can be done within your platform and the agreed scope, and we work with your developer on changes that require special access or custom development."
+    },
+    {
+     "question": "How do you decide which pages to prioritize?",
+     "answer": "We weigh the size of the opportunity against the strength of the competition and how close the page is to a conversion, so the plan starts with pages that can compete and serve a clear business goal."
+    },
+    {
+     "question": "How do you measure traffic, inquiries and sales?",
+     "answer": "We set up contact and order events in Google Analytics 4 and map impressions and clicks from Search Console to individual pages, so you can see the impact of each improvement on its own."
+    },
+    {
+     "question": "When will I start to see progress?",
+     "answer": "Measurement starts on day one. The first signs usually appear a few weeks into implementation, while the impact on leads and orders takes longer, depending on the competition and the condition of your site."
+    },
+    {
+     "question": "How much does an SEO project cost?",
+     "answer": "The cost depends on the size of your site, the competition and the scope of work required. Check our pricing page, then book a call to discuss your situation."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "seo",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

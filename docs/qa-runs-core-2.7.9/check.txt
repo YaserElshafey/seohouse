@@ -1,0 +1,2 @@
+sitemap  case_study  switch=on published=3 indexable=3 excluded=0 http://127.0.0.1:8090/case_study-sitemap.xml → HTTP 200 (3 urls) in_index=yes
+sitemap  team_member switch=on published=17 indexable=17 excluded=0 http://127.0.0.1:8090/team_member-sitemap.xml → HTTP 200 (17 urls) in_index=yes

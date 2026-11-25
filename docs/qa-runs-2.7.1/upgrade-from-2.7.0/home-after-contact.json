@@ -1,0 +1,35 @@
+[
+ {
+  "scenario": "home-after-contact",
+  "contact": {
+   "requests": 1,
+   "responses": [
+    {
+     "status": 200,
+     "body": {
+      "ok": true,
+      "code": "stored",
+      "message": "وصلنا طلبك."
+     }
+    }
+   ],
+   "successShown": true,
+   "error": ""
+  },
+  "home": {
+   "requests": 1,
+   "responses": [
+    {
+     "status": 200,
+     "body": {
+      "ok": true,
+      "code": "stored",
+      "message": "وصلنا طلبك."
+     }
+    }
+   ],
+   "successShown": true,
+   "error": ""
+  }
+ }
+]

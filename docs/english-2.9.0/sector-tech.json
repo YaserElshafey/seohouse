@@ -1,0 +1,206 @@
+{
+ "id": 43,
+ "key": "sector-tech",
+ "title": "Software & SaaS SEO",
+ "slug": "tech",
+ "parent": 47,
+ "path": "/sectors/tech/",
+ "template": "page-templates/sector-tech.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "SEO for Software Companies & SaaS | SEO House",
+  "sh_seo_description": "SaaS SEO for software and tech companies: solution, use-case, integration and comparison pages that win demo and trial requests from buyers seeking a fix.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "SEO services for technology and software companies",
+  "sh_crumb": "Technology & software",
+  "rank_math_title": "SEO for Software Companies & SaaS | SEO House",
+  "rank_math_description": "SaaS SEO for software and tech companies: solution, use-case, integration and comparison pages that win demo and trial requests from buyers seeking a fix.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "seo for software companies"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Technology & software",
+   "title": "SEO for software and technology companies",
+   "text": "Software buyers don't always search for a product by name. Sometimes they start with a problem, a use case, a comparison between two solutions, or a check that an integration exists with a system they already use. We organize your product pages around these questions, clearly explain the features, limitations and benefits your company confirms, and then make it easy to start a trial or request a demo.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "The pages we build",
+   "eyebrow_2": "The buyer's search path",
+   "label": "Illustrative example",
+   "label_2": "inventory software that integrates with accounting",
+   "items": [
+    {
+     "icon": "i410bbad1",
+     "heading": "The problem",
+     "label": "The situation the buyer wants to solve"
+    },
+    {
+     "icon": "i715283b5",
+     "heading": "Solution & features",
+     "label": "What the product does, and its limits"
+    },
+    {
+     "icon": "i8286df96",
+     "heading": "Integrations & comparison",
+     "label": "Connected systems and alternatives"
+    }
+   ],
+   "label_3": "The action we measure",
+   "heading": "Demo or trial request"
+  },
+  {
+   "acf_fc_layout": "sector_journey",
+   "sh_hide": 0,
+   "eyebrow": "Illustrative software company example",
+   "title": "From problem to solution to demo request",
+   "eyebrow_2": "1",
+   "heading": "The problem",
+   "label": "how to organize supplier invoices",
+   "label_2": "They search for a solution to their problem before they know the product's name.",
+   "eyebrow_3": "2",
+   "heading_2": "Solution page",
+   "items": [
+    {
+     "label": "All invoices in one place"
+    },
+    {
+     "label": "Approvals before payment"
+    },
+    {
+     "label": "Integration with your accounting software"
+    }
+   ],
+   "eyebrow_4": "Use cases",
+   "eyebrow_5": "Integrations",
+   "eyebrow_6": "Comparison",
+   "eyebrow_7": "3",
+   "heading_3": "Demo request",
+   "items_2": [
+    {
+     "label": "Company name"
+    },
+    {
+     "label": "Number of users"
+    }
+   ],
+   "eyebrow_8": "Request a demo"
+  },
+  {
+   "acf_fc_layout": "problem",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Problem & use case",
+   "title": "Start with the problem the buyer is trying to solve",
+   "items": [
+    {
+     "heading": "The problem",
+     "label": "Managing inventory, connecting sales to accounting"
+    },
+    {
+     "heading": "Use case",
+     "label": "What the product actually serves"
+    },
+    {
+     "heading": "Features & integrations",
+     "label": "Verified by the technical team"
+    },
+    {
+     "heading": "Next step",
+     "label": "Trial, demo or contact"
+    }
+   ],
+   "text": "A business owner may not know your product's name, but they're searching for a way to manage inventory or connect sales to accounting. We write pages for the use cases your product actually serves, then link them to the relevant features and integrations. Your main product page explains who uses it, what it does and where its scope ends, instead of a long list of technical terms that don't answer the buyer's question."
+  },
+  {
+   "acf_fc_layout": "verify",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Verified features & integrations",
+   "title": "Verify every feature and integration before publishing",
+   "text": "Integration and comparison pages can help buyers choose, but they need details confirmed by the technical team. When comparing alternatives, we separate verified facts from marketing opinion. We don't create dozens of pages by just swapping in a competitor's name, and we never promise a feature that isn't available.",
+   "eyebrow": "Before publishing an integration page, we confirm",
+   "text_2": "What data moves between the two systems",
+   "items": [
+    {
+     "text": "What setup is required"
+    },
+    {
+     "text": "What the product doesn't support"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "measure",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Measurement",
+   "title": "Define what a commercial visit is worth",
+   "text": "A visitor might read an article to understand the problem, review a use case, or request a trial and a quote.",
+   "items": [
+    {
+     "text": "We track each of these steps separately, and measure the number of qualified requests when sales data is available."
+    },
+    {
+     "text": "This shows which topics attract attention and which pages actually help start a sales conversation."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "SEO services",
+     "link": 65
+    },
+    {
+     "label": "React & Next.js",
+     "link": 91
+    },
+    {
+     "label": "All industries",
+     "link": 47
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "SEO questions for software companies",
+   "items": [
+    {
+     "question": "Do we need a page for every integration?",
+     "answer": "For verified integrations that customers search for and that have different setup details, yes. We don't create a page for an integration that doesn't exist or whose workings aren't known."
+    },
+    {
+     "question": "What's the difference between a feature page and a use-case page?",
+     "answer": "A feature page explains what the product does, while a use-case page explains the problem it solves for a specific type of customer. The use-case page is usually closer to how people search."
+    },
+    {
+     "question": "When is a comparison page useful?",
+     "answer": "When there are verifiable facts about the differences, and the page is written neutrally, without attacking the competitor or claiming features that aren't available."
+    },
+    {
+     "question": "Which metric do you track?",
+     "answer": "Qualified demo and trial requests coming from search, not general traffic alone."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

@@ -1,0 +1,36 @@
+== browser, logged out (1440px)
+home {"requests":1,"responses":[{"status":200,"body":{"ok":true,"code":"stored","message":"وصلنا طلبك.","ref":"32ff12fa3d0a82e4904f6018"}}],"successShown":true,"error":""}
+contact {"requests":1,"responses":[{"status":200,"body":{"ok":true,"code":"stored","message":"وصلنا طلبك.","ref":"9772cc64efa9b7216272ea9c"}}],"successShown":true,"error":""}
+home-after-contact {"contact":{"requests":1,"responses":[{"status":200,"body":{"ok":true,"code":"stored","message":"وصلنا طلبك.","ref":"8d42884a37fb265ff7efec47"}}],"successShown":true,"error":""},"home":{"requests":1,"responses":[{"status":200,"body":{"ok":true,"code":"stored","message":"وصلنا طلبك.","ref":"14
+stale-cache {"requests":1,"responses":[{"status":200,"body":{"ok":true,"code":"stored","message":"وصلنا طلبك.","ref":"642277387baf554a7fb34612"}}],"successShown":true,"error":""}
+home-double {"requests":1,"responses":[{"status":200,"body":{"ok":true,"code":"stored","message":"وصلنا طلبك.","ref":"f455cd34c1038c083b698b54"}}],"successShown":true,"error":""}
+contact-double {"requests":1,"responses":[{"status":200,"body":{"ok":true,"code":"stored","message":"وصلنا طلبك.","ref":"d44503ce20f98833c2acde8a"}}],"successShown":true,"error":""}
+== same fill sent twice (same sid) — API
+{"ok":true,"code":"stored","message":"\u0648\u0635\u0644\u0646\u0627 \u0637\u0644\u0628\u0643.","ref":"d4c15275fbf11c98fc442f32"}
+{"ok":true,"code":"duplicate","message":"\u0637\u0644\u0628\u0643 \u0645\u0633\u062c\u0644 \u0644\u062f\u064a\u0646\u0627 \u0628\u0627\u0644\u0641\u0639\u0644.","ref":"d4c15275fbf11c98fc442f32"}
+== mail server fails: request kept, success shown, failure recorded
+{"ok":true,"code":"stored","message":"\u0648\u0635\u0644\u0646\u0627 \u0637\u0644\u0628\u0643.","ref":"43d9d8735530086688f3c9c2"}
+== saving fails: no success
+{"ok":false,"code":"store","message":"\u062a\u0639\u0630\u0631 \u062d\u0641\u0638 \u0627\u0644\u0637\u0644\u0628 \u0627\u0644\u0622\u0646. \u062d\u0627\u0648\u0644 \u0645\u0631\u0629 \u0623\u062e\u0631\u0649 \u0623\u0648 \u062a\u0648\u0627\u0635\u0644 \u0645\u0639\u0646\u0627 \u0639\u0628\u0631 \u0635\u0641\u062d\u0629 \u0627\u0644\u062a\u0648\u0627\u0635\u0644."} (HTTP 422)
+== stored requests
+#1477 | booking | نموذج الاستشارة — الرئيسية | mail=sent 
+#1478 | booking | نموذج الاستشارة — الرئيسية | mail=sent 
+#1479 | booking | نموذج الاستشارة — الرئيسية | mail=sent 
+#1480 | contact | نموذج اتصل بنا | mail=sent 
+#1481 | contact | نموذج اتصل بنا | mail=sent 
+#1482 | booking | نموذج الاستشارة — الرئيسية | mail=sent 
+#1483 | booking | نموذج الاستشارة — الرئيسية | mail=sent 
+#1484 | booking | نموذج الاستشارة — الرئيسية | mail=sent 
+#1485 | contact | نموذج اتصل بنا | mail=sent 
+#1486 | booking | نموذج الاستشارة — الرئيسية | mail=sent 
+#1487 | contact | نموذج اتصل بنا | mail=failed SMTP Error: Could not authenticate. (simulated)
+== mails recorded
+sent ['info@seohouse.agency'] | [سيو هاوس] طلب استشارة (نموذج الاستشارة — الرئيسية): تحسين محركات البحث | has source line: True
+sent ['info@seohouse.agency'] | [سيو هاوس] طلب استشارة (نموذج اتصل بنا): تصميم وتطوير موقع | has source line: True
+sent ['info@seohouse.agency'] | [سيو هاوس] طلب استشارة (نموذج اتصل بنا): تصميم وتطوير موقع | has source line: True
+sent ['info@seohouse.agency'] | [سيو هاوس] طلب استشارة (نموذج الاستشارة — الرئيسية): تحسين محركات البحث | has source line: True
+sent ['info@seohouse.agency'] | [سيو هاوس] طلب استشارة (نموذج الاستشارة — الرئيسية): تحسين محركات البحث | has source line: True
+sent ['info@seohouse.agency'] | [سيو هاوس] طلب استشارة (نموذج الاستشارة — الرئيسية): تحسين محركات البحث | has source line: True
+sent ['info@seohouse.agency'] | [سيو هاوس] طلب استشارة (نموذج اتصل بنا): تصميم وتطوير موقع | has source line: True
+sent ['info@seohouse.agency'] | [سيو هاوس] طلب استشارة (نموذج الاستشارة — الرئيسية): تصميم وتطوير موقع | has source line: True
+failed ['info@seohouse.agency'] | [سيو هاوس] طلب استشارة (نموذج اتصل بنا): تحسين محركات البحث | has source line: True

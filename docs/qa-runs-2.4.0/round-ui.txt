@@ -1,0 +1,49 @@
+PASS  0 upload seohouse-theme.zip: WordPress offers to replace the installed theme  — منصّبالمرفوعاسم القالبSEO HouseSEO Houseالنسخة2.3.02.4.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5نسخة PHP المطل
+PASS  0 theme replaced
+PASS  0 upload seohouse-core.zip: WordPress offers to replace the installed plugin  — الحاليةالمرفوعةاسم الإضافةSEO House CoreSEO House Coreالنسخة2.3.02.4.0كاتبSEO HouseSEO Houseنسخة ووردبريس المطلوبة6.56.5
+PASS  0 plugin replaced
+PASS  0 SEO House Core 2.4.0 active
+PASS  D1 «نقل المقالات»: main site detected with its published count  — الموقع الأساسيRank Math مفعّلة لكنها متوقفة: لم تكتمل خطوة الحساب في معالج
+PASS  D2 preview writes nothing and lists the four articles  — جديد: 0 — استبدال مسودة: 4 — تحديث: 0 — بلا تغيير: 0 — محمي: 0 — فشل: 0infosource4 مقالًا منشورًا
+PASS  D3 run completes without failures  — جديد: 6 — استبدال مسودة: 4 — تحديث: 0 — بلا تغيير: 0 — محمي: 0 — فشل: 0infosource4 مقالًا منشورًا
+PASS  D4 /blog/why-is-my-website-not-showing-in-search-engines/ answers 200 on /new/  — 200
+PASS  D4 /blog/how-to-build-backlinks-correctly/ answers 200 on /new/  — 200
+PASS  D4 /blog/fix-404-not-found/ answers 200 on /new/  — 200
+PASS  D4 article byline: the author of the main site (not a generic team name)  — بقلم Yasser Youssef
+PASS  D5 second run: nothing created or replaced
+PASS  A1 notice: Rank Math installed but waiting for its registration step
+PASS  A2 meanwhile Core outputs title, description and schema (not an empty head)  — <title>شركة سيو في مصر لتحسين ظهور موقعك | سيو هاوس
+PASS  A3 «تشغيل بدون حساب» → Rank Math running, box shown for all four types  — الصفحاتظاهرالمقالاتظاهردراسات الحالةظاهرفريق العملظاهرمع تفعيل Rank Math يُحرَّر عنوان 
+PASS  A4 page: Rank Math box in the edit screen  — classic editor box
+PASS  A5 page: title and description saved in Rank Math and shown on the page  — عنوان اختبار page musi6nrr | وصف اختبار Rank Math لنوع page — musi6nrr
+PASS  A5 page: one title, one description, at most one canonical, one JSON-LD  — canonical: Rank Math leaves it out while the review copy is noindex
+PASS  A4 post: Rank Math box in the edit screen  — block editor sidebar
+PASS  A5 post: title and description saved in Rank Math and shown on the page  — عنوان اختبار post musi6nrr | وصف اختبار Rank Math لنوع post — musi6nrr
+PASS  A5 post: one title, one description, at most one canonical, one JSON-LD  — canonical: Rank Math leaves it out while the review copy is noindex
+PASS  A4 case_study: Rank Math box in the edit screen  — classic editor box
+PASS  A5 case_study: title and description saved in Rank Math and shown on the page  — عنوان اختبار case_study musi6nrr | وصف اختبار Rank Math لنوع case_study — musi6nrr
+PASS  A5 case_study: one title, one description, at most one canonical, one JSON-LD  — canonical: Rank Math leaves it out while the review copy is noindex
+PASS  A4 team_member: Rank Math box in the edit screen  — classic editor box
+PASS  A5 team_member: title and description saved in Rank Math and shown on the page  — عنوان اختبار team_member musi6nrr | وصف اختبار Rank Math لنوع team_member — musi6nrr
+PASS  A5 team_member: one title, one description, at most one canonical, one JSON-LD  — canonical: Rank Math leaves it out while the review copy is noindex
+PASS  A6 review copy /new/ stays noindex with Rank Math running  — <meta name="robots" content="noindex, nofollow"/
+PASS  B1 logo field in the section: choices are the library platforms by name (not SVG file names)  — - Select -، ووردبريس، ووكومرس، شوبيفاي، سلة، ويب فلو، رياكت، نكست، سيرش كونسول، جوجل أناليتكس، لوكر ستوديو
+PASS  B1 «أو شعار من مكتبة الوسائط» field next to it
+PASS  B2 new item: logo uploaded from the media library into the section
+PASS  B3 saved: notice that a platform was added to the library
+PASS  B4 page shows the uploaded logo with the item label
+PASS  B5 the new platform is in «المنصات والأدوات» (name + logo)  — ووردبريس، ووكومرس، شوبيفاي، سلة، ويب فلو، رياكت، نكست، سيرش كونسول، جوجل أناليتكس، لوكر ستوديو، منصة اختبار musi6nrr
+PASS  B6 the item now points to the library platform (choice selected)
+PASS  B7 change an item's platform → the page shows the new logo in that place  — shopify.svg, ga4.svg, test-logo-zid.webp
+PASS  B8 delete the item → its logo and label are gone from the page
+PASS  B8 … the platform stays in the library for other pages
+PASS  C1 «تقييمات جوجل» in the SEO House menu
+PASS  C1 status without a shortcode: section hidden everywhere
+PASS  C2 shared shortcode saved: status «مسجّل من إضافة مفعّلة», pages «يظهر — الشورت كود العام»  — 5 pages
+PASS  C3 page override saved: Egypt «يظهر — الشورت كود الخاص»
+PASS  C4 Egypt shows its own widget once and not the shared one
+PASS  C4 home shows the shared widget once
+PASS  C5 unknown shortcode: status says the plugin is not active; home hides the section
+PASS  no JavaScript errors in the admin
+
+47/47 passed

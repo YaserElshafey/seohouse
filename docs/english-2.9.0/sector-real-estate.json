@@ -1,0 +1,206 @@
+{
+ "id": 41,
+ "key": "sector-real-estate",
+ "title": "Real Estate & Construction",
+ "slug": "real-estate",
+ "parent": 47,
+ "path": "/sectors/real-estate/",
+ "template": "page-templates/sector-real-estate.php",
+ "status": "publish",
+ "lang": "ar",
+ "seo": {
+  "sh_seo_title": "Real Estate SEO for Developers & Agencies | SEO House",
+  "sh_seo_description": "Real estate SEO for developers, contractors, and sales and rental agencies, with project and area pages that bring in viewing requests from buyers.",
+  "sh_seo_noindex": "0",
+  "sh_schema_type": "service",
+  "sh_schema_service": "Search engine optimization for real estate",
+  "sh_crumb": "Real estate & construction",
+  "rank_math_title": "Real Estate SEO for Developers & Agencies | SEO House",
+  "rank_math_description": "Real estate SEO for developers, contractors, and sales and rental agencies, with project and area pages that bring in viewing requests from buyers.",
+  "rank_math_robots": "",
+  "rank_math_focus_keyword": "real estate seo"
+ },
+ "sections": [
+  {
+   "acf_fc_layout": "hero",
+   "sh_hide": 0,
+   "eyebrow": "Real estate & construction",
+   "title": "Real estate SEO",
+   "text": "Searching for an apartment in a specific neighborhood is different from searching for a new project or a real estate developer. That's why we don't put every property on one page. We organize the site by area, project and unit type, with up-to-date information that helps visitors compare and request details.",
+   "link_label": "Book a consultation call",
+   "link_label_2": "Page structure",
+   "eyebrow_2": "The buyer's search path",
+   "label": "Illustrative example",
+   "label_2": "Apartments for sale near schools",
+   "items": [
+    {
+     "icon": "ie59b5e34",
+     "heading": "Area",
+     "label": "Services, roads and projects"
+    },
+    {
+     "icon": "i9bb6d855",
+     "heading": "Project",
+     "label": "Master plan, amenities and handover phases"
+    },
+    {
+     "icon": "ifee58417",
+     "heading": "Unit",
+     "label": "Size, price and availability"
+    }
+   ],
+   "label_3": "The action we measure",
+   "heading": "Viewing request or inquiry"
+  },
+  {
+   "acf_fc_layout": "sector_journey",
+   "sh_hide": 0,
+   "eyebrow": "Illustrative example: a real estate website",
+   "title": "Area, then project, then unit",
+   "eyebrow_2": "1",
+   "heading": "Area",
+   "label": "A page that explains the area and directs visitors to its projects.",
+   "eyebrow_3": "2",
+   "heading_2": "Project",
+   "eyebrow_4": "Residential project",
+   "label_2": "Master plan · Amenities · Handover phases",
+   "eyebrow_5": "3",
+   "heading_3": "Unit & inquiry",
+   "items": [
+    {
+     "label": "Two-bedroom apartment",
+     "eyebrow": "Available"
+    },
+    {
+     "label": "Three-bedroom apartment",
+     "eyebrow": "Reserved"
+    }
+   ],
+   "eyebrow_6": "Request a viewing"
+  },
+  {
+   "acf_fc_layout": "structure",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "How do searchers find the right property?",
+   "title": "Structure your site the way buyers choose a property",
+   "text": "Buyers usually decide on the area and property type first, then compare the available projects and units. So we give area, project and unit pages each a clear job, instead of repeating the same description across dozens of pages. The area page helps buyers understand the options, the project page explains its confirmed details, and the unit page shows its status, specifications and how to inquire.",
+   "items": [
+    {
+     "heading": "Area",
+     "label": "The options available in the location",
+     "variant": "v1"
+    },
+    {
+     "heading": "Project",
+     "label": "Confirmed details and features",
+     "variant": "v2"
+    },
+    {
+     "heading": "Unit",
+     "label": "Specifications, availability and inquiry",
+     "variant": "v3"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "lifecycle",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Managing pages when listings change",
+   "title": "Listings change, and your pages need to keep up",
+   "text": "One of the biggest problems on real estate websites is sold units that still look available, or pages deleted with no useful alternative. We review the life cycle of each page type: what gets updated, what can lead to similar units, and what shouldn't stay visible with misleading wording.",
+   "items": [
+    {
+     "heading": "Available unit",
+     "text": "The page stays up to date with specifications, availability and how to inquire.",
+     "variant": "v1"
+    },
+    {
+     "heading": "Sold unit",
+     "text": "It's never shown as available; its status is updated and it points to similar units in the project.",
+     "variant": "v2"
+    },
+    {
+     "heading": "Completed project",
+     "text": "The page becomes a reference for the project and points to current projects.",
+     "variant": "v1"
+    },
+    {
+     "heading": "Neighborhood page with no listings",
+     "text": "It isn't created at all until there is enough information and inventory to justify it.",
+     "variant": "v1"
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "measure",
+   "sh_hide": 0,
+   "sh_anchor": "",
+   "label": "Measuring relevant inquiries",
+   "title": "Measure inquiry quality",
+   "text": "We connect page visibility and clicks to the inquiries that reach your sales team, distinguishing between a request for information about a project and a request to view a specific unit.",
+   "items": [
+    {
+     "text": "This helps your team see which areas and property types attract the right customers."
+    },
+    {
+     "text": "Any performance figures on this page require data from a real property project and a clear comparison period. Where that isn't available, we show our methodology instead of sample numbers."
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "related",
+   "sh_hide": 0,
+   "lead": "Related pages:",
+   "links": [
+    {
+     "label": "SEO services",
+     "link": 65
+    },
+    {
+     "label": "Technical SEO",
+     "link": 63
+    },
+    {
+     "label": "All industries",
+     "link": 47
+    }
+   ]
+  },
+  {
+   "acf_fc_layout": "faq",
+   "sh_hide": 0,
+   "eyebrow": "FAQ",
+   "title": "Questions about SEO for real estate companies",
+   "items": [
+    {
+     "question": "What should you do with pages for sold units?",
+     "answer": "We don't leave them looking available, and we don't delete them abruptly. We update their status and point visitors to similar units in the same project or area."
+    },
+    {
+     "question": "Does every project need its own page?",
+     "answer": "Yes, when it has its own distinct details and listings, because buyers search by project name and compare the details."
+    },
+    {
+     "question": "How should area pages be organized?",
+     "answer": "We start with the areas where you have actual listings and where people are searching. We don't create neighborhood pages that contain nothing but the place name."
+    },
+    {
+     "question": "Which metrics do you track?",
+     "answer": "Requests for details, viewing requests and calls that come from search, distinguishing between inquiries about a project and inquiries about a specific unit."
+    }
+   ],
+   "schema": 1
+  },
+  {
+   "acf_fc_layout": "booking",
+   "sh_hide": 0,
+   "service": "",
+   "eyebrow": "",
+   "title": "",
+   "text": "",
+   "points": []
+  }
+ ]
+}

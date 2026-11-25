@@ -1,0 +1,62 @@
+{
+ "sh_cta_label": "Book a free consultation",
+ "sh_footer_text": "SEO House is an SEO company specializing in search engine optimization, website design and e-commerce stores. We have helped businesses in Saudi Arabia, Egypt and the UAE grow their digital presence since 2017.",
+ "sh_copyright": "© {year} SEO House",
+ "sh_socials": [
+  {
+   "label": "Facebook"
+  },
+  {
+   "label": "LinkedIn"
+  },
+  {
+   "label": "Instagram"
+  }
+ ],
+ "sh_address": "234 Abdel Salam Aref St., Louran, Alexandria, Egypt",
+ "sh_address_street": "234 Abdel Salam Aref St., Louran",
+ "sh_address_locality": "Alexandria",
+ "sh_address_region": "Alexandria",
+ "sh_hours": "Sunday to Thursday, 9 am to 5 pm (Egypt time)",
+ "sh_areas": "Saudi Arabia, Egypt, the UAE",
+ "sh_booking": {
+  "eyebrow": "Free · 30 minutes · Online",
+  "title": "Book a free consultation",
+  "text": "Tell us about your website and the service you need. We review your site before the call, then agree with you on the best next step.",
+  "points": [
+   {
+    "text": "An initial review of your site before the call"
+   },
+   {
+    "text": "Clear recommendations, no obligation"
+   }
+  ],
+  "services": [
+   {
+    "label": "Search engine optimization (SEO)"
+   },
+   {
+    "label": "Website design & development"
+   },
+   {
+    "label": "Online store design"
+   },
+   {
+    "label": "Product upload"
+   },
+   {
+    "label": "Not sure yet"
+   }
+  ],
+  "step2": {
+   "title": "We've received your request",
+   "text": "Your consultation request is in. We'll review your website and get in touch to schedule the call."
+  }
+ },
+ "sh_article_cta": {
+  "title": "Want to know where your site stands?",
+  "text": "A free 30-minute call where we review your site and set the priority.",
+  "label": "Book a consultation"
+ },
+ "sh_legal_name": "SEO House for Digital Marketing LLC"
+}

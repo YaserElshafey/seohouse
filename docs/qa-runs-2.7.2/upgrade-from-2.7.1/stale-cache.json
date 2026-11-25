@@ -1,0 +1,19 @@
+[
+ {
+  "scenario": "stale-cache",
+  "requests": 1,
+  "responses": [
+   {
+    "status": 200,
+    "body": {
+     "ok": true,
+     "code": "stored",
+     "message": "وصلنا طلبك.",
+     "ref": "2fd8d9c92a9dc24faa8eab98"
+    }
+   }
+  ],
+  "successShown": true,
+  "error": ""
+ }
+]
