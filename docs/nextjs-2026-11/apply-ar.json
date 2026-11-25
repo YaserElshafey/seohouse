@@ -1,0 +1,118 @@
+{
+ "91_dry": {
+  "id": 91,
+  "dry_run": true,
+  "sections": [
+   "hero",
+   "faq"
+  ],
+  "found": [
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ "91": {
+  "id": 91,
+  "dry_run": false,
+  "sections": [
+   "hero",
+   "faq"
+  ],
+  "found": [
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ "91_title": {
+  "id": 91,
+  "title": "Next.js",
+  "err": null
+ },
+ "91_seo_before": {
+  "dry_run": true,
+  "items": [
+   {
+    "id": 91,
+    "url": "https://seohouse.agency/services/web-design/react-next/",
+    "title": {
+     "before": "تطوير مواقع React وNext.js في السعودية ومصر والإمارات | سيو هاوس",
+     "after": "تطوير مواقع Next.js في السعودية ومصر والإمارات | سيو هاوس"
+    },
+    "description": {
+     "before": "نطوّر مواقع ومنصات بـ React وNext.js مع اختيار طريقة العرض المناسبة لكل صفحة، وربطها بنظام محتوى يعدّله فريقك دون كود وبالأنظمة الداخلية.",
+     "after": "نطوّر مواقع ومنصات سريعة بإطار Next.js مع اختيار طريقة العرض المناسبة لكل صفحة، وربطها بنظام محتوى يعدّله فريقك دون كود وبالأنظمة الداخلية."
+    },
+    "schema_service": {
+     "before": "تطوير واجهات رياكت ونكست",
+     "after": "تطوير مواقع Next.js"
+    }
+   }
+  ]
+ },
+ "91_seo": {
+  "dry_run": false,
+  "items": [
+   {
+    "id": 91,
+    "url": "https://seohouse.agency/services/web-design/react-next/",
+    "title": {
+     "before": "تطوير مواقع React وNext.js في السعودية ومصر والإمارات | سيو هاوس",
+     "after": "تطوير مواقع Next.js في السعودية ومصر والإمارات | سيو هاوس"
+    },
+    "description": {
+     "before": "نطوّر مواقع ومنصات بـ React وNext.js مع اختيار طريقة العرض المناسبة لكل صفحة، وربطها بنظام محتوى يعدّله فريقك دون كود وبالأنظمة الداخلية.",
+     "after": "نطوّر مواقع ومنصات سريعة بإطار Next.js مع اختيار طريقة العرض المناسبة لكل صفحة، وربطها بنظام محتوى يعدّله فريقك دون كود وبالأنظمة الداخلية."
+    },
+    "schema_service": {
+     "before": "تطوير واجهات رياكت ونكست",
+     "after": "تطوير مواقع Next.js"
+    }
+   }
+  ]
+ },
+ "67": {
+  "id": 67,
+  "dry_run": false,
+  "sections": [
+   "hero",
+   "families"
+  ],
+  "found": [
+   2
+  ]
+ },
+ "87": {
+  "id": 87,
+  "dry_run": false,
+  "sections": [
+   "platforms"
+  ],
+  "found": [
+   1
+  ]
+ },
+ "43": {
+  "id": 43,
+  "dry_run": false,
+  "sections": [
+   "related"
+  ],
+  "found": [
+   1
+  ]
+ },
+ "85": {
+  "id": 85,
+  "dry_run": false,
+  "sections": [
+   "related"
+  ],
+  "found": [
+   1
+  ]
+ }
+}
