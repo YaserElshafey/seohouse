@@ -1,0 +1,93 @@
+{
+ "dry_run": true,
+ "items": [
+  {
+   "id": 93,
+   "url": "https://seohouse.agency/services/web-design/webflow/",
+   "title": {
+    "before": "تصميم مواقع ويب فلو Webflow في السعودية ومصر والإمارات | سيو هاوس",
+    "after": "شركة تصميم ويب فلو Webflow في السعودية ومصر والإمارات | سيو هاوس"
+   },
+   "description": {
+    "before": "تصميم مواقع ويب فلو بتحكم بصري دقيق وحركة، مع نظام محتوى يعدّل منه فريقك وإعدادات سيو داخل المنصة، دون خوادم أو إضافات تحتاج صيانة.",
+    "after": "شركة تصميم مواقع ويب فلو Webflow في السعودية ومصر والإمارات: موقع سريع بتصميم دقيق وحركة، ولوحة محتوى يعدّل منها فريقك، وإعدادات سيو جاهزة."
+   }
+  },
+  {
+   "id": 49,
+   "url": "https://seohouse.agency/services/seo/backlinks/",
+   "title": {
+    "before": "خدمة باك لينك وبناء روابط في السعودية ومصر والإمارات | سيو هاوس",
+    "after": "خدمات الباك لينك وبناء الروابط في السعودية ومصر والإمارات | سيو هاوس"
+   },
+   "description": {
+    "before": "خدمة باك لينك من مواقع مرتبطة بمجالك ولها زوار حقيقيون، نقيّم كل مصدر قبل النشر ونوثّق كل رابط ونتابع أثره، دون شبكات روابط تضر موقعك.",
+    "after": "خدمات الباك لينك وبناء الروابط في السعودية ومصر والإمارات: روابط من مواقع مرتبطة بمجالك ولها زوار حقيقيون، نقيّم كل مصدر ونوثّق كل رابط دون شبكات روابط."
+   }
+  },
+  {
+   "id": 164,
+   "url": "https://seohouse.agency/blog/how-to-build-backlinks-correctly/",
+   "title": {
+    "before": "كيفية بناء باك لينك موقعك بطريقة صحيحة | دليل عملي من سيو هاوس",
+    "after": "الباك لينك: ما هو وكيف تبني باك لينك صحيح لموقعك | سيو هاوس"
+   },
+   "description": {
+    "before": "تعلّم كيفية بناء باك لينك لموقعك بطريقة صحيحة عبر استراتيجية آمنة وعملية: اختيار الصفحات، تحليل المنافسين، صناعة أصول قابلة للربط، والتواصل الذكي دون مخالفات.",
+    "after": "ما هو الباك لينك وكيف تبنيه لموقعك بطريقة صحيحة وآمنة: اختيار الصفحات، تحليل المنافسين، صناعة محتوى يستحق الرابط، والتواصل الذكي دون مخالفات."
+   }
+  },
+  {
+   "id": 23,
+   "url": "https://seohouse.agency/pricing/",
+   "title": {
+    "before": "اسعار خدمات تحسين محركات البحث  %sep% %sitename%",
+    "after": "أسعار وباقات السيو وتحسين محركات البحث | سيو هاوس"
+   },
+   "description": {
+    "before": "نعمل داخل نطاق 1,500 إلى 7,000 ريال، ويتحدد السعر النهائي بحسب حالة الموقع وحجم الصفحات والسوق والمنافسة ونطاق التنفيذ والمنصة المستخدمة.",
+    "after": "أسعار وباقات السيو وتحسين محركات البحث من 1,500 إلى 7,000 ريال، ويتحدد السعر بحسب حالة الموقع وعدد الصفحات والسوق والمنافسة ونطاق التنفيذ."
+   }
+  },
+  {
+   "id": 51,
+   "url": "https://seohouse.agency/services/seo/consulting/",
+   "description": {
+    "before": "استشارة سيو تحوّل بيانات سيرش كونسول وأناليتكس إلى قرارات: تشخيص انخفاض الزيارات، وخطة نقل الموقع، وأولويات واضحة ينفذها فريقك.",
+    "after": "استشارات سيو في السعودية ومصر والإمارات: نحوّل بيانات سيرش كونسول وأناليتكس إلى قرارات واضحة، من تشخيص انخفاض الزيارات إلى خطة نقل الموقع."
+   }
+  },
+  {
+   "id": 2322,
+   "url": "https://seohouse.agency/en/services/web-design/react-next/",
+   "title": {
+    "before": "React & Next.js Development in KSA, UAE & Egypt | SEO House",
+    "after": "Next.js Development in Saudi Arabia, UAE & Egypt | SEO House"
+   },
+   "description": {
+    "before": "React and Next.js development in Saudi Arabia, the UAE and Egypt: the right rendering for each page, a CMS your team edits without code, and integrations.",
+    "after": "Next.js development in Saudi Arabia, the UAE and Egypt: fast sites and platforms with the right rendering per page, a CMS your team edits, and integrations."
+   }
+  },
+  {
+   "id": 2826,
+   "url": "https://seohouse.agency/en/sectors/real-estate/",
+   "title": {
+    "before": "Real Estate SEO in Saudi Arabia, UAE & Egypt | SEO House",
+    "after": "Real Estate SEO for Developers in KSA, UAE & Egypt | SEO House"
+   }
+  },
+  {
+   "id": 2403,
+   "url": "https://seohouse.agency/en/services/seo/egypt/",
+   "title": {
+    "before": "SEO Company in Egypt | SEO Services | SEO House",
+    "after": "SEO Company in Egypt | SEO Services & Agency | SEO House"
+   },
+   "description": {
+    "before": "SEO House is an SEO company in Egypt helping businesses and online stores rank on Google, with competitor analysis, content, technical fixes and tracking.",
+    "after": "SEO company in Egypt offering SEO services for businesses and online stores: competitor analysis, content, technical fixes and lead tracking. Book a free call."
+   }
+  }
+ ]
+}

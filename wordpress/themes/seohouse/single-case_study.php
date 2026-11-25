@@ -343,6 +343,32 @@ while ( have_posts() ) :
 	<section data-screen-label="Next" style="background: var(--sh-bg); border-bottom: 1px solid var(--sh-line);">
 		<div style="max-width: 1040px; margin: 0px auto; padding: clamp(28px, 3.2vw, 40px) 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 28px;">
 			<div style="min-width: 0px;">
+				<?php
+				// 2.8.23: without a linked service, the SEO page of the case's own market («شركة سيو في …»), so
+				// every case study passes weight to its country page with that page's keyword
+				$market_link = null;
+				if ( ! $g( 'service_page' ) ) {
+					$mk = mb_strtolower( (string) $g( 'market' ) );
+					foreach (
+						array(
+							'services/seo/ksa'   => array( array( 'السعودية', 'saudi' ), __( 'شركة سيو في السعودية', 'seohouse' ) ),
+							'services/seo/egypt' => array( array( 'مصر', 'egypt' ), __( 'شركة سيو في مصر', 'seohouse' ) ),
+							'services/seo/uae'   => array( array( 'الإمارات', 'الامارات', 'uae', 'emirates' ), __( 'شركة سيو في الإمارات', 'seohouse' ) ),
+						) as $path => $m
+					) {
+						foreach ( $m[0] as $needle ) {
+							if ( str_contains( $mk, $needle ) && sh_page_url( $path ) ) {
+								$market_link = array( sh_page_url( $path ), $m[1] );
+								break 2;
+							}
+						}
+					}
+				}
+				?>
+				<?php if ( $market_link ) : ?>
+				<div style="font-size: 13px; color: var(--sh-text);"><?php esc_html_e( 'خدماتنا في السوق نفسه', 'seohouse' ); ?></div>
+				<a class="sh-hv-link" href="<?php echo esc_url( $market_link[0] ); ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 19px; color: var(--sh-ink);"><?php echo esc_html( $market_link[1] ); ?> <span aria-hidden="true" style="color: var(--sh-link);"><?php echo esc_html( sh_arrow() ); ?></span></a>
+				<?php endif; ?>
 				<?php if ( $g( 'service_page' ) ) : ?>
 				<div style="font-size: 13px; color: var(--sh-text);"><?php echo esc_html( $g( 'cta_title' ) ? $g( 'cta_title' ) : __( 'الخدمة المرتبطة', 'seohouse' ) ); ?></div>
 				<a class="sh-hv-link" href="<?php echo esc_url( sh_link( $g( 'service_page' ) ) ); ?>" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 6px; font-family: Alexandria, sans-serif; font-weight: 700; font-size: 19px; color: var(--sh-ink);"><?php echo esc_html( $g( 'service_label' ) ? $g( 'service_label' ) : get_the_title( url_to_postid( sh_link( $g( 'service_page' ) ) ) ) ); ?> <span aria-hidden="true" style="color: var(--sh-link);"><?php echo esc_html( sh_arrow() ); ?></span></a>

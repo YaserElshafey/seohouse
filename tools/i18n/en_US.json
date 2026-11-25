@@ -283,7 +283,11 @@
   "اللقطات": "Screenshots",
   "%d لقطة": "%d screenshots",
   "مرّر لعرض باقي اللقطات": "Scroll for more screenshots",
-  "كل العملاء (%d)": "All clients (%d)"
+  "كل العملاء (%d)": "All clients (%d)",
+  "خدماتنا في السوق نفسه": "Our services in this market",
+  "شركة سيو في السعودية": "SEO company in Saudi Arabia",
+  "شركة سيو في مصر": "SEO company in Egypt",
+  "شركة سيو في الإمارات": "SEO company in the UAE"
  },
  "seohouse-core": {
   "%s — %s، %s": "%s — %s, %s",
