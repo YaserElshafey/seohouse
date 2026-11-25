@@ -1,0 +1,69 @@
+{
+ "2322_dry": {
+  "id": 2322,
+  "dry_run": true,
+  "sections": [
+   "hero",
+   "faq"
+  ],
+  "found": [
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ "2322": {
+  "id": 2322,
+  "dry_run": false,
+  "sections": [
+   "hero",
+   "faq"
+  ],
+  "found": [
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ "2322_title": {
+  "id": 2322,
+  "title": "Next.js",
+  "err": null
+ },
+ "2322_seo": {
+  "dry_run": false,
+  "items": [
+   {
+    "id": 2322,
+    "url": "https://seohouse.agency/en/services/web-design/react-next/",
+    "schema_service": {
+     "before": "React and Next.js development",
+     "after": "Next.js development"
+    }
+   }
+  ]
+ },
+ "1754": {
+  "id": 1754,
+  "dry_run": false,
+  "sections": [
+   "hero",
+   "families"
+  ],
+  "found": [
+   2
+  ]
+ },
+ "2040": {
+  "id": 2040,
+  "dry_run": false,
+  "sections": [
+   "platforms"
+  ],
+  "found": [
+   1
+  ]
+ }
+}

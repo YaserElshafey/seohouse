@@ -270,6 +270,16 @@ function sh_core_seo_meta_save( array $in ) {
 				update_field( $metas[1], $v, $id );
 			}
 		}
+		// 2.9.25: the theme's SEO fields too (Service schema type, breadcrumb label)
+		foreach ( array( 'schema_service' => 'sh_schema_service', 'crumb' => 'sh_crumb' ) as $k => $field ) {
+			if ( array_key_exists( $k, $it ) && function_exists( 'update_field' ) ) {
+				$v         = trim( sanitize_text_field( (string) $it[ $k ] ) );
+				$row[ $k ] = array( 'before' => (string) get_field( $field, $id ), 'after' => $v );
+				if ( ! $dry ) {
+					update_field( $field, $v, $id );
+				}
+			}
+		}
 		if ( ! $dry ) {
 			clean_post_cache( $id );
 		}
